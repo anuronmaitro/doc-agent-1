@@ -2,13 +2,15 @@
 seed: 42
 device: cuda
 
-enhance:   {enabled: true,  model: "unet_small", type: "diffusion"}   # or "vae" / "none"
-layout:    {model: "detectron2:layout", score_thr: 0.5}
-ocr:       {model: "microsoft/trocr-base-printed", finetune: true}    # BASELINE = pretrained OCR
-embed:     {model: "sentence-transformers/all-MiniLM-L6-v2", dim: 384}
-index:     {type: "faiss:hnsw", chunk_tokens: 256, overlap: 32}
-retrieve:  {k: 10, k_step: 10, k_max: 40, weak_threshold: 0.35, rerank: true, reranker: "cross-encoder/ms-marco-MiniLM-L6-v2"}   # k_step/k_max/weak_threshold drive evidence-gated re-search
-agent:     {max_steps: 8, autonomy: "act-with-approval", budget_usd: 0.05}
-rl:        {algo: "ppo", train_policy: false}                         # bonus: set true
-serve:     {batch: true}
-deploy:    {target: "hf-spaces"}
+enhance:  {enabled: false, model: "none", type: "none"}        # A1 trade-off: no generative repair
+layout:   {model: "microsoft/table-transformer-detection", score_thr: 0.5, method: "projection-profile+tatr"}
+ocr:      {model: "facebook/nougat-base", finetune: true, adapter: "lora",
+           fallback: "vikp/texify", baseline: "tesseract", render_dpi: 300}
+embed:    {model: "BAAI/bge-m3", dim: 1024}
+index:    {type: "faiss:flat", chunk_tokens: 512, overlap: 0, strategy: "semantic-formula-block"}
+retrieve: {k: 10, k_step: 10, k_max: 40, weak_threshold: 0.35, rerank: true,
+           reranker: "BAAI/bge-reranker-v2-m3"}                # used from A3
+agent:    {max_steps: 8, autonomy: "act-then-log", budget_usd: 0.05}   # A3
+rl:       {algo: "ppo", train_policy: false}
+serve:    {batch: true}
+deploy:   {target: "hf-spaces"}
