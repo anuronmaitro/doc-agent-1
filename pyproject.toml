@@ -1,0 +1,56 @@
+[project]
+name = "doc-agent"
+version = "0.1.0"
+# Upper bound is REQUIRED, not cosmetic: the pinned torch<2.4 and faiss-cpu<1.9
+# only publish cp311/cp312 wheels, so 3.13+ cannot install this lock at all.
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "torch>=2.2,<2.4",
+  "lightning>=2.2,<2.4",
+  "transformers>=4.40,<4.45",
+  "timm>=1.0,<1.1",
+  "datasets>=2.19,<3.0",
+  "torchmetrics>=1.3,<1.5",
+  "sentence-transformers>=2.7,<3.0",
+  "faiss-cpu>=1.8,<1.9",
+  "gymnasium>=0.29,<1.0",
+  "fastapi>=0.111,<0.116",
+  "gradio>=4.31,<5.0",
+  "wandb>=0.17,<0.18",
+  "pydantic>=2.7,<3.0",
+  "pyyaml>=6.0,<7.0",
+  "pydantic-settings>=2.2,<3.0",
+  # --- MathScholar additions (A2): LoRA fine-tuning of the OCR reader,
+  #     classical image preprocessing/degradation, and page rendering.
+  #     Nougat itself needs no extra package: transformers>=4.34 supports it
+  #     natively, so we avoid the nougat-ocr package's conflicting pins.
+  "peft>=0.11,<0.13",
+  "opencv-python-headless>=4.9",
+  "pymupdf>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.4", "black>=24.4", "mypy>=1.10", "pytest>=8.2", "pre-commit>=3.7"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+[tool.ruff.lint]
+select = ["E","F","I","N","B","UP"]
+# These three fire only on course-provided stub patterns we are told not to restructure:
+#   F405 - the stubs use `from ..contracts import *  # noqa`, so every Page/Region/Chunk
+#          reference is flagged. The `# noqa` on the import shows this was intended.
+#   E501 - black (line-length 100) is our formatter; leaving E501 on double-reports the
+#          long comment lines black deliberately cannot split.
+#   N812 - `import lightning as L` is Lightning's own documented convention.
+ignore = ["F405", "E501", "N812"]
+[tool.black]
+line-length = 100
+[tool.mypy]
+python_version = "3.11"
+disallow_untyped_defs = true
+ignore_missing_imports = true
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
+testpaths = ["tests"]
