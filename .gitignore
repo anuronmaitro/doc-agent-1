@@ -1,0 +1,29 @@
+data/raw/
+data/interim/
+*.ckpt
+wandb/
+__pycache__/
+.venv/
+
+# --- MathScholar (A2) ---
+# Large derived artifacts: recreated by scripts/get_data.sh + scripts/build_index.sh.
+# Never commit these (~1 GB) — the handbook says commit only the held-out sample pages.
+data/pages/
+data/ocr/
+data/annot/
+data/index/
+data/eda_summary.json
+
+# ...but the LoRA adapter IS a submitted artifact (needed to reproduce our numbers),
+# so un-ignore the models folder.
+!data/models/
+!data/models/**
+
+# Secrets — never commit
+.env
+
+# Local tooling noise
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/

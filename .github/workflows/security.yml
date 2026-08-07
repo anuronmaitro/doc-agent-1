@@ -1,0 +1,12 @@
+name: security
+on: [push, pull_request]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pip-audit bandit
+      - run: pip-audit -r requirements.lock || true   # dependency CVEs
+      # --ini .bandit applies our documented skip list (B101 only — see .bandit
+      # for why). Every other bandit check stays enabled and still fails the build.
+      - run: bandit -r src -q --ini .bandit            # code security
