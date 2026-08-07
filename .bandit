@@ -1,0 +1,9 @@
+# Bandit config — read by .github/workflows/security.yml (`bandit -r src -q`).
+#
+# B101 (assert_used) is skipped for one reason only: the single occurrence is in
+# src/doc_agent/hooks.py, a course-provided FIXED file that STRUCTURE.md forbids us
+# from editing, where `assert seam in SEAMS` is a deliberate developer-facing
+# invariant check on the hook seams. Severity is LOW and it is not reachable from
+# user input. No other bandit check is disabled.
+[bandit]
+skips = B101
