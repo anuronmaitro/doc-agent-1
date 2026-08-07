@@ -1,11 +1,34 @@
 name: cd
+# What this proves TODAY: our pinned dependency set installs cleanly on Linux +
+# Python 3.12 inside the container. That is the fragile part and it is worth
+# verifying now rather than discovering it in A4.
+#
+# Why it does not run on every push: only these four files can change the image, and
+# a full torch install costs several minutes. Scoping the trigger keeps the check
+# honest (it fires whenever the image could actually break) without taxing the ~38
+# unrelated commits of A2/A3. It can also be run on demand from Actions -> cd.
+#
+# A4 TODO: the deploy step below is still a stub because serve/api.py is a stub. When
+# serving lands in A4, implement the push/deploy and widen this trigger if you want a
+# release on every merge to main.
 on:
-  push: {branches: [main]}
+  workflow_dispatch:
+  push:
+    paths:
+      - "pyproject.toml"
+      - "requirements.lock"
+      - "Dockerfile"
+      - ".github/workflows/cd.yml"
 jobs:
   ship:
     runs-on: ubuntu-latest
     needs: []
     steps:
       - uses: actions/checkout@v4
+      - name: Free disk space before the image build
+        run: |
+          df -h /
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc || true
+          df -h /
       - run: docker build -t doc-agent .
-      # IMPLEMENT: push image + deploy to HF Spaces (see configs/config.yaml: deploy)
+      # IMPLEMENT (A4): push image + deploy to HF Spaces (see configs/config.yaml: deploy)

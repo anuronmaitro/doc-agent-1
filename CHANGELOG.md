@@ -57,3 +57,13 @@
   `test_contracts.py` and `test_tools.py` all still pass.
 - **`bandit` fix:** the only finding was B101 (`assert`) inside the FIXED `hooks.py`, so instead of
   editing that file we added `.bandit` (skips B101, documented) and pointed `security.yml` at it.
+- **`cd / ship` fix:** the Dockerfile shipped `python:3.11-slim`, but `requirements.lock` is compiled
+  under 3.12 and pins `numpy==2.5.1` (Requires-Python >=3.12) — the image could never install it.
+  Base image is now `python:3.12-slim`, matching `.python-version` and `requires-python`. Also added
+  the CPU-only torch index, since the default Linux wheel drags in ~2.5 GB of unused `nvidia-cuda-*`.
+  torch/torchvision are installed first from the CPU-only `--index-url` so the source is deterministic
+  (PEP 440 local-version rules mean `2.3.1+cpu` still satisfies the `torch==2.3.1` pin in the lock).
+  The `cd` trigger fires on `workflow_dispatch` **and** on pushes touching `pyproject.toml`,
+  `requirements.lock`, `Dockerfile`, or `cd.yml` — i.e. exactly when the image can break — so the
+  "deps install on Linux + py3.12" check stays real without costing every unrelated commit.
+  A4 TODO: implement the image push / HF Spaces deploy once `serve/api.py` answers.
