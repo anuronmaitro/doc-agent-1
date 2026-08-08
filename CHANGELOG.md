@@ -8,7 +8,7 @@
 - [x] Step 01 — repo bootstrap: deps, lockfiles, gitignore, green CI baseline — S1 (2105037) — 2026-08-08
 - [x] Step 02 — configs/task.yaml + config.yaml — S2 (2105047)
 - [x] Step 03 — data/provenance.md + scripts/get_data.sh — S3 (2105058)
-- [ ] Step 04 — notebooks/eda.ipynb — S1
+- [x] Step 04 — notebooks/eda.ipynb — S1 (2105037)
 - [ ] Step 05 — grading_kit manifest + labels reconcile + 3 gold pages — S2
 - [ ] Step 06 — data/validate.py + data/versioning.py — S3
 - [ ] Step 07 — governance/pii.py (pipeline blocker) — S1
@@ -43,6 +43,25 @@
 - [ ] Step 36 — A2 form sections 1 + 6 + 7 — S3
 - [ ] Step 37 — transcripts x3 — all
 - [ ] Step 38 — final checks + `a2-submit` tag — S1
+
+### Step 04 notes (EDA — measured numbers now live in the notebook)
+- `notebooks/eda.ipynb` runs top-to-bottom on the real corpus and is committed **with outputs**,
+  so every figure the A2 form quotes is traceable to a visible cell (the grounding gate).
+- Measured: **1050 printed + 32 front-matter = 1082 rendered pages**, 2298×3053 px @ 300 dpi
+  grayscale, source PDF 78.6 MB, page images 0.94 GB, archive-OCR text layer 579,798 words
+  (≈9.7× the 60k floor — reference only; the graded count must come from *our* OCR).
+- The 29-chapter map is in the notebook; page counts per chapter sum to 1050.
+- **Split is asserted, not asserted-in-prose:** build 20 ch / 712 pp · val 4 ch / 114 pp ·
+  test 5 ch / 224 pp, with `assert`s that the three chapter sets are pairwise disjoint, that every
+  chapter is assigned, and that all three A1 gold pages (243, 255, 360) land in *test*.
+- **Corrected a claim that our own data contradicted.** A first draft flagged "18% faint pages"
+  using an absolute cutoff (brightness>200 & contrast<40) inherited from A1 — but this corpus has
+  mean brightness 195 / contrast 35, so that cutoff fires on ordinary pages. Replaced with a
+  corpus-relative measure: brightness p5–p95 = 188–203, contrast p5–p95 = 26–43, and **1/60 (2%)**
+  low-contrast outliers at >2σ. The narrow unimodal spread with no degraded tail is the actual
+  evidence for classical-only preprocessing (`enhance.enabled: false`).
+- Notebook kept to 361 KB by capping inline figure dpi and thumbnailing the three page images —
+  the grader still sees real pages without a 1 MB file in git. `data/eda_summary.json` is gitignored.
 
 ### Step 01 notes (environment decisions worth knowing)
 - **Python pinned to 3.12** (`.python-version`, `requires-python = ">=3.11,<3.13"`).
