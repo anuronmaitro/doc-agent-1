@@ -4,23 +4,23 @@
 # ONLY this file; it points to the rest. Build/run scripts and the eval
 # tasks are NAMED here, not copied, so they never go stale.
 
-project_id: ""              # your team id
+project_id: "1"              # your team id
 
 axes:
-  domain: ""                # your corpus subject / real user (see Roster; one per team)
-  data_speciality: ""       # ONE hard property of your corpus you are handed (see Data-Speciality Catalog)
+  domain: "applied special-functions reference"                # your corpus subject / real user (see Roster; one per team)
+  data_speciality: "math-notation"       # ONE hard property of your corpus you are handed (see Data-Speciality Catalog)
                             #   e.g. bangla | arabic | code-switching | degraded-scans | multi-column |
                             #        handwritten | old-orthography | math-notation | dirty-ocr | ...
                             #   (English is not a speciality; if your corpus is English, pick a data condition.)
-  primary_nfr: ""           # ONE quality you optimise ABOVE baseline (see NFR sheet). Faithful &
+  primary_nfr: "explainable"           # ONE quality you optimise ABOVE baseline (see NFR sheet). Faithful &
                             #   accurate are REQUIRED of everyone (baseline), so they are NOT choices.
-  nfr_target: ""            # the concrete target you commit to for that NFR, e.g. "p95 latency <= 300ms",
+  nfr_target: "rationale coverage 100%, rationale-faithfulness >= 0.90; calibrated thinking-score ECE <= 0.05"            # the concrete target you commit to for that NFR, e.g. "p95 latency <= 300ms",
                             #   "peak RAM <= 2GB", "ECE <= 0.05", "PII recall >= 0.98"
 
 corpus:
   path: data/raw/                   # where the scanned page-images live
-  pages: 0                          # total pages  (floor: >= 300)
-  words: 0                          # total words  (floor: >= 60000)
+  pages: 1046                       # total content pages  (floor: >= 300; 1082 PDF pages incl. 32 front-matter, ~1046 content — see data/provenance.md)
+  words: 579798                     # words in archive text layer (floor: >= 60000; reference count — see data/provenance.md; graded floor is re-asserted from our own OCR in data/validate.py, Step 6)
   provenance: data/provenance.md    # source + licence + counts
 
 heldout:
