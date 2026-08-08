@@ -49,6 +49,12 @@ DEGEN_MIN_REPEATS = 4
 # look like "6.1.8". Parsed out of a chunk's OWN text, never guessed.
 FORMULA_ID_RE = re.compile(r"\d+\.\d+\.\d+")
 
+# Pinned commit for cfg["ocr"]["model"]'s locked default (facebook/nougat-base) -- bandit
+# B615 flags from_pretrained() without a revision as a supply-chain risk, since an unpinned
+# model name can resolve to different weights later. Resolved from that repo's `main` ref
+# at implementation time; bump deliberately, not implicitly, if it ever needs to move.
+NOUGAT_REVISION = "abfecedbb34367c820e233f710fdc7f54e6ab249"
+
 
 class Reader:
     """Model set by cfg['ocr']. Baseline: pretrained TrOCR/Donut/Tesseract."""
@@ -74,8 +80,15 @@ class Reader:
             device = "cpu"
         self.device = device
 
-        self._processor = NougatProcessor.from_pretrained(model_name)
-        model = VisionEncoderDecoderModel.from_pretrained(model_name)
+        # Pinned commit for the locked default (bandit B615: an unpinned model name can
+        # resolve to different weights later -- same fix vision/layout.py already applies
+        # to its own from_pretrained() call, for the same reason). A differently configured
+        # model name (not something this project's config.yaml allows) falls back to
+        # unpinned, matching from_pretrained's own default resolution.
+        revision = NOUGAT_REVISION if model_name == "facebook/nougat-base" else None
+
+        self._processor = NougatProcessor.from_pretrained(model_name, revision=revision)
+        model = VisionEncoderDecoderModel.from_pretrained(model_name, revision=revision)
         model.eval()
         model.to(device)
         self._model = model
