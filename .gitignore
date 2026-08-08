@@ -13,6 +13,7 @@ data/ocr/
 data/annot/
 data/index/
 data/eda_summary.json
+data/corpus_version.json
 
 # ...but the LoRA adapter IS a submitted artifact (needed to reproduce our numbers),
 # so un-ignore the models folder.
