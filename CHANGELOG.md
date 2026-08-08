@@ -10,7 +10,7 @@
 - [x] Step 03 — data/provenance.md + scripts/get_data.sh — S3 (2105058)
 - [x] Step 04 — notebooks/eda.ipynb — S1 (2105037)
 - [x] Step 05 — grading_kit manifest + labels reconcile + 3 gold pages — S2
-- [ ] Step 06 — data/validate.py + data/versioning.py — S3
+- [x] Step 06 — data/validate.py + data/versioning.py — S3
 - [ ] Step 07 — governance/pii.py (pipeline blocker) — S1
 - [ ] Step 08 — ingest/loader.py — S2
 - [ ] Step 09 — ingest/preprocess.py — S3
