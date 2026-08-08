@@ -13,7 +13,7 @@
 - [x] Step 06 — data/validate.py + data/versioning.py — S3
 - [x] Step 07 — governance/pii.py (pipeline blocker) — S1
 - [x] Step 08 — ingest/loader.py — S2
-- [ ] Step 09 — ingest/preprocess.py — S3
+- [x] Step 09 — ingest/preprocess.py — S3
 - [ ] Step 10 — vision/layout.py — S1
 - [ ] Step 11 — vision/ocr.py (baseline reader) — S2
 - [ ] Step 12 — eval/metrics.py — S3
