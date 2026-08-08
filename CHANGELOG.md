@@ -19,7 +19,7 @@
 - [x] Step 12 — eval/metrics.py — S3
 - [x] Step 13 — index/chunk.py (semantic chunking, bonus E4) — S1
 - [x] Step 14 — index/embed.py — S2
-- [ ] Step 15 — index/store.py + scripts/build_index.sh — S3
+- [x] Step 15 — index/store.py + scripts/build_index.sh — S3
 - [ ] Step 16 — Kaggle: baseline full-book OCR + BEFORE number — S1
 - [ ] Step 17 — annotation conventions + tooling — S2
 - [ ] Step 18 — render the 164 annotation pages — S3
