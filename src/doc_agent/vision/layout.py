@@ -66,6 +66,12 @@ HEADING_HEIGHT_RATIO = 1.3
 FIGURE_MAX_MEDIAN_SEGMENTS = 1
 FIGURE_MIN_BLOB_AREA_FRAC = 0.35
 
+# Pinned commit for cfg["layout"]["model"]'s default (microsoft/table-transformer-detection)
+# — bandit B615 flags from_pretrained() without a revision as a supply-chain risk, since
+# an unpinned model name can resolve to different weights later. Resolved from that repo's
+# `main` ref at implementation time; bump deliberately, not implicitly, if it ever needs to move.
+TATR_REVISION = "2357cbe2b5a5d1c03e54f32764f06058933b65ab"
+
 
 def _ink(gray: np.ndarray) -> np.ndarray:
     """Darkness per pixel, relative to this page's own ink/paper split (Otsu on the
@@ -285,8 +291,18 @@ class _TatrRefiner:
                     "layout: cfg requests cuda but no GPU is visible; running TATR on CPU"
                 )
                 self._device = "cpu"
-            self._processor = AutoImageProcessor.from_pretrained(self.model_name)
-            model = TableTransformerForObjectDetection.from_pretrained(self.model_name)
+            # Only the locked default has a pinned revision; a differently configured
+            # model name (not something this project's config.yaml allows) falls back
+            # to unpinned, matching from_pretrained's own default resolution.
+            revision = (
+                TATR_REVISION
+                if self.model_name == "microsoft/table-transformer-detection"
+                else None
+            )
+            self._processor = AutoImageProcessor.from_pretrained(self.model_name, revision=revision)
+            model = TableTransformerForObjectDetection.from_pretrained(
+                self.model_name, revision=revision
+            )
             model.eval()
             model.to(self._device)
             self._model = model
