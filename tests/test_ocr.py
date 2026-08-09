@@ -1,8 +1,164 @@
-"""Unit test home for OCR. IMPLEMENT — CI runs these."""
+"""Unit test home for OCR.
 
-import pytest
+Step 18b regression tests: the degeneracy detector (`_failure_reason`) is the piece of
+`vision/ocr.py` that decides whether a transcribed page is kept or discarded, so a wrong
+call here silently throws away good pages or keeps broken ones -- exactly the bug this
+repair fixes. Covers plan.md Step 18b's explicit spec ("\\qquad x30 must be caught;
+\\begin{tabular}{c c c c} must not be") plus the edge cases found while calibrating the
+fix against the real 594-page Step 16 corpus (whitespace-fragile spirals, the bare "&"
+false positive, tiny coincidental blips).
+"""
+
+from doc_agent.contracts import Region
+from doc_agent.vision.ocr import (
+    MIN_PAGE_CHARS,
+    _failure_reason,
+    _is_degenerate,
+    _retry_page_by_region,
+)
 
 
-@pytest.mark.skip(reason="students: implement OCR unit tests")
-def test_ocr_placeholder():
-    assert True
+class TestFailureReasonMissingOrEmpty:
+    def test_missing_page_marker_is_caught(self):
+        text = "Some table header\n[MISSING_PAGE_POST]"
+        assert _failure_reason(text) == "nougat-missing-page-marker"
+
+    def test_near_empty_page_is_caught(self):
+        assert _failure_reason("too short") == "empty-or-near-empty"
+        assert len("too short") < MIN_PAGE_CHARS
+
+    def test_ordinary_page_is_sound(self):
+        text = "6.1.1  \\Gamma(z)=\\int_0^\\infty t^{z-1}e^{-t}\\,dt \\quad (\\Re z>0)\n" * 4
+        assert _failure_reason(text) is None
+        assert _is_degenerate(text) is False
+
+
+class TestFailureReasonRepetitionDegeneration:
+    def test_qquad_x30_is_caught(self):
+        """plan.md Step 18b's own regression spec: a 30-copy \\qquad spiral must be caught.
+
+        The old detector (DEGEN_REPEAT_UNIT_MAX_LEN=4) could never match this -- \\qquad is
+        6 characters, already longer than the unit length that could ever match.
+        """
+        text = "Preamble text before the spiral.\n" + "\\qquad" * 30
+        assert _failure_reason(text) == "repetition-degeneration"
+
+    def test_tabular_column_spec_is_not_caught(self):
+        """plan.md Step 18b's own regression spec: a legitimate column spec must survive."""
+        text = ("\\begin{tabular}{c c c c c c c c c c c c c c c c c c c c c c}\n" * 3) + (
+            "0 & 1 & 2 & 3 \\\\\n" * 5
+        )
+        assert _failure_reason(text) != "repetition-degeneration"
+
+    def test_pipe_delimited_column_spec_is_not_caught(self):
+        text = "|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|\n" + ("data row\n" * 10)
+        assert _failure_reason(text) != "repetition-degeneration"
+
+    def test_whitespace_broken_spiral_is_still_caught(self):
+        """A real Nougat spiral decodes with a stray space every ~13-14 copies (as_p0360,
+        as_p0177), which breaks an exact-match backreference against the raw text. The
+        detector must match on the whitespace-collapsed text instead."""
+        unit = "\\qquad"
+        copies = [unit] * 13 + [" " + unit] * 13 + [unit] * 13
+        text = "".join(copies)
+        assert _failure_reason(text) == "repetition-degeneration"
+
+    def test_short_unit_needs_more_repeats_to_reach_the_span_floor(self):
+        """A short unit repeated only enough times to clear the 13-repeat count but not
+        the MIN_SPIRAL_SPAN_CHARS floor reads as a coincidental blip, not a stuck decoder
+        (as_p0018/as_p0824: "\\," and "\\!" repeated ~13-14 times inside an otherwise-good
+        page). Below the span floor it must NOT be flagged..."""
+        short_spiral = "\\," * 13  # 26 chars: well under the 60-char span floor
+        good_page = "6.1.1 \\Gamma(z)=\\int_0^\\infty t^{z-1}e^{-t}\\,dt \\quad (\\Re z>0)\n" * 3
+        text = good_page + short_spiral
+        assert _failure_reason(text) != "repetition-degeneration"
+
+    def test_short_unit_does_flag_once_it_clears_the_span_floor(self):
+        """The same short unit DOES cross MIN_SPIRAL_SPAN_CHARS once repeated enough times
+        to actually dominate a real page, rather than being a one-line blip."""
+        long_spiral = "\\," * 40  # 80 chars: clears the 60-char floor
+        text = "Some prose about the ascending series of Bessel functions.\n" + long_spiral
+        assert _failure_reason(text) == "repetition-degeneration"
+
+    def test_bare_ampersand_sparse_table_row_is_not_caught(self):
+        """as_p0328: a sparse table row of bare "&" separators is legitimate LaTeX, not a
+        spiral -- caught as a false positive before "&" was added to TABULAR_UNIT_RE."""
+        text = ("Row label " + "& " * 20 + "\n") * 2
+        assert _failure_reason(text) != "repetition-degeneration"
+
+    def test_ampersand_mixed_with_math_content_is_still_caught(self):
+        """as_p0856: a unit like "&\\(\\times\\)" contains "&" but also backslash/math
+        content, so adding "&" to TABULAR_UNIT_RE must not create a new blind spot for
+        genuine spirals that merely happen to include a table separator."""
+        text = "Preamble.\n" + "&\\(\\times\\)" * 13
+        assert _failure_reason(text) == "repetition-degeneration"
+
+    def test_mid_page_spiral_is_caught_not_just_tail(self):
+        """The whole-page scan (added in Step 18b) must catch a spiral that starts mid-page
+        and is followed by clean, non-repeating text -- the old tail-only check would miss
+        this because the last DEGEN_NGRAM*DEGEN_MIN_REPEATS tokens are not the spiral."""
+        text = (
+            "Clean opening paragraph about Bessel functions of the first kind.\n"
+            + "\\qquad" * 25
+            + "\nA clean closing paragraph that does not repeat anything at all.\n"
+        )
+        assert _failure_reason(text) == "repetition-degeneration"
+
+    def test_original_tail_check_still_fires(self):
+        """The pre-existing word-level tail check (independent of the character-unit regex
+        above) must keep working for the failure mode it was built for."""
+        pattern = " ".join(f"tok{i}" for i in range(12))
+        text = "Normal opening text. " + (pattern + " ") * 4
+        assert _failure_reason(text) == "repetition-degeneration"
+
+
+class _FakeReader:
+    """Duck-typed stand-in for Reader: `_retry_page_by_region` only ever calls
+    `_generate_region`, so a real model/GPU is not needed to test its recombination and
+    failure-propagation logic."""
+
+    def __init__(self, texts: dict[tuple[int, int, int, int], str]) -> None:
+        self._texts = texts
+
+    def _generate_region(self, region: Region) -> tuple[str, float]:
+        return self._texts[region.bbox], 0.9
+
+
+class TestRetryPageByRegion:
+    def _regions(self, n: int) -> list[Region]:
+        return [Region(page_id="as_p0001", bbox=(0, i, 10, i + 1), kind="text") for i in range(n)]
+
+    def test_recombines_sound_regions_into_success(self):
+        regions = self._regions(2)
+        text_a = "6.1.1 \\Gamma(z)=\\int_0^\\infty t^{z-1}e^{-t}\\,dt \\quad (\\Re z>0). " * 3
+        text_b = (
+            "6.1.2 \\Gamma(z)=\\lim_{n\\to\\infty}\\frac{n!\\,n^{z}}{z(z+1)(z+2)\\cdots(z+n)}. " * 3
+        )
+        reader = _FakeReader({(0, 0, 10, 1): text_a, (0, 1, 10, 2): text_b})
+        result = _retry_page_by_region(reader, regions)
+        assert result is not None
+        recombined, region_texts, region_confs = result
+        assert "6.1.1" in recombined and "6.1.2" in recombined
+        assert region_texts == [text_a, text_b]
+        assert region_confs == [0.9, 0.9]
+
+    def test_empty_regions_are_dropped_from_the_recombination(self):
+        regions = self._regions(2)
+        text_a = "6.1.1 \\Gamma(z)=\\int_0^\\infty t^{z-1}e^{-t}\\,dt \\quad (\\Re z>0). " * 3
+        reader = _FakeReader({(0, 0, 10, 1): text_a, (0, 1, 10, 2): ""})
+        result = _retry_page_by_region(reader, regions)
+        assert result is not None
+        recombined, _texts, _confs = result
+        assert recombined == text_a
+
+    def test_still_degenerate_recombination_returns_none(self):
+        """If retrying region-by-region does not actually fix anything, the caller must
+        keep the original failure rather than silently accepting a still-broken page."""
+        regions = self._regions(2)
+        reader = _FakeReader(
+            {
+                (0, 0, 10, 1): "\\qquad" * 30,
+                (0, 1, 10, 2): "",
+            }
+        )
+        assert _retry_page_by_region(reader, regions) is None
