@@ -22,6 +22,7 @@
 #   LIMIT=20 bash scripts/get_data.sh        # first 20 pages only (quick check)
 #   RENDER_DPI=150 bash scripts/get_data.sh  # lower-res pass
 #   FORCE=1 bash scripts/get_data.sh         # re-render pages that already exist
+#   ANNOT=1 bash scripts/get_data.sh         # Step 18: the 164 annotation pages only
 # =============================================================================
 set -euo pipefail
 
@@ -48,6 +49,8 @@ FRONT_MATTER_OFFSET="${FRONT_MATTER_OFFSET:-32}"
 
 LIMIT="${LIMIT:-0}"     # 0 = all pages
 FORCE="${FORCE:-0}"     # 1 = re-render pages that already exist
+ANNOT="${ANNOT:-0}"     # 1 = Step 18 mode: the 164 annotation pages, not the corpus
+ANNOT_DIR="data/annot"
 
 echo "=============================================================="
 echo " MathScholar corpus — Abramowitz & Stegun 1964 (NBS AMS-55)"
@@ -109,6 +112,176 @@ if [ -n "$EXPECTED_SHA256" ] && [ "$ACTUAL_SHA256" != "$EXPECTED_SHA256" ]; then
   echo "         recorded: $EXPECTED_SHA256" >&2
   echo "         got:      $ACTUAL_SHA256" >&2
   echo "         Delete $PDF_PATH and re-run if the download was interrupted." >&2
+fi
+
+# -----------------------------------------------------------------------------
+# 1b. ANNOT=1 — Step 18: materialise the 164 hand-annotation pages and stop.
+#
+# The page lists live in src/doc_agent/data/validate.py (imported below), not in
+# this script, so the renderer and tests/test_data.py read the same one list.
+#
+# Images are COPIED from data/pages/ when it is already populated, and rendered
+# from the PDF only when it is not. Copying is not just faster: it guarantees the
+# annotator's image is byte-identical to the one vision/ocr.py actually read, so
+# a correction can never be made against a subtly different render than the draft.
+# -----------------------------------------------------------------------------
+if [ "$ANNOT" = "1" ]; then
+  RENDER_DPI="$RENDER_DPI" \
+  FRONT_MATTER_OFFSET="$FRONT_MATTER_OFFSET" \
+  PDF_PATH="$PDF_PATH" \
+  PAGES_DIR="$PAGES_DIR" \
+  ANNOT_DIR="$ANNOT_DIR" \
+  FORCE="$FORCE" \
+  PYTHONPATH="$REPO_ROOT/src" \
+  "${PY_CMD[@]}" - <<'PY'
+import json
+import os
+import re
+import shutil
+import time
+
+import pymupdf
+
+from doc_agent.data.validate import (
+    ANNOT_SETS,
+    ANNOT_TEST_ALREADY_DONE,
+    validate_annotation_sets,
+)
+
+pdf_path = os.environ["PDF_PATH"]
+pages_dir = os.environ["PAGES_DIR"]
+annot_dir = os.environ["ANNOT_DIR"]
+dpi = int(os.environ["RENDER_DPI"])
+offset = int(os.environ["FRONT_MATTER_OFFSET"])
+force = os.environ["FORCE"] == "1"
+
+# --- 1. the lists must be sound BEFORE anyone renders or transcribes anything -
+print("[1/4] validating the page lists (counts, duplicates, leakage)")
+counts = validate_annotation_sets()
+print(f"      {sum(counts.values())} pages: "
+      + " / ".join(f"{n} {k}" for k, n in counts.items())
+      + "  — pairwise disjoint, each page inside its own chapter family")
+
+doc = pymupdf.open(pdf_path)
+
+
+def folio_found(text, expected):
+    """Same edge-anchored folio test scripts/get_data.sh uses for the corpus."""
+    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+    for ln in lines[:3] + lines[-3:]:
+        if re.match(rf"^\W*{expected}\b", ln) or re.search(rf"\b{expected}\W*$", ln):
+            return True
+    return False
+
+
+# --- 2. materialise the images ------------------------------------------------
+print(f"[2/4] writing 300-dpi grayscale pages -> {annot_dir}/<split>/")
+manifest = {
+    "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    "render_dpi": dpi,
+    "front_matter_offset": offset,
+    "page_numbering": f"printed N = PDF N+{offset}; files named by PRINTED page",
+    "source": "summary.md 4h via doc_agent.data.validate",
+    "splits": {},
+}
+copied = rendered = skipped = 0
+confirmed = control = checked = 0
+
+for split, (pages, _family) in ANNOT_SETS.items():
+    out_dir = os.path.join(annot_dir, split)
+    os.makedirs(out_dir, exist_ok=True)
+    rows = []
+    for printed in pages:
+        stem = f"as_p{printed:04d}"
+        dst = os.path.join(out_dir, stem + ".png")
+        src = os.path.join(pages_dir, stem + ".png")
+        pdf_index = printed + offset          # 1-based
+        if os.path.exists(dst) and not force:
+            skipped += 1
+        elif os.path.exists(src):
+            shutil.copyfile(src, dst)
+            copied += 1
+        else:
+            pix = doc.load_page(pdf_index - 1).get_pixmap(dpi=dpi, colorspace=pymupdf.csGRAY)
+            pix.save(dst)
+            rendered += 1
+
+        # --- 3. per-page offset proof, not a 6-page spot check ----------------
+        text = doc.load_page(pdf_index - 1).get_text()
+        hit = folio_found(text, printed)
+        confirmed += hit
+        control += folio_found(text, pdf_index)   # same test at the WRONG offset
+        checked += 1
+        rows.append({
+            "printed_page": printed,
+            "pdf_page": pdf_index,
+            "file": os.path.relpath(dst).replace("\\", "/"),
+            "bytes": os.path.getsize(dst),
+            "folio_confirmed": bool(hit),
+        })
+    manifest["splits"][split] = {"count": len(rows), "dir": out_dir, "pages": rows}
+
+print(f"      {copied} copied from {pages_dir}/, {rendered} rendered from the PDF, "
+      f"{skipped} already present")
+
+# --- 3b. report the offset evidence ------------------------------------------
+print(f"[3/4] page-offset verification (expect printed N = PDF N+{offset})")
+print(f"      folio confirmed on {confirmed}/{checked} pages; "
+      f"the same test at the WRONG offset confirms {control}/{checked}")
+manifest["offset_verification"] = {
+    "checked": checked, "confirmed": confirmed, "control_wrong_offset": control,
+}
+if confirmed <= control:
+    raise SystemExit(
+        f"ERROR: the folio test does not separate the correct offset ({confirmed}) from a "
+        f"deliberately wrong one ({control}) — do not annotate against these renders."
+    )
+
+# --- 4. how much of this is correction vs blank-slate transcription ----------
+# Step 17's helper shows the Step 16 draft next to the page. A page with no usable
+# draft is transcribed from scratch, which is far slower -- so the split of the
+# 164 into "correctable" and "blank slate" is the number that sizes Steps 19-24.
+failures = {}
+fpath = os.path.join("data", "ocr", "failures.json")
+if os.path.exists(fpath):
+    with open(fpath, encoding="utf-8") as fh:
+        failures = {r["page_id"]: r.get("reason", "?") for r in json.load(fh)}
+
+print("[4/4] draft availability for Steps 19-24 (from Step 16's baseline run)")
+for split, (pages, _family) in ANNOT_SETS.items():
+    have = blank = 0
+    for printed in pages:
+        stem = f"as_p{printed:04d}"
+        if os.path.exists(os.path.join("data", "ocr", stem + ".mmd")) and stem not in failures:
+            have += 1
+        else:
+            blank += 1
+    manifest["splits"][split]["baseline_draft"] = {"correctable": have, "blank_slate": blank}
+    pct = 100 * blank / max(len(pages), 1)
+    print(f"      {split:5s} {have:3d} correctable / {blank:3d} blank-slate ({pct:.0f}% from scratch)")
+
+done = sorted(ANNOT_TEST_ALREADY_DONE)
+manifest["test_already_annotated_in_a1"] = done
+print(f"      test: {len(done)} pages already transcribed in A1 and reused verbatim: {done}")
+
+out = os.path.join(annot_dir, "annot_manifest.json")
+with open(out, "w", encoding="utf-8") as fh:
+    json.dump(manifest, fh, indent=2)
+    fh.write("\n")
+print(f"\nwrote {out}  ({sum(counts.values())} pages)")
+doc.close()
+PY
+
+  echo
+  echo "Annotation pages ready:"
+  echo "  $ANNOT_DIR/train/  105 pages   (images gitignored; the .json annotations are committed)"
+  echo "  $ANNOT_DIR/val/     20 pages   (images gitignored; the .json annotations are committed)"
+  echo "  $ANNOT_DIR/test/    39 pages   (whole folder gitignored — the real output is grading_kit/)"
+  echo "  $ANNOT_DIR/annot_manifest.json  committed: the counts + per-page offset proof"
+  echo
+  echo "Next: Step 19 — bootstrap the drafts with"
+  echo "  python scripts/annotate_helper.py --out $ANNOT_DIR/test --pages 229 230 232 ..."
+  exit 0
 fi
 
 # -----------------------------------------------------------------------------

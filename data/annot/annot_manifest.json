@@ -1,0 +1,1197 @@
+{
+  "generated_at": "2026-08-09T13:54:20Z",
+  "render_dpi": 300,
+  "front_matter_offset": 32,
+  "page_numbering": "printed N = PDF N+32; files named by PRINTED page",
+  "source": "summary.md 4h via doc_agent.data.validate",
+  "splits": {
+    "train": {
+      "count": 105,
+      "dir": "data/annot\\train",
+      "pages": [
+        {
+          "printed_page": 1,
+          "pdf_page": 33,
+          "file": "data/annot/train/as_p0001.png",
+          "bytes": 389554,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 2,
+          "pdf_page": 34,
+          "file": "data/annot/train/as_p0002.png",
+          "bytes": 1185926,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 3,
+          "pdf_page": 35,
+          "file": "data/annot/train/as_p0003.png",
+          "bytes": 1143005,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 7,
+          "pdf_page": 39,
+          "file": "data/annot/train/as_p0007.png",
+          "bytes": 869591,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 15,
+          "pdf_page": 47,
+          "file": "data/annot/train/as_p0015.png",
+          "bytes": 606658,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 24,
+          "pdf_page": 56,
+          "file": "data/annot/train/as_p0024.png",
+          "bytes": 943509,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 40,
+          "pdf_page": 72,
+          "file": "data/annot/train/as_p0040.png",
+          "bytes": 1001537,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 44,
+          "pdf_page": 76,
+          "file": "data/annot/train/as_p0044.png",
+          "bytes": 1030369,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 50,
+          "pdf_page": 82,
+          "file": "data/annot/train/as_p0050.png",
+          "bytes": 1012427,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 51,
+          "pdf_page": 83,
+          "file": "data/annot/train/as_p0051.png",
+          "bytes": 1004533,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 70,
+          "pdf_page": 102,
+          "file": "data/annot/train/as_p0070.png",
+          "bytes": 588122,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 75,
+          "pdf_page": 107,
+          "file": "data/annot/train/as_p0075.png",
+          "bytes": 621832,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 114,
+          "pdf_page": 146,
+          "file": "data/annot/train/as_p0114.png",
+          "bytes": 1307306,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 115,
+          "pdf_page": 147,
+          "file": "data/annot/train/as_p0115.png",
+          "bytes": 1253291,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 140,
+          "pdf_page": 172,
+          "file": "data/annot/train/as_p0140.png",
+          "bytes": 1377285,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 141,
+          "pdf_page": 173,
+          "file": "data/annot/train/as_p0141.png",
+          "bytes": 1234800,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 480,
+          "pdf_page": 512,
+          "file": "data/annot/train/as_p0480.png",
+          "bytes": 628577,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 481,
+          "pdf_page": 513,
+          "file": "data/annot/train/as_p0481.png",
+          "bytes": 645406,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 482,
+          "pdf_page": 514,
+          "file": "data/annot/train/as_p0482.png",
+          "bytes": 658776,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 483,
+          "pdf_page": 515,
+          "file": "data/annot/train/as_p0483.png",
+          "bytes": 682928,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 486,
+          "pdf_page": 518,
+          "file": "data/annot/train/as_p0486.png",
+          "bytes": 706489,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 487,
+          "pdf_page": 519,
+          "file": "data/annot/train/as_p0487.png",
+          "bytes": 643406,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 497,
+          "pdf_page": 529,
+          "file": "data/annot/train/as_p0497.png",
+          "bytes": 701556,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 498,
+          "pdf_page": 530,
+          "file": "data/annot/train/as_p0498.png",
+          "bytes": 753618,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 499,
+          "pdf_page": 531,
+          "file": "data/annot/train/as_p0499.png",
+          "bytes": 899024,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 540,
+          "pdf_page": 572,
+          "file": "data/annot/train/as_p0540.png",
+          "bytes": 644578,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 541,
+          "pdf_page": 573,
+          "file": "data/annot/train/as_p0541.png",
+          "bytes": 687176,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 542,
+          "pdf_page": 574,
+          "file": "data/annot/train/as_p0542.png",
+          "bytes": 621683,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 548,
+          "pdf_page": 580,
+          "file": "data/annot/train/as_p0548.png",
+          "bytes": 902350,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 551,
+          "pdf_page": 583,
+          "file": "data/annot/train/as_p0551.png",
+          "bytes": 874593,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 552,
+          "pdf_page": 584,
+          "file": "data/annot/train/as_p0552.png",
+          "bytes": 892747,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 571,
+          "pdf_page": 603,
+          "file": "data/annot/train/as_p0571.png",
+          "bytes": 600373,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 572,
+          "pdf_page": 604,
+          "file": "data/annot/train/as_p0572.png",
+          "bytes": 757372,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 575,
+          "pdf_page": 607,
+          "file": "data/annot/train/as_p0575.png",
+          "bytes": 856418,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 579,
+          "pdf_page": 611,
+          "file": "data/annot/train/as_p0579.png",
+          "bytes": 760486,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 580,
+          "pdf_page": 612,
+          "file": "data/annot/train/as_p0580.png",
+          "bytes": 871378,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 631,
+          "pdf_page": 663,
+          "file": "data/annot/train/as_p0631.png",
+          "bytes": 809711,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 633,
+          "pdf_page": 665,
+          "file": "data/annot/train/as_p0633.png",
+          "bytes": 547859,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 634,
+          "pdf_page": 666,
+          "file": "data/annot/train/as_p0634.png",
+          "bytes": 668158,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 639,
+          "pdf_page": 671,
+          "file": "data/annot/train/as_p0639.png",
+          "bytes": 761948,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 640,
+          "pdf_page": 672,
+          "file": "data/annot/train/as_p0640.png",
+          "bytes": 841719,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 659,
+          "pdf_page": 691,
+          "file": "data/annot/train/as_p0659.png",
+          "bytes": 663750,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 693,
+          "pdf_page": 725,
+          "file": "data/annot/train/as_p0693.png",
+          "bytes": 716673,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 702,
+          "pdf_page": 734,
+          "file": "data/annot/train/as_p0702.png",
+          "bytes": 1071957,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 703,
+          "pdf_page": 735,
+          "file": "data/annot/train/as_p0703.png",
+          "bytes": 1126247,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 707,
+          "pdf_page": 739,
+          "file": "data/annot/train/as_p0707.png",
+          "bytes": 1215982,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 709,
+          "pdf_page": 741,
+          "file": "data/annot/train/as_p0709.png",
+          "bytes": 1183092,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 711,
+          "pdf_page": 743,
+          "file": "data/annot/train/as_p0711.png",
+          "bytes": 1037186,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 724,
+          "pdf_page": 756,
+          "file": "data/annot/train/as_p0724.png",
+          "bytes": 860102,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 726,
+          "pdf_page": 758,
+          "file": "data/annot/train/as_p0726.png",
+          "bytes": 594154,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 737,
+          "pdf_page": 769,
+          "file": "data/annot/train/as_p0737.png",
+          "bytes": 751269,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 742,
+          "pdf_page": 774,
+          "file": "data/annot/train/as_p0742.png",
+          "bytes": 770529,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 748,
+          "pdf_page": 780,
+          "file": "data/annot/train/as_p0748.png",
+          "bytes": 920400,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 749,
+          "pdf_page": 781,
+          "file": "data/annot/train/as_p0749.png",
+          "bytes": 795422,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 754,
+          "pdf_page": 786,
+          "file": "data/annot/train/as_p0754.png",
+          "bytes": 789567,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 765,
+          "pdf_page": 797,
+          "file": "data/annot/train/as_p0765.png",
+          "bytes": 773280,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 766,
+          "pdf_page": 798,
+          "file": "data/annot/train/as_p0766.png",
+          "bytes": 919962,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 767,
+          "pdf_page": 799,
+          "file": "data/annot/train/as_p0767.png",
+          "bytes": 886804,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 768,
+          "pdf_page": 800,
+          "file": "data/annot/train/as_p0768.png",
+          "bytes": 988081,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 769,
+          "pdf_page": 801,
+          "file": "data/annot/train/as_p0769.png",
+          "bytes": 795229,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 777,
+          "pdf_page": 809,
+          "file": "data/annot/train/as_p0777.png",
+          "bytes": 668501,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 778,
+          "pdf_page": 810,
+          "file": "data/annot/train/as_p0778.png",
+          "bytes": 727439,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 781,
+          "pdf_page": 813,
+          "file": "data/annot/train/as_p0781.png",
+          "bytes": 522450,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 782,
+          "pdf_page": 814,
+          "file": "data/annot/train/as_p0782.png",
+          "bytes": 632891,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 783,
+          "pdf_page": 815,
+          "file": "data/annot/train/as_p0783.png",
+          "bytes": 570227,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 785,
+          "pdf_page": 817,
+          "file": "data/annot/train/as_p0785.png",
+          "bytes": 735786,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 804,
+          "pdf_page": 836,
+          "file": "data/annot/train/as_p0804.png",
+          "bytes": 553960,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 805,
+          "pdf_page": 837,
+          "file": "data/annot/train/as_p0805.png",
+          "bytes": 591965,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 806,
+          "pdf_page": 838,
+          "file": "data/annot/train/as_p0806.png",
+          "bytes": 608928,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 809,
+          "pdf_page": 841,
+          "file": "data/annot/train/as_p0809.png",
+          "bytes": 471631,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 813,
+          "pdf_page": 845,
+          "file": "data/annot/train/as_p0813.png",
+          "bytes": 798201,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 818,
+          "pdf_page": 850,
+          "file": "data/annot/train/as_p0818.png",
+          "bytes": 1101760,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 823,
+          "pdf_page": 855,
+          "file": "data/annot/train/as_p0823.png",
+          "bytes": 635535,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 852,
+          "pdf_page": 884,
+          "file": "data/annot/train/as_p0852.png",
+          "bytes": 1124431,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 858,
+          "pdf_page": 890,
+          "file": "data/annot/train/as_p0858.png",
+          "bytes": 1158583,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 862,
+          "pdf_page": 894,
+          "file": "data/annot/train/as_p0862.png",
+          "bytes": 1173764,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 864,
+          "pdf_page": 896,
+          "file": "data/annot/train/as_p0864.png",
+          "bytes": 1240674,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 865,
+          "pdf_page": 897,
+          "file": "data/annot/train/as_p0865.png",
+          "bytes": 1243216,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 878,
+          "pdf_page": 910,
+          "file": "data/annot/train/as_p0878.png",
+          "bytes": 715647,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 879,
+          "pdf_page": 911,
+          "file": "data/annot/train/as_p0879.png",
+          "bytes": 793360,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 883,
+          "pdf_page": 915,
+          "file": "data/annot/train/as_p0883.png",
+          "bytes": 649309,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 885,
+          "pdf_page": 917,
+          "file": "data/annot/train/as_p0885.png",
+          "bytes": 545145,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 886,
+          "pdf_page": 918,
+          "file": "data/annot/train/as_p0886.png",
+          "bytes": 796545,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 915,
+          "pdf_page": 947,
+          "file": "data/annot/train/as_p0915.png",
+          "bytes": 490965,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 932,
+          "pdf_page": 964,
+          "file": "data/annot/train/as_p0932.png",
+          "bytes": 683905,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 934,
+          "pdf_page": 966,
+          "file": "data/annot/train/as_p0934.png",
+          "bytes": 524077,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 937,
+          "pdf_page": 969,
+          "file": "data/annot/train/as_p0937.png",
+          "bytes": 931609,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 945,
+          "pdf_page": 977,
+          "file": "data/annot/train/as_p0945.png",
+          "bytes": 645624,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 946,
+          "pdf_page": 978,
+          "file": "data/annot/train/as_p0946.png",
+          "bytes": 767035,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 974,
+          "pdf_page": 1006,
+          "file": "data/annot/train/as_p0974.png",
+          "bytes": 1291286,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 998,
+          "pdf_page": 1030,
+          "file": "data/annot/train/as_p0998.png",
+          "bytes": 865329,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 1000,
+          "pdf_page": 1032,
+          "file": "data/annot/train/as_p1000.png",
+          "bytes": 783036,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1004,
+          "pdf_page": 1036,
+          "file": "data/annot/train/as_p1004.png",
+          "bytes": 774802,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1007,
+          "pdf_page": 1039,
+          "file": "data/annot/train/as_p1007.png",
+          "bytes": 500605,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 1008,
+          "pdf_page": 1040,
+          "file": "data/annot/train/as_p1008.png",
+          "bytes": 492225,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1010,
+          "pdf_page": 1042,
+          "file": "data/annot/train/as_p1010.png",
+          "bytes": 588095,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 1013,
+          "pdf_page": 1045,
+          "file": "data/annot/train/as_p1013.png",
+          "bytes": 982583,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1014,
+          "pdf_page": 1046,
+          "file": "data/annot/train/as_p1014.png",
+          "bytes": 1006925,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1017,
+          "pdf_page": 1049,
+          "file": "data/annot/train/as_p1017.png",
+          "bytes": 596851,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1022,
+          "pdf_page": 1054,
+          "file": "data/annot/train/as_p1022.png",
+          "bytes": 384119,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1023,
+          "pdf_page": 1055,
+          "file": "data/annot/train/as_p1023.png",
+          "bytes": 409879,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1025,
+          "pdf_page": 1057,
+          "file": "data/annot/train/as_p1025.png",
+          "bytes": 361958,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 1026,
+          "pdf_page": 1058,
+          "file": "data/annot/train/as_p1026.png",
+          "bytes": 422456,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1027,
+          "pdf_page": 1059,
+          "file": "data/annot/train/as_p1027.png",
+          "bytes": 461235,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1028,
+          "pdf_page": 1060,
+          "file": "data/annot/train/as_p1028.png",
+          "bytes": 453280,
+          "folio_confirmed": true
+        }
+      ],
+      "baseline_draft": {
+        "correctable": 64,
+        "blank_slate": 41
+      }
+    },
+    "val": {
+      "count": 20,
+      "dir": "data/annot\\val",
+      "pages": [
+        {
+          "printed_page": 332,
+          "pdf_page": 364,
+          "file": "data/annot/val/as_p0332.png",
+          "bytes": 802836,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 334,
+          "pdf_page": 366,
+          "file": "data/annot/val/as_p0334.png",
+          "bytes": 614191,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 340,
+          "pdf_page": 372,
+          "file": "data/annot/val/as_p0340.png",
+          "bytes": 1103191,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 350,
+          "pdf_page": 382,
+          "file": "data/annot/val/as_p0350.png",
+          "bytes": 979494,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 351,
+          "pdf_page": 383,
+          "file": "data/annot/val/as_p0351.png",
+          "bytes": 887468,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 438,
+          "pdf_page": 470,
+          "file": "data/annot/val/as_p0438.png",
+          "bytes": 513300,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 439,
+          "pdf_page": 471,
+          "file": "data/annot/val/as_p0439.png",
+          "bytes": 641487,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 441,
+          "pdf_page": 473,
+          "file": "data/annot/val/as_p0441.png",
+          "bytes": 628950,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 444,
+          "pdf_page": 476,
+          "file": "data/annot/val/as_p0444.png",
+          "bytes": 598481,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 453,
+          "pdf_page": 485,
+          "file": "data/annot/val/as_p0453.png",
+          "bytes": 1254723,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 459,
+          "pdf_page": 491,
+          "file": "data/annot/val/as_p0459.png",
+          "bytes": 1172132,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 505,
+          "pdf_page": 537,
+          "file": "data/annot/val/as_p0505.png",
+          "bytes": 631424,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 507,
+          "pdf_page": 539,
+          "file": "data/annot/val/as_p0507.png",
+          "bytes": 651902,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 509,
+          "pdf_page": 541,
+          "file": "data/annot/val/as_p0509.png",
+          "bytes": 645017,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 518,
+          "pdf_page": 550,
+          "file": "data/annot/val/as_p0518.png",
+          "bytes": 970197,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 528,
+          "pdf_page": 560,
+          "file": "data/annot/val/as_p0528.png",
+          "bytes": 999368,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 534,
+          "pdf_page": 566,
+          "file": "data/annot/val/as_p0534.png",
+          "bytes": 1070458,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 562,
+          "pdf_page": 594,
+          "file": "data/annot/val/as_p0562.png",
+          "bytes": 756721,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 563,
+          "pdf_page": 595,
+          "file": "data/annot/val/as_p0563.png",
+          "bytes": 942352,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 564,
+          "pdf_page": 596,
+          "file": "data/annot/val/as_p0564.png",
+          "bytes": 772447,
+          "folio_confirmed": true
+        }
+      ],
+      "baseline_draft": {
+        "correctable": 11,
+        "blank_slate": 9
+      }
+    },
+    "test": {
+      "count": 39,
+      "dir": "data/annot\\test",
+      "pages": [
+        {
+          "printed_page": 229,
+          "pdf_page": 261,
+          "file": "data/annot/test/as_p0229.png",
+          "bytes": 567705,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 230,
+          "pdf_page": 262,
+          "file": "data/annot/test/as_p0230.png",
+          "bytes": 629909,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 232,
+          "pdf_page": 264,
+          "file": "data/annot/test/as_p0232.png",
+          "bytes": 631997,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 234,
+          "pdf_page": 266,
+          "file": "data/annot/test/as_p0234.png",
+          "bytes": 1066574,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 242,
+          "pdf_page": 274,
+          "file": "data/annot/test/as_p0242.png",
+          "bytes": 1028042,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 243,
+          "pdf_page": 275,
+          "file": "data/annot/test/as_p0243.png",
+          "bytes": 777192,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 247,
+          "pdf_page": 279,
+          "file": "data/annot/test/as_p0247.png",
+          "bytes": 926735,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 255,
+          "pdf_page": 287,
+          "file": "data/annot/test/as_p0255.png",
+          "bytes": 730335,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 256,
+          "pdf_page": 288,
+          "file": "data/annot/test/as_p0256.png",
+          "bytes": 813278,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 258,
+          "pdf_page": 290,
+          "file": "data/annot/test/as_p0258.png",
+          "bytes": 657827,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 259,
+          "pdf_page": 291,
+          "file": "data/annot/test/as_p0259.png",
+          "bytes": 635370,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 260,
+          "pdf_page": 292,
+          "file": "data/annot/test/as_p0260.png",
+          "bytes": 650549,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 262,
+          "pdf_page": 294,
+          "file": "data/annot/test/as_p0262.png",
+          "bytes": 593570,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 280,
+          "pdf_page": 312,
+          "file": "data/annot/test/as_p0280.png",
+          "bytes": 1175586,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 281,
+          "pdf_page": 313,
+          "file": "data/annot/test/as_p0281.png",
+          "bytes": 1101558,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 298,
+          "pdf_page": 330,
+          "file": "data/annot/test/as_p0298.png",
+          "bytes": 760289,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 301,
+          "pdf_page": 333,
+          "file": "data/annot/test/as_p0301.png",
+          "bytes": 649369,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 302,
+          "pdf_page": 334,
+          "file": "data/annot/test/as_p0302.png",
+          "bytes": 706306,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 303,
+          "pdf_page": 335,
+          "file": "data/annot/test/as_p0303.png",
+          "bytes": 681450,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 312,
+          "pdf_page": 344,
+          "file": "data/annot/test/as_p0312.png",
+          "bytes": 1241589,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 318,
+          "pdf_page": 350,
+          "file": "data/annot/test/as_p0318.png",
+          "bytes": 971364,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 324,
+          "pdf_page": 356,
+          "file": "data/annot/test/as_p0324.png",
+          "bytes": 1009844,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 360,
+          "pdf_page": 392,
+          "file": "data/annot/test/as_p0360.png",
+          "bytes": 686616,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 361,
+          "pdf_page": 393,
+          "file": "data/annot/test/as_p0361.png",
+          "bytes": 720680,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 362,
+          "pdf_page": 394,
+          "file": "data/annot/test/as_p0362.png",
+          "bytes": 709018,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 366,
+          "pdf_page": 398,
+          "file": "data/annot/test/as_p0366.png",
+          "bytes": 649491,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 367,
+          "pdf_page": 399,
+          "file": "data/annot/test/as_p0367.png",
+          "bytes": 659593,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 368,
+          "pdf_page": 400,
+          "file": "data/annot/test/as_p0368.png",
+          "bytes": 773477,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 369,
+          "pdf_page": 401,
+          "file": "data/annot/test/as_p0369.png",
+          "bytes": 841352,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 376,
+          "pdf_page": 408,
+          "file": "data/annot/test/as_p0376.png",
+          "bytes": 696398,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 379,
+          "pdf_page": 411,
+          "file": "data/annot/test/as_p0379.png",
+          "bytes": 774753,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 383,
+          "pdf_page": 415,
+          "file": "data/annot/test/as_p0383.png",
+          "bytes": 711896,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 385,
+          "pdf_page": 417,
+          "file": "data/annot/test/as_p0385.png",
+          "bytes": 751864,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 423,
+          "pdf_page": 455,
+          "file": "data/annot/test/as_p0423.png",
+          "bytes": 1103606,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 600,
+          "pdf_page": 632,
+          "file": "data/annot/test/as_p0600.png",
+          "bytes": 701823,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 619,
+          "pdf_page": 651,
+          "file": "data/annot/test/as_p0619.png",
+          "bytes": 900444,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 621,
+          "pdf_page": 653,
+          "file": "data/annot/test/as_p0621.png",
+          "bytes": 877874,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 622,
+          "pdf_page": 654,
+          "file": "data/annot/test/as_p0622.png",
+          "bytes": 988301,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 625,
+          "pdf_page": 657,
+          "file": "data/annot/test/as_p0625.png",
+          "bytes": 915043,
+          "folio_confirmed": true
+        }
+      ],
+      "baseline_draft": {
+        "correctable": 24,
+        "blank_slate": 15
+      }
+    }
+  },
+  "offset_verification": {
+    "checked": 164,
+    "confirmed": 123,
+    "control_wrong_offset": 0
+  },
+  "test_already_annotated_in_a1": [
+    243,
+    255,
+    360
+  ]
+}

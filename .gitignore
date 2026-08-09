@@ -31,6 +31,14 @@ data/annot/test/
 !data/annot/train/
 !data/annot/train/**
 
+# ...but NOT the page images themselves. Step 18 puts a 300-dpi grayscale render of
+# each annotation page beside its JSON (~0.84 MB each, ~105 MB across val+train) —
+# the un-ignore rules above would otherwise track every one of them, re-committing a
+# tenth of the corpus we were careful to keep out at Step 1. They are reproducible in
+# one command (`ANNOT=1 bash scripts/get_data.sh`) and byte-identical to data/pages/.
+data/annot/val/*.png
+data/annot/train/*.png
+
 # data/ocr/ is NOT in the same category as data/pages/ above: it's our own derived text
 # (OCR transcripts + sidecars), not "the corpus" itself, and it is tiny even at full-book
 # coverage (measured: 2.4 MB for 594 pages at Step 16; ~1-2.5 MB projected for all 1046

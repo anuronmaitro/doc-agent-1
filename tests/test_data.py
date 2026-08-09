@@ -1,12 +1,23 @@
 """Unit test home for data validation. IMPLEMENT — CI runs these."""
 
 import json
+import pathlib
 
 import pytest
 import yaml
 
 from doc_agent.contracts import Page
-from doc_agent.data.validate import BUILD_CHAPTERS, TEST_CHAPTERS, VAL_CHAPTERS, validate
+from doc_agent.data.validate import (
+    ANNOT_EXPECTED_COUNTS,
+    ANNOT_SETS,
+    ANNOT_TEST_ALREADY_DONE,
+    ANNOT_TEST_PAGES,
+    BUILD_CHAPTERS,
+    TEST_CHAPTERS,
+    VAL_CHAPTERS,
+    validate,
+    validate_annotation_sets,
+)
 from doc_agent.data.versioning import snapshot
 
 
@@ -154,3 +165,67 @@ class TestSnapshot:
         empty.mkdir()
         with pytest.raises(ValueError):
             snapshot(str(empty))
+
+
+class TestAnnotationSets:
+    """Step 18's page lists. These 164 integers decide what 3 people transcribe by hand and
+    what Step 29 is finally scored on, so every property summary.md 4h claims is checked
+    here rather than trusted."""
+
+    def test_the_lists_are_sound(self):
+        assert validate_annotation_sets() == ANNOT_EXPECTED_COUNTS
+
+    def test_totals_164(self):
+        assert sum(len(p) for p, _f in ANNOT_SETS.values()) == 164
+
+    def test_pairwise_disjoint(self):
+        names = list(ANNOT_SETS)
+        for i, a in enumerate(names):
+            for b in names[i + 1 :]:
+                assert not set(ANNOT_SETS[a][0]) & set(ANNOT_SETS[b][0]), f"{a}/{b} overlap"
+
+    def test_no_duplicates_within_a_split(self):
+        for name, (pages, _f) in ANNOT_SETS.items():
+            assert len(set(pages)) == len(pages), f"{name} repeats a page"
+
+    def test_every_page_sits_in_its_own_chapter_family(self):
+        """The property that makes 'no notation leaks between splits' true rather than
+        merely intended — a train page from a TEST chapter would inflate Step 29."""
+        from doc_agent.ingest.loader import _chapter_of
+
+        for name, (pages, family) in ANNOT_SETS.items():
+            for p in pages:
+                assert _chapter_of(p) in family, f"{name} page {p} -> {_chapter_of(p)}"
+
+    def test_a_leaked_page_is_actually_caught(self, monkeypatch):
+        """Guards the guard: if validate_annotation_sets() cannot fail, it proves nothing."""
+        leaked = dict(ANNOT_SETS)
+        leaked["train"] = (ANNOT_SETS["train"][0] + (255,), ANNOT_SETS["train"][1])
+        monkeypatch.setattr("doc_agent.data.validate.ANNOT_SETS", leaked)
+        with pytest.raises(ValueError, match="expected 105"):
+            validate_annotation_sets()
+
+    def test_pages_are_in_printed_numbering_range(self):
+        """Printed pages run 1..1050; a PDF index (N+32) slipping in here would silently
+        annotate the wrong page."""
+        for _name, (pages, _f) in ANNOT_SETS.items():
+            assert all(1 <= p <= 1050 for p in pages)
+
+    def test_the_three_a1_pages_are_inside_the_test_split(self):
+        assert ANNOT_TEST_ALREADY_DONE <= set(ANNOT_TEST_PAGES)
+
+    def test_manifest_matches_the_lists_when_step_18_has_run(self):
+        """Skipped on a clean clone: the manifest is written by
+        `ANNOT=1 bash scripts/get_data.sh`, which needs the corpus PDF."""
+        manifest = pathlib.Path("data/annot/annot_manifest.json")
+        if not manifest.exists():
+            pytest.skip("run: ANNOT=1 bash scripts/get_data.sh")
+        data = json.loads(manifest.read_text(encoding="utf-8"))
+        for name, (pages, _f) in ANNOT_SETS.items():
+            split = data["splits"][name]
+            assert split["count"] == len(pages)
+            assert [row["printed_page"] for row in split["pages"]] == list(pages)
+            # printed N = PDF N+32, restated per page so a bad offset cannot hide
+            assert all(r["pdf_page"] - r["printed_page"] == 32 for r in split["pages"])
+        ver = data["offset_verification"]
+        assert ver["confirmed"] > ver["control_wrong_offset"]
