@@ -21,7 +21,7 @@
 - [x] Step 14 — index/embed.py — S2
 - [x] Step 15 — index/store.py + scripts/build_index.sh — S3
 - [x] Step 16 — Kaggle: baseline full-book OCR + BEFORE number--S1
-- [ ] Step 17 — annotation conventions + tooling — S2
+- [x] Step 17 — annotation conventions + tooling — S2
 - [ ] Step 18 — render the 164 annotation pages — S3
 - [ ] Step 19 — annotate TEST batch A (18) — S1
 - [ ] Step 20 — annotate TEST batch B (18) — S2
