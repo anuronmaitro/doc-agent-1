@@ -1,0 +1,39 @@
+
+
+**25.5.14**
+
+**P:**: \(y_{n+1}\)=\(y_{n-5}\)+\(\frac{3b}{10}(11\dot{y}_{n}^{\prime}\)-\(14\dot{y}_{n-1}^{\prime}\)
+
+\(+26\dot{y}_{n-2}^{\prime}\)-\(14\dot{y}_{n-3}^{\prime}\)+\(11\dot{y}_{n-3}^{\prime}\)+\(O(\dot{h}^{7})\)
+**C:**: \(y_{n+1}\)=\(y_{n-3}\)+\(\frac{2b}{45}\)+\(\frac{7b}{45}\)+\(\frac{1}{2}\dot{y}_{n+1}^{\prime}\)+\(32\dot{y}_{n-3}^{\prime}\)+\(O(\dot{h}^{5})\)
+
+\(+12\dot{y}_{n-1}^{\prime}\)+\(32\dot{y}_{n-2}^{\prime}\)+\(7\dot{y}_{n-3}^{\prime}\)+\(O(\dot{h}^{7})\)
+
+**25.5.15**
+
+**P:**: \(y_{n+1}\)=\(y_{n-2}\)+\(3(y_{n}-y_{n-1})\)+\(\dot{h}^{3}(y_{n}^{\prime\prime}\)-\(y_{n-1}^{\prime\prime}\)+\(O(\dot{h}^{5})\)
+**C:**: \(y_{n+1}\)=\(y_{n}\)+\(\frac{h}{2}(\dot{y}_{n+1}^{\prime}+\dot{y}_{n}^{\prime})\)-\(\frac{\dot{h}^{2}}{12}\)+\(\dot{y}_{n+1}^{\prime}\)-\(y_{n}^{\prime\prime}\)+\(O(\dot{h}^{5})\)
+**25.5.16**
+
+**P:**: \(y_{n+1}\)=\(y_{n-2}\)+\(3(y_{n}-y_{n-1})\)+\(\frac{\dot{h}^{3}}{2}(y_{n}^{\prime\prime\prime}\)+\(y_{n-1}^{\prime\prime}\))+\(O(\dot{h}^{7})\)
+**C:**: \(y_{n+1}\)=\(y_{n}\)+\(\frac{h}{2}(\dot{y}_{n+1}^{\prime}+\dot{y}_{n}^{\prime})\)-\(\frac{\dot{h}^{2}}{10}(y_{n+1}^{\prime\prime}\)-\(y_{n}^{\prime\prime})\)
+
+\(+\frac{h^{3}}{120}(y_{n+1}^{\prime\prime\prime}\)+\(y_{n}^{\prime\prime\prime})+\(O(\dot{h}^{7})\)
+
+**Systems of Differential Equations**
+
+**First Order:**: \(y^{\prime}\)=\(f\)(\(x\),\(y\),\(z\)), \(z^{\prime}\)=\(g\)(\(x\),\(y\),\(z\)).
+
+**Second Order Runge-Kutta**
+
+**25.5.17**
+
+\(y_{n+1}\)=\(y_{n}\)+\(\frac{1}{2}\) (\(k_{1}\)+\(k_{2}\))+\(O\)(\(\dot{h}^{3}\)),
+
+\(z_{n+1}\)=\(z_{n}\)+\(\frac{1}{2}\) (\(l_{1}\)+\(l_{2}\))+\(O\)(\(\dot{h}^{3}\))
+
+\(k_{1}\)=\(hf\)(\(x_{n}\),\(y_{n}\),\(z_{n}\)), \(l_{1}\)=\(hg\)(\(x_{n}\),\(y_{n}\),\(z_{n}\))
+
+\(k_{2}\)=\(hf\)(\(x_{n}\)+\(\frac{1}{2}\),\(y_{n}\)+\(\frac{1}{2}\),\(k_{1}\),\(z_{n}\)+\(\frac{1}{2}\),\(l_{1}\))
+
+\(k_{3}\)=\(hf\)(\(x_{n}\)+\(\frac{1}{2}\),\(k_{1}\

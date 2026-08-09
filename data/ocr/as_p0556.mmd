@@ -1,0 +1,38 @@
+
+
+**15. Hypergeometric Functions**
+
+**Mathematical Properties**
+
+**15.1. Gauss Series, Special Elementary Cases, Special Values of the Argument**
+
+**Gauss Series**
+
+The circle of convergence of the Gauss hypergeometric series
+
+**15.1.1**
+
+\[F(a,b;c;z) = zF_{1}(a,\,b;\,c;\,z)\] \[= F(b,\,a;\,c;\,z){=}{\sum\limits_{n=0}^{\infty}}\,\frac{(a)_{n}(b)_{n}}{(c)_{n}}\,{z^{n}}\] \[= \frac{\Gamma(\epsilon)}{\Gamma(a)\Gamma(b)}{\sum\limits_{n=0}^{\infty}}\,\frac{\Gamma(a{+}n)\Gamma(b{+}n)}{\Gamma(e{+}n)}\,\frac{z^{n}}{n!}\]
+
+is the unit circle \(|z|{=}1\). The behavior of this series on its circle of convergence is:
+
+(a) Divergence when \({\cal R}\,(c{-}a{-}b)\leq-1\).
+
+(b) Absolute convergence when \({\cal R}\,(e{-}a{-}b){>}0\).
+
+(c) Conditional convergence when \({-}1{<}{\cal R}\,(e{-}a\,\,-b){\leq}0\); the point \(z{=}1\) is excluded. The Gauss series reduces to a polynomial of degree \(n\) in \(z\) when \(a\) or \(b\) is equal to \(-n\), (\(n{=}0\), 1, 2, \(\ldots\) ). (For these cases see also **15.4.**) The series **15.1.1**
+
+is not defined when \(c\) is equal to \(-m\), (\(m{=}0\), 1, 2, \(\ldots\) .), provided \(a\) or \(b\) is not a negative integer \(n\) with \(n{<}m\). For \(e{=}{-}m\)
+
+**15.1.2**
+
+\[\lim_{e{\rightarrow}m}\frac{1}{\Gamma(c)}\,F(a,\,b;\,c;\,z){=}\] \[\frac{(a)_{n+1}(b)_{n+1}}{(m{+}1)!}\,z^{n+1}F\,\,(a{+}m{+}1,\,b{+}m{+}1;\,m{+}2;\,z)\]
+
+**Special Elementary Cases of Gauss Series**
+
+(For cases involving higher functions see **15.4.**)
+
+**15.1.3**
+
+\[F(1,\,1;\,2;\,z){=}\,z^{-1}\,\ln\,\,(1{-}z)\] \[{15.1.4} F(1,\,1;\,3;\,z^{2}){=}\,z^{-1}\ln\,\,\bigl{(}\frac{1{+}z}{1{-}z}\bigr{)}\] \[{15.1.5} F(1,\,1;\,3;\,-z^{2}){=}\,z^{-1}\arctan\,z\] \[{15.1.6} F(1,\,1;\,3;\,z^{2}){=}\,(1{-}z^{2}){\Gamma(1,1;\,3;\,z^{2}){=}}\,z^{-1}\arcsin\,z\] \[{15.1.7} F(1,\,1;\,3;\,z^{2}){=}\,z^{-1}\ln\,\bigl{(}\frac{1{+}z^{2}}{1{-}z}\bigr{)}\] \[{15.1.8} F(a,\,b;\,b;\,z){=}\,(1{-}z)^{-a}\] \[{15.1.9} F(a,\,1;\,2{+}a;\,3;\,z^{2}){=}\,3[(1{+}z)^{-a}{+}(1{-}z)^{-a}]\] \[{15.1.10} F(a,\,1{+}a;\,3;\,z^{2}){=}\] \[{\frac{1}{2}}{}^{-1}(1{-}2a)^{-1}\,[(1{+}z)^{1-a}{-}(1{-}z)^{1-a}]\] \[F(-a,a;\,3;\,-z^{2}){=}\,\bigl{\{}((1{+}z^{2}){+}z]^{a}{+}[(1{+}z^{2}){+}z]^{a}{+}[(1{+}z^{2}){+}z]^{a}{+}[(1{+}z^{2}){+}z]^{a}{+}\bigr{\}
+

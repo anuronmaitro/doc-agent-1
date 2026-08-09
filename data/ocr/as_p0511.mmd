@@ -1,0 +1,36 @@
+The self-adjoint equation **13.1.1** can also be written
+
+\[\frac{d}{dz}[z^{s}e^{-s}\frac{dw}{dz}] = az^{s-1}e^{-s}w\]
+
+**The Sonine-Polya Theorem**
+
+The maxima and minima of \(|w|\) form an increasing or decreasing sequence according as
+
+\[-az^{2s-1}e^{-2s}\]
+
+**Numerical Methods**
+
+In this way **13.4.1**-**13.4.7** can be used together with **13.1.27** to extend **Table 13.1** to the range
+
+\[-10\leq a\leq 10,\ -10\leq b\leq 10,\ -10\leq x\leq 10.\]
+
+This extension of ten units in any direction is possible with the loss of about 1S. All the recurrence relations are stable except i) if \(a<0,\ b<0\) and \(|a|>|b|\), \(x>0\), or ii) \(b<a,\ b<0\), \(|b-a|>|b|\), \(x<0\), when the oscillations may become large, especially if \(|x|\) also is large.
+
+Neither interpolation nor the use of recurrence relations should be attempted in the strips \(b=-n\pm.1\) where the function is very large numerically. In particular \(M(a,\ b,\ x)\) cannot be evaluated in the neighborhood of the points \(a=-m\), \(b=-n\), \(m\leq n\), as near these points small changes in \(a\), \(b\) or \(x\) can produce very large changes in the numerical value of \(M(a,\ b,\ x)\).
+
+**Example 4.** At the point \((-1,-1,x),M(a,b,x)\) is undefined.
+
+When \(a=-1\), \(M(-1,\ b,\ x)=1-\frac{x}{b}\)for all \(x\).
+
+Hence \(\lim\limits_{b\to 1}M(-1,\ b,x)=1+x\). But \(M(b,b,x)=e^{x}\) for all \(x\), when \(a=b\). Hence \(\lim\limits_{b\to 1}M(b,\ b,\ x)=e^{x}\). In the first case \(b\to-1\) along the line \(a=-1\), and in the second case \(b\to-1\) along the line \(a=b\).
+
+**Derivatives**
+
+**Example 5.** To evaluate \(M^{\prime}(-.7,\ -.6,\ .5)\) to 7S. By **13.4.8**, when \(a=-.7\) and \(b=-.6\), we have
+
+\[M^{\prime}(-.7,\ -.6,\ .5) = \frac{-.7}{-.6}M(.3,\ .4,\ .5)\] \[= 1.724128.\]
+
+**Asymptotic Formulas**
+
+For \(x\geq 10\), \(a\) and \(b\) small, \(M(a,\ b,\ x)\) should be evaluated by **13.5.1** using converging factors **13.5.3** and **13.5.4** to improve the accuracy if necessary.
+

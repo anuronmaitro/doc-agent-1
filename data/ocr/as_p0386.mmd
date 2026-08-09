@@ -1,0 +1,31 @@
+and multiplying the trial values by this factor we obtain the required results, given in the third column. As a check we may verify the value of \(J_{0}(1.55)\) by interpolation in Table 9.1.
+
+**Remarks.** (i) In this example it was possible to estimate immediately the value of \(n\) = \(N\), say, at which to begin the recurrence. This may not always be the case and an arbitrary value of \(N\) may have to be taken. The number of correct significant figures in the final values is the same as the number of digits in the respective trial values. If the chosen \(N\) is too small the trial values will have too few digits and insufficient accuracy is obtained in the results. The calculation must then be repeated taking a higher value. On the other hand if \(N\) were too large unnecessary effort would be expended. This could be offset to some extent by discarding significant figures in the trial values which are in excess of the number of decimals required in _J_**.**
+
+(ii) If we had required, say, \(J_{0}(1.55)\), \(J_{1}(1.55)\), . . ., \(J_{10}(1.55)\), each to 5 significant figures, we would have found the values of \(J_{10}(1.55)\) and \(J_{11}(1.55)\) to 5 significant figures by interpolation in Table 9.3 and then computed by recurrence \(J_{0},J_{3},\ .\ .\ .\ ,J_{0}\), no normalization being required.
+
+Alternatively, we could begin the recurrence at a higher value of \(N\) and retain only 5 significant figures in the trial values for \(n\) \(\leq\)10.
+
+(iii) Exactly similar methods can be used to compute the modified Bessel function \(I_{n}(x)\) by means of the relations 9.6.26 and 9.6.36. If \(x\) is large, however, considerable cancellation will take place in using the latter equation, and it is preferable to normalize by means of 9.6.37.
+
+**Example 2.** To evaluate \(Y_{n}(1.55)\), \(n\) = 0, 1, 2, . ., 10, each to 5 significant figures.
+
+The recurrence relation
+
+\[Y_{n - 1}(x) + Y_{n + 1}(x) = (2n/x)Y_{n}(x)\]
+
+can be used to compute \(Y_{n}(x)\) in the direction of increasing \(n\) both for \(n\) < \(x\) and \(n\) > \(x\), because in the latter event \(Y_{n}(x)\) is a numerically increasing function of \(n\).
+
+We therefore compute \(Y_{0}(1.55)\) and \(Y_{1}(1.55)\) by interpolation in Table 9.1, generate \(Y_{2}(1.55)\), \(Y_{3}(1.55)\), . ., ., \(Y_{10}(1.55)\) by recurrence and check \(Y_{10}(1.55)\) by interpolation in Table 9.3.
+
+**Remarks.** (i) An alternative way of computing \(Y_{0}(x)\), should \(J_{0}(x)\), \(J_{2}(x)\), \(J_{4}(x)\), . ., be available (see Example 1), is to use formula 9.1.89. The other starting value for the recurrence, \(\bar{Y_{1}}(x)\), can then be found from the Wronskian relation \({\cal J}_{1}(x)\bar{Y}_{0}(x) - \bar{J}_{0}(x)\bar{Y}_{1}(x) = 2/(\pi x)\). This is a convenient procedure for use with an automatic computer.
+
+(ii) Similar methods can be used to compute the modified Bessel function \(\bar{K}_{n}(x)\) by means of the recurrence relation 9.6.26 and the relation 9.6.54, except that if \(x\) is large severe cancellation will occur in the use of 9.6.54 and other methods for evaluating \(K_{0}(x)\) may be preferable, for example, use of the asymptotic expansion 9.7.2 or the polynomial approximation 9.8.6.
+
+**Example 3.** To evaluate \(J_{0}(.36)\) and \(\bar{Y}_{0}(.36)\) each to 5 decimals, using the multiplication theorem.
+
+From 9.1.74 we have
+
+\[{\cal C}_{0}(\lambda z) = {\sum\limits_{k = 0}^{\infty}}a_{k}{\cal C}_{k}(z)\mbox{, where}\,a_{k} = \frac{(-)^{k}(\lambda^{2} - 1)^{k}(\bar{1}z)^{k}}{k!}\]
+
+We take \(z\) = \(4\). Then \(\lambda = .9\), \((\lambda^{2} - 1)(\frac{2}{3}\varepsilon) = - .038\), and extracting the necessary values of \(J_{4}(.4)\) and \(\bar{Y}_{A}(.4)\) from Tables 9.1 and 9.2, we compute the required results as follows:

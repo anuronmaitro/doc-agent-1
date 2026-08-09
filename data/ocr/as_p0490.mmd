@@ -1,0 +1,43 @@
+490
+
+\[\begin{array}{c}f_{m}(x) = x^{-n} \int_{0}^{x}t^{n}K_{0}(t)dt\\ f_{0}(x) = \int_{0}^{x}K_{0}(t)dt,f_{1}(x) = [1 - xK_{1}(x)]/x\end{array}\]
+
+the latter following from 11.3.27 with \(r\) = 1. In 11.3.5, put \(a\) = 1, \(b\) = - 1, \(p\) = 0 and \(r\) = 0. Let \(m\) = \(m\). Then
+
+\[\begin{array}{l}f_{m}(x) = [(m - 1)^{2}f_{m - 2}(x) - x^{2}K_{1}(x)\\ - x(m - 1)K_{0}(x)]/x^{2}\end{array}\]
+
+Using tabular values of \(f\)0 and \(f\)1, one can compute in succession \(f\)3, \(f\)3, . . provided that _m_/_x_ is not large.
+
+Example 8. Compute _f_m(_x_) to 5D for \(x\) = 5 and \(m\) = 0(1)6. We have, retaining two additional decimals
+
+\[\begin{array}{c}K_{0} = .00369 11 \quad K_{1} = .00404 46\\ f_{0} = 1.56738 74 \quad f_{1} = .19595 54\end{array}\]
+
+Thus
+
+\[\begin{array}{c}f_{2} = .05791 27,f_{4} = .01458 93,f_{6} = .00685 36\end{array}\]
+
+Similarly starting with \(f\)1, we can compute \(f\)3 and \(f\)8.
+
+If \(m\) > \(x\), employ the recurrence formula in backward form and write
+
+\[\begin{array}{c}f_{m - 2}(x) = [xf_{m}(x) + x^{2}K_{1}(x) + x(m - 1)K_{0}(x)]/(m - 1)^{2}\end{array}\]
+
+In the latter expression, replace _f_m by _g_m. Fix \(x\). Take \(r\) > \(m\) and assume _g_' = 0. Compute _g_' = 2, _g_' = 4, etc. Then
+
+\[\begin{array}{c}\lim\limits_{r \to \infty}g_{r - 2}(x) = f_{m}(x),\,m = r - 2k\end{array}\]
+
+## References
+
+* [11.1] H. Bateman and R. C. Archibald, A guide to tables of Bessel functions, Math. Tables Aids Comp. **1**, 247-252 (1943). See also Supplements I, II, 1V, same journal, **1**, 403-404 (1943); **2**, 59 (1946); **2**, 190 (1946), respectively.
+* [11.2] A. Erdelyi et al., Higher transcendental functions, vol. 2, ch. 7 (McGraw-Hill Book Co., Inc., New York, N.Y., 1953).
+* [11.3] A. Erdelyi et al., Tables of integral transforms, vols. 1, 2 (McGraw-Hill Book Co., Inc., New York, N.Y., 1954).
+* [11.4] W. Grobner and N. Hofreiter, Integralafel, II Teil (Springer-Verlag, Wien and Innsbruck, Austria, 1949-1950).
+* [11.5] L. V. King, On the convection of heat from small cylinders in a stream of fluid, Trans. Roy. Soc. London 214A, 373-432 (1914).
+* [11.6] Y. L. Luke, Some notes on integrals involving Bessel functions, J. Math. Phys. **29**, 27-30 (1950).
+* [11.7] Y. L. Luke, An associated Bessel function, J. Math. Phys. **31**, 131-138 (1952).
+* [11.8] F. Oberhettinger, On some expansions for Bessel integral functions, J. Research NBS **59**, 197-201 (1957) RP 2786.
+* [11.9] G. Petiau, La theorie des fonctions de Bessel (Centre National de la Recherche Scientifique, Paris, France, 1955).
+* [11.10] G. N. Watson, A treatise on the theory of Bessel functions, 2d ed. (Cambridge Univ. Press, Cambridge, England, 1958).
+
+Tables
+* [11.11] W. G. Biekley and J. Nayler, A short table of the functions Ki(a), from \(n\) = 1

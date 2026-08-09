@@ -1,0 +1,32 @@
+ary square (see diagram) which contains \(z\) close to its center. Bivariate linear interpolation can then be applied within this auxiliary square.
+
+The values of _w_(_z_) needed at _z_=_z_1, and _z_=_z_2 are easily approximated by the average of the four neighboring tabular values. Furthermore the parts to be used are given by
+
+\[\frac{|z_{0}-\lambda_{1}|}{|z_{0}-\xi_{1}|} = p_{1}+p_{2},\ \frac{|z_{0}-\lambda_{2}|}{|z_{0}-\xi_{2}|} = p_{1}-p_{2}\]
+
+where _z_=_z_0+.1(_p_1+_ip_2). Thus, with \(z\)0=_A_+.6i, \(z\)1=_.45+.65i, \(z\)1=_.4, \(z\)2=_.1, we get from Table 7.9
+
+\[\begin{array}{l}{\cal R}w(\xi_{1}) \approx \frac{1}{4}.(522246+.498591+.487556+.467521)\\ =.493979\\ {\cal R}w(\xi_{2}) \approx \frac{1}{4}.(522246+.498591+.561252+.533157)\\ =.528812\\ {\cal R}w(z) \approx [1-(.4+.1)]\{[1-(.4-.1)].522246\\ +(.4-.1).528812\}+(.4+.1)\times\\ \{[1-(.4-.1)]\ .493979+(.4-.1).498591\} =.509789.\end{array}\]
+
+The correct answer is .509756. Straightforward bivariate interpolation gives .509460.
+
+**Example 14.** Compute _Jw_(.39+.61i) to 6D using Taylor's series.
+
+Let _z_=.39+.61i, \(z\)0=_A_+.6i. From 7.1.20, and using Table 7.9, we have
+
+\[\begin{array}{l}w(z_{0}) =.522246+.167880i\\ w^{\prime}(z_{0}) = -.21634+.36738i,\ \emph{z} - \emph{z}_{0} = (-1+i)10^{-2}\\ {\cal R}w^{\prime}(z_{0}) = -.215-.185i,\ (\emph{z}_{-}z_{0})^{\emph{z}} = -2i\times 10^{-4}\\ \end{array}\]
+
+\[\begin{array}{l}{\cal I}w(z) = .167880\ldots .0021634-.0036738\\ +.0000430=.162086.\end{array}\]
+
+**Example 15.** Compute _w_(.4-1.3i). From 7.1.11, 7.1.12
+
+\[\begin{array}{l}w(.4-1.3i) = \overline{w(-.4-1.3i)} = 2e^{-(.4-1.3i)^{2}}\\ -\overline{w(.4+1.3i)}.\end{array}\]
+
+Using Tables 7.9, 4.4 and 4.6
+
+\[\begin{array}{l}w(.4-1.3i) = 4.33342+8.04201i,\end{array}\]
+
+\[\begin{array}{l}w(.4-1.3i) = 4.33342+8.04201i,\end{array}\]
+
+\[\begin{array}{l}\begin{array}{l}\begin{array}{l}\begin{array}{l}\begin{array}{l} \begin{array}{l}\begin{array}{l}\begin{array}{l}\begin{array}{l} \begin{array}{l}\begin{array}{l}\begin{array}{l}\begin{array}{l} \begin{array}{l}\begin{array}{l}\begin{array}{l}\begin{array}{l} \begin{array}{l}\begin{array}{l}\begin{array}{l}\begin{array}{l} \begin{array}{l}\begin{array}{l}\end{array}[]{l}
+

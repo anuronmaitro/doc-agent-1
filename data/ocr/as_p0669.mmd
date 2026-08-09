@@ -1,0 +1,21 @@
+
+
+**Example 15**: _Given \(\xi\)=10\(-\)15i, \(g_{1}\)=8, \(g_{3}\)=4, find \(z\). Using the reversed series 18.5.40 with \(\gamma_{2}\)=.14583, \(\gamma_{3}\)=.05_
+
+\[\begin{array}{l}A_{5}\!=\!-.13333\ 333,\\ A_{7}\!=\!-.02857\ 14286,\\ u\!=\ .03076\ 923076\!+.04615\ 384615i\\ A_{8}\!u^{5}\!=\!-.00000\ 001402\!+.00000\ 006860i\\ A_{9}\!u^{7}\!=\!-.00000\ 00004\!-.00000\ 000003i\\ z\!=\ .03076\ 921670\!+.04615\ 391472i.\end{array}\]
+
+**Methods of Computation of \(\mathcal{O}\) (\(\mathcal{D}^{\prime}\), \(\xi\) or \(\sigma\)) for Given \(\sigma\) and Given \(g_{2}\), \(g_{3}\) (or the equivalent), with the Use of Automatic Digital Computing Machinery**
+
+(a) Integration of Differential Equation
+
+\(\mathcal{D}\) and \(\mathcal{D}^{\prime}\) may be generated for any \(z\) close enough to a "known point" \(z^{*}\)(\(\mathcal{D}\) (\(z^{*}\)) and \(\mathcal{D}^{\prime}\) (\(z^{*}\)) being given) by integrating \(\mathcal{D}^{\prime}\) =6 \(\mathcal{D}^{*}\)\(-\)\(g_{2}\)/2. A program to do this on SWAC, via a modification of the Hammer-Hollingsworth method (MTAC, July 1955, pp. 92-96) due to Dr. P. Henrici, exists at Numerical Analysis Research, UCLA (code number 00600, written by W. L. Wilson, Jr.). The program has been tested numerically in the equainharmonic case, using integration steps of various sizes. For example, if one starts with \(z^{*}\)=\(\omega_{2}\), using an "integration step" (\(h\),\(k\)), where \(h\) and \(k\) are respectively the horizontal and vertical components of a step, with (\(h\),\(k\)) having one of the six values (\(\pm 2h_{0}\),\(0\)), (\(\pm h_{0}\),\(\pm k_{0}\)), \(h_{0}\)=\(\omega_{2}\)/2000, \(k_{0}\)=\(|\omega_{2}^{\prime}|\)/2000, one can expect almost 8S in \(\mathcal{D}\) and 7S in \(\mathcal{D}^{\prime}\) after 1000 steps, unless \(z\) is too near a pole._
+
+(b) Use of Series
+
+The process of reducing the computation problem to one in which \(z\) is in the Fundamental Rectangle can obviously be mechanized. Inside the Fundamental Rectangle the direct use of Laurent's series is appropriate when the period ratio \(a\) is not too large. However, if \(a\)\(\geq\)\(\sqrt{3}\)(\(\Delta\)\(>\)0) or \(a\)\(\geq\)\(\sqrt{3}\)(\(\Delta\)\(<\)0), the series will diverge at the far corner of the Fundamental Rectangle, so that use may be made of an appropriate duplication formula. Alternatively, one may compute the functions on \(\alpha\)z and \(0\)y, then use an addition formula. Even so, the series will diverge at \(z\)=\(ia\) if \(a\)\(\geq\)\(2\)(\(\Delta\)\(>\)0) and at \(z\)=\(ia\)/2 if \(a\)\(\geq\)\(4\)(\(\Delta\)\(<\)0).
+
+For great accuracy, multiple precision operations might be necessary. Double precision floating point mode has been used in a program, written for SWAC, to compute \(\mathcal{D}\), \(\mathcal{D}^{\prime}\) and \(\xi\).
+
+For computation of \(\sigma\), use of the Maclaurin series throughout the Fundamental Rectangle is probably simplest (series converges for all \(z\)).
+
+Mention should be made of the possible use of the series defining the \(\phi\) functions. These series converge for all complex \(v\), and the computation of \(\mathcal{D}\), \(\mathcal{D}^{\prime}\), \(\xi\) and \(\sigma\) by 18.10.5-18.10.8 could easily be mechanized. The series involved have the advantage of converging very fast, even in case \

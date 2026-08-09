@@ -1,0 +1,142 @@
+known multiple of the solution desired. The computation is then carried back until a value of \(a\) with |_a_|<=1 is reached, when the precise multiple that we have of the desired solution may be determined and hence removed throughout. Compare also 9.12, Example 1.
+
+**Example 1.** Evaluate _U_(_a_, 5) for _a_=5, 6, 7, ., using 19.6.4.
+
+\[(a+1)U(a+1,x)+xU(a,x)-U(a-1,x)=0\]
+
+\[a\]
+
+Forward
+
+Recurrence
+
+Backward
+
+Recurrence
+
+Final Values
+
+3
+
+(-6) 5. 2847**
+
+4
+
+(-7) 9. 1724*
+
+5
+
+(-7) 1. 5527*
+
+10. 4 67131
+
+(-7) 1. 55227
+
+6
+
+(-8) 2. 5609
+
+7. 72041
+
+(-8) 2. 5655
+
+7
+
+(-9) 4. 1485*
+
+8
+
+(-9) 4. 1466
+
+8
+
+(-10) 6. 6220
+
+8. 19748
+
+(-10) 1. 6826
+
+9
+
+(-10) + 1. 2676
+
+7. 30639
+
+(-10) 1. 01806
+
+10
+
+(-11) + 10. 1221
+
+6. 46352
+
+(-11) 1. 5497
+
+11
+
+(-11) + 1. 2654
+
+697082
+
+(-12) 2. 3164
+
+12
+
+(-12) - 5. 6079
+
+102444
+
+13
+
+(-12) + 3. 2555
+
+14789
+
+(-14) 4. 91
+
+15
+
+2111
+
+(-15) 7. 01
+
+16
+
+42
+
+17
+
+5
+18
+
+1\({}^{+}\)
+
+19
+
+0\({}^{+}\)
+
+*From tables: *Starting values.
+
+**This value was used to obtain the constant multiplier \(d\) (-6)5.2847*
+
+_k_*=(12)1.59035*
+
+_I_*=(18)3.32298 for converting the previous column into this one.
+
+The second column shows forward recurrence starting with values at _a_=3, 4 from Table 19.1. Backward recurrence starts with values 0 and 1 at _a_=19 and 18, containing a multiple _kU(a, 5)_ and a subsequently negligible multiple of the other solution _T_(_a_=4)_V_(_a_, 5). Rounding errors convert _kU_(_a_, _a_) into _k_*_U_(_a_, _a_) _without affecting the values in the last column. The value of 1/_k_* is identified from the known value of _U_(3, 5), and used to obtain the final column by multiplying throughout by 1/_k_*. The improvement in _U_(5, 5) is evident by comparison with Table 19.1.
+
+_Derivatives._ These are not tabulated here. Since the functions _U_(_a_, _x_)_, _V_(_a_, _x_) and _W_(_a_, _x_) satisfy differential equations, values of derivatives are often required.
+
+For all these functions the equation is second order with first derivative absent, so that _second derivatives_ may be readily obtained from function values by use of the differential equation.
+
+_First derivatives_ can be obtained for _U_(_a_, _x_) and _V_(_a_, _x_) by applying the appropriate recurrence relations 19.6.1-2.If less accuracy is needed they can be found by use of mean central differences of _U_(_a_, _x_), _V_(_a_, _x_) and also of _W_(_a_, _x_) with the formula
+
+\[h{u^{\prime}} = h{du \over dx} = \mu \delta u - {1 \over \delta}{u^{3}u + {1 \over \delta}{u^{3}u - \ldots }}\]
+
+using l =.1; this usually gives a 3- or 4-figure value of _du_/_dx_.
+
+If greater accuracy is needed for _dW_(_a_, _x_)/_dx_ it may be obtained by evaluating \(d\)2_W_/_dx_2 with the help of the differential equation satisfied by \(W\) and integrating this second derivative numerically. This requires one accurate value of _dW_/_dx_ to start off the integration; we describe two methods for obtaining this, both making use of the difference between two fairly widely separated values of \(W\), for example, separated by 5 or 10 tabular intervals.
+
+(i) Write \(f_{r}\), \(f_{r}\), _f__r_' for _W_(_a_, _a_+_rh_) and its first two derivatives, then \(f_{s}\) may be found from
+
+\[h{f^{\prime}}_{o} = {1 \over 2n}(f_{- f - n}) - {h

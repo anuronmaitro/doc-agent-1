@@ -1,0 +1,66 @@
+
+
+**Algorithming \(Q(F)_{[p_{1},p_{2})}\)**
+
+**Example 23.** Calculate \(Q(1.714|10,40)\) using **26.6.15**.
+
+The approximation given by 26.6.15 will result in a maximum error of .0005. For this example we have
+
+\[x=\frac{(1.714)^{1/3}\left(1-\frac{2}{9(40)}\right)-\left(1-\frac{2}{9(10)} \right)}{\left[\frac{2}{9(10)}+(1.714)^{3/3}\frac{2}{9(40)}\right]^{4}}=1.2222\]
+
+Interpolating in **Table 26.1** results in
+
+\[Q(1.714|10,40)\approx Q(1.2222)=1-P(1.2222)=.1108\]
+
+The correct value to 5D is \(Q(1.714|10,40)=.11108\).
+
+On the other hand the approximation given by **26.6.14** which is usually less accurate results in
+
+\[x=\frac{\sqrt{[2(40)-1]\left(\frac{10}{40}\right)(1.714)-\sqrt{2(10)-1}}}{ \sqrt{1+\frac{10}{40}(1.714)}}=1.2210\]
+
+and interpolating in **Table 26.1** gives
+
+\[Q(1.714|10,40)\approx Q(1.2210)=1-P(1.2210)=.1112\]
+
+**Calculation of \(F\) Outside the Range of Table 26.9**
+
+**Example 24.** Find the value of \(F\) for which \(Q(F|10,20)\approx.0001\) using **26.6.16** and **26.5.22**.
+
+For this problem we have \(a=\frac{p_{2}}{2}=10\), \(b=\frac{p_{1}}{2}=5\), \(p=.0001\). The value of the normal deviate which cuts off .0001 in the tail of the distribution is
+
+**Tets**
+
+[26.1] H. Cramer, Mathematical methods of statistics (Princeton Univ. Press, Princeton, N.J., 1951).
+
+[26.2] A. Erdelyi et al., Higher transcendental functions, vols. I, II, III. (McGraw-Hill Book Co., Inc., New York, N.Y., 1955).
+
+[26.3] W. Feller, Probability theory and its applications, 2d ed. (John Wiley & Sons, Inc., New York, N.Y., 1957).
+
+[26.4] R. A. Fisher, Contributions to mathematical statistics, Paper 30 (with E. A. Cornish), Moments and cumulants in the specification of distributions (John Wiley & Sons, Inc., New York, N.Y., 1950).
+
+[26.5] C. Hastings, Jr., Approximations for digital computers (Princeton Univ. Press, Princeton, N.J., 1955).
+
+[26.6] M. G. Kendall and A. Stuart, The advanced theory of statistics, vol. I, Distribution theory (Charles Griffin and Co. Ltd., London, England, 1958).
+
+\[y=3.7190\ (i.e.,\ Q(3.7190)=.0001).\ \ \text{Hence substituting in 26.5.22 gives}\]
+
+\[h=2\left[\frac{1}{19}+\frac{1}{9}\right]^{-1}=12.2143\]
+
+\[\lambda=\frac{3.7190^{2}-3}{6}=1.8052\]
+
+\[w=3.7190\ \frac{(12.2143+1.8052)^{4}}{12.2143}\]
+
+\[-\left(\frac{1}{9}-\frac{1}{19}\right)\left[1.8052+.8333-\frac{2}{3(12.2143)}\right]\]
+
+\[w=.9889\]
+
+and thus \(F\approx e^{2w}=7.23\). The correct answer is \(F=7.180\).
+
+**Approximating the Non-Central \(F\)-Distribution**
+
+**Example 25.** Compute \(P(3.71|3,10,4)\) using the approximation **26.6.27** to the non-central \(F\)-distribution.
+
+Using **26.6.27** with \(p_{1}=3\), \(p_{2}=10\), \(\lambda=4\), \(F^{\prime}=3.71\) we have
+
+\[x=\frac{\left[\left(\frac{3}{3+4}\right)(3.71)\right]^{1/2}\left[1-\frac{2}{9(1 0)}\right]-\left[1-\frac{2}
+

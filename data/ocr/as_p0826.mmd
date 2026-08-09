@@ -1,0 +1,43 @@
+
+
+## II Relations
+
+A. Recurrences
+
+\[\begin{array}{l}\sum\limits_{0\leq\frac{30^{k}+k}{2}\leq n}(-1)^{n}q\left(n- \frac{3k^{2}\pm k}{2}\right)=(-1)^{r}\text{if }n=3r^{2}\pm r\\ q(0)=1\\ =0\text{otherwise}\end{array}\]
+
+\[q(n)=\frac{1}{n}\sum\limits_{k=1}^{n}\left\{\sigma_{1}(k)-2\sigma_{1}\left( \frac{k}{2}\right)\right\}q(n-k)\]
+
+B. Check
+
+\[\begin{array}{l}\sum\limits_{0\leq 30^{k}\pm k\leq n}(-1)^{n}q(n-(3k^{2}\pm k))=1 \text{if }n\pm\frac{r^{2}-r}{2}\\ =0\text{otherwise}.\end{array}\]
+
+## III Asymptotics
+
+\[q(n)\sim\frac{1}{4.3^{1/4}.\pi^{3/4}}\,e^{\varepsilon\sqrt{12}\,\sqrt{n}}\]
+
+### 24.3 Number Theoretic Functions
+
+#### 24.3.1 The Mobius Function
+
+I. Definitions
+
+\[\begin{array}{l}\text{I.}\ \mu(n)=1\\ \text{if }n=1\\ \text{=}(-1)^{n}\text{if }n\text{ is the product of }k\text{ distinct primes}\\ =0\text{if }n\text{ is divisible by a square }>1.\end{array}\]
+
+B. Generating functions
+
+\[\begin{array}{l}\sum\limits_{n=1}^{n}\mu(n)n^{-r}=1/\zeta(s)\\ \sum\limits_{n=1}^{n}\frac{\mu(n)\,\overline{x}^{n}}{1-x^{n}}=x\\ \text{II.}\ \text{Relations}\end{array}\]
+
+A. Recurrence
+
+\[\begin{array}{l}\mu(mn)=\mu(m)\mu(n)\text{ if }(m,n)=1\\ =0\text{ if }(m,n)>1\end{array}\]
+
+B. Check
+
+\[\begin{array}{l}\sum\limits_{d\text{in}}\mu(d)=\delta_{n1}\end{array}\]
+
+C. Numerical analysis
+
+\[\begin{array}{l}g(n)=\sum\limits_{d\text{in}}J(d)\text{ for all }n\text{ if and only if}\\ f(n)=\sum\limits_{d\text{in}}\mu(d)g(n/d)\text{ for all }n\text{ if and only if}\\ g(n)=\prod\limits_{d\text{in}}f(d)\text{ for all }n\text{ if and only if}\\ f(n)=\prod\limits_{d\text{in}}g(n/d)^{n(0)}\text{ for all }n\\ g(x)=\sum\limits_{n=1}^{[x]}f(x/n)\text{ for all }x>0\text{ if and only if}\\ f(x)=\sum\limits_{n=1}^{[x]}\mu(n)g(x/n)\text{ for all }x>0\end{array}\]
+
+\[\begin{array}{l}g(x)=\sum\limits_{n=1}^{[x]}f(nx)\text{ for all }x>0\text{ if and only if}\\ f(x)=\sum\limits_{n=1}^{[x]}\mu(n)g(nx)\text{ for all }x>0\text{ if and only if}\\ g(x)=\sum\limits_{n=1}^{[x]}\mu(n)g(nx)\text{ for all }x>0\text{ if and only if}\\ g(x)=\sum\limits_{n=1}^{[x]}\mu(n)g(x/n)\
