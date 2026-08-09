@@ -43,6 +43,15 @@ class TestNormalisation:
             (r"\Gamma(z)\label{eq:1}", r"\Gamma(z)"),
             ("## Ascending Series", "Ascending Series"),
             ("**Euler**", "Euler"),
+            # Step 18b: Nougat's other common fraction spelling, old-style TeX `\over`.
+            (r"{1\over 2}", r"\tfrac12"),
+            (r"{2\over\pi}", r"\frac{2}{\pi}"),
+            (r"{(n-k-1)!\over k!}", r"\frac{(n-k-1)!}{k!}"),
+            # Two independent (non-nested) \over fractions in the same string.
+            (
+                r"{1\over 2}z+{1\over 3}w",
+                r"\frac{1}{2}z+\frac{1}{3}w",
+            ),
         ],
     )
     def test_equivalent_spellings_collapse(self, a, b):
@@ -57,6 +66,7 @@ class TestNormalisation:
             (r"J_0(z)", r"J_1(z)"),
             (r"1.45459", r"1.45458"),
             (r"\Re z>0", r"\Re z<0"),
+            (r"{1\over 2}", r"{1\over 3}"),
         ],
     )
     def test_genuinely_different_maths_stays_different(self, a, b):
@@ -65,6 +75,11 @@ class TestNormalisation:
 
     def test_is_idempotent(self):
         raw = r"\tfrac12 \left( \int_0^\infty t^{z-1}\,dt \right) \quad \ldots"
+        once = normalize_latex(raw)
+        assert normalize_latex(once) == once
+
+    def test_is_idempotent_with_nested_over(self):
+        raw = r"{-({{1\over 2}}z)^{-n}\over\pi}\sum_{k=0}^{n-1}{(n-k-1)!\over k!}"
         once = normalize_latex(raw)
         assert normalize_latex(once) == once
 
