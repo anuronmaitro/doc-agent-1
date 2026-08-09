@@ -22,11 +22,24 @@ dependencies = [
   "pydantic-settings>=2.2,<3.0",
   # --- MathScholar additions (A2): LoRA fine-tuning of the OCR reader,
   #     classical image preprocessing/degradation, and page rendering.
-  #     Nougat itself needs no extra package: transformers>=4.34 supports it
-  #     natively, so we avoid the nougat-ocr package's conflicting pins.
+  #     We avoid the nougat-ocr package (its pins on transformers/timm would
+  #     break this lock); transformers ships the Nougat architecture natively.
   "peft>=0.11,<0.13",
   "opencv-python-headless>=4.9",
   "pymupdf>=1.24",
+  # --- Nougat post-processing backends (added in Step 16). ---------------------
+  #     CORRECTION to the note above, which used to claim Nougat "needs no extra
+  #     package". The *architecture* needs none, but NougatProcessor.
+  #     post_process_generation() -- which vision/ocr.py calls on every page --
+  #     opens with requires_backends(self, ["nltk", "levenshtein"]) and raises
+  #     ImportError without them. transformers declares them nowhere, so a clean
+  #     install of this repo could not run its own OCR stage on any machine.
+  #     Found when Step 16's Kaggle smoke run died here; reproduced locally
+  #     (is_levenshtein_available() and is_nltk_available() were both False).
+  #     The smoke phase existing is the only reason this cost 22 minutes of GPU
+  #     rather than surfacing three hours into the full-book run.
+  "python-Levenshtein>=0.25,<1.0",
+  "nltk>=3.8,<4.0",
 ]
 
 [project.optional-dependencies]

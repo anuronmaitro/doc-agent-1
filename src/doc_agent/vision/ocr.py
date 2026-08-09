@@ -45,6 +45,47 @@ MAX_NEW_TOKENS = 1536
 DEGEN_NGRAM = 12
 DEGEN_MIN_REPEATS = 4
 
+# --- three failure modes the tail-only n-gram check above cannot see (found in Step 16) ---
+# Measured on Step 16's first Kaggle smoke run: the tail check flagged 1 of 20 pages, while
+# 4+ were actually unusable. Each constant below closes one of the gaps that hid them.
+#
+# 1. Nougat announces its own failures. When it cannot read a page it emits a literal
+#    [MISSING_PAGE_POST] / [MISSING_PAGE_EMPTY] / [MISSING_PAGE_FAIL] marker. We were
+#    writing those straight to .mmd and counting them as successes -- printed p.243 (a
+#    dense table) produced 239 characters consisting of a truncated table header and
+#    [MISSING_PAGE_POST], and was reported as a good page.
+MISSING_PAGE_RE = re.compile(r"\[MISSING_PAGE[_A-Z]*\]")
+#
+# 2. A near-empty transcript is a failure, not a short page. Real A&S content pages run
+#    to hundreds of characters; the smoke run produced one page of 4 characters and one
+#    of 35. The floor sits well under the shortest genuine page observed (239 chars was
+#    itself a failure; the shortest sound page was 265).
+MIN_PAGE_CHARS = 120
+#
+# 3. Degeneration ANYWHERE on the page, not just at the tail. The tail check only inspects
+#    the last DEGEN_NGRAM * DEGEN_MIN_REPEATS tokens, so a decoder that spirals mid-page and
+#    then ends plausibly slips through. Detected as a short character unit repeated many
+#    times in a row, which is what these spirals actually look like:
+#      - printed p.255 emitted "\!" x603 inside formula 6.1.3, burning the token budget so
+#        only 3 of its 14 numbered formulas ever appeared;
+#      - printed p.295 read the ch.7 contents list correctly, then ran "<= " to the end.
+#    Two weaker signals were measured and REJECTED on the same 19-page sample:
+#      - whole-page token diversity: p.255 scored 0.711 unique (threshold would need to be
+#        >0.7 to fire) because each "\!\!\!..." run has a different length and so counts as
+#        a *distinct* token -- the signal is structurally blind to this failure;
+#      - zlib compression ratio: p.255 = 0.183 vs a clean p.065 = 0.224, a margin too thin
+#        to set a threshold on without false positives.
+#    The repeated-unit count separates cleanly: sound pages topped out at 6 consecutive
+#    repeats, the two degenerate pages hit 39 and 38. 20 sits ~3x above the clean maximum
+#    and ~2x below the observed failures.
+DEGEN_REPEAT_UNIT_MAX_LEN = 4
+DEGEN_MIN_UNIT_REPEATS = 20
+# Compiles to (.{1,4}?)\1{19,} : a 1-4 character unit, then 19 more copies of it = 20 total.
+DEGEN_REPEAT_RE = re.compile(
+    rf"(.{{1,{DEGEN_REPEAT_UNIT_MAX_LEN}}}?)\1{{{DEGEN_MIN_UNIT_REPEATS - 1},}}",
+    re.DOTALL,
+)
+
 # The citation anchor our Explainable NFR needs (summary.md 3f / 10): A&S formula numbers
 # look like "6.1.8". Parsed out of a chunk's OWN text, never guessed.
 FORMULA_ID_RE = re.compile(r"\d+\.\d+\.\d+")
@@ -64,6 +105,7 @@ class Reader:
         self.device = str(cfg.get("device", "cpu"))
         self._model: Any = None
         self._processor: Any = None
+        self._dtype: Any = None  # resolved in _ensure_loaded (fp16 on GPU, fp32 on CPU)
 
     def _ensure_loaded(self) -> None:
         """Load facebook/nougat-base (or cfg['ocr']['model']) on first use, not at
@@ -87,8 +129,18 @@ class Reader:
         # unpinned, matching from_pretrained's own default resolution.
         revision = NOUGAT_REVISION if model_name == "facebook/nougat-base" else None
 
+        # Half precision on GPU (Step 16). Nougat's own reference implementation runs
+        # fp16, and autoregressive decoding is the dominant cost of a full-book pass:
+        # Step 16's first Kaggle run measured 17.4 s/page in fp32 on a T4, i.e. ~5.5 h
+        # for the 1040-page corpus. CPU stays fp32 -- half precision there is slower,
+        # not faster, and unsupported for some ops.
+        dtype = torch.float16 if device.startswith("cuda") else torch.float32
+        self._dtype = dtype
+
         self._processor = NougatProcessor.from_pretrained(model_name, revision=revision)
-        model = VisionEncoderDecoderModel.from_pretrained(model_name, revision=revision)
+        model = VisionEncoderDecoderModel.from_pretrained(
+            model_name, revision=revision, torch_dtype=dtype
+        )
         model.eval()
         model.to(device)
         self._model = model
@@ -104,7 +156,11 @@ class Reader:
         import torch
 
         self._ensure_loaded()
-        pixel_values = self._processor(image, return_tensors="pt").pixel_values.to(self.device)
+        # Pixel values must match the model's dtype -- fp16 weights with fp32 inputs
+        # raises rather than silently upcasting.
+        pixel_values = self._processor(image, return_tensors="pt").pixel_values.to(
+            self.device, dtype=self._dtype
+        )
         with torch.no_grad():
             outputs = self._model.generate(
                 pixel_values,
@@ -117,16 +173,32 @@ class Reader:
         sequence = self._processor.batch_decode(outputs.sequences, skip_special_tokens=True)[0]
         sequence = self._processor.post_process_generation(sequence, fix_markdown=False)
 
-        confidence = 0.5  # neutral fallback if transition-score readout is unavailable
+        confidence = 0.5  # neutral fallback if the score readout is unavailable
         try:
-            scores = self._model.compute_transition_scores(
-                outputs.sequences, outputs.scores, normalize_logits=True
+            # Score the chosen tokens directly instead of calling
+            # model.compute_transition_scores(..., normalize_logits=True). That helper
+            # reshapes by `self.config.vocab_size`, which a VisionEncoderDecoderConfig
+            # does not define -- the decoder's vocabulary lives at
+            # config.decoder.vocab_size (50000 for nougat-base). It therefore raised
+            # AttributeError on EVERY page and the bare except left confidence pinned at
+            # the 0.5 fallback: Step 16's first Kaggle run wrote 201 chunk rows whose
+            # ocr_conf was identically 0.5, a constant masquerading as a measurement.
+            # Doing the log-softmax ourselves is both correct and version-proof.
+            if outputs.scores:
+                step_logits = torch.stack(outputs.scores, dim=1)[0].float()  # (steps, vocab)
+                gen_ids = outputs.sequences[0, -step_logits.shape[0] :]
+                logprobs = torch.log_softmax(step_logits, dim=-1)
+                chosen = logprobs[torch.arange(gen_ids.shape[0], device=logprobs.device), gen_ids]
+                finite = chosen[torch.isfinite(chosen)]
+                if finite.numel() > 0:
+                    confidence = float(math.exp(float(finite.mean())))
+        except Exception as exc:
+            # Log the actual exception. The previous version swallowed it, which is why
+            # a per-page failure went unnoticed for an entire GPU run.
+            logger.warning(
+                f"vision.ocr: confidence unavailable for this page "
+                f"({type(exc).__name__}: {exc})"
             )
-            finite = scores[torch.isfinite(scores)]
-            if finite.numel() > 0:
-                confidence = float(math.exp(float(finite.mean())))
-        except Exception:
-            logger.warning("vision.ocr: could not compute a confidence score for this page")
         return sequence, confidence
 
     def transcribe_region(self, region: Region) -> str:
@@ -166,18 +238,44 @@ def _group_by_page(regions: list[Region]) -> dict[str, list[Region]]:
     return groups
 
 
-def _is_degenerate(text: str) -> bool:
-    """True if the tail of `text` is a stuck repeated n-gram loop (see DEGEN_* above)."""
-    tokens = text.split()
+def _failure_reason(text: str) -> str | None:
+    """Why this page's transcript is unusable, or None if it looks sound.
+
+    Returns a short machine-readable reason so data/ocr/failures.json records *how* a
+    page failed, not merely that it did -- form Section 5 asks us to report failures
+    honestly, and "20% of pages failed, here is the breakdown by mode" is a far more
+    useful admission than a bare count. Ordered cheapest check first.
+    """
+    if MISSING_PAGE_RE.search(text):
+        return "nougat-missing-page-marker"
+
+    stripped = text.strip()
+    if len(stripped) < MIN_PAGE_CHARS:
+        return "empty-or-near-empty"
+
+    # Whole-page repetition (catches mid-page spirals the tail check misses).
+    if DEGEN_REPEAT_RE.search(stripped):
+        return "repetition-degeneration"
+
+    tokens = stripped.split()
+
+    # Original tail check: a decoder still looping when generation was cut off.
     window = DEGEN_NGRAM * DEGEN_MIN_REPEATS
-    if len(tokens) < window:
-        return False
-    tail = tokens[-window:]
-    pattern = tail[:DEGEN_NGRAM]
-    return all(
-        tail[i * DEGEN_NGRAM : (i + 1) * DEGEN_NGRAM] == pattern
-        for i in range(1, DEGEN_MIN_REPEATS)
-    )
+    if len(tokens) >= window:
+        tail = tokens[-window:]
+        pattern = tail[:DEGEN_NGRAM]
+        if all(
+            tail[i * DEGEN_NGRAM : (i + 1) * DEGEN_NGRAM] == pattern
+            for i in range(1, DEGEN_MIN_REPEATS)
+        ):
+            return "repetition-degeneration"
+
+    return None
+
+
+def _is_degenerate(text: str) -> bool:
+    """True if this page's transcript is unusable for any reason (see _failure_reason)."""
+    return _failure_reason(text) is not None
 
 
 def _split_markdown_to_regions(markdown: str, n_regions: int) -> list[str]:
@@ -304,15 +402,17 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
             image = PILImage.open(image_path).convert("RGB")
             markdown, confidence = reader._generate(image)
 
-            if _is_degenerate(markdown):
+            reason = _failure_reason(markdown)
+            if reason is not None:
                 failure_rows[page_id] = {
                     "page_id": page_id,
-                    "reason": "repetition-degeneration",
+                    "reason": reason,
+                    "chars": len(markdown.strip()),
                     "detected_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 }
                 _write_failures(FAILURES_PATH, failure_rows)
                 n_failed += 1
-                logger.warning(f"vision.ocr: {page_id} degenerated (repeated-token loop); skipped")
+                logger.warning(f"vision.ocr: {page_id} unusable ({reason}); skipped")
                 continue
 
             mmd_path.write_text(markdown, encoding="utf-8")

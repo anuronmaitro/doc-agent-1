@@ -7,16 +7,42 @@ __pycache__/
 
 # --- MathScholar (A2) ---
 # Large derived artifacts: recreated by scripts/get_data.sh + scripts/build_index.sh.
-# Never commit these (~1 GB) — the handbook says commit only the held-out sample pages.
+# Never commit these (~1 GB, images) — the handbook says commit only the held-out sample pages.
 data/pages/
-data/ocr/
-data/annot/
 data/index/
 data/eda_summary.json
 data/corpus_version.json
 
-# ...but the LoRA adapter IS a submitted artifact (needed to reproduce our numbers),
-# so un-ignore the models folder.
+# data/annot/ is split, not blanket-ignored:
+#   nist/  -- Stage A crops (Step 25), thousands of small images, unmeasured size. Stays
+#             ignored for now; measure it when Step 25 actually runs and revisit (same
+#             mistake we almost repeated with data/ocr/ -- don't assume, measure).
+#   test/  -- rendered scratch images (Step 18); redundant with the real output, which
+#             already goes to the COMMITTED grading_kit/heldout_pages/ + labels.jsonl.
+#   val/, train/ -- the actual hand-corrected JSON annotations (Steps 21-24). Same
+#             reasoning as data/ocr/: small text, and needed by a DIFFERENT teammate's
+#             LATER step (Step 27 datamodule.py, Step 28's actual fine-tune run) --
+#             "commit only a manifest" would leave whoever runs Step 27/28 unable to
+#             actually load 2/3 of the training set without an out-of-band file transfer.
+data/annot/nist/
+data/annot/test/
+!data/annot/val/
+!data/annot/val/**
+!data/annot/train/
+!data/annot/train/**
+
+# data/ocr/ is NOT in the same category as data/pages/ above: it's our own derived text
+# (OCR transcripts + sidecars), not "the corpus" itself, and it is tiny even at full-book
+# coverage (measured: 2.4 MB for 594 pages at Step 16; ~1-2.5 MB projected for all 1046
+# after Step 30's fine-tuned re-OCR) -- nothing like data/pages/'s ~1 GB of page images.
+# kb_demo.ipynb reads it directly to reproduce the char-F1/exact-match numbers quoted in
+# the form, so a clean clone needs it present for the grounding gate to be re-checkable,
+# not just readable from a saved cell. Committed for the same reason the LoRA adapter is.
+#
+# ...and the LoRA adapter IS a submitted artifact (needed to reproduce our numbers),
+# so un-ignore both.
+!data/ocr/
+!data/ocr/**
 !data/models/
 !data/models/**
 

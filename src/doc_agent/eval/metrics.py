@@ -158,43 +158,98 @@ def ocr_f1(pred: str, gold: str) -> float:
 # A&S numbers its formulas 6.1.8, 9.1.10, ... That id is our citation anchor (summary.md 3f)
 # and here it doubles as the alignment key: it tells us which predicted formula to compare
 # against which gold formula, without needing to align the whole page first.
-_FORMULA_LINE = re.compile(r"^\s*(\d+\.\d+\.\d+)\s+(.*)$")
+# Two spellings of the same thing must both parse, or this stops measuring OCR quality and
+# starts measuring notation style -- the exact failure `normalize_latex` exists to prevent:
+#
+#   gold (hand-written, grading_kit/labels.jsonl):  6.1.1  \Gamma(z)=\int_0^\infty ...
+#   Nougat (what the reader actually emits):        **6.1.1**: \(\Gamma(z)\!=\!\int ...\)
+#
+# The original pattern required the id at line start followed by whitespace, so it matched
+# the gold and NOTHING the reader produces. Step 16's first Kaggle run therefore scored
+# exact_formula_match = 0.0000 on all three gold pages while the transcripts demonstrably
+# contained 6.1.1, 6.1.2 and 6.1.3 -- a metric that could not have returned anything but
+# zero, whatever the reader did. Markdown emphasis around the id and a trailing colon are
+# now optional; the id and a real separator are still required, so "6.1.1x" does not match.
+_EMPH = r"(?:\*{1,2}|_{1,2})?"
+# id and body on the SAME line: gold's "6.1.1  \Gamma..." and Nougat's "**6.1.1**: \(...\)"
+_FORMULA_LINE = re.compile(rf"^\s*{_EMPH}\s*(\d+\.\d+\.\d+)\s*{_EMPH}\s*(?::\s*|\s+)(\S.*)$")
+# id ALONE on its line, body in the following paragraph -- Nougat's other layout, seen on
+# printed p.360: "**9.1.7**" / blank / "\(J_{\nu}(z)\sim...\)". A page can use both forms.
+_FORMULA_ID_ONLY = re.compile(rf"^\s*{_EMPH}\s*(\d+\.\d+\.\d+)\s*{_EMPH}\s*:?\s*$")
 
 
 def extract_formulas(text: str) -> dict[str, str]:
     """Map A&S formula id -> normalised formula body.
 
-    A formula starts at a line beginning with its id and continues through any following
-    *indented* lines, which is how the gold writes multi-line formulas:
+    Handles the three layouts this project actually encounters. All three must parse, or
+    the metric measures which *notation* a reader chose rather than whether it read the
+    maths correctly:
 
-        6.1.1  \\Gamma(z)=\\int_0^\\infty t^{z-1}e^{-t}\\,dt \\quad (\\Re z>0)
-               =k^z\\int_0^\\infty t^{z-1}e^{-kt}\\,dt
+    1. gold, id then body on one line, continuations indented
+       (grading_kit/labels.jsonl)::
 
-    A blank line, or any line starting in column 0 that is not a new id (a prose heading
-    like "Euler's Formula"), closes the current formula. If an id appears more than once,
-    the first occurrence wins -- later ones are usually cross-references, not restatements.
+           6.1.1  \\Gamma(z)=\\int_0^\\infty t^{z-1}e^{-t}\\,dt \\quad (\\Re z>0)
+                  =k^z\\int_0^\\infty t^{z-1}e^{-kt}\\,dt
+
+    2. Nougat inline, emphasised id and a colon::
+
+           **6.1.1**: \\(\\Gamma(z)\\!=\\!\\int_{0}^{\\infty}...\\)
+
+    3. Nougat standalone, id on its own line and the body in the next paragraph::
+
+           **9.1.7**
+
+           \\(J_{\\nu}(z){\\,\\sim}({\\frac{1}{2}}z)^{\\nu}/\\Gamma(\\nu{+}1)\\)
+
+    A prose line in column 0, or the next formula id, closes the current formula. If an id
+    appears more than once the first occurrence wins -- later ones are usually
+    cross-references, not restatements.
     """
     formulas: dict[str, str] = {}
-    current: str | None = None
-    body: list[str] = []
+    lines = text.splitlines()
 
-    def close() -> None:
-        if current is not None:
-            normalised = normalize_latex(" ".join(body))
-            if normalised and current not in formulas:
-                formulas[current] = normalised
+    def store(fid: str, body: list[str]) -> None:
+        normalised = normalize_latex(" ".join(body))
+        if normalised and fid not in formulas:
+            formulas[fid] = normalised
 
-    for line in text.splitlines():
-        match = _FORMULA_LINE.match(line)
-        if match:
-            close()
-            current, body = match.group(1), [match.group(2)]
-        elif current is not None and line.strip() and line[:1].isspace():
-            body.append(line.strip())
-        else:
-            close()
-            current, body = None, []
-    close()
+    def starts_formula(line: str) -> bool:
+        return bool(_FORMULA_LINE.match(line) or _FORMULA_ID_ONLY.match(line))
+
+    i, n = 0, len(lines)
+    while i < n:
+        inline = _FORMULA_LINE.match(lines[i])
+        id_only = _FORMULA_ID_ONLY.match(lines[i])
+
+        if inline:
+            fid, body = inline.group(1), [inline.group(2)]
+            i += 1
+            # layout 1: indented continuation lines belong to this formula
+            while (
+                i < n
+                and lines[i].strip()
+                and lines[i][:1].isspace()
+                and not starts_formula(lines[i])
+            ):
+                body.append(lines[i].strip())
+                i += 1
+            store(fid, body)
+            continue
+
+        if id_only:
+            fid = id_only.group(1)
+            i += 1
+            while i < n and not lines[i].strip():  # layout 3: skip the blank separator
+                i += 1
+            body = []
+            while i < n and lines[i].strip() and not starts_formula(lines[i]):
+                body.append(lines[i].strip())
+                i += 1
+            store(fid, body)
+            continue
+
+        i += 1
+
     return formulas
 
 

@@ -1,0 +1,26 @@
+To convert \(x\) back to the decimal scale we only need to obtain from Table 28.1 the various powers of 2 which appear in the above representation and sum them. However, since 2-m=2-m+1-2-m for any real constant _m,_ it is more convenient to reduce first the binary representation of \(x\) to the form
+
+\[\text{z} = 2^{- 28} - 2^{- 31} - 2^{- 33} - 2^{- 39} + 2^{- 42} - 2^{- 46} - 2^{- 80}\]
+
+and then sum these powers of 2. (Note that the number of summands is thereby decreased from 16 to 7.) From Table 28.1 we have
+
+\[\begin{array}{rll} + 2^{- 3s} = + 3.725&290&298& 10^{- 9} \\ - 2^{- 31} = - .465&661&287& 10^{- 9} \\ - 2^{- 33} = - .116&415&322& 10^{- 9} \\ - 2^{- 39} = - .001&818&989& 10^{- 9} \\ + 2^{- 42} = + .000&227&374& 10^{- 9} \\ - 2^{- 48} = - .000&028&422& 10^{- 9} \\ - 2^{- 60} = - .000&000&888& 10^{- 9} \\ \end{array}\]
+
+\[\begin{array}{rll} \text{z} = 3.141&592&764& 10^{- 9} \\ \end{array}\]
+
+Nine decimal digits are used for sufficient accuracy reserve. Hence, rounding to seven significant figures, we find
+
+\[\text{z} = (3.141593)_{(10)} \cdot 10^{- 9}.\]
+
+To convert a number such as
+
+\[\text{z} = (\xi)_{(10)} \cdot 10^{s}\]
+
+to the binary scale, where \(k\) is a positive integer so large that Table 28.1 cannot be used, apply the following device: Compute
+
+\[\text{log}_{2}\text{z} = \frac{\text{log}_{10}\text{z}}{\text{log}_{10}\text{2}}\text{k} + \frac{\text{z}_{1}}{\text{log}_{10}\text{2}}\]
+
+where \(k\) is the quotient and \(x\)1 the remainder, the division being carried out in the decimal scale. Then find \(e\) = 10\(i\), i.e., \(x\)1 = log10\(e\) , so that \(\cdot\)
+
+\[\text{log}_{2}\text{z} = k + \frac{\text{log}_{10}\text{e}_{10}\text{2}}{\text{log}_{10}\text{2}} = k + \text{log}_{2}\text{e}_{1}
+

@@ -1,0 +1,41 @@
+
+
+\begin{tabular}{c c c c c c c}
+**284** & \multicolumn{5}{c}{**exponential INTEGRAL AND RELATED FUNCTIONS**} \\ \(n\) & _E_n(1.275) & _E_n(1.275) & \(n\) & 104E_n(12.3) & 104E_n(12.3) & \(n\) \\
+1 & .1408099 & 6 & .0430168 & 12 & .191038 & .191038 & 12 \\
+2 & .0998984 & 7 & .0374307 & 11 & .199213 & .183498 & 13 \\
+3 & .07609303 & 8 & .0331009 & 10 & .208098 & .176516 & 14 \\
+4 & .0608307 & 9 & .0296534 & 9 & .217793 & .170042 & 15 \\
+5 & .0504679 & 10 & .0268469 & 8 & .228406 & .164015 & 16 \\ \end{tabular}
+
+Interpolating directly in **Table 5.4** for _n_=10 we get \(E\)10(1.275)=.0268470 as a check.
+
+**Example 5.** Compute _E_n(z), _n_=1(1)_N_, to 5S for _x_=10, _N_=10.
+
+If, as in this example, \(z\) is appreciably larger than five and _N_<=_z_, then the recurrence relation **5.1.14** may be safely used in decreasing order of _n_([5.5]). From **Table 5.5** for _x_=1=.1 we get \((x^{+}10)e^{z}\)_E_10(z)=1.02436 so that \(E_{10}(10)=2.32529\times 10^{-6}\). Using this as the initial value we obtain column (2).
+
+\begin{tabular}{c c c}  & \(10^{4}\)E_n(10) & \(10^{6}\)_E_n(10) \\ \(n\) & (1) & (2) \\
+1 & .41570 & .41570 \\
+2 & .38300 & .38302 \\
+3 & .35500 & .35488 \\
+4 & .33000 & .33041 \\
+5 & .31000 & .30898 \\
+6 & .28800 & .29005 \\
+7 & .27667 & .27325 \\
+8 & .25333 & .25822 \\
+9 & .25084 & .24472 \\
+10 & .22573 & .23253 \\ \end{tabular}
+
+From **Table 5.2** we get _xe_'_E_n(_x_)=.915633 so that \(E\)1(10)=4.15697\(\times 10^{-6}\) as a check. Forward recurrence starting with \(E\)1(10)=4.1570\(\times 10^{-6}\) yields the values in column (1). The underlined figures are in error.
+
+**Example 6.** Compute _E_n(_x_), _n_=1(1)_N_, to 5S for _x_=12.3, _N_=20.
+
+If \(N\) is appreciably larger than \(x\), and \(x\) appreciably larger than five, then the recurrence relation **5.1.14** should be used in the backward direction to generate _E_n(_x_) for _n_<=_n_0, and in the forward direction to generate _E_n(_x_) for _n_>_n_0, where \(n\)0=_<_x_.
+
+From **5.1.52**, with _n_=12, _x_=12.3, we have
+
+\[E_{\alpha_{0}}(x)\!=\!\frac{e^{-12.3}}{24.3}(1\!+\!.02032\!-\!.00043\!-\!.00001) =1.91038\!\times\!10^{-7}\!.\]
+
+Using the recurrence relation **5.1.14**, as indicated, we get
+
+\[\begin{array}{c c c c c}&&&&\delta_{s}(1)&\delta_{s}(1)\\ &\delta_{(1)}&(2)\\ &0&2.35040&2&2.35040&2389\\

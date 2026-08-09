@@ -1,0 +1,33 @@
+
+
+**Example 2.** Compute \(j_{1s}(x)\) for \(x\)=24.6. Interpolation in **Table 10.3** yields for \(x\)=24.6
+
+\(x^{-n}e^{s/s}j_{21}(x)\)=(\(-\)28)3.934616
+
+\(x^{-n}e^{s/s}j_{20}(x)\)=(\(-\)27)9.48683
+
+whence .
+
+\(j_{21}(24.6)\)=\(\_\)05604 29, \(j_{20}(24.6)\)=\(\_\)03896 98.
+
+From the recurrence relation **10.1.19** there results
+
+\(j_{1s}(24.6)\)= .00890 67660 [.00890 70]
+
+\(j_{1s}(24.6)\)= .02484 93173 [.02485 90]
+
+\(j_{21}(24.6)\)= .04628 17554 [.04628 16]
+
+\(j_{1s}(24.6)\)= .04099 87086 [.04099 88]
+
+\(j_{1s}(24.6)\)= .00871 65122 [.00871 67]
+
+For comparison, the correct values. are shown in brackets.
+
+To compute \(j_{1s}(x)\) for \(x\)=24.6 by Miller's device, take, for example, \(N\)=39 and assume \(F_{s0}\)=0, \(F_{s0}\)=1. Using **10.1.19** with decreasing \(N\), i.e., \(F_{N\smallsetminus 1}\)=[(2N\(+\)1)/\(x\)]\(F_{N}\)\(-\)\(F_{N\smallsetminus 1}\), \(N\)=9, 38, \(\ldots\), 1, 0, generate the sequence \(F_{3s}\), \(F_{3s}\), \(\ldots\) , \(F_{1}\), \(F_{0}\), compute from **Table 4.6**, \(j_{0}(24.6)\)=(sin 24.6)/24.6 == .02064 620296, and obtain the factor of proportionality
+
+\[p\text{=}j_{0}(24.6)/F_{0}\text{=}.00000\text{ }03839\text{ }17642.\]
+
+The value \(pF_{1s}\) equals \(j_{1s}(24.6)\) to 8 decimals. The final part of the computations is shown in the following table, in which the correct values are given for comparison.
+
+\[\begin{array}{c|c|c|c}\hline\hline N&F_{N}&pF_{N}&j_{N}(24.6)\\ \hline 15&-22704\text{ }71107&-0.0871\text{ }67391&-0.0871\text{ }674\\ 14&+78178\text{ }88236&+0.3001\text{ }42522&-0.0004\text{ }425\\ 13&+114866\text{ }80811&+0.04409\text{ }3941&+0.04409\text{ }939\\ 12&+47984\text{ }44353&+0.18458\text{ }75218&+0.01838\text{ }752\\ 11&-66199\text{ }593171&-0.2514\text{ }2882&-0.02541\text{ }289\\ 10&-10978\text{ }76234&-0.0421\text{ }75392&-0.04214\text{ }754\\ 9&-27523\text{ }39093&-0.10056\text{ }67185&-0.01056\text{ }672\\ 8&+88524\text{ }85252&-0.03985\text{ }6226&-0.03986\text{ }622\\ 7&+8869\text{ }11017&+0.3405\text{ }3152&-0.03405\text{ }315\\ 6&-34440\text{ }02929&-0.01322\text{ }2134&-0.01322\text{ }213\\ 5&-106899\text{
