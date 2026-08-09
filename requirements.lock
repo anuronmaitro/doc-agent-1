@@ -33,6 +33,7 @@ charset-normalizer==3.4.9
     # via requests
 click==8.4.2
     # via
+    #   nltk
     #   uvicorn
     #   wandb
 cloudpickle==3.1.2
@@ -48,6 +49,8 @@ cycler==0.12.1
     # via matplotlib
 datasets==2.21.0
     # via doc-agent (pyproject.toml)
+defusedxml==0.7.1
+    # via nltk
 dill==0.3.8
     # via
     #   datasets
@@ -130,9 +133,13 @@ jinja2==3.1.6
     #   gradio
     #   torch
 joblib==1.5.3
-    # via scikit-learn
+    # via
+    #   nltk
+    #   scikit-learn
 kiwisolver==1.5.0
     # via matplotlib
+levenshtein==0.27.3
+    # via python-levenshtein
 lightning==2.3.3
     # via doc-agent (pyproject.toml)
 lightning-utilities==0.15.3
@@ -164,6 +171,8 @@ narwhals==2.24.0
     # via scikit-learn
 networkx==3.6.1
     # via torch
+nltk==3.10.2
+    # via doc-agent (pyproject.toml)
 numpy==2.5.1
     # via
     #   accelerate
@@ -252,6 +261,8 @@ python-dateutil==2.9.0.post0
     #   pandas
 python-dotenv==1.2.2
     # via pydantic-settings
+python-levenshtein==0.27.3
+    # via doc-agent (pyproject.toml)
 python-multipart==0.0.32
     # via gradio
 pytorch-lightning==2.6.5
@@ -271,8 +282,12 @@ pyyaml==6.0.3
     #   timm
     #   transformers
     #   wandb
+rapidfuzz==3.14.5
+    # via levenshtein
 regex==2026.7.19
-    # via transformers
+    # via
+    #   nltk
+    #   transformers
 requests==2.34.2
     # via
     #   datasets
@@ -350,6 +365,7 @@ tqdm==4.70.0
     #   datasets
     #   huggingface-hub
     #   lightning
+    #   nltk
     #   peft
     #   pytorch-lightning
     #   sentence-transformers
