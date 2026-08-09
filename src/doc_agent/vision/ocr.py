@@ -124,6 +124,17 @@ TABULAR_UNIT_RE = re.compile(r"^[lcr|@{}&\s.0-9]*$")
 WS_RE = re.compile(r"\s+")
 MIN_SPIRAL_SPAN_CHARS = 60
 
+# Step 18b defect 5, found on the full-book run (not the 20-page smoke sample): a region
+# crop with a near-zero width or height crashes Nougat's OWN preprocessing, not ours.
+# layout.detect() (TATR, a learned model) does not guarantee a sane bbox on every region --
+# one page produced a crop of shape (1, 1325, 3). HF's image_processing_nougat.crop_margin()
+# calls to_channel_dimension_format() on that array; its "channel dim is ambiguous" heuristic
+# reads a leading size-1 axis as channels-first, and the resulting transpose((2,0,1)) raises
+# `ValueError: axes don't match array` -- an uncaught exception that took the entire ~5h
+# Kaggle run down with it (papermill has no per-cell recovery). There is no content to read
+# in a 1-pixel-tall sliver anyway, so skip the model call rather than let it reach the crash.
+MIN_CROP_DIM_PX = 8
+
 # The citation anchor our Explainable NFR needs (summary.md 3f / 10): A&S formula numbers
 # look like "6.1.8". Parsed out of a chunk's OWN text, never guessed.
 FORMULA_ID_RE = re.compile(r"\d+\.\d+\.\d+")
@@ -251,6 +262,12 @@ class Reader:
 
         path = _page_image_path(region.page_id)
         image = PILImage.open(path).convert("RGB").crop(region.bbox)
+        if image.width < MIN_CROP_DIM_PX or image.height < MIN_CROP_DIM_PX:
+            logger.warning(
+                f"vision.ocr: {region.page_id} region bbox={region.bbox} crops to "
+                f"{image.width}x{image.height}px (degenerate); skipping the model call"
+            )
+            return "", 0.0
         return self._generate(image)
 
     def transcribe_region(self, region: Region) -> str:
@@ -422,7 +439,20 @@ def _retry_page_by_region(
     region_texts: list[str] = []
     region_confs: list[float] = []
     for region in page_regions:
-        text, conf = reader._generate_region(region)
+        # This loop is defect 1's own fix, exercised for the first time at full-book scale
+        # in Step 18b -- and it found a crash (defect 5: a degenerate crop dimension, guarded
+        # in _generate_region above) that took an entire ~5h unattended run down with it. The
+        # per-region guard fixes the KNOWN cause; this except is the belt-and-suspenders for
+        # an unknown one -- one bad region among ~1040 pages' worth must not cost the whole
+        # job again. Treated the same as a genuinely blank region: empty text, zero confidence.
+        try:
+            text, conf = reader._generate_region(region)
+        except Exception as exc:
+            logger.warning(
+                f"vision.ocr: region retry crashed on {region.page_id} bbox={region.bbox} "
+                f"({type(exc).__name__}: {exc}); treating as empty"
+            )
+            text, conf = "", 0.0
         region_texts.append(text)
         region_confs.append(conf)
     recombined = "\n\n".join(t for t in region_texts if t.strip())

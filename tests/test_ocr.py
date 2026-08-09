@@ -124,6 +124,26 @@ class _FakeReader:
         return self._texts[region.bbox], 0.9
 
 
+class _CrashingReader:
+    """Duck-typed stand-in that raises on specific regions, simulating the real crash
+    (`ValueError: axes don't match array`) found on the full-book run -- proves the retry
+    loop's per-region try/except keeps the other regions' results, rather than propagating
+    the exception and losing the whole page (or the whole run)."""
+
+    def __init__(
+        self,
+        crashes_on: set[tuple[int, int, int, int]],
+        texts: dict[tuple[int, int, int, int], str],
+    ) -> None:
+        self._crashes_on = crashes_on
+        self._texts = texts
+
+    def _generate_region(self, region: Region) -> tuple[str, float]:
+        if region.bbox in self._crashes_on:
+            raise ValueError("axes don't match array")
+        return self._texts[region.bbox], 0.9
+
+
 class TestRetryPageByRegion:
     def _regions(self, n: int) -> list[Region]:
         return [Region(page_id="as_p0001", bbox=(0, i, 10, i + 1), kind="text") for i in range(n)]
@@ -162,3 +182,55 @@ class TestRetryPageByRegion:
             }
         )
         assert _retry_page_by_region(reader, regions) is None
+
+    def test_a_crashing_region_does_not_crash_the_whole_page(self):
+        """Step 18b defect 5: a full-book run died outright when one region's crop crashed
+        Nougat's own preprocessing (ValueError: axes don't match array, on a degenerate
+        crop). One bad region among ~1040 pages must not cost the whole multi-hour job --
+        it's treated as empty text, and the OTHER regions on the page still make it through."""
+        regions = self._regions(2)
+        good_text = "6.1.1 \\Gamma(z)=\\int_0^\\infty t^{z-1}e^{-t}\\,dt \\quad (\\Re z>0). " * 3
+        reader = _CrashingReader(crashes_on={(0, 0, 10, 1)}, texts={(0, 1, 10, 2): good_text})
+        result = _retry_page_by_region(reader, regions)
+        assert result is not None
+        recombined, region_texts, region_confs = result
+        assert recombined == good_text
+        assert region_texts == ["", good_text]
+        assert region_confs == [0.0, 0.9]
+
+
+class TestGenerateRegionCropGuard:
+    """Step 18b defect 5: the actual root cause behind the crash above. A degenerate crop
+    (near-zero width or height) must never reach the model at all -- these tests use a real
+    on-disk image so `_page_image_path` -> `Image.crop` runs for real, and prove the model
+    call itself is never reached for a bad bbox but still happens for a normal one."""
+
+    def _make_reader_with_page(self, tmp_path, monkeypatch):
+        from PIL import Image as PILImage
+
+        import doc_agent.vision.ocr as ocr_mod
+
+        PILImage.new("RGB", (200, 200), "white").save(tmp_path / "as_p0001.png")
+        monkeypatch.setattr(ocr_mod, "INTERIM_DIR", tmp_path)
+        monkeypatch.setattr(ocr_mod, "PAGES_DIR", tmp_path)
+        return ocr_mod
+
+    def test_degenerate_crop_skips_the_model_call(self, tmp_path, monkeypatch):
+        ocr_mod = self._make_reader_with_page(tmp_path, monkeypatch)
+
+        def _boom(self, image):
+            raise AssertionError("the model must not be called on a degenerate crop")
+
+        monkeypatch.setattr(ocr_mod.Reader, "_generate", _boom)
+        reader = ocr_mod.Reader({"ocr": {}})
+
+        degenerate = Region(page_id="as_p0001", bbox=(0, 0, 50, 1), kind="text")
+        assert reader._generate_region(degenerate) == ("", 0.0)
+
+    def test_reasonably_sized_crop_still_reaches_the_model(self, tmp_path, monkeypatch):
+        ocr_mod = self._make_reader_with_page(tmp_path, monkeypatch)
+        monkeypatch.setattr(ocr_mod.Reader, "_generate", lambda self, image: ("ok", 0.7))
+        reader = ocr_mod.Reader({"ocr": {}})
+
+        sane = Region(page_id="as_p0001", bbox=(0, 0, 50, 50), kind="text")
+        assert reader._generate_region(sane) == ("ok", 0.7)
