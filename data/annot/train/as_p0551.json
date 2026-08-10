@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0551",
+  "printed_page": 551,
+  "chapter_id": "ch14_coulomb",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\n\n## 10. The \\(G_{0}(\\eta,\\rho)\\)\n\nThe \\(G_{0}(\\eta,\\rho)\\) and \\(G_{1}(\\eta,\\rho)\\) are the same as in the previous section. The \\(G_{0}(\\eta,\\rho)\\) are the same as in the previous section.\n\n",
+  "text": "COULOMB WAVE FUNCTIONS (p.551)\nTable 14.1  COULOMB WAVE FUNCTIONS OF ORDER ZERO,  G_0(\\eta,\\rho)\nColumns: \\eta \\backslash \\rho = 11, 12, 13, 14, 15\nSample rows (\\eta, G_0 at \\rho=11..15):\n0.5: (0)-1.0028, (-1)-7.4645, (-1)+1.4266, (-1)+9.0905, (-1)+8.9435\n5.0: (0)1.0777, (-1)+4.5891, (-1)+5.0322, (-1)-1.7259, (-1)-8.0595\n10.0: (2)1.2529, (1)5.6013, (1)2.7395, (1)1.4638, (0)8.5544\n15.0: (5)4.5606, (5)1.3286, (4)4.2110, (4)1.4419, (3)5.3038\n20.0: (9)6.9249, (9)1.4781, (8)3.4512, (7)8.7394, (7)2.3833\n(Table also gives d/d\\rho G_0(\\eta,\\rho) below, over the same (\\eta,\\rho) grid; only a sampled subset of rows is given here.)",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}
