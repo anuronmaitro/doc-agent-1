@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0754",
+  "printed_page": 754,
+  "chapter_id": "ch21_spheroidal",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\n\n#### Asymptotic Expansion for \\(\\lambda_{nn}\\)\n\n\\(\\lambda_{nn}(e)=eq+m^{*}-\\frac{1}{8}\\left(q^{4}+5\\right)-\\frac{q}{64c}\\left(q^{2} +11-32m^{2}\\right)\\)\n\n\\(-\\frac{1}{1024e^{2}}\\left[5\\left(q^{4}+26q^{2}+21\\right)-384m^{2}\\left(q^{2}+1 \\right)\\right]\\)\n\n\\(-\\frac{1}{e^{2}}\\left[\\frac{1}{128^{2}}\\left(33\\,q^{6}+1594q^{3}+5621q\\right)\\right.\\)\n\n\\(-\\frac{m^{2}}{128}\\left(37\\,q^{6}+167\\,q\\right)+\\frac{m^{4}}{8}\\left.q\\right]\\)\n\n\\(-\\frac{1}{e^{2}}\\left[\\frac{1}{256^{2}}\\left(63\\,q^{6}+4940q^{4}+43327q^{2}+22470\\right)\\right.\\)\n\n\\(-\\frac{m^{2}}{512}\\left(115q^{4}+1310q^{2}+735\\right)+\\frac{3m^{4}}{8}\\left(q^{2}+1 \\right)\\right]\\)\n\n\\(-\\frac{1}{e^{2}}\\left[\\frac{1}{1024^{2}}\\left(527q^{7}+61529q^{5}+1043961q^{3}\\right.\\)\n\n\\(+2241599q\\right)-\\frac{m^{2}}{32\\cdot 1024}\\left(5739q^{4}+127550q^{6}\\right.\\)\n\n\\(\\left.N_{r}^{m}=\\frac{(2m+r)(2m+r-1)e^{2}}{(2m+2r-1)(2m+2r+1)}\\frac{d_{r}}{d_{r-2}}\\right.\\)\n",
+  "text": "[CORRECTED BY S2]\n\n\n#### Asymptotic Expansion for \\(\\lambda_{nn}\\)\n\n\\(\\lambda_{nn}(e)=eq+m^{*}-\\frac{1}{8}\\left(q^{4}+5\\right)-\\frac{q}{64c}\\left(q^{2} +11-32m^{2}\\right)\\)\n\n\\(-\\frac{1}{1024e^{2}}\\left[5\\left(q^{4}+26q^{2}+21\\right)-384m^{2}\\left(q^{2}+1 \\right)\\right]\\)\n\n\\(-\\frac{1}{e^{2}}\\left[\\frac{1}{128^{2}}\\left(33\\,q^{6}+1594q^{3}+5621q\\right)\\right.\\)\n\n\\(-\\frac{m^{2}}{128}\\left(37\\,q^{6}+167\\,q\\right)+\\frac{m^{4}}{8}\\left.q\\right]\\)\n\n\\(-\\frac{1}{e^{2}}\\left[\\frac{1}{256^{2}}\\left(63\\,q^{6}+4940q^{4}+43327q^{2}+22470\\right)\\right.\\)\n\n\\(-\\frac{m^{2}}{512}\\left(115q^{4}+1310q^{2}+735\\right)+\\frac{3m^{4}}{8}\\left(q^{2}+1 \\right)\\right]\\)\n\n\\(-\\frac{1}{e^{2}}\\left[\\frac{1}{1024^{2}}\\left(527q^{7}+61529q^{5}+1043961q^{3}\\right.\\)\n\n\\(+2241599q\\right)-\\frac{m^{2}}{32\\cdot 1024}\\left(5739q^{4}+127550q^{6}\\right.\\)\n\n\\(\\left.N_{r}^{m}=\\frac{(2m+r)(2m+r-1)e^{2}}{(2m+2r-1)(2m+2r+1)}\\frac{d_{r}}{d_{r-2}}\\right.\\)\n",
+  "annotator": "Himadri Gobinda Biswas (2105047)",
+  "annotated_at": "2026-08-10T14:14:05.995884+00:00",
+  "note": "Corrected draft text per conventions."
+}

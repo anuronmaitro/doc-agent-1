@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0724",
+  "printed_page": 724,
+  "chapter_id": "ch20_mathieu",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "following: (a) For a fixed real \\(q\\), characteristic values \\(a_{r}\\) and \\(b_{r}\\) are real and distinct, if \\(q\\)  0; \\(a\\)0<_b_1<_a_1 <_b_h_<_a_2< . ., _q_>0 and _a_(_q_), _b_(_q_) approach \\(r\\) as \\(q\\) approaches zero. (b) A solution of 20.1.1 associated with \\(a_{r}\\), or \\(b_{r}\\) has \\(r\\) zeros in the interval 0<=<_s_-_s_, (_q_ real). (c) The form of 20.2.21 and 20.2.23 shows that if \\(a_{2}\\), is a root of 20.2.21 and \\(q\\) is different from zero, then \\(a_{4}\\), cannot be a root of 20.2.23; similarly, no root of 20.2.22 can be a root of 20.2.24 if \\(q\\)  0. It may be shown from other considerations that for a given point (_a__, _q_) there can be at most one periodic solution of period \\(p\\) or 2\\(p\\) if \\(q\\)  0. This no longer holds for solutions of period \\(s_{r}\\), \\(s\\)23; for these all solutions are periodic, if one is.\n\nFor \\(r\\geq 7\\), and \\(|q|\\) not too large, \\(a_{r}\\) is approximately equal to \\(b_{t}\\), and the following approximation may be used 20.2.26",
+  "text": "[CORRECTED BY S2]\nfollowing: (a) For a fixed real \\(q\\), characteristic values \\(a_{r}\\) and \\(b_{r}\\) are real and distinct, if \\(q\\)  0; \\(a\\)0<_b_1<_a_1 <_b_h_<_a_2< . ., _q_>0 and _a_(_q_), _b_(_q_) approach \\(r\\) as \\(q\\) approaches zero. (b) A solution of 20.1.1 associated with \\(a_{r}\\), or \\(b_{r}\\) has \\(r\\) zeros in the interval 0<=<_s_-_s_, (_q_ real). (c) The form of 20.2.21 and 20.2.23 shows that if \\(a_{2}\\), is a root of 20.2.21 and \\(q\\) is different from zero, then \\(a_{4}\\), cannot be a root of 20.2.23; similarly, no root of 20.2.22 can be a root of 20.2.24 if \\(q\\)  0. It may be shown from other considerations that for a given point (_a__, _q_) there can be at most one periodic solution of period \\(p\\) or 2\\(p\\) if \\(q\\)  0. This no longer holds for solutions of period \\(s_{r}\\), \\(s\\)23; for these all solutions are periodic, if one is.\n\nFor \\(r\\geq 7\\), and \\(|q|\\) not too large, \\(a_{r}\\) is approximately equal to \\(b_{t}\\), and the following approximation may be used 20.2.26",
+  "annotator": "Himadri Gobinda Biswas (2105047)",
+  "annotated_at": "2026-08-10T14:14:05.937602+00:00",
+  "note": "Corrected draft text per conventions."
+}
