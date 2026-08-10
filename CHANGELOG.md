@@ -26,7 +26,7 @@
 - [x]Step 18b — Repair the baseline reader, then re-run it — S1
 - [x] Step 19 — annotate TEST batch A (18) — S1
 - [x] Step 20 — annotate TEST batch B (18) — S2
-- [ ] Step 21 — annotate VALIDATION (20) — S3
+- [x] Step 21 — annotate VALIDATION (20) — S3
 - [ ] Step 22 — annotate TRAIN A (35) — S1
 - [ ] Step 23 — annotate TRAIN B (35) — S2
 - [ ] Step 24 — annotate TRAIN C (35) — S3
