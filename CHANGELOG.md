@@ -23,7 +23,7 @@
 - [x] Step 16 — Kaggle: baseline full-book OCR + BEFORE number--S1
 - [x] Step 17 — annotation conventions + tooling — S2
 - [x] Step 18 — render the 164 annotation pages — S3
-- [ ]Step 18b — Repair the baseline reader, then re-run it — S1
+- [x]Step 18b — Repair the baseline reader, then re-run it — S1
 - [ ] Step 19 — annotate TEST batch A (18) — S1
 - [ ] Step 20 — annotate TEST batch B (18) — S2
 - [ ] Step 21 — annotate VALIDATION (20) — S3
