@@ -22,9 +22,13 @@ doc is the one place all three of us agree on the rules.
   `1.77245\,38509` is part of the source — don't collapse it).
 
 **What's part of the label**
-- **The formula's equation number (e.g. `6.1.8`) is NOT part of `text`** — it goes in the
-  chunk id (`vision/ocr.py` / `index/chunk.py` already parse it via `FORMULA_ID_RE`), not
-  in the transcription. Don't retype it into the body.
+- **Correction (2026-08-10, Step 19): the formula's equation number (e.g. `6.1.8`) IS part
+  of `text`, contradicting an earlier draft of this rule.** `eval.metrics.extract_formulas()`
+  parses the id straight OUT of `text` with `FORMULA_ID_RE` — the id has to be there for
+  extraction to find it at all, that's not a separate side-channel. The 3 original gold
+  pages (243, 255, 360) already did this (e.g. `"6.1.1  \Gamma(z)=..."`), and Step 19's 18
+  pages follow the same precedent for consistency within `labels.jsonl`. Keep the id inline,
+  followed by two spaces, then the formula.
 - Structural headers (section titles, table captions) ARE part of `text`.
 
 **Unreadable regions**
@@ -33,9 +37,14 @@ doc is the one place all three of us agree on the rules.
   when scoring, so it costs char-F1 fairly rather than silently inflating the score.
 
 **Running heads / footers**
-- Drop them from `text` (page headers like "EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS"
-  repeated at the top of every chapter page are not content); the printed folio itself is
-  already carried as page metadata (`page_id`, `printed_page`), not re-typed into the body.
+- **Correction (2026-08-10, Step 19): KEEP the chapter running head + page number as the
+  first line of `text`**, contradicting an earlier draft of this rule — e.g.
+  `"EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.229)"`. All 3 original gold pages do this
+  (`"EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.243)"`, `"BESSEL FUNCTIONS OF INTEGER
+  ORDER (p.360)"`), so Step 19 matched that precedent rather than the written rule below it,
+  for the same reason as the equation-number correction above: consistency within
+  `labels.jsonl` matters more than a rule the first 3 pages never actually followed. Genuine
+  page footers with no chapter/page information (rare in A&S) can still be dropped.
 
 **Dense numeric tables**
 - Do not transcribe every cell. Transcribe: the table's structural headers/column labels,
