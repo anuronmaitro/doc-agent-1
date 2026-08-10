@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0106",
+  "printed_page": 106,
+  "chapter_id": "ch04_elem_transcend",
+  "baseline_failed": true,
+  "baseline_reason": "empty-or-near-empty",
+  "draft_text": "",
+  "text": "ELEMENTARY TRANSCENDENTAL FUNCTIONS (p.106)\nTable 4.2  NATURAL LOGARITHMS\nColumns: x | \\ln x\nSample rows:\n0.900  -0.10536\\,05156\n0.950  -0.05129\\,32944\n1.000  0.00000\\,00000\n1.025  0.02469\\,26105\n1.050  0.04879\\,01642\n(Table runs x=0.900 to 1.050 in fine steps; only a sampled subset of rows is given here.)",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}
