@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T13:54:20Z",
+  "generated_at": "2026-08-10T05:31:35Z",
   "render_dpi": 300,
   "front_matter_offset": 32,
   "page_numbering": "printed N = PDF N+32; files named by PRINTED page",
@@ -746,8 +746,8 @@
         }
       ],
       "baseline_draft": {
-        "correctable": 64,
-        "blank_slate": 41
+        "correctable": 79,
+        "blank_slate": 26
       }
     },
     "val": {
@@ -896,8 +896,8 @@
         }
       ],
       "baseline_draft": {
-        "correctable": 11,
-        "blank_slate": 9
+        "correctable": 18,
+        "blank_slate": 2
       }
     },
     "test": {
@@ -1179,8 +1179,8 @@
         }
       ],
       "baseline_draft": {
-        "correctable": 24,
-        "blank_slate": 15
+        "correctable": 29,
+        "blank_slate": 10
       }
     }
   },

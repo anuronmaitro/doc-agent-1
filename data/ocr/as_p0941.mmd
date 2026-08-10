@@ -2,130 +2,50 @@
 
 **26.4.4**
 
-**Approximations to the Chi-Square Distribution for Large \(\nu\)**
-
-**26.4.13**
-
-**Approximation**
-
-**Condition**
-
-**(\(\chi^{2}|\nu\))**\(\approx\)**\(Q(\chi^{2})\)**,** \(\chi_{1}\)**=**\(\sqrt{2\chi^{2}}\)**=**\(\sqrt{2\nu-1}\)**(**\(\nu\)**>**100)**
-
-**26.4.14**
-
-**(\(\nu\) odd) and \(\chi\)**=**\(\sqrt{\chi^{2}}\)**
+\[Q({\chi}^{2}|p) = 2Q(x) + 2Z(x){\sum\limits_{r = 1}^{\frac{n - 1}{2}}}\frac{{\chi}^{xr - 1}}{1 \cdot 3 \cdot 5\ldots(2r - 1)}\]
 
 **26.4.5**
 
-**26.4.15**
+\[Q({\chi}^{2}|p) = \sqrt{2\pi}Z(x)\left\{1 + {\sum\limits_{r = 1}^{\frac{n - 2}{2}}}\frac{{\chi}^{xr}}{2 \cdot 4\ldots(2r)}\right\}\]
 
 **26.4.6**
+
+\[Q({\chi}^{2}|p) = \left(\frac{1}{2}\,{\chi}^{2}\right)^{\prime n/2}\frac{e^{-{\chi}^{2}/2}}{\Gamma\left(\frac{p + 2}{2}\right)}\]
 
 **26.4.7**
 
+\[P({\chi}^{2}|p) = \frac{1}{\Gamma\left(\frac{p}{2}\right)}{\sum\limits_{s = 0}^{n}}\frac{(-1)^{n}{({\chi}^{2}/2)}^{\frac{r}{2}+n}}{n!\left(\frac{p}{2} + n\right)}\]
+
 **26.4.8**
+
+\[Q({\chi}^{2}|p) = Q({\chi}^{2}|p) + \frac{({\chi}^{2}/2)^{n}e^{-{\chi}^{2}/n}}{\Gamma\left(\frac{p}{2} + 1\right)}\]
 
 **26.4.9**
 
-**26.4.15**
+\[\frac{{\partial}^{n}Q({\chi}^{2}|p)}{{\partial}({\chi}^{2})^{n}} = \frac{1}{2^{n}}{\sum\limits_{j = 0}^{m}}\left(\begin{array}{c}m\\ j\end{array}\right)(-1)^{m + J}Q({\chi}^{2}|p-2j)\]
 
-**26.4.16**
+**26.4.10**
 
-**Approximations to the Chi-Square Distribution for Large \(\nu\)**
+\[Q({\chi}^{2}|p) = \frac{({\chi}^{2})^{n/2}e^{-{\chi}^{2}t}}{2^{n/2}\Gamma(y/2)} \left\{\frac{1}{{\chi}^{2}/2+}\frac{1-y/2}{1+}\frac{2-y/2}{1+\ldots}\right\}\]
 
-**26.4.20**
+**Asymptotic Distribution for Large \(v\)**
 
-**26.4.21**
+**26.4.11**
 
-**26.4.21**
+\[P({\chi}^{2}|p) \sim P(x)\qquad\mbox{where $z = \frac{{\chi}^{2}-y}{\sqrt{2p}}$}\]
 
-**26.4.21**
+**Asymptotic Expansions for Large \({\chi}^{2}\)**
 
-**26.4.21**
+**26.4.12**
 
-**26.4.22**
+\[Q({\chi}^{2}|p) \sim \frac{({\chi}^{2})^{\frac{r}{2}-1}e^{-{\chi}^{2}t}}{2^{n/2} \Gamma(y/2)}{\sum\limits_{j = 0}^{n}}\;(-1)^{j}\frac{\Gamma\left(1-\frac{p}{2}+j\right)}{\Gamma\left(1-\frac {p}{2}\right)}\frac{2^{j+1}}{({\chi}^{2})^{j}}\]
 
-**26.4.23**
+**Algorithm**
 
-**26.4.24**
+\[Q({\chi}^{2}|p) \sim \frac{({\chi}^{2})^{\frac{r}{2}-1}e^{-{\chi}^{2}t}}{2^{n/2} \Gamma(y/2)}{\sum\limits_{j = 0}^{n}}\;(-1)^{j}\frac{\Gamma\left(1-\frac{p}{2}+j\right)}{\Gamma\left(1-\frac {p}{2}\right)}\frac{2^{j+1}}{({\chi}^{2})^{j}}\]
 
-**26.4.25**
+**Algorithm**
 
-**26.4.26**
+\[Q({\chi}^{2}|p) \sim \frac{({\chi}^{2})^{\frac{r}{2}-1}e^{-{\chi}^{2}t}}{2^{n/2} \Gamma(y/2)}{\sum\limits_{j = 0}^{n}}\;(-1)^{j}\frac{\Gamma\left(1-\frac{p}{2}+j\right)}{\Gamma\left(1-\frac {p}{2}\right)}\frac{2^{j+1}}{({\chi}^{2})^{j}}\]
 
-**26.4.27**
-
-**26.4.28**
-
-**26.4.29**
-
-**26.4.30**
-
-**26.4.31**
-
-**26.4.32**
-
-**26.4.33**
-
-**26.4.34**
-
-**26.4.35**
-
-**26.4.36**
-
-**26.4.37**
-
-**26.4.38**
-
-**26.4.39**
-
-**26.4.40**
-
-**26.4.39**
-
-**26.4.41**
-
-**26.4.34**
-
-**26.4.35**
-
-**26.4.36**
-
-**26.4.37**
-
-**26.4.38**
-
-**26.4.39**
-
-**26.4.40**
-
-**26.4.39**
-
-**26.4.42**
-
-**26.4.43**
-
-**26.4.44**
-
-**26.4.45**
-
-**26.4.46**
-
-**26.4.47**
-
-**26.4.48**
-
-**26.4.51**
-
-**26.4.52**
-
-**26.4.53**
-
-**26.4.54**
-
-**26.4.55**
-
-**26.4.56**
-
-**26.4.6**
+**26.4.13**

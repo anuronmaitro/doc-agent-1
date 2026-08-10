@@ -1,17 +1,20 @@
 
 systematic tabulation, this method is considerably faster than the method of numerical integration. Thus, when **20.3.8** is substituted into **20.3.1**, there result the following recurrence relations:
 
-**20.3.12**: \(V_{2n}c_{2n}{=}c_{2n-2}{+}c_{2n+2}\)
+\[\begin{array}{l}\mbox{\bf 20.3.12}\qquad V_{2n62n}{=}c_{2n-2}+c_{2n+2}\\ \mbox{where}\\ \mbox{\bf 20.3.13}\quad V_{2n}{=}[a-(2n+p)^{n}]q_{,}\;{-}\;{<}n{<}{<}\infty\,. \end{array}\]
 
-where
+When \(v\) is complex, the coefficients \(V_{2n}\) may also be complex. As in **20.2**, it is possible to generate the ratios
 
-**20.3.13**: \(V_{2n}{=}[a-(2n+p)^{n}]q_{,}\)\({-}\)\({-}\)\({<}\)\({<}\)\({n}{<}\)\({\infty}\).
-
-When \(p\) is complex, the coefficients \(V_{2n}\) may also be complex. As in **20.2**, it is possible to generate the ratios
-
-\[G_{m}{=}e_{m}/e_{m-2}\mbox{ and }H_{-m}{=}e_{-n-2}/e_{-m}\]
+\[G_{m}{=}e_{n}/e_{m-2}\mbox{ and }H_{-m}{=}e_{-n-2}/c_{-m}\]
 
 from the continued fractions
 
-**20.3.14**: \(G_{m}{=}\frac{1}{V_{m}{-}}\frac{1}{V_{m+2}{-}}
+\[\begin{array}{l}\mbox{\it G}_{m}{=}\frac{1}{V_{m}{-}}\frac{1}{V_{m+2}{-}\; \ldots\;,}\qquad m{\geq}0\\ \mbox{\it H}_{-m}{=}\frac{1}{V_{-m-2}{-}}\frac{1}{V_{-m-4}{-}\;\ldots\;,}\qquad m {\geq}0.\end{array}\]
 
+From the form of **20.3.13** and the known properties of continued fractions it is assured that for sufficiently large values of \(|m|\) both \(|G_{m}|\) and \(|H_{-m}|\) converge. Once values of \(G_{m}\) and \(H_{-m}\) are available for some sufficiently large value of \(m\), then the finite number of ratios \(G_{m-2}\), \(G_{m-4}\), \(\ldots\), \(G_{0}\) can be computed in turn, if they exist. Similarly for \(H_{-n+2}\), \(\ldots\), \(H_{0}\). It is easy to show that \(v\) is the correct characteristic exponent, appropriate for the point \((a,\;q)\), if and only if \(H_{0}G_{0}{=}1\). An iteration technique can be used to improve the value of \(v\), by the method suggested in [20.3]. One coefficient \(c_{j}\) can be assigned arbitrarily; the rest are then completely determined. After all the \(c_{j}\) become available, a multiplier (depending on \(q\) but not on \(z\)) can be found to satisfy a prescribed normalization.
+
+It is well known that continued fractions can be converted to determinantal form. Equation **20.3.14** can in fact be written as a determinant with an infinite number of rows--a special case of Hill's determinant. See [20.19], [20.36], [20.15], or [20.30] for details. Although the determinant has actually been used in computations where high-speed computers were available, the direct use of the continued fraction seems much less laborious.
+
+**Special Cases (\(a,\;q\) Real)**
+
+Corresponding to \(q{=}0\), \(y_{i}{=}\cos\sqrt{a}z\), \(y_{i}{=}\sin\sqrt{a}z\); the Floquet solutions are \(\exp(iaz)\) and \(\exp(-iaz)\). As \(a\), \(q\) vary continuously in the \(q{-}a\) plane, \(r\) describes curves; \(v\) is real when \((q,\;a)\), \(q{\geq}0\) lies in the region between \(a_{j}(q)\) and \(b_{r+1}(q)\) and 

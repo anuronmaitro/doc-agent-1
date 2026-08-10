@@ -1,7 +1,23 @@
 Evaluating the integrals numerically we get
 
-\[\frac{1}{1+x}\sim .235703-.080880T_{1}\left(\frac{2x-7}{3}\right)+.013876T_{2}\left( \frac{2x-7}{3}\right)-.002380T_{3}\left(\frac{2x-7}{3}\right)\] \[+.000408T_{4}\left(\frac{2x-7}{3}\right)-.000070T_{5}\left(\frac{ 2x-7}{3}\right)\]
+\[\frac{1}{1+x} \sim .235703-.080880T_{1}\left(\frac{2x-7}{3}\right)+.013876T_{2}\left( \frac{2x-7}{3}\right)-.002380T_{3}\left(\frac{2x-7}{3}\right)\] \[+.000408T_{4}\left(\frac{2x-7}{3}\right)-.000070T_{5}\left(\frac{ 2x-7}{3}\right)\]
 
-If \(x_{n}=m(m=0,\ 1,\ 2,\ .\ .\ .\ ,\ N\right)\) and \(w(x)=1\), use the Chebyshev polynomials in the discrete range 22.17. It is convenient to introduce here a slightly different standardization such that
+If \(x_{n}=m(m=0,\;1,\;2,\;.\;.\;.\;,\;N)\) and \(w(x)=1\), use the Chebyshev polynomials in the discrete range 22.17. It is convenient to introduce here a slightly different standardization such that
 
-\[f_{n}(x)= \sum\limits_{m=0}^{n}\ (-1)^{n}\left(\binom{n}{m}\binom{n+m}{m} \right)\frac{x!(N-m)!}{(x-m)!N!}\] \[.\
+\[f_{n}(x) = \sum\limits_{m=0}^{n}\;(-1)^{n}\left(\genfrac{}{}{0.0pt}{}{n}{m} \right)\binom{n+m}{m}\frac{x!(N-m)!}{(x-m)!N!}\] \[.\quad(f_{n},f_{n}) = \frac{(N+n+1)!(N-n)!}{(2n+1)(N!)^{2}}\]
+
+Recurrence relation: \(f_{0}(x)=1,f_{1}(x)=1-\frac{2x}{N}\)
+
+\[(n+1)(N-n)f_{n+1}(x) = (2n+1)(N-2x)f_{n}(x)-n(N+n+1)f_{n-1}(x)\]
+
+**Example 6. Approximate in the least square sense the function \(f(x)\) given in the following table**
+
+\[f(x) = \sum\limits_{x=0}^{4}f_{n}^{2}(x)\] \[(f_{n},f_{n}) = \sum\limits_{x=0}^{4}f_{n}^{2}(x)\] \[(f_{n},f_{n}) = \sum\limits_{x=0}^{4}f_{n}(x)f(2x+10)\] \[a_{n} = \frac{(f_{j},f_{n})}{(f_{nj},f_{n})}\] \[f(x) \sim .27158+.03994(3.5-.25x)+.0043571(23.5-.35x+.125x^{2})+.00031(266 -59.8333x\] \[+4.375x^{2}-.10417x^{2})\]
+
+### Economization of Series
+
+_Problem: Given \(f(x)=\sum\limits_{m=0}^{n}a_{n}x^{m}\) in the interval \(-1\leq x\leq 1\) and \(R>0\). Find \(\widetilde{J}(x)=\sum\limits_{m=0}^{N}b_{m}x^{m}\) with \(N\) as small as possible, such that \(|\widetilde{J}(x)-\widetilde{J}(x)|<R\)._
+
+_Solution: Express \(f(x)\) in terms of Chebyshev polynomials using Table 22.3,_
+
+\[f(x) = \sum\limits_{m=0}^{n}b_{n}T_{m}(x)\]

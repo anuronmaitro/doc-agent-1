@@ -1,13 +1,55 @@
-It is of interest to note that the standard normal distribution is unimodal, has mean zero, unit variance _m_t = 3, is continuous, and such that
+It is of interest to note that the standard normal distribution is unimodal, has mean zero, unit variance _m_t=3, is continuous, and such that
 
-\[\begin{matrix} {\mathit{A}(t) = P(t) - P(-t) = .6827,.9545,.9973, and.9999} \\ \end{matrix}\]
+\[\begin{matrix} {A(t) = P(t) - P(-t) = .6827,.9545,.9973,and.999} \\ \end{matrix}\]
 
-for \(t\) = 1, 2, 3 and 4 respectively.
+for _t_=1, 2, 3 and 4 respectively.
 
 **Interpolation for _P_(_a_) in Table 26.1
 
-**Example 2.** Compute _P_(_x_) for \(x\) = 2.576 to fifteen decimal places using a Taylor expansion.
+**Example 2.** Compute _P_(_x_) for _x_=2.576 to fifteen decimal places using a Taylor expansion. Writing _x_=_x_0+_th we have
 
-Writing \(x\) = \(x\)0 + _th_ we have
+\[\begin{matrix} {P(x) = P(x_{0}) + Z(x_{0}) \theta + Z^{(\alpha)}(x_{0})\frac{\theta^{4}}{2!}} \\ {+ Z^{(\alpha)}(x_{0})\frac{\theta^{3}}{3!} + Z^{(\alpha)}(x_{0})\frac{\theta^{4}}{4!} + \ldots} \\ \end{matrix}\]
 
-\[\begin{matrix} {\mathit{P}(x) = P(x_{0}) + Z(x_{0}) \theta + Z(x_{0})\frac{\theta^{2}}{2!}} \\ {\mspace{2
+Taking \(x\)0=2.58 and _th_=-4x10-3 we calculate the successive terms to 16D
+
+\[\begin{matrix} {+ .99505} & {99842} & {42230} \\ {- }& {5}& {72204} & {35976} & {6} \\ {- }&&{2952} & {57449} & {6} \\ {- }&&{8}& {63097} & {8} \\ {- }&&{1439} & {4} \\ {- }&&{9} \\ \end{matrix}\]
+
+The result correct to 17D is
+
+\[\begin{matrix} {P(2.576) = .99500} & {24676} & {84264} & {98} \\ \end{matrix}\]
+
+**Calculation for Arbitrary Mean and Variance**
+
+**Example 3.** Find the value to 5D of
+
+\[\begin{matrix} {P\left\{ X \leq .50 \right\} = \frac{1}{2\sqrt{2\pi}}{\int_{- \infty}^{\tau .5}e^{- 1/2\left( \frac{t-1}{2} \right)^{2}}dt}} \\ \end{matrix}\]
+
+using 26.2.8 and Table 26.1.
+
+This represents the probability of the random variable being less than or equal to .5 for a normal distribution with mean _m_=1 and variance \(s\)2=4. Using 26.2.8 we have
+
+\[\begin{matrix} {P\left\{ X \leq .5 \right\} = P\left( \frac{.5 - 1}{2} \right) = P(- .25)} \\ \end{matrix}\]
+
+Since _P_(--_x_)=1-_P_(_x_), we have
+
+\[\begin{matrix} {P(- .25) = 1 - P(.25) = 1 - .59871 = .40129} \\ \end{matrix}\]
+
+where a two-term Taylor series was used for interpolation. Note that when interpolating for _P_(_x_) for a value of \(x\) midway between the tabulated values we can write _x_=_x_0+.01 and a two-term Taylor series is _P_(_x_0) = _P_(_x_0) + _Z_(_x_0)10-3. Thus one need only multiply _Z_(_x_0) by 10-2 and add the result to _P_(_x_0).
+
+**Calculation of _P_(_a_) for \(x\) Approximate
+
+**Example 4.** Using Table 26.1, find _P_(_a_) for _x_=1.96, when there is a possible error in \(z\) of +-5x10-3.
+
+This is an example where the argument is only known approximately. The question arises as to how many decimal places one should retain in _P_(_a_). If D_x_ and D_P_(_a_) denote the error in \(x\) and the resulting error in _P_(_a_), respectively, then
+
+\[\begin{matrix} {\Delta P(x) \approx Z(x)\Delta x} \\ \end{matrix}\]
+
+Hence D_P_(1.960)=3x10-4 which indicates that _P_(1.960) need only be calculated to 4D. Therefore _P_(1.960)=.9750.
+
+**Inverse Interpolation for _P_(_a_)
+
+**Example 5.** Find the value of \(x\) for which _P_(_a_)=.97500000000000 using Table 26.1 and determining as many decimal places as is consistent with the tabulated function.
+
+For inverse interpolation the tabulated function _P_(_a_) may be regarded as having a possible error of .5x10-15. Hence
+
+\[\begin{matrix} {\Delta z \

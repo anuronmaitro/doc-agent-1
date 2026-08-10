@@ -1,55 +1,89 @@
 
 
-**20. Mathieu Functions**
+**20. Mathieu**
 
-**Mathematical Properties**
+**Mathematical**
 
 **20.1. Mathieu's Equation**
 
 **Canonical Form of the Differential Equation**
 
-**20.1.1**: \(\frac{d^{2}y}{dv^{3}}\)+(_a_-2\(q\) cos 2_v_)_y_=0
+\[\frac{d^{2}y}{dv^{2}}+(a-2q\,\cos 2v)y=0\]
 
 **Mathieu's Modified Differential Equation**
 
-**20.1.2**: \(\frac{d^{2}f}{du^{2}}\)-(_a_-2\(q\) cosh 2_u_)_f_=0
+\[\frac{d^{2}f}{du^{2}}-(a-2q\,\cosh 2u)f=0\qquad(v=iu,y=f)\]
 
 **Relation Between Mathieu's Equation and the Wave Equation for the Elliptic Cylinder**
 
 The wave equation in Cartesian coordinates is
 
-**20.1.3**: \(\frac{\partial^{2}W}{\partial x^{2}}\)+\(\frac{\partial^{2}W}{\partial y^{2}}\)+\(k^{2}W\)=0
+\[\frac{\partial^{2}W}{\partial x^{2}}+\frac{\partial^{2}W}{\partial y^{2}}+\frac {\partial^{2}W}{\partial z^{2}}+k^{2}W=0\]
 
 A solution \(W\) is obtainable by separation of variables in elliptical coordinates. Thus, let
 
-\(x\)=\(\rho\) cosh \(u\) cos _v; y=\(\rho\)_ sinh \(u\) sin _v; z=z;_
+\[x=\rho\,\cosh u\,\cos v;\,y=\rho\,\sinh u\,\sin v;\,z=z;\]
 
-\(\rho\) a positive constant; **20.1.3** becomes
+\[\rho\,\text{ a positive constant};\,20.1.3\text{ becomes}\]
 
-\(\frac{\partial^{2}W}{\partial z^{2}}\)+\(\frac{1}{2\rho^{2}}\)(cosh 2_u_-cos 2_v_)
+\[\frac{\partial^{2}W}{\partial z^{2}}+\frac{1}{2\rho^{2}\,(\cosh 2u-\cos 2v)} \left(\frac{\partial^{2}W}{\partial u^{2}}+\frac{\partial^{2}W}{\partial v^{2}} \right)+k^{2}W=0\]
 
 Assuming a solution of the form
 
-\(W\)=\(\varphi(z)f(u)g(v)\)
+\[W=\varphi(z)f(u)g(v)\]
 
-and substituting the above into **20.1.4** one obtains, after dividing through by \(W\),
+and substituting the above into 20.1.4 one obtains, after dividing through by \(W\),
 
-\(\frac{1}{\varphi}\frac{d^{3}\varphi}{dz^{2}}\)+\(G\)=0
+\[\frac{1}{\varphi}\frac{d^{2}\varphi}{dz^{2}}+G=0\]
 
 where
 
-\(G\)=\(\frac{1}{2\rho^{2}}\)(cosh 2_u_-cos 2_v_)
+\[G=\frac{1}{2\rho^{2}\,(\cosh 2u-\cos 2v)}\left\{\frac{d^{2}f}{du^{2}}\frac{1}{ f}+\frac{d^{2}y}{dv^{2}}\frac{1}{g}\right\}+k^{2}\]
 
-Since \(z\), \(u\), \(v\) are independent variables, it follows that
+Since \(z\), _u, v_ are independent variables, it follows that
 
-\(\frac{d^{2}\varphi}{dz^{2}}\)+\(\varphi\)=0
+\[\frac{d^{2}\varphi}{dz^{2}}+\varepsilon\varphi=0\]
 
 where \(c\) is a constant.
 
-Again, from the fact that \(G\)=\(e\) and that _u, v_ are independent variables, one sets
+Again, from the fact that _G=c_ and that _u, v_ are independent variables, one sets
 
-\(a\)=\(\frac{d^{2}f}{du^{2}}\)\(\frac{1}{f}\)+(_k_-\(e\))2\(\rho^{2}\) cosh 2\(u\)
+\[a=\frac{d^{2}f}{du^{2}}\frac{1}{f}+(k^{2}-c)2\rho^{2}\,\cosh 2u\]
 
-\(a\)=\(\frac{d^{2}y}{du^{2}}\)\(\frac{1}{f}\)+(_k_-\(e\))2\(\rho^{2}\) cosh 2\(u\)
 
-\(a\)=\(\frac{d^{2}y}{du^{2}}\)\(\frac{1}{g}\)+(_k_-\(e\))2\(\rho^{2}\) cosh 2\(u\)
+
+**Figure Captions**
+
+Fig. 1: The \(\pi^{+}\
+
+
+
+## Properties
+
+\[a{=}{-}\frac{d^{2}y}{dv^{2}}\frac{1}{g}{+}(k^{2}{-}c)2\rho^{2}\cos 2v\]
+
+where \(a\) is a constant. The above are equivale to **20.1.1** and **20.1.2.** The constants \(e\) and \(a\) at often referred to as _separation constants,_ due to the role they play in **20.1.5** and **20.1.6.**
+
+For some physically important solutions, the function \(g\) must be periodic, of period \(\pi\) or \(2\). It can be shown that there exists a countably infinite set of _characteristic values_\(a_{r}(q)\) which yiel even periodic solutions of **20.1.1;** there is another countably infinite sequence of _characteristic values_\(b_{r}(q)\) which yield odd periodic solutions of **20.1.**
+
+It is known that there exist periodic solutions , period \(k\pi\), where \(k\) is any positive integer. \(1\) what follows, however, the term _characteristic value_ will be reserved for a value associated wi solutions of period \(\pi\) or \(2\pi\) only. These characteistic values are of basic importance to the gener theory of the differential equation for arbitrat parameters \(a\) and \(q\).
+
+### An Algebraic Form of Mathieu's Equation
+
+\[(1{-}t^{2})\,\frac{d^{2}y}{dt^{2}}{-}t\,\frac{dy}{dt}{+}(a{+}2q{-}4qt^{2})y{=} 0\qquad(\cos v{=})\]
+
+#### Relation to Spheroidal Wave Equation
+
+\[(1{-}t^{2})\,\frac{d^{2}y}{dt^{2}}{-}2(b{+}1)\,\frac{dy}{dt}{+}(c{-}4qt^{2})y{=} 0\]
+
+Thus, Mathieu's equation is a special case **20.1.8,** with \(b{=}{-}\frac{1}{2}\), \(c{=}a{+}2q\).
+
+##### 20.2. Determination of Characteristic Values
+
+A solution of **20.1.1** with \(v\) replaced by \(z\), havir period \(\pi\) or \(2\pi\) is of the form
+
+\[y{=}\sum\limits_{m=0}^{\infty}\,\left(A_{m}\cos\,mz{+}B_{n}\sin\,mz\right)\]
+
+where \(B_{0}\) can be taken as zero. If the above substituted into **20.1.1** one obtains
+
+\[\begin{array}{l}20.2.2\\ \sum\limits_{m=-1}^{\infty}\,\left[(a{-}m^{2})A_{m}{-}q(A_{m-2}{+}A_{m+2})\right] \,\cos\,mz\\ {+}\sum\limits_{m=-1}^{\infty}\,\left[(a{-}m^{2})B_{m}{-}q(B_{m-2}{+}B_{m+2}) \right]\,\sin\,mz{=}0\\ A_{m},B_{n}{=}0\qquad m{>}0\end{array}\]

@@ -1,0 +1,94 @@
+
+
+**GAMMA FUNCTION AND Polynomial Approximations****3**
+
+\(\delta.1.35\) \(0\leq x\leq 1\)
+
+\(\Gamma(x+1)=x!=1+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+a_{4}x^{4}+a_{5}x^{6}+\epsilon(x)\)
+
+\(|\epsilon(x)|\leq 5\times 10^{-5}\)
+
+\(a_{1}=-.57486~{}46\)\(a_{A}=.42455~{}49\)\(a_{2}=.95123~{}63\)\(a_{5}=-.10106~{}78\)\(a_{3}=-.69985~{}88\)
+
+
+
+**Figure 1.2**: The \(\pi^{+}\) and \
+
+\(b_{1}=-.57719\) 1652 \(b_{5}=-.75670\) 4078 \(b_{2}=.98820\) 5891 \(b_{6}=.48219\) 9394 \(b_{3}=-.89705\) 6937 \(b_{7}=-.19352\) 7818 \(b_{4}=.91820\) 6857 \(b_{8}=.03586\) 8343
+
+
+
+**Stirling's Formula**
+
+\(\Gamma(z)\sim e^{-z_{2}z^{-\frac{1}{2}}}(2\pi)^{\frac{1}{2}}[1+\frac{1}{12z}+ \frac{1}{288z^{2}}]^{\frac{1}{51840z^{3}}}\)
+
+
+
+
+**Asymptotic Formulas**
+
+6.1.39
+
+\(\Gamma(az+b)\sim\sqrt{2\pi}\ e^{-az}(az)^{az+b-\frac{1}{2}}\qquad\quad(|arg\ z|< \!\pi,\ a>\!0)\)
+
+6.1.40
+
+\(n\Gamma(z)\sim(z-\frac{1}{2})\ \ln\ z-z+\frac{1}{2}\ \ln\ (2\pi)\)
+
+\(+\sum_{m=1}^{\infty}\ \frac{B_{2m}}{zm(2m-1)z^{2m-1}}\qquad\quad(z\!\to\! \infty\ \mbox{ in $|\arg\ z|<\!\pi)$}\)
+
+For \(B_{n}\) see chapter 23
+
+6.1.41
+
+\(n\Gamma(z)\sim(z-\frac{1}{2})\ \ln\ z-z+\frac{1}{2}\ \mbox{in}\ \ (2\pi)+\frac{1}{12z}-\frac{1}{360z^{3}}\)
+
+\(+\frac{1}{1260z^{5}}-\frac{1}{1680z^{7}}+\cdots\qquad\quad(z\!\to\!\infty\ \mbox{ in $|\arg\ z|<\!\pi)$}\)
+
+\({}^{\bf 3}\) From C. Hastings, Jr., Approximations for digital computers, Princeton Univ. Press, Princeton, N.J., 1955 (with permission).
+
+
+
+D RELATED FUNCTIONS
+
+Error Term for Asymptotic Expansion
+
+If
+
+\(R_{n}(z)\!=\ln\,\Gamma\) (\(z\))\(-\!(z\!-\!\frac{1}{2})\,\ln\,z+\!z\!-\!\frac{1}{2}\ln\,(2\pi)\)
+
+\[\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad-\sum \limits_{m=1}^{n}\frac{B_{2m}}{2m(2m\!-\!1)z^{\frac{2m-1}{2}}}\]
+
+then
+
+\[|R_{*}(z)|\!\leq\!\frac{|B_{2n+2}|K(z)}{(2n\!+\!1)(2n\!+\!2)|z|^{\frac{2n}{2}+ 1}}\]
+
+where
+
+\[K(z)\!=\!\mbox{upper bound}|z^{2j}/(u^{2}\!+\!z^{2})|\]
+
+For \(z\) real and positive, \(R_{n}\) is less in absolute value than the first term neglected and has the same sign.
+
+\(\mathscr{B}\!\ln\,\Gamma(iy)\!=\!\mathscr{B}\!\ln\,\Gamma(\!-\!iy)\)
+
+\[=\!\frac{1}{2}\,\ln\Big{(}\frac{\pi}{y\,\sinh\,\pi y}\Big{)}\]
+
+\[\sim\!\frac{1}{2}\ln\,(2\pi)\!-\!\frac{1}{2}\pi y\!-\!\frac{1}{2}\!\ln y, \qquad\quad(y\!\to\!+\,\infty)\]
+
+\(\mathscr{I}\!\ln\,\Gamma(i\!y)\!=\!\arg\,\Gamma(i\!y)\!=\!\!-\!\arg\,\Gamma( \!-\!iy)\)
+
+\[=\!-\!\mathscr{I}\!\ln\,\Gamma(\!-\!iy)\]
+
+\[\sim\!y\,\ln y\!-\!y\!-\!\frac{1}{4}\pi\!-\!\sum\limits_{n=1}^{\infty}\frac{( -1)^{n-1}\,B_{2n}}{(2n\!-\!1)(2n)y^{2n-1}}\]
+
+\[(y\!\to\!+\,\infty)\]
+
+\[\lim_{|y|\to\infty}(2\pi)^{-\frac{1}{2}}|\Gamma(x\!+\!iy)|e^{\frac{i}{2}\tau| y|}|y|^{\frac{1}{2}-z}\!=\!1\]
+
+\[\lim_{n\to\infty}\eta^{b-a}\frac{\Gamma(n\!+\!a)}{\Gamma(n\!+\!b)}\!=\!1\]
+
+\[z^{b-a}\frac{\Gamma(z\!+\!a)}{\Gamma(z\!+\!b)}\!\sim\!1\!+\!\frac{(a\!-\!b)( a\!+\!b\!-\!1)}{2z}\]
+
+\[+\frac{1}{12}\binom{a\!-\!b}{2}\Big{(}3(a\!+\!b\!-\!1)^{2}\!-\!a\!+\!b\!-\!1 \Big{)}\frac{1}{z^{2}}\!+\,\ldots\]
+
+as \(z\!\to\!\infty\) along any curve joining \(z\!=\!0\) and \(z\!=\!\infty\), providing \(z\!\neq-a\), \(-a\!-\!1\), \(\ldots\) ; \(z\!\neq-b\), \(-b\!-\!1\)

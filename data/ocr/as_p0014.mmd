@@ -2,54 +2,58 @@
 
 #### 3.4.2 (1) Functions of One Variable
 
-The function _f_(_x_, _y_) has a maximum or minimum for those values of (_x_0, \(y\)0) for which
+The function _f_(_x_, _y_) has a maximum or minimum for those values of (_z_0, \(y\)0) for which
 
-\[\frac{\partial f}{\partial x}{=}0,\frac{\partial f}{\partial y}{=}0,\]
+\[\frac{\partial f}{\partial x}=0,\frac{\partial f}{\partial y}=0,\]
 
-and for which \(\left|\frac{\partial^{2}\!f}{\partial x^{2}}\!\!\!/\partial x^{2}\right|\!\!\! \right|{\leq}0\);
+and for which \(\left|\begin{array}{cc}\frac{\partial^{2}f}{\partial x^{2}}/\partial x\partial y &\frac{\partial^{2}f}{\partial y}/\partial x^{2}\\ \frac{\partial^{2}f}{\partial y^{2}}&\frac{\partial^{2}f}{\partial x\partial y }\end{array}\right|<0;\)
 
 (a) \(f(x,y)\) has a maximum or minimum
 
-\[\frac{\partial f}{\partial x^{2}}{<}0\mbox{ and }\frac{\partial^{2}\!f}{ \partial y^{2}}{<}0\mbox{ at }(x_{0},y_{0}),\]
+if \(\frac{\partial^{2}f}{\partial x^{2}}<0\) and \(\frac{\partial^{2}f}{\partial y^{2}}<0\) at (_x_0, \(y\)0),
 
 (b) \(f(x,y)\) has a minimum
 
-\[\mbox{ if }\frac{\partial^{2}\!f}{\partial x^{2}}{>}0\mbox{ and }\frac{ \partial^{2}\!f}{\partial y^{2}}{>}0\mbox{ at }(x_{0},y_{0}).\]
+if \(\frac{\partial^{2}f}{\partial x^{2}}>0\) and \(\frac{\partial^{2}f}{\partial y^{2}}>0\) at (_x_0, \(y\)0).
 
 ### Absolute and Relative Errors
 
 1. If \(x\)0 is an approximation to the true value of \(x\), then
 
-5.1 (a) the _absolute error_ of \(x\)0 is \(\Delta x{=}x_{0}{-}x\), \(x{-}x_{0}\) is the correction to \(x\).
+.5.1 (a) the _absolute error_ of \(x\)0 is \(\Delta x=x_{0}-x\), \(x-x_{0}\) is the correction to \(x\).
 
-#### 3.5.2 (b) the _relative error_ of \(x\)0 is \(\delta x{=}\frac{\Delta x}{x}\frac{\Delta x}{x_{0}}\)
+#### 3.5.2 (b) the _relative error_ of \(x\)0 is \(\delta x=\frac{\Delta x}{x}\frac{\Delta x}{x_{0}}\)
 
 #### 3.5.3 (c) the _percentage error_ is 100 times the relative error.
 
 5.4 (2) The absolute error of the sum or difference of several numbers is at most equal to the sum of the absolute errors of the individual numbers.
 
-5.5 (3) If _f_(_x_1, \(x\)2, . . . , _x_n) is a function of \(x\)1, \(x\)2, . . . , _x_n and the absolute error in \(x\)1 (_i_=1, _2, . . . . , _n_) is \(\Delta x_{i}\), then the absolute error in \(f\) is
+5.5 (3) If _f_(_z_1, \(z\)2, . . ., _x_n) is a function of \(z\)1, \(z\)2, . . ., _x_n and the absolute error in \(z\)1 (_i_=1, _2, . . . ., _n_) is \(\Delta x_{i}\), then the absolute error in \(f\) is
 
-\[\Delta f{\approx}\frac{\partial f}{\partial x_{1}}\Delta x_{1}{+}\frac{\partial f }{\partial x_{2}}\Delta x_{2}{+}\ \ldots\ {+}\frac{\partial f}{\partial x_{n}} \Delta x_{n}\]
+\[\Delta f\approx\frac{\partial f}{\partial x_{1}}\Delta x_{1}+\frac{\partial f}{ \partial x_{2}}\Delta x_{2}+\ .\ .\ .\ +\frac{\partial f}{\partial x_{n}}\Delta x_{n}\]
 
 5.6 (4) The relative error of the product or quotient of several factors is at most equal to the sum of the relative errors of the individual factors.
 
-5.7 (5) If _y_=_f_(_x_), the relative error \(\delta y{=}\frac{\Delta y}{y}{\approx}\frac{f^{\prime}(x)}{f(x)}\Delta x\)
+5.7 (5) If _y_=_f_(_x_), the relative error \(\delta y=\frac{\Delta y}{y}\approx\frac{f^{\prime}(x)}{f(x)}\Delta x\)
 
-\[f(x{+}h){=}f(x){+}h{f^{\prime}}(x){+}\frac{h^{2}}{2!}{f^{\prime}}^{\prime}(x)\]
+If \(|\epsilon|<<1\), \(|\eta|<<1\), \(b<<a\),
 
-\[+\ \ldots\ {+}\frac{h^{n-1}}{(n{-}1)!}{f^{(n{-}1)}}{+}{R_{n}}\]
+\[\frac{\partial f}{\partial x}=0,\frac{\partial f}{\partial y}=0,\]
 
-\[{R_{n}}{=}\frac{h^{n}}{n!}{f^{(n)}}(x{+}\theta_{i}h){=}\frac{h^{n}}{(n{-}1)!}\ (1{-}\theta_{2})^{n{-}1}{f^{(n)}}(x{+}\theta_{i}h)\]
+and for which \(\left|\begin{array}{cc}\frac{\partial^{2}f}{\partial x^{2}}/\partial x \partial y&\frac{\partial^{2}f}{\partial y}/\partial x^{2}\\ \frac{\partial^{2}f}{\partial y^{2}}&\frac{\partial^{2}f}{\partial x\partial y }\end{array}\right|<0;\)
 
-\[(0{<}\theta_{1,x}(z){<}1)\]
+(a) \(f(x,y)\) has a maximum or minimum
 
-\[=\frac{h^{n}}{(n{-}1)!}{\int_{0}^{1}{(1{-}t)^{n-1}}{f^{(n)}}(x{+}th)dt}\]
+if \(\frac{\partial^{2}f}{\partial x^{2}}<0\) and \(\frac{\partial^{2}f}{\partial y^{2}}<0\) at (_x_0, \(y\)0),
 
-\[f(x){=}f(a){+}\frac{(x{-}a)}{1!}{f^{\prime}}^{(a)}{+}\frac{(x{-}a)^{2}}{2!}{f^{\prime}}^{\prime}(a){+}\]
+(b) \(f(x,y)\) has a minimum
 
-\[\ldots\ {+}\frac{(x{-}a)^{n-1}}{(n{-}1)!}{f^{(n{-}1)}}(a){+}{R_{n}}\]
+if \(\frac{\partial^{2}f}{\partial x^{2}}>0\) and \(\frac{\partial^{2}f}{\partial y^{2}}>0\) at (_x_0, \(y\)0).
 
-\[{R_{n}}{=}\frac{(x{-}a)^{n}}{n!}{f^{(n)}}(x){\qquad}(a{<}\xi{<}x)\]
+### Absolute and Relative Errors
 
-\[{\mbox{\bf Lagrange's Expansion}}\
+1. If \(x\)0 is an approximation to the true value of \(x\), then
+
+\[\begin{array}{cc}\frac{\partial^{2}f}{\partial x^{2}}=0,\frac{\partial^{2}f}{ \partial y^{2}}=0,\end{array}\]
+
+and for which \(\left|\begin{array}{cc}\frac{\partial^{2}f}{\partial x^{2}}/\partial x \partial y&\frac{\partial^{2}f}{\partial y^{2}}/\partial x^{

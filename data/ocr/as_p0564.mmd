@@ -1,12 +1,38 @@
 564
-15.5.17 \(w_{2(0)}\)=_F_(_a_,\(b\);1;_z_)\ln z\)+\(\sum\limits_{n=1}^{\infty}\frac{(\alpha)_{n}(b)_{n}}{(n!)^{2}}\)_z_+\(\forall(a+n)\)-\(\forall(a)+\forall(b+n)\)-\(\forall(b)\)-2\(\forall(n+1)+2\forall(1)\)\)((|z|\(<\)1)
+15.5.17 \(w_{20}\)=\(F(a,b;1;z)\ln z\)+\(\sum\limits_{n=1}^{\infty}\frac{(a)_{n}(b)_{n}}{(n!)^{2}}\)\(z^{n}[\psi(a+n)-\psi(a)+\psi(b+n)-\psi(b)-2\psi(n+1)+2\psi(1)]\) (|z|<1)
 
-_E. The number c=m+1, m=1, 2, 3, \(\ldots\)._ A fundamental system is
-15.5.18 \(w_{1(0)}\)=_F_(_a_,\(b\);_m+1;_z_)\(15.5.19\)\(w_{2(0)}\)=_F_(_a_,\(b\);_m+1;_z_)\(\ln z\)+\(\sum\limits_{a=1}^{\infty}\frac{(a)_{n}(b)_{n}}{(1+m)_{n}!}\)_z_+\(\forall(a+n)\)-\(\forall(a)+\forall(b+n)\)-\(\forall(b)\)-\(\forall(m+1+n)\)
+_E. The number c=m+1, m=1, 2,3, ...._. A fundamental system is
+15.5.18 \(w_{1:0}\)=\(F(a,b;m+1;z)\)
+15.5.19 \(w_{2:0}\)=\(F(a,b;m+1;z)\ln z\)+\(\sum\limits_{n=1}^{\infty}\frac{(a)_{n}(b)_{n}}{(1+m)_{n}!}\)\(z^{n}[\psi(a+n)-\psi(a)+\psi(b+n)-\psi(b)-\psi(m+1+n)\)
 
-\(+\forall(m+1)\)-\(\forall(n+1)\)+\(\forall(1)\)-\(\sum\limits_{n=1}^{\infty}\frac{(n-1)!(-m)_{n}}{(1-a)_{n}(1-b)_{n}}\)_z_-\(\forall(|z|<1\)and\(a,b\)\(\neq\)0, 1, 2, \(\ldots\)._ (_m\(-\)1_))
+\(+\psi(m+1)-\psi(n+1)+\psi(1)]\)-\(\sum\limits_{n=1}^{\infty}\frac{(n-1)!(-m)_{n}}{(1-a)_{n}(1-b)_{n}}\)\(z^{-n}\) (|z|<1 and \(a,b\neq 0\), 1, 2, ... (\(m-1\)))
 
-_F. The number c=1-m, m=1, 2, 3, \(\ldots\)._ A fundamental system is
-15.5.20 \(w_{1(0)}\)=_z_+_F_(_a_+_m_,_b_+_m_;_1+_m_;_z_)\(15.5.21\)
+_F. The number c=1-m, m=1, 2, 3, ...._. A fundamental system is
+15.5.20 \(w_{1:0}\)=\(z^{n}F(a+m,\,b+m;\,1+m;\,2)\)
+15.5.21 \(w_{2:0}\)=\(z^{n}F(a+m,\,b+m;\,1+m;\,z)\ln z\)+\(z^{n}\sum\limits_{n=1}^{\infty}z^{n}\)\(\frac{(a+m)_{n}(b+m)_{n}}{(1+m)_{n}!}\)\([\psi(a+m+n)-\psi(a+m)+\psi(b+m+n)\)
 
-\(w_{2(0)}\)=_z
+\(-\psi(b+m)-\psi(m+1+n)+\psi(m+1)-\psi(n+1)+\psi(1)]\)-\(\sum\limits_{n=1}^{n}\)\(\frac{(n-1)!(-m)_{n}}{(1-a-m)_{n}(1-b-m)_{n}}\)\(z^{n-n}\)
+
+(|z|<1 and \(a,b\neq 0\), \(-1,-2,\ldots-(m-1)\))
+
+### Riemann's Differential Equation
+
+The hypergeometric differential equation **15.5.1** with the (regular) singular points 0, 1, \(\infty\) is a special case of Riemann's differential equation with three (regular) singular points \(a\), \(b\), \(c\)
+
+\(d\frac{q_{W}}{dz^{2}}\)+\(\left[\frac{1-\alpha-\alpha^{\prime}}{z-a}+\frac{1-\beta-\beta^{\prime}}{z-b}+\frac{1- \gamma-\gamma^{\prime}}{z-e}\right]\)\(d\omega\)
+
+\(+\left[\frac{\alpha\alpha^{\prime}(a-b)(a-c)}{z-a}+\frac{\beta\theta^{\prime}(b-c)(b-a)}{z-b}\right.\)
+
+\(+\frac{\gamma\gamma^{\prime}(c-a)(c-b)}{z-c}\right]\)\(\frac{w}{(z-a)(z-b)(z-e)}\)=0
+
+The pairs of the exponents with respect to the singular points \(a\); \(b\); \(e\) are \(\alpha\), \(\alpha^{\prime}\); \(\beta\), \(\beta^{\prime}\); \(\gamma\), \(\gamma^{\prime}\) respectively subject to the condition
+
+#### 15.6.2 \(\alpha\)+\(\alpha^{\prime}+\beta+\beta^{\prime}+\gamma+\gamma^{\prime}=1\)
+
+The complete set of solutions of 15.6.1 is denoted by the symbol
+
+\(w\)=\(P\)\(\begin{Bmatrix}a&b&c\\ \alpha&\beta&\gamma&z\\ \alpha^{\prime}&\beta^{\prime}&\gamma^{\prime}\end{Bmatrix}\)
+
+The generalized hypergeometric function
+
+\(w\)=\(P\)\(\begin{Bmatrix}0&\infty&1\\ \alpha&\beta&\gamma\\ \alpha^{\prime

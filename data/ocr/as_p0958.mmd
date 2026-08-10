@@ -1,40 +1,40 @@
 Since _R_<1, the approximation 26.3.25 is used. This results in
 
-\[\begin{array}{l}P(R^{2}|2,r^{2}){=}\frac{2(.54)^{2}}{4{+}(.54)^{2}}\exp\frac{-2 (1.21)^{2}}{4{+}(.54)^{2}}\\ =\left(.1359\right)e^{-.682}{=}.06869\end{array}\]
+\[P(R^{2}|2,r^{2}) = \frac{2(.54)^{2}}{4+(.54)^{2}}\exp\frac{-2(1.21)^{2}}{4+(.54)^{2}}\] \[= (.1359)\,e^{-.682} = .06869\]
 
 The answer to 5D is .06870.
 
 **Example 11.** Find _Q_(25.298|20) using the interpolation formula given with Table 26.7.
 
-Taking x2=25, _th_=.298 and applying the interpolation formula results in
+Taking x2=25, th=.298 and applying the interpolation formula results in
 
-\[\begin{array}{l}Q(25.298|20){=}\frac{1}{8}(Q(25|16){\theta}^{2}+Q(25|18)\left( 4{\theta}{-}2{\theta}^{2}\right)\\ +Q(25|20)(8{-}4{\theta}{+}{\theta}^{9}))\\ =\frac{1}{8}(.06982)(.088804)\\ +(.12492)(1.014392)\\ +(.20143)(6.896804))\\ =.19027\end{array}\]
+\[\begin{array}{l} Q(25.298|20) = \frac{1}{8}(\,Q(25|16)\theta^{2} + Q(25|18)\,(4\theta-2\theta^{2})\\ + Q(25|20)(8-4\theta+\theta^{2})\,)\\ = \frac{1}{8}(\,(.06982)(.088804)\\ + (.12492)\,(1.014392)\\ + (.20143)\,(6.896804)\,)\\ = .19027\end{array}\]
 
-A less accurate interpolate may be obtained by setting _th_ equal to zero in the above formula. This results in the value .19003. The correct value to 6D is _Q_(25.298|20) = .190259.
+A less accurate interpolate may be obtained by setting th equal to zero in the above formula. This results in the value .19003. The correct value to 6D is _Q_(25.298|20) = .190259.
 
-On the other hand if x2=25.298 is assumed to have an error of \(\pm 5{\times}10^{-4}\), then how large an error arises in _Q_(x2|_n_)? Denoting the error in x2 by \(\Delta\lambda^{2}\) and the resulting error in _Q_(x2|_n_) by \(\Delta Q(\lambda^{2}|p)\), we then have the approximate relationship
+On the other hand if x2=25.298 is assumed to have an error of \(\pm 5\times 10^{-4}\), then how large an error arises in _Q_(x2|_n_)? Denoting the error in x2 by D_x2 and the resulting error in _Q_(x2|_n_) by D_Q_(x2|_n_), we then have the approximate relationship
 
-\[\Delta Q(\lambda^{2}|p)\approx\frac{\Delta Q(\lambda^{2}|p)}{\Delta\lambda^{2} }\,\Delta\lambda^{2}\]
+\[\Delta Q(x^{2}|_{p}) \approx \frac{\partial Q(x^{2}|_{p})}{\partial x^{2}}\,\Delta x^{2}\]
 
 Using 26.4.8 we can write
 
-\[\frac{\Delta Q(\lambda^{2}|p)}{\Delta\lambda^{2}}{=}\frac{1}{2}\left[Q(\lambda^ {2}|p{-}2){-}Q(\lambda^{2}|p)\right]\]
+\[\frac{\partial Q(x^{2}|_{p})}{\partial x^{2}} = \frac{1}{2}[\,Q(\chi^{2}|_{p}-2)-Q(\chi^{2}|_{p})\,]\]
 
 and
 
-\[\Delta Q(\lambda^{2}|p)\approx\frac{1}{2}\left[Q(\lambda^{2}|p{-}2){-}Q(\lambda ^{2}|p)\right]\Delta\lambda^{2}\]
+\[\Delta Q(\chi^{2}|_{p}) \approx \frac{1}{2}[\,Q(\chi^{2}|_{p}-2)-Q(\chi^{2}|_{p})\,]\Delta x^{2}\]
 
 For practical purposes it is sufficient to evaluate the derivative to one or two significant figures. Consequently we can write
 
-\[\frac{\Delta Q(\lambda^{2}|p)}{\Delta\lambda^{2}}\approx\frac{\Delta Q(\lambda ^{2}|p)}{\Delta\lambda^{2}}\]
+\[\frac{\partial Q(x^{2}|_{p})}{\partial x^{2}} \approx \frac{\partial Q(x^{2}_{0}|_{p})}{\partial x^{2}}\]
 
 where x2 is the closest value to x2 for which \(Q\) is tabulated. Hence
 
-\[\Delta Q(\lambda^{2}|p)=\frac{1}{2}\left[Q(\lambda^{2}|p-2){-}Q(\lambda^{2}|p )\right]\Delta\lambda^{2}\]
+\[\Delta Q(\chi^{2}|_{p}) = \frac{1}{2}[\,Q(\chi^{2}|_{p}-2)-Q(\chi^{2}|_{p})\,]\Delta x^{2}\]
 
-For this example \(\Delta\lambda^{2}{=}\pm 5{\times}10^{-4}\) and x2=25. This results in
+For this example D_x2= +-5x10-4 and x2=25. This results in
 
-\[\Delta Q(\lambda^{2}|p)=\frac{1}{2}\left(-.076\right)(\pm 5)10^{-4}{=}\pm 2{ \times}10^{-8}\]
+\[\Delta Q(\chi^{2}|_{p}) = \frac{1}{2}(\,-.076)\,(\pm 5)\,10^{-4} = \pm 2\times 10^{-8}\]
 
 as the possible error in _Q_(x2|_n_).
 
@@ -46,10 +46,11 @@ as the possible error in _Q_(x2|_n_).
 
 The successive terms of the Edgeworth expansion for the distribution of chi-square result in
 
-\[\begin{array}{l}1{-}Q(84|72){=}.841345\\ .000000\\ .001120\end{array}\]
-
-\[\begin{array}{l}.842465\end{array}\]
+\[\begin{array}{l} 1-Q(84|72) = .841345\\ .000000\\ .001120\end{array}\]
 
 Hence _Q_(84|72) = .15754.
 
-The successive terms of the Edgeworth expansion for the distribution of \(\sqrt{2\lambda^{2}}\)
+The successive terms of the Edgeworth expansion for the distribution of \(\sqrt{2\chi^{2}}\) result in
+
+\[\begin{array}{l} 1-Q(84|72) = .842544\\ - .000034\\ - .000138\end{array}
+

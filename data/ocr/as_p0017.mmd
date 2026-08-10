@@ -1,47 +1,44 @@
-If \(z^{*}\)=\(v_{*}\)+\(iv_{*}\), then \(z^{n+1}\)=\(v_{*i+1}\)+\(iv_{*i+1}\) where \(u_{*i+1}\)=\(xu_{*}\)-\(yv_{*i}\), \(v_{*i+1}\)=\(xv_{*}\)+\(yu_{*}\)\(\mathcal{R}z^{n}\) and \(\mathcal{I}z^{n}\) are called harmonic polynomials.
+If \(z^{*}\)=\(v_{*}\)+\(iv_{s}\), then \(z^{n+1}\)=\(u_{s+1}\)+\(iv_{s+1}\) where
 
-\(\frac{1}{z}\)=\(\frac{\overline{z}}{|z|^{2}}\)=\(\frac{x-iy}{x^{2}+y^{2}}\)
+**3.7.23**: \(u_{s+1}\)=\(xu_{s}-yv_{s}\); \(v_{s+1}\)=\(xv_{s}\)+\(yu_{s}\)
 
-\(\frac{1}{z^{n}}\)=\(\frac{\overline{z}^{n}}{|z|^{2n}}\)=\((z^{-1})^{n}\)
+\(\mathcal{R}z^{n}\) and \(\mathcal{I}z^{n}\) are called harmonic polynomials.
 
-7.26 \(z^{2}\)=\(\sqrt{z}\)=\(r\)e\(i^{iq}\)=\(r^{\lambda}\) cos \(\frac{1}{\theta}\)+\(i^{\prime}\) sin \(\frac{1}{\theta}\)
+**3.7.24**: \(\frac{1}{z}\)=\(\frac{\overline{z}}{|z|^{2}}\)=\(\frac{x-iy}{x^{2}+y^{2}}\)
+**3.7.25**: \(\frac{1}{z^{n}}\)=\(\frac{\overline{z}^{n}}{|z|^{2n}}\)=\((z^{-1})^{n}\)
 
-If \(-\pi\)\(<\)\(\theta\)\(\leq\)\(\pi\) this is the principal root. The other root has the opposite sign. The principal root is given by
+Roots
 
-\(\frac{x}{2}\)=\([\frac{1}{2}(r+x)]\)+ \(\frac{x}{4}(r-x)]\)=\(u\)+ \(iv\) where \(2w\)=\(y\) and where the ambiguous sign is taken to be the same as the sign of \(y\).
+**3.7.26**: \(z^{i}\)=\(\sqrt{z}\)=\(r\)e\(i^{iq}\)=\(r^{i}\cos\,\,\mathrm{i}\theta+ir^{i}\sin\,\mathrm{i}\theta\)
 
-\(\frac{x}{2}\)=\(r^{1/n}\)\(e^{i\theta/n}\), (principal root if \(-\pi\)\(<\)\(\theta\)\(\leq\)\(\pi\)). Other roots are \(r^{1/n}\)\(e^{i(q+2rb/n}\)\((k\)=\(1,2,3,\ \ldots,\ n\)\(-\)\(1\)).
+If \(-\pi\)<\(\theta\leq\pi\) this is the principal root. The other root has the opposite sign. The principal root is given by
 
-7.29 \(\left|\left|z_{1}\right|\right|\)\(\leq\)\(\left|z_{1}\)\(\pm\)\(z_{2}\right|\)\(\leq\)\(\left|z_{1}\right|\)+ \(\left|z_{2}\right|\)
+**3.7.27**: \(\vec{z}^{i}\)=[\(\frac{1}{q}\)(\(r\)+\(x\))] \(\pm\)\(\vec{i}\)(\(r\)-\(x\))] =\(u\pm\)\(iv\) where \(2w\)=\(y\) and where the ambiguous sign is taken to be the same as the sign of \(y\).
+
+**3.7.28**: \(z^{j/n}\)=\(r^{i/n}\epsilon^{i/n}\), (principal root if \(-\pi\)<\(\theta\leq\pi\)). Other roots are \(r^{1/n}\epsilon^{i/(q+2rb/n}\) (\(k\)=\(1\), \(2\), \(3\), \(\ldots\), \(n\)\(-\)\(1\)).
+
+### Inequalities
+
+**3.7.29**: \(\left||z_{1}|\)\(-\)\(\left|z_{2}\right|\right|\)\(\leq\)\(\left|z_{1}\pm z_{2}\right|\)\(\leq\)\(\left|z_{1}|\)+\(\left|z_{2}\right|\)
 
 Complex Functions, Cauchy-Riemann Equations
 
-\(f(z)\)=\(f(x+iy)\)=\(u(x,y)\)+ \(iv(x,y)\) where \(u(x,y)\), \(v(x,y)\) are real, is _analytic_ at those points \(z\)=\(x\)+\(iy\) at which
+_f_(_z_)=_f_(_x_+_iy_)=_u_(_x_,_y_)+_iv_(_x_,_y_) where _u_(_x_,_y_),_v_(_x_,_y_) are real, is _analytic_ at those points _z_=_x_+_iy_ at which
 
-\(\frac{\partial u}{\partial x}\)=\(\frac{\partial v}{\partial y}\)\(\frac{\partial u}{\partial y}\)=\(\frac{\partial v}{\partial x}\)
+**3.7.30**: \(\frac{\partial u}{\partial x}\)=\(\frac{\partial v}{\partial y}\)\(\frac{\partial u}{\partial y}\)=\(-\frac{\partial v}{\partial x}\)
 
-If \(z\)=\(re^{iq}\),
+If _z_=_re_4_,_
 
-\(\frac{\partial u}{\partial r}\)=\(\frac{1}{r}\)\(\frac{\partial v}{\partial\theta}\), \(\frac{1}{r}\)\(\frac{\partial u}{\partial\theta}\)=\(-\frac{\partial v}{\partial r}\)
+**3.7.31**: \(\frac{\partial u}{\partial r}\)-\(\frac{1}{r}\frac{\partial v}{\partial\theta}\), \(\frac{1}{r}\frac{\partial u}{\partial\theta}\)=\(-\frac{\partial v}{\partial r}\)
 
-### Laplace's Equation
+The functions _u_(_x_,_y_) and _v_(_x_,_y_) are called harmonic functions and satisfy Laplace's equation:
 
-The functions \(u(x,y)\) and \(v(x,y)\) are called harmonic functions and satisfy Laplace's equation:
+**3.7.32**: \(\frac{\partial^{2}u}{\partial x^{2}}\)+\(\frac{\partial^{2}u}{\partial y^{2}}\)=\(\frac{\partial^{2}v}{\partial x^{2}}\)+\(\frac{\partial^{2}v}{\partial y^{2}}\)=0
 
-\(\frac{\partial^{2}u}{\partial x^{2}}\)+\(\frac{\partial^{2}u}{\partial y^{2}}\)=\(\frac{\partial^{2}v}{\partial x^{2}}\)+\(\frac{\partial v}{\partial y^{2}}\)=\(0\)
+**3.7.33**: \(r\)\(\frac{\partial}{\partial r}\) (\(r\)\(\frac{\partial u}{\partial r}\))+\(\frac{\partial^{2}u}{\partial\theta^{2}}\)=\(r\)\(\frac{\partial}{\partial r}\) (\(r\)\(\frac{\partial v}{\partial r}\))+\(\frac{\partial^{2}v}{\partial\theta^{2}}\)=0
 
-#### 3.8.1 Given \(az^{2}\)+\(bz\)+\(c\)= 0,
+**3.8. Algebraic Equations**
 
-\(z_{1,2}\)=\(-\)\(\left(\frac{b}{2a}\right)\)+\(\frac{1}{2a}\)\(q^{3}\), \(q\)=\(b^{2}\)=\(4ac\),
+**3.8.1**: \(\text{Given $az^{2}$}\)+\(bz\)+\(c\)= 0,
 
-\(z_{1}\)+ \(z_{2}\)= \(-\)\(b\)/\(a\), \(z_{1}\)z\(_{2}\)= \(c\)/\(a\)
-
-If \(q\)\(>\) 0, two real roots,
-
-\(q\)= 0, two equal roots,
-
-\(q\)\(<\)0, pair of complex conjugate roots.
-
-Solution of Cubic Equations
-
-\(\frac{q^{2}}{\)+ \(a_{2}\)+
+\(z_{1,

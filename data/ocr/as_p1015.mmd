@@ -1,26 +1,52 @@
-To convert \(x\) back to the decimal scale we only need to obtain from Table 28.1 the various powers of 2 which appear in the above representation and sum them. However, since 2-m=2-m+1-2-m for any real constant _m,_ it is more convenient to reduce first the binary representation of \(x\) to the form
+To convert \(x\) back to the decimal scale we only need to obtain from Table 28.1 the various powers of 2 which appear in the above representation and sum them. However, since 2-m=2-n+t-2-m for any real constant _m,_ it is more convenient to reduce first the binary representation of \(x\) to the form
 
-\[\text{z} = 2^{- 28} - 2^{- 31} - 2^{- 33} - 2^{- 39} + 2^{- 42} - 2^{- 46} - 2^{- 80}\]
+\[{\text{z}} = 2^{- 2^{- 31}} - 2^{- 33} - 2^{- 39} + 2^{- 42} - 2^{- 46} - 2^{- 80}\]
 
 and then sum these powers of 2. (Note that the number of summands is thereby decreased from 16 to 7.) From Table 28.1 we have
 
-\[\begin{array}{rll} + 2^{- 3s} = + 3.725&290&298& 10^{- 9} \\ - 2^{- 31} = - .465&661&287& 10^{- 9} \\ - 2^{- 33} = - .116&415&322& 10^{- 9} \\ - 2^{- 39} = - .001&818&989& 10^{- 9} \\ + 2^{- 42} = + .000&227&374& 10^{- 9} \\ - 2^{- 48} = - .000&028&422& 10^{- 9} \\ - 2^{- 60} = - .000&000&888& 10^{- 9} \\ \end{array}\]
-
-\[\begin{array}{rll} \text{z} = 3.141&592&764& 10^{- 9} \\ \end{array}\]
+\[\begin{array}{rll} + 2^{- 3s} = + 3.725&290&298& 1 0^{- 9} \\ - 2^{- 3i} = - .465&661&287& 1 0^{- 9} \\ - 2^{- 3s} = - .116&415&322& 1 0^{- 9} \\ - 2^{- 39} = - .001&818&989& 1 0^{- 9} \\ + 2^{- 42} + + .000&227&374& 1 0^{- 9} \\ - 2^{- 48} = - .000&028&422& 1 0^{- 9} \\ - 2^{- 90} = - .000&000&888& 1 0^{- 9} \\ \end{array}\]
 
 Nine decimal digits are used for sufficient accuracy reserve. Hence, rounding to seven significant figures, we find
 
-\[\text{z} = (3.141593)_{(10)} \cdot 10^{- 9}.\]
+\[{\text{z}} = (3.141593)_{(10)} \cdot 10^{- 9}.\]
 
 To convert a number such as
 
-\[\text{z} = (\xi)_{(10)} \cdot 10^{s}\]
+\[{\text{z}} = (\xi)_{(10)} \cdot 10^{s}\]
 
 to the binary scale, where \(k\) is a positive integer so large that Table 28.1 cannot be used, apply the following device: Compute
 
-\[\text{log}_{2}\text{z} = \frac{\text{log}_{10}\text{z}}{\text{log}_{10}\text{2}}\text{k} + \frac{\text{z}_{1}}{\text{log}_{10}\text{2}}\]
+\[\log_{2}{\text{z}} = \frac{\log_{10}{\text{z}}}{\log_{10}{\text{z}}}2k + \frac{{\text{z}}_{1}}{\log_{10}{\text{z}}}2\]
 
-where \(k\) is the quotient and \(x\)1 the remainder, the division being carried out in the decimal scale. Then find \(e\) = 10\(i\), i.e., \(x\)1 = log10\(e\) , so that \(\cdot\)
+where \(k\) is the quotient and \(x\)1 the remainder, the division being carried out in the decimal scale. Then find \(e\) = 10\(i\), i.e., \(x\)1 = log10\(e\) , so that *
 
-\[\text{log}_{2}\text{z} = k + \frac{\text{log}_{10}\text{e}_{10}\text{2}}{\text{log}_{10}\text{2}} = k + \text{log}_{2}\text{e}_{1}
+\[\log_{2}{\text{z}} = k + \frac{\log_{10}{\text{z}}}{\log_{10}{\text{z}}}2k + \log_{2}{\text{z}}\]
+
+whence
+
+\[{\text{z}} = (\eta)_{(10)}2^{s}.\]
+
+Now convert (e)10\(i\)0 to the binary scale by any of the methods described above.
+
+A similar device may be used to convert to the decimal scale a binary number that is outside the range of Table 28.1.
+
+Example 5. Convert \(x\) = (2.773)(10) *108 to the binary scale.
+
+We first compute, using 4.1.19 and Table 4.1,
+
+\[\log_{2}{\text{z}} = \frac{\log_{10}{\text{z}}}{\log_{10}{\text{z}}}2 = \frac{83.44295}{.30103} = 277 + \frac{.05764}{.30103},\]
+
+and find from Table 4.1, .05764 = log10 1.1419. Hence
+
+\[\log_{2}{\text{z}} = 277 + \frac{\log_{10}{1.1419}}{\log_{10}{2}} = 277 + \log_{2}{1.1419}\]
+
+and so
+
+\[{\text{z}} = (1.1419)_{(10)} \cdot 2^{277}.\]
+
+Now we apply the methods of Example 3 to obtain (1.1419)(10) = (1.110516),8 where octal notation is used for the sake of convenience.
+
+To round such that inverse conversion will yield the same decimal digits of \(x\), observe that the last non-zero decimal digit of \(x\) is 3 *108. Table 28.4 shows that 2285 < 108>< 2286. Hence, in the binary scale, \(x\) must be a binary integer times 2285; i.e., (1.110516)(8) must be rounded to 4 octal (=12 binary digits. As a result,
+
+\[{\text{z}} = (1.1105)_{(9)}
 

@@ -1,26 +1,26 @@
 
 
-**15.3.12**: _F(a, b; a+b-m; z)=\(\frac{\Gamma(m)\Gamma(a+b-m)}{\Gamma(a-m)\Gamma(b-m)}\overset{\bullet}{\underset{n=0}{\sum}}\frac{(a)_{n}(b)_{n}}{n!(n+m)!}\)_(1(1-z)^{n}\)_(1(-z)^{n}\)_
+**15.3.12**: \(F(a,b;a+b-m;z)=\)\(\frac{\Gamma(m)\Gamma(a+b-m)}{\Gamma(a)\Gamma(b)}\)__\((1-z)^{-m}\sum\limits_{n=0}^{m-1}\frac{(a-m)_{n}(b-m)_{n}}{n!(1-m)_{n}}\)__\((1-z)^{n}\)__
 
-\[\begin{array}{r} {-\psi(n+m+1)+\psi(a+n)+\psi(b+n)}\\ {(\text{\rm{|arg }}(1-z)|<\!\!\pi_{r}\text{\rm{|1-}}\!-\!\text{\rm{z|<1}})} \\ \end{array}\]
+\[\begin{array}{r@{\hspace{1em}}l}-\frac{(-1)^{m}\Gamma(a+b-m)}{\Gamma(a-m) \Gamma(b-m)}\sum\limits_{n=0}^{e}\frac{(a)_{n}(b)_{n}}{n!(n+m)!}\left(1-z\right) ^{n}\!\!\left[\ln\,\left(1-z\right)-\psi(n+1)\right.\\ \hskip 85.358268pt\left.-\psi(n+m+1)+\psi(a+n)+\psi(b+n)\right]\\ \hskip 85.358268pt\left(|\arg\,\left(1-z\right)|<\pi_{i}|1-z|<1\right)\end{array}\]
 
 Similarly each term of 15.3.7 has a pole when \(b=a\pm m\) or \(b-a=\pm m\) and the case is covered by
 
-**15.3.13**: _F(a, a; c; z)=\(\frac{\Gamma(c)}{\Gamma(a)\Gamma(c=a)}\)_(-z)^{-a}\overset{\bullet}{\underset{n=0}{\sum}}\frac{(a)_{n}(1-c+a)_{n}}{(n!)^{2}}\)_z^{-n}\)_(ln(-z)+2_psi(n+1)-_psi(a+n)-_psi(c-a-n)\)_(|arg(-z)|<\!\!\pi_{r}\text{\rm{|z|>1}}\)_,_(e-a)_  _0,_ _+-1,_ _+-2,_ _._ )
+**15.3.13**: \(F(a,a;c;z)=\)\(\frac{\Gamma(e)}{\Gamma(a)\Gamma(e-a)}\)__\((-z)^{-a}\sum\limits_{n=0}^{\infty}\frac{(a)_{n}(1-c+a)_{n}}{(n!)^{z}}\)__\(z^{-n}\!\!\left[\ln\,\left(-z\right)+2\psi(n+1)-\psi(a+n)-\psi(c-a-n)\right.\)__
 
-The case \(b-a=m\), (\(m=1,2,3\), \(\ldots\) .) is covered by
+The case \(b-a=m\), (\(m=1,2,3,\ .\ .\ .\) ) is covered by
 
-**15.3.14**: _F(a, a+m; c; z)=F(a+m, a; c; z)_
+**15.3.14**: \(F(a,a+m;c;z)=\)\(F(a+m,a;e;z)\)
 
-\[\begin{array}{r} {=\frac{\Gamma(c)(-z)^{-a-m}}{\Gamma(a+m)\Gamma(c-a)}\overset{\bullet}{\underset{n=0}{\sum}}\frac{(a)_{n+m}(1-c+a)_{n+m}}{n!(n+m)!}\,z^{-n}\text{\rm{|ln }}(-z)+\psi(1+m+n)+\psi(1+n)}\\ {-\psi(a+m+n)-\psi(c-a-m-n)!+\text{\rm{|+(-z)^{-a}}}\frac{\Gamma(c)}{\Gamma(a+m)}\overset{\bullet-1}{\underset{n=0}{\sum}}\frac{\Gamma(m-n)(a)}{n!\Gamma(c-a-n)}\,z^{-n}}\\ {(\text{\rm{|arg(-z)|<}}\!\!\pi_{r}\text{\rm{|z|>1}},(e-a)\!\neq\!0,\pm 1,\pm 2,\ldots)} \\ \end{array}\]
+\[\begin{array}{r@{\hspace{1em}}l}=\frac{\Gamma(c)(-z)^{-a-m}}{\Gamma(a+m)\Gamma (e-a)}\sum\limits_{n=0}^{e}\frac{(a)_{n+m}(1-c+a)_{n+m}}{n!(n+m)!}\,z^{-n}\!\! \left[\ln\,\left(-z\right)+\psi(1+m+n)+\psi(1+n)\right.\\ \hskip 85.358268pt\left.-\psi(a+m+n)-\psi(e-a-m-n)\right]+\left(-z\right)^{-a} \frac{\Gamma(c)}{\Gamma(a+m)}\sum\limits_{n=0}^{m-1}\frac{\Gamma(m-n)(a)_{n}}{ n!\Gamma(c-a-n)}\,z^{-n}\\ \hskip 85.358268pt\left(|\arg(-z)|<\pi_{i},|z|>1,(e-a)\neq 0,\pm 1,\pm 2,\ldots \right)\end{array}\]
 
-The case \(e-a=0\), \(-1\), \(-2\), \(\ldots\) . becomes elementary, 15.3.3, and the case \(e-a=1\), 2, 3, \(\ldots\) . can be obtained from 15.3.14, by a limiting process (see [15.2]).
+The case \(e-a=0\), \(-1\), \(-2\), \(\therefore\) becomes elementary, 15.3.3, and the case \(c-a=1\), 2, 3, \(\therefore\) can be obtained from 15.3.14, by a limiting process (see [15.2]).
 
-### Quadratic Transformation Formulas
 
-If, and only if the numbers \(\pm(1-c)\), \(\pm(a-b)\), \(\pm(a+b-c)\) are such, that two of them are equal or one of them is equal to \(\frac{1}{2}\), then there exists a quadratic transformation. The basic formulas are due to Kummer [15.7] and a complete list is due to Goursat [15.3]. See also [15.2].
 
-**15.3.15**: _F(a, b; 2b; z)=\((1-z)^{-a}F\left(\frac{1}{2}a,b-\frac{1}{2}a;\,b+\frac{1}{2};\,\frac{z^{2}}{4z-4}\right)\)_
-**15.3.16**: _=\((1-\frac{1}{2}z)^{-a}F(\frac{1}{2}a,\frac{1}{2}+\frac{1}{2}a;b+\frac{1}{2};z^{2}(2-z)^{-2})\)_
-**15.3.17**: _=\((\frac{1}{2}+\frac{1}{2}\sqrt{1-z})^{-a}F\left[a,a-b+\frac{1}{2};\,b+\frac{1}{2};\,\frac{(1-\sqrt{1-z})^{T}}{1+\sqrt{1-z}}\right]\)_
-**15.3.18**: _=\((
+If, and only if the numbers \(\pm\,(1\!-\!e)\), \(\pm\,(a\!-\!b)\), \(\pm\,\langle a\!+\!b\!-\!c)\) are such, that two of them are equal or one of them is equal to \({{1\over 2}}\), then there exists a quadratic transformation. The basic formulae are due to Kummer [15.7] and a complete list is due to Goursat [15.3]. See also [15.2].
+
+**15.3.15**: \(F(a,b;2b;z)\!=\!(1\!-\!z)^{-1a}F\left({{1\over 2}}a,b\!-\!{{1 \over 2}}a;\,b\!+\!{{1\over 2}};\,{{z^{2}}\over{4z\!-\!4}}\right)\)
+**15.3.16**: \(=\!(1\!-\!{{1\over 2}}z)^{-a}F({{1\over 2}}a,{{1\over 2}} \!+\!{{1\over 2}}a;b\!+\!{{1\over 2}};{{z^{2}}\!(2\!-\!z)^{-2}})\)
+**15.3.17**: \(=\!({{1\over 2}}\!+\!{{1\over 2}}\sqrt{1\!-\!z})^{-2a}F\left[a,a\!-\! b\!+\!{{1\over 2}};\,b\!+\!{{1\over 2}};\,\left({{1\!-\!\sqrt{1\!-\!z}}\over{1\!+\!\sqrt{1\!-\! z}}}\right)^{*}\right]\)
+**15.3.18**: \(=\!(1\!-\!z)^{-1a}F\left(a,2b\!-\!a;\,b\!+\!{{1\over 2}};\,-{{(1\!-\!\sqrt{1\!-\!z})^{\!

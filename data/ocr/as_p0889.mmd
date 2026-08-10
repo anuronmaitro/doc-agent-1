@@ -1,24 +1,18 @@
 
 
-**25.4.36**: \(\int_{\circ}^{1}\frac{f(x)}{\sqrt{1-x}}\,dx{=}{\sum\limits_{i =1}^{n}w_{i}f(x_{i})}+R_{n}\)
+**25.4.36**: \(\int_{\circ}^{1}\frac{f(x)}{\sqrt{1-x}}\,dx{=}{\sum\limits_{i =1}^{n}w_{i}f(x_{i})+R_{n}}\)
 
 Related orthogonal polynomials:
 
 \[P_{2n}(\sqrt{1-x}),P_{2n}(1)=1\]
 
-**Abscissas:** \(x_{i}{\equiv}1-{\xi}_{i}^{2}\) **where** \(\xi_{i}\) **is the** \(i^{\rm th}\) **positive zero of** \(P_{2n}(x)\)**.**
+**Abscissas:** \(x_{i}{\equiv}1-{\xi}_{i}^{2}\) **where** \(\xi_{i}\) **is the** \(i^{\rm th}\) **positive zero of** \(P_{2n}(x)\)**. Weights:** \(w_{i}{=}2w_{i}{}^{(2n)},w_{i}{}^{(2n)}\) **are the Gaussian weights of order** \(2n\)**. Remainder:**
 
-**Weights:** \(w_{i}{=}2w_{i}{{}^{(2n)}},w_{i}{{}^{(2n)}}\) **are the Gaussian weights of order** \(2n\)**.**
+\[R_{n}{=}\frac{2^{4n+1}}{4n+1}\frac{[(2n)!]^{n}}{[(4n)!]^{n}}f^{(2n)}(\xi)\quad(0 {<}{\xi}{<}1)\]
 
-**Remainder:**
+**25.4.37**: \(\int_{*}^{\flat}\frac{f(y)}{\sqrt{b-y}}dy{=}\sqrt{b-a}\,{\sum\limits_{i =1}^{n}w_{i}f(y_{i})+R_{n}}\)
 
-\[R_{n}{=}\frac{2^{4n+1}}{4n+1}\frac{[(2n)!]^{n}}{[(4n)!]^{n}}f^{{(2n)}}(\xi)\]
-
-**Abscissas:**
-
-\[\int_{-1}^{\circ}\frac{f(y)}{\sqrt{b-y}}dy{=}\sqrt{b-a}{\sum\limits_{i =1}^{n}w_{i}f(x_{i})}+R_{n}\]
-
-**Weights:** \(w_{i}{=}4+(b-a)x_{i}\)
+\[y_{i}{=}a{+}(b{-}a)x_{i}\]
 
 **Related orthogonal polynomials:**
 
@@ -28,11 +22,9 @@ Related orthogonal polynomials:
 
 \[x_{i}{=}1-{\xi}_{i}^{2}\]
 
-**where** \(\xi_{i}\) **is the** \(i^{\rm th}\) **positive zero of** \(P_{2n}(x)\)**.**
+**where** \(\xi_{i}\) **is the** \(i^{\rm th}\) **positive zero of** \(P_{2n}(x)\)**. Weights:** \(w_{i}{=}2w_{i}{}^{(2n)},w_{i}{}^{(2n)}\) **are the Gaussian weights of order** \(2n\)**.**
 
-**Weights:** \(w_{i}{=}2w_{i}{{}^{(2n)}},w_{i}{{}^{(2n)}}\) **are the Gaussian weights of order** \(2n\)**.**
-
-**25.4.38**: \(\int_{-1}^{+1}\frac{f(x)}{\sqrt{1-x}}\,dx{=}{\sum\limits_{i =1}^{n}w_{i}f(x_{i})}+R_{n}\)
+**25.4.38**: \(\int_{-1}^{+1}\frac{f(x)}{\sqrt{1-x}}\,dx{=}{\sum\limits_{i =1}^{n}w_{i}f(x_{i})+R_{n}}\)
 
 **Related orthogonal polynomials: Chebyshev Polynomials:**
 
@@ -46,19 +38,15 @@ Related orthogonal polynomials:
 
 \[w_{i}{=}\frac{\pi}{n}\]
 
-**Remainder:**
+**Reaninder:**
 
-\[R_{n}{=}\frac{\pi}{(2n)\mathbb{D}^{2n-1}}f^{{(2n)}}(\xi)\]
+\[R_{*}{=}\frac{\pi}{(2n)\mathbb{D}^{2n-1}}f^{(2n)}(\xi)\quad(-1{<}{\xi}{<}1)\]
 
-**Abscissas:**
+**25.4.39**: \(\int_{*}^{\flat}\frac{f(y)dy}{\sqrt{(y-a)}(b-y)}{=}{\sum\limits_{i =1}^{n}w_{i}f(y_{i})+R_{n}}\)
 
-\[x_{i}{=}\cos\frac{(2i{-}1)\pi}{2n}\]
+\[y_{i}{=}\frac{b{+}a}{2}{+}\frac{b{-}a}{2}x_{i}\]
 
-**Weights:**
-
-\[w_{i}{=}\frac{\pi}{n}\]
-
-**Releated orthogonal polynomials:**
+**Related orthogonal polynomials:**
 
 \[T_{n}(x),T_{n}(1)=\frac{1}{2^{8-1}}\]
 
@@ -70,13 +58,11 @@ Related orthogonal polynomials:
 
 \[w_{i}{=}\frac{\pi}{n}\]
 
-**Abscissas:**
+**25.4.40**: \(\int_{-1}^{+1}f(x)\,\sqrt{1-x^{2}}dx{=}{\sum\limits_{i =1}^{n}w_{i}f(x_{i})+R_{n}}\)
 
-\[\int_{-1}^{+1}\!f(x)\,\sqrt{1-x^{2}}dx{=}{\sum\limits_{i =1}^{n}w_{i}f(x_{i})}+R_{n}\]
+**Related orthogonal polynomials: Chebyshev Polynomials of Second Kind**
 
-**Related orthogonal polynomials: Chebyshev Polynomials:**
-
-\[T_{n}^{*}(x){=}\frac{\sin\,\left[(n{+}1)\;{\rm arccos}\;x\right]}{\sin\,\left[ \,\left({\rm arccos}\;x\right)\right]}\]
+\[T_{n}^{*}(x)=\frac{\sin\,\left[(n{+}1)\;{\rm arccos}\;x\right]}{\sin\,\left({ \rm arccos}\;x\right)}\]
 
 **Abscissas:**
 
@@ -88,6 +74,5 @@ Related orthogonal polynomials:
 
 **Remainder:**
 
-\[R_{n}{=}\frac{\pi}{(2n)\mathbb{D}^{2n+1}}f^{{(2n)}}(\xi)\]
+\[R_{n}
 
-**(\(-1{<}\xi{<}1\))**

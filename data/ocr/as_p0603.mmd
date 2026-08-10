@@ -1,0 +1,91 @@
+\(F\)
+
+\(A\) rough estimate now shows that _ph_ lies between 40deg and 41deg. We therefore form the following table of \(F(\varphi){\leq}67.789089^{\circ}\) by direct interpolation in the foregoing table
+
+\(\varphi\)
+
+\(F\)
+
+\(40.0\circ\)
+
+\(.74003\)
+
+\(40.5\circ\)
+
+\(.75040\)
+
+\(41.0\circ\)
+
+\(.76082\)
+
+whence by linear inverse interpolation
+
+\(\varphi\)=40.5deg+.5deg[.75342-.75040]-40.6449deg
+
+and so sin _ph_=.65137=sn (.75342|.7).
+
+This method of bivariate interpolation is given merely as an illustration. Other more direct methods such as that of the arithmetic-geometric mean described in 17.6 and illustrated for the Jacobian functions in chapter 16 are less laborious.
+
+**Example 6.** Evaluate
+
+\(\int_{2}^{3}[(2t^{2}{+}1)(t^{2}{-}2)]^{-1/2}dt\).
+
+First Method, Bivariate Interpolation
+
+From 17.4.50 we have
+
+\(\sqrt{5}\int_{2}^{3}[(2t^{2}{+}1)(t^{2}{-}2)]^{-1/2}dt{=}F(\varphi_{1}\backslash{\alpha}){-}F(\varphi_{2}\backslash{\alpha})\)
+
+where
+
+\(\sin^{2}{\alpha}{=}\frac{1}{5}\)cos _ph_=\(\frac{\sqrt{2}}{3}\), cos _ph_=\(\frac{\sqrt{2}}{2}\)
+
+Thus _a_=26.56505 12deg, _a_=61.87449 43deg, _a_=45deg, _F_(_ph_|_a_)=1.115921 and _F_(_ph_|_a_)=.800380 and therefore the integral is equal to .141114.
+
+Second Method, Numerical Quadrature
+
+Simpson's formula with 11 ordinates and interval .1 gives .141117.
+
+**Example 9.** Evaluate
+
+\(\int_{2}^{4}[(t^{2}{-}2)(t^{2}{-}4)]^{-1}dt{=}\int_{2}^{{}^{\infty}}{-}\int_{4}^{{}^{\infty}}\)
+
+\(\frac{1}{2}[F(\varphi_{1}\backslash{45}^{\circ}){-}F(\varphi_{2}\backslash{45}^{\circ})]\)
+
+\(\frac{1}{2}[1.854075{-}.535623]{=}.659226\)
+
+where
+
+\(\sin\varphi_{1}{=}\frac{2}{2}\)sin _ph_=\(\frac{2}{4}\)sin _a_=\(\frac{2}{4}\)sin _a_=\(\frac{2}{4}\)
+
+\(\alpha{=}45^{\circ},\varphi_{1}{=}90^{\circ},\varphi_{2}{=}30^{\circ}\).
+
+Second Method, Numerical Integration
+
+If we wish to use numerical integration we must observe that the integrand has a singularity at _t_=2 where it behaves like [8(_t_-2)]-1.
+
+We remove the singularity at _t_=2, by writing
+
+\(\int_{2}^{4}[(t^{2}{-}2)(t^{2}{-}4)]^{-1}dt{=}\int_{2}^{4}f(t)dt{+}\int_{2}^{4}[8(t{-}2)]^{-1}dt\)
+
+where
+
+\(f(t){=}[(t^{2}{-}2)(t^{2}{-}4)]^{-1}{-}[8(t{-}2)]^{-1}\).
+
+If we define _f_(_2_)=0,
+
+\(\int_{2}^{4}f(t)dt\)
+
+can be calculated by numerical quadrature. Also
+
+\(\int_{2}^{4}[8(t{-}2)]^{-1}dt{=}\left[\frac{1}{\sqrt{2}}\;(t{-}2)i\right]{=}:\)
+
+and thus we calculate the integral as
+
+\(1{+}\int_{2}^{4}f(t)dt{=}1{-}.340773{=}.659227\).
+
+**Example 10.** Evaluate
+
+\(u{=}\int_{17}^{{}^{\infty}}(x^{2}{-}7x{+}6)^{-1}dx\).
+
+\(x^{2}{-}7x{+}6{=}(x{-}1)(x{-}2)(x{+}3)\) and we use 17.4.65 with _θ_1=2

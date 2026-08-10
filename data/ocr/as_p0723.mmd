@@ -1,65 +1,39 @@
 Equation **20.2.2** can be reduced to one of four simpler types, given in **20.2.3** and **20.2.4** below
 
-**20.2.3**: \(y_{0}\)=\(\mathop{\sum}\limits_{m=0}^{\infty}\)_A_2_m+_p_cos(2_m+_p_)_z_, _p_=0 or 1
-**20.2.4**: \(y_{1}\)=\(\mathop{\sum}\limits_{m=0}^{\infty}\)_B_2_m+_p_sin(2_m+_p_)_z_, _p_=0 or 1
+\(y_{0}\)=\(\sum\limits_{m=0}^{\infty}A_{2m+p}\cos\,(2m+p)z\), \(p\)=0 or 1
 
-If _p_=0, the solution is of period \(p\); if _p_=1, the solution is of period 2\(p\).
+\(y_{1}\)=\(\sum\limits_{m=0}^{\infty}B_{2n+p}\sin\,(2m+p)z\), \(p\)=0 or 1
 
-**Re-Reference Relations Among the Coefficients**
+If \(p\)=0, the solution is of period \(\pi\); if \(p\)=1, the solution is of period \(2\pi\).
 
-Even solutions of period _p_:
+**Recurrence Relations Among the Coefficients**
 
-**20.2.5**: \(a\)_A_0-_q_A_2=0
-**20.2.6**: \((a\)-\(4)\)_A_2-_q_(2\(A\)0+_A_)=0
-**20.2.7**: \((a\)-\(m^{2})A_{n}\)=\(-\)_q_(_A_{n-2}+_A_{n+2}\)=0
+Even solutions of period \(\pi\):
 
-Even solutions of period 2_p_:
+\(aA_{0}\)\(-\)\(qA_{2}\)=0
 
-**20.2.8**: \((a\)-\(1)\)_A_1-_q_(_A_1+_A_3)=0,
+\(aA_{2}\)=\(q(2A_{0}+A_{4})\)=0
 
-along with **20.2.7** for \(m\) >= 3.
+\(a\)=\(a\)=\(a\)=\(a\)=\(a\)=\(a\)=\(a\)=\(a\)=\(a\)
 
-Odd solutions of period _p_:
+Even solutions of period \(2\pi\):
 
-**20.2.9**: \((a\)-\(4)\)_B_2-_q_B_4=0
-**20.2.10**: \((a\)_m_2)_B_m-_q_(_B_{n-2}+_{B_{n+2}}\)=0
+\(a\)=\(1\)\(A_{1}\)\(-\)\(q(A_{1}+A_{3})\)=0, along with **20.2.7** for \(m\)\(\geq\)3.
 
-Odd solutions of period 2_p_:
+Odd solutions of period \(\pi\):
 
-**20.2.11**: \((a\)-\(1)\)_B_1+_q_(_B_1-_B_3)=0,
+\(a\)=\(a\)=\(a\)=\(a\)=\(a\)=\(a\)=\(a\)
 
-along with **20.2.10** for \(m\) >= 3.
+Odd solutions of period \(2\pi\):
+
+\(a\)=\(1\)\(A_{1}\)\(-\)\(q(A_{1}+A_{3})\)=0, along with **20.2.7** for \(m\)\(\geq\)3.
+
+Odd solutions of period \(\pi\):
+
+\(a\)=\(1\)\(B_{1}\)\(+\)\(q(B_{1}-B_{3})\)=0, along with **20.2.10** for \(m\)\(\geq\)3.
 
 Let
 
-**20.2.12**: \(G_{a}\)=_A_n/_A_n-_2_, \(G_{0}\)_n_=_B_m/_B_n-_2_;
-**_G_n=_Ge_n or _Go__n_ when the same operations apply to both, and no ambiguity is likely to arise. Further let
+\(a\)=\(a\), \(a\)\(b\)\(c\)\(d\)\(a\)=\(a\), \(a\)\(b\)\(c\)\(d\)\(a\)=\(b\), \(a\)\(b\)\(d\)\(a\)=\(a\), \(a\)\(b\)\(c\)\(d\)\(a\) when the same operations apply to both, and no ambiguity is likely to arise. Further let
 
-**20.2.13**: \(V_{n}\)=\((a\)-\(m\)2)/_q_.
-
-Equations **20.2.5**-**20.2.7** are equivalent to
-
-**20.2.14**: \(G_{a2}\)=\(V_{0}\); \(G_{a4}\)=\(V_{2}\)-\(\frac{2}{G_{a2}}\)
-**20.2.15**: \(G_{n}\)=\(1/(V_{n}\)-\(G_{n+2})\)
-**20.2.16**: \(V_{1}\)=\(1/(V_{n}\)-\(G_{n+2})\)
-
-(\(m\)\(\geq\) 3),
-
-for even solutions of period \(p\).
-
-Similarly
-
-**20.2.16**: \(V_{1}\)-\(1\)=\(\,G_{a3}\); for even solutions of period 2\(p\), along with **20.2.15**:
-
-**20.2.17**: \(V_{1}\)+\(1\)=\(\,G_{a3}\), for odd solutions of period 2\(p\), along with **20.2.15**:
-
-**20.2.18**: \(V_{2}\)=\(G_{0}\)_, for odd solutions of period 2\(p\), along with **20.2.15**:
-
-**20.2.19**: \(G_{n}\)=\(\frac{1}{V_{n}\)-\(G_{n+2}}\)-\(\frac{1}{V_{n}\)-\(V_{n+2}}\)-\(\frac{1}{V_{n+4}}\)-\(\ldots\)\((m\)\(\geq\) 3)
-**20.2.20**: \(G_{n+2}\)=\(V_{n}\)-\(1/G_{n}\)
-
-\(=\)\(\overline{V_{n}}\)-\(\frac{1}{V_{n-2}}\)-\(\frac{1}{V_{n-4}}\)-\(\ldots\)\(\frac{\varphi_{0}}{V_{0+4}\)+\(\varphi_{1}}\)\((m\)\(\geq\) 3)
-
-where
-
-\(\varphi_{1}\)=\(d\)=\(
+\(V_{n}\)=\((a\)\(-\)\(m

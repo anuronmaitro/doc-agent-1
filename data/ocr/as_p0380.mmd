@@ -1,14 +1,17 @@
-\[\begin{array}{l}\mbox{\rm kei}_{*}\,\,x{=}{-}\frac{1}{2}(\frac{1}{2}x)^{-*} \sum\limits_{k=0}^{n-1}\sin\,\{(\frac{2}{2}h+\frac{1}{2}k)\pi\}\\ \times\frac{(n{-}k-1)!}{k!}\,(\frac{1}{4}x^{2})^{*}{-}\ln\,(\frac{1}{2}x)\,\,{ \rm bei}_{*}\,\,x{-}\frac{1}{4}x\,\,{\rm bei}_{*}\,\,x\\ +\frac{1}{2}(\frac{1}{2}x)^{*}\sum\limits_{k=0}^{n}\sin\,\{(\frac{2}{2}h+\frac{1 }{2}k)\pi\}\\ \times\frac{\{\psi(k+1)+\psi(n+k+1)\}}{k!(n+k)!}\,\,(\frac{1}{2}x^{2})^{k}\end{array}\]
+\[\begin{array}{l|l}\mbox{kei}_{*}&x=-\frac{1}{2}(\frac{3}{2})^{-*}\sum\limits_{k =0}^{n-1}\sin\left\{(\frac{3}{2}n+\frac{1}{2}k)\pi\right\}\\ &&\\ \times\frac{(n-k-1)!}{k!}\,(\frac{4}{4}x^{2})^{*}-\ln\,(\frac{1}{2}x)\,\,\mbox{ bei}_{*}\,x-\frac{1}{2}\pi\,\mbox{ber}_{*}\,x\\ &&\\ +\frac{1}{2}(\frac{1}{2}x)^{*}\sum\limits_{k=0}^{n}\sin\left\{(\frac{3}{2}n+ \frac{1}{2}k)\pi\right\}\\ &&\\ \times\frac{\left\{\psi(k+1)+\psi(n+k+1)\right\}}{k!(n+k)!}\,(\frac{1}{2}x^{2} )^{k}\end{array}\]
 
 where \(\psi(n)\) is given by 6.3.2.
+9.12 ker \(x=-\ln\,(\frac{1}{2}x)\) ber \(x+\frac{1}{4}\pi\) bei \(x\)
 
-**9.9.12**: \[\begin{array}{l}\mbox{\rm ker}\,\,x{=}{-}\ln\,(\frac{1}{2}x)\,\,{\rm ber}\,\,x{+}\frac{1}{4}\pi\,\,{\rm bei}\,\,x\\ +\sum\limits_{k=0}^{n}\,({-})^{*}\frac{\psi(2k+1)}{\{(2k)!\}^{2}}\,(\frac{1}{4}x^{2})^{2k}\end{array}\]
-
-kei \(x{=}{-}\ln\,(\frac{1}{2}x)\,\,{\rm bei}\,\,x{-}\frac{1}{4}\pi\,\,{\rm be}\,\,x\) \[+\sum\limits_{k=0}^{n}\,({-})^{*}\frac{\psi(2k+2)}{\{(2k+1)!\}^{2}}\,(\frac{1}{4}x^{2})^{2k+1}\]
+\[\begin{array}{l|l}\mbox{$+\sum\limits_{k=0}^{n}\,(-)^{*}\frac{\psi(2k+1)}{(2 k)!}\,(\frac{1}{4}x^{2})^{nk}$}\\ &&\\ \mbox{kei}\,x=-\ln\,(\frac{1}{2}x)\,\,\mbox{bei}\,x-\frac{1}{2}\pi\,\mbox{ber} \,x\\ &&\\ +\frac{e^{i}}{k=0}\,(-)^{*}\frac{\psi(2k+2)}{(2k+1)!}\,(\frac{1}{4}x^{2})^{2k+1} \end{array}\]
 
 ### Functions of Negative Argument
 
-In general Kelvin functions have a branch point at \(x{=}0\) and individual functions with arguments \(x{\in}^{n+1}\) are complex. The branch point is absent however in the case of ber, and bei, when \(\nu\) is an integer, and
+In general Kelvin functions have a branch point at \(x=0\) and individual functions with arguments \(xe^{+\pi t}\) are complex. The branch point is absent however in the case of ber, and bei, when \(\nu\) is an integer, and
+9.13 \[\begin{array}{l|l}\mbox{ber}_{*}(-x)=(-)^{*}\,\mbox{ber}_{*}\,x,\qquad\mbox{ bei}_{*}(-x)=(-)^{*}\,\mbox{bei}_{*}\,x\\ \mbox{\bf Recurrence Relations}\end{array}\]
+9.14 \[\begin{array}{l|l}f_{r+1}+f_{r-1}=-\frac{\nu\sqrt{2}}{x}\,\,(f_{r}-g_{r}) \\ f_{r}^{\prime}=\frac{1}{2\sqrt{2}}\,\,(f_{r+1}+g_{r+1}-f_{r-1}-g_{r-1})\\ f_{r}^{\prime}-\frac{\nu}{x}f_{r}=\frac{1}{\sqrt{2}}\,\,(f_{r+1}+g_{r+1})\\ f_{r}^{\prime}+\frac{\nu}{x}f_{r}=-\frac{1}{\sqrt{2}}\,\,(f_{r-1}+g_{r-1})\end{array}\]
 
-**9.9.13**: \[\begin{array}{l}\mbox{\rm ber}_{*}(-x){=}\,(-)^{*}\,\,{\rm ber}_{*}\,\,x, \qquad{\rm bei}_{*}(-x){=}\,(-)^{*}\,\,{\rm bei}_{*}\,\,x\\ \mbox{\rm Recurrence Relations}\end{array}\]
-**9.9.14**: \[\begin{array}{l}f_{r+1}{+}f_{r-1}{=}\,{-}\frac{\nu\sqrt{2}}{x}\,\,(f_{r}{-}g_{r})\\ \mbox{\rm\ \
+where
+9.15 \[\begin{array}{l|l}f_{r}=\mbox{ber},\,x\\ g_{r}=\mbox{bei},\,x\\ f_{r}=\mbox{kei},\,x\\ g_{r}=\mbox{kei},\,x\\ g_{r}=-\mbox{ker},\,x\end{array}\]
+9.16 \[\begin{array}{l|l}f_{r}=\mbox{ber},\,x\\ g_{r}=-\mbox{ber},\,x\\ f_{r}=\mbox{kei},\,x\\ g_{r}=-\mbox{ker},\,x\end{array}\]
+9.17 \[\begin{array}{l|l}\sqrt{2}\,\,\mbox{ber}^{\prime}\,x=\mbox{ber}_{1}\,x+ \mbox{bei}_{1}\,x\\ \sqrt{2}\,\,\mbox{bei}^{\prime}\,x=--\mbox{ber}_{1}\,x+\mbox{bei}_{1}\,x\\ \sqrt{2}\,\,\mbox{kei}^{\prime}\,x=\mbox{ker}_{1}\,x+\mbox{kei}_{1}\,x\\ \sqrt{2}\,\,\mbox{kei}^{\prime}\,x=--\mbox{ker}_{1}\,x+

@@ -1,43 +1,41 @@
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{h}{3}\left[f_{0}+4f_{1}+f_{2}\right]\frac{h^{5}}{90} f^{(\alpha)}(\xi)\]
+\[25.4.5\]
 
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{h}{3}\left[f_{0}+4f_{1}+f_{2}\right]\frac{h^{5}}{90} f^{(\alpha)}(\xi)\]
+\[\int_{x_{0}}^{x_{2n}}f(x)dx= \frac{h}{3}\left[f_{0}+4f_{1}+f_{2}\right]\frac{h^{8}}{90}f^{(0)}(\xi)\]
 
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{3h}{8}\left(f_{0}+3f_{1}+3f_{2}+f_{3}\right)- \frac{3f^{(\alpha)}(\xi)h^{5}}{80}\]
+\[\int_{x_{0}}^{x_{2n}}f(x)dx= \frac{1}{3}\left[f_{0}+4f_{1}+f_{2}\right]\frac{h^{5}}{90}f^{(0)}(\xi)\]
 
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{5h}{288}\left(19f_{0}+75f_{1}+50f_{2}+50f_{3} \right.\]
+\[\int_{x_{0}}^{x_{2n}}f(x)dx= \frac{1}{3}\left[f_{0}+4(f_{1}+f_{3}+\ldots+f_{2n-1})\right]\frac{nh^{5}}{90} f^{(0)}(\xi)\]
 
-\[\left.+75f_{1}+19f_{0}\right)-\frac{275f^{(\alpha)}(\xi)h^{5}}{12096}\]
+\[\left.\hskip 17.071654pt\begin{array}{c}\mbox{Euler-Maclaurin Summation Formula}\\ 25.4.7\\ \int_{x_{0}}^{x_{2n}}f(x)dx= k\left[\frac{f_{0}}{2}+f_{1}+f_{2}+\ldots+f_{s-1}+\frac{f_{s}}{2}\right]\\ -\frac{B_{2}}{2!}\end{array}\right\}\]
 
-\[\int_{x_{0}}^{x_{0}}f(x)dx=\frac{h}{140}\left(41f_{0}+216f_{1}+27f_{3}+272f_{3} \right.\]
+\[\int_{x_{0}}^{x_{2n}}f(x)dx= \;\ldots\;\frac{B_{2n}h^{2n}}{\left(2k\right)!}\left[f_{n}^{(2n-1)}-f_{0}^{(2 n-1)}\right]+R_{2n}\]
 
-\[\left.+27f_{4}+216f_{3}+41f_{0}\right)-\frac{9f^{(\alpha)}(\xi)h^{5}}{1400}\]
+\[\hskip 17.071654pt\begin{array}{c}\mbox{Re}_{2n}= \frac{\theta nB_{2n}s,h^{2n+3}}{\left(2k+2\right)!}\max_{x_{0}\leq x\leq x_{2n}}|f^{(4n+2)}(x)|,\quad(-1\leq\theta\leq 1)\end{array}\]
 
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{7h}{140}\left(41f_{0}+216f_{1}+27f_{3}+272f_{3} \right.\]
+(For \(B_{2n}\), Bernoulli numbers, see chapter 23.)
 
-\[\left.+75f_{1}+41f_{0}\right)-\frac{9f^{(\alpha)}(\xi)h^{5}}{1400}\]
+If \(f^{(2n+2)}(x)\) and \(f^{(3n+4)}(x)\) do not change sign for \(x_{0}<x<x_{n}\) then \(|R_{2n}|\) is less than the first neglected term. If \(f^{(3n+2)}(x)\) does not change sign for \(x_{0}<x<x_{n}\), \(|R_{2n}|\) is less than twice the first neglected term.
 
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{7h}{140}\left(41f_{0}+216f_{1}+27f_{3}+272f_{3} \right.\]
+Lagrange Formula
 
-\[\left.+75f_{1}+41f_{0}\right)-\frac{9f^{(\alpha)}(\xi)h^{5}}{1400}\]
+\[\int_{x}^{x_{0}}f(x)dx= \sum_{i=0}^{n}\left(L_{i}^{(n)}(b)-L_{i}^{(n)}(a)\right)f_{i}+R_{n}\]
 
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{7h}{140}\left(41f_{0}+216f_{1}+27f_{3}+272f_{3} \right.\]
+(See 25.2.1.)
 
-\[\left.+27f_{4}+216f_{3}+41f_{0}\right)-\frac{9f^{(\alpha)}(\xi)h^{5}}{1400}\]
+\[L_{i}^{(n)}(x)= \frac{1}{\pi_{x}^{*}(x_{i})}\int_{x_{0}}^{x}\frac{\pi_{x}(t)}{t-x_{i}} dt= \int_{x_{0}}^{x}l_{i}(t)dt\]
 
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{7h}{140}\left(41f_{0}+216f_{1}+27f_{3}+272f_{3} \right.\]
+\[25.4.10\;\;R_{n}= \frac{1}{(n+1)!}\int_{x}^{x}\pi_{x}(x)f^{(n+1)}(\xi(x))dx\]
 
-\[\left.+27f_{4}+216f_{3}+41f_{0}\right)-\frac{9f^{(\alpha)}(\xi)h^{5}}{1400}\]
+Equally Spaced Abscissas
 
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{7h}{17280}\left(751f_{0}+3577f_{1}+1323f_{2} \right.\]
+\[25.4.11\]
 
-\[\left.+2989f_{3}+2989f_{4}+1323f_{3}+3577f_{6}\right.\]
+\[\int_{x_{0}}^{x_{2n}}f(x)dx= \frac{1}{h^{8}}\sum_{i=0}^{n}f_{i}\frac{(-1)^{n-i}}{i!(n-i)!}\int_{x_{0}}^{x_{2n}}\frac{\pi_{x}(x)}{x-x_{i}}dx+ R_{n}\]
 
-\[\left.+751f_{3}\right)-\frac{8183f^{(\alpha)}(\xi)h^{5}}{518400}\]
+\[25.4.12\]
 
-\[\int_{x_{0}}^{x_{2}}f(x)dx=\frac{4h}{14175}\left(989f_{0}+5888f_{1}-928f_{2} \right.\]
+\[\int_{x_{0}}^{x_{2n}}f(x)dx= \frac{1}{h}\sum_{i=0}^{n}f_{i}\frac{(-1)^{n-i}}{i!(n-i)!}\int_{x_{0}}^{x_{2n}}\frac{\pi_{x}(x)}{x-x_{i}}dx+R_{n}\]
 
-\[\left.+10496f_{3}-4540f_{4}+10496f_{5}-928f_{6}+5888f_{7}\right.\]
+\[25.4.12\]
 
-\[\left.+989f_{3}-\frac{2368}{46775}f^{(\alpha)}(\xi)h^{1}\right.\]
-
-\[\left.+989f_{4}-\frac{2368}{46777
+\[\int_{x_{0}}^{x_{2n}}f(x)dx= \frac{1}{h}\sum_{i=0}^{n}(L_{i}^{(n)}(b)-L_{i}^{(n)}(

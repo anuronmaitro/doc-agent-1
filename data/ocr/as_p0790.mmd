@@ -1,19 +1,77 @@
 
 
-### Change of Interval of Orthogonality
+**References**
 
-In some applications it is more convenient to use polynomials orthogonal on the interval [0, 1]. One can obtain the new polynomials from the ones given in this chapter by the substitution \(x\!=\!2\widetilde{x}\!-\!1\). The coefficients of the new polynomial can be computed from the old by the following recursive scheme, provided the standardization is not changed. If
+* [1]text@nbspaceM.@nobreakspaceB.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1983) 2467; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1984) 2067; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1985) 2067; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1986) 2067; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1987) 2067; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1988) 2067; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1988) 2067; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1988) 2067; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1988) 2067; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1988) 2067; M.@nobreakspaceB.@nobreakspaceLectures given at the workshop on "Theoretical Aspects of Particle Physics", edited by S.@nobreakspaceL.@nobreakspaceSusskind, Phys. Rev. Lett. **58** (1988) 2068; M.@nobreakspaceB.
 
-\[f_{n}(x)\!=\!\sum\limits_{m=0}^{n}a_{n}x^{m},\ \ \ f_{n}^{\ast}(x)\!=\!\int_{x} (2x\!-\!1)\!=\!\sum\limits_{m=0}^{n}a_{n}^{\ast}x^{m}\]
 
-then the \(a_{n}^{\ast}\) are given recursively by the \(a_{n}\) through the relations
 
-\(a_{n}^{(t)}\!=\!2a_{n}^{(t-1)}\!-\!a_{n+1}^{(t)}\); \(m\!=\!n\!-\!1\), \(n\!-\!2\), \(\cdot\) , \(j\!\); \(j\!=\!0\), \(1\), \(2\), \(\cdot\) , \(n\)
 
-\(a_{n}^{(t)}\!=\!a_{n}\!/2\), \(m\!=\!0\), \(1\), \(2\), \(\cdot\) , \(n\)
 
-\(a_{n}^{(t)}\!=\!2^{j}a_{n}\), \(j\!=\!0\), \(1\), \(2\), \(\cdot\) , \(n\) and \(a_{n}^{(t)}\!=\!a_{n}^{\ast}\); \(m\!=\!0\), \(1\), \(2\), \(\cdot\) , \(n\).
+**Change of Intertwelve**
 
-**Example 4.** Given \(T_{s}(x)\!=\!5x\!-\!20x^{2}\!+\!16x^{5}\), find \(T_{1}^{\ast}(x)\).
+In some applications it is more convenient to One can obtain the new polynomials from the ones. The coefficients of the new polynomial can be computed provided the standardization is not changed. If
 
-\(j\
+\[f_{n}(x)=\sum_{m=0}^{n}a_{m}a^{m},\quad f_{n}^{*}\]
+
+then the \(a_{m}^{*}\) are given recursively by the \(a_{m}\) throug
+
+
+
+**29.19. Least Square Approximations**
+
+_Problem:_ Given a function \(f(x)\) (analytically or in form of a table) in a domain \(D\) (which may be a continuous interval or a set of discrete points).2 Approximate \(f(x)\) by a polynomial \(F_{n}(x)\) of given degree \(n\) such that a weighted sum of the squares of the errors in \(D\) is least.
+
+Footnote 2: \(f(x)\) has to be square integrable, see e.g. [22.17].
+
+_Solution:_ Let \(w(x)\geq 0\) be the weight function chosen according to the relative importance of the errors in different parts of \(D\). Let \(f_{m}(x)\) be orthogonal polynomials in \(D\) relative to \(w(x)\), i.e. \((f_{m},f_{n})=0\) for \(m\neq n\), where
+
+\[(f,g)=\left\{\begin{array}{ll}\int_{D}w(x)f(x)g(x)dx\\ &\mbox{if $D$ is a continuous interval}\\ \sum\limits_{m=1}^{N}w(x_{m})f(x_{m})g(x_{m})\\ &\mbox{if $D$ is a set of $N$ discrete points $x_{m}$.}\end{array}\right.\]
+
+Then
+
+\[F_{n}(x)=\sum\limits_{m=0}^{n}a_{m}f_{m}(x)\]
+
+where
+
+\[a_{m}=(f,f_{m})/(f_{n},f_{m}).\]
+
+
+
+**Figure Captions**
+
+
+
+## 3 Real of Orthogonality
+
+To use polynomials orthogonal on the interval [0, a given in this chapter by the substitution \(x\)=2\(\overline{x}\)-outed from the old by the following recursive scheme
+
+\((\omega)=f_{n}(2x-1)=\sum_{m=0}^{n}a_{m}^{+}a^{m}\)
+
+h the relations
+
+1, 2, . . ., _n_
+
+2, . . . , _n._
+
+d \(T^{*}_{5}(x)\).
+
+\begin{tabular}{c|c|c|c}  & 2 & 1 & 0 \\  & 0 & 2.5=\(a^{(-1)}_{1}\) & 0 \\  & 4 & 1 & 0 \\ \(-48\) & \(-400\!=\!a^{*}_{2}\) & & \(50\!=\!a^{*}_{1}\) & \(-1\!\cdot\!1\) \\ \(=\!a^{*}_{3}\) & & & \\ \end{tabular}
+
+\(\bullet\)\(50x\!-\!1\).
+
+\(D\) a Continuous Interval
+
+**Example 5.** Find a least square polynomial degree 5 for \(f(x)\!=\!\frac{1}{1\!+\!x}\), in the interval \(2\!\leq\!x\!\leq\!\) using the weight function
+
+\[w(x)\!=\!\frac{1}{\sqrt{(x\!-\!2)(5\!-\!x)}}\]
+
+which stresses the importance of the errors at \(t\) ends of the interval.
+
+Reduction to interval \([-1,1]\), \(t\!=\!\frac{2x\!-\!7}{3}\)
+
+\[w(x(t))\!=\!\frac{2}{3}\,\frac{1}{\sqrt{1\!-\!t^{2}}}\]
+
+From \(22.2\), \(f_{m}(t)\!=\!T_{m}(t)\) and
+
+\[a_{m}\!=\!\frac{4}{3\pi}\int_{-1}^{1}\frac{1}{\sqrt{1\!-\!t^{2}}}\,\frac{1}{t\! +\!3}\;T_{m}(t)dt\qquad(m\!\neq\!0)\]

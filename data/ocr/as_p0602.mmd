@@ -1,12 +1,12 @@
 
 
-\begin{tabular}{c|c|c|c} \multicolumn{4}{c}{**Elliptic integrals**} \\ \hline \hline \(n\) & \(a_{n}\) & \(b_{n}\) & \(c_{n}\) \\ \hline
-0 & 1.00000 00000 & 1.11111 & 111111 & 99380 7900 \\
-1 & 55555 555555 & 3333333333 & 44444 4444 & 44444 4444 & 44444 4444 \\
-2 & .44444 4444 & 43033 14829 & 11111 1111 & 11111 \\
-3 & .43738 79636 & .43738 10380 & 0.00705 64808 \\
-4 & .43735 95008 & .43735 9499 & 0.00002 34528 \\
-5 & .43735 95003 & .43735 95003 & 0 \\ \hline \end{tabular} Thus \(K(80/81)\)=\(\frac{1}{2}\pi a_{5}\)=3.59154 5001.
+\begin{tabular}{c|c c|c c}  & \multicolumn{4}{c}{ELLIPITIC INTEGRAIS} \\ \hline \(n\) & \(a_{n}\) & \(b_{n}\) & \(c_{n}\) \\ \hline
+0 & 1.00000 & 000000 & 1.11111 & 99380 7900 \\
+1 & 55555 & 55555 & 33333 & 33333 & 44444 4444 \\
+2 & .44444 & 44444 & 43033 & 14829 & 11111 1111 \\
+3 & .43738 & 79636 & 43738 & 10830 & 0.0076 64808 \\
+4 & .43735 & 95008 & 43735 & 94999 & 0.00002 34528 \\
+5 & .43735 & 95003 & 43735 & 95003 & 0 \\ \hline \end{tabular} Thus \(K(80/81)\)=\(\frac{1}{2}\pi a_{5}\)!=3.59154 5001.
 
 **Example 4.** Find \(E(80/81)\).
 
@@ -14,42 +14,38 @@
 
 Use 17.3.30 which gives, with \(m\)=80/81
 
-\[E(80/81) = \frac{10}{9}\ E(.64)-\frac{1}{5}\ K(.64)\] \[= 1.01910\ 6047\]
+\[E(80/81) = \frac{10}{9}\ E(.64)-\frac{1}{5}\ K(.64)\] \[= 1.01910\ \ 6047\]
 
 taking \(E(.64)\) and \(K(.64)\) from Table 17.1.
 
-**Second Method**
+Second Method
 
 Polynomial approximation, 17.3.36 gives \(E(80/81)\)=1.01910 6060. The last two figures must be dropped to keep within the limit of accuracy of the method.
 
-**Third Method**
+Third Method
 
 Arithmetic-geometric mean, 17.6. The numbers were calculated in Example 3, fourth method, and we have
 
-\[\frac{K(80/81)-E(80/81)}{K(80/81)} = \frac{1}{2}\left[c_{0}^{2}+2c_{1}^{2}+2c_{2}^{2}+\ .\ .\ .\ .\ +2^{5}c_{2}^{2}\right]\] \[= \frac{1}{2}\left[1.43249\ 71298\right]\] \[= .71624\ 85649.\]
-
-Using the value of \(K(80/81)\) found in Example 3, fourth method, we have
+\[\frac{K(80/81)\!-\!E(80/81)}{K(80/81)} = \frac{1}{2}\left[c_{0}^{2}+2c_{1}^{2}+2c_{2}^{2}+\ .\ .\ .\ .\ +2^{5}c_{2}^{2}\right]\] \[= \frac{1}{2}\left[1.43249\ 71298\right]\] \[= .71624\ 85649.\] Using the value of \(K(80/81)\) found in Example 3, fourth method, we have
 
 \[E(80/81) = 1.01910\ 6048\ \text{to}\ 9\text{D}.\]
 
-**Example 5.** Find \(q\) when \(m\)=.9995.
+**Example 5.** Find \(q\) when \(m\)=.9995. Here \(m_{t}\)=.0005 and so from Table 17.4
 
-Here \(m_{1}\)=.0005 and so from Table 17.4
+\[Q(m) = .06251\ 563013\] \[q_{1} = m_{t}Q(m) = .00003\ 12578\ 15.\] From 17.3.19
 
-\[Q(m) = .06251\ 563013\] \[q_{1} = m_{1}Q(m) = .00003\ 12578\ 15.\]
+\[\ln\left(\frac{1}{q}\right) = \pi^{*}\!/\!\ln\left(\frac{1}{q_{L}}\right) = \pi^{2}\!/\!10.37324\ 1132\] \[= .95144\ 84701\] \[q = .38618\ 125.\] The computation could also be made using common logarithms with the aid of 17.3.20. The point of this procedure is that it enables us to calculate \(q_{1}\) without the loss of significant figures which would result from direct interpolation in Table 17.1. By this means \(\ln\left(1/q_{L}\right)\) can be found without loss of accuracy.
 
-From 17.3.19
+**Example 6.** Find \(m\) to 10D when \(K^{\prime}/K\)=.25 and when \(K^{\prime}/K\)=.3.5. From 17.3.15 with \(K^{\prime}/K\)=.25 we can write the iteration formula
 
-\[\ln\left(\frac{1}{q}\right) = \pi^{\gamma}/\ln\left(\frac{1}{q_{1}}\right) = \pi^{2}/10.37324\ 1132\] \[= .95144\ 84701\] \[q = .38618\ 125.\]
+\[m^{(n+1)} = 1- 16e^{- 4\sigma}\ \exp\ [- \pi L(m^{(n)})/K^{\prime}(m^{(n)})].\] Then by iteration using Tables 17.1 and 17.4
 
-The computation could also be made using common logarithms with the aid of 17.3.20. The point of this procedure is that it enables us to calculate \(q_{1}\) without the loss of significant figures which would result from direct interpolation in Table 17.1. By this means \(\ln\left(1/q_{1}\right)\) can be found without loss of accuracy.
+\[n\]
 
-**Example 6.** Find \(m\) to 10D when \(K^{\prime}/K\)=.25 and when \(K^{\prime}/K\)=.3.5.
+\[m^{(n)}\]
 
-From 17.3.15 with \(K^{\prime}/K\)=.25 we can write the iteration formula
+\[0\]
 
-\[m^{(n+1)} = 1- 16e^{- 4\sigma}\ \exp\ [- \pi L(m^{(n)})/K^{\prime}(m^{(n)})].\]
+\[1.\]
 
-Then by iteration using Tables 17.1 and 17.4
-
-\begin{tabular}{c|c|c} \multicolumn{4}{c}{**Tables 17
+\[99994\ 42025\]

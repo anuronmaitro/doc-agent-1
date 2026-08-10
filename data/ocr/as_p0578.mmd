@@ -2,15 +2,15 @@
 
 **16.34. Relation of Jacobi's Zeta Function to the Theta Functions**
 
-\[Z(u) = \frac{\partial}{\partial u}\ln\,\Theta(u)\]
+\[Z(u) = {\frac{\partial}{\partial u}}\ln\,\Theta(u)\]
 
-\[\begin{array}{l} {16.34.1}\quad\quad Z(u) = \frac{\pi}{2K}\frac{\vartheta_{s}^{\prime}\left(\frac{\pi u}{2K}\right)}{\vartheta_{s}\left(\frac{\pi u}{2K}\right)}\frac{\mbox{cn}\ u\ \mbox{dn}\ u}{\mbox{sn}\ u}\end{array}\]
+\[\begin{array}{lcl} 16.34.1&&Z(u) = {\frac{\pi}{2K}}{\frac{\vartheta_{s}^{\prime}\left({\frac{\pi u}{2K}}\right)}{\vartheta_{s}\left({\frac{\pi u}{2K}}\right)}}{\frac{\mbox{cn}\ u\ \mbox{dn}\ u}{\mbox{sn}\ u}}\end{array}\]
 
-\[\begin{array}{l} {16.34.2}\quad\quad\quad= \frac{\pi}{2K}\frac{\vartheta_{s}^{\prime}\left(\frac{\pi u}{2K}\right)}{\vartheta_{s}\left(\frac{\pi u}{2K}\right)}\frac{\mbox{dn}\ u\ \mbox{sn}\ u}{\mbox{cn}\ u}\end{array}\]
+\[\begin{array}{lcl} 16.34.2&&= {\frac{\pi}{2K}}{\frac{\vartheta_{s}^{\prime}\left({\frac{\pi u}{2K}}\right)}{\vartheta_{s}\left({\frac{\pi u}{2K}}\right)}}{\frac{\mbox{dn}\ u\ \mbox{sn}\ u}{\mbox{cn}\ u}}\end{array}\]
 
-\[\begin{array}{l} {16.34.3}\quad\quad\quad= \frac{\pi}{2K}\frac{\vartheta_{s}^{\prime}\left(\frac{\pi u}{2K}\right)}{ \vartheta_{s}\left(\frac{\pi u}{2K}\right)}m\,\frac{\mbox{sn}\ u\ \mbox{cn}\ u}{\mbox{dn}\ u}\end{array}\]
+\[\begin{array}{lcl} 16.34.3&&= {\frac{\pi}{2K}}{\frac{\vartheta_{s}^{\prime}\left({\frac{\pi u}{2K}}\right)}{\vartheta_{s}\left({\frac{\pi u}{2K}}\right)}}m\,{\frac{\mbox{sn}\ u\ \mbox{cn}\ u}{\mbox{dn}\ u}}\end{array}\]
 
-\[\begin{array}{l} {16.34.4}\quad\quad= \frac{\pi}{2K}\frac{\vartheta_{s}^{\prime}\left(\frac{\pi u}{2K}\right)}{ \vartheta_{s}\left(\frac{\pi u}{2K}\right)}\end{array}\]
+\[\begin{array}{lcl} 16.34.4&&= {\frac{\pi}{2K}}{\frac{\vartheta_{s}^{\prime}\left({\frac{\pi u}{2K}}\right)}{\vartheta_{s}\left({\frac{\pi u}{2K}}\right)}}\end{array}\]
 
 **16.35. Calculation of Jacobi's Zeta Function \(Z(u|m)\) by Use of the Arithmetic-Geometric Mean**
 
@@ -20,4 +20,23 @@ Form the A.G.M. scale 17.6 starting with
 
 terminating at the \(N\)th step when \(e_{N}\) is negligible to the accuracy required. Find \(\varphi_{N}\) in degrees where
 
-\[\begin{array}{l} {16.35.2}\quad\
+\[\begin{array}{lcl} 16.35.2&&\varrho_{N} = 2^{\alpha}a_{N}u\frac{180^{\alpha}}{\pi}\end{array}\]
+
+and then compute successively \(\varphi_{N-1}\), \(\varphi_{N-2}\), \(\cdot\) \(\cdot\) \(\cdot\) \(\varphi_{1}\), \(\varphi_{0}\) from the recurrence relation
+
+\[\begin{array}{lcl} 16.35.3&&\sin\ (2\varphi_{n-1} \!- \!\varphi_{n}) = \!\frac{c_{n}}{a_{n}}\sin\ \varphi_{n}.\end{array}\]
+
+Then
+
+\[\begin{array}{lcl} 16.35.4&&Z(u) \!m) = c_{1}\sin\ \varphi_{1}\!+\!e_{2}\sin\ \varphi_{2}\!+\ \ldots\ +c_{N}\sin\ \varphi_{N}.\end{array}\]
+**16.36. Neville's Notation for Theta Functions**
+
+These functions are defined in terms of Jacobi's theta functions of 16.31 by
+
+\[\begin{array}{lcl} 16.36.1&&\vartheta_{s}(u) = {\frac{\mbox{H}(u)}{\mbox{H}^{\prime}(0)}}\,\vartheta_{s}(u) = {\frac{\mbox{H}(u\!+\!K)}{\mbox{H}(K)}}\\ \end{array}\]
+
+\[\begin{array}{lcl} 16.36.2&&\vartheta_{d}(u) = {\frac{\Theta(u\!+\!K)}{\mbox{G}(K)}},\vartheta_{s}(u) = {\frac{\Theta(u)}{\Theta(0)}}\end{array}\]
+
+If \(\lambda\), \(\mu\) are any integers positive, negative, or zero the points \(u_{0}\!+\!2\lambda K\!+\!2\mu iK^{\prime}\) are said to be _congruent to \(u_{0}\)_.
+
+\[\begin{array}{lcl} \vartheta_{s}(u)&\mbox{has zeros at the points congruent to $0$}\\ \vartheta_{s}(u)&\mbox{has zeros at the points congruent to $K$}\\ \vartheta_{s}(u)&\mbox{has zeros at the points congruent to $iK^{\prime}$}\\ \vartheta

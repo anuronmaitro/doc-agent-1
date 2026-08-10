@@ -1,24 +1,27 @@
 
 
 \begin{tabular}{c c c c}
-5.2.5 & si(_z_)=Si(_z_)-\(\frac{\pi}{2}\) & 5.2.16 & Ci(_z_)=\(\gamma\)+ln _z_+\(\sum\limits_{n=1}^{\infty}\frac{(-1)^{n}z^{2n}}{2n(2n)!}\) \\  & Auxiliary Functions & & \\
+5.2.5 & si(_z_)=Si(_z_)-\(\frac{\pi}{2}\) & 5.2.16 & Ci(_z_)=g+ln _z_+\(\sum\limits_{n=1}^{\infty}\frac{(-1)^{n}z^{2n}}{2n(2n)!}\) \\  & Auxiliary Functions & & \\
 5.2.6 & \(f(z)\)=Ci(_z_) sin _z_-si(_z_) cos \(z\) & & \\
 5.2.7 & \(g(z)\)=\(-\)Ci(_z_) cos _z_-si(_z_) sin \(z\) & & \\
-5.2.8 & \(\mbox{\small{Sine and Cosine Integrals in Terms of Auxiliary Functions}}\) & & \\
+**Sine and Cosine Integrals in Terms of Auxiliary Functions** & & & \\
 5.2.8 & Si(_z_)=\(\frac{\pi}{2}\)-\(f(z)\) cos _z_-\(g(z)\) sin \(z\) & & \\
-5.2.9 & Ci(_z_)=\(f(z)\) sin _z_-\(g(z)\) cos \(z\) & & Ci(_z_)=\(\overline{\mbox{Ci}(z)}\)-i\(\pi\) (0\(<\)arg _z\(<\)\(\pi\)_) \\  & Integral Representations & & Ci(_z_)=\(\overline{\mbox{Ci}(z)}\) \\
-5.2.10 & si(_z_)=\(-\int_{0}^{z}e^{-z\cos t}\cos\,(z\sin\,t)dt\) & & \\  & & & \\
-5.2.11 & Ci(_z_)+\(E_{1}(z)\)=\(\int_{0}^{\frac{\pi}{2}}e^{-z\cos t}\sin\,(z\sin\,t)dt\) & & \\
-5.2.12 & \(f(z)\)=\(\int_{0}^{\infty}\frac{\sin t}{t+z}\,dt\)=\(\int_{0}^{\infty}\frac{e^{-zt}}{t^{2}+1}\,dt\) & (_Rez\(>\)_0) & \\
-5.2.13 & \(g(z)\)=\(\int_{0}^{\infty}\frac{\cos t}{t+z}\,dt\)=\(\int_{0}^{\infty}\frac{te^{-zt}}{t^{2}+1}\,dt\) & (_Rez\(>\)_0) & \\  & & & Ci(_z_)=\(-\frac{1}{2}\,\{E_{1}(iz)+E_{1}(-iz)\}\) ((arg _z\(|\)\(<\)\(\overline{z}\)_) \\  & & & \\
-5.2.24 & Ci(_iz_)=\(\frac{1}{2}\,[\mbox{\rm{Ei}}(x)\)\(-\)\(E_{1}(x)]\)+\(\frac{\pi}{2}\) (\(x\)\(>\)0) & \\  & Value at Infinity & & \\
-5.2.25 & \(\lim\limits_{z\to\infty}\mbox{\rm{Si}}(x)\)=\(\frac{\pi}{2}\) & & \\
+5.2.9 & Ci(_z_)=\(f(z)\) sin _z_-\(g(z)\) cos \(z\) & & Ci(_z_)=Ci(_z_)-i_π_(0<arg z<_π_) \\  & Integral Representations & & Ci(_z_)=Ci(_z_) \\
+5.2.10 & si(_z_)=-\(\int_{0}^{z}e^{-z\cos t}\cos\,(z\sin\,t)dt\) & & Relation to Exponential Integral \\  & & & \\
+5.2.11 & Ci(_z_)+\(E_{1}(z)\)=\(\int_{0}^{z}e^{-z\cos t}\sin\,(z\sin\,t)dt\) & & \\
+5.2.12 & \(f(z)\)=\(\int_{0}^{z}\frac{\sin t}{t+z}\,dt\)=\(\int_{0}^{z}\frac{e^{-zt}}{t^{2}+1}\,dt\) & (_Rx>_0) & \\
+5.2.13 & \(g(z)\)=\(\int_{0}^{z}\frac{\cos t}{t+z}\,dt\)=\(\int_{0}^{z}\frac{te^{-zt}}{t^{2}+1}\,dt\) & (_Rx>_0) & \\  & & & Ci(_z_)=-\(\frac{1}{2}\left\{E_{1}(iz)+E_{1}(-iz)\right\}\) ((arg z|<_{2}^{\pi}\)) \\  & & & \\
+5.2.24 & Ci(_ix_)=\(\frac{1}{2}\left[\text{Ei}(x)-E_{1}(x)\right]+\text{i}\frac{\pi}{2}\) (_x>_0) & \\  & Value at Infinity & & \\
+5.2.25 & \(\lim\limits_{z\rightarrow\infty}\text{Si}(x)\)=\(\frac{\pi}{2}\) & & \\
 **Integrals** & & & \\ \end{tabular}
 
 (For more extensive tables of integrals see [5.3], [5.6], [5.11], [5.12], [5.13].)
 
-\begin{tabular}{c c c c}
-5.2.26 & \(\int_{z}^{\infty}\frac{\sin t}{t}\,dt\)=\(-\)si (_z_) & ((arg _z_)\(|\)\(<\)\(\pi\)) \\  & & & \\
-5.2.27 & \(\int_{z}^{\infty}\frac{\cos t}{t}\,dt\)=\(-\)Ci (_z_) & ((arg _z_)\(|\)\(<\)\(\pi\)) \\  & & & \\
-5.2.28 & \(\int_{0}^{\infty}e^{-zt}\mbox{\rm{Ci}}\,(t)dt\)=\(\frac{1}{2a}\,\ln\,(1+a^{\pi})\) (\(\mathcal{R}a\)\(>\)0) & \\  & & & \\
-5.2.29 & \(\int_{0}^{\infty}e^{-zt}\,\mbox{\rm{si}}\,(t)dt\)=\(-\)\(\frac{1}{a}\arctan\,a\) (\(\mathcal{R}a\)\(
+\begin{tabular}{l l}
+5.2.26 & Si(_z_)=\(\sum\limits_{n=0}^{\infty}\frac{(-1)^{n}z^{2n+1}}{(2n+1)(2n+1)!}\) & \\
+5.2.27 & Si(_z_)=\(\sum\limits_{n=0}^{\infty}J_{z+1}^{2}\left(\frac{z}{2}\right)\) & \\
+5.2.28 & Si(_z_)=\(\gamma\)+ln _z_+\(\sum\limits_{n=1}^{\infty}\frac{z^{2n}}{2n(2n)!}\) & \\  & Symmetry Relations & \\
+5.2.19 & Si(_z_)=\(-\)Si(_z_), Si(_z_)=\(\overline{\text{Si}(z)}\) \\
+5.2.20 & Si(_z_)=\(f(z)\) sin _z_-\(g(z)\) cos \(z\) & \\  & & Ci(_z_)=\(\overline{\text{Ci}(z)}\)-i_π_(0<arg z<_π_) \\  & Integral Representations & & Ci(_z_)=\(\overline{\text{Ci}(z)}\) \\
+**Relation to Exponential Integral** & & \\
+5.2.21 & Si(_z_)=\(\frac{1}{2i}\left[E_{1}(iz)-E_{1}(-iz)\right]+\frac{\pi}{2}\) (

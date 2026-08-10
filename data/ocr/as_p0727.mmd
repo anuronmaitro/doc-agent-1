@@ -1,6 +1,8 @@
-\[d_{4} = \frac{63}{w^{2}} + \frac{1260}{w^{4}} + \frac{2943}{w^{6}}\frac{486}{w^{6}}\] \[d_{4} = \frac{527}{w^{3}} + \frac{15617}{w^{5}} + \frac{69001}{w^{7}} + \frac{41607}{w^{8}}\]
+\[d_{4} = \frac{63}{w^{2}} + \frac{1260}{w^{4}} + \frac{2943}{w^{8}}\frac{486}{w^{5}}\]
 
-#### 20.2.31 \(b_{r+1} - a_{r} \sim 2^{a + 8}\sqrt{2}\pi q^{r+1}\varepsilon^{- 4\sqrt{r}}/r!\),
+\[d_{4} = \frac{527}{w^{3}} + \frac{15617}{w^{5}} + \frac{69001}{w^{7}} + \frac{41607}{w^{8}}\]
+
+#### 20.2.31 \(b_{r+1} - a_{r} \sim 2^{a + s}\sqrt{2/\pi}q^{r+1}e^{- \epsilon\sqrt{r}}/r!\),
 
 (given in [20.36] without proof.)
 
@@ -8,33 +10,32 @@
 
 Since the coefficients of Mathieu's equation
 
-\[20.3.1\qquad y^{\prime\prime} + (a - 2q\,\cos\,2z)y = 0\]
+\[20.3.1 y^{\prime\prime} + (a - 2q\cos 2z)y = 0\]
 
 are periodic functions of \(z\), it follows from the known theory relating to such equations that there exists a solution of the form
 
-\[20.3.2\qquad F_{\nu}(z) = e^{\nu z}P(z),\]
+\[20.3.2 F_{r}(z) = e^{i\pi}P(z),\]
 
-where \(\nu\) depends on \(a\) and \(q\), and \(P(z)\) is a periodic function, of the same period as that of the coefficients in 20.3.1, namely \(\pi\). (Floquet's theorem; see [20.16] or [20.22] for its more general form.) The constant \(\nu\) is called the _characteristic exponent_. Similarly
+where \(\nu\) depends on \(a\) and \(q\), and \(P(z)\) is a periodic function, of the same period as that of the coefficients in **20.3.1,** namely \(\pi\). (Floquet's theorem; see [20.16] or [20.22] for its more general form.) The constant \(\nu\) is called the _characteristic exponent_. Similarly
 
-\[20.3.3\qquad F_{\nu}(-z) = e^{-\nu z}P(-z)\]
+\[20.3.3 F_{r}(- z) = e^{- i\pi}P(- z)\]
 
-satisfies 20.3.1 whenever 20.3.2 does. Both \(F_{\nu}(z)\) and \(F_{\nu}(-z)\) have the property
+satisfies **20.3.1** whenever **20.3.2** does. Both \(F_{r}(z)\) and \(F_{r}(- z)\) have the property
 
-#### 20.3.4 \(y(z + k\pi) = C^{u}y(z)\), \(y = F_{\nu}(z)\) or \(F_{\nu}(-z)\),
+\[20.3.4\ y(z + k\pi) = C^{u}y(z),\,y = F_{r}(z)\text{ or }F_{r}(- z),\] \[C = e^{i\pi}\text{ for }F_{r}(z),\,C = e^{- i\pi}\text{ for }F_{r}(- z)\]
 
-\[C = e^{i\nu z}\text{ for }F_{\nu}(z)\text{ }C = e^{-i\nu z}\text{ for }F_{\nu}(-z)\]
+Solutions having the property **20.3.4** will hereafter be termed _Floquet_ solutions. Whenever \(F_{r}(z)\) and \(F_{r}(- z)\) are linearly independent, the general solution of **20.3.1** can be put into the form
 
-Solutions having the property 20.3.4 will hereafter be termed _Floquet_ solutions. Whenever \(F_{\nu}(z)\) and \(F_{\nu}(-z)\) are linearly independent, the general solution of 20.3.1 can be put into the form
+\[20.3.5 y = AF_{r}(z) + BF_{r}(- z)\]
 
-\[20.3.5\qquad y = AF_{\nu}(z) + BF_{\nu}(-z)\]
+If \(AB\neq 0\), the above solution will _not be a Floquet solution_. It will be seen later, from the method for determining \(\nu\) when \(a\) and \(q\) are given, that there is some ambiguity in the definition of \(\nu\); namely, \(\nu\) can be replaced by \(r + 2k\), where \(k\) is an arbitrary integer. This is as it should be, since the addition of the factor \(\exp(2ikz)\) in **20.3.2** still leaves a periodic function of period \(\pi\) for the coefficient of \(\exp\,ivz\).
 
-If \(AB\neq 0\), the above solution will _not be a Floquet solution_. It will be seen later, from the method for determining \(\nu\) when \(a\) and \(q\) are given, that there is some ambiguity in the definition of \(\nu\); namely, \(\nu\) can be replaced by \(r + 2k\), where \(k\) is an arbitrary integer. This is as it should be, since the addition of the factor \(\exp(2ikz)\) in 20.3.2 still leaves a periodic function of period \(\pi\) for the coefficient of \(\exp\,ivz\).
+It turns out that when \(a\) belongs to the set of characteristic values \(a\), and \(b\), of **20.2**, then \(\nu\) is zero or an integer. It is convenient to associate \(\nu = r\) with \(a_{r}(q)\), and \(\nu = - r\) with \(b_{r}(q)\); see [20.36]. In the special case when \(\nu\) is an integer, \(F_{r}(z)\) is proportional to \(F_{r}(- z)\); the second, independent solution of **20.3.1** then has the form
 
-It turns out that when \(a\) belongs to the set of characteristic values \(a\), and \(b\), of 20.2, then \(\nu\) is zero or an integer. It is convenient to associate \(\nu = r\) with \(a_{r}(q)\), and \(\nu = - r\) with \(b_{r}(q)\); see [20.36]. In the special case when \(\nu\) is an integer, \(F_{\nu}(z)\) is proportional to \(F_{\nu}(-z)\); the second, independent solution of 20.3.1 then has the form
+\[20.3.6 y_{2} = zee_{r}(z,\,q) + \sum\limits_{k = 0}^{\infty}\,d_{2x + p}\sin\,(2k + p)z,\] associated with \[ce_{r}(z,\,q)\]
 
-\[20.3.6\quad y_{2} = zee_{r}(z,\,q) + \sum\limits_{k = 0}^{\infty}\,d_{2 + \nu}\,\sin\,(2k + p)z,\] associated with \[ce_{r}(z,\,q)\]
+\[20.3.7 y_{2} = zse_{r}(z,\,q) + \sum\limits_{k = 0}^{\infty}\,f_{2x + p}\cos\,(2k + p)z,\] associated with \[se_{r}(z,\,q)\]
 
-\[20.3.7\quad y_{2} = zee_{r}(z,\,q) + \sum\limits_{k = 0}^{\infty}\,f_{2 + p}\,\cos\,(2k + p)z,\] associated with \[se_{r}(z,\,q)\]
+The coefficients \(d_{2x + p}\) and \(f_{2x + p}\) depend on the corresponding coefficients \(A_{n}\) and \(B_{n}\), respectively, of **20.2**, as well as on \(a\) and \(q\). See [20.30], section (7.50)\(-\)(7.51) and [20.58], section V, for details.
 
-The coefficients \(d_{2 + p}\) and \(f_{2 + p}\) depend on the corresponding coefficients \(A_{n}\) and \(B_{n}\), respectively, of 20.2, as well as on \(a\) and \(q\). See [20.30], section (7.50)\(-\)(7.51) and [20.
-
+If \(\nu\) is not 

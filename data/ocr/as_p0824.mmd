@@ -1,26 +1,25 @@
-\[\begin{array}{l}\left|\begin{array}{ccccc}P_{1}&1&0&\ldots&0\\ P_{2}&P_{1}&2&\ldots&\cdot\\ P_{3}&P_{2}&P_{1}&\ldots&\cdot\\ .&.&.&\ldots&\cdot\\ .&.&.&\ldots&0\\ .&.&.&\ldots&n{-}1\\ P_{n}&P_{n-1}&P_{n-2}&\ldots&P_{1}\\ \end{array}\right.\end{array}\]
+\[\begin{array}{l} {\left|\begin{array}{ccccc}P_{1}&1&0&\ldots&0\\ P_{2}&P_{1}&2&&\cdots&.\\ P_{3}&P_{2}&P_{1}&&\cdots&.\\ .&.&.&&\cdots&.\\ .&.&.&&\cdots&0\\ .&.&.&&\cdots&n{-}1\\ P_{n}&P_{n{-}1}&P_{n{-}2}&&\ldots&P_{1}\\ \end{array}\right.}\\ \end{array}\]
 
-summed over \(a_{1}\)+2\(a_{2}\)+ . . . +\(n_{a}\)=\(n\); e.g. if \(P_{k}\)=\(\Sigma_{j-1}^{r}\)z\({}_{j}^{\pm}\), \(j\) for \(k\)=1, 2, . . ., \(n\) then the determinant and sum equal \(n!2x_{1}x_{2}\ldots x_{n}\), the latter sum denoting the \(n\)-th elementary symmetric function of \(x_{1}\), \(x_{2}\), . . ., \(x_{r}\).
+summed over \(a_{1}+2a_{2}+\) . . .. +\(na_{n}=n\); e.g. if \(P_{k}=\Sigma^{r}_{j-i}z^{x}_{j}\) for \(k=1,\,2\), . . ., \(n\) then the determinant and sum equal \(n!2x_{i}x_{i}\dots x_{n}\), the latter sum denoting the \(n\)-th elementary symmetric function of \(x_{1},x_{2},\,\ldots\,,\,x_{r}\).
 
-#### 24.1.3 Stirling Numbers of the First Kind
+#### 24.1.3 Stirling Numbers of the First Kind Definitions
 
-I. Definitions
+A. \((-1)^{n-n}S^{(m)}_{n}\) is the number of permutations of \(n\) symbols which have exactly \(m\) cycles. B. Generating functions
 
-A. \((-1)^{n-n}\)S\({}_{n}^{(m)}\) is the number of permutations of \(n\) symbols which have exactly \(m\) cycles.
+\[x(x{-}1)\,\ldots\,(x{-}n{+}1){=}\mathop{\sum}\limits_{n=0}^{n} S^{(m)}_{n}x^{n}\]
 
-B. Generating functions
+\[\{\ln\,(1{+}x)\}^{n}{=}m!\mathop{\sum}\limits_{n=m}^{\infty} S^{(m)}_{n}\mathop{\pi}\limits_{n!}^{n} \qquad|x|{<}1\]
 
-\[x(x{-}1)\ldots(x{-}n{+}1){=}\mathop{\sum}\limits_{n=0}^{n}S_{n}^{(m)}x^{m}\]
+C. Closed form (see closed form for \(\mbox{ \boldmath$S$}^{(m)}_{n}\))
 
-\[\{\ln\,(1{+}x)\}^{n}{=}m!\mathop{\sum}\limits_{n=m}^{\infty}S_{n}^{(m)}\mathop{ \pi}\limits_{n}^{n}\mathop{\pi}\limits_{n}^{n}\mathop{\pi}\limits_{n}^{n} \mathop{\pi}\limits_{n}^{n}\mathop{\pi}\limits_{n}^{n}\mathop{\pi}\limits_{n}^{ \left|x\right|}{<}1\]
+\[S^{(m)}_{n}{=}\mathop{\sum}\limits_{k=0}^{n-m} \stackrel{{ n{-}1+k}}{{n-}m+k}\stackrel{{ 2n{-}m}}{{-}m-k}\not{S}^{(m)}_{n{-}m+k}\]
 
-C. Closed form (see closed form for \(\mathop{\mbox{\boldmath$S$}}\limits_{n}^{(m)}\))
+## II Relations
 
-\[S_{n}^{(m)}{=}\mathop{\sum}\limits_{k=0}^{n-m}(-1)^{k}\mathop{\left(n-1{+}k \right)}\mathop{\left(n-m-k\right)}\mathop{\mbox{\boldmath$S$}}\limits_{n-m-k }^{\left(n\right)}\mathop{\mbox{\boldmath$S$}}\limits_{n-m+k}^{\left(n\right)}\]
+* Recurrences \[S^{(m)}_{n+1}{=}S^{(n-1)}_{n}{-}nS^{(m)}_{n}\qquad\qquad\qquad n{\geq}m{\geq}1\] \[\stackrel{{ m}}{{r}}S^{(m)}_{n}{=}\mathop{\sum} \limits_{k=m-r}^{\infty}\stackrel{{ n}}{{r}}\stackrel{{ N(r)}}{{R}}S^{(r)}_{n-k}S^{(m-r)}_{k}\quad\qquad n{\geq}m{\geq}r\]
+* Checks \[\mathop{\sum}\limits_{n=1}^{n} S^{(m)}_{n}{=}0\qquad\qquad\qquad n{>}1\] \[\mathop{\sum}\limits_{n=0}^{n} \,(-1)^{n-n}S^{(m)}_{n}{=}n!\] \[\mathop{\sum}\limits_{k=m}^{n} S^{(m+1)}_{n}{n}^{-}{=}S^{(m)}_{n}\]
+* Numerical analysis \[\frac{d^{m}}{dx^{m}}f(x){=}\,m!\mathop{\sum}\limits_{n=m}^{\infty} \frac{S^{(m)}_{n}}{n!}\,\Delta^{q}f(x)\] if convergent.
 
-## References
+## III Asymptotics and Special Values
 
-* [1] A. Recurrences
-* [2] S\({}_{n}^{(m)}\)S\({}_{n}^{(m)}\)S\({}_{n}^{(m)}\)S\({}_{n-1}^{(m)}\)S\({}_{n}^{(r)}\)S\({}_{n-2}^{(r)}\)S\({}_{n}^{(r)}\)S\({}_{n-2}^{(r)}\)S\({}_{n}^{(r)}\)S\({}_{n-m-k}^{(r)}\)
-* [3] B. Checks \[\mathop{\sum}\limits_{n=1}^{n}S_{n}^{(m)}{=}0\] \[\mathop{\sum}\limits_{n=0}^{n}(-1)^{n-n}S_{n}^{(m)}{=}n!\] \[\mathop{\sum}\limits_{k=n}^{n}S_{n+1}^{(m+1)}n^{-n}{=}S_{n}^{(m)}\]
-* [4] C. Numerical analysis \[\frac{d^{m}}{dx^{m}}f(x){=}\,m!\mathop{\sum}\limits_{n=m}^{\infty}\frac{S_{n}^ {(m)}}{n!}\,\Delta^{\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+\[|S^{(m)}_{n}|{\sim}\,(n{-}1)!(\gamma{+}\ln\,n)^{{m-}1}/(m{-}1)!\] for \[m{=}o(\ln\,n)\] \[\lim_{n{\rightarrow}}\frac{S^{(m)}_{n+1}}{m^{2n}}{m^{2n}}\frac{( {-}1)^{n}}{2^{n}n!}\] \[\lim_{n{\rightarrow}}\frac{S^{(m)}_{n+1}}{nS^{(m)}_{n}}{=}{-}1\] \[S^{(m)}_{n}{=}b_{0n}\] \[S^{(1)}_{n}{=}(-1)^{n-1}(n{-}1)!\] \[S^{(m)}_{n}{=}\,{=}\,{\binom{n}{2}}\] \[S^{(m)}_{n}{=}1\]

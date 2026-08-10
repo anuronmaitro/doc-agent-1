@@ -1,9 +1,19 @@
 
 
-**Example 10.** Evaluate the integral \(\int_{0}^{\ast\ast}\frac{\sin x}{x}\,dx\)\(=\)\(\frac{\pi}{2}\) to 4D using the Euler transform.
+**Example 10.** Evaluate the integral \({\int_{0}^{*}\frac{\sin x}{x}\,dx}\)\(=\)\(\frac{\pi}{2}\) to 4D using the Euler transform.
 
-\(\int_{0}^{\ast}\frac{\sin x}{x}\,dx\)\(=\)\(\sum\limits_{k=0}^{\ast}\int_{k\ast}^{\alpha+t)\ast}\frac{\sin x}{x}\,dx\)\(=\)\(\sum\limits_{k=0}^{\ast}\int_{0}^{\ast}\frac{\sin\left(k\pi+t\right)}{k\pi+t}\,dt\)\(=\)\(\sum\limits_{k=0}^{\ast}\left(-1\right)^{k}\int_{0}^{\ast}\frac{\sin t}{k\pi+t}\,dt\).
+\[\begin{array}{l}{\int_{0}^{*}\frac{\sin x}{x}\,dx}= \sum\limits_{k=0}^{\infty}{\int_{k\pi}^{\alpha+t)\pi}\frac{\sin x}{x}\,dx}\\ \hskip 56.905512pt=\sum\limits_{k=0}^{\infty}{\int_{0}^{\pi}\frac{\sin \left({k\pi}+t\right)}{k\pi}dt}= \sum\limits_{k=0}^{\infty}{(-1)^{k}\!\int_{0}^{\pi}\frac{\sin t}{k\pi\!+\!t}\, dt}.\end{array}\]
 
 Evaluating the integrals in the last sum by numerical integration we get
 
-\(k\)\(\int_{0}^{\ast}\frac{\sin t}{k\pi+t}\,dt\)\(\sum\limits_{k=0}^{\ast}\frac{\sin t}{k\pi+t}\,dt\)\(\sum\limits_{k=0}^{\ast}\frac{\sin t}{k\pi+t}\,dt\)\(\sum\limits_{k=1}^{\ast}k^{-z}\)\(=\)\(1.54976\,7731\)\(
+\[\begin{array}{c|cccccc}k&&\omit\span\omit\span\omit\span\omit\int_{0}^{\pi} \frac{\sin t}{k\pi+t}\,dt\\ \hline 0&1.85194&&&&&&&\\ 1&.43379&&&&&&\\ 2&.25661&&&&&&\\ 3&.18260&\Delta&\Delta^{2}&\Delta^{3}&\Delta^{4}\\ \hline 4&.14180&&&&&&&\\ 5&.11593&-2587&&&&\\ 6&.09805&-1788&&&&-321&\\ 7&.08495&-1310&&&&-168&\\ 8&.07495&-1000&&&&&&&\\ \end{array}\]
+
+The sum to \(k\!=\!3\) is 1.49216. Applying the Euler transform to the remainder we obtain
+
+\[\begin{array}{c}\frac{1}{2}\,(.14180)\!-\!\frac{1}{2^{2}}\,(- .02587)\!+\!\frac{1}{2^{3}}\,(.00799)\\ \hskip 56.905512pt-\frac{1}{2^{4}}\,(-.00321)\!+\!\frac{1}{2^{3}}\,(.00153)\\ \hskip 56.905512pt=.07090\!+\!.00647\!+\!.00100\!+\!.00020\\ \hskip 56.905512pt=.07862\end{array}\]
+
+We obtain the value of the integral as 1.57078 as compared with 1.57080.
+
+**Example 11.** Sum the series \(\sum\limits_{k=1}^{\infty}{k^{-2}\!\frac{\pi^{2}}{6}}\) using the Euler-Maclaurin summation formula.
+
+From 3.6.28 we have for \(n\!=\!\infty\),

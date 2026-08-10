@@ -1,41 +1,83 @@
 
 
-\begin{tabular}{c c c c c c c}
-**284** & \multicolumn{5}{c}{**exponential INTEGRAL AND RELATED FUNCTIONS**} \\ \(n\) & _E_n(1.275) & _E_n(1.275) & \(n\) & 104E_n(12.3) & 104E_n(12.3) & \(n\) \\
-1 & .1408099 & 6 & .0430168 & 12 & .191038 & .191038 & 12 \\
-2 & .0998984 & 7 & .0374307 & 11 & .199213 & .183498 & 13 \\
-3 & .07609303 & 8 & .0331009 & 10 & .208098 & .176516 & 14 \\
-4 & .0608307 & 9 & .0296534 & 9 & .217793 & .170042 & 15 \\
-5 & .0504679 & 10 & .0268469 & 8 & .228406 & .164015 & 16 \\ \end{tabular}
+**2.1.**
 
-Interpolating directly in **Table 5.4** for _n_=10 we get \(E\)10(1.275)=.0268470 as a check.
+**Figure Captions**
 
-**Example 5.** Compute _E_n(z), _n_=1(1)_N_, to 5S for _x_=10, _N_=10.
+\(E_{n}(1.275)\)
 
-If, as in this example, \(z\) is appreciably larger than five and _N_<=_z_, then the recurrence relation **5.1.14** may be safely used in decreasing order of _n_([5.5]). From **Table 5.5** for _x_=1=.1 we get \((x^{+}10)e^{z}\)_E_10(z)=1.02436 so that \(E_{10}(10)=2.32529\times 10^{-6}\). Using this as the initial value we obtain column (2).
+\(1408099\)
 
-\begin{tabular}{c c c}  & \(10^{4}\)E_n(10) & \(10^{6}\)_E_n(10) \\ \(n\) & (1) & (2) \\
-1 & .41570 & .41570 \\
-2 & .38300 & .38302 \\
-3 & .35500 & .35488 \\
-4 & .33000 & .33041 \\
-5 & .31000 & .30898 \\
-6 & .28800 & .29005 \\
-7 & .27667 & .27325 \\
-8 & .25333 & .25822 \\
-9 & .25084 & .24472 \\
-10 & .22573 & .23253 \\ \end{tabular}
+\(6\).\(0430168\)
 
-From **Table 5.2** we get _xe_'_E_n(_x_)=.915633 so that \(E\)1(10)=4.15697\(\times 10^{-6}\) as a check. Forward recurrence starting with \(E\)1(10)=4.1570\(\times 10^{-6}\) yields the values in column (1). The underlined figures are in error.
+\(.0998984\)
 
-**Example 6.** Compute _E_n(_x_), _n_=1(1)_N_, to 5S for _x_=12.3, _N_=20.
+\(7\).\(0374307\)
 
-If \(N\) is appreciably larger than \(x\), and \(x\) appreciably larger than five, then the recurrence relation **5.1.14** should be used in the backward direction to generate _E_n(_x_) for _n_<=_n_0, and in the forward direction to generate _E_n(_x_) for _n_>_n_0, where \(n\)0=_<_x_.
+\(3\).\(0760303\)
 
-From **5.1.52**, with _n_=12, _x_=12.3, we have
+\(8\).\(0331009\)
 
-\[E_{\alpha_{0}}(x)\!=\!\frac{e^{-12.3}}{24.3}(1\!+\!.02032\!-\!.00043\!-\!.00001) =1.91038\!\times\!10^{-7}\!.\]
+\(4\).\(0608307\)
 
-Using the recurrence relation **5.1.14**, as indicated, we get
+\(9\).\(0296534\)
 
-\[\begin{array}{c c c c c}&&&&\delta_{s}(1)&\delta_{s}(1)\\ &\delta_{(1)}&(2)\\ &0&2.35040&2&2.35040&2389\\
+\(5\).\(0504679\)
+
+\(10\).\(0268469\)
+
+Interpolating directly in Table 5.4 for _n_=10 we get \(E_{10}(1.275)\)=.0268470 as a check.
+
+**Example 5.** Compute \(E_{n}(x)\), _n_=1(1)_N_, to 5S for _x_=10, _N_=10.
+
+If, as in this example, \(x\) is appreciably larger than five and _N_\(\leq\)_x_, then the recurrence relation 5.I.14 may be safely used in decreasing order of _n_([5.5]). From Table 5.5 for _x_-1=.1 we get \((x^{+}_{-}10)e^{z}E_{10}(x)\)=1.02436 so that \(E_{10}(10)\)=2.32529 \(\times 10^{-6}\). Using this as the initial value we obtain column (2).
+
+
+
+From Table 5.2 we get \(x\!e^{x}E_{1}(x)\!=\!.915633\) so that \(E_{1}(10)\!=\!4.15697\!\times\!10^{-6}\) as a check. Forward recurrence starting with \(E_{1}(10)\!=\!4.1570\!\times\!10^{-6}\) yields the values in column (1). The underlined figures are in error.
+
+**Example 6.** Compute \(E_{n}(x\!)\), \(n\!=\!1(1)N\!\), to \(5S\) for \(x\!=\!12.3\), \(N\!=\!20\).
+
+If \(N\) is appreciably larger than \(x\!\), and \(x\) appreciably larger than five, then the recurrence relation 5.1.14 should be used in the backward direction to generate \(E_{n}(x\!)\) for \(n\!<\!n_{0}\), and in the forward direction to generate \(E_{n}(x\!)\) for \(n_{b}\!>\!n_{0}\), where \(n_{0}\!=\!\langle x\rangle\).
+
+From 5.1.52, with \(n_{0}\!=\!12\), \(x\!=\!12.3\), we have 
+
+\[E_{n_{0}}(x)=\frac{e^{-12.3}}{24.3}(1+.02032-.00043-.00001)\] \[=1.91038\times 10^{-7}.\]
+
+Using the recurrence relation 5.1.14, as indicated, we get 
+
+
+
+\begin{tabular}{|r r r r|} \multicolumn{4}{l}{AND RELATED FUNCTIONS} \\ \(n\) & 10*_E__n_(12.3) & 10*_E__n_(12.3) & \(n\) \\
+12 & .191038 & .191038 & 12 \\
+11 & .199213 & .183498 & 13 \\
+10 & .208098 & .176516 & 14 \\
+9 & .217793 & .170042 & 15 \\
+8 & .228406 & .164015 & 16 \\
+7 & .240073 & .158397 & 17 \\
+6 & .252951 & .153144 & 18 \\
+5 & .267234 & .148226 & 19 \\
+4 & .283155 & .143608 & 20 \\
+3 & .300998 & & \\
+2 & .321117 & & \\
+1 & .343953 & & \\ \end{tabular} From Tables 5.2 and 5.5 we find \(E_{i}\)(12.3) = .3435 \(\times 10^{-6}\), \(E_{n}\)(12.3) = .143609\(\times 10^{-6}\) as a check.
+
+**Example 7.** Compute \(a_{s}\)(2) to 6S for \(n\) = 1(1 += 1) The recurrence formula 5.1.15 can be used all _x_>0 in increasing order of \(n\) without loss accuracy. From 5.1.25 we have \(a_{o}\)(2)= \(\frac{1}{2}\) = .0676676, so we get
+
+\[\begin{array}{rr}n&\alpha_{\text{s}}(2)\\ 0&.0676676\\ 1&.101501\\ 2&.169169\\ 3&.321421\\ 4&.710510\\ 5&1.84394\\ \end{array}\] Independent calculation with 5.1.8 yields the same result for \(a_{s}\)(2).
+
+The functions \(a_{o}\)(_x_) and \(a_{i}\)(_x_) can be obtained from Table 10.8 using 5.1.48, 5.1.49.
+
+**Example 8.** Compute \(b_{s}\)(_x_), \(n\) = 0(1)_N_ to _x_= 1, _N_= 5.
+
+Use the recurrence relation 5.1.16 in increasi order of \(n\) if
+
+\[\begin{array}{rr}x>.368N+.184\ \ln N+.821\end{array}\]
+
+and in decreasing order of \(n\) otherwise [5.5].
+
+From 5.1.9 with \(n\) = 5 we get \(b_{s}\)(1)= - .3242 correctly rounded to 6D. Using the reurrer formula 5.1.16 in decreasing order of \(n\) a carrying 9D we get the values in column (2).
+
+\[\begin{array}{rr}\beta_{\text{s}}(1)&\beta_{\text{s}}(1)\\ n&(1)&(2)\\ 0&2.35040\ 2\\ 1&-.73575\ 9269\\ 2&.87888\ 3849\\ 3&-.44950\ 9722\\ 4&.55236\ 3499\\ 5&-.32434\ 3774\\ \end{array}\]
+
+Using forward recurrence instead, starting wi
