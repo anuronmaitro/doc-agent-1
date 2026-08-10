@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0459",
+  "printed_page": 459,
+  "chapter_id": "ch10_bessel_frac",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\\[\\begin{array}{l}x\\\\ \\end{array}\\begin{array}{l}y_{1}(x)\\\\ y_{2}(x)\\\\ y_{3}(x)\\\\ \\end{array}\\begin{array}{l}y_{4}(x)\\\\ y_{5}(x)\\\\ y_{6}(x)\\\\ \\end{array}\\begin{array}{l}y_{7}(x)\\\\ y_{8}(x)\\\\ y_{9}(x)\\\\ \\end{array}\\begin{array}{l}y_{9}(x)\\\\ y_{10}(x)\\\\ y_{11}(x)\\\\ y_{12}(x)\\\\ y_{13}(x)\\\\ \\end{array}\\begin{array}{l}y_{1}(x)\\\\ y_{12}(x)\\\\ y_{13}(x)\\\\ y_{14}(x)\\\\ y_{15}(x)\\\\ \\end{array}\\begin{array}{l}y_{1}(x)\\\\ y_{14}(x)\\\\ y_{15}(x)\\\\ y_{16}(x)\\\\ y_{17}(x)\\\\ y_{18}(x)\\\\ y_{19}(x)\\\\ \\end{array}\\begin{array}{l}y_{1}(x)\\\\ y_{10}(x)\\\\ y_{12}(x)\\\\ y_{13}(x)\\\\ y_{14}(x)\\\\ y_{15}(x)\\\\ y_{16}(x)\\\\ y_{17}(x)\\\\ y_{18}(x)\\\\ y_{19}(x)\\\\ y_{19}(x)\\\\ y_{18}(x)\\\\ y_",
+  "text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.459)\nTable 10.2  SPHERICAL BESSEL FUNCTIONS--ORDERS 3-10\nx  j_3(x)  j_4(x)  j_5(x)  j_6(x)  j_7(x)  j_8(x)  10^9x^{-9}j_9(x)  10^{11}x^{-10}j_{10}(x)\n0.0  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.52734\\,93  7.27309\\,19\n0.1  (-6)9.5185  (-7)1.0577  (-10)9.6163  (-12)7.3975  (-14)4.9319  (-16)2.9012  1.52698\\,56  7.27151\\,10\n0.2  (-5)7.6021  (-6)1.6900  (-8)3.0737  (-10)4.7297  (-12)6.3072  (-14)7.4212  1.52589\\,53  7.26677\\,00\n2.0  (-2)6.0722  (-2)1.4079  (-3)2.6352  (-4)4.1404  (-5)5.6097  (-6)6.6832  1.38804\\,63  6.66533\\,28\n3.0  (-1)1.5205  (-2)5.6150  (-2)1.6397  (-3)3.9744  (-4)8.2484  (-4)1.4983  1.23023\\,41  5.97131\\,85\n5.0  (-1)2.2982  (-1)1.8702  (-1)1.0681  (-2)4.7967  (-2)1.7903  (-3)5.7414  0.82846\\,70  4.17120\\,50\nj_n(x)=\\sqrt{\\tfrac12\\pi/x}J_{n+\\tfrac12}(x)\n\\left[\\frac{(-5)9}{4}\\right] \\qquad \\left[\\frac{(-4)4}{4}\\right]\nCompiled from National Bureau of Standards, Tables of spherical Bessel functions, vols. I, II. Columbia Univ. Press, New York, N.Y., 1947 (with permission).\n(Rows sampled, not exhaustive: the printed table runs x=0.0(0.1)5.0 in 51 rows; the 6 rows above are the first three, two mid-range, and the last, per the dense-table convention in data/README.md.)",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-10T12:22:15Z",
+  "note": "Pure dense numeric table (Table 10.2, 51 rows x 8 columns). Sampled rows per data/README.md. The last two columns carry their own 10^9 x^-9 / 10^11 x^-10 scaling in the column head, and the bracketed end-figure entries under them at x=5.0 are kept as printed."
+}
