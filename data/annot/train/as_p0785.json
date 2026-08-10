@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0785",
+  "printed_page": 785,
+  "chapter_id": "ch22_orthogonal_poly",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\\(\\begin{array}{l}\\end{array}\\)\n\n**22.10.12**: \\(P_{n}(\\cos\\,\\theta){=}\\frac{1}{\\pi}\\int_{{}_{0}}^{\\pi}\\left(\\cos\\,\\theta{+}i\\,\\sin\\, \\theta\\,\\cos\\,\\phi\\right)^{n}\\!d\\phi\\)\n**22.10.13**: \\(P_{n}(\\cos\\,\\theta){=}\\frac{\\sqrt{2}}{\\pi}\\int_{{}_{0}}^{\\pi}\\frac{\\sin\\,(n{+}{ \\frac{1}{2}})\\!\\phi d\\phi}{(\\cos\\,\\theta{-}\\!\\cos\\phi)^{n}}\\)\n**22.11. Rodrigues\" Formula**\n\n\\(f_{n}(x){=}\\frac{1}{a_{n}\\rho(x)}\\,\\frac{d^{n}}{dx^{n}}(\\rho(x)(g(z))^{n})\\)\n\nThe polynomials given in the following table are the only orthogonal polynomials which satisfy this formula.\n\n\\(\\begin{array}{c|c|c|c|c}\\hline\\hline&f_{n}(x)&&a_{n}&&\\rho(x)&g(x)\\\\ \\hline\\end{array}\\)\n",
+  "text": "[CORRECTED BY S2]\n\\(\\begin{array}{l}\\end{array}\\)\n\n**22.10.12**: \\(P_{n}(\\cos\\,\\theta){=}\\frac{1}{\\pi}\\int_{{}_{0}}^{\\pi}\\left(\\cos\\,\\theta{+}i\\,\\sin\\, \\theta\\,\\cos\\,\\phi\\right)^{n}\\!d\\phi\\)\n**22.10.13**: \\(P_{n}(\\cos\\,\\theta){=}\\frac{\\sqrt{2}}{\\pi}\\int_{{}_{0}}^{\\pi}\\frac{\\sin\\,(n{+}{ \\frac{1}{2}})\\!\\phi d\\phi}{(\\cos\\,\\theta{-}\\!\\cos\\phi)^{n}}\\)\n**22.11. Rodrigues\" Formula**\n\n\\(f_{n}(x){=}\\frac{1}{a_{n}\\rho(x)}\\,\\frac{d^{n}}{dx^{n}}(\\rho(x)(g(z))^{n})\\)\n\nThe polynomials given in the following table are the only orthogonal polynomials which satisfy this formula.\n\n\\(\\begin{array}{c|c|c|c|c}\\hline\\hline&f_{n}(x)&&a_{n}&&\\rho(x)&g(x)\\\\ \\hline\\end{array}\\)\n",
+  "annotator": "Himadri Gobinda Biswas (2105047)",
+  "annotated_at": "2026-08-10T14:14:06.103093+00:00",
+  "note": "Corrected draft text per conventions."
+}
