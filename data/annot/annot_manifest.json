@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-10T05:31:35Z",
+  "generated_at": "2026-08-10T06:17:29Z",
   "render_dpi": 300,
   "front_matter_offset": 32,
   "page_numbering": "printed N = PDF N+32; files named by PRINTED page",
   "source": "summary.md 4h via doc_agent.data.validate",
   "splits": {
     "train": {
-      "count": 105,
+      "count": 122,
       "dir": "data/annot\\train",
       "pages": [
         {
@@ -743,11 +743,130 @@
           "file": "data/annot/train/as_p1028.png",
           "bytes": 453280,
           "folio_confirmed": true
+        },
+        {
+          "printed_page": 78,
+          "pdf_page": 110,
+          "file": "data/annot/train/as_p0078.png",
+          "bytes": 638564,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 106,
+          "pdf_page": 138,
+          "file": "data/annot/train/as_p0106.png",
+          "bytes": 1270301,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 127,
+          "pdf_page": 159,
+          "file": "data/annot/train/as_p0127.png",
+          "bytes": 846986,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 143,
+          "pdf_page": 175,
+          "file": "data/annot/train/as_p0143.png",
+          "bytes": 1017306,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 161,
+          "pdf_page": 193,
+          "file": "data/annot/train/as_p0161.png",
+          "bytes": 969534,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 181,
+          "pdf_page": 213,
+          "file": "data/annot/train/as_p0181.png",
+          "bytes": 909040,
+          "folio_confirmed": false
+        },
+        {
+          "printed_page": 196,
+          "pdf_page": 228,
+          "file": "data/annot/train/as_p0196.png",
+          "bytes": 851789,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 204,
+          "pdf_page": 236,
+          "file": "data/annot/train/as_p0204.png",
+          "bytes": 1214757,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 212,
+          "pdf_page": 244,
+          "file": "data/annot/train/as_p0212.png",
+          "bytes": 1217030,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 222,
+          "pdf_page": 254,
+          "file": "data/annot/train/as_p0222.png",
+          "bytes": 1062088,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 828,
+          "pdf_page": 860,
+          "file": "data/annot/train/as_p0828.png",
+          "bytes": 792451,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 838,
+          "pdf_page": 870,
+          "file": "data/annot/train/as_p0838.png",
+          "bytes": 1143173,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 851,
+          "pdf_page": 883,
+          "file": "data/annot/train/as_p0851.png",
+          "bytes": 1040628,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 873,
+          "pdf_page": 905,
+          "file": "data/annot/train/as_p0873.png",
+          "bytes": 1725966,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1031,
+          "pdf_page": 1063,
+          "file": "data/annot/train/as_p1031.png",
+          "bytes": 977778,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1039,
+          "pdf_page": 1071,
+          "file": "data/annot/train/as_p1039.png",
+          "bytes": 1145377,
+          "folio_confirmed": true
+        },
+        {
+          "printed_page": 1048,
+          "pdf_page": 1080,
+          "file": "data/annot/train/as_p1048.png",
+          "bytes": 784127,
+          "folio_confirmed": false
         }
       ],
       "baseline_draft": {
         "correctable": 79,
-        "blank_slate": 26
+        "blank_slate": 43
       }
     },
     "val": {
@@ -1185,8 +1304,8 @@
     }
   },
   "offset_verification": {
-    "checked": 164,
-    "confirmed": 123,
+    "checked": 181,
+    "confirmed": 137,
     "control_wrong_offset": 0
   },
   "test_already_annotated_in_a1": [

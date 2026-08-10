@@ -22,7 +22,7 @@
 #   LIMIT=20 bash scripts/get_data.sh        # first 20 pages only (quick check)
 #   RENDER_DPI=150 bash scripts/get_data.sh  # lower-res pass
 #   FORCE=1 bash scripts/get_data.sh         # re-render pages that already exist
-#   ANNOT=1 bash scripts/get_data.sh         # Step 18: the 164 annotation pages only
+#   ANNOT=1 bash scripts/get_data.sh         # Step 18: the 181 annotation pages only
 # =============================================================================
 set -euo pipefail
 
@@ -49,7 +49,7 @@ FRONT_MATTER_OFFSET="${FRONT_MATTER_OFFSET:-32}"
 
 LIMIT="${LIMIT:-0}"     # 0 = all pages
 FORCE="${FORCE:-0}"     # 1 = re-render pages that already exist
-ANNOT="${ANNOT:-0}"     # 1 = Step 18 mode: the 164 annotation pages, not the corpus
+ANNOT="${ANNOT:-0}"     # 1 = Step 18 mode: the 181 annotation pages, not the corpus
 ANNOT_DIR="data/annot"
 
 echo "=============================================================="
@@ -115,7 +115,7 @@ if [ -n "$EXPECTED_SHA256" ] && [ "$ACTUAL_SHA256" != "$EXPECTED_SHA256" ]; then
 fi
 
 # -----------------------------------------------------------------------------
-# 1b. ANNOT=1 — Step 18: materialise the 164 hand-annotation pages and stop.
+# 1b. ANNOT=1 — Step 18: materialise the 181 hand-annotation pages and stop.
 #
 # The page lists live in src/doc_agent/data/validate.py (imported below), not in
 # this script, so the renderer and tests/test_data.py read the same one list.
@@ -238,16 +238,16 @@ if confirmed <= control:
     )
 
 # --- 4. how much of this is correction vs blank-slate transcription ----------
-# Step 17's helper shows the Step 16 draft next to the page. A page with no usable
-# draft is transcribed from scratch, which is far slower -- so the split of the
-# 164 into "correctable" and "blank slate" is the number that sizes Steps 19-24.
+# Step 17's helper shows the current data/ocr/ draft next to the page. A page with no
+# usable draft is transcribed from scratch, which is far slower -- so the split of the
+# annotation set into "correctable" and "blank slate" is the number that sizes Steps 19-24.
 failures = {}
 fpath = os.path.join("data", "ocr", "failures.json")
 if os.path.exists(fpath):
     with open(fpath, encoding="utf-8") as fh:
         failures = {r["page_id"]: r.get("reason", "?") for r in json.load(fh)}
 
-print("[4/4] draft availability for Steps 19-24 (from Step 16's baseline run)")
+print("[4/4] draft availability for Steps 19-24 (from data/ocr/'s current baseline run)")
 for split, (pages, _family) in ANNOT_SETS.items():
     have = blank = 0
     for printed in pages:
@@ -274,7 +274,7 @@ PY
 
   echo
   echo "Annotation pages ready:"
-  echo "  $ANNOT_DIR/train/  105 pages   (images gitignored; the .json annotations are committed)"
+  echo "  $ANNOT_DIR/train/  122 pages   (images gitignored; the .json annotations are committed)"
   echo "  $ANNOT_DIR/val/     20 pages   (images gitignored; the .json annotations are committed)"
   echo "  $ANNOT_DIR/test/    39 pages   (whole folder gitignored — the real output is grading_kit/)"
   echo "  $ANNOT_DIR/annot_manifest.json  committed: the counts + per-page offset proof"

@@ -175,9 +175,12 @@ sets are **pairwise disjoint**, and that every gold page lies in a test chapter.
 `data/validate.py` (Step 6) re-asserts disjointness by `doc_id` at pipeline time,
 so the guarantee is enforced in code and not only in a notebook.
 
-**Hand-verified pages (built in Sprint 3, listed in `summary.md §4h`):**
-105 train (build chapters) + 20 validation (val chapters) + 39 test (test
-chapters) = **164 pages**, disjoint by construction because their source chapter
+**Hand-verified pages (built in Sprint 3, listed in `summary.md §4h`; train count updated at
+the Step 18b gate, `src/doc_agent/data/validate.py`):**
+122 train (build chapters -- 105 from `summary.md §4h` + 17 added 2026-08-10 when the
+repaired reader's full-book run measured a 28.5% no-output rate, above the Step 18b gate's
+25% line, targeting the chapters it failed hardest on) + 20 validation (val chapters) + 39
+test (test chapters) = **181 pages**, disjoint by construction because their source chapter
 sets are disjoint.
 
 ---
