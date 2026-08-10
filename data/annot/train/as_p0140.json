@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0140",
+  "printed_page": 140,
+  "chapter_id": "ch04_elem_transcend",
+  "baseline_failed": true,
+  "baseline_reason": "empty-or-near-empty",
+  "draft_text": "",
+  "text": "ELEMENTARY TRANSCENDENTAL FUNCTIONS (p.140)\nTable 4.5  RADIX TABLE OF THE EXPONENTIAL FUNCTION\nColumns: x | n | e^{x\\times10^{-n}} | e^{-x\\times10^{-n}}\nSample rows (x, n=5 block):\n1  5  1.00001\\,00000\\,50000  0.99999\\,00000\\,50000\n5  5  1.00005\\,00012\\,50002  0.99995\\,00012\\,49979\n9  5  1.00009\\,00040\\,50121  0.99991\\,00040\\,49878\n(Table continues through smaller n blocks down to n=0; only a sampled subset of rows is given here.)",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}

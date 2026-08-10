@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0143",
+  "printed_page": 143,
+  "chapter_id": "ch04_elem_transcend",
+  "baseline_failed": true,
+  "baseline_reason": "repetition-degeneration",
+  "draft_text": "",
+  "text": "ELEMENTARY TRANSCENDENTAL FUNCTIONS (p.143)\nCIRCULAR SINES AND COSINES FOR RADIAN ARGUMENTS  Table 4.6\nColumns: x | \\sin x | \\cos x\nSample rows:\n0.050  0.04997\\,91692\\,70678  0.99875\\,02603\\,94966\n0.065  0.06495\\,42388\\,34782  0.99788\\,82436\\,71301\n0.080  0.07991\\,46939\\,69172  0.99680\\,17063\\,02619\n0.095  0.09485\\,71686\\,34557  0.99549\\,08927\\,55245\n0.100  0.09983\\,34166\\,46828  0.99500\\,41652\\,78025\n(Table runs x=0.050 to 0.100 in steps of 0.001; only a sampled subset of rows is given here.)",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}
