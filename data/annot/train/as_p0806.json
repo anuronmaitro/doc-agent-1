@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0806",
+  "printed_page": 806,
+  "chapter_id": "ch23_bernoulli_zeta",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "23.1.22 \\(B_{n}(\\underline{i})\\!=\\!(-1)^{n}B_{n}(\\underline{i})\\)\\(\\left|\\begin{array}{c}E_{2n-1}(\\underline{i})\\!=\\!-E_{2n-1}(\\underline{i})\\\\ =\\!-(2n)^{-1}(1\\!-\\!3^{1-2n})(2^{2n}\\!-\\!1)B_{2n}\\\\ n\\!=\\!1,2,\\ldots\\\\ n\\!=\\!0,1,\\ldots\\\\ \\end{array}\\right.\\)\n23.1.23 \\(B_{2n}(\\underline{i})\\!=\\!B_{2n}(\\underline{i})\\)\\(\\left|\\begin{array}{c}E_{2n-1}(\\underline{i})\\!=\\!-E_{2n-1}(\\underline{i})\\\\ =\\!-(2n)^{-1}(1\\!-\\!3^{1-2n})(2^{2n}\\!-\\!1)B_{2n}\\\\ n\\!=\\!1,2,\\ldots\\\\ \\end{array}\\right.\\)\n23.1.24 \\(B_{2n}(\\underline{i})\\!=\\!B_{2n}(\\underline{i})\\)\\(\\left|\\begin{array}{c}\\\\ \\\\",
+  "text": "[CORRECTED BY S2]\n23.1.22 \\(B_{n}(\\underline{i})\\!=\\!(-1)^{n}B_{n}(\\underline{i})\\)\\(\\left|\\begin{array}{c}E_{2n-1}(\\underline{i})\\!=\\!-E_{2n-1}(\\underline{i})\\\\ =\\!-(2n)^{-1}(1\\!-\\!3^{1-2n})(2^{2n}\\!-\\!1)B_{2n}\\\\ n\\!=\\!1,2,\\ldots\\\\ n\\!=\\!0,1,\\ldots\\\\ \\end{array}\\right.\\)\n23.1.23 \\(B_{2n}(\\underline{i})\\!=\\!B_{2n}(\\underline{i})\\)\\(\\left|\\begin{array}{c}E_{2n-1}(\\underline{i})\\!=\\!-E_{2n-1}(\\underline{i})\\\\ =\\!-(2n)^{-1}(1\\!-\\!3^{1-2n})(2^{2n}\\!-\\!1)B_{2n}\\\\ n\\!=\\!1,2,\\ldots\\\\ \\end{array}\\right.\\)\n23.1.24 \\(B_{2n}(\\underline{i})\\!=\\!B_{2n}(\\underline{i})\\)\\(\\left|\\begin{array}{c}\\\\ \\\\",
+  "annotator": "Himadri Gobinda Biswas (2105047)",
+  "annotated_at": "2026-08-10T14:14:06.139303+00:00",
+  "note": "Corrected draft text per conventions."
+}

@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0805",
+  "printed_page": 805,
+  "chapter_id": "ch23_bernoulli_zeta",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\n\n**Integrals**\n\n\\[\\begin{array}{c} \\\\ 23.1.11&\\int_{a}^{*}B_{n}(t)dt=\\frac{B_{n+1}(x)-B_{n+1}(a)}{n+1}\\\\ \\\\ 23.1.12&\\int_{b}^{1}B_{n}(t)B_{n}(t)dt=(-1)^{n-1}\\frac{m!n!}{(m+n)!}B_{m+n}\\\\ \\\\ m,n=1,2,\\ldots\\end{array}\\quad\\begin{array}{c} \\\\ \\begin{array}{c}\n\n",
+  "text": "[CORRECTED BY S2]\n\n\n**Integrals**\n\n\\[\\begin{array}{c} \\\\ 23.1.11&\\int_{a}^{*}B_{n}(t)dt=\\frac{B_{n+1}(x)-B_{n+1}(a)}{n+1}\\\\ \\\\ 23.1.12&\\int_{b}^{1}B_{n}(t)B_{n}(t)dt=(-1)^{n-1}\\frac{m!n!}{(m+n)!}B_{m+n}\\\\ \\\\ m,n=1,2,\\ldots\\end{array}\\quad\\begin{array}{c} \\\\ \\begin{array}{c}\n\n",
+  "annotator": "Himadri Gobinda Biswas (2105047)",
+  "annotated_at": "2026-08-10T14:14:06.132576+00:00",
+  "note": "Corrected draft text per conventions."
+}

@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0778",
+  "printed_page": 778,
+  "chapter_id": "ch22_orthogonal_poly",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\\(T_{n}^{(a,b)}(x)=\\frac{(1)_{n+1}}{2}\\left(\\sqrt{\\frac{x+1}{2}}\\right)\\)\n\n\\(T_{n}^{(a,b)}(x)=\\frac{(1)_{n+1}}{2}\\left(\\sqrt{\\frac{x+1}{2}}\\right)\\)\n\n\\(T_{n}^{(a,b)}(x)=\\frac{(1)_{n+1}}{2}\\left(\\sqrt{\\frac{x+1}{2}}\\right)\\)\n",
+  "text": "[CORRECTED BY S2]\n\\(T_{n}^{(a,b)}(x)=\\frac{(1)_{n+1}}{2}\\left(\\sqrt{\\frac{x+1}{2}}\\right)\\)\n\n\\(T_{n}^{(a,b)}(x)=\\frac{(1)_{n+1}}{2}\\left(\\sqrt{\\frac{x+1}{2}}\\right)\\)\n\n\\(T_{n}^{(a,b)}(x)=\\frac{(1)_{n+1}}{2}\\left(\\sqrt{\\frac{x+1}{2}}\\right)\\)\n",
+  "annotator": "Himadri Gobinda Biswas (2105047)",
+  "annotated_at": "2026-08-10T14:14:06.063477+00:00",
+  "note": "Corrected draft text per conventions."
+}
