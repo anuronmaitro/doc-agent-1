@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0552",
+  "printed_page": 552,
+  "chapter_id": "ch14_coulomb",
+  "baseline_failed": true,
+  "baseline_reason": "nougat-missing-page-marker",
+  "draft_text": "",
+  "text": "COULOMB WAVE FUNCTIONS (p.552)\nTable 14.1  COULOMB WAVE FUNCTIONS OF ORDER ZERO,  F_0(\\eta,\\rho)\nColumns: \\eta \\backslash \\rho = 16, 17, 18, 19, 20\nSample rows (\\eta, F_0 at \\rho=16..20):\n0.5: (0)+1.0105, (-1)+6.6039, (-1)-2.6356, (-1)-9.5714, (-1)-8.1320\n5.0: (-1)-3.5128, (-1)-9.8377, (0)-1.2226, (-1)-9.3827, (-1)-2.2935\n10.0: (-1)1.8899, (-1)3.2134, (-1)5.0960, (-1)7.5308, (0)1.0343\n15.0: (-4)2.5646, (-4)6.5497, (-4)7.7245, (-3)1.8156, (-3)4.0459\n20.0: (-8)5.8668, (-7)1.9859, (-6)6.3305, (-6)1.9078, (-6)5.4529\n(Table also gives d/d\\rho F_0(\\eta,\\rho) below, over the same (\\eta,\\rho) grid; only a sampled subset of rows is given here.)",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}

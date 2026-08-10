@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0050",
+  "printed_page": 50,
+  "chapter_id": "ch03_elem_analytic",
+  "baseline_failed": true,
+  "baseline_reason": "empty-or-near-empty",
+  "draft_text": "",
+  "text": "ELEMENTARY ANALYTICAL METHODS (p.50)\nTable 3.1  POWERS AND ROOTS n^k (continued)\nColumns: n | n^2 | n^3 | n^{1/2} | n^{1/3} | 1/n\nSample rows:\n650  422500   274625000   25.49510  8.66096  0.00154\n660  435600   287496000   25.69047  8.71780  0.00152\n667  444889   296740963   25.82634  8.75752  0.00150\n674  454276   306182024   25.96151  8.79684  0.00148\n(Table continues the n=650-674 block of the same Table 3.1 that starts on p.24; only a sampled subset of rows is given here.)",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}

@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0078",
+  "printed_page": 78,
+  "chapter_id": "ch04_elem_transcend",
+  "baseline_failed": true,
+  "baseline_reason": "repetition-degeneration",
+  "draft_text": "",
+  "text": "ELEMENTARY TRANSCENDENTAL FUNCTIONS (p.78)\n4.3.131  \\sin(x+iy)=\\sin x\\cosh y+i\\cos x\\sinh y\n4.3.132  \\cos(x+iy)=\\cos x\\cosh y-i\\sin x\\sinh y\n4.3.133  \\tan(x+iy)=\\frac{\\sin2x+i\\sinh2y}{\\cos2x+\\cosh2y}\n4.3.134  |\\sin(x+iy)|^2=\\sin^2x+\\sinh^2y\n4.3.135  |\\cos(x+iy)|^2=\\cos^2x+\\sinh^2y\n4.3.136  |\\tan(x+iy)|^2=\\frac{\\sin^2x+\\sinh^2y}{\\cos^2x+\\sinh^2y}\nRight Triangle: sides a, b, hypotenuse c, angle A opposite a, angle B opposite b, C=90^\\circ\n4.3.137  a=c\\sin A=c\\cos B=b\\tan A\n4.3.138  b=c\\sin B=c\\cos A=a\\tan B\n4.3.139  c=\\sqrt{a^2+b^2}\n4.3.140  A+B=90^\\circ\nOblique Triangle: sides a, b, c opposite angles A, B, C respectively\n4.3.141  A+B+C=180^\\circ\n4.3.142  \\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}\\ \\ \\mathrm{(Law\\ of\\ Sines)}\n4.3.143  c^2=a^2+b^2-2ab\\cos C\\ \\ \\mathrm{(Law\\ of\\ Cosines)}\n4.3.144  a=b\\cos C+c\\cos B\\ \\ \\mathrm{(Law\\ of\\ Tangents\\ related\\ form)}\n4.3.145  \\tan\\tfrac12(A-B)=\\frac{a-b}{a+b}\\cot\\tfrac12C\n4.3.146  \\mathrm{Area}=\\tfrac12ab\\sin C=\\sqrt{s(s-a)(s-b)(s-c)},\\ s=\\tfrac12(a+b+c)\\ \\ \\mathrm{(Heron's\\ formula)}\n4.3.147  r=\\frac{\\mathrm{Area}}{s}\\ \\mathrm{(inradius)},\\ R=\\frac{abc}{4\\,\\mathrm{Area}}\\ \\mathrm{(circumradius)}",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}

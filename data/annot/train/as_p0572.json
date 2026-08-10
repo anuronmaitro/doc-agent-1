@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0572",
+  "printed_page": 572,
+  "chapter_id": "ch16_jacobi_elliptic",
+  "baseline_failed": true,
+  "baseline_reason": "nougat-missing-page-marker",
+  "draft_text": "",
+  "text": "JACOBIAN ELLIPTIC FUNCTIONS AND THETA FUNCTIONS (p.572)\n16.7. Principal Terms\nWhen the elliptic function pq u is expanded in ascending powers of (u-K_\\tau), where K_\\tau is one of 0, K, iK', K+iK', the first term of the expansion is called the principal term and has one of the forms A, B\\times(u-K_\\tau), C\\div(u-K_\\tau). The following list gives these forms, where \\times means that the divisor (u-K_\\tau) has to be supplied and \\div means that the factor (u-K_\\tau) has to be supplied.\nColumns: K_\\tau= | 0 | K | iK' | K+iK'\n16.7.1  sn u: 1\\times | 1 | m^{-1/2}\\div | m^{-1/2}\n16.7.2  cn u: 1 | -m_1^{1/2}\\times | -im^{-1/2}\\div | -i(m_1/m)^{1/2}\n16.7.3-4  dn u, cd u: 1, 1 | m_1^{1/2}, m_1^{-1/2} | im^{-1/2}, m^{-1/2}\\div | im_1^{-1/2}\\div, -i(mm_1)^{1/2}\\div\n16.7.5  sd u: 1\\times | m_1^{-1/2} | im^{-1/2}\\div | -i(mm_1)^{1/2}\\div\n16.7.6  nd u: 1 | m_1^{-1/2} | i\\times | im_1^{1/2}\\div\n16.7.7  dc u: 1 | -1\\div | m^{1/2}\\times | -m^{1/2}\\times\n16.7.8  nc u: 1 | -m_1^{-1/2}\\div | m^{1/2}\\times | i(m/m_1)^{1/2}\n16.7.9-12  sc u, ns u, ds u, cs u: 1, 1\\times, 1\\div, 1\\div | -m_1^{-1/2}\\div, 1, 1, m_1^{1/2} | i\\times, m^{1/2}\\times, im^{1/2}\\times, -im^{1/2}\n16.8. Change of Argument\nColumns: u | -u | u+K | u-K | K-u | u+2K | u-2K | 2K-u | u+iK' | u+2iK' | u+K+iK' | u+2K+2iK'\n16.8.1  sn: sn u | -sn u | cd u | -cd u | cd u | -sn u | -sn u | sn u | m^{-1/2}\\mathrm{ns}\\,u | \\mathrm{sn}\\,u | m^{-1/2}\\mathrm{dc}\\,u | -\\mathrm{sn}\\,u\n16.8.2  cn: cn u | cn u | -m_1^{1/2}sd u | m_1^{1/2}sd u | m_1^{1/2}sd u | -cn u | -cn u | -cn u | -im^{-1/2}\\mathrm{ds}\\,u | -\\mathrm{cn}\\,u | -im_1^{1/2}m^{-1/2}\\mathrm{nc}\\,u | \\mathrm{cn}\\,u\n16.8.3  dn: dn u | dn u | m_1^{1/2}nd u | m_1^{1/2}nd u | m_1^{1/2}nd u | dn u | dn u | dn u | im^{1/2}cs u | dn u | im^{1/2}\\mathrm{sc}\\,u | -\\mathrm{dn}\\,u\n(This page's tables are self-referential lookup tables (12 rows each, 16.7.1-16.7.12 and 16.8.1-16.8.12) with no further numeric content; sampled entries transcribed above for the first three rows of each table.)",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}

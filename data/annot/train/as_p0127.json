@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0127",
+  "printed_page": 127,
+  "chapter_id": "ch04_elem_transcend",
+  "baseline_failed": true,
+  "baseline_reason": "repetition-degeneration",
+  "draft_text": "",
+  "text": "ELEMENTARY TRANSCENDENTAL FUNCTIONS (p.127)\nTable 4.4  EXPONENTIAL FUNCTION\nColumns: x | e^x | e^{-x}\nSample rows:\n0.550  1.73325\\,18   0.57694\\,78\n0.565  1.75931\\,90   0.56841\\,17\n0.580  1.78604\\,05   0.55989\\,49\n0.590  1.80399\\,15   0.55432\\,23\n0.600  1.82211\\,88   0.54881\\,16\n(Table runs x=0.550 to 0.600 in steps of 0.001; only a sampled subset of rows is given here.)",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}

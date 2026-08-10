@@ -1,0 +1,11 @@
+{
+  "page_id": "as_p0181",
+  "printed_page": 181,
+  "chapter_id": "ch04_elem_transcend",
+  "baseline_failed": true,
+  "baseline_reason": "empty-or-near-empty",
+  "draft_text": "",
+  "text": "ELEMENTARY TRANSCENDENTAL FUNCTIONS (p.181)\nCIRCULAR SINES AND COSINES FOR LARGE RADIAN ARGUMENTS  Table 4.8\nColumns: x | \\sin x | \\cos x  (two side-by-side blocks per page)\nSample rows:\n500  -0.46777\\,181  -0.88384\\,927\n525  -0.34667\\,773  -0.93798\\,430\n550  -0.21948\\,408  -0.97561\\,608\n575  -0.08842\\,874  -0.99608\\,251\n600  0.04418\\,245  -0.99902\\,348\n(Table runs x=500 to 600, integer arguments; only a sampled subset of rows is given here, same convention as Table 4.6.)",
+  "annotator": "S1 Anuron Maitro (2105037)",
+  "annotated_at": "2026-08-10T20:58:51Z"
+}
