@@ -2,44 +2,12 @@
 
 **4.3.101**: \(0{\leq}x{\leq}\frac{\pi}{4}\)
 
-\(\frac{\tan\,x}{x}{=}1+a_{2}x^{2}+a_{4}x^{4}+\epsilon(x)\)
+\[\begin{array}{l}\frac{\tan\,x}{x}=1+a_{2}x^{2}+a_{4}x^{4}+\epsilon(x)\\ \\ |\epsilon(x)|{\leq}2{\times}10^{-4}\\ a_{2}=-.16605\qquad\qquad a_{4}=.00761\\ a_{4}=.1339\quad 23995\qquad a_{10}=.00290\;05250\\ a_{6}=.05337\quad 40603\qquad a_{12}=.00951\;68091\\ \\ \frac{\sin\,x}{x}=1+a_{2}x^{2}+a_{4}x^{4}+a_{4}x^{6}+a_{8}x^{8}+a_{10}x^{10}+ \epsilon(x)\\ \\ |\epsilon(x)|{\leq}2{\times}10^{-9}\\ a_{2}=-.16666\;66664\qquad a_{8}=\;.00000\;27526\\ a_{i}=\;.00833\;33315\qquad a_{10}=-.00000\;00239\\ a_{6}=-.00019\;84090\\ \\ 4.3.98\qquad\qquad 0{\leq}x{\leq}\frac{\pi}{2}\\ \\ \cos\,x=1+a_{2}x^{2}+a_{4}x^{4}+a_{5}x^{6}+a_{8}x^{8}+a_{10}x^{10}+\epsilon(x)\\ \\ |\epsilon(x)|{\leq}2{\times}10^{-9}\\ a_{2}=-.499670\qquad a_{4}=.03705\\ a_{3}.99\qquad\qquad 0{\leq}x{\leq}\frac{\pi}{2}\\ \\ \cos\,x=1+a_{2}x^{2}+a_{4}x^{4}+a_{6}x^{6}+a_{8}x^{8}+a_{10}x^{10}+\epsilon(x)\\ \\ |\epsilon(x)|{\leq}2{\times}10^{-9}\\ a_{2}=-.49999\;99963\qquad a_{8}=\;.00002\;47609\\ a_{4}=\;.04166\;66418\qquad a_{10}=-.00000\;02605\\ a_{5}=-.00138\;88397\\ \\ \end{array}\]
 
-\(\frac{\sin\,x}{x}{=}\,1+a_{2}x^{2}+a_{4}x^{4}+\epsilon(x)\)
+**Approximations in Terms of Chebyshev Polynomials***
 
-\(|\epsilon(x)|{\leq}2{\times}10^{-4}\)
+Footnote *: The approximations 4.3.104 are from C. W. Clenshaw, Polynomial approximations to elementary functions, Math. Tables Aids Comp. **8**, 143–147 (1954) (with permission).
 
-\(a_{2}{=}{-}.16605\)\(a_{4}{=}.00761\)\(a_{2}{=}.33333\)\(14036\)\(a_{5}{=}.02456\)\(50893\)
+**4.3.104**: \(-1{\leq}x{\leq}1\)
 
-\(a_{4}{=}.13339\)\(23995\)\(a_{10}{=}.00290\)\(05250\)
-
-\(a_{6}{=}.05337\)\(40603\)\(a_{12}{=}.00951\)\(68091\)
-
-\(\frac{\sin\,x}{x}{=}1+a_{2}x^{2}+a_{4}x^{4}+a_{4}x^{6}+a_{5}x^{8}+a_{10}x^{10}+ \epsilon(x)\)
-
-\(|\epsilon(x)|{\leq}2{\times}10^{-9}\)\(|\epsilon(x)|{\leq}2{\times}10^{-9}\)\(a_{2}{=}.16666\)\(66664\)\(a_{8}{=}\)\(.00000\)\(27526\)\(a_{10}{=}\)\(-.00000\)\(00239\)\(a_{4}{=}{-}.00019\)\(84090\)
-
-\(a_{3}{.}98\)\(0{\leq}x{\leq}\frac{\pi}{2}\)
-
-\(\cos\,x{=}\,1+a_{2}x^{2}+a_{4}x^{4}+\epsilon(x)\)
-
-\(|\epsilon(x)|{\leq}9{\times}10^{-4}\)\(a_{2}{=}-.49670\)\(a_{4}{=}.03705\)\(a_{5}{=}\)\(\frac{\pi}{2}\)
-
-\(\cos\,x{=}\,\frac{1}{2}\)\(a_{2}{=}\,\frac{\pi}{2}\)
-
-\(\cos\,x{=}\,1+a_{2}x^{2}+a_{4}x^{4}+a_{5}x^{8}+a_{10}x^{10}+\epsilon(x)\)
-
-\(|\epsilon(x)|{\leq}2{\times}10^{-9}\)\(a_{2}{=}-.49999\)\(99963\)\(a_{5}{=}\)\(.00002\)\(47609\)\(a_{4}{=}\)\(.04166\)\(66418\)\(a_{10}{=}-.00000\)\(02605\)
-
-\(a_{5}{=}-.00138\)\(88397\)
-
-**4.3.100**: \(0{\leq}x{\leq}\frac{\pi}{4}\)
-
-\(\frac{\tan\,x}{x}{=}\,1+a_{2}x^{2}+a_{4}x^{4}+\epsilon(x)\)
-
-\(|\epsilon(x)|{\leq}1{\times}10^{-3}\)\(a_{2}{=}.31755\)\(a_{4}{=}.20330\)
-
-\(\frac{\tan\,x}{x}{=}\,\frac{1}{2}\)\(a_{3}{=}\,\frac{\pi}{2}\)\(a_{4}{=}\,\frac{\pi}{2}\)\(a_{5}{=}\,\frac{\pi}{2}\)
-
-\(\frac{\tan\,x}{x}{=}\,1+a_{2}x^{2}+a_{4}x^{4}+\epsilon(x)\)
-
-\(|\epsilon(x)|{\leq}2{\times}10^{-4}\)\(a_{2}{=}.3333\)\(14036\)\(a_{5}{=}.02456\)\(50893\)\(a_{6}{=}.13339\)\(23995\)\(a_{7}{=}.0029
+\[\begin{array}{l}T_{n}^{*}(x)=\cos n\theta,\cos\theta=2x-1\quad\mbox{(see chapter~{}\ref{eq:T1})}\\ \sin\,\frac{1}{2}rx=x\sum\limits_{n=0}^{\infty}A_{n}T_{n}^{*}(x^{2})\quad\cos \,\frac{1}{2}rx=\sum\limits_{n=0}^{\infty}A_{n}T_{n}^{*}(x^{2})\\ \\ \par n\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad n\;A_{ n}\;

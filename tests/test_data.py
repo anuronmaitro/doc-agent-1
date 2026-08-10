@@ -168,15 +168,15 @@ class TestSnapshot:
 
 
 class TestAnnotationSets:
-    """Step 18's page lists. These 164 integers decide what 3 people transcribe by hand and
-    what Step 29 is finally scored on, so every property summary.md 4h claims is checked
-    here rather than trusted."""
+    """Step 18's page lists (train grew 105->122 at the Step 18b gate). These 181 integers
+    decide what 3 people transcribe by hand and what Step 29 is finally scored on, so every
+    property summary.md 4h / the Step 18b gate claims is checked here rather than trusted."""
 
     def test_the_lists_are_sound(self):
         assert validate_annotation_sets() == ANNOT_EXPECTED_COUNTS
 
-    def test_totals_164(self):
-        assert sum(len(p) for p, _f in ANNOT_SETS.values()) == 164
+    def test_totals_181(self):
+        assert sum(len(p) for p, _f in ANNOT_SETS.values()) == 181
 
     def test_pairwise_disjoint(self):
         names = list(ANNOT_SETS)
@@ -202,7 +202,7 @@ class TestAnnotationSets:
         leaked = dict(ANNOT_SETS)
         leaked["train"] = (ANNOT_SETS["train"][0] + (255,), ANNOT_SETS["train"][1])
         monkeypatch.setattr("doc_agent.data.validate.ANNOT_SETS", leaked)
-        with pytest.raises(ValueError, match="expected 105"):
+        with pytest.raises(ValueError, match="expected 122"):
             validate_annotation_sets()
 
     def test_pages_are_in_printed_numbering_range(self):

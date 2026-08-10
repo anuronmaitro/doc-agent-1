@@ -2,4 +2,47 @@
 
 #### 26.6. \(F\)-(Variance-Ratio) Distribution Function
 
-\[\begin{array}{l}P(F|_{\nu_{1}},\nu_{2}){=}\frac{p_{1}^{\nu_{1}}\nu_{2}^{\nu_{2}}}{B\left(\frac{1}{2}p_{1}!\frac{1}{2}p_{2}\right)}{\int_{0}^{\nu}t^{\ell(\nu_{1}-2)}(\nu_{2}+\nu_{1}\ell)^{-\ell(\nu_{1}+\nu_{2})}dt}\\ 
+\[P(F|_{r_{1},\,r_{2}}) = \frac{p_{1}^{x_{1}}y_{2}^{x_{3}}}{B\left(\frac{1}{2}p_{1}!\frac{1}{2} p_{2}\right)}{\int_{0}^{p}t^{x_{(r_{1}-2)}(r_{2}+r_{1}t)-t(r_{2}+r_{1})dt}}\]
+
+\[Q(F|_{r_{1},\,r_{2}}) = 1 - P(F|_{r_{1},\,r_{2}}) = I_{s}\left(\frac{p_{2},\,p_{1}}{2},\frac{p_{1}}{2}\right)\]
+
+where
+
+\[x = \frac{v_{2}}{v_{2}+v_{1}}F\]
+
+If \(X_{1}^{\text{r}}\) and \(X_{2}^{\text{r}}\) are independent random variables following chi-square distributions 26.4.1 with \(v_{1}\) and \(v_{2}\) degrees of freedom respectively, then the distribution of \(F = \frac{X_{1}^{\text{r}}/v_{1}}{X_{2}^{\text{r}}/v_{2}}\) is said to follow the variance ratio or \(F\)-distribution with \(v_{1}\) and \(v_{2}\) degrees of freedom. The corresponding distribution function is \(P(F|_{r_{1},\,r_{2}})\).
+
+##### Statistical Properties
+
+mean:
+
+\[m = \frac{v_{2}}{v_{2}-2}\quad(v_{2} > 2)\]
+
+variance:
+
+\[\sigma^{2} = \frac{2\lambda_{1}(v_{1} + \nu_{2} - 2)}{v_{1}(v_{2} - 2)^{2}(v_{2} - 4)}\quad(v_{2} > 4)\]
+
+third central moment:
+
+\[\mu_{3} = \left(\frac{v_{2}}{v_{1}}\right)^{3}\frac{8\nu_{1}(v_{1} + \nu_{2} - 2)(2v_{1} + \nu_{2} - 2)}{(v_{2} - 2)^{3}(v_{2} - 4)(v_{2} - 6)}\quad(v_{2} > 6)\]
+
+moments about the origin:
+
+\[\mu_{n} = \left(\frac{v_{2}}{v_{1}}\right)^{n}\frac{\Gamma\left(\frac{\nu_{1} + 2}{2}\right)}{\Gamma\left(\frac{\nu_{1}}{2}\right)}\frac{\Gamma\left(\frac{\nu_{1} - 2n}{2}\right)}{\Gamma\left(\frac{\nu_{2}}{2}\right)}\quad(v_{2} > 2n)\]
+
+characteristic function:
+
+\[\phi(t) = E(e^{tr}) = M\left(\frac{\nu_{1}}{2},\,\frac{-\nu_{2}}{2},\,\frac{-\nu_{2}}{v_{1}}it\right)\]
+
+##### Series Expansions
+
+\[x = \frac{v_{2}}{v_{2} + v_{1}}F\]
+
+\[Q(F|_{r_{1},\,r_{2}}) = x^{r_{2}/2}\left[1 + \frac{\nu_{2}}{2}(1 - x) + \frac{\nu_{2}(v_{2} + 2)}{2\cdot 4}\,(1 - x^{2}) + \ldots\quad\right.\]
+
+\[\left. + \frac{\nu_{2}(v_{2} + 2)\,\ldots\,(v_{2} + r_{1} - 4)}{2\cdot 4}\,\ldots\,(v_{1} - 2)\right]\quad(v_{1}\,\text{even})\]
+
+\[Q(F|_{r_{1},\,r_{2}}) = 1 - (1 - x)^{r_{1}/2}\left[1 + \frac{\nu_{1} + \nu_{2} - 2}{2\cdot 4}\,\frac{(1 - x)}{2}\right.\]
+
+\[\left. + \frac{(v_{1} + \nu_{2} - 2)\,\ldots\,(v_{2} + 2)}
+

@@ -1,3 +1,61 @@
 Remainder:
 
-\[R_{*}\frac{\pi}{(2n)!2^{a+1}}f^{(2a)}(\xi)\quad(0\textless\textless\textless\textless\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textgreater\textless\textgreater\textless\textgreater\textless\textgreater\textgreater\textless\textgreater\textgreater\textless\textgreater\textgreater\textless\textgreater\textgreater\textless\textgreater\textgreater\textless\textgreater\textgreater\textless\textgreater\textgreater\textgreater\textless\textgreater\textgreater\textgreater\textgreater\textless\
+\[R_{*} = \frac{\pi}{(2n)!2^{a+1}}f^{(2a)}(\xi)\]
+
+(0<\(k\)<1)
+
+**25.4.43**
+
+\[\int_{a}^{a}f(x)\sqrt{\frac{x-a}{b-x}}\,dx = (b-a)\sum\limits_{i = 1}^{n}w_{i}f(y_{i}) + R_{*}\]
+
+\[y_{i} = a + (b-a)z_{t}\]
+
+Related orthogonal polynomials:
+
+\[R_{*} = \frac{n!\surd\pi}{2^{a}(2n)!}f^{(2a)}(\xi)\qquad(-\infty <\xi<\infty)\]
+
+**25.4.46**
+
+\[\int_{a}^{a}e^{-\pi x}f(x)dx = \sum\limits_{l = 1}^{n}w_{i}f(x_{l}) + R_{*}\]
+
+Related orthogonal polynomials: Hermite polynomials \(H_{n}(x)\).
+
+Abscissas: \(x_{t}\) is the \(i^{\rm th}\) zero of \(H_{n}(x)\)
+
+\[\frac{2^{a+n}i!\sqrt{\pi}}{n^{2}[H_{n-1}(x)]^{2}}\]
+
+(See Table 25.10 for \(x_{t}\) and \(w_{t}\).)
+
+Remainder:
+
+\[R_{*} = \frac{n!\surd\pi}{2^{a}(2n)!}f^{(2a)}(\xi)\qquad(-\infty <\xi<\infty)\]
+
+**25.4.47**
+
+**Filon's Integration Formula***
+
+\[\int_{x_{0}}^{x_{2n}}f(x)\,\cos tx\,dx = h\left[\alpha(th)(f_{2a}\sin\,tx_{2a} \right.\]
+
+\[\left.-f_{0}\sin\,tx_{0})+\beta(th)\cdot C_{2a} + \gamma(th)\cdot C_{2a-1}\right] + R_{*}\]
+
+\[+\frac{2}{45}\,th^{4}S_{2a-1}^{\prime}\Big{]} - R_{*}\]
+
+\[C_{2a} = \sum\limits_{l = 0}^{n}f_{2l}\,\cos\,(tz_{2l}) = \frac{1}{2}[f_{ln}\cos\,tx_{2a} + f_{0}\,\cos\,tx_{0}]\]
+
+\[\left.\begin{array}{c} \\ w_{i} = \frac{2\pi}{2n + 1}\,x_{t}\end{array}\right.\]
+
+\[C_{2a-1} = \sum\limits_{l = 1}^{n}f_{1l-1}\,\cos\,tx_{2l -1}\]
+
+\[\left.\begin{array}{c} \\ S_{2a-1}^{\prime}\equiv\sum\limits_{l = 1}^{n}f_{2l-1}^{\prime 2}\,\sin\,tx_{2l -1}\end{array}\right.\]
+
+\[R_{*} = \frac{1}{90}nk^{3}f^{(3)}(\xi) + O(lk^{7})\]
+
+\[\left.\begin{array}{c} \\ \alpha(\theta) = \frac{1}{\theta}\!\!+\!\frac{\sin\,2\theta}{2\theta}\frac{2\,\sin^{2} \theta}{\theta^{3}}\end{array}\right.\]
+
+\[\left.\begin{array}{c} \\ \beta(\theta) = 2\left(\frac{1\!+\!\cos^{2}\theta}{\theta^{3}}\frac{\sin\,2\theta}{ \theta^{3}}\right)\end{array}\right.\]
+
+\[\left.\begin{array}{c} \\ \gamma(\theta) = 4\left(\frac{\sin\,\theta}{\theta^{3}}\frac{\cos\,\theta}{\theta^{3}} \right)\end{array}\right.\]
+
+For small \(\theta\) we have
+
+\[\begin{array}{c} \\ \alpha = \frac{2\theta^{3}}{45}\frac{2\theta^{3}}{315}\!\!+\!\frac{2\theta^{ 7}}{4725}\cdots\\ \beta = \frac{2}{3}\frac{2\theta^{2}}{15}\frac{4\theta^{4}}{105}\!\!+\!\frac{2 \theta^{6}}{567}\cdots\\ \

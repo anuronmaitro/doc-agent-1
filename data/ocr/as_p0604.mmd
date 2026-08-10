@@ -1,28 +1,49 @@
-\[m = \sin^{2}\,\,\alpha = 4/5,\,\lambda = \sqrt{5/2},\,\cos^{2}\,\,\varphi = 3/4.\]
+\[m = \sin^{2}\,\alpha = 4/5,\,\lambda = - \sqrt{5/2},\,\cos^{2}\,\varphi = 3/4.\]
 
 Thus \(\alpha = 63.434949^{\circ}\), \(\varphi = 30^{\circ}\) and
 
-\[\begin{array}{l}u = 2(5)^{- 1}\bar{F}(30^{\circ}\langle 63.434949^{\circ}\rangle\\ = 2(5)^{- 1}\langle 5.43604\rangle = .486214\,\,\text{from Table 17.5}.\end{array}\]
+\[u = 2(5)^{- 1}F(30^{\circ}\langle 63.434949^{\circ}\rangle\] \[= 2(5)^{- 1}\langle 5.43504\rangle = .486214\text{ from Table 17.5.}\]
 
 The above integral is of the Weierstrass type and in fact 17 = \(\mathcal{D}(\frac{1}{2}u;\,28,\,-24)\) (see chapter 18).
 
 Example 11: Evaluate
 
-\[\int_{0}^{24/3}\,(24 - 12t + 2t^{2} - t^{2})^{- 1/2}\,dt.\]
+\[\int_{0}^{24/3}\,(24 - 12t+ 2t^{2} - t^{2})^{- 1/2}\,dt.\]
 
 We have
 
-\[24 - 12t + 2t^{2} - t^{2} = - (t - 2)(t^{2} + 12) = - P(t).\]
+\[24 - 12t+ 2t^{2} - t^{2} = - (t - 2)(t^{2} + 12) = - P(t).\]
 
-There is only one real zero and we therefore use 17.4.74 with \(P(t) = \theta - 2\theta + 12t - 24,\,\,\beta = 2\) so that \(P^{\prime}(2) = 16,\,\,P^{\prime\prime}(2) = 8,\,\,\lambda = 2\) and therefore
+There is only one real zero and we therefore use 17.4.74 with \(P(t) = \theta - 2\theta^{2} + 12t - 24,\,\beta = 2\) so that \(P^{\prime}(2) = 16,\,P^{\prime\prime}(2) = 8,\,\lambda = 2\) and therefore
 
-\[m = \sin^{2}\,\,\alpha = \frac{1}{4},\,\,\,\,\alpha = 30^{\circ}.\]
+\[m = \sin^{2}\,\alpha = \frac{1}{4},\quad\alpha = 30^{\circ}.\]
 
 Therefore the given integral is
 
-\[\int_{0}^{2} - \int_{2\alpha}^{2} = \frac{1}{2}\,[F(\varphi_{1}\langle 60^{\circ}\rangle - F(\varphi_{2}\langle 60^{\circ}\rangle\]
+\[\int_{0}^{2} - \int_{2\pi}^{2} = \frac{1}{2}\left[ F(\varphi_{1}\langle 60^{\circ}\rangle - F(\varphi_{2}\langle 60^{\circ}\rangle\right]\]
 
 where
 
-\[\cos\,\,\varphi_{1} = \frac{1}{3}
+\[\cos\,\varphi_{1} = \frac{1}{3},\quad\varphi_{1} = 70.52877\,\,93^{\circ}\]
 
+\[\cos\,\varphi_{2} = \frac{1}{2},\quad\varphi_{2} = 60^{\circ}\]
+
+and the integral = \(\frac{1}{1}.510344 - 1.212597 = .148874\).
+
+Example 12: Use Landen's transformation to evaluate
+
+\[\int_{0}^{\pi/2}\left(1 - \frac{1}{4}\sin^{2}\theta\right)^{- 1/2}\,d\theta\text{ to }5\text{D}.\]
+
+First Method, Descending Transformation
+
+We use 17.5.1 to give
+
+\[1 + \sin\,\alpha_{1} = \frac{2}{1 + \cos\,30^{\circ}} = 1.071797\] \[\cos\,\alpha_{1} = \left[(1 - \sin\,\alpha_{1})(1 + \sin\,\alpha_{1})\right]^{1/2} = .997419\] \[1 + \sin\,\alpha_{2} = \frac{2}{1 + \cos\,\alpha_{1}} = 1.001292;\,\cos\,\alpha_{2} = .99999\]
+
+\[1 + \sin\,\alpha_{3} = \frac{2}{1 + \cos\,\alpha_{2}} = 1.00000\]
+
+We use 17.5.11 to give
+
+\[1 + \cos\,\alpha_{n + 1} = 2/(1 + \sin\,\alpha_{3})\]
+
+\[\sin\,\alpha_{n} = \frac{1}{3333}\,\,333\,\

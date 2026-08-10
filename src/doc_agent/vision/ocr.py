@@ -36,6 +36,14 @@ FAILURES_PATH = OCR_DIR / "failures.json"
 # anyway is wasted. 1536 tokens comfortably covers a normal prose/formula page.
 MAX_NEW_TOKENS = 1536
 
+# Step 18b defect 3: generate() set no repetition_penalty, and the spirals in the DEGEN_*
+# comments above are exactly what that omission produces. 1.1 is deliberately mild -- A&S
+# legitimately repeats subscripts and table rows (a column of "0", a run of "\frac{1}{2}"),
+# and HuggingFace's no_repeat_ngram_size would corrupt those outright; a soft per-token
+# penalty instead just makes an already-generated token less attractive next time, which
+# discourages runaway spirals without forbidding genuine repetition.
+REPETITION_PENALTY = 1.1
+
 # Repetition-degeneration guard (summary.md 3a item 4 / plan.md Step 11 point 9): a stuck
 # decoder repeats the same short n-gram forever instead of stopping. Detected as the tail of
 # the decoded text decomposing into >=MIN_REPEATS consecutive identical NGRAM-word blocks -- a
@@ -78,13 +86,54 @@ MIN_PAGE_CHARS = 120
 #    The repeated-unit count separates cleanly: sound pages topped out at 6 consecutive
 #    repeats, the two degenerate pages hit 39 and 38. 20 sits ~3x above the clean maximum
 #    and ~2x below the observed failures.
-DEGEN_REPEAT_UNIT_MAX_LEN = 4
-DEGEN_MIN_UNIT_REPEATS = 20
-# Compiles to (.{1,4}?)\1{19,} : a 1-4 character unit, then 19 more copies of it = 20 total.
+#
+#    Step 18b correction: DEGEN_REPEAT_UNIT_MAX_LEN=4 was itself blind to its own dominant
+#    failure. Auditing the 594 "successful" Step 16 pages against the PDF's text layer
+#    found 41 MORE spiralling pages hiding inside them (91 total; the old detector caught
+#    50, i.e. 55%) -- because "\qquad" is 6 characters and "\begin{array}{c}" is 16, both
+#    longer than the unit length that could ever match. Widened to 20. That alone would
+#    now flag legitimate LaTeX table syntax too -- "c c c c" and "|c|c|c|" are genuine
+#    `\begin{tabular}` column specs, not degeneration, and 34 of the original 75 raw hits
+#    were exactly this. TABULAR_UNIT_RE excludes any matched unit built ONLY from column-
+#    spec characters (alignment letters, bars, braces, digits, whitespace, and "&", the
+#    cell separator -- p.328's flagged unit was a bare "&" from a sparse table row, not a
+#    spiral) -- a real spiral is always a backslash macro or math content, never just that.
+#
+#    The repeat count itself was re-checked against Elias's 11 known-genuine spirals and
+#    dropped from 20 to 13, for two independent reasons:
+#      - exact-match fragility: real spirals decode with a stray whitespace inserted every
+#        ~13-14 copies (e.g. "\qquad\qquad...\qquad \qquad..."), which breaks a strict
+#        backreference at 20 copies outright -- p.360 and p.177 were both missed this way,
+#        p.360 being the exact gold page this repair exists to fix. Matched against the
+#        text with ALL whitespace stripped first (LaTeX macros are whitespace-insensitive;
+#        a decoder stuck on a token is stuck regardless of incidental spacing), not the
+#        word-tokenized `stripped` used by the tail check below.
+#      - p.289's genuine spiral only repeats its unit 13 times total, never reaching 20.
+#    13 is the lowest threshold that still catches all 11 known cases. Lowering it further
+#    starts catching short units (e.g. "\," x14 = ~1% of an otherwise-good page) that read
+#    as coincidental formula spacing rather than a stuck decoder, so a MIN_SPIRAL_SPAN_CHARS
+#    floor (naturally scaling with unit length) guards against exactly that.
+DEGEN_REPEAT_UNIT_MAX_LEN = 20
+DEGEN_MIN_UNIT_REPEATS = 13
+# Compiles to (.{1,20}?)\1{12,} : a 1-20 character unit, then 12 more copies = 13 total.
 DEGEN_REPEAT_RE = re.compile(
     rf"(.{{1,{DEGEN_REPEAT_UNIT_MAX_LEN}}}?)\1{{{DEGEN_MIN_UNIT_REPEATS - 1},}}",
     re.DOTALL,
 )
+TABULAR_UNIT_RE = re.compile(r"^[lcr|@{}&\s.0-9]*$")
+WS_RE = re.compile(r"\s+")
+MIN_SPIRAL_SPAN_CHARS = 60
+
+# Step 18b defect 5, found on the full-book run (not the 20-page smoke sample): a region
+# crop with a near-zero width or height crashes Nougat's OWN preprocessing, not ours.
+# layout.detect() (TATR, a learned model) does not guarantee a sane bbox on every region --
+# one page produced a crop of shape (1, 1325, 3). HF's image_processing_nougat.crop_margin()
+# calls to_channel_dimension_format() on that array; its "channel dim is ambiguous" heuristic
+# reads a leading size-1 axis as channels-first, and the resulting transpose((2,0,1)) raises
+# `ValueError: axes don't match array` -- an uncaught exception that took the entire ~5h
+# Kaggle run down with it (papermill has no per-cell recovery). There is no content to read
+# in a 1-pixel-tall sliver anyway, so skip the model call rather than let it reach the crash.
+MIN_CROP_DIM_PX = 8
 
 # The citation anchor our Explainable NFR needs (summary.md 3f / 10): A&S formula numbers
 # look like "6.1.8". Parsed out of a chunk's OWN text, never guessed.
@@ -167,6 +216,7 @@ class Reader:
                 min_length=1,
                 max_new_tokens=MAX_NEW_TOKENS,
                 bad_words_ids=[[self._processor.tokenizer.unk_token_id]],
+                repetition_penalty=REPETITION_PENALTY,
                 output_scores=True,
                 return_dict_in_generate=True,
             )
@@ -201,6 +251,25 @@ class Reader:
             )
         return sequence, confidence
 
+    def _generate_region(self, region: Region) -> tuple[str, float]:
+        """Crop -> processor -> model.generate -> (decoded text, confidence).
+
+        The shared implementation behind `transcribe_region` (below) and Step 18b defect
+        1's page-level retry in `transcribe()`, which needs the confidence value that
+        `transcribe_region`'s locked `-> str` signature has nowhere to return.
+        """
+        from PIL import Image as PILImage
+
+        path = _page_image_path(region.page_id)
+        image = PILImage.open(path).convert("RGB").crop(region.bbox)
+        if image.width < MIN_CROP_DIM_PX or image.height < MIN_CROP_DIM_PX:
+            logger.warning(
+                f"vision.ocr: {region.page_id} region bbox={region.bbox} crops to "
+                f"{image.width}x{image.height}px (degenerate); skipping the model call"
+            )
+            return "", 0.0
+        return self._generate(image)
+
     def transcribe_region(self, region: Region) -> str:
         """Crop -> processor -> model.generate -> decoded LaTeX/markdown string.
 
@@ -209,11 +278,7 @@ class Reader:
         so this stays real and load-bearing, not a shim kept only to satisfy the locked
         `Reader.transcribe_region` signature.
         """
-        from PIL import Image as PILImage
-
-        path = _page_image_path(region.page_id)
-        image = PILImage.open(path).convert("RGB").crop(region.bbox)
-        text, _confidence = self._generate(image)
+        text, _confidence = self._generate_region(region)
         return text
 
 
@@ -253,9 +318,18 @@ def _failure_reason(text: str) -> str | None:
     if len(stripped) < MIN_PAGE_CHARS:
         return "empty-or-near-empty"
 
-    # Whole-page repetition (catches mid-page spirals the tail check misses).
-    if DEGEN_REPEAT_RE.search(stripped):
-        return "repetition-degeneration"
+    # Whole-page repetition (catches mid-page spirals the tail check misses). Matched
+    # against the whitespace-collapsed text (see DEGEN_MIN_UNIT_REPEATS above) so a stray
+    # space every ~13-14 copies can't break the backreference. Scans every match, not just
+    # the first: a page can open with a legitimate tabular block and still spiral later, so
+    # stopping at the first hit would let that page through. A MIN_SPIRAL_SPAN_CHARS floor
+    # keeps short-unit coincidental repeats (formula spacing like "\," or "\!") from firing
+    # on a handful of copies that only cover a sliver of an otherwise-good page.
+    no_ws = WS_RE.sub("", stripped)
+    for m in DEGEN_REPEAT_RE.finditer(no_ws):
+        span = m.end() - m.start()
+        if span >= MIN_SPIRAL_SPAN_CHARS and not TABULAR_UNIT_RE.match(m.group(1)):
+            return "repetition-degeneration"
 
     tokens = stripped.split()
 
@@ -344,6 +418,49 @@ def _write_failures(path: Path, rows: dict[str, dict]) -> None:
     path.write_text(json.dumps(list(rows.values()), indent=2) + "\n", encoding="utf-8")
 
 
+def _retry_page_by_region(
+    reader: Reader, page_regions: list[Region]
+) -> tuple[str, list[str], list[float]] | None:
+    """Step 18b defect 1 fix: when whole-page generation fails, retry region-by-region
+    instead of discarding the page untried. `Reader.transcribe_region`'s own docstring
+    already says it exists for exactly this ("per-region re-OCR when a page fails") --
+    Step 16 never actually called it, so every failed page was thrown away regardless.
+
+    A single-column region crop is much closer to Nougat's training distribution (modern
+    single-column arXiv papers) than a two-column 1964 scan, which is precisely the
+    layout defect 4 (early stopping) is measured against -- so this is a real second
+    chance, not a formality.
+
+    Returns `(recombined_markdown, region_texts, region_confidences)` -- one text and one
+    confidence PER REGION, in reading order, so downstream chunk-building can use the real
+    per-region confidence instead of a single page-level scalar -- or `None` if the retry
+    is *also* unusable, in which case the caller keeps the original failure.
+    """
+    region_texts: list[str] = []
+    region_confs: list[float] = []
+    for region in page_regions:
+        # This loop is defect 1's own fix, exercised for the first time at full-book scale
+        # in Step 18b -- and it found a crash (defect 5: a degenerate crop dimension, guarded
+        # in _generate_region above) that took an entire ~5h unattended run down with it. The
+        # per-region guard fixes the KNOWN cause; this except is the belt-and-suspenders for
+        # an unknown one -- one bad region among ~1040 pages' worth must not cost the whole
+        # job again. Treated the same as a genuinely blank region: empty text, zero confidence.
+        try:
+            text, conf = reader._generate_region(region)
+        except Exception as exc:
+            logger.warning(
+                f"vision.ocr: region retry crashed on {region.page_id} bbox={region.bbox} "
+                f"({type(exc).__name__}: {exc}); treating as empty"
+            )
+            text, conf = "", 0.0
+        region_texts.append(text)
+        region_confs.append(conf)
+    recombined = "\n\n".join(t for t in region_texts if t.strip())
+    if _failure_reason(recombined) is not None:
+        return None
+    return recombined, region_texts, region_confs
+
+
 def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = None) -> list[Chunk]:
     """Regions -> text chunks.
 
@@ -363,9 +480,12 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
     the boundary. It defaults to None (no limit) and is not passed by pipeline.py's fixed
     `ocr.transcribe(regions, cfg)` call, so normal pipeline behaviour is unchanged.
 
-    A page whose decode degenerates into a repeated-token loop (_is_degenerate) is logged to
-    data/ocr/failures.json and produces NO chunks -- summary.md 4i: "mark the page as failed
-    rather than writing garbage."
+    A page whose whole-page decode fails (_failure_reason) is not discarded immediately --
+    Step 18b defect 1: it gets ONE region-by-region retry (_retry_page_by_region) before
+    being logged to data/ocr/failures.json and producing NO chunks. Only a page that fails
+    *both* the whole-page attempt and the region retry is actually given up on -- summary.md
+    4i: "mark the page as failed rather than writing garbage" still holds, it just now
+    happens after a real second chance, not on the first bad decode.
     """
     reader = Reader(cfg)
     by_page = _group_by_page(regions)
@@ -376,7 +496,7 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
     failure_rows = _load_failures(FAILURES_PATH)
 
     chunks: list[Chunk] = []
-    n_processed = n_cached = n_failed = 0
+    n_processed = n_cached = n_failed = n_recovered = 0
     t0 = time.time()
 
     for page_id in page_ids:
@@ -394,6 +514,8 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
                 if cid.startswith(f"{doc_id}|{page_id}|")
             ]
             confidence = float(prior_confs[0]) if prior_confs else 0.5
+            region_texts = _split_markdown_to_regions(markdown, len(page_regions))
+            region_confs = [confidence] * len(page_regions)
             n_cached += 1
         else:
             image_path = _page_image_path(page_id)
@@ -404,29 +526,46 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
 
             reason = _failure_reason(markdown)
             if reason is not None:
-                failure_rows[page_id] = {
-                    "page_id": page_id,
-                    "reason": reason,
-                    "chars": len(markdown.strip()),
-                    "detected_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                }
-                _write_failures(FAILURES_PATH, failure_rows)
-                n_failed += 1
-                logger.warning(f"vision.ocr: {page_id} unusable ({reason}); skipped")
-                continue
+                # Defect 1 fix: don't discard the page untried -- retry region-by-region
+                # before giving up. A single-column crop is closer to Nougat's training
+                # distribution than the two-column 1964 scan that just failed whole.
+                retry = _retry_page_by_region(reader, page_regions)
+                if retry is None:
+                    failure_rows[page_id] = {
+                        "page_id": page_id,
+                        "reason": reason,
+                        "chars": len(markdown.strip()),
+                        "detected_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                    }
+                    _write_failures(FAILURES_PATH, failure_rows)
+                    n_failed += 1
+                    logger.warning(
+                        f"vision.ocr: {page_id} unusable ({reason}); region retry also failed; skipped"
+                    )
+                    continue
+                markdown, region_texts, region_confs = retry
+                n_recovered += 1
+                logger.info(
+                    f"vision.ocr: {page_id} recovered via region-level retry "
+                    f"(page-level attempt: {reason})"
+                )
+            else:
+                region_texts = _split_markdown_to_regions(markdown, len(page_regions))
+                region_confs = [confidence] * len(page_regions)
 
             mmd_path.write_text(markdown, encoding="utf-8")
             n_processed += 1
 
-        region_texts = _split_markdown_to_regions(markdown, len(page_regions))
-        for idx, (region, text) in enumerate(zip(page_regions, region_texts, strict=True)):
+        for idx, (region, text, conf) in enumerate(
+            zip(page_regions, region_texts, region_confs, strict=True)
+        ):
             chunk_id = _chunk_id(doc_id, page_id, idx, text)
             chunks.append(
                 Chunk(id=chunk_id, doc_id=doc_id, text=text, page_ids=[page_id], score=0.0)
             )
             meta_rows[chunk_id] = {
                 "chunk_id": chunk_id,
-                "ocr_conf": round(confidence, 4),
+                "ocr_conf": round(conf, 4),
                 "bbox": list(region.bbox),
             }
 
@@ -436,7 +575,8 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
 
     _write_jsonl(META_PATH, meta_rows)
     logger.info(
-        f"vision.ocr: {len(chunks)} chunks from {n_processed} newly-transcribed + "
-        f"{n_cached} cached pages ({n_failed} failed/degenerate, skipped)"
+        f"vision.ocr: {len(chunks)} chunks from {n_processed} newly-transcribed "
+        f"({n_recovered} via region-level retry) + {n_cached} cached pages "
+        f"({n_failed} failed/degenerate, skipped)"
     )
     return chunks

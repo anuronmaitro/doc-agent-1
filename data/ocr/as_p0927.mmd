@@ -4,10 +4,42 @@
 
 **Mathematical Properties****3**
 
-**26.1. Probability Functions: Definitions and Properties**
+## 10.1 Probability Functions Definitions and Properties
 
-**Univariate Cumulative Distribution Functions**
+### Univariate Cumulative Distribution Functions
 
-**A real-valued function** _F_(_z_) is termed a (univariate) cumulative distribution function (c.d.f.) or simply distribution function if**
+A real-valued function _F_(_z_) is termed a (univariate) cumulative distribution function (e.d.f.) or simply distribution function if
 
-* _F_(_x_) is non-decreasing, i.e.,** _F_(_x_i) \(\leq\)_F_(_x_i) for** \(\begin{array}{l} \alpha_{1} \leq x_{2} \\ \beta_{2} \\ \beta_{3} \end{array}\) **F_(_x_i) is everywhere continuous from the right, i.e.,** _F_(_x_i) = \(\lim\limits_{\varepsilon \to 0+}\) **F_(_x_i) \(\begin{array}{l} \alpha \leq x_{1} \\ \beta_{2} \end{array}\) **F(** \(\begin{array}{l} \alpha \leq x_{1} \\ \beta_{2} \end{array}\) **F(** \(\begin{array}{l} \alpha \leq x_{1} \\ \beta_{2} \end{array}\) **F(
+* _F_(_x_) is non-decreasing, i.e., _F_(_x_i) <= _F_(_x_i) for \({}_{2_{1}} \leq {}_{2_{2}}\)
+* _F_(_x_) is everywhere continuous from the right, i.e., _F_(_x_)=lim _F_(_x_+-_t_)
+* _F_(- ) = 0, _F_( ) = 1.
+
+The function _F_(_x_) signifies the probability of the event "_X_<=_x_" where \(X\) is a random variable, i.e., _Pr_{_X_<=_z_')=_F_(_z_), and thus describes the c.d.f. of \(X\). The two principal types of distribution functions are termed _discrete_ and _continuous_.
+
+_Discrete Distributions:_ Discrete distributions are characterized by the random variable \(X\) taking on an enumerable number of values . . . , _x_-, \(x\)0, \(x\)1, . . . with point probabilities
+
+\[p_{n} = Pr\left\{ X = x_{n} \right\} \geq 0\]
+
+which need only be subject to the restriction
+
+\[\sum\limits_{n} p_{n} = 1.\]
+
+The corresponding distribution function can then be written
+
+\[F(x) = Pr\left\{ X \leq x \right\} = \sum\limits_{x_{n} \leq 2} p_{n}\]
+
+where the summation is over all values of \(x\) for which _x_n<=_x_. The set {_x_n} of values for which _P_n>0 is termed the domain of the random variable \(X\). A discrete distribution of a random variable is called a _lattice distribution_ if there exist numbers \(a\) and \(b\)  0 such that every possible value of \(X\) can be represented in the form _a_+_bn_ where \(n\) takes on only integral values. A summary of some properties of certain discrete distributions is presented in 19-26.1.24.
+
+_Continuous Distributions._ Continuous distributions are characterized by _F_(_x_) being absolutely continuous. Hence _F_(_x_) possesses a derivative _F_''(_z_)=_f_(_z_) and the c.d.f. can be written
+
+\[F(x) = Pr\left\{ X \leq x \right\} = \int_{- \infty}^{x_{2}} f(t)dt.\]
+
+The derivative _f_(_x_) is termed the _probability density function_ (p.d.f.) or _frequency function_, and the values of \(x\) for which _f_(_x_)>0 make up the domain of the random variable \(X\). A summary of some properties of certain selected continuous distributions is presented in 19-26.1.25-26.1.34.
+
+### Multivariate Probability Functions
+
+The real-valued function _F_(_x_1, \(x\)2, . . . . . _x_n) defines an _n_-variate cumulative distribution function if
+
+* _F_(_x_1, \(x\)2, . . . . _x_n) is a non-decreasing function for each \(x\)1
+* _F_(_x_1, \(x\)2, . . . . _x_n) is continuous from the right in each \(x\)1; i.e., _F_(_x_1, \(x\)2, . . . . _x_n) =lim _F_(_x_1, \(x\)1, . . . ., . . . ., . . ., . . ., . . ., . . ., . .
+

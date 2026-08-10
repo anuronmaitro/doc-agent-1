@@ -2,56 +2,30 @@
 
 #### 26.4.22 Pearson Type III
 
-\(\left[\frac{ab}{c}\right]^{ab}\int_{-a}^{z}\left(1+\frac{t}{a}\right)^{ab}e^{-u} dt=P\left(\chi^{2}|y\right)\)
+\(\left[\frac{ab}{c}e^{-bt}\right]^{a}\!\!\int_{-a}^{x}\!\!\left(1\!+\!\frac{t}{a} \right)^{ab}e^{-bt}d\!=\!P\!\left(\chi^{2}|y\right)\)
 
-\(\nu=2ab+2\), \(\chi^{2}=2b\left(x+a\right)\)
+\(\nu\!=\!2ab\!+\!2\), \(\chi^{2}\!=\!2b\!\left(x\!+\!a\right)\)
 
 #### 26.4.23 Incomplete moments of Normal distribution
 
-\(\left[\int_{0}^{z}t^{\alpha}Z(t)dt=\left\{\begin{array}{l}\left(n-1\right)!! \frac{P\left(\chi^{2}|y\right)}{2}\right.\ \left(n\ \ \text{even}\right)\\ \left(\frac{n-1}{\sqrt{2}\pi}P\left(\chi^{2}|y\right)\right.\ \left(n\ \ \text{odd}\right)\\ \left.\chi^{2}=x^{2},\,\nu=n+1\right.\end{array}\right.\)
+\(\left[\int_{0}^{z}\!\!t^{n}Z(t)dt\!=\!\begin{cases}(n\!-\!1)!!\frac{P\!\left( \chi^{2}|y\right)}{2}&(n\text{ even})\\ \frac{(n\!-\!1)!!}{\sqrt{2\pi}}P\!\left(\chi^{2}|y\right)&(n\text{ odd})\end{cases}\)
+
+\(\chi^{2}\!=\!x^{2}\), \(\nu\!=\!n\!+\!1\)
 
 #### 26.4.24 Generalized Laguerre Polynomials
 
-\(n\)L\({}_{n}^{\alpha}\left(x\right)=\frac{\sum\limits_{j=0}^{n+1}\left(\frac{-1}{j} \right)Q\left(\chi^{2}|y+2-2j\right)}{2^{n}\left[Q\left(\chi^{2}|y+2\right)-Q \left(\chi^{2}|y\right)\right]}\)
+\(n!L^{a}_{n}(x)\!=\!\frac{\sum\limits_{j=0}^{n+1}\left(\frac{-1}{j}\right)Q\! \left(\chi^{2}|y\!+\!2\!-\!2j\right)}{2^{n}\!\left[Q\!\left(\chi^{2}|y\!+\!2 \right)\!-\!Q\!\left(\chi^{2}|y\right)\right]}\)
 
-\(x=\chi^{2}/2\), \(\alpha=y/2\)
+\(x\!=\!\chi^{2}\!/2\), \(\alpha\!=\!y/2\)
 
 ### Approximations to the Non-Central \(\chi^{4}\) Distribution
 
-\(a=y+\lambda\)
+\(a\!=\!y\!+\!\lambda\)
 
-_Approximating Function_
+\(b\!=\!\!\frac{\lambda}{\nu\!+\!\lambda}\)
+
+\(Approximation\)
 
 #### 26.4.27 \(\chi^{2}\) distribution
 
-\(P\left(\chi^{\prime 2}|y,\,\lambda\right)\approx P\left(\frac{\chi^{2}}{1+b}\right|\ast\right)\)
-
-\(\nu\ast\frac{a}{1+b}\)
-
-#### 26.4.28 Normal distribution
-
-\(P\left(\chi^{\prime 2}|y,\,\lambda\right)\approx P\left(x\right)\), \(x=\frac{\left(\chi^{\prime 2}/a\right)^{1/3}-\left[1-\frac{2}{9}\left(\frac{1+b}{a}\right)\right]}{\sqrt{ \frac{2}{9}\left(\frac{1+b}{a}\right)}}\)
-
-#### 26.4.29 Normal distribution
-
-\(P\left(\chi^{\prime 2}|y,\,\lambda\right)\approx P\left(x\right)\), \(x=\frac{\left[2\chi^{\prime 2}\right]}{1+b}-\left[\frac{2a}{1+b}-1\right]^{b}\)
-
-#### Approximations to the Inverse Function of Non-Central \(\chi^{2}\) Distribution
-
-If _Q\left(\chi^{\prime 2}|y,\,\lambda\right)=p, Q\left(\chi^{2}_{p}|\ast\right)=p_, and _Q\left(x\right)=p_ then
-
-_Approximating Variable_
-
-_Approximation to the Inverse Function_
-
-#### 26.4.30 \(\chi^{2}\)
-
-\(\chi^{\prime 2}_{p}\approx\left(1+b\right)\chi^{2}_{p}\)
-
-#### 26.4.31 Normal
-
-\(\chi^{\prime 2}_{p}\approx\frac{1+b}{2}\left[x_{p}+\sqrt{\frac{2a}{1+b}-1}\right]\)
-
-#### 26.4.32 Normal
-
-\(\chi^{\prime 2}_{p}\approx a\left[x_{p}\sqrt{\frac{2\left(1+b\right)}{a}}+1-\frac{2}{9} \left(\frac{1+b}{a}\right)\right]\)
+\(P\!\left(\chi^{\prime 2}|y,\,\lambda\right)\!\approx\!\!P\!\left(\frac{\chi^{2}}{1\!+\!b}\right|\!\!\ast\!\!

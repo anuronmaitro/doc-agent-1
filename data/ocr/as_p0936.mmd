@@ -1,0 +1,81 @@
+
+
+**PROBABILITY**
+
+26.2.51
+
+In the following auxiliary table, the polynomial function \(p=.25\), \(.1\), \(.05\), \(.025\), \(.01\), \(.03\), \(.04\), \(.06872\), \(.07663\), \(.06106\), \(.09462\), \(.01878\), \(.04410\), \(.00282\), \(.14644\), \(.17532\), \(.10210\), \(.01428\), \(.11629\), \(.11900\), \(.02937\), \(.00998\), \(.00227\), \(.01082\), \(.02357\), \(.03285\), \(.00776\), \(.05985\), \(.09659\), \(.05126\), \(.01086\), \(.09462\), \(.16106\), \(.14764\), \(.10858\), \(.39517\), \(.55856\), \(.31624\), \(.06898\), \(.09585\), \(.25623\), \(.31624\),
+
+
+
+**26.3. Bivariate Normal Probability Function**
+
+**26.3.1**
+
+\[g(x,y,\ \rho)=[2\pi\sqrt{1-\rho^{2}}]^{-1}\ \exp-\frac{1}{2}\left(\frac{x^{2}-2 \rho xy+y^{2}}{1-\rho^{2}}\right)\]
+
+**26.3.2**\(g(x,y,\ \rho)=(1-\rho^{2})^{-\frac{1}{2}}Z(x)Z\left(\frac{y-\rho x}{\sqrt{1-\rho^{2}}}\right)\)
+
+**26.3.3**
+
+\[L(h,k,\ \rho)=\int_{h}^{\infty}dx\int_{k}^{\infty}g(x,y,\ \rho)dy\]
+
+\[=\int_{h}^{\infty}Z(x)dx\int_{w}^{\infty}Z(w)\,dw,\ \ \ \ \ w=\left(\frac{k-\rho x}{\sqrt{1-\rho^{2}}}\right)\]
+
+**26.3.4**\(L(-h,-k,\ \rho)=\int_{-\infty}^{h}dx\int_{-\infty}^{k}g(x,y,\ \rho)dy\)
+
+**26.3.5**\(L(-h,k,\ -\rho)=\int_{-\infty}^{h}dx\int_{k}^{\infty}g(x,y,\ \rho)dy\)
+
+**26.3.6**\(L(h,-k,\ -\rho)=\int_{h}^{\infty}dx\int_{-\infty}^{k}g(x,y,\ \rho)dy\)
+
+**26.3.7**\(L(h,k,\ \rho)=L(k,h,\ \rho)\)
+
+**26.3.8**\(L(-h,k,\ \rho)+L(h,k,\ -\rho)=Q(k)\)
+
+**26.3.9**\(L(-h,-k,\ \rho)-L(h,k,\ \rho)=P(k)-Q(h)\)
+
+**26.3.10**
+
+\[2[L(h,k,\ \rho)+L(h,k,\ -\rho)+P(h)-Q(k)\,]\]
+
+\[=\int_{-h}^{h}dx\int_{-k}^{k}g(x,y,\ \rho)dy\]
+
+**Probability Function With Means \(m_{x},\ m_{y},\) Variances \(\sigma_{r}^{2},\ \sigma_{y}^{2},\) and Correlation \(\rho\)**
+
+The random variables \(X,\ Y\) are said to be distributed as a bivariate Normal distribution with
+
+
+
+**FUNCTIONS**
+
+\(\sum_{m=0}^{n}\frac{(-1)^{m}}{2^{m}m!
+
+means and variances (\(m_{x}\), \(m_{y}\)) and (\(\sigma^{2}_{x}\), \(\sigma^{2}_{y}\)) an correlation \(\rho\) if the joint probability that \(X\) less than or equal to \(h\) and \(Y\) less than or equal to \(k\) is given by 
+
+
+
+**26.3.11**
+
+\(Pr\{X\!<\!h,Y\!<\!k\}=\!\frac{1}{\sigma_{x}\sigma_{y}}\left[\begin{array}{c} \frac{h\!-\!m_{x}}{\sigma_{z}}\\ \\ -\infty\end{array}\right]\!-\!\frac{k\!-\!m_{y}}{\sigma_{y}}\)
+
+\(-L\left(\!-\!\left(\frac{h\!-\!m_{x}}{\sigma_{x}}\right)\!\right)\), \(-\!\left(\frac{k\!-\!m_{y}}{\sigma_{y}}\right)\!\), \(\frac{k}{\sigma_{y}}\!\).
+
+The probability density function is
+
+26.3.12
+
+\[\frac{1}{2\pi\sigma_{x}\sigma_{y}\sqrt{1-\rho^{2}}}\exp\frac{-Q}{2(1-\rho^{2})} =\frac{1}{\sigma_{x}\sigma_{y}}g\left(\frac{x-m_{x}}{\sigma_{x}},\frac{y-m_{y}} {\sigma_{y}},\frac{y}{\sigma_{y}}\right)\]
+
+where
+
+\[Q=\frac{(x-m_{x})^{2}}{\sigma_{x}^{2}}-\frac{2\rho(x-m_{x})\left(y-m_{y}\right) +(y-m_{y})^{2}}{\sigma_{x}\sigma_{y}}\]
+
+
+
+## Circular Normal Probability Density Function
+
+* [16] A.
+
+
+
+\(\frac{1}{2\pi\sigma^{2}}\)\(\exp\)\(-\frac{(x-m_{x})^{2}+(y-m_{y})}{2\sigma^{2}}\)

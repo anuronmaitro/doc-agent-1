@@ -1,10 +1,14 @@
-\[f_{2}(u) = c_{0} + c_{1}(u - u_{0}) + \frac{c_{2}}{21}(u - u_{0})^{2} + \frac{c_{3}}{3!}(u - u_{0})^{3} + \ldots,\] \[g_{2}(u) = - \left[ c_{1} + c_{2}(u - u_{0}) \right.\] \[\left. + \frac{c_{3}}{2!}(u - u_{0})^{2} + \frac{c_{1}}{3!}(u - u_{0})^{3} + \ldots \right\rbrack,\]
+\[f_{2}(u) = c_{0} + e_{1}(u - u_{0}) + \frac{c_{2}}{2!}(u - u_{0})^{2} + \frac{c_{3}}{3!}(u - u_{0})^{3} + \ldots,\]
+
+\[g_{2}(u) = - \left[ {c_{1} + c_{2}(u - u_{0})} \right.\]
 
 where
 
-\[c_{0} = f_{2}(u_{0}),c_{1} = - g_{2}(u_{0}),\] \[c_{k + 2} = - c_{k} + ( - 1)^{k}\frac{1 \cdot 3 \ldots\,(2k - 1)}{\sqrt{2\pi u_{0}}(2u_{0})^{k}}\]
+\[c_{0} = f_{2}(u_{0}),\,c_{1} = - g_{2}(u_{0}),\]
 
-\[(k = 0,\,1,\,2,\,\ldots\,\,.\,).\]
+\[c_{k + 2} = - c_{k} + ( - 1)^{k}\frac{1 \cdot 3 \ldots\,(2k - 1)}{\sqrt{2\pi u_{0}(2u_{0})^{k}}}\]
+
+\[(k = 0,\,1,\,2,\,\ldots\,\,.).\]
 
 Consulting Table 7.8 we chose \(u\)0=1/185638 =5.386819, thus having \(u\) - \(u\)0=5.24 - 5.386819 = -.146819. From Table 7.8
 
@@ -18,6 +22,34 @@ Using the 4th formula at the bottom of Table 7.8
 
 \[S_{2}(5.24) = .5 - (.170436)(.503471) -(.015030)( - .864012) = .42718.\]
 
-**Example 10.** Compute \(S\)2(2) using 7.3.16. Generating the values of _J_s+1(2) as described in chapter 10 we find
+**Example 10.** Compute \(S\)2(2) using 7.3.16. Generating the values of _J__s_++(2) as described in chapter 10 we find
 
-\[S_{2}(2) = J_{3n}(2) + J_{7n}(2) + J_{11n}(2) + J_{182}(2) + \ldots\
+\[S_{2}(2) = J_{3n}(2) + J_{7n}(2) + J_{11n}(2) + J_{182}(2) + \ \ldots\ .\] \[= .49129 + .06852 + .00297 + .00006 = .56284.\]
+
+**Example 11.** Compute \(\int_{1}^{a}\frac{Y_{0}(t)}{t}\ dt\) by numerical integration using Tables 9.1 and 7.8. [_Y_0(_t_) is the Bessel function of the second kind defined in 9.1.16.]
+
+We decompose the integral into three parts
+
+\[\int_{1}^{a}Y_{0}(t)\frac{dt}{t} = \int_{1}^{10}Y_{0}(t)\frac{dt}{t} + \int_{10}^{a}\left[ Y_{0}(t)- \widehat{Y}_{0}(t)\right]\frac{dt}{t}\]
+
+\[+ \int_{10}^{a}\widehat{Y}_{0}(t)\frac{dt}{t}\]
+
+where
+
+\[\widehat{Y}_{0}(t) = \left( 1 - \frac{9}{128t^{2}} \right)\frac{\sin\left( t - \frac{\pi}{4}\right)}{\sqrt{3\pi t}}\]
+
+represents the first two terms of the asymptotic expansion 9.2.2.
+
+By numerical integration, using Table 9.1,
+
+\[\int_{1}^{10}Y_{0}(t)\frac{dt}{t} = .41826\,\,\,00.\]
+
+Using the fact that the remainder terms of the asymptotic expansion are less in absolute value than the first neglected terms, we can estimate
+
+\[\left| \int_{10}^{a}\left[ Y_{0}(t) - \widehat{Y}_{0}(t)\right]\frac{dt}{t} \right| \leq \sqrt{2}\sum_{7}^{a}\int_{10}^{a}\left[ \frac{3^{a}\cdot 5^{a}\cdot 7^{a}}{2^{16}\cdot 4!}t^{- 11/2} \right.\]
+
+\[\left. + \frac{3^{a}\cdot 5^{a}\cdot 7^{a}\cdot 9^{a}}{2^{16}\cdot 5!}t^{- 13/2}\right]dt = 7.33 \times 10^{-7}.\]
+
+Finally,
+
+\[\int_{10}^{a}\widehat{Y}_{0}(t)\frac{dt}{t} = \frac{14659}{6720}\sqrt{2}\left[

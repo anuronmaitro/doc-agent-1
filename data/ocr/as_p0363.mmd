@@ -2,10 +2,72 @@
 
 **9.1.72**
 
-\[\lim\ \{r^{\mu}Q_{r}^{-\mu}\left(\cos\ \frac{x}{r}\right)\}=-\frac{1}{2}\pi\,Y_{ \mu}(x)\qquad(x\!\!>\!\!0)\]
+lim \(\{\,\nu^{\mu}Q_{r}^{-\mu}\left(\cos\,\frac{x}{v}\right)\}=-\frac{1}{2}\pi\,Y_{\, \mu}(x)\)   (\(x>0\))
 
-For \(P_{r}^{-\mu}\) and \(Q_{r}^{-\mu}\), see chapter **8.**
+For \(P_{r}^{-\mu}\) and \(Q_{r}^{-\mu}\), see chapter 8.
 
-**9.1.73**
+**Continued Fractions**
 
-\[\begin{array}{l}\underline{J_{x}(z)}=\underline{1}\underline{2}\underline{2} \underline{r}^{-1}-\underline{1}\underline{2}(\underline{y}\!+\!\underline{1} )\,z^{-1}\underline{-}\ \underline{2}(\underline{y}\!+\!\underline{1})\,z^{-1}\underline{-}\ \ldots\\ \qquad\
+\(\frac{J_{r}(z)}{J_{r-1}(z)}=\frac{1}{2vz^{-1}-}\,\frac{1}{2(v+1)z^{-1}-}\,\frac {1}{2(v+2)z^{-1}-}\,\cdot\,\cdot\,\cdot\,\cdot\,\cdot\,\cdot\,\cdot\,\cdot\, \cdot\,\cdot
+
+
+
+#### 9.1.75 \({\cal C},(w\pm v)=\sum_{k=-\infty}^{\infty}{\cal C}_{r\mp k}(w)J_{k}(v)\) (\(|v|<|u|\))
+
+The restriction \(|v|<|u|\) is unnecessary when \({\cal C}=_{d}J\) and \(v\) is an integer or zero. Special cases are
+
+#### 9.1.76 \(1=J_{0}^{2}(z)+2\sum_{k=1}^{\infty}J_{k}^{2}(z)\)
+
+\[0=\sum_{k=0}^{2m}(-)^{k}J_{k}(z)J_{2n-k}(z)+2\sum_{k=1}^{\infty}J_{k}(z)J_{2n+k} (z)\] ( \[n\geq 1\] )
+
+\[J_{n}(2z)=\sum_{k=0}^{n}J_{k}(z)J_{n-k}(z)+2\sum_{k=1}^{\infty}(-)^{k}J_{k}(z)J_ {n+k}(z)\]
+
+Graf's
+
+\[{\cal C},(w)\sum_{\rm sin}^{\cos}v\chi=\sum_{k=-\infty}^{\infty}{\cal C}_{v+k} (w)J_{k}(v)\sum_{\rm sin}^{\cos}k\alpha(|ve^{\pm i\alpha}|<|w|)\]
+
+Gegenbauer's
+
+\[{\cal C},(w)\over w^{v}=2^{r}\Gamma(v)\sum_{k=0}^{\infty}(v+k){\cal C}_{v+k} (w){\cal J}_{v+k}(v)\over w^{v}}C_{k}^{(v)}(cos\ \alpha)\]
+
+S OF INTEGER ORDER
+
+In **9.1.79** and **9.1.80**,
+
+\(w{=}\sqrt{(u^{2}{+}v^{2}{-}2w\cos\alpha)}\),
+
+\(u{-}v\cos\alpha{=}w\cos\chi\), \(v\sin\alpha{=}w\sin\chi\)
+
+the branches being chosen so that \(w{\to}u\) and \(\chi{\to}0\) as \(v{\to}0\). \(C_{k}^{(}q)(\cos\alpha)\) is Gegenbauer's polynomial (see chapter 22).
+
+If \(u\), \(v\) are real and positive and \(0{\leq}\alpha{\leq}\pi\), then \(w\), \(\chi\) are real and non-negative, and the geometrical relationship of the variables is shown in the diagram.
+
+The restrictions \(|v{e^{\pm i\alpha}}|{<}|u|\) are unnecessary in **9.1.79** when \({\cal C}{=}J\) and \(v\) is an integer or zero, and in **9.1.80** when \({\cal C}{=}J\).
+
+**Depenerate Form (\(u{=}\infty\)):**
+
+\({e^{it\cos\alpha}}{=}\Gamma(p)({\frac{1}{2}}v)^{-,}{\sum\limits_{k=0}^{m}}\;({\nu +}k){\backslash}^{k}J_{+k}(v)C_{k}^{(p)}(\cos\alpha)\)
+
+\(({\nu\not\equiv}0,-1,\ldots\;.)\)
+
+**Neumann's Expansion of an Arbitrary Function in a Series of Bessel Functions**
+
+\(f(z){=}a_{0}J_{0}(z){+}2\sum\limits_{k=1}^{\infty}a_{ik}J_{k}(z)\qquad(|z|{<}c)\)
+
+where \(c\) is the distance of the nearest singularity of \(f(z)\) from \(z{=}0\),
+
+\(a_{k}{=}\frac{1}{2\pi i}{\int}_{|t|=e^{\prime}}f(t)O_{k}(t)dt\qquad(0{<}c^{ \prime}{<}c)\)
+
+and \(O_{k}(t)\) is Neumann's polynomial. The latter is defined by the generating function
+
+\(\frac{1}{t{-}z}{=}J_{0}(z)O_{0}(t){+}2\sum\limits_{k=1}^{\infty}J_{k}(z)O_{k}( t)\qquad(|z|{<}|t|)\)
+
+\(O_{n}(t)\) is a polynomial of degree \(n+1\) in \(1/t\); \(O_{0}(t){=}1/t\),
+
+\(9.1.85\)
+
+\(O_{n}(t){=}\frac{1}{4}\sum\limits_{k=0}^{\infty}\frac{n(n{-}k{-}1)!}{k!}{\left(\frac{2}{t}\right)^{n-2k+1}}\quad(n{\equiv}1,2,\ldots)\)
+
+The more general form of expansion
+
+\(9.1.86\qquad f(z){=}a_{0}J_{r}(z){+}2\sum\limits_{k=1}^{\infty}a_{ik}J_{r+k}(z)\)

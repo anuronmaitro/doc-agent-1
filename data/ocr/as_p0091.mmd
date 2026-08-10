@@ -1,61 +1,39 @@
-Following the procedure in [4.3] we have from 4.2.48
+Following the procedure in [4.3] we have from **4.2.48**
 
 \[e^{-s}{=}{\sum\limits_{k=0}^{7}}A_{k}T_{k}^{*}(x)\]
 
-where \(T_{k}^{*}(x)\) are the Chebyshev polynomials defined in chapter 22. Assuming \(b_{k}{=}b_{k}{=}0\) we generate \(b_{k}\), \(k{=}7\), \(6\), \(5\), \(\cdot\) . \(0\) from the recurrence relation
+where \(T_{k}^{*}(x)\) are the Chebyshev polynomials defined in chapter 22. Assuming \(b_{k}{=}b_{k}{=}0\) we generate \(b_{k},k{=}7,6,5,\ .\ .\ .\ .\) from the recurrence relation
 
 \[b_{k}{=}(4x{-}2)b_{k+1}{-}b_{k+2}{+}A_{k}\]
 
-\[\begin{array}{c}k\\ 7\\ 6\\ 5\end{array}\quad\begin{array}{c}b_{k}\\ 7\\ 6\\ 5\end{array}\quad\begin{array}{c}b_{k}\\ -.00000\ 0015\\ .00000\ 0400\\ .00000\ 9560\\ .0018\ 9959\\ .00300\ 9164\\ .0350\ 4993\\ 1\end{array}\quad\begin{array}{c}b_{k}\\ -.27432\ 7449\\ .33520\ 2828\\ .33520\ 2828\\ .33520\ 2828\\ .33520\ 2828\\ .33520\ 2828\\ .78\end{array}\]
+\[\begin{array}{c}k\\ k\end{array}\hskip 14.226378ptb_{k}\]
+
+\[\begin{array}{c}7\\ 7\end{array}\hskip 14.226378pt-.00000\ 0015\]
+
+\[\begin{array}{c}6\\ 6\end{array}\hskip 14.226378pt.00000\ 0400\]
+
+\[\begin{array}{c}5\\ -.00000\ 9560\end{array}\hskip 14.226378pt\begin{array}{c}5\\ 4\end{array}\hskip 14.226378pt.0018\ 9959\]
+
+\[\begin{array}{c}3\\ -.00300\ 9164\end{array}\hskip 14.226378pt\begin{array}{c}2\\ 2\end{array}\hskip 14.226378pt.03550\ 4993\]
+
+\[\begin{array}{c}1\\ 1\end{array}\hskip 14.226378pt-.27432\ 7449\]
+
+\[\begin{array}{c}0\\ 0\end{array}\hskip 14.226378pt.33520\ 2828\]
 
 since \(f(x){=}b_{k}{-}(2x{-}1)b_{k}\),
 
-\[\begin{array}{c}e^{-.78}{=}{.}33520\ \ 2828{-}(.5)({-}.27432\ 7449)\\ {=}{.}47236\ 6553.\end{array}\]
+\[\begin{array}{c}e^{-.7s}{=}.33520\ 2828{-}(.5)({-}.27432\ 7449)\\ {=}.47236\ 6553.\end{array}\hskip 14.226378pt\begin{array}{c}2\\ 2\end{array}\hskip 14.226378pt.47236\ 6553.\]
 
-**Example 13.**
+**Example 13**.: Express 38deg42'32'' in radians to 6D.
 
-Express 38deg42'32'' in radians to 6D.
-
-1deg=.01745 32925 19943 29577 r
-
-1'=.00029 08882 08665 72159 62 r
-
-1''=.00000 48481 36811 09535 9936 r
+\[\begin{array}{c}1\lx@notemark{footnote}{}\text{${}^{\circ}{=}.01745\ 32925\ 19493\ 29577\ r$}\\ 1\prime{=}.00029\ 08882\ 08665\ 72159\ 62\ r$}\\ 1\prime{{}^{\prime}{=}.00000\ 48481\ 36811\ 09535\ 9936\ r$}\end{array}\]
 
 Therefore
 
-\[\begin{array}{c}38\arcdeg{=}.66322\ 51\ r\\ 42\arcmin{=}.01221\ 73\ r\\ 32\arcmin{=}.00015\ 51\ r\\ 38\arcdeg{42'32''}{=}.675598\ r.\end{array}\]
+\[\begin{array}{c}38\lx@notemark{footnote}{}\text{${}^{\circ}{=}.66322\ 51\ r$}\\ 42\prime{=}.01221\ 73\ r$}\\ 32\prime{{}^{\prime}{=}.00015\ 51\ r$}\\ 38\lx@notemark{footnote}{}\text{${}^{\circ}{=}.675598\ r$}.\end{array}\]
 
-**Example 14.**
-
-Express z=1.6789 radians in degrees, minutes and seconds to the nearest tenth of a second.
+**Example 14**.: Express z=1.6789 radians in degrees, minutes and seconds to the nearest tenth of a second.
 
 From **Table 1.1** giving the mathematical constants we have
 
-\[\begin{array}{c}1\ r{=}\frac{180\arcdeg}{\pi}{=}57.29577\ 95130\arcdeg\ldots\\ 1.6789\ r{=}96.19388\arcdeg\\ .19388\arcdeg\times 60{=}11.633\arcmin\\ .633\arcmin\times 60{=}38.0\arcsec\\ 1.6789\ r{=}96\arcdeg{11}^{\prime}38.0\arcsec.\end{array}\]
-
-**Example 15.**
-
-Compute sin \(x\) and cos \(x\) for \(x{=}2.317\) to 7D.
-
-From **Table 4.3.44** and **Table 4.6**
-
-sin (2.317)=sin (\(\pi{-}2.317\))=sin (.82459\ 2654)
-
-\[\begin{array}{c}=.73427\ 12\\ \cos\ (2.317){=}\cos\ (\pi{-}2.317){=}{-}\cos\ (.82459\ 2654)\\ {=}{-}.67885\ 60.\end{array}\]
-
-Linear interpolation for \(x{=}.82459\ 2654\) gives an error of 9\(\times 10^{-8}\).
-
-**Example 16.**
-
-Compute sin \(x\) for \(x{=}12.867\) to 8D.
-
-From **Table 4.3.16** and **Tables 4.6** and 4.8
-
-sin (12.867)=sin 12 cos .867+cos 12 sin .867
-
-=.29612\ 142.
-
-The method of reduction to an angle in the first quadrant which was given in **Example 15** may also be used.
-
-**Example 17.**
+\[\begin{array}{c}1\ \text{r}{=}\frac{180\lx@notemark{footnote}{}\text{${}^{\circ}{=}.57.29577\ 95130\lx@notemark{footnote}{}\text{${}^{\circ}{\ldots}$}}}{\pi}{=}\text{${}^{\circ}{=}.29577\ 95130\lx@notemark{footnote}{}\text{${}^{\circ}{\ldots}$}}\\ 1.6789\ \text{r}{=}\text{${}^{\circ}{=}.19388\lx@notemark{footnote}{}\text{${}^{\circ}{\times}60 =}1.633\lx@notemark{footnote}{}\text{${}^{\circ}{\ldots}$}}\\ .633\lx@notemark{footnote}{}\text{${}^{\circ}{\

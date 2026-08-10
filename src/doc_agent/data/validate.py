@@ -70,15 +70,16 @@ assert BUILD_CHAPTERS.isdisjoint(VAL_CHAPTERS), "LEAK: build and val share a cha
 assert BUILD_CHAPTERS.isdisjoint(TEST_CHAPTERS), "LEAK: build and test share a chapter"
 assert VAL_CHAPTERS.isdisjoint(TEST_CHAPTERS), "LEAK: val and test share a chapter"
 
-# --- the 164 hand-annotated pages (Step 18) -----------------------------------------------
-# Printed page numbers, copied from summary.md 4h, which is the source of truth. They live
-# here rather than in scripts/get_data.sh so that both the renderer and the test suite read
-# ONE list: a page list that exists twice is a page list that will disagree with itself.
+# --- the 181 hand-annotated pages (Step 18; train grew 105->122 at the Step 18b gate) -----
+# Printed page numbers, originally copied from summary.md 4h (105/20/39 = 164), which is the
+# source of truth for the val/test counts. They live here rather than in scripts/get_data.sh
+# so that both the renderer and the test suite read ONE list: a page list that exists twice
+# is a page list that will disagree with itself.
 #
 # summary.md 4h asserts the three sets are "disjoint by construction -- they come from
 # disjoint chapter sets". `validate_annotation_sets()` below turns that sentence into a
 # checked claim: a stray page from a TEST chapter in the training set is exactly the kind of
-# leak that inflates the Step 29 number and cannot be spotted by eye in 164 integers.
+# leak that inflates the Step 29 number and cannot be spotted by eye in 181 integers.
 ANNOT_TRAIN_PAGES: tuple[int, ...] = (
     1, 2, 3, 7, 15, 24, 40, 44, 50, 51, 70, 75, 114, 115, 140, 141,
     480, 481, 482, 483, 486, 487, 497, 498, 499,
@@ -89,6 +90,23 @@ ANNOT_TRAIN_PAGES: tuple[int, ...] = (
     823, 852, 858, 862, 864, 865, 878, 879, 883, 885, 886, 915,
     932, 934, 937, 945, 946, 974, 998, 1000, 1004, 1007, 1008, 1010,
     1013, 1014, 1017, 1022, 1023, 1025, 1026, 1027, 1028,
+    # --- Step 18b gate expansion (2026-08-10): the full-book repaired-reader run measured
+    # a 28.5% no-output rate, above the 25% gate line in plan.md -- reopening the annotation
+    # budget question, evidence-based per the gate's own rule (plan.md Step 18b), not a
+    # blind volume increase. All 17 pages below are pages the repaired reader ACTUALLY
+    # failed on this run (data/ocr/failures.json), picked from the three BUILD chapters
+    # with the worst combination of failure rate AND remaining headroom (chapters already
+    # sampled near their own size, e.g. ch11_bessel_integrals/ch21_spheroidal, were left
+    # alone -- adding more there would over-sample a small chapter for little new signal):
+    #   ch04_elem_transcend: 64/161 pages failed (39.8%), only 6 already in train (3.7%
+    #     sampled) and the single largest contributor to the whole book's failures (21.6%
+    #     of all 296) -- the clear primary target.
+    #   ch24_combinatorial: 17/54 failed (31.5%), 6 already in train (11%).
+    #   ch29_laplace: 10/31 failed (32.3%), 6 already in train (19%).
+    # Spread across each chapter's failed-page range (not clustered) for content diversity.
+    78, 106, 127, 143, 161, 181, 196, 204, 212, 222,  # ch04_elem_transcend (+10)
+    828, 838, 851, 873,  # ch24_combinatorial (+4)
+    1031, 1039, 1048,  # ch29_laplace (+3)
 )  # fmt: skip
 ANNOT_VAL_PAGES: tuple[int, ...] = (
     332, 334, 340, 350, 351,
@@ -110,7 +128,7 @@ ANNOT_SETS: dict[str, tuple[tuple[int, ...], frozenset[str]]] = {
     "val": (ANNOT_VAL_PAGES, VAL_CHAPTERS),
     "test": (ANNOT_TEST_PAGES, TEST_CHAPTERS),
 }
-ANNOT_EXPECTED_COUNTS = {"train": 105, "val": 20, "test": 39}
+ANNOT_EXPECTED_COUNTS = {"train": 122, "val": 20, "test": 39}
 
 # Already transcribed during A1 and reused verbatim (summary.md 4h) -- 36 of the 39 test
 # pages still need doing, not 39.
@@ -121,7 +139,8 @@ def validate_annotation_sets() -> dict[str, int]:
     """Check the three annotation page lists before anyone spends a day transcribing.
 
     Verifies, in order:
-      1. each list has the size summary.md 4h promises (105 / 20 / 39 = 164),
+      1. each list has the expected size (train 122 -- 105 from summary.md 4h + 17 from the
+         Step 18b gate expansion -- / val 20 / test 39, per ANNOT_EXPECTED_COUNTS),
       2. no page is repeated inside a list,
       3. the three lists are pairwise disjoint,
       4. every page maps to a chapter in its own split's chapter family -- the property

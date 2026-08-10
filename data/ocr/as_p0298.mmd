@@ -1,20 +1,30 @@
 
-\[\frac{1}{x+\sqrt{x^{2}+2}}{<}e^{2}{\int_{x}^{\infty}e^{-t^{2}}dt{\leq}}\frac{1}{x+ \sqrt{x^{2}+\frac{4}{\pi}}}\quad(x{\geq}0)\]
+\[\frac{1}{x+\sqrt{x^{2}+2}}< e^{2}\int_{z}^{\infty}e^{-t^{2}}dt\leq\frac{1}{x+\sqrt{x^{2}+\frac{4}{\pi}}}\quad(x\geq 0)\]
 
 (For other inequalities see [7.2].)
 
-\[2e^{i^{2}}{\int_{z}^{\infty}e^{-t^{2}}dt{=}}\frac{1}{z+}\frac{1}{z+}\frac{1}{z+ }\frac{3/2}{z+}\frac{2}{z+}\ldots\,(\mathcal{R}z{>}0)\]
+\[2e^{i^{2}}\int_{z}^{\infty}e^{-t^{2}}dt= \frac{1}{z+}\frac{1/2}{z+}\frac{1}{z+}\frac{3/2}{z+}\frac{2}{z+} \ldots\,(\mathcal{R}z>0)\] \[= \frac{1}{\sqrt{\pi}}\lim_{\pi\to\infty}\sum_{k=1}^{n}\frac{H_{x}^{(0)}}{z- x_{k}^{(n)}}\quad(\mathcal{I}z\neq 0)\]
 
-\[{\frac{1}{\sqrt{\pi}}\int_{-\infty}^{\infty}\frac{e^{-t^{2}}dt}{z-t}}{=}\frac{1 }{z-}\frac{1}{z-}\frac{1}{z-}\frac{3/2}{z-}\frac{2}{z-}\ldots\]
+\(x_{k}^{(n)}\) and \(H_{x}^{(n)}\) are the zeros and weight factors of the Hermite polynomials. For numerical values see chapter 25.
 
-\[=\frac{1}{\sqrt{\pi}}\lim_{\pi\to\infty}\sum_{k=1}^{\pi}\frac{H_{k}^{(\infty)}} {z-}x_{k}^{(n)}\quad(\mathcal{I}z{\neq}0)\]
+\[\text{erf}\simeq 1\left(z\rightarrow\infty\;\;\text{in}\;|\arg\,z|<\frac{\pi}{4}\right)\]
 
-\(x_{k}^{(n)}\) and \(H_{k}^{(n)}\) are the zeros and weight factors of the Hermite polynomials. For numerical values see chapter 25.
+Maximum and Infection Points for Dawson's Integral [7.31]
 
-\[\text{Far}\,z{\to}1\left(z{\to}\infty\,\text{ in }|\text{arg }z|{<}\frac{\pi}{4}\right)\]
+\[F(x)= e^{-x^{2}}\int_{0}^{z}e^{t^{2}}dt\]
 
-\[\text{Maximum and Infection Points for Dawson's}\]
+\[7.1.17\quad F(.9241388730\ldots)= .54104\,42246\ldots\]
 
-\[\text{Har}(x){=}e^{-x^{2}}{\int_{0}^{z}e^{t^{2}}dt}\]
+\[7.1.18\quad F(1.50197\,52682\ldots\,)= .42768\,66160\ldots\]
 
-\[\text{Har}(x){=}e^{-x^{2}}{\int_{0}^{z}e^{t^{2}}dt}\]
+\[\text{Derivatives}\]
+
+\[\frac{d^{n+1}}{dz^{n+1}}\text{erf}\,z= (-1)^{n}\frac{2}{\sqrt{\pi}}\,H_{n}(z)e^{-z^{2}}\quad(n=0,1,2,\ldots\,)\]
+
+\[\nu^{n+2}(z)+2zw^{(n+1)}(z)+2(n+1)w^{(n)}(z)= 0\] \[\quad(n=0,1,2,\ldots\,)\]
+
+\[w^{(0)}(z)= w(z)\text{,}\qquad w^{\prime}(z)= -2zw(z)+\frac{2i}{\sqrt{\pi}}\]
+
+(For the Hermite polynomials \(H_{n}(z)\) see chapter 22.)
+
+\[2e^{i^{2}}\int_{z}^{\infty}e^{-t^{2}}dt= \frac{1}{z+}\frac{1}{z+}\frac{1}{z+}\frac{3/2}{z+}\frac{2}{z+} \ldots\,(\mathcal{R}z>0)\]

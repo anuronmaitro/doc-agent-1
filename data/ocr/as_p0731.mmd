@@ -1,39 +1,43 @@
-where the coefficients \(c_{n}\) are those associated with Floquet's solution. In the above, \(r\) may be complex. Except for the special case when \(r\) is an integer, the following holds :
+where the coefficients \(c_{n}\) are those associated with Floquet's solution. In the above, \(r\) may be complex. Except for the special case when \(r\) is an integer, the following holds:
 
-\[\begin{array}{ll}\frac{\varphi_{2n+j-2}}{\varphi_{2n+r}}\sim\frac{\varphi_{-2n+ r}}{\varphi_{-2n+r+2}}\sim\frac{-4n^{2}}{q\left[\cos\left(z-b\right)\right]^{2}} \quad\left(n\rightarrow\infty\right)\end{array}\]
+\[\begin{array}{ll}\frac{\varphi_{2n+j-2}}{\varphi_{2n+1}}\sim&\frac{\varphi_{-2 n+j}}{\varphi_{-2n+j+2}}\sim\frac{-4n^{2}}{q\left[\cos\left(z-b\right)\right]^{2}} \quad\langle n\rightarrow\infty\rangle\\ \end{array}\]
 
-If \(r\) and \(n\) are integers, \(J_{-2n+}\)(\(f\)) = (\(-1\))'\(J_{1n\rightarrow}\)(\(f\)).
+If \(v\) and \(n\) are integers, \(J_{-2n+j}\langle f\rangle\!=\!(-1)^{*}\!J_{1n\rightarrow}\langle f\rangle\).
 
-\[\begin{array}{ll}\left[\varphi_{2n+j}/\varphi_{2n+j-2}\right]\sim-\left[\cos \left(z-b\right)\right]^{2}\!q/4n^{2}\\ \left[\varphi_{-2n+j}/\varphi_{-2n+j+1}\right]\sim-4n^{2}/q\left[\cos\left(z-b \right)\right]^{2}\end{array}\]
+\[\begin{array}{l}\left[\varphi_{2n+j}/\varphi_{2n+j-2}\right]\sim&-\left[\cos \left(z-b\right)\right]^{2}\!q/4n^{2}\\ \cdot&-4n^{2}/q\left[\cos\left(z-b\right)\right]^{2}\end{array}\]
 
 On the other hand
 
-\[\begin{array}{ll}\frac{c_{2n}}{c_{1n-2}}\frac{c_{-2n}}{c_{-2n+2}}\sim\frac{- q}{4n^{2}}\end{array}\]
+\[\begin{array}{ll}\frac{c_{2n}}{c_{1n-2}}\frac{c_{-2n}}{c_{-2n+2}}\frac{-q}{4 n^{2}}\qquad\langle n\rightarrow\infty\rangle\\ \end{array}\]
 
 It follows that 20.4.4 converges absolutely and uniformly in every closed region where
 
-\[\begin{array}{ll}\left|\cos\left(z\!-\!b\right)\right|>\!d_{1}\!\!>\!1.\end{array}\]
+\[\left|\cos\left(z\!-\!b\right)\right|>\!d_{1}\!\!>\!1.\]
 
-There are two such disjoint regions :
+There are two such disjoint regions:
 
-(I) \(\mathcal{I}(z\!-\!b)\!>\!d_{2}\!\!>\!0\); (\(\left|\cos\left(z\!-\!b\right)\right|>\!d_{1}\!\!>\!1\)) (II) \(\mathcal{I}(z\!-\!b)\!<\!-d_{2}\!\!<\!0\); (\(\left|\cos\left(z\!-\!b\right)\right|>\!d_{1}\!\!>\!1\))
+**(I)**: \(\mathcal{I}(z\!-\!b)\!>\!d_{2}\!\!>\!0;\quad\left(\left|\cos\left(z\!-\!b \right)\right|>\!d_{i}\!\!>\!1\right)\)
+**(II)**: \(\mathcal{I}(z\!-\!b)\!<\!-\!d_{2}\!\!<\!0;\quad\left(\left|\cos\left(z\!-\!b \right)\right|>\!d_{i}\!\!>\!1\right)\)
 
 If \(v\) is an integer 20.4.4 converges for all values of \(z\). Various representations are found by specializing \(b\).
 
-If \(b\!=\!0\), \(y\!=\!e^{i\sigma n/2}\sum\limits_{n=-\infty}^{\infty}c_{1n}(-1)^{n}J_{2n+r}(2 \sqrt{q}\cos z)\)
+**20.4.5**: If \(b\!=\!0\), \(y\!=\!e^{i\sigma n/2}\sum\limits_{n=-\infty}^{\infty}c_{1n}(-1)^{n}J_{2n+j}(2 \sqrt{q}\cos z)\)
 
-\[\begin{array}{ll}\left(\left|\cos\left.z\right|>\!1,\right.\right|\left.\arg 2\sqrt{q}\cos\left.z\right|\!\leq\!\pi\right)\end{array}\]
+\[\begin{array}{l}\left(\left|\cos z\right|>\!1,\left|\arg 2\sqrt{q}\cos z \right|\!\leq\!\pi\right)\end{array}\]
+**20.4.6**: If \(b\!=\!\frac{\pi}{2}\), \(y\!=\!\sum\limits_{n=-\infty}^{\infty}c_{2n}J_{2n+j}(2i\sqrt{q}\sin z)\)
 
-If \(b\!=\!\frac{\pi}{2}\), \(y\!=\!\sum\limits_{n=-\infty}^{\infty}c_{2n}J_{2n+r}(2i\sqrt{q}\sin z)\)
-
-\[\begin{array}{ll}\left(\left|\sin\left.z\right|>\!1,\right.\right|\left.\arg 2\sqrt{q}\sin\left.z\right|\!\leq\!\pi\right)\end{array}\]
+\[\begin{array}{l}\left(\left|\sin z\right|>\!1,\left|\arg 2\sqrt{q}\sin z \right|\!\leq\!\pi\right)\end{array}\]
 
 If \(b\!\rightarrow\!\infty\), \(y\) reduces to a multiple of the solution 20.3.8. The fact that 20.3.3, 20.4.5, and 20.4.6 are special cases of 20.4.4 explains why it is that these apparently dissimilar expansions involve the same set of coefficients \(c_{2n}\).
 
-Since 20.4.4 results from the recurrence properties of Bessel functions, \(J_{x}\)(\(f\)) can be replaced by \(\overline{H}_{2}^{\prime 0}\)(\(f\)), \(j\!=\!1\), \(2\), where \(H_{2}^{\prime 0}\) is the Hankel function, at least formally. Thus let
+Since 20.4.4 results from the recurrence properties of Bessel functions, \(J_{x}(f)\) can be replaced by \(\overline{H}_{2}^{ij}(f)\), \(j\!=\!1\), \(2\), where \(H_{2}^{ij}\) is the Hankel function, at least formally. Thus let
 
-\[\begin{array}{ll}\psi_{1}\!=\!\left[e^{i\sigma}\cos\left(z\!-\!b\right)/ \!\cos\left.(z\!+\!b\right)\right]^{n}\!H_{2}^{\prime\prime}(f)\end{array}\]
+\[\begin{array}{l}\psi_{1}\!=\!\!\left[e^{i\tau}\cos\left(z\!-\!b\right)/\! \cos\left(z\!+\!b\right)\right]^{n}\!H_{2}^{(j)}(f)\end{array}\]
 
-where \(f\) satisfies 20.4.2. An examination of the ratios \(\psi_{2n+j}/\psi_{2n+j-2}\) shows that
+where \(f\) satisfies 20.4.2. An examination of the ratios \(\psi_{2n+j}/\!\!\psi_{2n+j-2}\) shows that
 
-\[\begin{array}{ll}y\!=\!
+\[\begin{array}{l}y\!=\!\sum\limits_{n=-\infty}^{\infty}c_{2n}\psi_{2n+j}^{(j) },\end{array}\]
+
+will be a solution provided
+
+\[\begin

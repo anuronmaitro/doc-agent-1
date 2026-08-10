@@ -2,24 +2,38 @@
 
 **732**:
 
-**20.4.12**:
-
-\[M_{i}^{\prime}(z,\,q)\!=\!\frac{1}{c_{2s}^{2}}\sum\limits_{n=-\alpha}^{\alpha}c_{n }^{\prime}(-1)^{n}\!\!Z_{n+s+i}^{\prime}(\sqrt{q}e^{\imath})J_{n-i}(\sqrt{q}e^{ \imath})\]
+**20.4.12**: \[M_{i}^{\prime}(z,\,q)=\frac{1}{c_{2s}^{2}}\sum\limits_{n=-a}^{\infty}c_{n}^{*}(-1)^{ n}Z_{n+j+i}^{(0)}(\sqrt{q}e^{i})J_{n-i}(\sqrt{q}e^{-i})\]
 
 It can be verified from 20.4.8 and 20.4.12 that
 
-\[\underline{y_{i}^{(\imath)}(z)}{M_{j}^{\prime}(z,\,q)}\!=\!F_{\nu}(0),\quad( \not\!\!\partial z\!\!>\!\!0)\]
+\[\underline{y_{i}^{(t)}(z)}=F_{r}(0),\quad\quad(\not\exists z>0)\]
 
-provided \(c_{2s}\!\neq\!\!0\). If \(c_{2s}\!=\!\!0\), the coefficient of \(1/c_{2s}\) in 20.4.11 vanishes identically. For details see [20.43], [20.15], [20.36].
+provided \(c_{2s}\neq 0\). If \(c_{2s}=0\), the coefficient of \(1/c_{2s}\) in 20.4.11 vanishes identically. For details see [20.43], [20.15], [20.36].
 
-If \(s\) is chosen so that \(|c_{2s}|\) is the largest coefficient of the set \(|c_{2s}|\), then rapid convergence of 20.4.12 is obtained, when \(\not\!\!\partial z\!\!>\!\!0\). Even then one must be on guard against the possible loss of significant figures in the process of summing the series, especially so when \(q\) is large, and \(|z|\) small. (If \(j\!\neq\!\!1\), then the phase of the logarithmic terms occurring in 20.4.12 must be defined, to make the functions single-valued.)
+If \(s\) is chosen so that \(|c_{2s}|\) is the largest coefficient of the set \(|c_{2s}|\), then rapid convergence of 20.4.12 is obtained, when \(\not\exists z>0\). Even then one must be on guard against the possible loss of significant figures in the process of summing the series, especially so when \(q\) is large, and \(|z|\) small. (If \(j\neq 1\), then the phase of the logarithmic terms occurring in 20.4.12 must be defined, to make the functions single-valued.)
 
 **20.5. Properties of Orthogonality and Normalization**
 
-If \(a(\!+\!2p,\,q)\), \(a(\!+\!2s,\,q)\) are simple roots of 20.3.10 then
+If \(a(v+2p,\,q)\), \(a(v+2s,\,q)\) are simple roots of 20.3.10 then
 
-\[\int_{0}^{\pi}F_{\!\!+\!2p}(z)F_{\!\!+\!2s}(-z)dz\!=\!\!0,\,\mbox{if}\,\,p\! \neq\!\!s.\]
+\[\int_{0}^{\pi}F_{r+2p}(z)F_{r+2s}(-z)dz=0,\,\mbox{if}\,\,p\neq s.\]
 
 Define
 
-\[\!\!
+\[\begin{array}{l}\mbox{\it ee}_{r}(z,\,q)=\frac{1}{2}\left[F_{r}(z)+F_{r}(-z)\right];\\ \\ \mbox{\it se}_{r}(z,\,q)=-i\,\frac{1}{2}\left[F_{r}(z)-F_{r}(-z)\right]\end{array}\]
+
+\(ee_{r}(z,\,q)\), \(se_{r}(z,\,q)\) are thus even and odd functions of \(z\), respectively, for all \(\nu\) (when not identically zero).
+
+If \(\nu\) is an integer, then \(ee_{r}(z,\,q)\), \(se_{r}(z,\,q)\) are either Floquet solutions or identically zero. The solutions \(ce_{r}(z,\,q)\) are associated with \(a_{r}\); \(se_{r}(z,\,q)\) are associated with \(b_{r}\); \(r\) an integer.
+
+Normalization for Integral Values of \(\nu\) and Real \(q\)
+
+\[\int_{0}^{2\pi}\left[ce_{r}(z,q)\right]\!dz=\int_{0}^{2\pi}\left[se_{r}(z,q) \right]\!dz=\pi\]
+
+For integral values of \(\nu\) the summation in 20.3.8 reduces to the simpler forms 20.2.3-20.2.4; on account of 20.5.3, the coefficients \(A_{n}\) and \(B_{n}\) (for all orders \(r\)) have the property
+
+\[\begin{array}{l}\mbox{\it 20.5.4}\\ \mbox{\it 2}A_{0}^{2}+A_{1}^{2}+\ldots=A_{1}^{2}+A_{2}^{2}+\ldots\\ =B_{1}^{2}+B_{2}^{2}+\ldots=B_{2}^{2}+B_{3}^{2}+\ldots=1.\end{array}\]
+
+\[\begin{array}{l}\mbox{\it A}_{0}^{2}=\frac{1}{2\pi}\int_{0}^{2\pi}ce_{r}(z, q)dz;A_{r}^{2}=\frac{1}{\pi}\int_{0}^{2\pi}ce_{r}(z,q)\cos nzdz\\ B_{2}^{2}=\frac{1}{\pi}\int_{0}^{2\pi}se_{r}(z,q)\,\sin nzdz&n\neq 0\end{array}\]
+
+For integral values of \(\nu\), the functions \(ee_{r}(z,\,q)\) and \(se_{r}(z,\,q)\) form a complete orthogonal set for the interval \(0\leq z\leq 2\pi\). Each of the four systems \(ee_{r}(z)\), \(ee_{r+1}(z)\)

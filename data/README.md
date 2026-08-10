@@ -6,7 +6,10 @@
 
 ## OCR annotation conventions (Steps 19-24)
 
-Three people are hand-correcting 164 pages (39 test + 20 val + 105 train). Read this
+Three people are hand-correcting 181 pages (39 test + 20 val + 122 train -- train grew
+105->122 at the Step 18b gate: the repaired reader's full-book run still missed 28.5% of
+pages, above the 25% gate line, so 17 pages were added from the chapters it failed hardest
+on). Read this
 *before* annotating anything — inconsistent labels hurt more than fewer labels, and this
 doc is the one place all three of us agree on the rules.
 

@@ -1,0 +1,44 @@
+
+
+#### 24.3.3 Divisor Functions
+
+I. Definitions
+
+A. \(\sigma_{n}(n)\) is the sum of the \(k\)-th powers of the divisors of \(n\). Often \(\sigma_{0}(n)\) is denoted by \(d(n)\), and \(\sigma_{1}(n)\) by \(\sigma(n)\).
+
+B. Generating functions
+
+\[\begin{array}{l}\sum\limits_{n=1}^{\infty}\sigma_{k}(n)n^{-s}=\zeta(s)\zeta( s-k)\quad\varnothing\delta>k+1\\ \sum\limits_{n=1}^{\infty}\sigma_{k}(n)x^{s}=\sum\limits_{n=1}^{\infty}\frac{n^ {s}x^{s}}{1-x^{s}}\qquad|z|<1\end{array}\]
+
+C. Closed form
+
+\[\sigma_{k}(n)=\sum\limits_{d\ln}d^{s}=\frac{t}{i!}\frac{p_{1}^{t}a^{t+D}-1}{p_ {1}^{t}-1}\qquad n=p_{1}^{t}p_{2}^{s}\ldots p_{2}^{s}\]
+
+II. Relations
+
+A. Recurrences
+
+\[\sigma_{k}(mn)=\sigma_{k}(m)\sigma_{k}(n)\qquad(m,\,n)=1\]
+
+\[\sigma_{k}(np)=\sigma_{k}(n)\sigma_{k}(p)-p^{k}\sigma_{k}(n/p)\qquad p\text{ prime}\]
+
+III. Asymptotics
+
+\[\frac{1}{n}\sum\limits_{m=1}^{n}\sigma_{0}(m)=\ln n+2\gamma-1+O(n^{-1})\]
+
+(\(\gamma=\)Euler's constant)
+
+## References
+
+* [24.1] H. Rademacher, On the partition function, Proc. London Math. Soc. **43**, 241-254 (1937).
+* [24.1] H. Rademacher and A. Whiteman, Theorems on Dedekind sums, Amer. J. Math. 68, 377-407 (1941).
+* [24.15] J. Riordan, An introduction to combinatorial analysis (John Wiley & Sons, Inc., New York, N.Y., 1958).
+* [24.16] J. V. Uspensky and M. A. Heaslet, Elementary number theory (McGraw-Hill Book Co., Inc., New York, N.Y., 1939).
+* [24.17] British Association for the Advancement of Science, Mathematical Tables, vol. VIII, Number-divisor tables (Cambridge Univ. Press, Cambridge, England, 1940). \(n\leq 10^{n}\).
+* [24.18] H. Gupta, Tables of distributions, Res. Bull. East Panjab Univ. 13-44 (1950), 750 (1951).
+* [24.19] H. Gupta, A table of partitions, Proc. London Math. Soc. **39**, 142-149 (1935) and II. **42**, 546-549 (1937). \(p(n)\), \(n=1(1)300\); \(p(n)\), \(n=301\) (16)00.
+* [24.20] G. Kavun, Factor tables (Maemillan and Co., Ltd., London, England, 1937). \(n\leq 256,000\).
+* [24.21] D. N. Lehmer, List of prime numbers from 1 to 10,006,721, Carnegie Institution of Washington, Publication No 165, Washington, D.C. (1914).
+* [24.22] Royal Society Mathematical Tables, vol. 3, Table of binomial coefficients (Cambridge Univ. Press, Cambridge, England, 1954). (g)for \(r\leq h\leq 100\).
+* [24.23] G. N. Watson, Two tables of partitions, Proc. London Math. Soc. **42**, 550-556 (1937).
+

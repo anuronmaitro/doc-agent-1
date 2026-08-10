@@ -1,8 +1,113 @@
 
 
-**10.2. Modified Spherical Bessel Functions Definitions**
+**BASSET - FUNCTIONS**
 
-**10.2.1**
 
-\[\begin{array}{l}z^{2}w^{\prime}{}^{\prime}{}^{\prime}{}^{\prime}{}^{\prime}{}^{ \prime}{}^{\prime}{}^{\prime}{}^{\prime}{}^{\prime}{}^{\prime}{}^{\prime}{}^{ \prime}{}
 
+**10.2. Modified Spherical Bessel Functions Definitions Differential Equation 0.2.1**
+
+\({}^{2}\)_w' + 2zw' --[ z\({}^{2}\)+n(n\)+1)]w=0_
+
+(_n_=0, \(\pm 1\), \(\pm 2\), ... .)
+
+Particular solutions are the _Modified Spherical Bessel functions of the first kind,_
+
+\[\overline{{}_{2}\pi/z}I_{n+{\frac{1}{2}}}(z) = e^{-n\pi t/2}j_{n}(ze^{\pi i/2})\qquad(-\pi{<}{\rm arg}\ z{\leq} \frac{1}{2}\pi)\] \[= e^{3n\pi i/2}j_{n}(ze^{-3\pi t/2})\qquad(\frac{1}{2}\pi{<}{\rm arg }\ z{\leq}\pi)\]
+
+_f the second kind,_
+
+0.2.3
+
+\[\overline{{}_{2}\pi/z}I_{-n-{\frac{1}{2}}}(z) = e^{3(n+1)\pi t/2}y_{n}(ze^{\pi t/2})\] \[(-\pi{<}{\rm arg}\ z{\leq}\frac{1}{2}\pi)\] \[= e^{-(n+1)\pi t/2}y_{n}(ze^{-3\pi t/2})\] \[(\frac{1}{2}\pi{<}{\rm arg}\ z{\leq}\pi)\]
+
+_f the third kind,_
+
+0.2.4
+
+\[\overline{{}_{2}\pi/z}K_{n+{\frac{1}{2}}}(z){=}\frac{1}{2}\pi(-1)^{n+1} \sqrt{\frac{1}{2}\pi/z}[I_{n+{\frac{1}{2}}}(z)-I_{-n-{\frac{1}{2}}}(z)]\]
+
+The pairs
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{n+{\frac{1}{2}}}(z),\sqrt{\frac{1}{2}\pi/z}I_{-n-{ \frac{1}{2}}}(z)\]
+
+nd
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{n+{\frac{1}{2}}}(z),\sqrt{\frac{1}{2}\pi/z}K_{n+{ \frac{1}{2}}}(z)\]
+
+are linearly independent solutions for every \(n\).
+
+Most properties of the Modified Spherical Bessel functions can be derived from those of the spherical Bessel functions by use of the above relations.
+
+0.2.5
+
+\[\overline{{}_{2}\pi/z}I_{n+{\frac{1}{2}}}(z){=}\frac{z^{n}}{1\cdot 3\cdot 5 \ldots\ (2n{+}1)}\]
+
+\[\left\{1{+}\frac{\frac{1}{2}z^{2}}{1!(2n{+}3)}+\frac{(\frac{1}{2}z^{2})^{2}}{ 2!(2n{+}3)(2n{+}5)}+\ \ldots\right\}\]
+
+0.2.6
+
+\[\overline{{}_{2}\pi/z}I_{-n-{\frac{1}{2}}}(z){=}\frac{1\cdot 3\cdot 5 \ldots\ (2n{-}1)}{(-1)^{n}z^{n+1}}\]
+
+\[\left\{1{+}\frac{\frac{1}{2}z^{2}}{1!(1{-}2n)}{+}\frac{(\frac{1}{2}z^{2})^{2} }{2!(1{-}2n)(3{-}2n)}{+}\ldots\right\}\]
+
+(\(n{=}0\), \(1\), \(2\), \(\ldots\) .)
+
+
+
+**10.2.7**
+
+\[W\{\sqrt{\frac{3}{2}\pi/z}I_{n+\hat{1}}(z),\sqrt{\frac{1}{2}\pi/z}I_{-n-\hat{1}} (z)\}=(-1)^{n+1}z^{-2}\]
+
+**10.2.8**
+
+\[W\{\sqrt{\frac{3}{2}\pi/z}I_{n+\hat{1}}(z),\sqrt{\frac{1}{2}\pi/z}K_{n+\hat{1}} (z)\}=-\frac{1}{2}\pi z^{-2}\]
+
+**Representations by Elementary Functions**
+
+**10.2.9**
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{n+\hat{1}}(z)=(2z)^{-\hat{1}}[R(n+\frac{1}{2},-z)e^{z}\]
+
+\[-(-1)^{n}R(n+\frac{1}{2},z)e^{-z}]\]
+
+**10.2.10**
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{-n-\hat{1}}(z)=(2z)^{-\hat{1}}[R(n+\frac{1}{2},-z)e^{z}\]
+
+\[+(-1)^{n}R(n+\frac{1}{2},z)e^{-\hat{1}}\]
+
+\[R(n+\frac{1}{2},z)=1+\frac{(n+1)!}{1!\Gamma(n)}\;(2z)^{-1}\]
+
+\[+\frac{(n+2)!}{2!\Gamma(n-1)}\;(2z)^{-2}+\ldots\cdot\]
+
+\[=\sum_{0}^{n}\;(n+\frac{1}{2},k)(2z)^{-\hat{k}}\]
+
+\[(n=0,1,2,\ldots)\]
+
+**10.2.12**
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{n+\hat{1}}(z)=g_{n}(z)\;\sinh\,z+g_{-n-1}(z)\;\cosh\,z\]
+
+\[g_{0}(z)=z^{-1},\,g_{1}(z)=-z^{-2}\]
+
+\[g_{n-1}(z)-g_{n+1}(z)=(2n+1)z^{-1}g_{n}(z)\]
+
+\[(n=0,\,\pm 1,\pm 2,\,\ldots)\]
+
+**The Functions \(\sqrt{\frac{1}{2}\pi/z}I_{\pm(n+\hat{1})}(z)\), \(n=0,1,2\)**
+
+**10.2.13**
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{1/2}(z)= \frac{\sinh\,z}{z}\]
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{3/2}(z)= -\frac{\sinh\,z}{z^{2}}+\frac{\cosh\,z}{z}\]
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{5/2}(z)= \left(\frac{3}{z^{2}}+\frac{1}{z}\right)\sinh\,z-\frac{3}{z^{2}}\cosh\,z\]
+
+**10.2.14**
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{-1/2}(z)= \frac{\cosh\,z}{z}\]
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{-3/2}(z)= \frac{\sinh\,z}{z}\frac{\cosh\,z}{z^{2}}\]
+
+\[\sqrt{\frac{1}{2}\pi/z}I_{-s/2}(z)= -\frac{3}{z^{2}}\sinh\,z+\left(\frac{3}{z^{2}}+\frac{1}{z}\right) \cosh\,z\]

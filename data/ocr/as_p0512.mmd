@@ -1,5 +1,33 @@
 
 
-**Example 6.** Calculate _M_(0, .1, 10) to 7S, using 13.5.1.
+**Example 6. Calculate _M_(0, .1, 10) to 7S, using 13.5.1.
 
-\[M(.9,.1,10) = \frac{\Gamma(.1)}{\Gamma(-.8)}e^{.9\pi t}10^{-.9}\sum\limits_{n=0}^{N}\frac{(.9)_{n}(1.8)}{n!(-10)^{n}}\] \[+ \frac{\Gamma(.1)}{\Gamma(.9)}e^{.10}10^{.8}\sum\limits_{n=0}^{N}\frac{(.-.8)_{n}(1.8)}{n!10^{n}}\!\!
+\[M(.9,.1,10) = {\frac{\Upgamma (.1)}{\Upgamma (-.8)}}e^{.g_{wt}}10^{-.9}{\sum\limits_{n = 0}^{N}{\frac{(.9)}{n!(-10)^{n}}}}\] \[+ {\frac{\Upgamma (.1)}{\Upgamma (.9)}}e^{.i_{10}}10^{*}{\sum\limits_{n = 0}^{N}{\frac{(-.8)*(.1)}{n!10^{n}}}} + O(10^{- N})\] \[= -.198(.869) + 1237253(.99190 285)\] \[+ O(1)\] \[= 1227235.23 - .17 + O(1)\] \[= 1227235 + O(1)\]
+
+Check, from Table 13.1, _M_(0, .1, 10)=1227235. To evaluate _M_(_a, b, x_) with \(a\) large, \(x\) small and \(b\) small or large 13.5.13-14 should be used.
+
+**Example 7. Compute _M_(-52.5, .1, 1) to 3S, using 13.5.14.
+
+\[M(- 52.5,.1,1) = \Upgamma (.1)e^{.g}(.05 + 52.5)^{.23 - .05}\] \[.5642\;\cos\;[(.2 - 4(- 52.5))^{.s} - .05 \pi + 2.5 \pi]\] \[[1 + O((.05 + 52.5)^{- s} )] = - 16.34 + O(.2)\]
+
+By direct application of a recurrence relation, _M_(-52.5, .1, 1) has been calculated as -16.447. To evaluate _M_(_a, b, x_) with _x, a_ and/or \(b\) large, 13.5.17, 19 or 21 should be tried.
+
+**Example 8. Compute _M_(-52.5, .1, 1) using 13.5.21 to 3S, \(\cos\theta = \sqrt{1/210}\).2.
+
+\[M(- 52.5,.1,1)\] \[= \Upgamma (.1)e^{i_{0}.1\;\cos^{2}\theta}[105.1\;\cos\;\theta]^{1 - 1}.5641\] \[52.55 - \sin\;2\theta - \left[\sin\;(- 52.5 \pi)\right.\] \[\left.+ \sin\;(\xi 2.55(2\theta - \sin\;2\theta) + \frac{1}{2}\pi)\right.\] \[\left.+ \,O((52.55)^{- l})\right] = -16.47 + O(.02)\]
+
+A full range of asymptotic formulas to cover all possible cases is not yet known.
+
+**Calculation of _U_(_a, b, x_)
+
+For \(-10{\leq}z{\leq}10\), \(-10{\leq}a{\leq}10\), \(-10{\leq}b{\leq}10\) this is possible by 13.5.13, using **Table 13.1** and the recurrence relations 13.4.15-20.
+
+**Example 9. Compute _U_(1.1, .2, 1) to 5S. Using Tables 13.1, 4.12 and 6.1 and 13.1.3, we have
+
+\[U(.1,\,.2,\,1) = \frac{\pi}{\sin\;(.2\pi)}\frac{M(.1,.2,1)}{\Upgamma (.9)\Upgamma (.2)}-\frac{M(.9,1.8,1)}{\Upgamma (.1)\Upgamma (1.8)}\cdot\]
+
+But _M_(0, 1.8, 1)= 8[M(.9, .8, 1)] \(- M(-.1,\,.8,\,1)] = 1.72329, using 13.4.4.
+
+\[U(.1,\,.2,\,1) = 5.344799(.371765 - .194486)\] \[= .94752.\] Similarly \[U(-.9,\,.2,\,1) = .91272.\] Hence by 13.4.15
+
+\[U(.1,\,.2,\,1) = [U(.1,\,

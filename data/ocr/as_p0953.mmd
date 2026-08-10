@@ -2,34 +2,34 @@ probability functions
 
 \[X_{n} = \left( {\sum\limits_{i = 1}^{n}U_{i} - \frac{n}{2}} \right)\left( {\frac{n}{12}} \right)^{- 1/2}\]
 
-will be distributed asymptotically as a normal random deviate. When \(n\) = 12, the maximum errors made in the normal deviate are 9x10-3 for \(|X|\)<2, 9x10-1 for 2<\(|X|\)<3. An improvement can be made by taking a polynomial function of \(X_{n}\) (say)
+will be distributed asymptotically as a normal random deviate. When \(n\) = 12, the maximum errors made in the normal deviate are 9x10-3 for |_X_|<2, 9x10-1 for 2<|_X_|<3. An improvement can be made by taking a polynomial function of _X_n (say)
 
-\[X_{n}^{*} = X_{n}\sum\limits_{j = 1}^{k}a_{2x}X_{n}^{2}\]
+\[X_{n}^{*} = X_{n}{\sum\limits_{j = 1}^{k}a_{2s}X_{n}^{2}}\]
 
 as the normal deviate where \(a_{2}\), are suitable coefficients. These coefficients may be calculated using (say) Chebyshev polynomials or simply by making the asymptotic random deviate agree with the correct normal deviate at certain specified points. When \(n\) = 12, the maximum error in the normal deviate is 8x10-4 using the coefficients
 
 \[a_{0} = 3.94985\quad\quad a_{4} = -.00836\quad\quad a_{5} = .25241\quad\quad a_{6} = .02990\quad\quad a_{4} = .07654\quad\quad\]
 
-(3) _Direct method:_ Generate a pair of uniform deviates (\(U_{1},\ U_{2}\)). Then
+(3) _Direct method:_ Generate a pair of uniform deviates (_U_1, \(U\)2). Then
 
-\[X_{1} = \left( {- 2\ln U_{1}} \right)^{1/2}\cos 2\pi U_{2}\]
+\[X_{1} = ( - 2\ln U_{1})^{1/2}\cos 2\pi U_{2}\]
 
-\[X_{2} = \left( {- 2\ln U_{1}} \right)^{1/2}\sin\,2\pi U_{2}\]
+_Xi_ = (-2 ln \(U\)1)1/2 sin 2_p_L will be a pair of independent normal random deviates with mean zero and unit variance. This procedure can be modified by calculating cos 2_p_L and sin 2_p_L using an acceptance rejection method; e.g., (1) generate (_U_1, \(U\)2); (2) if (2\(U\)1-1)2+(2\(U\)2-1)2leq1 generate a third uniform deviate \(U\)3, otherwise reject the pair and start over; (3) calculate
 
-will be a pair of independent normal random deviates with mean zero and unit variance. This procedure can be modified by calculating \(\cos\,2\pi U\) and \(\sin\,2\pi U\) using an acceptance rejection method; e.g., (1) generate \((U_{1},U_{2})\); (2) if \((2U_{1} - 1)^{2} + (2U_{2} - 1)^{2} \leq 1\) generate a third uniform deviate \(U_{3}\), otherwise reject the pair and start over; (3) calculate
+\[y_{1} = ( - \ln u_{3})^{1/2}\frac{u_{1}^{2} - u_{2}^{2}}{u_{1}^{2} + u_{2}^{2}}y_{2} = \pm 2( - \ln u_{3})^{1/2}\frac{u_{1}u_{2}}{u_{1}^{2} + u_{2}^{2}}(\pm\] random). Both \(y\)1 and \(y\)2 are the desired random deviates.
 
-\[y_{1} = \left( {- \ln u_{3}} \right)^{1/2}\frac{u_{1}^{2}-u_{2}^{2}}{u_{1}^{2}+u_{2}^{2}}y_{2} = \pm 2\left( {- \ln u_{3}} \right)^{1/2}\frac{u_{1}u_{2}}{u_{1}^{2}+u_{2}^{2}}\left( \pm \right.\]
-
-random). Both \(y_{1}\) and \(y_{2}\) are the desired random deviates.
-
-(4) _Acceptance-rejection method:_ 1) Generate a pair of uniform deviates (\(U_{1},\ U_{2}\)); 2) compute \(z\) = - \(\ln\,u_{1}\); 3) if \(e^{- 1/2}(\mp u_{2})\leq u_{2}\) (or equivalently \((x - 1)^{2} \geq - 2\left( \ln\,u_{2} \right)\) accept \(z\), otherwise reject the pair and start over. The quantity will be the required normal deviate with mean zero and unit variance.
+(4) _Acceptance-rejection method:_ 1) Generate a pair of uniform deviates (_U_1, \(U\)2); 2) compute z= - ln \(u\)1; 3) if _e_-1/z(_q_-1)2<=_q_2 (or equivalently (z-1)2<= -2 (ln \(u\)2) accept \(x\), otherwise reject the pair and start over. The quantity will be the required normal deviate with mean zero and unit variance.
 
 **b. Bivariate normal distribution**
 
-Let \(\left\{ X_{1},\ X_{2}\right\}\) be a pair of independent normal deviates with mean zero and unit variance. Then \(\left\{ X_{1},\,\rho X_{1} + \left( {1 - \rho} \right)^{1/2}X_{2}\right\}\) represent a pair of deviates from a bivariate normal distribution with zero means, unit variances, and correlation coefficient \(\rho\).
+Let (_X_1, _Xi_2) be a pair of independent normal deviates with mean zero and unit variance. Then {_Xi_1, _pA_X_1+(1-_r_)1/2_Xi_2} represent a pair of deviates from a bivariate normal distribution with zero means, unit variances, and correlation coefficient \(r\).
 
-**c. Exponential distribution**
+### Exponential distribution
 
-(1) _Inverse method:_ Since \(F(x) = e^{- x/\theta}\), \(X = -\theta\) ln \(U\) will be a deviate from the exponential distribution with parameter \(\theta\).
+(1) _Inverse method:_ Since _F_(_z_)=_e-z/th_, \(X\) = -_th_ ln \(U\) will be a deviate from the exponential distribution with parameter _th_.
 
-(2) _Acceptance-rejection method:_ 1) Generate a pair of independent uniform deviates (\(U_{0}\), \(U_{1}\)); 2) if \(U_{1} < U_{0}\) generate a third value \(U_{2}\); 3) if \(U_{1} + U_{2} < U_{0}\) generate a fourth value \(U_{3}\), etc.; 4) continue generating uniform deviates until an \(n\) is obtained such that \(U_{1} + U_{2} + . . . + U_{n - 1} < U_{0} < U_{1} + . . + U_{n}; 5) if \(n\) is even reject 
+(2) _Acceptance-rejection method:_ 1) Generate a pair of independent uniform deviates (_U_0, \(U\)1); 2) if \(U\)1<_U_0 generate a third value \(U\)2; 3) if \(U\)1+_U_4<_U_0 generate a fourth value \(U\)3, etc.; 4) continue generating uniform deviates until an \(n\) is obtained such that \(U\)1+_U_2+ . . . +_U_n-1 <_U_0<_U_1+ . . + _U_s; 5) if \(n\) is even reject the procedure and start a fresh trial with a new value of \(U\)0, otherwise if \(n\) is odd take _X_=_th_0 as the desired deviate; 6) in general if \(t\) is the number of trials until an acceptable sequence is obtained _X_=_th_(_t+_U_0). The random deviates produced in this way follow an exponential distribution with parameter _th_. One can expect to generate approximately six uniform deviates for every exponential deviate.
+
+(3) _Discrete Distribution Method:_ Let \(Y\) and \(n\) be discrete random variables with point probabilities
+
+\[Pr\left[ {\mathit{Y} = r} \right] = ( \epsilon - 1)\epsilon^{\prime + 1}\quad\quad r = 0,1,2,\quad\cdot \cdot \cdot \cdot P\left\{ n = s \right\} = [\epsilon f(\epsilon - 1)]^{- 1}\quad\quad s = 1,2,3,\quad\

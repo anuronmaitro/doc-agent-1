@@ -4,20 +4,60 @@ From Table 26.9 the upper 10 percent point of \(F\) with 12 and 20 degrees of fr
 
 \[x = \frac{20}{20 + 12(1.89)} = .469\]
 
-The correct value to 4D is _x_=.4683.
+The correct value to 4D is _z_=.4683.
 
-**Calculation of \(I_{x}\)(_a_, _b_) for \(a\) or \(b\) Small Integers
+**Calculation of _IA_(_a_, _b_) for \(a\) or \(b\) Small Integers
 
 **Example 17.** Calculate \(I\).10(3, 20).
 
-Values of \(I_{x}\)(_a_, _b_) for small integral \(a\) or \(b\) can conveniently be calculated using 26.5.6 or 26.5.7. Using 26.5.6 we have
+Values of _IA_(_a_, _b_) for small integral \(a\) or \(b\) can conveniently be calculated using 26.5.6 or 26.5.7. Using 26.5.6 we have
 
-\[1 - I_{.90}(20,3) = \frac{(.9)^{20}}{B(3,20)}\,\left\{ {\sum\limits_{i = 0}^{2}{(-1)^{i}{2\choose i}{20 + i}}} \right\}\]
+\[1 - I_{.90}(20,3) = \frac{(.9)^{20}}{B(3,20)}\left\{ {\sum\limits_{i = 0}^{2}{(-1)^{i}{2\choose i}\frac{9!}{20 + i}}} \right\}\]
 
-\[= \frac{.121576}{.216450 \times 10^{-3}}\,(.11030 \times 10^{-3}) = .620040\]
+\[= \frac{.121576}{.216450 \times 10^{-3}}\left( .11030 \times 10^{- 3} \right) = .620040\]
 
 **Binomial Distribution**
 
 **Example 18.** Find the value of \(p\) which satisfies
 
-\[{\sum\limits_{s = 0}^{20}{50\choose s}p^{t}q^{s - t} = .95,\
+\[\sum\limits_{s = 0}^{20}{50\choose s}p'q^{s - t} = .95,\quad\quad q = 1 - p\]
+
+using 26.5.24 and Table 26.9.
+
+Combining 26.5.24 and 26.5.27 we have
+
+\[\sum\limits_{s = a}^{n}{n\choose s}p'q^{s - t} = Q(F|r_{1},r_{2})\]
+
+where
+
+\[r_{1} = 2(n - a + 1),r_{2} = 2(a),\text{ and }p = \frac{a}{a + (n - a + 1)F}\]
+
+Hence
+
+\[\sum\limits_{s = 0}^{20}{50\choose s}p'q^{s - t} = 1 - \sum\limits_{s = 1}^{80}{50\choose s}p'q^{s 0 - t} = 1 - Q(F|60,42) = .95\]
+
+Harmonic interpolation on \(y\)2 in the table for which _Q_(_F_|_r_1, \(r\)2) = .05 results in _F_=1.624 for \(r\)1=60, \(r\)2=42, and thus _p_=\(\frac{42}{42 + 60(1.624)} = .301\). The correct answer to 4D is _p_=.3003.
+
+**Approximating the Incomplete Beta Function**
+
+**Example 19.** Find \(I\).60(16, 10.5) using 26.5.21.
+
+Values of _IA_(_a_, _b_) can conveniently be calculated with good accuracy using the approximation given by 26.5.20 or 26.5.21. For this example (_a_+_b_-1)(1-_x_) = 10.20 which is greater than .8 and hence 26.5.21 will be used. Thus
+
+\[w_{1} = \left[ (10.5)(.60) \right]^{1/\alpha} = 1.8469,w_{2} = \left[ 16(4) \right]^{1/\alpha} = 1.8566\]
+
+\[y = \frac{3(1.8469)(.98942)-(1.8566)(.99306))}{\left[ \frac{(1.8469)^{2}}{10.5}\frac{(1.8566)^{2}}{16}\right]} = - .0668\]
+
+and interpolating in Table 26.1 gives
+
+\[P(-.0668) = 1 - P(.0668) = .47336\]
+
+The answer correct to 5D is \(I\).60(16, 10.5) = .47332.
+
+**Interpolation for \(F\) in Table 26.9
+
+**Example 20.** Find the value of \(F\) for which
+
+\[Q(F|7,20) = .05\text{ using Table 26.9.}\]
+
+Interpolation in Table 26.9 is approximately linear when the reciprocals of the degrees of freedom (_r_1, \(r\)2) are used as the interpolating variable. For this example it is only necessary to interpolate with respect to 1/_r_1. Thus linear interpolation on 1/_r_1 results in _F

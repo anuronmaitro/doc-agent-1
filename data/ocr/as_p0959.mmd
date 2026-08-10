@@ -1,10 +1,10 @@
-\[h_{n} = \frac{60}{72}( - .0006) = - .00049\]
+\[h_{n} = \frac{60}{72}(-.0006) = -.00049\]
 
 Thus
 
-\[Q(84|72) = Q(1.0046 - .0005) = Q(1.0041) = 1 - P(1.0041) = .15766\]
+\[Q(84|72) = Q(1.0046 -.0005) = Q(1.0041) = 1 - P(1.0041) = .15766\]
 
-### 4. Square root approximation 26.4.13
+### Square root approximation 26.4.13
 
 Using the square root approximation we have \(Q(84|72) = Q(\bar{x})\) where
 
@@ -16,47 +16,54 @@ This results in
 
 The value correct to 6D is \(Q(84|72) = .157653\). Generally the improved cube root approximation will be correct with a maximum error of a few units in the fifth decimal and is recommended for calculations which are outside the range of Table 26.7.
 
-**Example 13.** Find the value of \(\chi^{2}\) for which \(Q(\chi^{2}|144) = .01\).
+**Example 13.** Find the value of x\({}^{2}\) for which \(Q(\chi^{2}|144) = .01\).
 
-Since \(\nu\)=144 is outside the range of Table 26.8, we can compute it by using (1) the Cornish-Fisher asymptotic expansion 26.2.50, for \(\chi^{2}\), (2) the cube approximation 26.4.17, (3) the improved cube approximation 26.4.18, or (4) the square approximation 26.4.16. We shall compute the value by all four methods.
+Since \(v = 144\) is outside the range of Table 26.8, we can compute it by using (1) the Cornish-Fisher asymptotic expansion 26.2.50, for x\({}^{2}\), (2) the cube approximation 26.4.17, (3) the improved cube approximation 26.4.18, or (4) the square approximation 26.4.16. We shall compute the value by all four methods.
 
 **1. Cornish-Fisher asymptotic expansion 26.2.50**
 
-The Cornish-Fisher asymptotic expansion for \(\chi^{2}\) with \(\nu\)=144 can be written as
+The Cornish-Fisher asymptotic expansion for x\({}^{2}\) with \(v = 144\) can be written as
 
-\[\chi^{2} \sim 144 + 12\sqrt{2}x + 4h_{1}(x) + \frac{4\sqrt{2}}{12}\left[3h_{2}(x) + 2h_{11}(x) \right] + \frac{8}{12^{2}}\left[6h_{3}(x) + 3h_{12}(x) + 2h_{11}(x) \right] + 1\frac{16\sqrt{2}}{12^{3}}\left[30h_{4}(x) \right.\] \[\left.+ 9h_{2i}(x) + 12h_{13}(x) + 6h_{12i}(x) + 4h_{111}(x) \right]\]
+\[\chi^{2} \sim 144 + 12\sqrt{2}x + 4h_{i}(x) + \frac{4\sqrt{2}}{12}\left[3h_{i}(x) + 2h_{i1}(x) \right] + \frac{8}{12^{2}}\left[6h_{i}(x) + 3h_{i2}(x) + 2h_{i1}(x) \right] + 1\frac{16\sqrt{2}}{12^{3}}\left[30h_{i}(x) \right.\] \[\left.+ 9h_{i2}(x) + 12h_{i3}(x) + 6h_{i12}(x) + 4h_{i11}(x) \right]\]
 
 Hence using the auxiliary table following 26.2.51 with \(p = .01\) we have
 
-\[\begin{array}{l}144.\ 0000\\ 39.\ 4794\\ 2.\ 9413\\ -.\ 0242\\ -.\ 0019\\ +.\ 0002\end{array}\]
+\[\begin{array}{l}144.0000\\ 39.4794\\ 2.9413\\ --.0242\\ -.0019\\ +.0002\end{array}\]
 
-\[\chi^{2} = 186.395\]
+## 4. Square root approximation 26.4.13
 
-**2. Cube approximation 26.4.17**
+Using the square root approximation we have \(Q(84|72) = Q(\bar{x})\) where
 
-Taking \(\chi_{ 01} = 2.32635\) we have
+\[x^{2} = \sqrt{2(84)} - \sqrt{2(72)} - 1 = 1.0032.\]
 
-\[\chi^{2} = 144\left\{\left[1 - \frac{2}{9(144)} \right] \right.\] \[\left.+ \left(2.32635\right)\sqrt{\frac{2}{9(144)}} \right\}^{2} = 186.405\]
+This results in
 
-### 3. Improved cube approximation 26.4.18
+\[Q(84|72) = Q(1.0032) = 1 - P(1.0032) = .15788\]
 
-From the table for \(h_{60}\) we obtain using linear interpolation with \(x = 2.33\) (approximately)
-
-\[h_{60} = .0012\text{ and thus }h_{144} = \frac{60}{144}\left(.0012\right) = .00049\]
-
-Hence
-
-\[\chi^{2} = 144\left[1 - \frac{2}{9(144)} \right.\] \[\left.+ \left(2.32635\right) - .00049\right)\sqrt{\frac{2}{9(144)}} \right] = 186.394\]
-
-### 4. Square approximation 26.4.16
-
-\[\chi^{2} = \frac{1}{2}\left[2.32635 + \sqrt{2(144)} - 1\right]^{2} = 185.616\]
-
-The correct answer to 3D is \(\chi^{2} = 186.394\). Generally the improved cube approximation will give results correct in the second or third decimal for \(\nu\)>30.
+The curve correct to 6D is \(Q(84|72) = .157653\). Generally the improved cube root approximation will give results in the second or third decimal for \(v > 30\).
 
 **Calculation of the Incomplete Gamma Function**
 
 **Example 14.** Find the value of
 
-\[\gamma(2.5,.9) = \int_{0}
+\[\gamma(2.5,.9) = \int_{0}^{.9}t^{1.5}e^{- t}dt\]
 
+making use of 26.4.19 and Table 26.7.
+
+Using 26.4.19 we have
+
+\[\gamma(2.5,.9) = \Gamma(2.5)P(1.8|5) = \Gamma(2.5)[1 - Q(1.8|5)]\]
+
+\[\gamma(2.5,.9) = \frac{3}{4}\sqrt{\pi}[1 - .87607] = .16475\]
+
+**Poisson Distribution**
+
+**Example 15.** Find the value of \(m\) for which
+
+\[\sum_{i = 0}^{3}e^{- n}\frac{m^{i}}{i!} - .99\]
+
+using 26.4.21 and Table 26.8.
+
+From Table 26.8 with \(r = 2e = 8\) and \(Q = .99\) we have \(\chi^{2} = 1.646482\). Hence \(m = \chi^{2}/2 = .823241\).
+
+**Inverse of the 

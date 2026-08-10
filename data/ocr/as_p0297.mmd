@@ -6,54 +6,53 @@
 
 **7.1. Error Function**
 
+**Definitions**
+
 **7.1.1**
 
-**erf** \(z\) = \(\frac{2}{\sqrt{\pi}}\int_{0}^{z}\!\!e^{-t^{2}}\!dt\)
+\[{\rm erf}\ z{=}\frac{2}{\sqrt{\pi}}{\int_{0}^{z}}e^{-t^{2}}dt\]
 
 **7.1.2**
 
-**erfc** \(z\) = \(\frac{2}{\sqrt{\pi}}\int_{z}^{\infty}\!\!e^{-t^{2}}\!dt\) = 1\(-\)erf** \(z\)
+\[{\rm erfc}\ z{=}\frac{2}{\sqrt{\pi}}{\int_{z}^{\infty}}e^{-t^{2}}dt{=}1{-}{\rm erf}\ z\]
 
 **7.1.3**
 
-**\(w(z)\) = \(e^{-t^{2}}\!\left(1\!+\!\frac{2i}{\sqrt{\pi}}\int_{0}^{z}\!\!e^{t^{2}}\!dt\right)\)**= \(e^{-t^{2}}\!\!\)erfc** \((-iz)\)
+\[w(z){=}e^{-t^{2}}\Big{(}1{+}\frac{2i}{\sqrt{\pi}}{\int_{0}^{z}}e^{t^{2}}dt \Big{)}{=}e^{-t^{2}}{\rm erfc}\ (-iz)\]
 
-**7.1.2**
-
-**the path of integration is subject to the restriction** \(\arg\,t\!\rightarrow\!\!\alpha\) **with** \(|\alpha|\!\!<\!\!\frac{\pi}{4}\) **as** \(t\!\rightarrow\!\!\infty\) **along the path.** \((\alpha\!=\!\!\frac{\pi}{4}\) **is permissible if** \(\mathscr{R}t^{2}\) **remains bounded to the left.)**
+In 7.1.2 the path of integration is subject to the restriction \({\rm arg}\ t{\rightarrow}{\alpha}\) with \(|{\alpha}|{<}\frac{\pi}{4}\) as \(t{\rightarrow}{\,\infty}\) along the path. (\({\alpha}{=}\frac{\pi}{4}\) is permissible if \({\cal R}t^{2}\) remains bounded to the left.)
 
 **Integral Representation**
 
 **7.1.4**
 
-\(w\) (\(z\)) = \(\frac{i}{\pi}\int_{-\infty}^{\infty}\frac{e^{-t^{2}}\!dt}{z\!-\!t}\) = \(\frac{2iz}{\pi}\int_{0}^{\infty}\frac{e^{-t^{2}}\!dt}{z^{2}\!-\!t^{2}}\) (\(\mathscr{I}z\!>\!0\))
+\[w\ (z){=}\frac{i}{\pi}{\int_{-\infty}^{\infty}}\frac{e^{-t^{2}}dt}{z{-}t}{=} \frac{2iz}{\pi}{\int_{0}^{\infty}}\frac{e^{-t^{2}}dt}{z^{2}{-}t^{2}}\qquad({ \cal I}z{>}0)\]
 
-**7.1.5**
+**Figure 7.1.**
 
-**erf** \(z\) = \(\frac{2}{\sqrt{\pi}}\sum\limits_{n=0}^{\infty}\frac{(-1)^{n}z^{2n+1}}{n!(2n\!+\!1)}\)
+\[y{=}e^{-t^{2}}{\int_{x}^{\infty}}e^{-t^{2}}dt.\]
 
-**7.1.6**
+**Figure 7.2.**
 
-**7.1.7**
+\[y{=}e^{-t^{2}}{\int_{x}^{\infty}}e^{-t^{2}}dt.\]
 
-**w** \((z)\) = \(\frac{2}{\sqrt{\pi}}\sum\limits_{n=0}^{\infty}\frac{2^{n}}{1\!\cdot\!3\,\cdot\, \ldots\,\,(2n\!+\!1)}\)\(z^{2n+1}\)
+**Figure 7.3.**
 
-**7.1.8**
+\[y{=}e^{-t^{2}}{\int_{x}^{\infty}}e^{-t^{2}}dt.\]
 
-**For** \(I_{n-1}(x)\)**, see chapter **10. Symmetry Relations**
+**Figure 7.4.**
 
-**7.1.9**
+\[w(z){=}\frac{i}{\pi}{\int_{-\infty}^{\infty}}\frac{e^{-t^{2}}dt}{z{-}t}{=} \frac{2iz}{\pi}{\int_{0}^{\infty}}\frac{e^{-t^{2}}dt}{z^{2}{-}t^{2}}\qquad({ \cal I}z{>}0)\]
 
-**erf** \((-z)\) = \(-\)erf** \(z\)
+**Figure 7.5.**
 
-**7.1.10**
+\[{\rm erf}\ z{=}\frac{2}{\sqrt{\pi}}{\sum_{n=0}^{\infty}}\frac{(-1)^{n}z^{2n+1}}{ n!(2n{+}1)}\]
 
-**erf** \(\widetilde{z}\) = \(\widetilde{\rm erf}\)\(z\)
+**Figure 7.6.**
 
-**7.1.11**
+\[{=}\frac{2}{\sqrt{\pi}}\ e^{-t^{2}}{\sum_{n=0}^{\infty}}\frac{2^{n}}{1{\cdot}3 \ {\cdot}\ {\ldots}\ (2n{+}1)}\ z^{2n+1}\]
 
-**w** \((-z)\) = \(2e^{-t^{2}}\!\!-\!w(z)\)
+**Figure 7.7.**
 
-**7.1.12**
+\[\eqalign{&{\rm For}\ I_{s-1}(x),{\rm see~{}chapter~{}\bf 10.}\cr&{\rm Symmetry~{}Relations}\cr&{\rm erf}\ (-z){=}\mathop{--}{\rm erf}\ z\cr&{\rm For}\ I_{s-1}(x),{\rm see~{} chapter~{}\bf 10.}\cr&{\rm For}\ I_{s-1}(x),{\rm see~{} chapter~{}\bf 10.}\cr&{\rm Symmetry~{}Relations}\cr&{\rm For}\ I_{s-1}(x),{\rm see~{} chapter~{}\bf 10.}\cr&{\rm For}\ I_{s-1}(x),{\rm see~{} chapter~{}\bf 10.
 
-**w** \((\widetilde{z})\) = \(\widetilde{w}(-z)\)

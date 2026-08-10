@@ -37,6 +37,29 @@ _UPRIGHT = re.compile(r"\\(?:operatorname|text|textrm|mathord)\s*\{")
 _SCRIPT_ARG = re.compile(r"([\^_])\s*(\\[a-zA-Z]+|[0-9A-Za-z])")
 # `\frac12` -> `\frac{1}{2}` (reached after \tfrac/\dfrac are folded into \frac).
 _FRAC_ARGS = re.compile(r"\\frac\s*(\\[a-zA-Z]+|[0-9A-Za-z])\s*(\\[a-zA-Z]+|[0-9A-Za-z])")
+# Old-style TeX fractions, `{A \over B}`, are the same formula as `\frac{A}{B}` but share no
+# characters with it -- Step 18b found Nougat's repaired (full-page) output uses `\over` 36
+# times on a single gold page, so leaving it unfolded was silently costing real precision/
+# recall credit for correct math. Innermost-brace-only per pass (no nested `{}` inside A or
+# B), looped so a `{...{A \over B}...\over C}` outer fraction resolves after its inner one
+# does -- one regex pass cannot see "the closing brace that matches THIS opening brace".
+#
+# Known limitation, accepted rather than chased: once an inner `\over` resolves to
+# `\frac{A}{B}`, that substitution ITSELF introduces braces, so an outer `\over` sharing the
+# same brace pair as a resolved inner one can no longer match (its content is no longer
+# brace-free). Real-data check on the as_p0360 gold page: 36 raw `\over` occurrences, 25
+# resolved this way, 11 left unresolved by this residue effect -- and precision/recall still
+# improved measurably (0.417->0.458 / 0.752->0.833) because most `\over` usage in practice is
+# NOT nested this deeply. Fully general resolution needs a recursive-descent brace parser,
+# not a regex; not worth the complexity for the residual few percent this leaves on the table.
+_OVER = re.compile(r"\{([^{}]*)\\over([^{}]*)\}")
+
+
+def _over_to_frac(m: re.Match[str]) -> str:
+    num, den = m.group(1).strip(), m.group(2).strip()
+    return f"\\frac{{{num}}}{{{den}}}"
+
+
 # Typographic space inside a number: the gold writes 1.45459\,66142, a reader may emit
 # "1.45459 66142" or "1.4545966142". All three are the same value.
 _DIGIT_GAP = re.compile(r"(?<=\d)\s+(?=\d)")
@@ -64,6 +87,12 @@ def normalize_latex(text: str) -> str:
 
     # Fold equivalent command spellings before any argument rewriting below.
     s = s.replace("\\tfrac", "\\frac").replace("\\dfrac", "\\frac")
+    # `{A \over B}` -> `\frac{A}{B}`, innermost first (loop until no `\over` sits inside a
+    # brace pair with no nested braces of its own -- see _OVER's comment above).
+    prev = None
+    while prev != s:
+        prev = s
+        s = _OVER.sub(_over_to_frac, s)
     s = _UPRIGHT.sub("\\\\mathrm{", s)
     s = _ELLIPSIS.sub("\\\\dots", s)
     # Deleted outright, not replaced by a space: these macros sit flush against the

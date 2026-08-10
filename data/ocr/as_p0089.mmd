@@ -4,6 +4,16 @@
 
 **Example 1.** Computation of Common Logarithms.
 
-To compute common logarithms, the number must be expressed in the form \(x\!\cdot\!10^{\sharp}\), (\(1\leq\!\!x\!<\!10\), \(-\infty\leq q\leq\infty\)). The common logarithm of \(x\!\cdot\!10^{\sharp}\) consists of an integral part which is called the characteristic and a decimal part which is called the mantissa. **Table 4.1** gives the common logarithm of \(x\).
+To compute common logarithms, the number must be expressed in the form \(x\!\cdot\!10^{i}\), (\(1\leq\!\!x\!<\!10\), \(-\infty\leq q\leq\infty\)). The common logarithm of \(x\!\cdot\!10^{i}\) consists of an integral part which is called the characteristic and a decimal part which is called the mantissa. **Table 4.1** gives the common logarithm of \(x\).
 
-\[\begin{array}{l}x\\ .009836\\ .09836\\ .09836\\ .9836\\ 9.836\\ 9836\\ 9836\\ 9836\\ 9836\\ 9836\\ 9836\\ 9836\\ 9836\\ \end{array}\!\!\begin{array}{l}x\cdot\!10^{\sharp}\\ .009836\\ .836\cdot\!10^{\flat}\\ .836\cdot\!10^{\flat}\\ .836\cdot\!
+\[\begin{array}{lcl}x&x\cdot 10^{i}&\log_{10}x\cdot 10^{i}\\ .009836&9.836\cdot 10^{-3}&\overline{3}.99281\;85=\!\left(-2.00718\;15 \right)\\ .09836&9.836\cdot 10^{-4}&\overline{2}.99281\;85=\!\left(-1.00718\;15 \right)\\ .9836&9.836\cdot 10^{-1}&\overline{1}.99281\;85=\!\left(-0.00718\;15 \right)\\ 9.836&9.836\cdot 10^{0}&0.99281\;85\\ 983.6&9.836\cdot 10^{1}&1.99281\;85\\ 983.6&9.836\cdot 10^{2}&2.99281\;85\\ \end{array}\]
+
+Interpolation in Table 4.1 between 983 and 984 gives .99281 85 as the mantissa of 9836.
+
+Note that \(\overline{3}.99281\;85=-3+.99281\;85\). When \(q\) is negative the common logarithm can be expressed in the alternative forms
+
+\[\begin{array}{lcl}\log_{10}(.009836)&=&\overline{3}.99281\;85=\!7.99281\;85 -10\\ &=&-2.00718\;15.\end{array}\]
+
+The last form is convenient for conversion from common logarithms to natural logarithms.
+
+The inverse of \(\log_{10}x\) is called the antilogarithm of \(x\), and is written antilog \(x\) or \(\log^{-1}x\). The logarithm of the reciprocal of a number is called the colorgarithm, written colo

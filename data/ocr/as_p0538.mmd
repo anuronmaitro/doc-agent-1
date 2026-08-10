@@ -6,13 +6,15 @@
 
 **14.1. Differential Equation, Series Expansions**
 
+**Differential Equation**
+
 **14.1.1**
 
 \[\frac{d^{2}w}{d\rho^{2}}+[1-\frac{2\eta}{\rho}\,\frac{L(L+1)}{\rho^{2}}]w=0\]
 
-(\(\rho\)\(>\)\(0\), \(-\infty\)\(<\)\(\eta\)\(<\)\(\infty\) , \(L\) a non-negative integer)
+(\(\rho>\)0, \(-\infty<\eta<\infty\), \(L\) a non-negative integer)
 
-The Coulomb wave equation has a regular singularity at \(\rho\)=0 with indices \(L\)+1 and \(-L\); it has an irregular singularity at \(\rho\)= \(\infty\) .
+The Coulomb wave equation has a regular singularity at \(\rho=0\) with indices \(L+1\) and \(-L\); it has an irregular singularity at \(\rho=\infty\).
 
 **General Solution**
 
@@ -26,7 +28,7 @@ where \(F_{L}(\eta,\ \rho)\) is the regular Coulomb wave function and \(G_{L}(\e
 
 **14.1.3**
 
-\[F_{L}(\eta,\ \rho)=C_{L}(\eta)\,\rho^{L+1}e^{-t\rho}M(L+1-i\eta,\,2L+2,\,2i\rho)\]
+\[F_{L}(\eta,\ \rho)=C_{L}(\eta)\,\rho^{L+1}e^{-t\rho}M(L+1-i\eta,\,2L+2,\,2 i\rho)\]
 
 **14.1.4**
 
@@ -40,8 +42,26 @@ where \(F_{L}(\eta,\ \rho)\) is the regular Coulomb wave function and \(G_{L}(\e
 
 \[A_{L+1}^{L}=1,\ \ A_{L+2}^{L}=\frac{\eta}{L+1},\]
 
-\[(k+L)(k-L-1)A_{k}^{L}=2\eta A_{k-1}^{L}-A_{k-2}^{L}\qquad(k>L+2)\]
+\[(k+L)(k-L-1)A_{k}^{L}=2\eta A_{k-1}^{L}-A_{k-2}^{L}\quad(k>L+2)\]
 
 **14.1.7**
 
-\[C_{L}(\eta)=\frac{2^{L}e^{-\frac{\eta\eta}{2}}|\Gamma(L+1+i\eta)|}{\Gamma(2L+ 2)}\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad \
+\[C_{L}(\eta)=\frac{2^{L}e^{-\frac{\pi\eta}{2}}|\Gamma(L+1+i\eta)|}{\Gamma(2L+2)}\]
+
+(See chapter 6.)
+
+**14.1.8**
+
+\[C_{2}^{\alpha}(\eta)=2\pi\eta(e^{\pi\eta}-1)^{-1}\]
+
+**14.1.9**
+
+\[C_{L}^{\alpha}(\eta)=\frac{p_{L}(\eta)C_{2}^{\alpha}(\eta)}{2\eta(2L+1)}\]
+
+**14.1.10**
+
+\[C_{L}(\eta)=\frac{(L^{+}\eta^{2})!}{L(2L+1)!}\,C_{L-1}(\eta)\]
+
+**14.1.11**
+
+\[\frac{p_{L}(\eta)}{2\eta}=\frac{(1+\eta)(4+\eta^{2})\,\ldots\,(L^{2}+\eta^{2} )2^{2\epsilon}}{(2L+1)[(2L)!]^{2}}\]

@@ -4,72 +4,34 @@
 
 With the abbreviations
 
-**16.21.1**
+**16:21:1**
 
-s=sn(_x_|_m_), c=cn(_x_|_m_), d=dn(_x_|_m_), s_i=sn(_y_|m_i_), c_i=cn(_y_|m_i_), d_i=dn(_y_|m_i_)
+s=sn(_x_|_m_), c=cn(_x_|_m_), d=dn(_x_|_m_), s_i=sn(_y_|m_{i}),
 
-**16.21.2**
+c_i=cn(_y_|_m_i_), d_i=dn(_y_|_m_i_)
 
-sn(_x_+_iy_|_m_)=\(\frac{8\cdot d_{1}\text{+}i\text{\textminus}d\cdot s_{1}\cdot c_{1}}{c_{1}^{2} +ms^{2}\cdot s_{1}^{2}}\)
+**16:21.2**: sn(_x_+iy_|_m_)=\(\frac{8\cdot\text{d}_{1}\text{+}i\text{-}\text{c}\cdot\text{d}\cdot\text{s}_{1} \cdot\text{c}_{1}}{c_{1}^{2}\text{+}ms^{2}\cdot\text{s}_{1}^{2}}\)
+**16:21.3**: cn(_x_+iy_|_m_)=\(\frac{e\cdot\text{c}_{1}\text{-}i\text{-}\text{s}\cdot\text{d}\cdot\text{s}_{1} \cdot\text{d}_{1}}{c_{1}^{2}\text{+}ms^{2}\cdot\text{s}_{1}^{2}}\)
+**16:21.4**: dn(_x_+iy_|_m_)=\(\frac{\text{d}\cdot\text{c}_{1}\cdot\text{d}_{1}\text{-}ims\cdot\text{c}\cdot\text{s}_{1}}{c_{1}^{2}\text{+} ms^{2}\cdot\text{s}_{1}^{2}}\)
+**16:22. Leading Terms of the Series in Ascending Powers of \(u\)**
 
-**16.21.3**
+**16:22.1**: sn(_u_|_m_)=\(u\)-(1+_m_)\(\frac{u^{3}}{3!}\)+(1+14_m_+_m_2_)\(\frac{u^{5}}{5!}\)
 
-cn(_x_+_iy_|_m_)=\(\frac{c\cdot c_{1}\cdot d_{1}\text{-}ims\cdot c\cdot s_{1}}{c_{1}^{2} +ms^{2}\cdot s_{1}^{2}}\)
+\[-(1+135_m_+135_m_^2+_m_3_)\frac{u^{7}}{7!}+\ldots\]
+**16:22.2**: cn(_u_|_m_)=1-\(\frac{u^{2}}{2!}\)+(1+4_m_)\(\frac{u^{4}}{4!}\)
 
-**16.21.4**
+\[-(1+44_m_+16\(m\)2_)\frac{u^{6}}{6!}+\ldots\]
+**16:22.3**: dn(_u_|_m_)=1-\(m\frac{u^{2}}{2!}\)+(1+_m_4\(m\)2_)\(\frac{u^{6}}{4!}\)
 
-d_n(_x_+_iy_|_m_)=\(\frac{d\cdot c_{1}\cdot d_{1}\text{-}ims\cdot c\cdot s_{1}}{c_{1}^{2} +ms^{2}\cdot s_{1}^{2}}\)
-
-**16.22. Leading Terms of the Series in Ascending Powers of \(u\)**
-
-**16.22.1**
-
-sn(_u_|_m_)=\(u\)-(1+_m_)\(\frac{u^{3}}{3!}\)+(1+14_m_+_m_2_)\(\frac{u^{5}}{5!}\)
-
-\(-(1+135_m_+135_m_^2+_m_3_)\(\frac{u^{7}}{7!}\)+ \ldots\)
-
-**16.22.2**
-
-cn(_u_|_m_)=1-\(\frac{u^{2}}{2!}\)+(1+4_m_)\(\frac{u^{4}}{4!}\)
-
-\(-(1+44_m_+16\(m\)2_)\(\frac{u^{6}}{6!}\)+ \ldots\)
-
-**16.22.3**
-
-dn(_u_|_m_)=1-\(m\frac{u^{2}}{2!}\)+(1+_m_4_+_m_2_)\(\frac{u^{4}}{4!}\)
-
-\(-m(16+44_m_+_m_2_)\(\frac{u^{6}}{6!}\)+ \ldots\)
+\[-m(16+44_m_+m_2_)\frac{u^{6}}{6!}+\ldots\]
 
 No formulae are known for the general coefficients in these series.
 
 23. Series Expansions in Terms of the Nome \(q\)=\(e^{-\pi K/K}\) and the Argument \(v\)=\(\pi u/(2K)\)
 
-**16.23.1**
-
-sn(_u_|_m_)=\(\frac{2\pi}{m^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{q^{n+1/2}}{1-q^{2n+1}}\)sin (2n+1)v
-
-**16.23.2**
-
-cn(_u_|_m_)=\(\frac{2\pi}{m^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{q^{n+1/2}}{1+q^{2n+1}}\)cos (2n+1)v
-
-**16.23.3**
-
-dn(_u_|_m_)=\(\frac{\pi}{2K}\)+\(\frac{2\pi}{K}\sum\limits_{n=1}^{\infty}\frac{q^{n}}{1+q^{2n}}\cos 2nv\)
-
-**16.23.4**
-
-cd(_u_|_m_)=\(\frac{2\pi}{m^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{(-1)^{5}q^{n+1/2}}{1-q^{2n+1}}\)cos (2n+1)v
-
-**16.23.5**
-
-sd(_u_|_m_)=\(\frac{2\pi}{(mm_{1})^{1/2}K}\sum\limits_{n=0}^{\infty}(-1)^{*}\frac{q^{n+1/2}}{1+q^{2n+1}}\)sin (2n+1)v
-
-**16.23.6**
-
-nd(_u_|_m_)=\(\frac{\pi}{2m_{1}^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{(-1)^{5}q^{n+1/2}}{1-q^{2n+1}}\)cos (2n+1)v
-
-**16.23.7**
-
-de(_u_|_m_)=\(\frac{\pi}{2K}\) sec_v_
-
-\(+\frac
+**16:23.1**: sn(_u_|_m_)=\(\frac{2\pi}{m^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{q^{n+1/2}}{1-q^{2n+1}}\sin\ (2n+1)v\)
+**16:23.2**: cn(_u_|_m_)=\(\frac{2\pi}{m^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{q^{n+1/2}}{1+q^{2n+1}} \cos\ (2n+1)v\)
+**16:23.3**: dn(_u_|_m_)=\(\frac{\pi}{2K}\)+\(\frac{2\pi}{K}\sum\limits_{n=1}^{\infty}\frac{q^{n}}{1+q^{2n}}\cos 2nv\)
+**16:23.4**: cd(_u_|_m_)=\(\frac{2\pi}{m^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{(-1)^{5}q^{n+1/2}}{1- q^{2n+1}}\cos\ (2n+1)v\)
+**16:23.5**: sd(_u_|_m_)=\(\frac{2\pi}{(mm_{1})^{1/2}K}\sum\limits_{n=0}^{\infty}(-1)^{*}\frac{q^{n+1/2}}{1+q^{2 n+1}}\sin\ (2n+1)v\)
+**16:23.6**: sd(_u_|_m_)=\(\frac{2\pi}{2m_{1}^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{(-1)^{5}q^{n+1/2}}{1- q^{2n+1}}\
