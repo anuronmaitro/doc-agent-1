@@ -27,7 +27,7 @@
 - [x] Step 19 — annotate TEST batch A (18) — S1
 - [x] Step 20 — annotate TEST batch B (18) — S2
 - [x] Step 21 — annotate VALIDATION (20) — S3
-- [ ] Step 22 — annotate TRAIN A (35) — S1
+- [x] Step 22 — annotate TRAIN A (35) — S1
 - [x] Step 23 — annotate TRAIN B (35) — S2; revised
 - [ ] Step 24 — annotate TRAIN C (35) — S3
 - [ ] Step 25 — NIST extraction (Stage A pairs) — S1
