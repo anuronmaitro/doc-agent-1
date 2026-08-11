@@ -1,0 +1,695 @@
+{"pair_id": "nist_p0019_1-2-22", "pdf_page": 19, "eqn_id": "1.2.22", "text": "1.2.22  M(r) = 0, r < 0 and a_{1}a_{2} . . . a_{n} = 0.", "image": "data/annot/nist/images/nist_p0019_1-2-22.png"}
+{"pair_id": "nist_p0019_1-3-3", "pdf_page": 19, "eqn_id": "1.3.3", "text": "1.3.3  A_{jk} = (−1)^{j+k}M_{jk}.", "image": "data/annot/nist/images/nist_p0019_1-3-3.png"}
+{"pair_id": "nist_p0019_1-3-5", "pdf_page": 19, "eqn_id": "1.3.5", "text": "1.3.5  det[a_{jk}]^{T} = det[a_{jk}],", "image": "data/annot/nist/images/nist_p0019_1-3-5.png"}
+{"pair_id": "nist_p0019_1-3-7", "pdf_page": 19, "eqn_id": "1.3.7", "text": "1.3.7  det([a_{jk}][b_{jk}]) = (det[a_{jk}])(det[b_{jk}]).", "image": "data/annot/nist/images/nist_p0019_1-3-7.png"}
+{"pair_id": "nist_p0019_1-3-10", "pdf_page": 19, "eqn_id": "1.3.10", "text": "1.3.10  a_{j1}a_{k1} + a_{j2}a_{k2} + · · · + a_{jn}a_{kn} = 0", "image": "data/annot/nist/images/nist_p0019_1-3-10.png"}
+{"pair_id": "nist_p0020_1-4-2", "pdf_page": 20, "eqn_id": "1.4.2", "text": "1.4.2  |f(c + α) −f(c)| < ϵ,", "image": "data/annot/nist/images/nist_p0020_1-4-2.png"}
+{"pair_id": "nist_p0023_1-4-38", "pdf_page": 23, "eqn_id": "1.4.38", "text": "1.4.38  f((1 −t)c + td) ≤(1 −t)f(c) + tf(d)", "image": "data/annot/nist/images/nist_p0023_1-4-38.png"}
+{"pair_id": "nist_p0023_1-5-10", "pdf_page": 23, "eqn_id": "1.5.10", "text": "1.5.10  x = r cos φ, y = r sin φ,", "image": "data/annot/nist/images/nist_p0023_1-5-10.png"}
+{"pair_id": "nist_p0023_1-5-14", "pdf_page": 23, "eqn_id": "1.5.14", "text": "1.5.14  x = r cos φ, y = r sin φ, z = z.", "image": "data/annot/nist/images/nist_p0023_1-5-14.png"}
+{"pair_id": "nist_p0024_1-5-26", "pdf_page": 24, "eqn_id": "1.5.26", "text": "1.5.26  c = y_{0} < y_{1} < · · · < y_{m} = d,", "image": "data/annot/nist/images/nist_p0024_1-5-26.png"}
+{"pair_id": "nist_p0024_1-5-30", "pdf_page": 24, "eqn_id": "1.5.30", "text": "1.5.30  a ≤x ≤b, φ_{1}(x) ≤y ≤φ_{2}(x),", "image": "data/annot/nist/images/nist_p0024_1-5-30.png"}
+{"pair_id": "nist_p0025_1-5-33", "pdf_page": 25, "eqn_id": "1.5.33", "text": "1.5.33  c ≤y ≤d, ψ_{1}(y) ≤x ≤ψ_{2}(y),", "image": "data/annot/nist/images/nist_p0025_1-5-33.png"}
+{"pair_id": "nist_p0025_1-6-1", "pdf_page": 25, "eqn_id": "1.6.1", "text": "1.6.1  a = (a_{1}, a_{2}, a_{3}), b = (b_{1}, b_{2}, b_{3}).", "image": "data/annot/nist/images/nist_p0025_1-6-1.png"}
+{"pair_id": "nist_p0025_1-6-2", "pdf_page": 25, "eqn_id": "1.6.2", "text": "1.6.2  a · b = a_{1}b_{1} + a_{2}b_{2} + a_{3}b_{3}.", "image": "data/annot/nist/images/nist_p0025_1-6-2.png"}
+{"pair_id": "nist_p0025_1-6-6", "pdf_page": 25, "eqn_id": "1.6.6", "text": "1.6.6  a = a_{1}i + a_{2}j + a_{3}k.", "image": "data/annot/nist/images/nist_p0025_1-6-6.png"}
+{"pair_id": "nist_p0025_1-6-7", "pdf_page": 25, "eqn_id": "1.6.7", "text": "1.6.7  i × j = k, j × k = i, k × i = j,", "image": "data/annot/nist/images/nist_p0025_1-6-7.png"}
+{"pair_id": "nist_p0025_1-6-8", "pdf_page": 25, "eqn_id": "1.6.8", "text": "1.6.8  j × i = −k, k × j = −i, i × k = −j.", "image": "data/annot/nist/images/nist_p0025_1-6-8.png"}
+{"pair_id": "nist_p0026_1-6-10", "pdf_page": 26, "eqn_id": "1.6.10", "text": "1.6.10  a × (b × c) = b(a · c) −c(a · b),", "image": "data/annot/nist/images/nist_p0026_1-6-10.png"}
+{"pair_id": "nist_p0026_1-6-11", "pdf_page": 26, "eqn_id": "1.6.11", "text": "1.6.11  (a × b) × c = b(a · c) −a(b · c).", "image": "data/annot/nist/images/nist_p0026_1-6-11.png"}
+{"pair_id": "nist_p0026_1-6-16", "pdf_page": 26, "eqn_id": "1.6.16", "text": "1.6.16  ϵ_{jkℓ}ϵ_{ℓmn} = δ_{j,m}δ_{k,n} −δ_{j,n}δ_{k,m},", "image": "data/annot/nist/images/nist_p0026_1-6-16.png"}
+{"pair_id": "nist_p0026_1-6-17", "pdf_page": 26, "eqn_id": "1.6.17", "text": "1.6.17  e_{j} × e_{k} = ϵ_{jkℓ}e_{ℓ};", "image": "data/annot/nist/images/nist_p0026_1-6-17.png"}
+{"pair_id": "nist_p0026_1-6-18", "pdf_page": 26, "eqn_id": "1.6.18", "text": "1.6.18  a_{j}e_{j} × b_{k}e_{k} = ϵ_{jkℓ}a_{j}b_{k}e_{ℓ};", "image": "data/annot/nist/images/nist_p0026_1-6-18.png"}
+{"pair_id": "nist_p0026_1-6-27", "pdf_page": 26, "eqn_id": "1.6.27", "text": "1.6.27  ∇× (fF) = f(∇× F) + (∇f) × F,", "image": "data/annot/nist/images/nist_p0026_1-6-27.png"}
+{"pair_id": "nist_p0026_1-6-28", "pdf_page": 26, "eqn_id": "1.6.28", "text": "1.6.28  ∇× (fF) = f(∇× F) + (∇f) × F,", "image": "data/annot/nist/images/nist_p0026_1-6-28.png"}
+{"pair_id": "nist_p0026_1-6-29", "pdf_page": 26, "eqn_id": "1.6.29", "text": "1.6.29  ∇^{2}f = ∇· (∇f),", "image": "data/annot/nist/images/nist_p0026_1-6-29.png"}
+{"pair_id": "nist_p0026_1-6-33", "pdf_page": 26, "eqn_id": "1.6.33", "text": "1.6.33  ∇· (f∇g −g∇f) = f∇^{2}g −g∇^{2}f,", "image": "data/annot/nist/images/nist_p0026_1-6-33.png"}
+{"pair_id": "nist_p0027_1-6-35", "pdf_page": 27, "eqn_id": "1.6.35", "text": "1.6.35  c'(t) = (x'(t), y'(t), z'(t)).", "image": "data/annot/nist/images/nist_p0027_1-6-35.png"}
+{"pair_id": "nist_p0027_1-6-43", "pdf_page": 27, "eqn_id": "1.6.43", "text": "1.6.43  F(x, y) = F_{1}(x, y)i + F_{2}(x, y)j", "image": "data/annot/nist/images/nist_p0027_1-6-43.png"}
+{"pair_id": "nist_p0027_1-6-45", "pdf_page": 27, "eqn_id": "1.6.45", "text": "1.6.45  Φ(u, v) = (x(u, v), y(u, v), z(u, v))", "image": "data/annot/nist/images/nist_p0027_1-6-45.png"}
+{"pair_id": "nist_p0029_1-8-9", "pdf_page": 29, "eqn_id": "1.8.9", "text": "1.8.9  L_{n} ∼(4/π^{2}) ln n;", "image": "data/annot/nist/images/nist_p0029_1-8-9.png"}
+{"pair_id": "nist_p0030_1-9-2", "pdf_page": 30, "eqn_id": "1.9.2", "text": "1.9.2  ℜz = x, ℑz = y.", "image": "data/annot/nist/images/nist_p0030_1-9-2.png"}
+{"pair_id": "nist_p0030_1-9-5", "pdf_page": 30, "eqn_id": "1.9.5", "text": "1.9.5  θ = ω, π −ω, −π + ω, or −ω,", "image": "data/annot/nist/images/nist_p0030_1-9-5.png"}
+{"pair_id": "nist_p0031_1-9-8", "pdf_page": 31, "eqn_id": "1.9.8", "text": "1.9.8  |ℜz| ≤|z|, |ℑz| ≤|z|,", "image": "data/annot/nist/images/nist_p0031_1-9-8.png"}
+{"pair_id": "nist_p0031_1-9-13", "pdf_page": 31, "eqn_id": "1.9.13", "text": "1.9.13  ph z = −ph z.", "image": "data/annot/nist/images/nist_p0031_1-9-13.png"}
+{"pair_id": "nist_p0031_1-9-14", "pdf_page": 31, "eqn_id": "1.9.14", "text": "1.9.14  z_{1} ± z_{2} = x_{1} ± x_{2} + i(y_{1} ± y_{2}),", "image": "data/annot/nist/images/nist_p0031_1-9-14.png"}
+{"pair_id": "nist_p0031_1-9-17", "pdf_page": 31, "eqn_id": "1.9.17", "text": "1.9.17  |z_{1}z_{2}| = |z_{1}| |z_{2}|,", "image": "data/annot/nist/images/nist_p0031_1-9-17.png"}
+{"pair_id": "nist_p0031_1-9-22", "pdf_page": 31, "eqn_id": "1.9.22", "text": "1.9.22  cos nθ + i sin nθ = (cos θ + i sin θ)^{n}, n ∈Z.", "image": "data/annot/nist/images/nist_p0031_1-9-22.png"}
+{"pair_id": "nist_p0031_1-9-23", "pdf_page": 31, "eqn_id": "1.9.23", "text": "1.9.23  ||z_{1}| −|z_{2}|| ≤|z_{1} + z_{2}| ≤|z_{1}| + |z_{2}| .", "image": "data/annot/nist/images/nist_p0031_1-9-23.png"}
+{"pair_id": "nist_p0032_1-9-35", "pdf_page": 32, "eqn_id": "1.9.35", "text": "1.9.35  S_{r} = {z | |z| > 1/r} ∪{∞}, 0 < r < ∞.", "image": "data/annot/nist/images/nist_p0032_1-9-35.png"}
+{"pair_id": "nist_p0032_1-9-36", "pdf_page": 32, "eqn_id": "1.9.36", "text": "1.9.36  ∞± z = z ± ∞= ∞,", "image": "data/annot/nist/images/nist_p0032_1-9-36.png"}
+{"pair_id": "nist_p0033_1-9-38", "pdf_page": 33, "eqn_id": "1.9.38", "text": "1.9.38  z/∞= 0,", "image": "data/annot/nist/images/nist_p0033_1-9-38.png"}
+{"pair_id": "nist_p0034_1-9-56", "pdf_page": 34, "eqn_id": "1.9.56", "text": "1.9.56  b_{n} = −(a_{1}b_{n−1} + a_{2}b_{n−2} + · · · + a_{n}b_{0})/a_{0}, n ≥1.", "image": "data/annot/nist/images/nist_p0034_1-9-56.png"}
+{"pair_id": "nist_p0034_1-9-57", "pdf_page": 34, "eqn_id": "1.9.57", "text": "1.9.57  ln f(z) = q_{1}z + q_{2}z^{2} + q_{3}z^{3} + · · · ,", "image": "data/annot/nist/images/nist_p0034_1-9-57.png"}
+{"pair_id": "nist_p0035_1-10-5", "pdf_page": 35, "eqn_id": "1.10.5", "text": "1.10.5  f(z) = f(z).", "image": "data/annot/nist/images/nist_p0035_1-10-5.png"}
+{"pair_id": "nist_p0037_1-10-12", "pdf_page": 37, "eqn_id": "1.10.12", "text": "1.10.12  f(z) = w", "image": "data/annot/nist/images/nist_p0037_1-10-12.png"}
+{"pair_id": "nist_p0038_1-11-3", "pdf_page": 38, "eqn_id": "1.11.3", "text": "1.11.3  b_{k} = αb_{k+1} + a_{k}, k = n −1, n −2, . . . , 0,", "image": "data/annot/nist/images/nist_p0038_1-11-3.png"}
+{"pair_id": "nist_p0038_1-11-4", "pdf_page": 38, "eqn_id": "1.11.4", "text": "1.11.4  f(α) = b_{0}.", "image": "data/annot/nist/images/nist_p0038_1-11-4.png"}
+{"pair_id": "nist_p0039_1-11-17", "pdf_page": 39, "eqn_id": "1.11.17", "text": "1.11.17  D = 16p^{4}r −4p^{3}q^{2} −128p^{2}r^{2} + 144pq^{2}r −27q^{4} + 256r^{3}.", "image": "data/annot/nist/images/nist_p0039_1-11-17.png"}
+{"pair_id": "nist_p0039_1-11-24", "pdf_page": 39, "eqn_id": "1.11.24", "text": "1.11.24  f(z) = a_{0} + a_{1}z + · · · + a_{n}z^{n},", "image": "data/annot/nist/images/nist_p0039_1-11-24.png"}
+{"pair_id": "nist_p0041_1-12-22", "pdf_page": 41, "eqn_id": "1.12.22", "text": "1.12.22  C_{0}̸ = ∞,", "image": "data/annot/nist/images/nist_p0041_1-12-22.png"}
+{"pair_id": "nist_p0042_1-13-2", "pdf_page": 42, "eqn_id": "1.13.2", "text": "1.13.2  w(z) = Aw_{1}(z) + Bw_{2}(z),", "image": "data/annot/nist/images/nist_p0042_1-13-2.png"}
+{"pair_id": "nist_p0042_1-13-9", "pdf_page": 42, "eqn_id": "1.13.9", "text": "1.13.9  w(z) = w_{0}(z) + Aw_{1}(z) + Bw_{2}(z),", "image": "data/annot/nist/images/nist_p0042_1-13-9.png"}
+{"pair_id": "nist_p0042_1-13-14", "pdf_page": 42, "eqn_id": "1.13.14", "text": "1.13.14  \\frac{d^{2}W}{dz^{2}}−H(z)W = 0,", "image": "data/annot/nist/images/nist_p0042_1-13-14.png"}
+{"pair_id": "nist_p0042_1-13-15", "pdf_page": 42, "eqn_id": "1.13.15", "text": "1.13.15  H(z) = ^{1}", "image": "data/annot/nist/images/nist_p0042_1-13-15.png"}
+{"pair_id": "nist_p0043_1-13-22", "pdf_page": 43, "eqn_id": "1.13.22", "text": "1.13.22  {z, ζ} = −(dz/dζ )^{2} {ζ, z} .", "image": "data/annot/nist/images/nist_p0043_1-13-22.png"}
+{"pair_id": "nist_p0044_1-14-23", "pdf_page": 44, "eqn_id": "1.14.23", "text": "1.14.23  \\frac{d^{n}}{ds^{n}}L (f(t); s) = L ((−t)^{n}f(t); s), n = 1, 2, 3, . . . .", "image": "data/annot/nist/images/nist_p0044_1-14-23.png"}
+{"pair_id": "nist_p0044_1-14-27", "pdf_page": 44, "eqn_id": "1.14.27", "text": "1.14.27  L (f '(t); s) = s L (f(t); s) −f(0+).", "image": "data/annot/nist/images/nist_p0044_1-14-27.png"}
+{"pair_id": "nist_p0044_1-14-31", "pdf_page": 44, "eqn_id": "1.14.31", "text": "1.14.31  L (f ∗g) = L (f) L (g).", "image": "data/annot/nist/images/nist_p0044_1-14-31.png"}
+{"pair_id": "nist_p0049_1-15-14", "pdf_page": 49, "eqn_id": "1.15.14", "text": "1.15.14  P(r, θ) →0,", "image": "data/annot/nist/images/nist_p0049_1-15-14.png"}
+{"pair_id": "nist_p0051_1-15-53", "pdf_page": 51, "eqn_id": "1.15.53", "text": "1.15.53  D^{α}D^{β} = D^{α+β}.", "image": "data/annot/nist/images/nist_p0051_1-15-53.png"}
+{"pair_id": "nist_p0051_1-16-1", "pdf_page": 51, "eqn_id": "1.16.1", "text": "1.16.1  Λ(α_{1}φ_{1} + α_{2}φ_{2}) = α_{1}Λ(φ_{1}) + α_{2}Λ(φ_{2}),", "image": "data/annot/nist/images/nist_p0051_1-16-1.png"}
+{"pair_id": "nist_p0051_1-16-4", "pdf_page": 51, "eqn_id": "1.16.4", "text": "1.16.4  ⟨Λ_{1} + Λ_{2}, φ⟩= ⟨Λ_{1}, φ⟩+ ⟨Λ_{2}, φ⟩,", "image": "data/annot/nist/images/nist_p0051_1-16-4.png"}
+{"pair_id": "nist_p0051_1-16-5", "pdf_page": 51, "eqn_id": "1.16.5", "text": "1.16.5  ⟨cΛ, φ⟩= c ⟨Λ, φ⟩= ⟨Λ, cφ⟩,", "image": "data/annot/nist/images/nist_p0051_1-16-5.png"}
+{"pair_id": "nist_p0051_1-16-6", "pdf_page": 51, "eqn_id": "1.16.6", "text": "1.16.6  ⟨αΛ, φ⟩= ⟨Λ, αφ⟩.", "image": "data/annot/nist/images/nist_p0051_1-16-6.png"}
+{"pair_id": "nist_p0052_1-16-15", "pdf_page": 52, "eqn_id": "1.16.15", "text": "1.16.15  DH = δ,", "image": "data/annot/nist/images/nist_p0052_1-16-15.png"}
+{"pair_id": "nist_p0052_1-16-16", "pdf_page": 52, "eqn_id": "1.16.16", "text": "1.16.16  DH(x −x_{0}) = δ_{x0}.", "image": "data/annot/nist/images/nist_p0052_1-16-16.png"}
+{"pair_id": "nist_p0053_1-16-37", "pdf_page": 53, "eqn_id": "1.16.37", "text": "1.16.37  F(Pu) = P(D)F(u).", "image": "data/annot/nist/images/nist_p0053_1-16-37.png"}
+{"pair_id": "nist_p0058_2-1-3", "pdf_page": 58, "eqn_id": "2.1.3", "text": "2.1.3  f(x) = O(φ(x)) ⇐⇒|f(x)/φ(x)| is bounded.", "image": "data/annot/nist/images/nist_p0058_2-1-3.png"}
+{"pair_id": "nist_p0058_2-1-16", "pdf_page": 58, "eqn_id": "2.1.16", "text": "2.1.16  f(x) ∼a_{0} + a_{1}(x −c) + a_{2}(x −c)^{2} + · · · , x →c in X,", "image": "data/annot/nist/images/nist_p0058_2-1-16.png"}
+{"pair_id": "nist_p0059_2-2-3", "pdf_page": 59, "eqn_id": "2.2.3", "text": "2.2.3  t^{2} −ln t = y.", "image": "data/annot/nist/images/nist_p0059_2-2-3.png"}
+{"pair_id": "nist_p0062_2-3-27", "pdf_page": 62, "eqn_id": "2.3.27", "text": "2.3.27  w = (2p(α, 0) −2p(α, α))^{1/2} ± (2p(α, t) −2p(α, α))^{1/2},", "image": "data/annot/nist/images/nist_p0062_2-3-27.png"}
+{"pair_id": "nist_p0064_2-4-21", "pdf_page": 64, "eqn_id": "2.4.21", "text": "2.4.21  w = z^{−1/3}v −a,", "image": "data/annot/nist/images/nist_p0064_2-4-21.png"}
+{"pair_id": "nist_p0066_2-5-22", "pdf_page": 66, "eqn_id": "2.5.22", "text": "2.5.22  f_{2}(t) = f(t) −f_{1}(t).", "image": "data/annot/nist/images/nist_p0066_2-5-22.png"}
+{"pair_id": "nist_p0066_2-5-24", "pdf_page": 66, "eqn_id": "2.5.24", "text": "2.5.24  h_{2}(t) = h(t) −h_{1}(t).", "image": "data/annot/nist/images/nist_p0066_2-5-24.png"}
+{"pair_id": "nist_p0066_2-5-32", "pdf_page": 66, "eqn_id": "2.5.32", "text": "2.5.32  G_{jk}(z) = M (f_{j}; 1 −z) M (h_{k}; z).", "image": "data/annot/nist/images/nist_p0066_2-5-32.png"}
+{"pair_id": "nist_p0067_2-5-49", "pdf_page": 67, "eqn_id": "2.5.49", "text": "2.5.49  L (h; ζ) = e^{ζ} E_{1}(ζ);", "image": "data/annot/nist/images/nist_p0067_2-5-49.png"}
+{"pair_id": "nist_p0070_2-6-37", "pdf_page": 70, "eqn_id": "2.6.37", "text": "2.6.37  F ∗G = D^{n+m}(f ∗g).", "image": "data/annot/nist/images/nist_p0070_2-6-37.png"}
+{"pair_id": "nist_p0071_2-6-60", "pdf_page": 71, "eqn_id": "2.6.60", "text": "2.6.60  M (f; z) = M (f_{n}; z),", "image": "data/annot/nist/images/nist_p0071_2-6-60.png"}
+{"pair_id": "nist_p0071_2-6-61", "pdf_page": 71, "eqn_id": "2.6.61", "text": "2.6.61  M (h_{x}; j + α) = x^{−j−α} M (h; j + α),", "image": "data/annot/nist/images/nist_p0071_2-6-61.png"}
+{"pair_id": "nist_p0072_2-7-3", "pdf_page": 72, "eqn_id": "2.7.3", "text": "2.7.3  Q(α) ≡α(α −1) + f_{0}α + g_{0} = 0.", "image": "data/annot/nist/images/nist_p0072_2-7-3.png"}
+{"pair_id": "nist_p0072_2-7-10", "pdf_page": 72, "eqn_id": "2.7.10", "text": "2.7.10  µ_{j} = −(f_{1}λ_{j} + g_{1})/(f_{0} + 2λ_{j}),", "image": "data/annot/nist/images/nist_p0072_2-7-10.png"}
+{"pair_id": "nist_p0073_2-7-19", "pdf_page": 73, "eqn_id": "2.7.19", "text": "2.7.19  w = e^{−f0z/2}W, t = z^{1/2}.", "image": "data/annot/nist/images/nist_p0073_2-7-19.png"}
+{"pair_id": "nist_p0073_2-7-20", "pdf_page": 73, "eqn_id": "2.7.20", "text": "2.7.20  \\frac{d^{2}w}{dx^{2}}= (f(x) + g(x))w", "image": "data/annot/nist/images/nist_p0073_2-7-20.png"}
+{"pair_id": "nist_p0074_2-8-2", "pdf_page": 74, "eqn_id": "2.8.2", "text": "2.8.2  W = ˙z^{−1/2}w,", "image": "data/annot/nist/images/nist_p0074_2-8-2.png"}
+{"pair_id": "nist_p0076_2-8-32", "pdf_page": 76, "eqn_id": "2.8.32", "text": "2.8.32  J_{ν}(x) + Y_{ν}(x) = 0.", "image": "data/annot/nist/images/nist_p0076_2-8-32.png"}
+{"pair_id": "nist_p0078_2-9-11", "pdf_page": 78, "eqn_id": "2.9.11", "text": "2.9.11  2g_{0}α^{2} −(f_{0}f_{1} + 2g_{0})α + 2g_{2} −f_{0}f_{2} = 0.", "image": "data/annot/nist/images/nist_p0078_2-9-11.png"}
+{"pair_id": "nist_p0078_2-9-5", "pdf_page": 78, "eqn_id": "2.9.5", "text": "2.9.5  ρ^{2} + f_{0}ρ + g_{0} = 0,", "image": "data/annot/nist/images/nist_p0078_2-9-5.png"}
+{"pair_id": "nist_p0078_2-9-6", "pdf_page": 78, "eqn_id": "2.9.6", "text": "2.9.6  α_{j} = (f_{1}ρ_{j} + g_{1})/(f_{0}ρ_{j} + 2g_{0}),", "image": "data/annot/nist/images/nist_p0078_2-9-6.png"}
+{"pair_id": "nist_p0080_2-10-17", "pdf_page": 80, "eqn_id": "2.10.17", "text": "2.10.17  S(α, β, n) = O(n^{α}) + O(1).", "image": "data/annot/nist/images/nist_p0080_2-10-17.png"}
+{"pair_id": "nist_p0085_2-11-26", "pdf_page": 85, "eqn_id": "2.11.26", "text": "2.11.26  e^{5} E_{1}(5) = 0.17042 . . . .", "image": "data/annot/nist/images/nist_p0085_2-11-26.png"}
+{"pair_id": "nist_p0088_3-1-6", "pdf_page": 88, "eqn_id": "3.1.6", "text": "3.1.6  I ∗J = {x ∗y | x ∈I, y ∈J}, I, J ∈G,", "image": "data/annot/nist/images/nist_p0088_3-1-6.png"}
+{"pair_id": "nist_p0089_3-1-7", "pdf_page": 89, "eqn_id": "3.1.7", "text": "3.1.7  ln_{0}(x) = x, ln_{ℓ}(x) = ln(ln_{ℓ−1}(x)), ℓ= 1, 2, . . . ,", "image": "data/annot/nist/images/nist_p0089_3-1-7.png"}
+{"pair_id": "nist_p0089_3-1-8", "pdf_page": 89, "eqn_id": "3.1.8", "text": "3.1.8  ϵ_{a} = |x^{∗}−x| .", "image": "data/annot/nist/images/nist_p0089_3-1-8.png"}
+{"pair_id": "nist_p0089_3-1-10", "pdf_page": 89, "eqn_id": "3.1.10", "text": "3.1.10  ϵ_{rp} = |ln(x^{∗}/x)| ,", "image": "data/annot/nist/images/nist_p0089_3-1-10.png"}
+{"pair_id": "nist_p0089_3-2-1", "pdf_page": 89, "eqn_id": "3.2.1", "text": "3.2.1  Ax = b,", "image": "data/annot/nist/images/nist_p0089_3-2-1.png"}
+{"pair_id": "nist_p0089_3-2-5", "pdf_page": 89, "eqn_id": "3.2.5", "text": "3.2.5  A = LU.", "image": "data/annot/nist/images/nist_p0089_3-2-5.png"}
+{"pair_id": "nist_p0090_3-2-12", "pdf_page": 90, "eqn_id": "3.2.12", "text": "3.2.12  x_{j} = (y_{j} −u_{j}x_{j+1})/d_{j}, j = n −1, . . . , 1.", "image": "data/annot/nist/images/nist_p0090_3-2-12.png"}
+{"pair_id": "nist_p0090_3-2-16", "pdf_page": 90, "eqn_id": "3.2.16", "text": "3.2.16  κ(A) = ∥A∥_{p} ∥A^{−1}∥_{p},", "image": "data/annot/nist/images/nist_p0090_3-2-16.png"}
+{"pair_id": "nist_p0090_3-2-18", "pdf_page": 90, "eqn_id": "3.2.18", "text": "3.2.18  Ax = λx.", "image": "data/annot/nist/images/nist_p0090_3-2-18.png"}
+{"pair_id": "nist_p0090_3-2-19", "pdf_page": 90, "eqn_id": "3.2.19", "text": "3.2.19  p_{n}(λ) = det[λI −A]", "image": "data/annot/nist/images/nist_p0090_3-2-19.png"}
+{"pair_id": "nist_p0092_3-3-40", "pdf_page": 92, "eqn_id": "3.3.40", "text": "3.3.40  x = −2.2", "image": "data/annot/nist/images/nist_p0092_3-3-40.png"}
+{"pair_id": "nist_p0095_3-5-8", "pdf_page": 95, "eqn_id": "3.5.8", "text": "3.5.8  a < ξ < b.", "image": "data/annot/nist/images/nist_p0095_3-5-8.png"}
+{"pair_id": "nist_p0096_3-5-27", "pdf_page": 96, "eqn_id": "3.5.27", "text": "3.5.27  [a, b) = [0, ∞), w(x) = x^{α}e^{−x},", "image": "data/annot/nist/images/nist_p0096_3-5-27.png"}
+{"pair_id": "nist_p0097_3-5-29", "pdf_page": 97, "eqn_id": "3.5.29", "text": "3.5.29  [a, b] = [0, 1],", "image": "data/annot/nist/images/nist_p0097_3-5-29.png"}
+{"pair_id": "nist_p0098_3-5-33", "pdf_page": 98, "eqn_id": "3.5.33", "text": "3.5.33  γ_{n} = β_{0}β_{1} · · · β_{n}.", "image": "data/annot/nist/images/nist_p0098_3-5-33.png"}
+{"pair_id": "nist_p0101_3-6-1", "pdf_page": 101, "eqn_id": "3.6.1", "text": "3.6.1  a_{n}w_{n+1} −b_{n}w_{n} + c_{n}w_{n−1} = d_{n},", "image": "data/annot/nist/images/nist_p0101_3-6-1.png"}
+{"pair_id": "nist_p0101_3-6-3", "pdf_page": 101, "eqn_id": "3.6.3", "text": "3.6.3  a_{n}w_{n+1} −b_{n}w_{n} + c_{n}w_{n−1} = 0,", "image": "data/annot/nist/images/nist_p0101_3-6-3.png"}
+{"pair_id": "nist_p0102_3-6-6", "pdf_page": 102, "eqn_id": "3.6.6", "text": "3.6.6  f_{n}/g_{n} →0, w_{n}/g_{n} →0.", "image": "data/annot/nist/images/nist_p0102_3-6-6.png"}
+{"pair_id": "nist_p0102_3-6-10", "pdf_page": 102, "eqn_id": "3.6.10", "text": "3.6.10  p_{n+1}w_{n} = p_{n}w_{n+1} + e_{n},", "image": "data/annot/nist/images/nist_p0102_3-6-10.png"}
+{"pair_id": "nist_p0103_3-6-11", "pdf_page": 103, "eqn_id": "3.6.11", "text": "3.6.11  w_{n+1} −2nw_{n} + w_{n−1} = 0, n = 1, 2, . . . ,", "image": "data/annot/nist/images/nist_p0103_3-6-11.png"}
+{"pair_id": "nist_p0103_3-6-17", "pdf_page": 103, "eqn_id": "3.6.17", "text": "3.6.17  a_{n}w_{n+1} −b_{n}w_{n} = d_{n}.", "image": "data/annot/nist/images/nist_p0103_3-6-17.png"}
+{"pair_id": "nist_p0104_3-7-2", "pdf_page": 104, "eqn_id": "3.7.2", "text": "3.7.2  w^{(s)}(z) = f_{s}(z)w(z)+g_{s}(z)w'(z)+h_{s}(z), s = 0, 1, 2, . . . ,", "image": "data/annot/nist/images/nist_p0104_3-7-2.png"}
+{"pair_id": "nist_p0105_3-7-11", "pdf_page": 105, "eqn_id": "3.7.11", "text": "3.7.11  w = [w(z_{0}), w'(z_{0}), w(z_{1}), w'(z_{1}), . . . , w(z_{P} ), w'(z_{P} )]^{T} ,", "image": "data/annot/nist/images/nist_p0105_3-7-11.png"}
+{"pair_id": "nist_p0105_3-7-13", "pdf_page": 105, "eqn_id": "3.7.13", "text": "3.7.13  Aw = b.", "image": "data/annot/nist/images/nist_p0105_3-7-13.png"}
+{"pair_id": "nist_p0105_3-7-15", "pdf_page": 105, "eqn_id": "3.7.15", "text": "3.7.15  \\frac{d^{2}w_{k}}{dx^{2}}+ (λ_{k} −q(x))w_{k} = 0,", "image": "data/annot/nist/images/nist_p0105_3-7-15.png"}
+{"pair_id": "nist_p0105_3-7-16", "pdf_page": 105, "eqn_id": "3.7.16", "text": "3.7.16  w_{k}(a) = w_{k}(b) = 0,", "image": "data/annot/nist/images/nist_p0105_3-7-16.png"}
+{"pair_id": "nist_p0105_3-7-17", "pdf_page": 105, "eqn_id": "3.7.17", "text": "3.7.17  λ_{1} < λ_{2} < λ_{3} < · · · , lim_{k→∞}λ_{k} = ∞.", "image": "data/annot/nist/images/nist_p0105_3-7-17.png"}
+{"pair_id": "nist_p0106_3-8-1", "pdf_page": 106, "eqn_id": "3.8.1", "text": "3.8.1  f(z) = 0,", "image": "data/annot/nist/images/nist_p0106_3-8-1.png"}
+{"pair_id": "nist_p0106_3-8-2", "pdf_page": 106, "eqn_id": "3.8.2", "text": "3.8.2  z = φ(z),", "image": "data/annot/nist/images/nist_p0106_3-8-2.png"}
+{"pair_id": "nist_p0106_3-8-3", "pdf_page": 106, "eqn_id": "3.8.3", "text": "3.8.3  |z_{n+1} −ζ| < A |z_{n} −ζ|^{p}", "image": "data/annot/nist/images/nist_p0106_3-8-3.png"}
+{"pair_id": "nist_p0107_3-8-10", "pdf_page": 107, "eqn_id": "3.8.10", "text": "3.8.10  q_{j} = a_{j} + sq_{j+1} + tq_{j+2}, r_{j} = q_{j} + sr_{j+1} + tr_{j+2}.", "image": "data/annot/nist/images/nist_p0107_3-8-10.png"}
+{"pair_id": "nist_p0108_3-8-15", "pdf_page": 108, "eqn_id": "3.8.15", "text": "3.8.15  p(x) = (x −1)(x −2) · · · (x −20)", "image": "data/annot/nist/images/nist_p0108_3-8-15.png"}
+{"pair_id": "nist_p0111_3-10-7", "pdf_page": 111, "eqn_id": "3.10.7", "text": "3.10.7  f(z) = c_{0} + c_{1}z + c_{2}z^{2} + · · ·", "image": "data/annot/nist/images/nist_p0111_3-10-7.png"}
+{"pair_id": "nist_p0112_3-10-16", "pdf_page": 112, "eqn_id": "3.10.16", "text": "3.10.16  C_{0} = b_{0}, D_{1} = 1/b_{1}, ∇C_{1} = a_{1}D_{1}, C_{1} = C_{0} + ∇C_{1}.", "image": "data/annot/nist/images/nist_p0112_3-10-16.png"}
+{"pair_id": "nist_p0112_3-11-1", "pdf_page": 112, "eqn_id": "3.11.1", "text": "3.11.1  p_{n}(x) = a_{n}x^{n} + a_{n−1}x^{n−1} + · · · + a_{0}", "image": "data/annot/nist/images/nist_p0112_3-11-1.png"}
+{"pair_id": "nist_p0112_3-11-7", "pdf_page": 112, "eqn_id": "3.11.7", "text": "3.11.7  T_{n+1}(x) −2x T_{n}(x) + T_{n−1}(x) = 0, n = 1, 2, . . . ,", "image": "data/annot/nist/images/nist_p0112_3-11-7.png"}
+{"pair_id": "nist_p0113_3-11-15", "pdf_page": 113, "eqn_id": "3.11.15", "text": "3.11.15  u_{k} = 2xu_{k+1} −u_{k+2} + c_{k}, k = n −1, n −2, . . . , 0.", "image": "data/annot/nist/images/nist_p0113_3-11-15.png"}
+{"pair_id": "nist_p0114_3-11-25", "pdf_page": 114, "eqn_id": "3.11.25", "text": "3.11.25  (N −C)^{−1} + (S −C)^{−1} = (W −C)^{−1} + (E −C)^{−1}.", "image": "data/annot/nist/images/nist_p0114_3-11-25.png"}
+{"pair_id": "nist_p0120_4-2-3", "pdf_page": 120, "eqn_id": "4.2.3", "text": "4.2.3  ln z = ln |z| + i ph z, −π < ph z < π.", "image": "data/annot/nist/images/nist_p0120_4-2-3.png"}
+{"pair_id": "nist_p0120_4-2-5", "pdf_page": 120, "eqn_id": "4.2.5", "text": "4.2.5  ln z = ln |z| + i ph z, −π < ph z ≤π.", "image": "data/annot/nist/images/nist_p0120_4-2-5.png"}
+{"pair_id": "nist_p0120_4-2-6", "pdf_page": 120, "eqn_id": "4.2.6", "text": "4.2.6  Ln z = ln z + 2kπi,", "image": "data/annot/nist/images/nist_p0120_4-2-6.png"}
+{"pair_id": "nist_p0120_4-2-7", "pdf_page": 120, "eqn_id": "4.2.7", "text": "4.2.7  ln(x ± i0) = ln |x| ± iπ, −∞< x < 0,", "image": "data/annot/nist/images/nist_p0120_4-2-7.png"}
+{"pair_id": "nist_p0121_4-2-22", "pdf_page": 121, "eqn_id": "4.2.22", "text": "4.2.22  | exp z| = exp(ℜz).", "image": "data/annot/nist/images/nist_p0121_4-2-22.png"}
+{"pair_id": "nist_p0121_4-2-25", "pdf_page": 121, "eqn_id": "4.2.25", "text": "4.2.25  exp z = ζ ⇐⇒ z = Ln ζ.", "image": "data/annot/nist/images/nist_p0121_4-2-25.png"}
+{"pair_id": "nist_p0121_4-2-26", "pdf_page": 121, "eqn_id": "4.2.26", "text": "4.2.26  z̸ = 0.", "image": "data/annot/nist/images/nist_p0121_4-2-26.png"}
+{"pair_id": "nist_p0121_4-2-28", "pdf_page": 121, "eqn_id": "4.2.28", "text": "4.2.28  z^{a} = exp(a ln z).", "image": "data/annot/nist/images/nist_p0121_4-2-28.png"}
+{"pair_id": "nist_p0121_4-2-29", "pdf_page": 121, "eqn_id": "4.2.29", "text": "4.2.29  |z^{a}| = |z|^{ℜa} exp(−(ℑa) ph z),", "image": "data/annot/nist/images/nist_p0121_4-2-29.png"}
+{"pair_id": "nist_p0121_4-2-30", "pdf_page": 121, "eqn_id": "4.2.30", "text": "4.2.30  ph(z^{a}) = (ℜa) ph z + (ℑa) ln |z|,", "image": "data/annot/nist/images/nist_p0121_4-2-30.png"}
+{"pair_id": "nist_p0121_4-2-31", "pdf_page": 121, "eqn_id": "4.2.31", "text": "4.2.31  |z^{a}| = |z|^{a}, ph(z^{a}) = a ph z.", "image": "data/annot/nist/images/nist_p0121_4-2-31.png"}
+{"pair_id": "nist_p0121_4-2-32", "pdf_page": 121, "eqn_id": "4.2.32", "text": "4.2.32  e^{z} = exp z,", "image": "data/annot/nist/images/nist_p0121_4-2-32.png"}
+{"pair_id": "nist_p0123_4-4-1", "pdf_page": 123, "eqn_id": "4.4.1", "text": "4.4.1  ln 1 = 0,", "image": "data/annot/nist/images/nist_p0123_4-4-1.png"}
+{"pair_id": "nist_p0123_4-4-12", "pdf_page": 123, "eqn_id": "4.4.12", "text": "4.4.12  i^{±i} = e^{∓π/2}.", "image": "data/annot/nist/images/nist_p0123_4-4-12.png"}
+{"pair_id": "nist_p0124_4-7-3", "pdf_page": 124, "eqn_id": "4.7.3", "text": "4.7.3  \\frac{d^{n}}{dz^{n}}ln z = (−1)^{n−1}(n −1)!z^{−n},", "image": "data/annot/nist/images/nist_p0124_4-7-3.png"}
+{"pair_id": "nist_p0124_4-7-4", "pdf_page": 124, "eqn_id": "4.7.4", "text": "4.7.4  \\frac{d^{n}}{dz^{n}}Ln z = (−1)^{n−1}(n −1)!z^{−n}.", "image": "data/annot/nist/images/nist_p0124_4-7-4.png"}
+{"pair_id": "nist_p0125_4-7-13", "pdf_page": 125, "eqn_id": "4.7.13", "text": "4.7.13  w = exp", "image": "data/annot/nist/images/nist_p0125_4-7-13.png"}
+{"pair_id": "nist_p0125_4-8-12", "pdf_page": 125, "eqn_id": "4.8.12", "text": "4.8.12  ln(a^{z}) = z ln a + 2kπi,", "image": "data/annot/nist/images/nist_p0125_4-8-12.png"}
+{"pair_id": "nist_p0127_4-12-2", "pdf_page": 127, "eqn_id": "4.12.2", "text": "4.12.2  φ(0) = 0,", "image": "data/annot/nist/images/nist_p0127_4-12-2.png"}
+{"pair_id": "nist_p0127_4-12-4", "pdf_page": 127, "eqn_id": "4.12.4", "text": "4.12.4  ψ(0) = 0.", "image": "data/annot/nist/images/nist_p0127_4-12-4.png"}
+{"pair_id": "nist_p0127_4-12-10", "pdf_page": 127, "eqn_id": "4.12.10", "text": "4.12.10  0 ≤ln^{(ℓ)} x < 1.", "image": "data/annot/nist/images/nist_p0127_4-12-10.png"}
+{"pair_id": "nist_p0127_4-13-2", "pdf_page": 127, "eqn_id": "4.13.2", "text": "4.13.2  Wp(−1/e) = Wm(−1/e) = −1,", "image": "data/annot/nist/images/nist_p0127_4-13-2.png"}
+{"pair_id": "nist_p0128_4-14-9", "pdf_page": 128, "eqn_id": "4.14.9", "text": "4.14.9  tan(z + kπ) = tan z.", "image": "data/annot/nist/images/nist_p0128_4-14-9.png"}
+{"pair_id": "nist_p0128_4-14-10", "pdf_page": 128, "eqn_id": "4.14.10", "text": "4.14.10  tan(z + kπ) = tan z.", "image": "data/annot/nist/images/nist_p0128_4-14-10.png"}
+{"pair_id": "nist_p0132_4-18-5", "pdf_page": 132, "eqn_id": "4.18.5", "text": "4.18.5  | sinh y| ≤| sin z| ≤cosh y,", "image": "data/annot/nist/images/nist_p0132_4-18-5.png"}
+{"pair_id": "nist_p0132_4-18-6", "pdf_page": 132, "eqn_id": "4.18.6", "text": "4.18.6  | sinh y| ≤| cos z| ≤cosh y,", "image": "data/annot/nist/images/nist_p0132_4-18-6.png"}
+{"pair_id": "nist_p0132_4-18-7", "pdf_page": 132, "eqn_id": "4.18.7", "text": "4.18.7  | csc z| ≤csch |y|,", "image": "data/annot/nist/images/nist_p0132_4-18-7.png"}
+{"pair_id": "nist_p0132_4-18-8", "pdf_page": 132, "eqn_id": "4.18.8", "text": "4.18.8  | cos z| ≤cosh |z|,", "image": "data/annot/nist/images/nist_p0132_4-18-8.png"}
+{"pair_id": "nist_p0132_4-18-9", "pdf_page": 132, "eqn_id": "4.18.9", "text": "4.18.9  | sin z| ≤sinh |z|,", "image": "data/annot/nist/images/nist_p0132_4-18-9.png"}
+{"pair_id": "nist_p0133_4-20-1", "pdf_page": 133, "eqn_id": "4.20.1", "text": "4.20.1  \\frac{d}{dz}sin z = cos z,", "image": "data/annot/nist/images/nist_p0133_4-20-1.png"}
+{"pair_id": "nist_p0133_4-20-2", "pdf_page": 133, "eqn_id": "4.20.2", "text": "4.20.2  \\frac{d}{dz}cos z = −sin z,", "image": "data/annot/nist/images/nist_p0133_4-20-2.png"}
+{"pair_id": "nist_p0133_4-20-3", "pdf_page": 133, "eqn_id": "4.20.3", "text": "4.20.3  \\frac{d}{dz}tan z = sec^{2} z,", "image": "data/annot/nist/images/nist_p0133_4-20-3.png"}
+{"pair_id": "nist_p0133_4-20-4", "pdf_page": 133, "eqn_id": "4.20.4", "text": "4.20.4  \\frac{d}{dz}csc z = −csc z cot z,", "image": "data/annot/nist/images/nist_p0133_4-20-4.png"}
+{"pair_id": "nist_p0133_4-20-5", "pdf_page": 133, "eqn_id": "4.20.5", "text": "4.20.5  \\frac{d}{dz}sec z = sec z tan z,", "image": "data/annot/nist/images/nist_p0133_4-20-5.png"}
+{"pair_id": "nist_p0133_4-20-6", "pdf_page": 133, "eqn_id": "4.20.6", "text": "4.20.6  \\frac{d}{dz}cot z = −csc^{2} z,", "image": "data/annot/nist/images/nist_p0133_4-20-6.png"}
+{"pair_id": "nist_p0133_4-20-9", "pdf_page": 133, "eqn_id": "4.20.9", "text": "4.20.9  \\frac{d^{2}w}{dz^{2}}+ a^{2}w = 0,", "image": "data/annot/nist/images/nist_p0133_4-20-9.png"}
+{"pair_id": "nist_p0133_4-20-14", "pdf_page": 133, "eqn_id": "4.20.14", "text": "4.20.14  w = (1/a) tan(az + c),", "image": "data/annot/nist/images/nist_p0133_4-20-14.png"}
+{"pair_id": "nist_p0133_4-21-15", "pdf_page": 133, "eqn_id": "4.21.15", "text": "4.21.15  2 sin u sin v = cos(u −v) −cos(u + v),", "image": "data/annot/nist/images/nist_p0133_4-21-15.png"}
+{"pair_id": "nist_p0133_4-21-16", "pdf_page": 133, "eqn_id": "4.21.16", "text": "4.21.16  2 cos u cos v = cos(u −v) + cos(u + v),", "image": "data/annot/nist/images/nist_p0133_4-21-16.png"}
+{"pair_id": "nist_p0133_4-21-20", "pdf_page": 133, "eqn_id": "4.21.20", "text": "4.21.20  cos^{2} u −sin^{2} v = cos(u + v) cos(u −v).", "image": "data/annot/nist/images/nist_p0133_4-21-20.png"}
+{"pair_id": "nist_p0134_4-21-24", "pdf_page": 134, "eqn_id": "4.21.24", "text": "4.21.24  sin(−z) = −sin z,", "image": "data/annot/nist/images/nist_p0134_4-21-24.png"}
+{"pair_id": "nist_p0134_4-21-25", "pdf_page": 134, "eqn_id": "4.21.25", "text": "4.21.25  cos(−z) = cos z,", "image": "data/annot/nist/images/nist_p0134_4-21-25.png"}
+{"pair_id": "nist_p0134_4-21-26", "pdf_page": 134, "eqn_id": "4.21.26", "text": "4.21.26  tan(−z) = −tan z.", "image": "data/annot/nist/images/nist_p0134_4-21-26.png"}
+{"pair_id": "nist_p0134_4-21-32", "pdf_page": 134, "eqn_id": "4.21.32", "text": "4.21.32  sin(4z) = 8 cos^{3} z sin z −4 cos z sin z,", "image": "data/annot/nist/images/nist_p0134_4-21-32.png"}
+{"pair_id": "nist_p0134_4-21-34", "pdf_page": 134, "eqn_id": "4.21.34", "text": "4.21.34  cos(nz) + i sin(nz) = (cos z + i sin z)^{n}.", "image": "data/annot/nist/images/nist_p0134_4-21-34.png"}
+{"pair_id": "nist_p0134_4-21-38", "pdf_page": 134, "eqn_id": "4.21.38", "text": "4.21.38  cos z = cos x cosh y −i sin x sinh y,", "image": "data/annot/nist/images/nist_p0134_4-21-38.png"}
+{"pair_id": "nist_p0135_4-23-10", "pdf_page": 135, "eqn_id": "4.23.10", "text": "4.23.10  arcsin(−z) = −arcsin z,", "image": "data/annot/nist/images/nist_p0135_4-23-10.png"}
+{"pair_id": "nist_p0135_4-23-11", "pdf_page": 135, "eqn_id": "4.23.11", "text": "4.23.11  arccos(−z) = π −arccos z.", "image": "data/annot/nist/images/nist_p0135_4-23-11.png"}
+{"pair_id": "nist_p0135_4-23-13", "pdf_page": 135, "eqn_id": "4.23.13", "text": "4.23.13  arccsc(−z) = −arccsc z,", "image": "data/annot/nist/images/nist_p0135_4-23-13.png"}
+{"pair_id": "nist_p0135_4-23-14", "pdf_page": 135, "eqn_id": "4.23.14", "text": "4.23.14  arcsec(−z) = π −arcsec z.", "image": "data/annot/nist/images/nist_p0135_4-23-14.png"}
+{"pair_id": "nist_p0135_4-23-15", "pdf_page": 135, "eqn_id": "4.23.15", "text": "4.23.15  z̸ = ±i.", "image": "data/annot/nist/images/nist_p0135_4-23-15.png"}
+{"pair_id": "nist_p0135_4-23-8", "pdf_page": 135, "eqn_id": "4.23.8", "text": "4.23.8  z̸ = ±i.", "image": "data/annot/nist/images/nist_p0135_4-23-8.png"}
+{"pair_id": "nist_p0136_4-23-30", "pdf_page": 136, "eqn_id": "4.23.30", "text": "4.23.30  z = tan w,", "image": "data/annot/nist/images/nist_p0136_4-23-30.png"}
+{"pair_id": "nist_p0137_4-24-7", "pdf_page": 137, "eqn_id": "4.24.7", "text": "4.24.7  \\frac{d}{dz}arcsin z = (1 −z^{2})^{−1/2},", "image": "data/annot/nist/images/nist_p0137_4-24-7.png"}
+{"pair_id": "nist_p0137_4-24-8", "pdf_page": 137, "eqn_id": "4.24.8", "text": "4.24.8  \\frac{d}{dz}arccos z = −(1 −z^{2})^{−1/2},", "image": "data/annot/nist/images/nist_p0137_4-24-8.png"}
+{"pair_id": "nist_p0139_4-28-3", "pdf_page": 139, "eqn_id": "4.28.3", "text": "4.28.3  cosh z ± sinh z = e^{±z},", "image": "data/annot/nist/images/nist_p0139_4-28-3.png"}
+{"pair_id": "nist_p0139_4-28-8", "pdf_page": 139, "eqn_id": "4.28.8", "text": "4.28.8  sin(iz) = i sinh z,", "image": "data/annot/nist/images/nist_p0139_4-28-8.png"}
+{"pair_id": "nist_p0139_4-28-9", "pdf_page": 139, "eqn_id": "4.28.9", "text": "4.28.9  tan(iz) = i tanh z,", "image": "data/annot/nist/images/nist_p0139_4-28-9.png"}
+{"pair_id": "nist_p0139_4-28-11", "pdf_page": 139, "eqn_id": "4.28.11", "text": "4.28.11  csc(iz) = −i csch z,", "image": "data/annot/nist/images/nist_p0139_4-28-11.png"}
+{"pair_id": "nist_p0139_4-28-12", "pdf_page": 139, "eqn_id": "4.28.12", "text": "4.28.12  cot(iz) = −i coth z.", "image": "data/annot/nist/images/nist_p0139_4-28-12.png"}
+{"pair_id": "nist_p0139_4-28-13", "pdf_page": 139, "eqn_id": "4.28.13", "text": "4.28.13  cot(iz) = −i coth z.", "image": "data/annot/nist/images/nist_p0139_4-28-13.png"}
+{"pair_id": "nist_p0141_4-34-1", "pdf_page": 141, "eqn_id": "4.34.1", "text": "4.34.1  \\frac{d}{dz}sinh z = cosh z,", "image": "data/annot/nist/images/nist_p0141_4-34-1.png"}
+{"pair_id": "nist_p0141_4-34-2", "pdf_page": 141, "eqn_id": "4.34.2", "text": "4.34.2  \\frac{d}{dz}cosh z = sinh z,", "image": "data/annot/nist/images/nist_p0141_4-34-2.png"}
+{"pair_id": "nist_p0141_4-34-3", "pdf_page": 141, "eqn_id": "4.34.3", "text": "4.34.3  \\frac{d}{dz}tanh z = sech^{2} z,", "image": "data/annot/nist/images/nist_p0141_4-34-3.png"}
+{"pair_id": "nist_p0141_4-34-4", "pdf_page": 141, "eqn_id": "4.34.4", "text": "4.34.4  \\frac{d}{dz}csch z = −csch z coth z,", "image": "data/annot/nist/images/nist_p0141_4-34-4.png"}
+{"pair_id": "nist_p0141_4-34-5", "pdf_page": 141, "eqn_id": "4.34.5", "text": "4.34.5  \\frac{d}{dz}sech z = −sech z tanh z,", "image": "data/annot/nist/images/nist_p0141_4-34-5.png"}
+{"pair_id": "nist_p0141_4-34-6", "pdf_page": 141, "eqn_id": "4.34.6", "text": "4.34.6  \\frac{d}{dz}coth z = −csch^{2} z.", "image": "data/annot/nist/images/nist_p0141_4-34-6.png"}
+{"pair_id": "nist_p0141_4-34-7", "pdf_page": 141, "eqn_id": "4.34.7", "text": "4.34.7  \\frac{d^{2}w}{dz^{2}}−a^{2}w = 0,", "image": "data/annot/nist/images/nist_p0141_4-34-7.png"}
+{"pair_id": "nist_p0141_4-34-11", "pdf_page": 141, "eqn_id": "4.34.11", "text": "4.34.11  w = A cosh(az) + B sinh(az),", "image": "data/annot/nist/images/nist_p0141_4-34-11.png"}
+{"pair_id": "nist_p0141_4-34-12", "pdf_page": 141, "eqn_id": "4.34.12", "text": "4.34.12  w = (1/a) sinh(az + c),", "image": "data/annot/nist/images/nist_p0141_4-34-12.png"}
+{"pair_id": "nist_p0141_4-34-13", "pdf_page": 141, "eqn_id": "4.34.13", "text": "4.34.13  w = (1/a) cosh(az + c),", "image": "data/annot/nist/images/nist_p0141_4-34-13.png"}
+{"pair_id": "nist_p0141_4-34-14", "pdf_page": 141, "eqn_id": "4.34.14", "text": "4.34.14  w = (1/a) coth(az + c),", "image": "data/annot/nist/images/nist_p0141_4-34-14.png"}
+{"pair_id": "nist_p0141_4-35-1", "pdf_page": 141, "eqn_id": "4.35.1", "text": "4.35.1  sinh(u ± v) = sinh u cosh v ± cosh u sinh v,", "image": "data/annot/nist/images/nist_p0141_4-35-1.png"}
+{"pair_id": "nist_p0141_4-35-2", "pdf_page": 141, "eqn_id": "4.35.2", "text": "4.35.2  cosh(u ± v) = cosh u cosh v ± sinh u sinh v,", "image": "data/annot/nist/images/nist_p0141_4-35-2.png"}
+{"pair_id": "nist_p0142_4-35-14", "pdf_page": 142, "eqn_id": "4.35.14", "text": "4.35.14  2 sinh u sinh v = cosh(u + v) −cosh(u −v),", "image": "data/annot/nist/images/nist_p0142_4-35-14.png"}
+{"pair_id": "nist_p0142_4-35-16", "pdf_page": 142, "eqn_id": "4.35.16", "text": "4.35.16  sinh^{2} u −sinh^{2} v = sinh(u + v) sinh(u −v),", "image": "data/annot/nist/images/nist_p0142_4-35-16.png"}
+{"pair_id": "nist_p0142_4-35-17", "pdf_page": 142, "eqn_id": "4.35.17", "text": "4.35.17  sinh^{2} u −sinh^{2} v = sinh(u + v) sinh(u −v),", "image": "data/annot/nist/images/nist_p0142_4-35-17.png"}
+{"pair_id": "nist_p0142_4-35-24", "pdf_page": 142, "eqn_id": "4.35.24", "text": "4.35.24  tanh(−z) = −tanh z.", "image": "data/annot/nist/images/nist_p0142_4-35-24.png"}
+{"pair_id": "nist_p0142_4-35-25", "pdf_page": 142, "eqn_id": "4.35.25", "text": "4.35.25  tanh(−z) = −tanh z.", "image": "data/annot/nist/images/nist_p0142_4-35-25.png"}
+{"pair_id": "nist_p0142_4-35-33", "pdf_page": 142, "eqn_id": "4.35.33", "text": "4.35.33  cosh(nz) ± sinh(nz) = (cosh z ± sinh z)^{n}, n ∈Z.", "image": "data/annot/nist/images/nist_p0142_4-35-33.png"}
+{"pair_id": "nist_p0142_4-35-34", "pdf_page": 142, "eqn_id": "4.35.34", "text": "4.35.34  sinh z = sinh x cos y + i cosh x sin y,", "image": "data/annot/nist/images/nist_p0142_4-35-34.png"}
+{"pair_id": "nist_p0142_4-35-35", "pdf_page": 142, "eqn_id": "4.35.35", "text": "4.35.35  cosh z = cosh x cos y + i sinh x sin y,", "image": "data/annot/nist/images/nist_p0142_4-35-35.png"}
+{"pair_id": "nist_p0143_4-37-8", "pdf_page": 143, "eqn_id": "4.37.8", "text": "4.37.8  z̸ = ±1.", "image": "data/annot/nist/images/nist_p0143_4-37-8.png"}
+{"pair_id": "nist_p0144_4-37-15", "pdf_page": 144, "eqn_id": "4.37.15", "text": "4.37.15  z̸ = ±1.", "image": "data/annot/nist/images/nist_p0144_4-37-15.png"}
+{"pair_id": "nist_p0144_4-37-26", "pdf_page": 144, "eqn_id": "4.37.26", "text": "4.37.26  z = sinh w,", "image": "data/annot/nist/images/nist_p0144_4-37-26.png"}
+{"pair_id": "nist_p0144_4-37-27", "pdf_page": 144, "eqn_id": "4.37.27", "text": "4.37.27  z = cosh w,", "image": "data/annot/nist/images/nist_p0144_4-37-27.png"}
+{"pair_id": "nist_p0144_4-37-28", "pdf_page": 144, "eqn_id": "4.37.28", "text": "4.37.28  z = tanh w,", "image": "data/annot/nist/images/nist_p0144_4-37-28.png"}
+{"pair_id": "nist_p0145_4-38-9", "pdf_page": 145, "eqn_id": "4.38.9", "text": "4.38.9  \\frac{d}{dz}arcsinh z = (1 + z^{2})^{−1/2}.", "image": "data/annot/nist/images/nist_p0145_4-38-9.png"}
+{"pair_id": "nist_p0147_4-45-1", "pdf_page": 147, "eqn_id": "4.45.1", "text": "4.45.1  y = x^{2−m} −1.", "image": "data/annot/nist/images/nist_p0147_4-45-1.png"}
+{"pair_id": "nist_p0147_4-45-2", "pdf_page": 147, "eqn_id": "4.45.2", "text": "4.45.2  ln x = 2^{m} ln(1 + y).", "image": "data/annot/nist/images/nist_p0147_4-45-2.png"}
+{"pair_id": "nist_p0147_4-45-3", "pdf_page": 147, "eqn_id": "4.45.3", "text": "4.45.3  ln x = ln ξ + m ln 10.", "image": "data/annot/nist/images/nist_p0147_4-45-3.png"}
+{"pair_id": "nist_p0148_4-45-13", "pdf_page": 148, "eqn_id": "4.45.13", "text": "4.45.13  arctan x = 16 arctan x_{4} = 1.46563 . . . .", "image": "data/annot/nist/images/nist_p0148_4-45-13.png"}
+{"pair_id": "nist_p0148_4-45-16", "pdf_page": 148, "eqn_id": "4.45.16", "text": "4.45.16  e^{z} = e^{ℜz}(cos(ℑz) + i sin(ℑz)).", "image": "data/annot/nist/images/nist_p0148_4-45-16.png"}
+{"pair_id": "nist_p0152_5-2-2", "pdf_page": 152, "eqn_id": "5.2.2", "text": "5.2.2  ψ(z) = Γ'(z)/ Γ(z), z̸ = 0, −1, −2, . . . .", "image": "data/annot/nist/images/nist_p0152_5-2-2.png"}
+{"pair_id": "nist_p0154_5-5-3", "pdf_page": 154, "eqn_id": "5.5.3", "text": "5.5.3  Γ(z) Γ(1 −z) = π/ sin(πz), z̸ = 0, ±1, . . . ,", "image": "data/annot/nist/images/nist_p0154_5-5-3.png"}
+{"pair_id": "nist_p0154_5-5-4", "pdf_page": 154, "eqn_id": "5.5.4", "text": "5.5.4  ψ(z) −ψ(1 −z) = −π/ tan(πz), z̸ = 0, ±1, . . . .", "image": "data/annot/nist/images/nist_p0154_5-5-4.png"}
+{"pair_id": "nist_p0154_5-6-6", "pdf_page": 154, "eqn_id": "5.6.6", "text": "5.6.6  | Γ(x + iy)| ≤| Γ(x)|,", "image": "data/annot/nist/images/nist_p0154_5-6-6.png"}
+{"pair_id": "nist_p0157_5-11-12", "pdf_page": 157, "eqn_id": "5.11.12", "text": "5.11.12  \\frac{Γ(z + a)}{Γ(z + b)}∼z^{a−b},", "image": "data/annot/nist/images/nist_p0157_5-11-12.png"}
+{"pair_id": "nist_p0160_5-17-1", "pdf_page": 160, "eqn_id": "5.17.1", "text": "5.17.1  G(z + 1) = Γ(z) G(z), G(1) = 1,", "image": "data/annot/nist/images/nist_p0160_5-17-1.png"}
+{"pair_id": "nist_p0160_5-17-2", "pdf_page": 160, "eqn_id": "5.17.2", "text": "5.17.2  G(n) = (n −2)!(n −3)! · · · 1!, n = 2, 3, . . . .", "image": "data/annot/nist/images/nist_p0160_5-17-2.png"}
+{"pair_id": "nist_p0161_5-18-4", "pdf_page": 161, "eqn_id": "5.18.4", "text": "5.18.4  Γ_{q}(z) = (q; q)_{∞}(1 −q)^{1−z}/ (q^{z}; q)_{∞},", "image": "data/annot/nist/images/nist_p0161_5-18-4.png"}
+{"pair_id": "nist_p0161_5-18-6", "pdf_page": 161, "eqn_id": "5.18.6", "text": "5.18.6  n!_{q} = Γ_{q}(n + 1),", "image": "data/annot/nist/images/nist_p0161_5-18-6.png"}
+{"pair_id": "nist_p0162_5-20-2", "pdf_page": 162, "eqn_id": "5.20.2", "text": "5.20.2  P(x_{1}, . . . , x_{n}) = C exp(−W/(kT)),", "image": "data/annot/nist/images/nist_p0162_5-20-2.png"}
+{"pair_id": "nist_p0166_6-2-4", "pdf_page": 166, "eqn_id": "6.2.4", "text": "6.2.4  E_{1}(z) = Ein(z) −ln z −γ.", "image": "data/annot/nist/images/nist_p0166_6-2-4.png"}
+{"pair_id": "nist_p0166_6-2-13", "pdf_page": 166, "eqn_id": "6.2.13", "text": "6.2.13  Ci(z) = −Cin(z) + ln z + γ.", "image": "data/annot/nist/images/nist_p0166_6-2-13.png"}
+{"pair_id": "nist_p0166_6-2-17", "pdf_page": 166, "eqn_id": "6.2.17", "text": "6.2.17  f(z) = Ci(z) sin z −si(z) cos z,", "image": "data/annot/nist/images/nist_p0166_6-2-17.png"}
+{"pair_id": "nist_p0166_6-2-18", "pdf_page": 166, "eqn_id": "6.2.18", "text": "6.2.18  g(z) = −Ci(z) cos z −si(z) sin z.", "image": "data/annot/nist/images/nist_p0166_6-2-18.png"}
+{"pair_id": "nist_p0166_6-2-20", "pdf_page": 166, "eqn_id": "6.2.20", "text": "6.2.20  Ci(z) = f(z) sin z −g(z) cos z.", "image": "data/annot/nist/images/nist_p0166_6-2-20.png"}
+{"pair_id": "nist_p0167_6-5-7", "pdf_page": 167, "eqn_id": "6.5.7", "text": "6.5.7  g(z) ± i f(z) = E_{1}(∓iz)e^{∓iz}.", "image": "data/annot/nist/images/nist_p0167_6-5-7.png"}
+{"pair_id": "nist_p0169_6-11-1", "pdf_page": 169, "eqn_id": "6.11.1", "text": "6.11.1  E_{1}(z) = Γ(0, z).", "image": "data/annot/nist/images/nist_p0169_6-11-1.png"}
+{"pair_id": "nist_p0169_6-11-2", "pdf_page": 169, "eqn_id": "6.11.2", "text": "6.11.2  E_{1}(z) = e^{−z} U(1, 1, z),", "image": "data/annot/nist/images/nist_p0169_6-11-2.png"}
+{"pair_id": "nist_p0169_6-11-3", "pdf_page": 169, "eqn_id": "6.11.3", "text": "6.11.3  g(z) + i f(z) = U(1, 1, −iz).", "image": "data/annot/nist/images/nist_p0169_6-11-3.png"}
+{"pair_id": "nist_p0177_7-4-1", "pdf_page": 177, "eqn_id": "7.4.1", "text": "7.4.1  erf(−z) = −erf(z),", "image": "data/annot/nist/images/nist_p0177_7-4-1.png"}
+{"pair_id": "nist_p0177_7-4-2", "pdf_page": 177, "eqn_id": "7.4.2", "text": "7.4.2  w(−z) = 2e^{−z2} −w(z).", "image": "data/annot/nist/images/nist_p0177_7-4-2.png"}
+{"pair_id": "nist_p0177_7-4-4", "pdf_page": 177, "eqn_id": "7.4.4", "text": "7.4.4  F(−z) = −F(z).", "image": "data/annot/nist/images/nist_p0177_7-4-4.png"}
+{"pair_id": "nist_p0177_7-4-5", "pdf_page": 177, "eqn_id": "7.4.5", "text": "7.4.5  C(−z) = −C(z), S(−z) = −S(z),", "image": "data/annot/nist/images/nist_p0177_7-4-5.png"}
+{"pair_id": "nist_p0179_7-10-2", "pdf_page": 179, "eqn_id": "7.10.2", "text": "7.10.2  w'(z) = −2z w(z) + (2i/√π),", "image": "data/annot/nist/images/nist_p0179_7-10-2.png"}
+{"pair_id": "nist_p0182_7-17-6", "pdf_page": 182, "eqn_id": "7.17.6", "text": "7.17.6  v = ln(ln(1/x)) −2 + ln π.", "image": "data/annot/nist/images/nist_p0182_7-17-6.png"}
+{"pair_id": "nist_p0183_7-18-3", "pdf_page": 183, "eqn_id": "7.18.3", "text": "7.18.3  \\frac{d}{dz}i^{n}erfc(z) = −i^{n−1}erfc(z), n = 0, 1, 2, . . . ,", "image": "data/annot/nist/images/nist_p0183_7-18-3.png"}
+{"pair_id": "nist_p0184_7-19-7", "pdf_page": 184, "eqn_id": "7.19.7", "text": "7.19.7  0 < U(x, t) ≤1, −1 ≤V(x, t) ≤1.", "image": "data/annot/nist/images/nist_p0184_7-19-7.png"}
+{"pair_id": "nist_p0190_8-2-3", "pdf_page": 190, "eqn_id": "8.2.3", "text": "8.2.3  γ(a, z) + Γ(a, z) = Γ(a), a̸ = 0, −1, −2, . . . .", "image": "data/annot/nist/images/nist_p0190_8-2-3.png"}
+{"pair_id": "nist_p0190_8-2-5", "pdf_page": 190, "eqn_id": "8.2.5", "text": "8.2.5  P(a, z) + Q(a, z) = 1.", "image": "data/annot/nist/images/nist_p0190_8-2-5.png"}
+{"pair_id": "nist_p0193_8-4-7", "pdf_page": 193, "eqn_id": "8.4.7", "text": "8.4.7  γ(n + 1, z) = n!(1 −e^{−z}e_{n}(z)),", "image": "data/annot/nist/images/nist_p0193_8-4-7.png"}
+{"pair_id": "nist_p0193_8-4-8", "pdf_page": 193, "eqn_id": "8.4.8", "text": "8.4.8  Γ(n + 1, z) = n!e^{−z}e_{n}(z),", "image": "data/annot/nist/images/nist_p0193_8-4-8.png"}
+{"pair_id": "nist_p0193_8-4-9", "pdf_page": 193, "eqn_id": "8.4.9", "text": "8.4.9  P(n + 1, z) = 1 −e^{−z}e_{n}(z),", "image": "data/annot/nist/images/nist_p0193_8-4-9.png"}
+{"pair_id": "nist_p0193_8-4-10", "pdf_page": 193, "eqn_id": "8.4.10", "text": "8.4.10  Q(n + 1, z) = e^{−z}e_{n}(z),", "image": "data/annot/nist/images/nist_p0193_8-4-10.png"}
+{"pair_id": "nist_p0193_8-4-12", "pdf_page": 193, "eqn_id": "8.4.12", "text": "8.4.12  γ^{∗}(−n, z) = z^{n},", "image": "data/annot/nist/images/nist_p0193_8-4-12.png"}
+{"pair_id": "nist_p0193_8-4-13", "pdf_page": 193, "eqn_id": "8.4.13", "text": "8.4.13  Γ(1 −n, z) = z^{1−n} E_{n}(z),", "image": "data/annot/nist/images/nist_p0193_8-4-13.png"}
+{"pair_id": "nist_p0193_8-5-3", "pdf_page": 193, "eqn_id": "8.5.3", "text": "8.5.3  Γ(a, z) = e^{−z} U(1 −a, 1 −a, z) = z^{a}e^{−z} U(1, 1 + a, z).", "image": "data/annot/nist/images/nist_p0193_8-5-3.png"}
+{"pair_id": "nist_p0194_8-8-19", "pdf_page": 194, "eqn_id": "8.8.19", "text": "8.8.19  \\frac{d^{n}}{dz^{n} (}e^{z} Γ(a, z)) = (−1)^{n}(1 −a)_{n}e^{z} Γ(a −n, z).", "image": "data/annot/nist/images/nist_p0194_8-8-19.png"}
+{"pair_id": "nist_p0195_8-10-11", "pdf_page": 195, "eqn_id": "8.10.11", "text": "8.10.11  (1 −e^{−αax})^{a} ≤P(a, x) ≤(1 −e^{−βax})^{a}, x ≥0, a > 0,", "image": "data/annot/nist/images/nist_p0195_8-10-11.png"}
+{"pair_id": "nist_p0198_8-12-21", "pdf_page": 198, "eqn_id": "8.12.21", "text": "8.12.21  Q(a, x) = q", "image": "data/annot/nist/images/nist_p0198_8-12-21.png"}
+{"pair_id": "nist_p0199_8-17-4", "pdf_page": 199, "eqn_id": "8.17.4", "text": "8.17.4  I_{x}(a, b) = 1 −I_{1−x}(b, a),", "image": "data/annot/nist/images/nist_p0199_8-17-4.png"}
+{"pair_id": "nist_p0199_8-17-12", "pdf_page": 199, "eqn_id": "8.17.12", "text": "8.17.12  I_{x}(a, b) = x I_{x}(a −1, b) + x' I_{x}(a, b −1),", "image": "data/annot/nist/images/nist_p0199_8-17-12.png"}
+{"pair_id": "nist_p0199_8-17-14", "pdf_page": 199, "eqn_id": "8.17.14", "text": "8.17.14  (a + bx) I_{x}(a, b) = xb I_{x}(a −1, b + 1) + a I_{x}(a + 1, b),", "image": "data/annot/nist/images/nist_p0199_8-17-14.png"}
+{"pair_id": "nist_p0199_8-17-15", "pdf_page": 199, "eqn_id": "8.17.15", "text": "8.17.15  (b + ax') I_{x}(a, b) = ax' I_{x}(a + 1, b −1) + b I_{x}(a, b + 1),", "image": "data/annot/nist/images/nist_p0199_8-17-15.png"}
+{"pair_id": "nist_p0199_8-17-16", "pdf_page": 199, "eqn_id": "8.17.16", "text": "8.17.16  a I_{x}(a + 1, b) = (a + cx) I_{x}(a, b) −cx I_{x}(a −1, b),", "image": "data/annot/nist/images/nist_p0199_8-17-16.png"}
+{"pair_id": "nist_p0199_8-17-17", "pdf_page": 199, "eqn_id": "8.17.17", "text": "8.17.17  b I_{x}(a, b + 1) = (b + cx') I_{x}(a, b) −cx' I_{x}(a, b −1),", "image": "data/annot/nist/images/nist_p0199_8-17-17.png"}
+{"pair_id": "nist_p0200_8-17-23", "pdf_page": 200, "eqn_id": "8.17.23", "text": "8.17.23  d_{2m+1} = −(a + m)(a + b + m)x", "image": "data/annot/nist/images/nist_p0200_8-17-23.png"}
+{"pair_id": "nist_p0200_8-18-4", "pdf_page": 200, "eqn_id": "8.18.4", "text": "8.18.4  aF_{k+1} = (k + b −aξ)F_{k} + kξF_{k−1},", "image": "data/annot/nist/images/nist_p0200_8-18-4.png"}
+{"pair_id": "nist_p0200_8-18-8", "pdf_page": 200, "eqn_id": "8.18.8", "text": "8.18.8  x_{0} = a/(a + b).", "image": "data/annot/nist/images/nist_p0200_8-18-8.png"}
+{"pair_id": "nist_p0202_8-19-12", "pdf_page": 202, "eqn_id": "8.19.12", "text": "8.19.12  p E_{p+1}(z) + z E_{p}(z) = e^{−z}.", "image": "data/annot/nist/images/nist_p0202_8-19-12.png"}
+{"pair_id": "nist_p0202_8-19-13", "pdf_page": 202, "eqn_id": "8.19.13", "text": "8.19.13  \\frac{d}{dz}E_{p}(z) = −E_{p−1}(z),", "image": "data/annot/nist/images/nist_p0202_8-19-13.png"}
+{"pair_id": "nist_p0204_8-21-10", "pdf_page": 204, "eqn_id": "8.21.10", "text": "8.21.10  si(0, z) = −si(z), ci(0, z) = −Ci(z),", "image": "data/annot/nist/images/nist_p0204_8-21-10.png"}
+{"pair_id": "nist_p0205_8-21-18", "pdf_page": 205, "eqn_id": "8.21.18", "text": "8.21.18  f(a, z) = si(a, z) cos z −ci(a, z) sin z,", "image": "data/annot/nist/images/nist_p0205_8-21-18.png"}
+{"pair_id": "nist_p0205_8-21-19", "pdf_page": 205, "eqn_id": "8.21.19", "text": "8.21.19  g(a, z) = si(a, z) sin z + ci(a, z) cos z.", "image": "data/annot/nist/images/nist_p0205_8-21-19.png"}
+{"pair_id": "nist_p0205_8-21-20", "pdf_page": 205, "eqn_id": "8.21.20", "text": "8.21.20  si(a, z) = f(a, z) cos z + g(a, z) sin z,", "image": "data/annot/nist/images/nist_p0205_8-21-20.png"}
+{"pair_id": "nist_p0210_9-2-1", "pdf_page": 210, "eqn_id": "9.2.1", "text": "9.2.1  \\frac{d^{2}w}{dz^{2}}= zw.", "image": "data/annot/nist/images/nist_p0210_9-2-1.png"}
+{"pair_id": "nist_p0210_9-2-16", "pdf_page": 210, "eqn_id": "9.2.16", "text": "9.2.16  \\frac{dW}{dz}+ W 2 = z,", "image": "data/annot/nist/images/nist_p0210_9-2-16.png"}
+{"pair_id": "nist_p0215_9-8-2", "pdf_page": 215, "eqn_id": "9.8.2", "text": "9.8.2  Bi(x) = M(x) cos θ(x),", "image": "data/annot/nist/images/nist_p0215_9-8-2.png"}
+{"pair_id": "nist_p0215_9-8-3", "pdf_page": 215, "eqn_id": "9.8.3", "text": "9.8.3  M(x) =", "image": "data/annot/nist/images/nist_p0215_9-8-3.png"}
+{"pair_id": "nist_p0215_9-8-4", "pdf_page": 215, "eqn_id": "9.8.4", "text": "9.8.4  Ai'(x) = N(x) sin φ(x),", "image": "data/annot/nist/images/nist_p0215_9-8-4.png"}
+{"pair_id": "nist_p0215_9-8-6", "pdf_page": 215, "eqn_id": "9.8.6", "text": "9.8.6  Bi'(x) = N(x) cos φ(x),", "image": "data/annot/nist/images/nist_p0215_9-8-6.png"}
+{"pair_id": "nist_p0217_9-9-19", "pdf_page": 217, "eqn_id": "9.9.19", "text": "9.9.19  U(t) ∼t^{2/3}", "image": "data/annot/nist/images/nist_p0217_9-9-19.png"}
+{"pair_id": "nist_p0220_9-12-2", "pdf_page": 220, "eqn_id": "9.12.2", "text": "9.12.2  w(z) = Aw_{1}(z) + Bw_{2}(z) + p(z),", "image": "data/annot/nist/images/nist_p0220_9-12-2.png"}
+{"pair_id": "nist_p0223_9-13-21", "pdf_page": 223, "eqn_id": "9.13.21", "text": "9.13.21  U_{2}(x, α) = (α + 2)^{1/(α+2)}", "image": "data/annot/nist/images/nist_p0223_9-13-21.png"}
+{"pair_id": "nist_p0223_9-13-22", "pdf_page": 223, "eqn_id": "9.13.22", "text": "9.13.22  α = m −2 , x = (m/2)^{2/m}t ,", "image": "data/annot/nist/images/nist_p0223_9-13-22.png"}
+{"pair_id": "nist_p0224_9-13-30", "pdf_page": 224, "eqn_id": "9.13.30", "text": "9.13.30  B_{1}(z, 0) = π Hi(z) .", "image": "data/annot/nist/images/nist_p0224_9-13-30.png"}
+{"pair_id": "nist_p0224_9-13-35", "pdf_page": 224, "eqn_id": "9.13.35", "text": "9.13.35  B_{2}(z, p) −B_{3}(z, p) = 2πi A_{1}(z, p),", "image": "data/annot/nist/images/nist_p0224_9-13-35.png"}
+{"pair_id": "nist_p0224_9-13-36", "pdf_page": 224, "eqn_id": "9.13.36", "text": "9.13.36  B_{3}(z, p) −B_{1}(z, p) = 2πi A_{2}(z, p),", "image": "data/annot/nist/images/nist_p0224_9-13-36.png"}
+{"pair_id": "nist_p0224_9-13-37", "pdf_page": 224, "eqn_id": "9.13.37", "text": "9.13.37  B_{1}(z, p) −B_{2}(z, p) = 2πi A_{3}(z, p).", "image": "data/annot/nist/images/nist_p0224_9-13-37.png"}
+{"pair_id": "nist_p0239_10-6-10", "pdf_page": 239, "eqn_id": "10.6.10", "text": "10.6.10  p_{ν}s_{ν} −q_{ν}r_{ν} = 4/(π^{2}ab).", "image": "data/annot/nist/images/nist_p0239_10-6-10.png"}
+{"pair_id": "nist_p0239_10-7-1", "pdf_page": 239, "eqn_id": "10.7.1", "text": "10.7.1  J_{0}(z) →1, Y_{0}(z) ∼(2/π) ln z,", "image": "data/annot/nist/images/nist_p0239_10-7-1.png"}
+{"pair_id": "nist_p0243_10-14-9", "pdf_page": 243, "eqn_id": "10.14.9", "text": "10.14.9  | J_{n}(nz)| ≤1, n = 0, 1, 2, . . . , z ∈K,", "image": "data/annot/nist/images/nist_p0243_10-14-9.png"}
+{"pair_id": "nist_p0251_10-21-4", "pdf_page": 251, "eqn_id": "10.21.4", "text": "10.21.4  C_{ν}(z) = J_{ν}(z) cos(πt) + Y_{ν}(z) sin(πt),", "image": "data/annot/nist/images/nist_p0251_10-21-4.png"}
+{"pair_id": "nist_p0267_10-27-1", "pdf_page": 267, "eqn_id": "10.27.1", "text": "10.27.1  I_{−n}(z) = I_{n}(z),", "image": "data/annot/nist/images/nist_p0267_10-27-1.png"}
+{"pair_id": "nist_p0267_10-27-2", "pdf_page": 267, "eqn_id": "10.27.2", "text": "10.27.2  I_{−ν}(z) = I_{ν}(z) + (2/π) sin(νπ) K_{ν}(z),", "image": "data/annot/nist/images/nist_p0267_10-27-2.png"}
+{"pair_id": "nist_p0267_10-27-3", "pdf_page": 267, "eqn_id": "10.27.3", "text": "10.27.3  K_{−ν}(z) = K_{ν}(z).", "image": "data/annot/nist/images/nist_p0267_10-27-3.png"}
+{"pair_id": "nist_p0267_10-29-1", "pdf_page": 267, "eqn_id": "10.29.1", "text": "10.29.1  Z_{ν−1}(z) −Z_{ν+1}(z) = (2ν/z) Z_{ν}(z),", "image": "data/annot/nist/images/nist_p0267_10-29-1.png"}
+{"pair_id": "nist_p0268_10-30-3", "pdf_page": 268, "eqn_id": "10.30.3", "text": "10.30.3  K_{0}(z) ∼−ln z.", "image": "data/annot/nist/images/nist_p0268_10-30-3.png"}
+{"pair_id": "nist_p0270_10-34-7", "pdf_page": 270, "eqn_id": "10.34.7", "text": "10.34.7  I_{ν}(z) = I_{ν}(z), K_{ν}(z) = K_{ν}(z).", "image": "data/annot/nist/images/nist_p0270_10-34-7.png"}
+{"pair_id": "nist_p0271_10-40-9", "pdf_page": 271, "eqn_id": "10.40.9", "text": "10.40.9  α_{k}(ν) = (4ν^{2} −1^{2})(4ν^{2} −3^{2}) · · · (4ν^{2} −(2k + 1)^{2})", "image": "data/annot/nist/images/nist_p0271_10-40-9.png"}
+{"pair_id": "nist_p0278_10-47-14", "pdf_page": 278, "eqn_id": "10.47.14", "text": "10.47.14  j_{n}(−z) = (−1)^{n} j_{n}(z), y_{n}(−z) = (−1)^{n+1} y_{n}(z),", "image": "data/annot/nist/images/nist_p0278_10-47-14.png"}
+{"pair_id": "nist_p0284_10-61-5", "pdf_page": 284, "eqn_id": "10.61.5", "text": "10.61.5  ber_{n}(−x) = (−1)^{n} ber_{n} x, bei_{n}(−x) = (−1)^{n} bei_{n} x.", "image": "data/annot/nist/images/nist_p0284_10-61-5.png"}
+{"pair_id": "nist_p0288_10-68-2", "pdf_page": 288, "eqn_id": "10.68.2", "text": "10.68.2  N_{ν}(x)e^{iφν(x)} = ker_{ν} x + i kei_{ν} x,", "image": "data/annot/nist/images/nist_p0288_10-68-2.png"}
+{"pair_id": "nist_p0288_10-68-5", "pdf_page": 288, "eqn_id": "10.68.5", "text": "10.68.5  θ_{ν}(x) = Arctan(bei_{ν} x/ ber_{ν} x), φ_{ν}(x) = Arctan(kei_{ν} x/ ker_{ν} x).", "image": "data/annot/nist/images/nist_p0288_10-68-5.png"}
+{"pair_id": "nist_p0288_10-68-7", "pdf_page": 288, "eqn_id": "10.68.7", "text": "10.68.7  M_{−n}(x) = M_{n}(x), θ_{−n}(x) = θ_{n}(x) −nπ.", "image": "data/annot/nist/images/nist_p0288_10-68-7.png"}
+{"pair_id": "nist_p0288_10-68-15", "pdf_page": 288, "eqn_id": "10.68.15", "text": "10.68.15  N_{−ν}(x) = N_{ν}(x), φ_{−ν}(x) = φ_{ν}(x) + νπ.", "image": "data/annot/nist/images/nist_p0288_10-68-15.png"}
+{"pair_id": "nist_p0289_10-69-1", "pdf_page": 289, "eqn_id": "10.69.1", "text": "10.69.1  ξ = (1 + ix^{2}) ^{1/2} .", "image": "data/annot/nist/images/nist_p0289_10-69-1.png"}
+{"pair_id": "nist_p0304_11-2-6", "pdf_page": 304, "eqn_id": "11.2.6", "text": "11.2.6  M_{ν}(z) = L_{ν}(z) −I_{ν}(z).", "image": "data/annot/nist/images/nist_p0304_11-2-6.png"}
+{"pair_id": "nist_p0304_11-2-8", "pdf_page": 304, "eqn_id": "11.2.8", "text": "11.2.8  w = H_{ν}(z), K_{ν}(z).", "image": "data/annot/nist/images/nist_p0304_11-2-8.png"}
+{"pair_id": "nist_p0304_11-2-10", "pdf_page": 304, "eqn_id": "11.2.10", "text": "11.2.10  w = L_{ν}(z), M_{ν}(z).", "image": "data/annot/nist/images/nist_p0304_11-2-10.png"}
+{"pair_id": "nist_p0304_11-2-11", "pdf_page": 304, "eqn_id": "11.2.11", "text": "11.2.11  w = H_{ν}(x) + A J_{ν}(x) + B Y_{ν}(x),", "image": "data/annot/nist/images/nist_p0304_11-2-11.png"}
+{"pair_id": "nist_p0304_11-2-12", "pdf_page": 304, "eqn_id": "11.2.12", "text": "11.2.12  w = K_{ν}(x) + A J_{ν}(x) + B Y_{ν}(x).", "image": "data/annot/nist/images/nist_p0304_11-2-12.png"}
+{"pair_id": "nist_p0304_11-2-16", "pdf_page": 304, "eqn_id": "11.2.16", "text": "11.2.16  w = L_{ν}(z) + A K_{ν}(z) + B I_{ν}(z),", "image": "data/annot/nist/images/nist_p0304_11-2-16.png"}
+{"pair_id": "nist_p0304_11-2-17", "pdf_page": 304, "eqn_id": "11.2.17", "text": "11.2.17  w = M_{ν}(z) + A K_{ν}(z) + B I_{ν}(z).", "image": "data/annot/nist/images/nist_p0304_11-2-17.png"}
+{"pair_id": "nist_p0310_11-9-2", "pdf_page": 310, "eqn_id": "11.9.2", "text": "11.9.2  w = s_{µ,ν}(z) + A J_{ν}(z) + B Y_{ν}(z),", "image": "data/annot/nist/images/nist_p0310_11-9-2.png"}
+{"pair_id": "nist_p0311_11-9-6", "pdf_page": 311, "eqn_id": "11.9.6", "text": "11.9.6  s_{µ,−ν}(z) = s_{µ,ν}(z),", "image": "data/annot/nist/images/nist_p0311_11-9-6.png"}
+{"pair_id": "nist_p0312_11-10-13", "pdf_page": 312, "eqn_id": "11.10.13", "text": "11.10.13  sin(πν) J_{ν}(z) = cos(πν) E_{ν}(z) −E_{−ν}(z),", "image": "data/annot/nist/images/nist_p0312_11-10-13.png"}
+{"pair_id": "nist_p0321_12-2-22", "pdf_page": 321, "eqn_id": "12.2.22", "text": "12.2.22  U(a, x) + i U(a, x) = F(a, x)e^{iθ(a,x)},", "image": "data/annot/nist/images/nist_p0321_12-2-22.png"}
+{"pair_id": "nist_p0325_12-10-2", "pdf_page": 325, "eqn_id": "12.10.2", "text": "12.10.2  \\frac{d^{2}w}{dt^{2}}= µ^{4}(t^{2} ± 1)w.", "image": "data/annot/nist/images/nist_p0325_12-10-2.png"}
+{"pair_id": "nist_p0327_12-10-27", "pdf_page": 327, "eqn_id": "12.10.27", "text": "12.10.27  u_{s}(t) = i^{s}u_{s}(−it),", "image": "data/annot/nist/images/nist_p0327_12-10-27.png"}
+{"pair_id": "nist_p0327_12-10-30", "pdf_page": 327, "eqn_id": "12.10.30", "text": "12.10.30  v_{s}(t) = i^{s}v_{s}(−it).", "image": "data/annot/nist/images/nist_p0327_12-10-30.png"}
+{"pair_id": "nist_p0327_12-10-34", "pdf_page": 327, "eqn_id": "12.10.34", "text": "12.10.34  A_{2}(τ) = 1", "image": "data/annot/nist/images/nist_p0327_12-10-34.png"}
+{"pair_id": "nist_p0329_12-11-5", "pdf_page": 329, "eqn_id": "12.11.5", "text": "12.11.5  p_{0}(ζ) = t(ζ),", "image": "data/annot/nist/images/nist_p0329_12-11-5.png"}
+{"pair_id": "nist_p0329_12-11-8", "pdf_page": 329, "eqn_id": "12.11.8", "text": "12.11.8  q_{0}(ζ) = t(ζ).", "image": "data/annot/nist/images/nist_p0329_12-11-8.png"}
+{"pair_id": "nist_p0330_12-14-3", "pdf_page": 330, "eqn_id": "12.14.3", "text": "12.14.3  W {W(a, x), W(a, −x)} = 1.", "image": "data/annot/nist/images/nist_p0330_12-14-3.png"}
+{"pair_id": "nist_p0331_12-14-10", "pdf_page": 331, "eqn_id": "12.14.10", "text": "12.14.10  n=0", "image": "data/annot/nist/images/nist_p0331_12-14-10.png"}
+{"pair_id": "nist_p0331_12-14-11", "pdf_page": 331, "eqn_id": "12.14.11", "text": "12.14.11  β_{n+2} = aβ_{n+1} −^{1}", "image": "data/annot/nist/images/nist_p0331_12-14-11.png"}
+{"pair_id": "nist_p0331_12-14-24", "pdf_page": 331, "eqn_id": "12.14.24", "text": "12.14.24  \\frac{d^{2}w}{dt^{2}}= µ^{4}(1 −t^{2})w", "image": "data/annot/nist/images/nist_p0331_12-14-24.png"}
+{"pair_id": "nist_p0332_12-14-36", "pdf_page": 332, "eqn_id": "12.14.36", "text": "12.14.36  σ = µ^{2}ξ + ^{1}", "image": "data/annot/nist/images/nist_p0332_12-14-36.png"}
+{"pair_id": "nist_p0333_12-17-1", "pdf_page": 333, "eqn_id": "12.17.1", "text": "12.17.1  ∇^{2}w + k^{2}w = 0,", "image": "data/annot/nist/images/nist_p0333_12-17-1.png"}
+{"pair_id": "nist_p0338_13-2-4", "pdf_page": 338, "eqn_id": "13.2.4", "text": "13.2.4  M(a, b, z) = Γ(b) M(a, b, z).", "image": "data/annot/nist/images/nist_p0338_13-2-4.png"}
+{"pair_id": "nist_p0339_13-2-13", "pdf_page": 339, "eqn_id": "13.2.13", "text": "13.2.13  M(a, b, z) = 1 + O(z).", "image": "data/annot/nist/images/nist_p0339_13-2-13.png"}
+{"pair_id": "nist_p0339_13-2-14", "pdf_page": 339, "eqn_id": "13.2.14", "text": "13.2.14  U(−n, b, z) = (−1)^{n}(b)_{n} + O(z),", "image": "data/annot/nist/images/nist_p0339_13-2-14.png"}
+{"pair_id": "nist_p0341_13-2-40", "pdf_page": 341, "eqn_id": "13.2.40", "text": "13.2.40  U(a, b, z) = z^{1−b} U(a −b + 1, 2 −b, z).", "image": "data/annot/nist/images/nist_p0341_13-2-40.png"}
+{"pair_id": "nist_p0341_13-3-12", "pdf_page": 341, "eqn_id": "13.3.12", "text": "13.3.12  (a −1 + z) U(a, b, z) −U(a −1, b, z) + (a −b + 1) U(a, b −1, z) = 0.", "image": "data/annot/nist/images/nist_p0341_13-3-12.png"}
+{"pair_id": "nist_p0341_13-3-14", "pdf_page": 341, "eqn_id": "13.3.14", "text": "13.3.14  (a + 1)z U(a + 2, b + 2, z) + (z −b) U(a + 1, b + 1, z) −U(a, b, z) = 0.", "image": "data/annot/nist/images/nist_p0341_13-3-14.png"}
+{"pair_id": "nist_p0343_13-5-4", "pdf_page": 343, "eqn_id": "13.5.4", "text": "13.5.4  v_{2n+1} = a + n , v_{2n} = a −b + n + 1 .", "image": "data/annot/nist/images/nist_p0343_13-5-4.png"}
+{"pair_id": "nist_p0343_13-6-3", "pdf_page": 343, "eqn_id": "13.6.3", "text": "13.6.3  M(0, b, z) = U(0, b, z) = 1,", "image": "data/annot/nist/images/nist_p0343_13-6-3.png"}
+{"pair_id": "nist_p0343_13-6-4", "pdf_page": 343, "eqn_id": "13.6.4", "text": "13.6.4  U(a, a + 1, z) = z^{−a}.", "image": "data/annot/nist/images/nist_p0343_13-6-4.png"}
+{"pair_id": "nist_p0345_13-7-7", "pdf_page": 345, "eqn_id": "13.7.7", "text": "13.7.7  z ∈R_{1} , z ∈R_{2} ∪R_{2} , z ∈R_{3} ∪R_{3} ,", "image": "data/annot/nist/images/nist_p0345_13-7-7.png"}
+{"pair_id": "nist_p0347_13-9-5", "pdf_page": 347, "eqn_id": "13.9.5", "text": "13.9.5  p(a, b) = ⌈−a⌉−⌈−b⌉, ⌈−a⌉≥⌈−b⌉, a < 0, b < 0,", "image": "data/annot/nist/images/nist_p0347_13-9-5.png"}
+{"pair_id": "nist_p0351_13-14-25", "pdf_page": 351, "eqn_id": "13.14.25", "text": "13.14.25  W {M_{κ,µ}(z), M_{κ,−µ}(z)} = −2µ,", "image": "data/annot/nist/images/nist_p0351_13-14-25.png"}
+{"pair_id": "nist_p0351_13-14-31", "pdf_page": 351, "eqn_id": "13.14.31", "text": "13.14.31  W_{κ,µ}(z) = W_{κ,−µ}(z).", "image": "data/annot/nist/images/nist_p0351_13-14-31.png"}
+{"pair_id": "nist_p0363_13-29-6", "pdf_page": 363, "eqn_id": "13.29.6", "text": "13.29.6  w(n) = (a)_{n} U(n + a, b, z),", "image": "data/annot/nist/images/nist_p0363_13-29-6.png"}
+{"pair_id": "nist_p0369_14-3-3", "pdf_page": 369, "eqn_id": "14.3.3", "text": "14.3.3  F(a, b; c; x) =", "image": "data/annot/nist/images/nist_p0369_14-3-3.png"}
+{"pair_id": "nist_p0375_14-5-6", "pdf_page": 375, "eqn_id": "14.5.6", "text": "14.5.6  P_{1}(x) = P_{1}(x) = x.", "image": "data/annot/nist/images/nist_p0375_14-5-6.png"}
+{"pair_id": "nist_p0376_14-7-16", "pdf_page": 376, "eqn_id": "14.7.16", "text": "14.7.16  m > n.", "image": "data/annot/nist/images/nist_p0376_14-7-16.png"}
+{"pair_id": "nist_p0380_14-14-4", "pdf_page": 380, "eqn_id": "14.14.4", "text": "14.14.4  x_{k} = (ν + µ + k)(ν −µ + k),", "image": "data/annot/nist/images/nist_p0380_14-14-4.png"}
+{"pair_id": "nist_p0381_14-15-6", "pdf_page": 381, "eqn_id": "14.15.6", "text": "14.15.6  p = (α^{2}x^{2} + 1 −α^{2})^{1/2} ,", "image": "data/annot/nist/images/nist_p0381_14-15-6.png"}
+{"pair_id": "nist_p0383_14-15-29", "pdf_page": 383, "eqn_id": "14.15.29", "text": "14.15.29  ζ^{2} = −ln", "image": "data/annot/nist/images/nist_p0383_14-15-29.png"}
+{"pair_id": "nist_p0386_14-18-2", "pdf_page": 386, "eqn_id": "14.18.2", "text": "14.18.2  m=−n", "image": "data/annot/nist/images/nist_p0386_14-18-2.png"}
+{"pair_id": "nist_p0390_14-20-23", "pdf_page": 390, "eqn_id": "14.20.23", "text": "14.20.23  β = τ/µ,", "image": "data/annot/nist/images/nist_p0390_14-20-23.png"}
+{"pair_id": "nist_p0390_14-20-19", "pdf_page": 390, "eqn_id": "14.20.19", "text": "14.20.19  α = µ/τ,", "image": "data/annot/nist/images/nist_p0390_14-20-19.png"}
+{"pair_id": "nist_p0394_14-30-7", "pdf_page": 394, "eqn_id": "14.30.7", "text": "14.30.7  Y_{l,m}(π −θ, φ + π) = (−1)^{l} Y_{l,m}(θ, φ).", "image": "data/annot/nist/images/nist_p0394_14-30-7.png"}
+{"pair_id": "nist_p0395_14-30-11", "pdf_page": 395, "eqn_id": "14.30.11", "text": "14.30.11  L^{2} Y_{l,m} = ¯h^{2}l(l + 1) Y_{l,m},", "image": "data/annot/nist/images/nist_p0395_14-30-11.png"}
+{"pair_id": "nist_p0402_15-4-6", "pdf_page": 402, "eqn_id": "15.4.6", "text": "15.4.6  F(a, b; b; z) = (1 −z)^{−a};", "image": "data/annot/nist/images/nist_p0402_15-4-6.png"}
+{"pair_id": "nist_p0412_15-11-5", "pdf_page": 412, "eqn_id": "15.11.5", "text": "15.11.5  t = (κz + λ)/(µz + ν) ,", "image": "data/annot/nist/images/nist_p0412_15-11-5.png"}
+{"pair_id": "nist_p0413_15-12-8", "pdf_page": 413, "eqn_id": "15.12.8", "text": "15.12.8  α = −2 ln 1 −", "image": "data/annot/nist/images/nist_p0413_15-12-8.png"}
+{"pair_id": "nist_p0421_16-4-1", "pdf_page": 421, "eqn_id": "16.4.1", "text": "16.4.1  a_{1} + b_{1} = · · · = a_{q} + b_{q} = a_{q+1} + 1.", "image": "data/annot/nist/images/nist_p0421_16-4-1.png"}
+{"pair_id": "nist_p0421_16-4-2", "pdf_page": 421, "eqn_id": "16.4.2", "text": "16.4.2  a_{1} + · · · + a_{q+1} + k = b_{1} + · · · + b_{q}.", "image": "data/annot/nist/images/nist_p0421_16-4-2.png"}
+{"pair_id": "nist_p0425_16-8-3", "pdf_page": 425, "eqn_id": "16.8.3", "text": "16.8.3  (ϑ(ϑ + b_{1} −1) · · · (ϑ + b_{q} −1) −z(ϑ + a_{1}) · · · (ϑ + a_{p})) w = 0.", "image": "data/annot/nist/images/nist_p0425_16-8-3.png"}
+{"pair_id": "nist_p0427_16-11-1", "pdf_page": 427, "eqn_id": "16.11.1", "text": "16.11.1  E_{p,q}(z) = (2π) ^{(p−q)/2} κ^{−ν−( 1/2 )}e^{κz 1/κ}", "image": "data/annot/nist/images/nist_p0427_16-11-1.png"}
+{"pair_id": "nist_p0430_16-16-1", "pdf_page": 430, "eqn_id": "16.16.1", "text": "16.16.1  F_{1}(α; β, β'; β + β'; x, y) = (1 −y)^{−α}", "image": "data/annot/nist/images/nist_p0430_16-16-1.png"}
+{"pair_id": "nist_p0430_16-16-2", "pdf_page": 430, "eqn_id": "16.16.2", "text": "16.16.2  F_{2}(α; β, β'; γ, β'; x, y) = (1 −y)^{−α}", "image": "data/annot/nist/images/nist_p0430_16-16-2.png"}
+{"pair_id": "nist_p0430_16-16-3", "pdf_page": 430, "eqn_id": "16.16.3", "text": "16.16.3  F_{2}(α; β, β'; γ, α; x, y) = (1 −y)^{−β′} F_{1}", "image": "data/annot/nist/images/nist_p0430_16-16-3.png"}
+{"pair_id": "nist_p0430_16-16-4", "pdf_page": 430, "eqn_id": "16.16.4", "text": "16.16.4  F_{3}(α, γ −α; β, β'; γ; x, y) = (1 −y)^{−β′} F_{1}", "image": "data/annot/nist/images/nist_p0430_16-16-4.png"}
+{"pair_id": "nist_p0430_16-16-5", "pdf_page": 430, "eqn_id": "16.16.5", "text": "16.16.5  F_{3}(α, γ −α; β, γ −β; γ; x, y) = (1 −y)^{α+β−γ}", "image": "data/annot/nist/images/nist_p0430_16-16-5.png"}
+{"pair_id": "nist_p0430_16-16-6", "pdf_page": 430, "eqn_id": "16.16.6", "text": "16.16.6  F_{4}(α; β; γ, α + β −γ + 1; x(1 −y), y(1 −x)) = _{2}F_{1}", "image": "data/annot/nist/images/nist_p0430_16-16-6.png"}
+{"pair_id": "nist_p0431_16-16-9", "pdf_page": 431, "eqn_id": "16.16.9", "text": "16.16.9  F_{2}(α; β, β'; γ, γ'; x, y) = (1 −x)^{−α} F_{2}", "image": "data/annot/nist/images/nist_p0431_16-16-9.png"}
+{"pair_id": "nist_p0436_17-2-1", "pdf_page": 436, "eqn_id": "17.2.1", "text": "17.2.1  (a; q)_{n} = (1 −a)(1 −aq) · · · (1 −aq^{n−1}),", "image": "data/annot/nist/images/nist_p0436_17-2-1.png"}
+{"pair_id": "nist_p0439_17-4-9", "pdf_page": 439, "eqn_id": "17.4.9", "text": "17.4.9  qa_{0}a_{1} · · · a_{s} = b_{1}b_{2} · · · b_{s}.", "image": "data/annot/nist/images/nist_p0439_17-4-9.png"}
+{"pair_id": "nist_p0439_17-4-12", "pdf_page": 439, "eqn_id": "17.4.12", "text": "17.4.12  b_{1} = −b_{2} = √a_{0}.", "image": "data/annot/nist/images/nist_p0439_17-4-12.png"}
+{"pair_id": "nist_p0454_18-2-8", "pdf_page": 454, "eqn_id": "18.2.8", "text": "18.2.8  p_{n+1}(x) = (A_{n}x + B_{n})p_{n}(x) −C_{n}p_{n−1}(x), n ≥0.", "image": "data/annot/nist/images/nist_p0454_18-2-8.png"}
+{"pair_id": "nist_p0454_18-2-10", "pdf_page": 454, "eqn_id": "18.2.10", "text": "18.2.10  xp_{n}(x) = a_{n}p_{n+1}(x) + b_{n}p_{n}(x) + c_{n}p_{n−1}(x), n ≥0.", "image": "data/annot/nist/images/nist_p0454_18-2-10.png"}
+{"pair_id": "nist_p0458_18-5-1", "pdf_page": 458, "eqn_id": "18.5.1", "text": "18.5.1  T_{n}(x) = cos(nθ),", "image": "data/annot/nist/images/nist_p0458_18-5-1.png"}
+{"pair_id": "nist_p0462_18-9-11", "pdf_page": 462, "eqn_id": "18.9.11", "text": "18.9.11  W_{n}(x) + W_{n−1}(x) = 2 T_{n}(x),", "image": "data/annot/nist/images/nist_p0462_18-9-11.png"}
+{"pair_id": "nist_p0462_18-9-12", "pdf_page": 462, "eqn_id": "18.9.12", "text": "18.9.12  T_{n+1}(x) + T_{n}(x) = (1 + x) W_{n}(x).", "image": "data/annot/nist/images/nist_p0462_18-9-12.png"}
+{"pair_id": "nist_p0463_18-9-25", "pdf_page": 463, "eqn_id": "18.9.25", "text": "18.9.25  \\frac{d}{dx}H_{n}(x) = 2n H_{n−1}(x),", "image": "data/annot/nist/images/nist_p0463_18-9-25.png"}
+{"pair_id": "nist_p0463_18-9-27", "pdf_page": 463, "eqn_id": "18.9.27", "text": "18.9.27  \\frac{d}{dx}He_{n}(x) = n He_{n−1}(x),", "image": "data/annot/nist/images/nist_p0463_18-9-27.png"}
+{"pair_id": "nist_p0468_18-15-10", "pdf_page": 468, "eqn_id": "18.15.10", "text": "18.15.10  For ﬁxed λ ∈(0, 1) and ﬁxed M = 0, 1, 2, . . . ,", "image": "data/annot/nist/images/nist_p0468_18-15-10.png"}
+{"pair_id": "nist_p0470_18-16-9", "pdf_page": 470, "eqn_id": "18.16.9", "text": "18.16.9  0 < x_{n,1} < x_{n,2} < · · · < x_{n,n}.", "image": "data/annot/nist/images/nist_p0470_18-16-9.png"}
+{"pair_id": "nist_p0481_18-22-9", "pdf_page": 481, "eqn_id": "18.22.9", "text": "18.22.9  p_{n}(x) = Q_{n}(x; α, β, N),", "image": "data/annot/nist/images/nist_p0481_18-22-9.png"}
+{"pair_id": "nist_p0483_18-25-3", "pdf_page": 483, "eqn_id": "18.25.3", "text": "18.25.3  p_{n}(x) = W_{n}(x; a_{1}, a_{2}, a_{3}, a_{4}),", "image": "data/annot/nist/images/nist_p0483_18-25-3.png"}
+{"pair_id": "nist_p0484_18-25-6", "pdf_page": 484, "eqn_id": "18.25.6", "text": "18.25.6  p_{n}(x) = S_{n}(x; a_{1}, a_{2}, a_{3}),", "image": "data/annot/nist/images/nist_p0484_18-25-6.png"}
+{"pair_id": "nist_p0484_18-25-10", "pdf_page": 484, "eqn_id": "18.25.10", "text": "18.25.10  p_{n}(x) = R_{n}(x; α, β, γ, δ), α + 1 = −N,", "image": "data/annot/nist/images/nist_p0484_18-25-10.png"}
+{"pair_id": "nist_p0484_18-26-4", "pdf_page": 484, "eqn_id": "18.26.4", "text": "18.26.4  R_{n}(y(y + γ + δ + 1); γ, δ, N) = _{3}F_{2}", "image": "data/annot/nist/images/nist_p0484_18-26-4.png"}
+{"pair_id": "nist_p0485_18-26-12", "pdf_page": 485, "eqn_id": "18.26.12", "text": "18.26.12  r(x; β, c, N) = x(x + β + c^{−1}(1 −c)N),", "image": "data/annot/nist/images/nist_p0485_18-26-12.png"}
+{"pair_id": "nist_p0486_18-27-1", "pdf_page": 486, "eqn_id": "18.27.1", "text": "18.27.1  A(x)p_{n}(qx) + B(x)p_{n}(x) + C(x)p_{n}(q^{−1}x) = λ_{n}p_{n}(x),", "image": "data/annot/nist/images/nist_p0486_18-27-1.png"}
+{"pair_id": "nist_p0490_18-30-2", "pdf_page": 490, "eqn_id": "18.30.2", "text": "18.30.2  p_{−1}(x; c) = 0, p_{0}(x; c) = 1,", "image": "data/annot/nist/images/nist_p0490_18-30-2.png"}
+{"pair_id": "nist_p0491_18-32-1", "pdf_page": 491, "eqn_id": "18.32.1", "text": "18.32.1  −∞< x < ∞,", "image": "data/annot/nist/images/nist_p0491_18-32-1.png"}
+{"pair_id": "nist_p0506_19-5-5", "pdf_page": 506, "eqn_id": "19.5.5", "text": "19.5.5  q = exp(−π K'(k)/ K(k)) = r+8r^{2} +84r^{3} +992r^{4} +· · · ,", "image": "data/annot/nist/images/nist_p0506_19-5-5.png"}
+{"pair_id": "nist_p0506_19-5-6", "pdf_page": 506, "eqn_id": "19.5.6", "text": "19.5.6  q = λ+2λ^{5} +15λ^{9} +150λ^{13} +1707λ^{17} +· · · , 0 ≤k ≤1,", "image": "data/annot/nist/images/nist_p0506_19-5-6.png"}
+{"pair_id": "nist_p0508_19-7-5", "pdf_page": 508, "eqn_id": "19.7.5", "text": "19.7.5  F(φ, ik) = κ' F(θ, κ),", "image": "data/annot/nist/images/nist_p0508_19-7-5.png"}
+{"pair_id": "nist_p0510_19-9-9", "pdf_page": 510, "eqn_id": "19.9.9", "text": "19.9.9  L(a, b) = 4a E(k), k^{2} = 1 −(b^{2}/a^{2}), a > b.", "image": "data/annot/nist/images/nist_p0510_19-9-9.png"}
+{"pair_id": "nist_p0510_19-9-11", "pdf_page": 510, "eqn_id": "19.9.11", "text": "19.9.11  φ ≤F(φ, k) ≤min(φ/∆, gd^{−1}(φ)),", "image": "data/annot/nist/images/nist_p0510_19-9-11.png"}
+{"pair_id": "nist_p0510_19-9-12", "pdf_page": 510, "eqn_id": "19.9.12", "text": "19.9.12  max(sin φ, φ∆) ≤E(φ, k) ≤φ,", "image": "data/annot/nist/images/nist_p0510_19-9-12.png"}
+{"pair_id": "nist_p0511_19-11-1", "pdf_page": 511, "eqn_id": "19.11.1", "text": "19.11.1  F(θ, k) + F(φ, k) = F(ψ, k),", "image": "data/annot/nist/images/nist_p0511_19-11-1.png"}
+{"pair_id": "nist_p0511_19-11-7", "pdf_page": 511, "eqn_id": "19.11.7", "text": "19.11.7  F(φ, k) = K(k) −F(θ, k),", "image": "data/annot/nist/images/nist_p0511_19-11-7.png"}
+{"pair_id": "nist_p0511_19-11-12", "pdf_page": 511, "eqn_id": "19.11.12", "text": "19.11.12  F(ψ, k) = 2F(θ, k),", "image": "data/annot/nist/images/nist_p0511_19-11-12.png"}
+{"pair_id": "nist_p0511_19-11-13", "pdf_page": 511, "eqn_id": "19.11.13", "text": "19.11.13  E(ψ, k) = 2E(θ, k) −k^{2} sin^{2} θ sin ψ,", "image": "data/annot/nist/images/nist_p0511_19-11-13.png"}
+{"pair_id": "nist_p0511_19-11-14", "pdf_page": 511, "eqn_id": "19.11.14", "text": "19.11.14  sin ψ = (sin 2θ)∆(θ)/(1 −k^{2} sin^{4} θ),", "image": "data/annot/nist/images/nist_p0511_19-11-14.png"}
+{"pair_id": "nist_p0514_19-16-6", "pdf_page": 514, "eqn_id": "19.16.6", "text": "19.16.6  R_{C}(x, y) = R_{F} (x, y, y),", "image": "data/annot/nist/images/nist_p0514_19-16-6.png"}
+{"pair_id": "nist_p0514_19-16-13", "pdf_page": 514, "eqn_id": "19.16.13", "text": "19.16.13  b_{3} = a + a' −b_{1} −b_{2} −b_{4}.", "image": "data/annot/nist/images/nist_p0514_19-16-13.png"}
+{"pair_id": "nist_p0516_19-18-4", "pdf_page": 516, "eqn_id": "19.18.4", "text": "19.18.4  ∂_{j} R_{−a}(b; z) = −aw_{j} R_{−a−1}(b + e_{j}; z),", "image": "data/annot/nist/images/nist_p0516_19-18-4.png"}
+{"pair_id": "nist_p0517_19-18-12", "pdf_page": 517, "eqn_id": "19.18.12", "text": "19.18.12  (z_{j}∂_{j} + b_{j})∂_{l}v = (z_{l}∂_{l} + b_{l})∂_{j}v,", "image": "data/annot/nist/images/nist_p0517_19-18-12.png"}
+{"pair_id": "nist_p0518_19-20-5", "pdf_page": 518, "eqn_id": "19.20.5", "text": "19.20.5  2R_{G}(x, y, y) = y R_{C}(x, y) + √x.", "image": "data/annot/nist/images/nist_p0518_19-20-5.png"}
+{"pair_id": "nist_p0518_19-20-7", "pdf_page": 518, "eqn_id": "19.20.7", "text": "19.20.7  R_{J}(x, y, z, p) →+∞, p →0+ or 0−; x, y, z > 0.", "image": "data/annot/nist/images/nist_p0518_19-20-7.png"}
+{"pair_id": "nist_p0520_19-21-15", "pdf_page": 520, "eqn_id": "19.21.15", "text": "19.21.15  p R_{J}(0, y, z, p)+q R_{J}(0, y, z, q) = 3R_{F} (0, y, z), pq = yz.", "image": "data/annot/nist/images/nist_p0520_19-21-15.png"}
+{"pair_id": "nist_p0523_19-24-13", "pdf_page": 523, "eqn_id": "19.24.13", "text": "19.24.13  R_{a}(b; z) R_{−a}(b; z) > 1, R_{a}(b; z) + R_{−a}(b; z) > 2;", "image": "data/annot/nist/images/nist_p0523_19-24-13.png"}
+{"pair_id": "nist_p0524_19-25-18", "pdf_page": 524, "eqn_id": "19.25.18", "text": "19.25.18  (x, y, z) = (c −1, c −k^{2}, c),", "image": "data/annot/nist/images/nist_p0524_19-25-18.png"}
+{"pair_id": "nist_p0524_19-25-24", "pdf_page": 524, "eqn_id": "19.25.24", "text": "19.25.24  (z −x)^{1/2} R_{F} (x, y, z) = F(φ, k),", "image": "data/annot/nist/images/nist_p0524_19-25-24.png"}
+{"pair_id": "nist_p0524_19-25-25", "pdf_page": 524, "eqn_id": "19.25.25", "text": "19.25.25  (z −x)^{3/2} R_{D}(x, y, z) = (3/k^{2})(F(φ, k) −E(φ, k)),", "image": "data/annot/nist/images/nist_p0524_19-25-25.png"}
+{"pair_id": "nist_p0524_19-25-27", "pdf_page": 524, "eqn_id": "19.25.27", "text": "19.25.27  2(z −x)^{−1/2} R_{G}(x, y, z) = E(φ, k) + (cot φ)^{2} F(φ, k)", "image": "data/annot/nist/images/nist_p0524_19-25-27.png"}
+{"pair_id": "nist_p0525_19-25-37", "pdf_page": 525, "eqn_id": "19.25.37", "text": "19.25.37  ζ(z) + z ℘(z) = 2R_{G}(℘(z) −e_{1}, ℘(z) −e_{2}, ℘(z) −e_{3}).", "image": "data/annot/nist/images/nist_p0525_19-25-37.png"}
+{"pair_id": "nist_p0525_19-25-38", "pdf_page": 525, "eqn_id": "19.25.38", "text": "19.25.38  ω_{j} = R_{F} (0, e_{j} −e_{k}, e_{j} −e_{ℓ}),", "image": "data/annot/nist/images/nist_p0525_19-25-38.png"}
+{"pair_id": "nist_p0525_19-25-41", "pdf_page": 525, "eqn_id": "19.25.41", "text": "19.25.41  σ_{j}(z) = exp(−η_{j}z) σ(z + ω_{j})/ σ(ω_{j}), j = 1, 2, 3.", "image": "data/annot/nist/images/nist_p0525_19-25-41.png"}
+{"pair_id": "nist_p0529_19-29-15", "pdf_page": 529, "eqn_id": "19.29.15", "text": "19.29.15  b_{j}I(e_{l} −e_{j}) = d_{lj}I(−e_{j}) + b_{l}I(0), j, l = 1, 2, . . . , n,", "image": "data/annot/nist/images/nist_p0529_19-29-15.png"}
+{"pair_id": "nist_p0530_19-30-1", "pdf_page": 530, "eqn_id": "19.30.1", "text": "19.30.1  x = a sin φ, y = b cos φ, 0 ≤φ ≤2π,", "image": "data/annot/nist/images/nist_p0530_19-30-1.png"}
+{"pair_id": "nist_p0530_19-30-4", "pdf_page": 530, "eqn_id": "19.30.4", "text": "19.30.4  k^{2} = 1 −(b^{2}/a^{2}), c = csc^{2} φ.", "image": "data/annot/nist/images/nist_p0530_19-30-4.png"}
+{"pair_id": "nist_p0531_19-30-10", "pdf_page": 531, "eqn_id": "19.30.10", "text": "19.30.10  0 ≤θ ≤2π,", "image": "data/annot/nist/images/nist_p0531_19-30-10.png"}
+{"pair_id": "nist_p0531_19-32-1", "pdf_page": 531, "eqn_id": "19.32.1", "text": "19.32.1  z(p) = R_{F} (p −x_{1}, p −x_{2}, p −x_{3}),", "image": "data/annot/nist/images/nist_p0531_19-32-1.png"}
+{"pair_id": "nist_p0531_19-32-3", "pdf_page": 531, "eqn_id": "19.32.3", "text": "19.32.3  x_{1} > x_{2} > x_{3},", "image": "data/annot/nist/images/nist_p0531_19-32-3.png"}
+{"pair_id": "nist_p0532_19-33-8", "pdf_page": 532, "eqn_id": "19.33.8", "text": "19.33.8  L_{a} + L_{b} + L_{c} = 4π,", "image": "data/annot/nist/images/nist_p0532_19-33-8.png"}
+{"pair_id": "nist_p0533_19-36-3", "pdf_page": 533, "eqn_id": "19.36.3", "text": "19.36.3  R_{F} (1, 2, 4) = R_{F} (z_{1}, z_{2}, z_{3}),", "image": "data/annot/nist/images/nist_p0533_19-36-3.png"}
+{"pair_id": "nist_p0533_19-36-5", "pdf_page": 533, "eqn_id": "19.36.5", "text": "19.36.5  R_{F} (1, 2, 4) = 0.68508 58166 . . . .", "image": "data/annot/nist/images/nist_p0533_19-36-5.png"}
+{"pair_id": "nist_p0540_20-2-6", "pdf_page": 540, "eqn_id": "20.2.6", "text": "20.2.6  θ_{1}(z + (m + nτ)π|τ) = (−1)^{m+n}q^{−n2}e^{−2inz} θ_{1}(z|τ),", "image": "data/annot/nist/images/nist_p0540_20-2-6.png"}
+{"pair_id": "nist_p0540_20-2-7", "pdf_page": 540, "eqn_id": "20.2.7", "text": "20.2.7  θ_{2}(z + (m + nτ)π|τ) = (−1)^{m}q^{−n2}e^{−2inz} θ_{2}(z|τ),", "image": "data/annot/nist/images/nist_p0540_20-2-7.png"}
+{"pair_id": "nist_p0540_20-2-8", "pdf_page": 540, "eqn_id": "20.2.8", "text": "20.2.8  θ_{3}(z + (m + nτ)π|τ) = q^{−n2}e^{−2inz} θ_{3}(z|τ),", "image": "data/annot/nist/images/nist_p0540_20-2-8.png"}
+{"pair_id": "nist_p0540_20-2-9", "pdf_page": 540, "eqn_id": "20.2.9", "text": "20.2.9  θ_{4}(z + (m + nτ)π|τ) = (−1)^{n}q^{−n2}e^{−2inz} θ_{4}(z|τ).", "image": "data/annot/nist/images/nist_p0540_20-2-9.png"}
+{"pair_id": "nist_p0547_20-7-26", "pdf_page": 547, "eqn_id": "20.7.26", "text": "20.7.26  θ_{1}(z|τ + 1) = e^{iπ/4} θ_{1}(z|τ),", "image": "data/annot/nist/images/nist_p0547_20-7-26.png"}
+{"pair_id": "nist_p0547_20-7-27", "pdf_page": 547, "eqn_id": "20.7.27", "text": "20.7.27  θ_{2}(z|τ + 1) = e^{iπ/4} θ_{2}(z|τ),", "image": "data/annot/nist/images/nist_p0547_20-7-27.png"}
+{"pair_id": "nist_p0547_20-7-28", "pdf_page": 547, "eqn_id": "20.7.28", "text": "20.7.28  θ_{3}(z|τ + 1) = θ_{4}(z|τ),", "image": "data/annot/nist/images/nist_p0547_20-7-28.png"}
+{"pair_id": "nist_p0547_20-7-29", "pdf_page": 547, "eqn_id": "20.7.29", "text": "20.7.29  θ_{4}(z|τ + 1) = θ_{3}(z|τ).", "image": "data/annot/nist/images/nist_p0547_20-7-29.png"}
+{"pair_id": "nist_p0547_20-7-15", "pdf_page": 547, "eqn_id": "20.7.15", "text": "20.7.15  A ≡A(τ) = 1/θ_{4}(0|2τ) ,", "image": "data/annot/nist/images/nist_p0547_20-7-15.png"}
+{"pair_id": "nist_p0549_20-11-4", "pdf_page": 549, "eqn_id": "20.11.4", "text": "20.11.4  f(a, b) = θ_{3}(z|τ).", "image": "data/annot/nist/images/nist_p0549_20-11-4.png"}
+{"pair_id": "nist_p0555_21-4-1", "pdf_page": 555, "eqn_id": "21.4.1", "text": "21.4.1  Ω=", "image": "data/annot/nist/images/nist_p0555_21-4-1.png"}
+{"pair_id": "nist_p0555_21-3-1", "pdf_page": 555, "eqn_id": "21.3.1", "text": "21.3.1  θ(−z|Ω) = θ(z|Ω),", "image": "data/annot/nist/images/nist_p0555_21-3-1.png"}
+{"pair_id": "nist_p0558_21-6-1", "pdf_page": 558, "eqn_id": "21.6.1", "text": "21.6.1  K = Z^{g×h}T/(Z^{g×h}T ∩Z^{g×h}),", "image": "data/annot/nist/images/nist_p0558_21-6-1.png"}
+{"pair_id": "nist_p0558_21-6-2", "pdf_page": 558, "eqn_id": "21.6.2", "text": "21.6.2  D = |T^{T}Z^{h}/(T^{T}Z^{h} ∩Z^{h})|,", "image": "data/annot/nist/images/nist_p0558_21-6-2.png"}
+{"pair_id": "nist_p0559_21-7-1", "pdf_page": 559, "eqn_id": "21.7.1", "text": "21.7.1  P(λ, µ) = 0,", "image": "data/annot/nist/images/nist_p0559_21-7-1.png"}
+{"pair_id": "nist_p0559_21-7-2", "pdf_page": 559, "eqn_id": "21.7.2", "text": "21.7.2  ˜P(˜λ, ˜µ, ˜η) = 0,", "image": "data/annot/nist/images/nist_p0559_21-7-2.png"}
+{"pair_id": "nist_p0560_21-7-11", "pdf_page": 560, "eqn_id": "21.7.11", "text": "21.7.11  µ^{2} = Q(λ),", "image": "data/annot/nist/images/nist_p0560_21-7-11.png"}
+{"pair_id": "nist_p0560_21-7-12", "pdf_page": 560, "eqn_id": "21.7.12", "text": "21.7.12  T_{1} ⊖T_{2} = (T_{1} ∪T_{2})\\(T_{1} ∩T_{2}).", "image": "data/annot/nist/images/nist_p0560_21-7-12.png"}
+{"pair_id": "nist_p0561_21-7-13", "pdf_page": 561, "eqn_id": "21.7.13", "text": "21.7.13  η(T) = η(T ^{c}),", "image": "data/annot/nist/images/nist_p0561_21-7-13.png"}
+{"pair_id": "nist_p0561_21-7-14", "pdf_page": 561, "eqn_id": "21.7.14", "text": "21.7.14  η(T_{1} ⊖T_{2}) = η(T_{1}) + η(T_{2}),", "image": "data/annot/nist/images/nist_p0561_21-7-14.png"}
+{"pair_id": "nist_p0561_21-7-16", "pdf_page": 561, "eqn_id": "21.7.16", "text": "21.7.16  4(η^{1}(T_{1})·η^{2}(T_{2})−η^{2}(T_{1})·η^{1}(T_{2})) = |T_{1}∩T_{2}| (mod 2).", "image": "data/annot/nist/images/nist_p0561_21-7-16.png"}
+{"pair_id": "nist_p0561_21-9-1", "pdf_page": 561, "eqn_id": "21.9.1", "text": "21.9.1  4u_{t} = 6uu_{x} + u_{xxx},", "image": "data/annot/nist/images/nist_p0561_21-9-1.png"}
+{"pair_id": "nist_p0561_21-9-3", "pdf_page": 561, "eqn_id": "21.9.3", "text": "21.9.3  (−4u_{t} + 6uu_{x} + u_{xxx})_{x} + 3u_{yy} = 0.", "image": "data/annot/nist/images/nist_p0561_21-9-3.png"}
+{"pair_id": "nist_p0566_22-2-1", "pdf_page": 566, "eqn_id": "22.2.1", "text": "22.2.1  q = exp(−π K'(k)/ K(k)),", "image": "data/annot/nist/images/nist_p0566_22-2-1.png"}
+{"pair_id": "nist_p0572_22-6-1", "pdf_page": 572, "eqn_id": "22.6.1", "text": "22.6.1  sn^{2} (z, k) + cn^{2} (z, k) = k^{2} sn^{2} (z, k) + dn^{2} (z, k) = 1,", "image": "data/annot/nist/images/nist_p0572_22-6-1.png"}
+{"pair_id": "nist_p0572_22-6-4", "pdf_page": 572, "eqn_id": "22.6.4", "text": "22.6.4  −k^{2}k^{′2} sd^{2} (z, k) = k^{2}(cd^{2} (z, k)−1) = k^{′2}(1−nd^{2} (z, k)).", "image": "data/annot/nist/images/nist_p0572_22-6-4.png"}
+{"pair_id": "nist_p0573_22-8-19", "pdf_page": 573, "eqn_id": "22.8.19", "text": "22.8.19  z_{1} + z_{2} + z_{3} + z_{4} = 0.", "image": "data/annot/nist/images/nist_p0573_22-8-19.png"}
+{"pair_id": "nist_p0573_22-8-22", "pdf_page": 573, "eqn_id": "22.8.22", "text": "22.8.22  z_{1} + z_{2} + z_{3} + z_{4} = 2K(k).", "image": "data/annot/nist/images/nist_p0573_22-8-22.png"}
+{"pair_id": "nist_p0573_22-8-27", "pdf_page": 573, "eqn_id": "22.8.27", "text": "22.8.27  dn z_{1} dn z_{3} = dn z_{2} dn z_{4} = k'.", "image": "data/annot/nist/images/nist_p0573_22-8-27.png"}
+{"pair_id": "nist_p0575_22-10-9", "pdf_page": 575, "eqn_id": "22.10.9", "text": "22.10.9  dn (z, k) = sech z + k^{′2}", "image": "data/annot/nist/images/nist_p0575_22-10-9.png"}
+{"pair_id": "nist_p0575_22-12-1", "pdf_page": 575, "eqn_id": "22.12.1", "text": "22.12.1  τ = i K'(k)/ K(k),", "image": "data/annot/nist/images/nist_p0575_22-12-1.png"}
+{"pair_id": "nist_p0576_22-13-13", "pdf_page": 576, "eqn_id": "22.13.13", "text": "22.13.13  \\frac{d^{2}}{dz^{2}}sn (z, k) = −(1 + k^{2}) sn (z, k) + 2k^{2} sn^{3} (z, k),", "image": "data/annot/nist/images/nist_p0576_22-13-13.png"}
+{"pair_id": "nist_p0576_22-13-14", "pdf_page": 576, "eqn_id": "22.13.14", "text": "22.13.14  \\frac{d^{2}}{dz^{2}}cn (z, k) = −(k^{′2} −k^{2}) cn (z, k) −2k^{2} cn^{3} (z, k),", "image": "data/annot/nist/images/nist_p0576_22-13-14.png"}
+{"pair_id": "nist_p0576_22-13-15", "pdf_page": 576, "eqn_id": "22.13.15", "text": "22.13.15  \\frac{d^{2}}{dz^{2}}dn (z, k) = (1 + k^{′2}) dn (z, k) −2 dn^{3} (z, k).", "image": "data/annot/nist/images/nist_p0576_22-13-15.png"}
+{"pair_id": "nist_p0577_22-15-4", "pdf_page": 577, "eqn_id": "22.15.4", "text": "22.15.4  ξ = arcsn(x, k), η = arccn(x, k), ζ = arcdn(x, k).", "image": "data/annot/nist/images/nist_p0577_22-15-4.png"}
+{"pair_id": "nist_p0577_22-15-7", "pdf_page": 577, "eqn_id": "22.15.7", "text": "22.15.7  0 ≤arcdn(x, k) ≤K,", "image": "data/annot/nist/images/nist_p0577_22-15-7.png"}
+{"pair_id": "nist_p0577_22-16-2", "pdf_page": 577, "eqn_id": "22.16.2", "text": "22.16.2  am (x + 2K, k) = am (x, k) + π.", "image": "data/annot/nist/images/nist_p0577_22-16-2.png"}
+{"pair_id": "nist_p0577_22-16-4", "pdf_page": 577, "eqn_id": "22.16.4", "text": "22.16.4  am (x, 0) = x,", "image": "data/annot/nist/images/nist_p0577_22-16-4.png"}
+{"pair_id": "nist_p0578_22-16-10", "pdf_page": 578, "eqn_id": "22.16.10", "text": "22.16.10  x = F(φ, k),", "image": "data/annot/nist/images/nist_p0578_22-16-10.png"}
+{"pair_id": "nist_p0578_22-16-11", "pdf_page": 578, "eqn_id": "22.16.11", "text": "22.16.11  am (x, k) = φ,", "image": "data/annot/nist/images/nist_p0578_22-16-11.png"}
+{"pair_id": "nist_p0578_22-16-12", "pdf_page": 578, "eqn_id": "22.16.12", "text": "22.16.12  sn (x, k) = sin φ = sin(am (x, k)),", "image": "data/annot/nist/images/nist_p0578_22-16-12.png"}
+{"pair_id": "nist_p0578_22-16-28", "pdf_page": 578, "eqn_id": "22.16.28", "text": "22.16.28  E(x + K, k) = E(x, k) + E(k) −k^{2} sn (x, k) cd (x, k),", "image": "data/annot/nist/images/nist_p0578_22-16-28.png"}
+{"pair_id": "nist_p0578_22-16-29", "pdf_page": 578, "eqn_id": "22.16.29", "text": "22.16.29  E(x + 2K, k) = E(x, k) + 2E(k).", "image": "data/annot/nist/images/nist_p0578_22-16-29.png"}
+{"pair_id": "nist_p0578_22-16-31", "pdf_page": 578, "eqn_id": "22.16.31", "text": "22.16.31  E(am (x, k), k) = E(x, k), −K ≤x ≤K.", "image": "data/annot/nist/images/nist_p0578_22-16-31.png"}
+{"pair_id": "nist_p0578_22-16-32", "pdf_page": 578, "eqn_id": "22.16.32", "text": "22.16.32  Z(x|k) = E(x, k) −(E(k)/ K(k))x.", "image": "data/annot/nist/images/nist_p0578_22-16-32.png"}
+{"pair_id": "nist_p0578_22-16-34", "pdf_page": 578, "eqn_id": "22.16.34", "text": "22.16.34  Z(x + 2K|k) = Z(x|k).", "image": "data/annot/nist/images/nist_p0578_22-16-34.png"}
+{"pair_id": "nist_p0579_22-17-1", "pdf_page": 579, "eqn_id": "22.17.1", "text": "22.17.1  pq (z, k) = pq (z, −k),", "image": "data/annot/nist/images/nist_p0579_22-17-1.png"}
+{"pair_id": "nist_p0579_22-17-2", "pdf_page": 579, "eqn_id": "22.17.2", "text": "22.17.2  sn (z, 1/k) = k sn (z/k, k),", "image": "data/annot/nist/images/nist_p0579_22-17-2.png"}
+{"pair_id": "nist_p0579_22-17-3", "pdf_page": 579, "eqn_id": "22.17.3", "text": "22.17.3  cn (z, 1/k) = dn (z/k, k),", "image": "data/annot/nist/images/nist_p0579_22-17-3.png"}
+{"pair_id": "nist_p0579_22-17-4", "pdf_page": 579, "eqn_id": "22.17.4", "text": "22.17.4  dn (z, 1/k) = cn (z/k, k).", "image": "data/annot/nist/images/nist_p0579_22-17-4.png"}
+{"pair_id": "nist_p0579_22-18-3", "pdf_page": 579, "eqn_id": "22.18.3", "text": "22.18.3  l(u) = a E(u, k),", "image": "data/annot/nist/images/nist_p0579_22-18-3.png"}
+{"pair_id": "nist_p0586_23-2-1", "pdf_page": 586, "eqn_id": "23.2.1", "text": "23.2.1  ω_{1} + ω_{2} + ω_{3} = 0,", "image": "data/annot/nist/images/nist_p0586_23-2-1.png"}
+{"pair_id": "nist_p0586_23-2-2", "pdf_page": 586, "eqn_id": "23.2.2", "text": "23.2.2  χ_{1} = aω_{1} + bω_{3}, χ_{3} = cω_{1} + dω_{3},", "image": "data/annot/nist/images/nist_p0586_23-2-2.png"}
+{"pair_id": "nist_p0586_23-2-3", "pdf_page": 586, "eqn_id": "23.2.3", "text": "23.2.3  ad −bc = 1.", "image": "data/annot/nist/images/nist_p0586_23-2-3.png"}
+{"pair_id": "nist_p0586_23-2-7", "pdf_page": 586, "eqn_id": "23.2.7", "text": "23.2.7  ℘(z) = −ζ'(z),", "image": "data/annot/nist/images/nist_p0586_23-2-7.png"}
+{"pair_id": "nist_p0586_23-2-8", "pdf_page": 586, "eqn_id": "23.2.8", "text": "23.2.8  ζ(z) = σ'(z)/σ(z) .", "image": "data/annot/nist/images/nist_p0586_23-2-8.png"}
+{"pair_id": "nist_p0587_23-2-15", "pdf_page": 587, "eqn_id": "23.2.15", "text": "23.2.15  σ(z + 2ω_{j}) = −e^{2ηj(z+ωj)} σ(z),", "image": "data/annot/nist/images/nist_p0587_23-2-15.png"}
+{"pair_id": "nist_p0587_23-2-16", "pdf_page": 587, "eqn_id": "23.2.16", "text": "23.2.16  σ'(2ω_{j}) = −e^{2ηjωj}.", "image": "data/annot/nist/images/nist_p0587_23-2-16.png"}
+{"pair_id": "nist_p0587_23-3-3", "pdf_page": 587, "eqn_id": "23.3.3", "text": "23.3.3  4z^{3} −g_{2}z −g_{3} = 0,", "image": "data/annot/nist/images/nist_p0587_23-3-3.png"}
+{"pair_id": "nist_p0587_23-3-5", "pdf_page": 587, "eqn_id": "23.3.5", "text": "23.3.5  e_{1} + e_{2} + e_{3} = 0,", "image": "data/annot/nist/images/nist_p0587_23-3-5.png"}
+{"pair_id": "nist_p0587_23-3-8", "pdf_page": 587, "eqn_id": "23.3.8", "text": "23.3.8  ℘(z; g_{2}, g_{3}) = ℘(z|L).", "image": "data/annot/nist/images/nist_p0587_23-3-8.png"}
+{"pair_id": "nist_p0587_23-3-10", "pdf_page": 587, "eqn_id": "23.3.10", "text": "23.3.10  ℘^{′2}(z) = 4℘^{3}(z) −g_{2} ℘(z) −g_{3},", "image": "data/annot/nist/images/nist_p0587_23-3-10.png"}
+{"pair_id": "nist_p0587_23-3-13", "pdf_page": 587, "eqn_id": "23.3.13", "text": "23.3.13  ℘'''(z) = 12 ℘(z) ℘'(z).", "image": "data/annot/nist/images/nist_p0587_23-3-13.png"}
+{"pair_id": "nist_p0590_23-5-1", "pdf_page": 590, "eqn_id": "23.5.1", "text": "23.5.1  e_{1} > e_{2} > e_{3}, e_{1} > 0 > e_{3}.", "image": "data/annot/nist/images/nist_p0590_23-5-1.png"}
+{"pair_id": "nist_p0592_23-6-29", "pdf_page": 592, "eqn_id": "23.6.29", "text": "23.6.29  ζ(z|L_{3}) −ζ(z + 2iK' |L_{3}) −ζ(2iK' |L_{3}) = cs (z, k).", "image": "data/annot/nist/images/nist_p0592_23-6-29.png"}
+{"pair_id": "nist_p0594_23-10-19", "pdf_page": 594, "eqn_id": "23.10.19", "text": "23.10.19  σ(cz|cL) = c σ(z|L).", "image": "data/annot/nist/images/nist_p0594_23-10-19.png"}
+{"pair_id": "nist_p0595_23-15-4", "pdf_page": 595, "eqn_id": "23.15.4", "text": "23.15.4  ad −bc = 1.", "image": "data/annot/nist/images/nist_p0595_23-15-4.png"}
+{"pair_id": "nist_p0596_23-18-3", "pdf_page": 596, "eqn_id": "23.18.3", "text": "23.18.3  λ(Aτ) = λ(τ),", "image": "data/annot/nist/images/nist_p0596_23-18-3.png"}
+{"pair_id": "nist_p0596_23-18-4", "pdf_page": 596, "eqn_id": "23.18.4", "text": "23.18.4  J(Aτ) = J(τ).", "image": "data/annot/nist/images/nist_p0596_23-18-4.png"}
+{"pair_id": "nist_p0597_23-18-5", "pdf_page": 597, "eqn_id": "23.18.5", "text": "23.18.5  η(Aτ) = ε(A) (−i(cτ + d))^{1/2} η(τ),", "image": "data/annot/nist/images/nist_p0597_23-18-5.png"}
+{"pair_id": "nist_p0597_23-20-1", "pdf_page": 597, "eqn_id": "23.20.1", "text": "23.20.1  C : y^{2} = x^{3} + ax + b,", "image": "data/annot/nist/images/nist_p0597_23-20-1.png"}
+{"pair_id": "nist_p0597_23-20-2", "pdf_page": 597, "eqn_id": "23.20.2", "text": "23.20.2  C : y^{2}z = x^{3} + axz^{2} + bz^{3},", "image": "data/annot/nist/images/nist_p0597_23-20-2.png"}
+{"pair_id": "nist_p0598_23-20-5", "pdf_page": 598, "eqn_id": "23.20.5", "text": "23.20.5  p = 2,", "image": "data/annot/nist/images/nist_p0598_23-20-5.png"}
+{"pair_id": "nist_p0598_23-20-7", "pdf_page": 598, "eqn_id": "23.20.7", "text": "23.20.7  u^{6} −v^{6} + 5u^{2}v^{2}(u^{2} −v^{2}) + 4uv(1 −u^{4}v^{4}) = 0, p = 5,", "image": "data/annot/nist/images/nist_p0598_23-20-7.png"}
+{"pair_id": "nist_p0605_24-4-2", "pdf_page": 605, "eqn_id": "24.4.2", "text": "24.4.2  E_{n}(x + 1) + E_{n}(x) = 2x^{n}.", "image": "data/annot/nist/images/nist_p0605_24-4-2.png"}
+{"pair_id": "nist_p0605_24-4-5", "pdf_page": 605, "eqn_id": "24.4.5", "text": "24.4.5  (−1)^{n} B_{n}(−x) = B_{n}(x) + nx^{n−1},", "image": "data/annot/nist/images/nist_p0605_24-4-5.png"}
+{"pair_id": "nist_p0605_24-4-6", "pdf_page": 605, "eqn_id": "24.4.6", "text": "24.4.6  (−1)^{n+1} E_{n}(−x) = E_{n}(x) −2x^{n}.", "image": "data/annot/nist/images/nist_p0605_24-4-6.png"}
+{"pair_id": "nist_p0606_24-4-39", "pdf_page": 606, "eqn_id": "24.4.39", "text": "24.4.39  E_{n}(x + h) = (E(x) + h)^{n}.", "image": "data/annot/nist/images/nist_p0606_24-4-39.png"}
+{"pair_id": "nist_p0609_24-10-2", "pdf_page": 609, "eqn_id": "24.10.2", "text": "24.10.2  p B_{2n} ≡p −1 (mod p^{ℓ+1}),", "image": "data/annot/nist/images/nist_p0609_24-10-2.png"}
+{"pair_id": "nist_p0609_24-10-5", "pdf_page": 609, "eqn_id": "24.10.5", "text": "24.10.5  E_{n} ≡E_{n+p−1} (mod p),", "image": "data/annot/nist/images/nist_p0609_24-10-5.png"}
+{"pair_id": "nist_p0609_24-10-6", "pdf_page": 609, "eqn_id": "24.10.6", "text": "24.10.6  E_{2n} ≡E_{2n+w} (mod 2^{ℓ}),", "image": "data/annot/nist/images/nist_p0609_24-10-6.png"}
+{"pair_id": "nist_p0609_24-10-8", "pdf_page": 609, "eqn_id": "24.10.8", "text": "24.10.8  N_{2n} ≡0 (mod p^{ℓ}),", "image": "data/annot/nist/images/nist_p0609_24-10-8.png"}
+{"pair_id": "nist_p0619_25-4-3", "pdf_page": 619, "eqn_id": "25.4.3", "text": "25.4.3  ξ(s) = ξ(1 −s),", "image": "data/annot/nist/images/nist_p0619_25-4-3.png"}
+{"pair_id": "nist_p0621_25-6-4", "pdf_page": 621, "eqn_id": "25.6.4", "text": "25.6.4  n = 1, 2, 3, . . . .", "image": "data/annot/nist/images/nist_p0621_25-6-4.png"}
+{"pair_id": "nist_p0623_25-11-2", "pdf_page": 623, "eqn_id": "25.11.2", "text": "25.11.2  ζ(s, 1) = ζ(s).", "image": "data/annot/nist/images/nist_p0623_25-11-2.png"}
+{"pair_id": "nist_p0623_25-11-3", "pdf_page": 623, "eqn_id": "25.11.3", "text": "25.11.3  ζ(s, a) = ζ(s, a + 1) + a^{−s},", "image": "data/annot/nist/images/nist_p0623_25-11-3.png"}
+{"pair_id": "nist_p0624_25-11-17", "pdf_page": 624, "eqn_id": "25.11.17", "text": "25.11.17  \\frac{∂}{∂a}ζ(s, a) = −s ζ(s + 1, a), s̸ = 0, 1; ℜa > 0.", "image": "data/annot/nist/images/nist_p0624_25-11-17.png"}
+{"pair_id": "nist_p0628_25-14-2", "pdf_page": 628, "eqn_id": "25.14.2", "text": "25.14.2  ζ(s, a) = Φ(1, s, a), ℜs > 1, a̸ = 0, −1, −2, . . . ,", "image": "data/annot/nist/images/nist_p0628_25-14-2.png"}
+{"pair_id": "nist_p0628_25-14-3", "pdf_page": 628, "eqn_id": "25.14.3", "text": "25.14.3  Li_{s}(z) = z Φ(z, s, 1), ℜs > 1, |z| ≤1.", "image": "data/annot/nist/images/nist_p0628_25-14-3.png"}
+{"pair_id": "nist_p0629_25-15-7", "pdf_page": 629, "eqn_id": "25.15.7", "text": "25.15.7  L(−2n, χ) = 0 if χ(−1) = 1, n = 0, 1, 2, . . . ,", "image": "data/annot/nist/images/nist_p0629_25-15-7.png"}
+{"pair_id": "nist_p0629_25-15-8", "pdf_page": 629, "eqn_id": "25.15.8", "text": "25.15.8  L(−2n −1, χ) = 0 if χ(−1) = −1, n = 0, 1, 2, . . . .", "image": "data/annot/nist/images/nist_p0629_25-15-8.png"}
+{"pair_id": "nist_p0629_25-15-9", "pdf_page": 629, "eqn_id": "25.15.9", "text": "25.15.9  L(1, χ)̸ = 0 if χ̸ = χ_{1},", "image": "data/annot/nist/images/nist_p0629_25-15-9.png"}
+{"pair_id": "nist_p0636_26-4-3", "pdf_page": 636, "eqn_id": "26.4.3", "text": "26.4.3  n = a_{1} + 2a_{2} + · · · + na_{n},", "image": "data/annot/nist/images/nist_p0636_26-4-3.png"}
+{"pair_id": "nist_p0636_26-4-4", "pdf_page": 636, "eqn_id": "26.4.4", "text": "26.4.4  m = a_{1} + a_{2} + · · · + a_{n}.", "image": "data/annot/nist/images/nist_p0636_26-4-4.png"}
+{"pair_id": "nist_p0636_26-4-5", "pdf_page": 636, "eqn_id": "26.4.5", "text": "26.4.5  λ = 1^{a1}, 2^{a2}, . . . , n^{an}.", "image": "data/annot/nist/images/nist_p0636_26-4-5.png"}
+{"pair_id": "nist_p0637_26-5-3", "pdf_page": 637, "eqn_id": "26.5.3", "text": "26.5.3  k=0", "image": "data/annot/nist/images/nist_p0637_26-5-3.png"}
+{"pair_id": "nist_p0638_26-6-4", "pdf_page": 638, "eqn_id": "26.6.4", "text": "26.6.4  r(n) = D(n, n) −D(n + 1, n −1),", "image": "data/annot/nist/images/nist_p0638_26-6-4.png"}
+{"pair_id": "nist_p0639_26-7-8", "pdf_page": 639, "eqn_id": "26.7.8", "text": "26.7.8  N ln N = n,", "image": "data/annot/nist/images/nist_p0639_26-7-8.png"}
+{"pair_id": "nist_p0640_26-8-2", "pdf_page": 640, "eqn_id": "26.8.2", "text": "26.8.2  s(1, k) = δ_{1,k},", "image": "data/annot/nist/images/nist_p0640_26-8-2.png"}
+{"pair_id": "nist_p0641_26-8-32", "pdf_page": 641, "eqn_id": "26.8.32", "text": "26.8.32  ∆f(x) = f(x + 1) −f(x);", "image": "data/annot/nist/images/nist_p0641_26-8-32.png"}
+{"pair_id": "nist_p0641_26-8-38", "pdf_page": 641, "eqn_id": "26.8.38", "text": "26.8.38  A^{−1} = B.", "image": "data/annot/nist/images/nist_p0641_26-8-38.png"}
+{"pair_id": "nist_p0643_26-9-8", "pdf_page": 643, "eqn_id": "26.9.8", "text": "26.9.8  p_{k}(n) = p_{k}(n −k) + p_{k−1}(n);", "image": "data/annot/nist/images/nist_p0643_26-9-8.png"}
+{"pair_id": "nist_p0643_26-10-1", "pdf_page": 643, "eqn_id": "26.10.1", "text": "26.10.1  p(D, 0) = p(Dk, 0) = p(∈S, 0) = 1.", "image": "data/annot/nist/images/nist_p0643_26-10-1.png"}
+{"pair_id": "nist_p0644_26-10-12", "pdf_page": 644, "eqn_id": "26.10.12", "text": "26.10.12  p(D, n) = p(O, n),", "image": "data/annot/nist/images/nist_p0644_26-10-12.png"}
+{"pair_id": "nist_p0645_26-12-3", "pdf_page": 645, "eqn_id": "26.12.3", "text": "26.12.3  B(r, s, t) = {(h, j, k) | 1 ≤h ≤r, 1 ≤j ≤s, 1 ≤k ≤t}.", "image": "data/annot/nist/images/nist_p0645_26-12-3.png"}
+{"pair_id": "nist_p0647_26-13-5", "pdf_page": 647, "eqn_id": "26.13.5", "text": "26.13.5  (j_{1}, j_{2}, . . . , j_{k}) = (j_{1}, j_{2})(j_{2}, j_{3}) · · · (j_{k−2}, j_{k−1})(j_{k−1}, j_{k}).", "image": "data/annot/nist/images/nist_p0647_26-13-5.png"}
+{"pair_id": "nist_p0649_26-15-13", "pdf_page": 649, "eqn_id": "26.15.13", "text": "26.15.13  r_{n−k}(B) = S(n, k).", "image": "data/annot/nist/images/nist_p0649_26-15-13.png"}
+{"pair_id": "nist_p0654_27-2-4", "pdf_page": 654, "eqn_id": "27.2.4", "text": "27.2.4  p_{n} ∼n log n.", "image": "data/annot/nist/images/nist_p0654_27-2-4.png"}
+{"pair_id": "nist_p0654_27-2-7", "pdf_page": 654, "eqn_id": "27.2.7", "text": "27.2.7  φ(n) = φ_{0}(n).", "image": "data/annot/nist/images/nist_p0654_27-2-7.png"}
+{"pair_id": "nist_p0656_27-3-8", "pdf_page": 656, "eqn_id": "27.3.8", "text": "27.3.8  φ(m) φ(n) = φ(mn) φ((m, n))/ (m, n) .", "image": "data/annot/nist/images/nist_p0656_27-3-8.png"}
+{"pair_id": "nist_p0656_27-3-9", "pdf_page": 656, "eqn_id": "27.3.9", "text": "27.3.9  f(mn) = f(m)f(n), m, n = 1, 2, . . . .", "image": "data/annot/nist/images/nist_p0656_27-3-9.png"}
+{"pair_id": "nist_p0658_27-8-1", "pdf_page": 658, "eqn_id": "27.8.1", "text": "27.8.1  χ(1) = 1,", "image": "data/annot/nist/images/nist_p0658_27-8-1.png"}
+{"pair_id": "nist_p0658_27-8-7", "pdf_page": 658, "eqn_id": "27.8.7", "text": "27.8.7  (a, k) = 1.", "image": "data/annot/nist/images/nist_p0658_27-8-7.png"}
+{"pair_id": "nist_p0658_27-8-8", "pdf_page": 658, "eqn_id": "27.8.8", "text": "27.8.8  χ(n) = χ_{0}(n) χ_{1}(n),", "image": "data/annot/nist/images/nist_p0658_27-8-8.png"}
+{"pair_id": "nist_p0658_27-9-1", "pdf_page": 658, "eqn_id": "27.9.1", "text": "27.9.1  (−1|p) = (−1)^{(p−1)/2},", "image": "data/annot/nist/images/nist_p0658_27-9-1.png"}
+{"pair_id": "nist_p0658_27-9-2", "pdf_page": 658, "eqn_id": "27.9.2", "text": "27.9.2  (2|p) = (−1)^{(p2−1)/8}.", "image": "data/annot/nist/images/nist_p0658_27-9-2.png"}
+{"pair_id": "nist_p0658_27-9-3", "pdf_page": 658, "eqn_id": "27.9.3", "text": "27.9.3  (p|q) (q|p) = (−1)^{(p−1)(q−1)/4}.", "image": "data/annot/nist/images/nist_p0658_27-9-3.png"}
+{"pair_id": "nist_p0659_27-10-10", "pdf_page": 659, "eqn_id": "27.10.10", "text": "27.10.10  G(n, χ) = χ(n) G(1, χ).", "image": "data/annot/nist/images/nist_p0659_27-10-10.png"}
+{"pair_id": "nist_p0659_27-10-11", "pdf_page": 659, "eqn_id": "27.10.11", "text": "27.10.11  | G(1, χ)|^{2} = k.", "image": "data/annot/nist/images/nist_p0659_27-10-11.png"}
+{"pair_id": "nist_p0661_27-13-4", "pdf_page": 661, "eqn_id": "27.13.4", "text": "27.13.4  m=1", "image": "data/annot/nist/images/nist_p0661_27-13-4.png"}
+{"pair_id": "nist_p0661_27-13-7", "pdf_page": 661, "eqn_id": "27.13.7", "text": "27.13.7  r_{2}(n) = 4 (δ_{1}(n) −δ_{3}(n)) .", "image": "data/annot/nist/images/nist_p0661_27-13-7.png"}
+{"pair_id": "nist_p0661_27-14-1", "pdf_page": 661, "eqn_id": "27.14.1", "text": "27.14.1  n = a_{1} + a_{2} + · · · , a_{1} ≥a_{2} ≥· · · ≥1.", "image": "data/annot/nist/images/nist_p0661_27-14-1.png"}
+{"pair_id": "nist_p0662_27-14-15", "pdf_page": 662, "eqn_id": "27.14.15", "text": "27.14.15  n=0", "image": "data/annot/nist/images/nist_p0662_27-14-15.png"}
+{"pair_id": "nist_p0662_27-14-16", "pdf_page": 662, "eqn_id": "27.14.16", "text": "27.14.16  ℑτ > 0,", "image": "data/annot/nist/images/nist_p0662_27-14-16.png"}
+{"pair_id": "nist_p0668_28-2-1", "pdf_page": 668, "eqn_id": "28.2.1", "text": "28.2.1  w'' + (a −2q cos(2z))w = 0.", "image": "data/annot/nist/images/nist_p0668_28-2-1.png"}
+{"pair_id": "nist_p0669_28-2-6", "pdf_page": 669, "eqn_id": "28.2.6", "text": "28.2.6  W {w_{I}, w_{II}} = 1,", "image": "data/annot/nist/images/nist_p0669_28-2-6.png"}
+{"pair_id": "nist_p0669_28-2-16", "pdf_page": 669, "eqn_id": "28.2.16", "text": "28.2.16  cos(πν) = w_{I}(π; a, q) = w_{I}(π; a, −q).", "image": "data/annot/nist/images/nist_p0669_28-2-16.png"}
+{"pair_id": "nist_p0669_28-2-17", "pdf_page": 669, "eqn_id": "28.2.17", "text": "28.2.17  w(z + π) + w(z −π) = 2 cos(πν)w(z).", "image": "data/annot/nist/images/nist_p0669_28-2-17.png"}
+{"pair_id": "nist_p0670_28-2-28", "pdf_page": 670, "eqn_id": "28.2.28", "text": "28.2.28  b_{2n+2}(−q) = b_{2n+2}(q).", "image": "data/annot/nist/images/nist_p0670_28-2-28.png"}
+{"pair_id": "nist_p0672_28-4-4", "pdf_page": 672, "eqn_id": "28.4.4", "text": "28.4.4  m=0", "image": "data/annot/nist/images/nist_p0672_28-4-4.png"}
+{"pair_id": "nist_p0680_28-12-2", "pdf_page": 680, "eqn_id": "28.12.2", "text": "28.12.2  λ_{ν}(−q) = λ_{ν}(q) = λ_{−ν}(q).", "image": "data/annot/nist/images/nist_p0680_28-12-2.png"}
+{"pair_id": "nist_p0680_28-12-4", "pdf_page": 680, "eqn_id": "28.12.4", "text": "28.12.4  me_{ν}(z, 0) = e^{iνz}.", "image": "data/annot/nist/images/nist_p0680_28-12-4.png"}
+{"pair_id": "nist_p0680_28-12-6", "pdf_page": 680, "eqn_id": "28.12.6", "text": "28.12.6  me_{ν}(z + π, q) = e^{πiν} me_{ν}(z, q),", "image": "data/annot/nist/images/nist_p0680_28-12-6.png"}
+{"pair_id": "nist_p0680_28-12-10", "pdf_page": 680, "eqn_id": "28.12.10", "text": "28.12.10  me_{ν}(z, q) = me_{¯ν}(−¯z, ¯q).", "image": "data/annot/nist/images/nist_p0680_28-12-10.png"}
+{"pair_id": "nist_p0681_28-12-15", "pdf_page": 681, "eqn_id": "28.12.15", "text": "28.12.15  se_{ν}(z, q) = −se_{ν}(−z, q) = −se_{−ν}(z, q).", "image": "data/annot/nist/images/nist_p0681_28-12-15.png"}
+{"pair_id": "nist_p0683_28-20-1", "pdf_page": 683, "eqn_id": "28.20.1", "text": "28.20.1  w'' −(a −2q cosh(2z)) w = 0,", "image": "data/annot/nist/images/nist_p0683_28-20-1.png"}
+{"pair_id": "nist_p0683_28-20-8", "pdf_page": 683, "eqn_id": "28.20.8", "text": "28.20.8  h = √q (> 0).", "image": "data/annot/nist/images/nist_p0683_28-20-8.png"}
+{"pair_id": "nist_p0688_28-28-1", "pdf_page": 688, "eqn_id": "28.28.1", "text": "28.28.1  w = cosh z cos t cos α + sinh z sin t sin α.", "image": "data/annot/nist/images/nist_p0688_28-28-1.png"}
+{"pair_id": "nist_p0689_28-28-18", "pdf_page": 689, "eqn_id": "28.28.18", "text": "28.28.18  R(z, 0) = cosh z,", "image": "data/annot/nist/images/nist_p0689_28-28-18.png"}
+{"pair_id": "nist_p0689_28-28-10", "pdf_page": 689, "eqn_id": "28.28.10", "text": "28.28.10  0 < ph(h(cosh z ± 1)) < π.", "image": "data/annot/nist/images/nist_p0689_28-28-10.png"}
+{"pair_id": "nist_p0690_28-28-24", "pdf_page": 690, "eqn_id": "28.28.24", "text": "28.28.24  D_{0}(ν, µ, z) = M^{(3)}", "image": "data/annot/nist/images/nist_p0690_28-28-24.png"}
+{"pair_id": "nist_p0690_28-28-35", "pdf_page": 690, "eqn_id": "28.28.35", "text": "28.28.35  Ds_{0}(n, m, z) = Ms^{(3)}", "image": "data/annot/nist/images/nist_p0690_28-28-35.png"}
+{"pair_id": "nist_p0690_28-29-6", "pdf_page": 690, "eqn_id": "28.29.6", "text": "28.29.6  −1 < ℜν ≤1", "image": "data/annot/nist/images/nist_p0690_28-29-6.png"}
+{"pair_id": "nist_p0690_28-29-7", "pdf_page": 690, "eqn_id": "28.29.7", "text": "28.29.7  w(z + π) = e^{πiν}w(z),", "image": "data/annot/nist/images/nist_p0690_28-29-7.png"}
+{"pair_id": "nist_p0691_28-29-10", "pdf_page": 691, "eqn_id": "28.29.10", "text": "28.29.10  F_{ν}(z) = e^{iνz}P_{ν}(z),", "image": "data/annot/nist/images/nist_p0691_28-29-10.png"}
+{"pair_id": "nist_p0691_28-29-11", "pdf_page": 691, "eqn_id": "28.29.11", "text": "28.29.11  w(z + π) = (−1)^{ν}w(z) + cP(z),", "image": "data/annot/nist/images/nist_p0691_28-29-11.png"}
+{"pair_id": "nist_p0691_28-29-14", "pdf_page": 691, "eqn_id": "28.29.14", "text": "28.29.14  cos(πν) = w_{I}(π, λ).", "image": "data/annot/nist/images/nist_p0691_28-29-14.png"}
+{"pair_id": "nist_p0691_28-29-16", "pdf_page": 691, "eqn_id": "28.29.16", "text": "28.29.16  λ_{n}, n = 0, 1, 2, . . . , with △(λ_{n}) = 2,", "image": "data/annot/nist/images/nist_p0691_28-29-16.png"}
+{"pair_id": "nist_p0691_28-29-18", "pdf_page": 691, "eqn_id": "28.29.18", "text": "28.29.18  λ_{0} < µ_{1} ≤µ_{2} < λ_{1} ≤λ_{2} < µ_{3} ≤µ_{4} < λ_{3} ≤λ_{4} < · · · .", "image": "data/annot/nist/images/nist_p0691_28-29-18.png"}
+{"pair_id": "nist_p0693_28-32-1", "pdf_page": 693, "eqn_id": "28.32.1", "text": "28.32.1  x = c cosh ξ cos η, y = c sinh ξ sin η.", "image": "data/annot/nist/images/nist_p0693_28-32-1.png"}
+{"pair_id": "nist_p0694_28-32-7", "pdf_page": 694, "eqn_id": "28.32.7", "text": "28.32.7  x_{1} = ^{1}", "image": "data/annot/nist/images/nist_p0694_28-32-7.png"}
+{"pair_id": "nist_p0694_28-32-8", "pdf_page": 694, "eqn_id": "28.32.8", "text": "28.32.8  ∇^{2}V + k^{2}V = 0", "image": "data/annot/nist/images/nist_p0694_28-32-8.png"}
+{"pair_id": "nist_p0695_28-33-4", "pdf_page": 695, "eqn_id": "28.33.4", "text": "28.33.4  w''(t) + (b −f cos(2ωt)) w(t) = 0,", "image": "data/annot/nist/images/nist_p0695_28-33-4.png"}
+{"pair_id": "nist_p0700_29-2-1", "pdf_page": 700, "eqn_id": "29.2.1", "text": "29.2.1  \\frac{d^{2}w}{dz^{2}}+ (h −ν(ν + 1)k^{2} sn^{2} (z, k))w = 0,", "image": "data/annot/nist/images/nist_p0700_29-2-1.png"}
+{"pair_id": "nist_p0704_29-6-3", "pdf_page": 704, "eqn_id": "29.6.3", "text": "29.6.3  (β_{0} −H)A_{0} + α_{0}A_{2} = 0,", "image": "data/annot/nist/images/nist_p0704_29-6-3.png"}
+{"pair_id": "nist_p0704_29-6-4", "pdf_page": 704, "eqn_id": "29.6.4", "text": "29.6.4  γ_{p}A_{2p−2} + (β_{p} −H)A_{2p} + α_{p}A_{2p+2} = 0, p ≥1,", "image": "data/annot/nist/images/nist_p0704_29-6-4.png"}
+{"pair_id": "nist_p0705_29-6-9", "pdf_page": 705, "eqn_id": "29.6.9", "text": "29.6.9  (β_{0} −H)C_{0} + α_{0}C_{2} = 0,", "image": "data/annot/nist/images/nist_p0705_29-6-9.png"}
+{"pair_id": "nist_p0706_29-10-2", "pdf_page": 706, "eqn_id": "29.10.2", "text": "29.10.2  z' = i(z −K −iK'),", "image": "data/annot/nist/images/nist_p0706_29-10-2.png"}
+{"pair_id": "nist_p0706_29-10-3", "pdf_page": 706, "eqn_id": "29.10.3", "text": "29.10.3  \\frac{d^{2}w}{dz′^{2}}+ (h' −ν(ν + 1)k^{′2} sn^{2} (z', k'))w = 0.", "image": "data/annot/nist/images/nist_p0706_29-10-3.png"}
+{"pair_id": "nist_p0706_29-11-1", "pdf_page": 706, "eqn_id": "29.11.1", "text": "29.11.1  \\frac{d^{2}w}{dz^{2}}+ (h −ν(ν + 1)k^{2} sn^{2} (z, k) + k^{2}ω^{2} sn^{4} (z, k))w = 0,", "image": "data/annot/nist/images/nist_p0706_29-11-1.png"}
+{"pair_id": "nist_p0708_29-15-3", "pdf_page": 708, "eqn_id": "29.15.3", "text": "29.15.3  H_{0} < H_{1} < · · · < H_{n},", "image": "data/annot/nist/images/nist_p0708_29-15-3.png"}
+{"pair_id": "nist_p0709_29-18-1", "pdf_page": 709, "eqn_id": "29.18.1", "text": "29.18.1  ∇^{2}u + ω^{2}u = 0,", "image": "data/annot/nist/images/nist_p0709_29-18-1.png"}
+{"pair_id": "nist_p0709_29-18-3", "pdf_page": 709, "eqn_id": "29.18.3", "text": "29.18.3  r ≥0, β =K + iβ', 0 ≤β' ≤2K', 0 ≤γ ≤4K,", "image": "data/annot/nist/images/nist_p0709_29-18-3.png"}
+{"pair_id": "nist_p0709_29-18-4", "pdf_page": 709, "eqn_id": "29.18.4", "text": "29.18.4  u(r, β, γ) = u_{1}(r)u_{2}(β)u_{3}(γ),", "image": "data/annot/nist/images/nist_p0709_29-18-4.png"}
+{"pair_id": "nist_p0709_29-18-7", "pdf_page": 709, "eqn_id": "29.18.7", "text": "29.18.7  \\frac{d^{2}u_{3}}{dγ^{2}}+ (h −ν(ν + 1)k^{2} sn^{2} (γ, k))u_{3} = 0,", "image": "data/annot/nist/images/nist_p0709_29-18-7.png"}
+{"pair_id": "nist_p0709_29-18-10", "pdf_page": 709, "eqn_id": "29.18.10", "text": "29.18.10  u(α, β, γ) = u_{1}(α)u_{2}(β)u_{3}(γ),", "image": "data/annot/nist/images/nist_p0709_29-18-10.png"}
+{"pair_id": "nist_p0718_30-9-2", "pdf_page": 718, "eqn_id": "30.9.2", "text": "30.9.2  2^{14}β_{3} = −33q^{5} −1594q^{3} −5621q", "image": "data/annot/nist/images/nist_p0718_30-9-2.png"}
+{"pair_id": "nist_p0721_30-13-7", "pdf_page": 721, "eqn_id": "30.13.7", "text": "30.13.7  ∇^{2}w + κ^{2}w = 0,", "image": "data/annot/nist/images/nist_p0721_30-13-7.png"}
+{"pair_id": "nist_p0721_30-13-8", "pdf_page": 721, "eqn_id": "30.13.8", "text": "30.13.8  w(ξ, η, φ) = w_{1}(ξ)w_{2}(η)w_{3}(φ),", "image": "data/annot/nist/images/nist_p0721_30-13-8.png"}
+{"pair_id": "nist_p0721_30-13-12", "pdf_page": 721, "eqn_id": "30.13.12", "text": "30.13.12  w_{3}(φ) = a_{3} cos(mφ) + b_{3} sin(mφ).", "image": "data/annot/nist/images/nist_p0721_30-13-12.png"}
+{"pair_id": "nist_p0721_30-13-16", "pdf_page": 721, "eqn_id": "30.13.16", "text": "30.13.16  w_{1}(ξ_{1}) = w_{1}(ξ_{2}) = 0,", "image": "data/annot/nist/images/nist_p0721_30-13-16.png"}
+{"pair_id": "nist_p0723_30-16-6", "pdf_page": 723, "eqn_id": "30.16.6", "text": "30.16.6  A_{j,j+1} = −γ^{2}", "image": "data/annot/nist/images/nist_p0723_30-16-6.png"}
+{"pair_id": "nist_p0726_31-2-7", "pdf_page": 726, "eqn_id": "31.2.7", "text": "31.2.7  a = k^{−2}, z = sn^{2} (ζ, k).", "image": "data/annot/nist/images/nist_p0726_31-2-7.png"}
+{"pair_id": "nist_p0727_31-3-2", "pdf_page": 727, "eqn_id": "31.3.2", "text": "31.3.2  aγc_{1} −qc_{0} = 0,", "image": "data/annot/nist/images/nist_p0727_31-3-2.png"}
+{"pair_id": "nist_p0728_31-4-1", "pdf_page": 728, "eqn_id": "31.4.1", "text": "31.4.1  (0, 1)Hf _{m}(a, q_{m}; α, β, γ, δ; z), m = 0, 1, 2, . . . .", "image": "data/annot/nist/images/nist_p0728_31-4-1.png"}
+{"pair_id": "nist_p0728_31-4-3", "pdf_page": 728, "eqn_id": "31.4.3", "text": "31.4.3  (s_{1}, s_{2})Hf _{m}(a, q_{m}; α, β, γ, δ; z), m = 0, 1, 2, . . . ,", "image": "data/annot/nist/images/nist_p0728_31-4-3.png"}
+{"pair_id": "nist_p0728_31-5-2", "pdf_page": 728, "eqn_id": "31.5.2", "text": "31.5.2  Hp_{n,m}(a, q_{n,m}; −n, β, γ, δ; z) = Hℓ(a, q_{n,m}; −n, β, γ, δ; z)", "image": "data/annot/nist/images/nist_p0728_31-5-2.png"}
+{"pair_id": "nist_p0729_31-8-4", "pdf_page": 729, "eqn_id": "31.8.4", "text": "31.8.4  Ψ_{1,2} = z^{2} + λz + a, ν^{2} = (λ + a + 1)(λ^{2} −4a),", "image": "data/annot/nist/images/nist_p0729_31-8-4.png"}
+{"pair_id": "nist_p0730_31-10-2", "pdf_page": 730, "eqn_id": "31.10.2", "text": "31.10.2  ρ(t) = t^{γ−1}(t −1)^{δ−1}(t −a)^{ϵ−1},", "image": "data/annot/nist/images/nist_p0730_31-10-2.png"}
+{"pair_id": "nist_p0730_31-10-3", "pdf_page": 730, "eqn_id": "31.10.3", "text": "31.10.3  (D_{z} −D_{t})K = 0,", "image": "data/annot/nist/images/nist_p0730_31-10-3.png"}
+{"pair_id": "nist_p0730_31-10-6", "pdf_page": 730, "eqn_id": "31.10.6", "text": "31.10.6  p(t) = t^{γ}(t −1)^{δ}(t −a)^{ϵ}.", "image": "data/annot/nist/images/nist_p0730_31-10-6.png"}
+{"pair_id": "nist_p0732_31-10-20", "pdf_page": 732, "eqn_id": "31.10.20", "text": "31.10.20  u = r cos θ, v = r sin θ sin φ, w = r sin θ cos φ,", "image": "data/annot/nist/images/nist_p0732_31-10-20.png"}
+{"pair_id": "nist_p0732_31-11-4", "pdf_page": 732, "eqn_id": "31.11.4", "text": "31.11.4  L_{0}c_{0} + M_{0}c_{1} = 0,", "image": "data/annot/nist/images/nist_p0732_31-11-4.png"}
+{"pair_id": "nist_p0733_31-11-9", "pdf_page": 733, "eqn_id": "31.11.9", "text": "31.11.9  M_{−1}P_{−1} = 0.", "image": "data/annot/nist/images/nist_p0733_31-11-9.png"}
+{"pair_id": "nist_p0733_31-11-11", "pdf_page": 733, "eqn_id": "31.11.11", "text": "31.11.11  λ = β, µ = α −ϵ.", "image": "data/annot/nist/images/nist_p0733_31-11-11.png"}
+{"pair_id": "nist_p0733_31-11-17", "pdf_page": 733, "eqn_id": "31.11.17", "text": "31.11.17  λ = 1, µ = γ + δ −2.", "image": "data/annot/nist/images/nist_p0733_31-11-17.png"}
+{"pair_id": "nist_p0735_31-15-9", "pdf_page": 735, "eqn_id": "31.15.9", "text": "31.15.9  S_{l}(z_{1})S_{l}(z_{2}) · · · S_{l}(z_{N−1}), z_{j} ∈(a_{j}, a_{j+1}),", "image": "data/annot/nist/images/nist_p0735_31-15-9.png"}
+{"pair_id": "nist_p0735_31-16-3", "pdf_page": 735, "eqn_id": "31.16.3", "text": "31.16.3  Q_{0}A_{0} + R_{0}A_{1} = 0,", "image": "data/annot/nist/images/nist_p0735_31-16-3.png"}
+{"pair_id": "nist_p0740_32-2-1", "pdf_page": 740, "eqn_id": "32.2.1", "text": "32.2.1  \\frac{d^{2}w}{dz^{2}}= 6w^{2} + z,", "image": "data/annot/nist/images/nist_p0740_32-2-1.png"}
+{"pair_id": "nist_p0740_32-2-2", "pdf_page": 740, "eqn_id": "32.2.2", "text": "32.2.2  \\frac{d^{2}w}{dz^{2}}= 2w^{3} + zw + α,", "image": "data/annot/nist/images/nist_p0740_32-2-2.png"}
+{"pair_id": "nist_p0741_32-2-16", "pdf_page": 741, "eqn_id": "32.2.16", "text": "32.2.16  µ_{1} + µ_{2} + µ_{3} = 1,", "image": "data/annot/nist/images/nist_p0741_32-2-16.png"}
+{"pair_id": "nist_p0741_32-2-17", "pdf_page": 741, "eqn_id": "32.2.17", "text": "32.2.17  f_{1}(z) + f_{2}(z) + f_{3}(z) + 2z = 0.", "image": "data/annot/nist/images/nist_p0741_32-2-17.png"}
+{"pair_id": "nist_p0741_32-2-22", "pdf_page": 741, "eqn_id": "32.2.22", "text": "32.2.22  f_{2}(z) + f_{4}(z) = √z.", "image": "data/annot/nist/images/nist_p0741_32-2-22.png"}
+{"pair_id": "nist_p0743_32-3-1", "pdf_page": 743, "eqn_id": "32.3.1", "text": "32.3.1  w_{k}(x) ∼k Ai(x),", "image": "data/annot/nist/images/nist_p0743_32-3-1.png"}
+{"pair_id": "nist_p0745_32-6-4", "pdf_page": 745, "eqn_id": "32.6.4", "text": "32.6.4  p' = 6q^{2} + z.", "image": "data/annot/nist/images/nist_p0745_32-6-4.png"}
+{"pair_id": "nist_p0745_32-6-5", "pdf_page": 745, "eqn_id": "32.6.5", "text": "32.6.5  σ = H_{I}(q, p, z),", "image": "data/annot/nist/images/nist_p0745_32-6-5.png"}
+{"pair_id": "nist_p0745_32-6-6", "pdf_page": 745, "eqn_id": "32.6.6", "text": "32.6.6  (σ'')^{2} + 4 (σ')^{3} + 2zσ' −2σ = 0.", "image": "data/annot/nist/images/nist_p0745_32-6-6.png"}
+{"pair_id": "nist_p0745_32-6-8", "pdf_page": 745, "eqn_id": "32.6.8", "text": "32.6.8  p = −σ'',", "image": "data/annot/nist/images/nist_p0745_32-6-8.png"}
+{"pair_id": "nist_p0745_32-6-14", "pdf_page": 745, "eqn_id": "32.6.14", "text": "32.6.14  q = (4σ'' + 2α + 1)/(8σ') ,", "image": "data/annot/nist/images/nist_p0745_32-6-14.png"}
+{"pair_id": "nist_p0745_32-6-15", "pdf_page": 745, "eqn_id": "32.6.15", "text": "32.6.15  p = −2σ',", "image": "data/annot/nist/images/nist_p0745_32-6-15.png"}
+{"pair_id": "nist_p0745_32-6-23", "pdf_page": 745, "eqn_id": "32.6.23", "text": "32.6.23  p = (σ' + κ_{0}κ_{∞}z)/(2κ_{0}) ,", "image": "data/annot/nist/images/nist_p0745_32-6-23.png"}
+{"pair_id": "nist_p0746_32-6-34", "pdf_page": 746, "eqn_id": "32.6.34", "text": "32.6.34  zp' = −2qp^{2} −θp + κ_{∞}z.", "image": "data/annot/nist/images/nist_p0746_32-6-34.png"}
+{"pair_id": "nist_p0746_32-6-39", "pdf_page": 746, "eqn_id": "32.6.39", "text": "32.6.39  p = σ'/(2κ_{0}) ,", "image": "data/annot/nist/images/nist_p0746_32-6-39.png"}
+{"pair_id": "nist_p0747_32-7-6", "pdf_page": 747, "eqn_id": "32.7.6", "text": "32.7.6  (α_{1}, β_{1}, γ_{1}, δ_{1}) = (−α_{0}, −β_{0}, γ_{0}, δ_{0}),", "image": "data/annot/nist/images/nist_p0747_32-7-6.png"}
+{"pair_id": "nist_p0747_32-7-7", "pdf_page": 747, "eqn_id": "32.7.7", "text": "32.7.7  (α_{2}, β_{2}, γ_{2}, δ_{2}) = (−β_{0}, −α_{0}, −δ_{0}, −γ_{0}).", "image": "data/annot/nist/images/nist_p0747_32-7-7.png"}
+{"pair_id": "nist_p0747_32-7-8", "pdf_page": 747, "eqn_id": "32.7.8", "text": "32.7.8  S_{1} : w_{1} = −w_{0},", "image": "data/annot/nist/images/nist_p0747_32-7-8.png"}
+{"pair_id": "nist_p0747_32-7-9", "pdf_page": 747, "eqn_id": "32.7.9", "text": "32.7.9  S_{2} : w_{2} = 1/w_{0} .", "image": "data/annot/nist/images/nist_p0747_32-7-9.png"}
+{"pair_id": "nist_p0747_32-7-15", "pdf_page": 747, "eqn_id": "32.7.15", "text": "32.7.15  β_{5} = β_{0} + 2, β_{6} = β_{0} −2.", "image": "data/annot/nist/images/nist_p0747_32-7-15.png"}
+{"pair_id": "nist_p0748_32-7-29", "pdf_page": 748, "eqn_id": "32.7.29", "text": "32.7.29  T_{ε1,ε2,ε3} : W_{1} = (Φ −2ε_{1}zW_{0})/Φ ,", "image": "data/annot/nist/images/nist_p0748_32-7-29.png"}
+{"pair_id": "nist_p0748_32-7-30", "pdf_page": 748, "eqn_id": "32.7.30", "text": "32.7.30  v = w' −εw^{2} + ((1 −εα)w/z ),", "image": "data/annot/nist/images/nist_p0748_32-7-30.png"}
+{"pair_id": "nist_p0748_32-7-35", "pdf_page": 748, "eqn_id": "32.7.35", "text": "32.7.35  z_{3} = 1/z_{0},", "image": "data/annot/nist/images/nist_p0748_32-7-35.png"}
+{"pair_id": "nist_p0748_32-7-37", "pdf_page": 748, "eqn_id": "32.7.37", "text": "32.7.37  (α_{2}, β_{2}, γ_{2}, δ_{2}) = (α_{0}, −γ_{0}, −β_{0}, δ_{0}),", "image": "data/annot/nist/images/nist_p0748_32-7-37.png"}
+{"pair_id": "nist_p0748_32-7-41", "pdf_page": 748, "eqn_id": "32.7.41", "text": "32.7.41  S_{3} : w_{3}(z_{3}) = 1/w_{0}(z_{0}).", "image": "data/annot/nist/images/nist_p0748_32-7-41.png"}
+{"pair_id": "nist_p0749_32-8-11", "pdf_page": 749, "eqn_id": "32.8.11", "text": "32.8.11  w(z; µ, −µκ^{2}, λ, −λκ^{4}) = κ,", "image": "data/annot/nist/images/nist_p0749_32-8-11.png"}
+{"pair_id": "nist_p0749_32-8-12", "pdf_page": 749, "eqn_id": "32.8.12", "text": "32.8.12  w(z; 0, −µ, 0, µκ) = κz,", "image": "data/annot/nist/images/nist_p0749_32-8-12.png"}
+{"pair_id": "nist_p0749_32-8-14", "pdf_page": 749, "eqn_id": "32.8.14", "text": "32.8.14  α ± β = 4n,", "image": "data/annot/nist/images/nist_p0749_32-8-14.png"}
+{"pair_id": "nist_p0749_32-8-15", "pdf_page": 749, "eqn_id": "32.8.15", "text": "32.8.15  w(z) = P_{m}(z)/Q_{m}(z) ,", "image": "data/annot/nist/images/nist_p0749_32-8-15.png"}
+{"pair_id": "nist_p0749_32-8-16", "pdf_page": 749, "eqn_id": "32.8.16", "text": "32.8.16  w_{1}(z; ±2, −2) = ± 1/z ,", "image": "data/annot/nist/images/nist_p0749_32-8-16.png"}
+{"pair_id": "nist_p0749_32-8-17", "pdf_page": 749, "eqn_id": "32.8.17", "text": "32.8.17  w_{2}(z; 0, −2) = −2z,", "image": "data/annot/nist/images/nist_p0749_32-8-17.png"}
+{"pair_id": "nist_p0749_32-8-19", "pdf_page": 749, "eqn_id": "32.8.19", "text": "32.8.19  w_{1}(z; α_{1}, β_{1}) = P_{1,n−1}(z)/Q_{1,n}(z) ,", "image": "data/annot/nist/images/nist_p0749_32-8-19.png"}
+{"pair_id": "nist_p0750_32-8-27", "pdf_page": 750, "eqn_id": "32.8.27", "text": "32.8.27  w(z) = λz + µ + (P_{n−1}(z)/Q_{n}(z)),", "image": "data/annot/nist/images/nist_p0750_32-8-27.png"}
+{"pair_id": "nist_p0750_32-9-1", "pdf_page": 750, "eqn_id": "32.9.1", "text": "32.9.1  w(z; µ, 0, 0, −µκ^{3}) = κz^{1/3},", "image": "data/annot/nist/images/nist_p0750_32-9-1.png"}
+{"pair_id": "nist_p0750_32-9-2", "pdf_page": 750, "eqn_id": "32.9.2", "text": "32.9.2  w(z; 0, −2κ, 0, 4κµ −λ^{2}) = z(κ(ln z)^{2} + λ ln z + µ),", "image": "data/annot/nist/images/nist_p0750_32-9-2.png"}
+{"pair_id": "nist_p0750_32-9-4", "pdf_page": 750, "eqn_id": "32.9.4", "text": "32.9.4  β = 2n,", "image": "data/annot/nist/images/nist_p0750_32-9-4.png"}
+{"pair_id": "nist_p0750_32-9-5", "pdf_page": 750, "eqn_id": "32.9.5", "text": "32.9.5  w(z) = P_{n}2_{+1}(ζ)/Q_{n}2(ζ) ,", "image": "data/annot/nist/images/nist_p0750_32-9-5.png"}
+{"pair_id": "nist_p0750_32-9-11", "pdf_page": 750, "eqn_id": "32.9.11", "text": "32.9.11  w(z) = P_{n}2_{−n+1}(ζ)/Q_{n}2_{−n}(ζ) ,", "image": "data/annot/nist/images/nist_p0750_32-9-11.png"}
+{"pair_id": "nist_p0750_32-9-12", "pdf_page": 750, "eqn_id": "32.9.12", "text": "32.9.12  z^{2}(w')^{2} = (w −1)^{2}(2αw^{2} + Cw −2β),", "image": "data/annot/nist/images/nist_p0750_32-9-12.png"}
+{"pair_id": "nist_p0751_32-10-11", "pdf_page": 751, "eqn_id": "32.10.11", "text": "32.10.11  ε_{1}α + ε_{2}β = 4n + 2,", "image": "data/annot/nist/images/nist_p0751_32-10-11.png"}
+{"pair_id": "nist_p0751_32-10-12", "pdf_page": 751, "eqn_id": "32.10.12", "text": "32.10.12  zw' = ε_{1}zw^{2} + (αε_{1} −1)w + ε_{2}z.", "image": "data/annot/nist/images/nist_p0751_32-10-12.png"}
+{"pair_id": "nist_p0751_32-10-17", "pdf_page": 751, "eqn_id": "32.10.17", "text": "32.10.17  w' = ε(w^{2} + 2zw) −2(1 + εα),", "image": "data/annot/nist/images/nist_p0751_32-10-17.png"}
+{"pair_id": "nist_p0751_32-10-18", "pdf_page": 751, "eqn_id": "32.10.18", "text": "32.10.18  w(z) = −εφ'(z)/φ(z),", "image": "data/annot/nist/images/nist_p0751_32-10-18.png"}
+{"pair_id": "nist_p0752_32-10-25", "pdf_page": 752, "eqn_id": "32.10.25", "text": "32.10.25  zw' = aw^{2} + (b −a + ε_{3}z)w −b.", "image": "data/annot/nist/images/nist_p0752_32-10-25.png"}
+{"pair_id": "nist_p0753_32-11-4", "pdf_page": 753, "eqn_id": "32.11.4", "text": "32.11.4  w'' = 2w^{3} + xw,", "image": "data/annot/nist/images/nist_p0753_32-11-4.png"}
+{"pair_id": "nist_p0753_32-11-12", "pdf_page": 753, "eqn_id": "32.11.12", "text": "32.11.12  w'' = −2w^{3} + xw.", "image": "data/annot/nist/images/nist_p0753_32-11-12.png"}
+{"pair_id": "nist_p0754_32-13-1", "pdf_page": 754, "eqn_id": "32.13.1", "text": "32.13.1  v_{t} −6v^{2}v_{x} + v_{xxx} = 0,", "image": "data/annot/nist/images/nist_p0754_32-13-1.png"}
+{"pair_id": "nist_p0754_32-13-3", "pdf_page": 754, "eqn_id": "32.13.3", "text": "32.13.3  u_{t} + 6uu_{x} + u_{xxx} = 0,", "image": "data/annot/nist/images/nist_p0754_32-13-3.png"}
+{"pair_id": "nist_p0755_32-13-5", "pdf_page": 755, "eqn_id": "32.13.5", "text": "32.13.5  z = x + 3λt^{2}, u(x, t) = W(z) −λt,", "image": "data/annot/nist/images/nist_p0755_32-13-5.png"}
+{"pair_id": "nist_p0755_32-13-6", "pdf_page": 755, "eqn_id": "32.13.6", "text": "32.13.6  u_{xt} = sin u,", "image": "data/annot/nist/images/nist_p0755_32-13-6.png"}
+{"pair_id": "nist_p0755_32-13-7", "pdf_page": 755, "eqn_id": "32.13.7", "text": "32.13.7  z = xt, u(x, t) = v(z),", "image": "data/annot/nist/images/nist_p0755_32-13-7.png"}
+{"pair_id": "nist_p0755_32-13-8", "pdf_page": 755, "eqn_id": "32.13.8", "text": "32.13.8  u_{tt} = u_{xx} −6(u^{2})_{xx} + u_{xxxx},", "image": "data/annot/nist/images/nist_p0755_32-13-8.png"}
+{"pair_id": "nist_p0755_32-13-9", "pdf_page": 755, "eqn_id": "32.13.9", "text": "32.13.9  z = x −ct, u(x, t) = v(z),", "image": "data/annot/nist/images/nist_p0755_32-13-9.png"}
+{"pair_id": "nist_p0755_32-13-10", "pdf_page": 755, "eqn_id": "32.13.10", "text": "32.13.10  v'' = 6v^{2} + (c^{2} −1)v + Az + B,", "image": "data/annot/nist/images/nist_p0755_32-13-10.png"}
+{"pair_id": "nist_p0758_33-2-4", "pdf_page": 758, "eqn_id": "33.2.4", "text": "33.2.4  F_{ℓ}(η, ρ) = C_{ℓ}(η)ρ^{ℓ+1}e^{∓iρ} M(ℓ+ 1 ∓iη, 2ℓ+ 2, ±2iρ),", "image": "data/annot/nist/images/nist_p0758_33-2-4.png"}
+{"pair_id": "nist_p0758_33-2-10", "pdf_page": 758, "eqn_id": "33.2.10", "text": "33.2.10  σ_{ℓ}(η) = ph Γ(ℓ+ 1 + iη),", "image": "data/annot/nist/images/nist_p0758_33-2-10.png"}
+{"pair_id": "nist_p0760_33-5-3", "pdf_page": 760, "eqn_id": "33.5.3", "text": "33.5.3  F_{ℓ}(0, ρ) = ρ j_{ℓ}(ρ), G_{ℓ}(0, ρ) = −ρ y_{ℓ}(ρ).", "image": "data/annot/nist/images/nist_p0760_33-5-3.png"}
+{"pair_id": "nist_p0763_33-11-9", "pdf_page": 763, "eqn_id": "33.11.9", "text": "33.11.9  µ_{k} = ℓ(ℓ+ 1) −k(k + 1) + η^{2}", "image": "data/annot/nist/images/nist_p0763_33-11-9.png"}
+{"pair_id": "nist_p0764_33-13-1", "pdf_page": 764, "eqn_id": "33.13.1", "text": "33.13.1  C_{ℓ}(η) = 2^{ℓ}e^{i σℓ(η)−(πη/2)} Γ(ℓ+ 1 −iη)/ Γ(2ℓ+ 2),", "image": "data/annot/nist/images/nist_p0764_33-13-1.png"}
+{"pair_id": "nist_p0764_33-13-2", "pdf_page": 764, "eqn_id": "33.13.2", "text": "33.13.2  R_{ℓ}= (2ℓ+ 1) C_{ℓ}(η)/ C_{ℓ−1}(η).", "image": "data/annot/nist/images/nist_p0764_33-13-2.png"}
+{"pair_id": "nist_p0765_33-14-16", "pdf_page": 765, "eqn_id": "33.14.16", "text": "33.14.16  W {h, f} = 2/π, W {c, s} = 1/π.", "image": "data/annot/nist/images/nist_p0765_33-14-16.png"}
+{"pair_id": "nist_p0767_33-16-3", "pdf_page": 767, "eqn_id": "33.16.3", "text": "33.16.3  τ = ϵ^{1/2}(> 0),", "image": "data/annot/nist/images/nist_p0767_33-16-3.png"}
+{"pair_id": "nist_p0767_33-16-13", "pdf_page": 767, "eqn_id": "33.16.13", "text": "33.16.13  h(ϵ, ℓ; r) = (−1)^{ℓ}ν^{ℓ+1}A(ϵ, ℓ) Γ(ν −ℓ)ζ_{ℓ}(−ν, r)/π.", "image": "data/annot/nist/images/nist_p0767_33-16-13.png"}
+{"pair_id": "nist_p0770_33-22-6", "pdf_page": 770, "eqn_id": "33.22.6", "text": "33.22.6  z = 2is(2mE/¯h^{2})^{1/2}, κ = iZ_{1}Z_{2}αc(m/(2E))^{1/2}.", "image": "data/annot/nist/images/nist_p0770_33-22-6.png"}
+{"pair_id": "nist_p0770_33-22-12", "pdf_page": 770, "eqn_id": "33.22.12", "text": "33.22.12  κ = ±(−ϵ)^{−1/2}, z = 2r/κ, ik from Z.", "image": "data/annot/nist/images/nist_p0770_33-22-12.png"}
+{"pair_id": "nist_p0774_34-2-1", "pdf_page": 774, "eqn_id": "34.2.1", "text": "34.2.1  |j_{r} −j_{s}| ≤j_{t} ≤j_{r} + j_{s},", "image": "data/annot/nist/images/nist_p0774_34-2-1.png"}
+{"pair_id": "nist_p0774_34-2-2", "pdf_page": 774, "eqn_id": "34.2.2", "text": "34.2.2  m_{r} = −j_{r}, −j_{r} + 1, . . . , j_{r} −1, j_{r}, r = 1, 2, 3,", "image": "data/annot/nist/images/nist_p0774_34-2-2.png"}
+{"pair_id": "nist_p0774_34-2-3", "pdf_page": 774, "eqn_id": "34.2.3", "text": "34.2.3  m_{1} + m_{2} + m_{3} = 0.", "image": "data/annot/nist/images/nist_p0774_34-2-3.png"}
+{"pair_id": "nist_p0775_34-3-4", "pdf_page": 775, "eqn_id": "34.3.4", "text": "34.3.4  J = j_{1} + j_{2} + j_{3}.", "image": "data/annot/nist/images/nist_p0775_34-3-4.png"}
+{"pair_id": "nist_p0785_35-3-6", "pdf_page": 785, "eqn_id": "35.3.6", "text": "35.3.6  Γ_{m}(a, . . . , a) = Γ_{m}(a).", "image": "data/annot/nist/images/nist_p0785_35-3-6.png"}
+{"pair_id": "nist_p0785_35-4-6", "pdf_page": 785, "eqn_id": "35.4.6", "text": "35.4.6  |κ|=k", "image": "data/annot/nist/images/nist_p0785_35-4-6.png"}
+{"pair_id": "nist_p0793_36-2-24", "pdf_page": 793, "eqn_id": "36.2.24", "text": "36.2.24  Ψ^{(U)}(x, y, z) = Ψ^{∗(U)}(x, y, −z), U = E, H.", "image": "data/annot/nist/images/nist_p0793_36-2-24.png"}
+{"pair_id": "nist_p0793_36-2-25", "pdf_page": 793, "eqn_id": "36.2.25", "text": "36.2.25  Ψ^{(E)}(x, −y, z) = Ψ^{(E)}(x, y, z).", "image": "data/annot/nist/images/nist_p0793_36-2-25.png"}
+{"pair_id": "nist_p0793_36-2-27", "pdf_page": 793, "eqn_id": "36.2.27", "text": "36.2.27  Ψ^{(H)}(x, y, z) = Ψ^{(H)}(y, x, z).", "image": "data/annot/nist/images/nist_p0793_36-2-27.png"}
+{"pair_id": "nist_p0797_36-4-5", "pdf_page": 797, "eqn_id": "36.4.5", "text": "36.4.5  x = 0.", "image": "data/annot/nist/images/nist_p0797_36-4-5.png"}
+{"pair_id": "nist_p0797_36-4-6", "pdf_page": 797, "eqn_id": "36.4.6", "text": "36.4.6  27x^{2} = −8y^{3}.", "image": "data/annot/nist/images/nist_p0797_36-4-6.png"}
+{"pair_id": "nist_p0799_36-5-17", "pdf_page": 799, "eqn_id": "36.5.17", "text": "36.5.17  Y_{S}(X) = Y (u, |X|),", "image": "data/annot/nist/images/nist_p0799_36-5-17.png"}
+{"pair_id": "nist_p0799_36-5-19", "pdf_page": 799, "eqn_id": "36.5.19", "text": "36.5.19  Y_{S}(X) = Y (−u, −|X|),", "image": "data/annot/nist/images/nist_p0799_36-5-19.png"}
+{"pair_id": "nist_p0801_36-6-1", "pdf_page": 801, "eqn_id": "36.6.1", "text": "36.6.1  Ψ_{K}(x; k) = k^{βK} Ψ_{K}(y(k)),", "image": "data/annot/nist/images/nist_p0801_36-6-1.png"}
+{"pair_id": "nist_p0803_36-8-6", "pdf_page": 803, "eqn_id": "36.8.6", "text": "36.8.6  c_{0}(t) = 1, d_{0}(t) = 0, c_{n+1}(t) = c'", "image": "data/annot/nist/images/nist_p0803_36-8-6.png"}
+{"pair_id": "nist_p0805_36-11-1", "pdf_page": 805, "eqn_id": "36.11.1", "text": "36.11.1  t_{1}(x) < t_{2}(x) < · · · < t_{jmax}(x),", "image": "data/annot/nist/images/nist_p0805_36-11-1.png"}
+{"pair_id": "nist_p0805_36-12-2", "pdf_page": 805, "eqn_id": "36.12.2", "text": "36.12.2  \\frac{∂}{∂u}f(u_{j}(y); y) = 0.", "image": "data/annot/nist/images/nist_p0805_36-12-2.png"}
