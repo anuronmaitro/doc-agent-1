@@ -1,0 +1,11 @@
+{
+  "pair_id_collisions_skipped": 0,
+  "source_pdf": "data/raw/NIST_Handbook_Mathematical_Functions.pdf",
+  "pdf_pages_scanned": 967,
+  "pages_with_pairs": 304,
+  "pairs_written": 695,
+  "pairs_with_frac": 44,
+  "out_dir": "data/annot/nist",
+  "render_dpi": 300,
+  "elapsed_s": 8.9
+}
