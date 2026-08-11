@@ -1,0 +1,76 @@
+# Step 27 — OCR reader fine-tune config. Read by src/doc_agent/training/{datamodule,
+# lit_modules,train}.py. Kept separate from configs/config.yaml for the same reason as
+# configs/nist_extract.yaml / configs/degradation.yaml: this is training-run configuration,
+# not a knob the retrieval/agent pipeline reads at serve time.
+#
+# Two-stage curriculum (plan.md Step 28): Stage A (all 695 degraded NIST pairs, no
+# validation split -- see below) trains first for volume/warmup, then Stage B (the 122 A&S
+# train pages) continues from Stage A's weights with a lower LR and early-stops on the 20
+# A&S val pages. Real values here are for the actual Step 28 Kaggle GPU run; Step 27's own
+# job is proving this whole pipeline runs end-to-end without crashing (scripts/smoke_train.py
+# overrides a handful of these for speed -- see that script, not this file, for the smoke
+# numbers).
+
+seed: 42
+device: cpu   # Step 28 overrides to "cuda" on Kaggle; local Step 27 dev/smoke stays CPU
+
+ocr:
+  model: "facebook/nougat-base"
+  # Pinned commit, same reason and same value as vision/ocr.py's NOUGAT_REVISION (bandit
+  # B615: an unpinned model name can resolve to different weights later).
+  revision: "abfecedbb34367c820e233f710fdc7f54e6ab249"
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  # Optional override of adapt.DEFAULT_LORA_TARGET_KEYWORDS; left unset here so the
+  # discovered-from-the-real-model default applies (see adapt.py's own comment for why
+  # that default covers both the Swin encoder's and the BART decoder's naming schemes).
+
+data:
+  nist_pairs_path: "data/annot/nist/pairs.jsonl"     # Step 25's output -- read-only
+  degradation_cfg: "configs/degradation.yaml"        # Step 26's config -- read-only
+  train_annot_dir: "data/annot/train"                # Step 22-24's output -- read-only
+  val_annot_dir: "data/annot/val"                    # Step 21's output -- read-only
+  max_target_length: 1536   # tokens; matches vision/ocr.py's MAX_NEW_TOKENS (same model,
+                             # same practical ceiling for a normal prose/formula page)
+  # Step 28's learning curve: set to 25 / 50 / 105 / 122 per run (unset/null = all 122).
+  # Sorted-prefix subsetting (_ASStageBDataset), so curve points are NESTED (25 ⊂ 50 ⊂
+  # 105 ⊂ 122) rather than independently resampled -- never applied to val, which stays
+  # the same 20 pages at every curve point.
+  stage_b_max_train_pages: null
+
+# --- Stage A: NIST pretraining (volume, no validation split) --------------------------
+# Deliberately no early stopping / val here: Stage A is off-distribution (clean pdfTeX
+# renders degraded to look like a scan, not a real scan) and exists to teach general
+# glyph/layout recognition cheaply, not to be the model selection signal -- that is
+# Stage B's job, on real A&S pages. See plan.md Step 27's DECISION for why Stage A's
+# per-formula crops don't get a held-out split of their own.
+stage_a:
+  batch_size: 4
+  max_epochs: 1
+  lr: 5.0e-5
+  num_workers: 0
+
+# --- Stage B: A&S fine-tune (the target distribution, early-stopped on val) -----------
+stage_b:
+  batch_size: 1   # whole-page images; keep small, raise via Kaggle GPU memory at Step 28
+  max_epochs: 8
+  lr: 2.0e-5
+  num_workers: 0
+  early_stopping_patience: 3
+  early_stopping_monitor: "val_loss"
+
+optimizer:
+  weight_decay: 0.01
+
+logging:
+  wandb_project: "mathscholar-ocr-finetune"
+  # offline by default: a local/CI smoke run must not require a WANDB_API_KEY or network
+  # access to pass. Step 28's real Kaggle run sets WANDB_MODE=online (or overrides this
+  # key) once a key is configured in that environment's secrets.
+  wandb_mode: "offline"
+
+checkpoint:
+  dir: "data/models/ocr_lora"   # Step 28 downloads/commits the adapter here (plan.md)

@@ -40,6 +40,15 @@ dependencies = [
   #     rather than surfacing three hours into the full-book run.
   "python-Levenshtein>=0.25,<1.0",
   "nltk>=3.8,<4.0",
+  # --- Step 27: `import lightning` needs pkg_resources at import time -----------
+  #     (lightning/fabric/__init__.py calls __import__("pkg_resources").declare_
+  #     namespace(...)), but setuptools>=81 stopped shipping pkg_resources by
+  #     default. Without this pin, `python scripts/smoke_train.py` (or anything
+  #     importing doc_agent.training.*) dies on the very first import with
+  #     "ModuleNotFoundError: No module named 'pkg_resources'" before reaching any
+  #     of this project's own code -- found running Step 27's smoke train, not
+  #     assumed. lightning's own dependency metadata doesn't pin this itself.
+  "setuptools<81",
 ]
 
 [project.optional-dependencies]

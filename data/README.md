@@ -235,3 +235,71 @@ side-by-side comparisons are committed, to `reports/figures/`.
 section above): no stacked sums/integrals/products or radicals anywhere in the 695 pairs,
 and imperfect overline accents on the few pairs that have one. This step only changes how
 the crops *look*; it never touches `text`.
+
+## Step 27 — `training/` implementation (S1)
+
+Built the actual two-stage fine-tune pipeline (`configs/train_ocr.yaml` +
+`src/doc_agent/training/{datamodule,lit_modules,train,adapt,degrade}.py`) and verified it
+end-to-end against the REAL pinned `facebook/nougat-base` model and real data — not just
+that it imports. `python scripts/smoke_train.py` runs 10 real training steps per stage
+(20 total, plan.md Step 27's own "Done when" number) on CPU; last verified run: **20/20
+steps, no crash, 163.7s total**, real decreasing loss both stages (Stage A 2.83→1.84
+epoch-mean; Stage B 2.16→1.51 epoch-mean over just 10 noisy single-sample steps).
+
+**On-the-fly degradation, not a pre-materialized directory.** `training/degrade.py` is
+Step 26's own `pad_crop`...`degrade_one` functions, extracted verbatim (same behavior,
+verified byte-identical: re-running `scripts/degrade_nist_pairs.py` after the extraction
+reproduced Step 26's exact committed `reports/figures/` examples and the same 197.5/31.9
+mean/std) so both that script AND `datamodule.py`'s Stage A dataset share one
+implementation. Training never depends on `data/interim/nist_degraded/` existing — each
+Stage A sample is degraded in `__getitem__`, from the same `seed + pair_index` RNG
+convention Step 26 established, so it's still fully reproducible without persisting
+anything to disk.
+
+**Two-stage curriculum, not one mixed dataset** (`train.py`): one `LitComponent` instance
+is built once, then `Trainer.fit()` is called on it TWICE against two separate
+`DocDataModule` instances — Stage A (all 695 NIST pairs, no validation split, no early
+stopping: off-distribution volume/warmup, not the model-selection signal) then Stage B
+(122 A&S train pages, early-stopped on the 20 A&S val pages). Weights carry over between
+the two `fit()` calls; each stage's own LR is picked up fresh via `LitComponent.set_stage()`
+before its `Trainer.fit()` call.
+
+**LoRA target modules are discovered from the real loaded model, not hardcoded**
+(`adapt.py`). Confirmed by loading the pinned checkpoint and listing `named_modules()`:
+the encoder (`DonutSwinModel`) and decoder (`MBartForCausalLM`) use two DIFFERENT Linear
+layer naming conventions (`query`/`key`/`value` vs `q_proj`/`k_proj`/`v_proj`/`out_proj`)
+— hardcoding either alone would have silently applied LoRA to only half the model. Real
+result: 7 target module types, 1.79M/350.5M params trainable (0.51%).
+
+**Four real bugs found and fixed running the actual smoke train** (not caught by
+ruff/mypy/pytest — none of them are type or lint errors, all four only surface when real
+data flows through the real model):
+1. Lightning's automatic pre-training "sanity check" validation pass still runs even when
+   `early_stopping=False`, and crashed on Stage A's `None` val dataloader.
+   `limit_val_batches=0` + `num_sanity_val_steps=0` for any stage with no validation split.
+2. `VisionEncoderDecoderModel.forward(labels=...)` requires
+   `config.decoder_start_token_id` to be set (used by `shift_tokens_right()`) — the
+   nougat-base checkpoint ships this as `None`. `generate()` doesn't need it (Nougat
+   resolves the start token a different way there), so `vision/ocr.py` never had to set
+   it; training does. Set to the tokenizer's `bos_token_id` (confirmed matching the
+   decoder's own sub-config, not guessed).
+3. `EarlyStopping(monitor="val_loss")` crashes if `val_loss` was never logged — true for a
+   smoke run whose `max_steps` cuts the first epoch short before any real validation pass
+   runs (only the sanity check ran). `strict=False` — never fires under real full-epoch
+   training, only guards the truncated-smoke-run edge case.
+4. `import lightning` needs `pkg_resources` at import time, but `setuptools>=81` stopped
+   shipping it — pinned `setuptools<81` in `pyproject.toml` (found running the smoke
+   train, not assumed; `requirements.lock`/`uv.lock` regenerated to match).
+
+**Learning-curve support built now, for Step 28** (`_ASStageBDataset(..., max_pages=N)`):
+sorted-prefix subsetting, so the 25/50/105/122-page curve points plan.md Step 28 asks for
+are NESTED (25 ⊂ 50 ⊂ 105 ⊂ 122) rather than independently resampled — each larger curve
+point only ADDS pages, which is what makes "did 105→122 help" a clean comparison instead
+of one confounded by which pages happened to be swapped in/out. Verified: `d25`'s 25 image
+paths are all present in `d50`'s 50. Never applied to val — the same 20 pages are used at
+every curve point, unchanged, so the curve's y-axis stays comparable point to point.
+
+**What Step 27 deliberately did NOT do:** run the real Kaggle GPU fine-tune, produce a real
+adapter checkpoint, or plot a real learning curve — that's Step 28, using
+`configs/train_ocr.yaml` UNMODIFIED (the smoke script only overrides a copy of the config
+in memory, never the file on disk) plus the `max_pages` knob above for each curve point.
