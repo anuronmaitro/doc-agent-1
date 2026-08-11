@@ -318,8 +318,10 @@ sentry-sdk==2.66.1
     # via wandb
 setproctitle==1.3.7
     # via wandb
-setuptools==83.0.0
-    # via wandb
+setuptools==80.10.2
+    # via
+    #   doc-agent (pyproject.toml)
+    #   wandb
 shellingham==1.5.4
     # via typer
 six==1.17.0
