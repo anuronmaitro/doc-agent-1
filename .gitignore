@@ -14,9 +14,12 @@ data/eda_summary.json
 data/corpus_version.json
 
 # data/annot/ is split, not blanket-ignored:
-#   nist/  -- Stage A crops (Step 25), thousands of small images, unmeasured size. Stays
-#             ignored for now; measure it when Step 25 actually runs and revisit (same
-#             mistake we almost repeated with data/ocr/ -- don't assume, measure).
+#   nist/  -- Stage A crops (Step 25). MEASURED at 3.1 MB / 431 pairs (not the
+#             thousands-of-images volume this comment used to warn might happen) --
+#             small enough to commit outright, same call as data/ocr/ below, same
+#             reason: Step 26 (S2) is a different owner who needs the real crops, not
+#             just a manifest. See data/README.md "Step 25" for why the count is 431,
+#             not the 5000-6000 target (a deliberate safety filter, not a shortfall).
 #   test/  -- rendered scratch images (Step 18); redundant with the real output, which
 #             already goes to the COMMITTED grading_kit/heldout_pages/ + labels.jsonl.
 #   val/, train/ -- the actual hand-corrected JSON annotations (Steps 21-24). Same
@@ -24,8 +27,9 @@ data/corpus_version.json
 #             LATER step (Step 27 datamodule.py, Step 28's actual fine-tune run) --
 #             "commit only a manifest" would leave whoever runs Step 27/28 unable to
 #             actually load 2/3 of the training set without an out-of-band file transfer.
-data/annot/nist/
 data/annot/test/
+!data/annot/nist/
+!data/annot/nist/**
 !data/annot/val/
 !data/annot/val/**
 !data/annot/train/

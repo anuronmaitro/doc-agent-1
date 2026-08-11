@@ -1,0 +1,53 @@
+# Step 25 — NIST Handbook extraction (Stage A pairs) config.
+# Read only by scripts/extract_nist_pairs.py. Kept separate from configs/config.yaml
+# (the RAG/OCR pipeline's own config) because this is a one-shot data-prep tool for a
+# different corpus, not a knob the retrieval/agent system reads at runtime.
+
+source_pdf: "data/raw/NIST_Handbook_Mathematical_Functions.pdf"  # gitignored (data/raw/), same
+  # convention as data/raw/handbookofmathem1964abra.pdf. Copy your own local copy there
+  # before running — public-domain NIST Handbook of Mathematical Functions (2010),
+  # Olver/Lozier/Boisvert/Clark eds.; a companion print volume to the free DLMF.
+out_dir: "data/annot/nist"          # gitignored (see .gitignore + handoff-risk note in plan.md)
+summary_path: "data/annot/nist_summary.json"  # NOT gitignored — the committed count summary
+
+render_dpi: 300   # matches configs/config.yaml ocr.render_dpi, so Step 26's degradation
+                  # pipeline (calibrated to the A&S scan's 300 dpi) sees comparable-resolution
+                  # crops rather than having to also correct for a scale mismatch.
+
+# Equation-number pattern: chapter.section.index, e.g. "3.11.9" alone, BARE (no
+# parens), on its own text line -- this book's own convention for a genuine display-
+# equation label. Deliberately NOT matching a parenthesized "(3.11.9)": that form is a
+# prose cross-reference ("From (4.24.3) ..."), and one of those can wrap to sit alone on
+# its own line exactly like a real label, colliding with (and silently overwriting) the
+# real 4.24.3 pair's image on disk if allowed to match too. Found on data/raw's page 148.
+eqn_id_pattern: '^(\d{1,2}\.\d{1,2}\.\d{1,3})$'
+
+# What counts as "prose" (bounds a formula's fragment search — see extract_nist_pairs.py
+# docstring for why this matters): a line at least this long whose characters are mostly
+# non-math-font (see MATH_FONT_PREFIXES / _is_prose's math_frac_max — font family and
+# composition, not position, decides this). Lowered from 20: short lead-in phrases right
+# before a display equation ("follows. Write", "Then,") are genuine prose under 20 chars,
+# and were wrongly pulled into a formula's walk at that threshold.
+prose_min_chars: 10
+
+# A fragment more than this far (points) from the last-collected line, in either walk
+# direction, ends the run even without hitting a prose/id boundary -- this book sometimes
+# prints a formula's body just ABOVE its own id, so without a gap check the walk can
+# wander past a short body straight into the START of the NEXT formula's body.
+walk_gap_pt: 16.5
+
+# A formula id is only extracted when ALL of its non-prose neighbor fragments collapse
+# to a single physical text row (see docstring: "single-row-only" rule). This is
+# deliberately conservative — it skips every stacked sum/fraction/matrix display rather
+# than risk emitting a scrambled reading-order crop. Row clustering tolerance:
+row_cluster_tolerance_pt: 3.0
+
+crop_padding_pt: 3.0
+max_body_chars: 150   # longer than this on a single row is almost always two adjacent
+                       # formulas or a mis-clustered line, not one clean pair — drop it.
+
+# Same-row (by y0) fragments whose x-gap exceeds this are NOT joined as one line -- a
+# large gap means something is missing between them (e.g. a bigger fraction/construct
+# that fell outside walk_gap_pt in both directions), not that they're adjacent words.
+# See _row_is_contiguous.
+max_frag_gap_pt: 20.0
