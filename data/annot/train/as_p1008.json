@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p1008",
+  "printed_page": 1008,
+  "chapter_id": "ch27_misc",
+  "baseline_failed": true,
+  "baseline_reason": "empty-or-near-empty",
+  "draft_text": "",
+  "text": "MISCELLANEOUS FUNCTIONS (p.1008)\nTable 27.9.3  (j_1\\ \\tfrac32\\ m_1\\ m_2\\ |\\ j_1\\ \\tfrac32\\ j\\ m)\nj=  m_2=\\tfrac32  m_2=\\tfrac12\nj_1+\\tfrac32  \\sqrt{\\dfrac{(j_1+m-\\tfrac12)(j_1+m+\\tfrac12)(j_1+m+\\tfrac32)}{(2j_1+1)(2j_1+2)(2j_1+3)}}  \\sqrt{\\dfrac{3(j_1+m+\\tfrac12)(j_1+m+\\tfrac32)(j_1-m+\\tfrac32)}{(2j_1+1)(2j_1+2)(2j_1+3)}}\nj_1+\\tfrac12  -\\sqrt{\\dfrac{3(j_1+m-\\tfrac12)(j_1+m+\\tfrac12)(j_1-m+\\tfrac32)}{2j_1(2j_1+1)(2j_1+3)}}  -(j_1-3m+\\tfrac32)\\sqrt{\\dfrac{j_1+m+\\tfrac12}{2j_1(2j_1+1)(2j_1+3)}}\nj_1-\\tfrac12  \\sqrt{\\dfrac{3(j_1+m-\\tfrac12)(j_1-m+\\tfrac12)(j_1-m+\\tfrac32)}{(2j_1-1)(2j_1+1)(2j_1+2)}}  -(j_1+3m-\\tfrac12)\\sqrt{\\dfrac{j_1-m+\\tfrac12}{(2j_1-1)(2j_1+1)(2j_1+2)}}\nj_1-\\tfrac32  -\\sqrt{\\dfrac{(j_1-m-\\tfrac12)(j_1-m+\\tfrac12)(j_1-m+\\tfrac32)}{2j_1(2j_1-1)(2j_1+1)}}  \\sqrt{\\dfrac{3(j_1+m-\\tfrac12)(j_1-m-\\tfrac12)(j_1-m+\\tfrac12)}{2j_1(2j_1-1)(2j_1+1)}}\nj=  m_2=-\\tfrac12  m_2=-\\tfrac32\nj_1+\\tfrac32  \\sqrt{\\dfrac{3(j_1+m+\\tfrac32)(j_1-m+\\tfrac12)(j_1-m+\\tfrac32)}{(2j_1+1)(2j_1+2)(2j_1+3)}}  \\sqrt{\\dfrac{(j_1-m-\\tfrac12)(j_1-m+\\tfrac12)(j_1-m+\\tfrac32)}{(2j_1+1)(2j_1+2)(2j_1+3)}}\nj_1+\\tfrac12  (j_1+3m+\\tfrac32)\\sqrt{\\dfrac{j_1-m+\\tfrac12}{2j_1(2j_1+1)(2j_1+3)}}  \\sqrt{\\dfrac{3(j_1+m+\\tfrac32)(j_1-m-\\tfrac12)(j_1-m+\\tfrac12)}{2j_1(2j_1+1)(2j_1+3)}}\nj_1-\\tfrac12  -(j_1-3m-\\tfrac12)\\sqrt{\\dfrac{j_1+m+\\tfrac12}{(2j_1-1)(2j_1+1)(2j_1+2)}}  \\sqrt{\\dfrac{3(j_1+m+\\tfrac12)(j_1+m+\\tfrac32)(j_1-m-\\tfrac12)}{(2j_1-1)(2j_1+1)(2j_1+2)}}\nj_1-\\tfrac32  -\\sqrt{\\dfrac{3(j_1+m-\\tfrac12)(j_1+m+\\tfrac12)(j_1-m-\\tfrac12)}{2j_1(2j_1-1)(2j_1+1)}}  \\sqrt{\\dfrac{(j_1+m-\\tfrac12)(j_1+m+\\tfrac12)(j_1+m+\\tfrac32)}{2j_1(2j_1-1)(2j_1+1)}}",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "BLANK-SLATE (failures.json: empty-or-near-empty) -- transcribed from the scan. Single table (27.9.3, Clebsch-Gordan coefficients for j_2=3/2, split into two 4x2 halves by m_2), the only content on the page -- transcribed in full."
+}

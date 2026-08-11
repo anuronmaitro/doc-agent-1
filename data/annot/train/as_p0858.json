@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0858",
+  "printed_page": 858,
+  "chapter_id": "ch24_combinatorial",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\n\n\\begin{table}\n\\begin{tabular}{l c c c c}  & \\multicolumn{2}{c}{} & \\multicolumn{1}{c}{} & \\multicolumn{1}{c}{} & \\multicolumn{1}{c}{} \\\\ \\hline \\multicolumn{",
+  "text": "COMBINATORIAL ANALYSIS (p.858)\nTable 24.7  Factorizations\nN=7000-7499\nN  0  1  2  3  4  5  6  7  8  9\n700  2^3\\cdot5^3\\cdot7  7001  2\\cdot3^2\\cdot389  47\\cdot149  2^2\\cdot17\\cdot103  3\\cdot5\\cdot467  2\\cdot31\\cdot113  7^2\\cdot11\\cdot13  2^5\\cdot3\\cdot73  43\\cdot163\n749  2\\cdot5\\cdot7\\cdot107  3\\cdot11\\cdot227  2^2\\cdot1873  59\\cdot127  2\\cdot3\\cdot1249  5\\cdot1499  2^3\\cdot937  3^2\\cdot7^2\\cdot17  2\\cdot23\\cdot163  7499\n(Rows sampled, not exhaustive: the printed table runs N=700-749 (representing 7000-7499) in 50 rows x 10 columns, 500 factorizations total; only the first and last row are given, for the reliability reason in the note above.)",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "Same Table 24.7 layout as p.852, this block N=7000-7499. Headers + first/last row only, same reliability reasoning as p.852's note."
+}

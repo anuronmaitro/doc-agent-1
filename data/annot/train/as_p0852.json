@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0852",
+  "printed_page": 852,
+  "chapter_id": "ch24_combinatorial",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\n\n\\begin{table}\n\\begin{tabular}{c c c c c c c}  & \\multicolumn{4}{c}{**TABLE 24.7**} \\\\ \\multicolumn{1}{c}{**Factorizations**} & \\multicolumn{3}{c}{**4499**} \\\\ \\(\\stackrel{{\\sim}}{{\\simeq}}\\) & **\\%****",
+  "text": "COMBINATORIAL ANALYSIS (p.852)\nTable 24.7  Factorizations\nN=4000-4499\nN  0  1  2  3  4  5  6  7  8  9\n400  2^5\\cdot5^3  4001  2\\cdot3\\cdot23\\cdot29  4003  2^2\\cdot7\\cdot11\\cdot13  3^2\\cdot5\\cdot89  2\\cdot2003  4007  2^3\\cdot3\\cdot167  19\\cdot211\n449  2\\cdot5\\cdot449  3^2\\cdot499  2^2\\cdot1123  4493  2\\cdot3\\cdot7\\cdot107  5\\cdot29\\cdot31  2^4\\cdot281  3\\cdot1499  2\\cdot13\\cdot173  11\\cdot409\n(Rows sampled, not exhaustive: the printed table runs N=400-449 (representing 4000-4499) in 50 rows x 10 columns, 500 factorizations total; only the first and last row are given, for the reliability reason in the note above.)",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "Extremely dense factorization table (Table 24.7, N=4000-4499, 50 rows x 10 columns = 500 individual factorizations). Structural headers + first/last row only -- a smaller sample than data/README.md's usual convention, deliberately: at this column density, reading a MIDDLE row off the scan risks misaligning a digit to the wrong (N, last-digit) cell, which is worse for gold data than a smaller but fully-verified sample."
+}

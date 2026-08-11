@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p1023",
+  "printed_page": 1023,
+  "chapter_id": "ch29_laplace",
+  "baseline_failed": true,
+  "baseline_reason": "empty-or-near-empty",
+  "draft_text": "",
+  "text": "LAPLACE TRANSFORMS (p.1023)\nf(s)  F(t)\n29.3.22  \\frac{s}{(s^2+a^2)^2}  \\frac{t}{2a}\\sin at\n29.3.23  \\frac{s^2}{(s^2+a^2)^2}  \\frac{1}{2a}(\\sin at+at\\cos at)\n29.3.24  \\frac{s^2-a^2}{(s^2+a^2)^2}  t\\cos at\n29.3.25  \\frac{s}{(s^2+a^2)(s^2+b^2)} \\quad (a^2\\neq b^2)  \\frac{\\cos at-\\cos bt}{b^2-a^2}\n29.3.26  \\frac{1}{(s+a)^2+b^2}  \\frac1b e^{-at}\\sin bt\n29.3.27  \\frac{s+a}{(s+a)^2+b^2}  e^{-at}\\cos bt\n29.3.28  \\frac{3a^2}{s^3+a^3}  e^{-at}-e^{\\tfrac12at}\\left(\\cos \\frac{at\\sqrt3}{2}-\\sqrt3\\sin \\frac{at\\sqrt3}{2}\\right)\n29.3.29  \\frac{4a^3}{s^4+4a^4}  \\sin at\\cosh at-\\cos at\\sinh at\n29.3.30  \\frac{s}{s^4+4a^4}  \\frac{1}{2a^2}\\sin at\\sinh at\n29.3.31  \\frac{1}{s^4-a^4}  \\frac{1}{2a^3}(\\sinh at-\\sin at)\n29.3.32  \\frac{s}{s^4-a^4}  \\frac{1}{2a^2}(\\cosh at-\\cos at)\n29.3.33  \\frac{8a^3s^2}{(s^2+a^2)^3}  (1+a^2t^2)\\sin at-at\\cos at\n29.3.34  \\frac1s\\left(\\frac{s-1}{s}\\right)^n  L_n(t) \\quad ^{22}\n29.3.35  \\frac{s}{(s+a)^{\\tfrac32}}  \\frac{1}{\\sqrt{\\pi t}}e^{-at}(1-2at)\n29.3.36  \\sqrt{s+a}-\\sqrt{s+b}  \\frac{1}{2\\sqrt{\\pi t^3}}(e^{-bt}-e^{-at})\n29.3.37  \\frac{1}{\\sqrt s+a}  \\frac{1}{\\sqrt{\\pi t}}-ae^{a^2t} \\mathrm{erfc}\\ a\\sqrt t \\quad ^7\n29.3.38  \\frac{\\sqrt s}{s-a^2}  \\frac{1}{\\sqrt{\\pi t}}+ae^{a^2t} \\mathrm{erf}\\ a\\sqrt t \\quad ^7\n29.3.39  \\frac{\\sqrt s}{s+a^2}  \\frac{1}{\\sqrt{\\pi t}}-\\frac{2a}{\\sqrt\\pi}e^{-a^2t}\\int_0^{a\\sqrt t} e^{\\lambda^2}d\\lambda \\quad ^7\n29.3.40  \\frac{1}{\\sqrt s(s-a^2)}  \\frac1a e^{a^2t} \\mathrm{erf}\\ a\\sqrt t \\quad ^7",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "BLANK-SLATE (failures.json: repetition-degeneration) -- transcribed from the scan. Continuation of the f(s)|F(t) Laplace-transform table, 29.3.22-29.3.40, 19 entries -- transcribed in full, well-spaced single column. Right-margin superscript footnote markers (6, 22, 7) kept inline."
+}

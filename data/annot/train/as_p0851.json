@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0851",
+  "printed_page": 851,
+  "chapter_id": "ch24_combinatorial",
+  "baseline_failed": true,
+  "baseline_reason": "empty-or-near-empty",
+  "draft_text": "",
+  "text": "COMBINATORIAL ANALYSIS (p.851)\nFactorizations\nTable 24.7\nN=3500-3999\n[50 columns, N=350 through 399 (representing 3500-3999), with (it appears) 10 row-groups\nfor the last digit 0-9 -- the same 500-factorization block as pages 852/858/862, but\nprinted with N across the top instead of down the side.]\nTop-left cell (N=350, first row): 2^2\\cdot5^3\\cdot7 \\quad (=3500, verified)\nBottom-right cell (N=399, last row): 3\\cdot31\\cdot43 \\quad (=3999, verified)\n[The remaining ~498 cells are NOT transcribed here -- the transposed layout makes it too\neasy to attribute a correctly-read factorization to the wrong (row, column) pair, which\nwould silently corrupt gold data with no way to catch it the way the arithmetic check\ncaught errors on the other factorization pages. Flagging this as a page that may need a\nsecond annotator with a physical/higher-resolution copy, per the [UNREADABLE] convention's\nspirit in data/README.md -- honest under-transcription over a fabricated risk.]",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "BLANK-SLATE (failures.json: empty-or-near-empty) -- transcribed from the scan. Table 24.7 continues here in a TRANSPOSED layout vs p.852/858/862: N (350-399) runs across as 50 column headers, last-digit (0-9) runs down as row groups -- the opposite orientation, which makes individual mid-table cells much harder to anchor to a specific (row, column) with confidence at this resolution. Given the real misreads already caught (and fixed) on p.852/858/862 using arithmetic verification, this page keeps only the two corner cells that are unambiguous by position -- top-left (N=3500) and bottom-right (N=3999) -- both confirmed against sympy.factorint. Every other cell is left structural rather than guessed."
+}
