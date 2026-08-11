@@ -31,7 +31,7 @@
 - [x] Step 23 — annotate TRAIN B (35) — S2; revised
 - [x] Step 24 — annotate TRAIN C (35) — S3
 - [x] Step 25 — NIST extraction (Stage A pairs) — S1
-- [ ] Step 26 — synthetic degradation pipeline — S2
+- [x] Step 26 — synthetic degradation pipeline — S2
 - [ ] Step 27 — training/ + LoRA adapt — S3
 - [ ] Step 28 — Kaggle: fine-tune + learning curve — S1
 - [ ] Step 29 — final TEST measurement (once) — S2
