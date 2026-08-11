@@ -32,8 +32,8 @@
 - [x] Step 24 — annotate TRAIN C (35) — S3
 - [x] Step 25 — NIST extraction (Stage A pairs) — S1
 - [x] Step 26 — synthetic degradation pipeline — S2
-- [ ] Step 27 — training/ + LoRA adapt — S3
-- [ ] Step 28 — Kaggle: fine-tune + learning curve — S1
+- [x] Step 27 — training/ + LoRA adapt — S1-(modified)
+- [ ] Step 28 — Kaggle: fine-tune + learning curve — S3(modified)
 - [ ] Step 29 — final TEST measurement (once) — S2
 - [ ] Step 30 — Kaggle: re-OCR + rebuild index — S3
 - [ ] Step 31 — notebooks/kb_demo.ipynb — S1
