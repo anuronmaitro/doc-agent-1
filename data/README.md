@@ -185,3 +185,53 @@ in an unnecessary macro would be pure invention). Whoever builds the Stage A + S
 mixture in Step 27 should know Stage A is real, trainable LaTeX-flavored markup for the
 constructs it covers, not a lesser dialect, but it is narrower in scope than Stage B's
 full hand-corrected convention.
+
+## Step 26 — synthetic degradation pipeline (`data/interim/nist_degraded/`, gitignored)
+
+`scripts/degrade_nist_pairs.py` (config: `configs/degradation.yaml`) takes Step 25's 695
+clean NIST crops and makes them look like the 1964 A&S scan, so Step 27/28 can fine-tune
+on formula-level pairs that resemble the real corpus rather than pristine pdfTeX renders.
+**Step 25's output is read-only input here — nothing under `data/annot/nist/` is modified.**
+
+Ops, each randomized per-crop from a seeded RNG (`config seed + pair index` — any single
+crop's result is independently reproducible without re-running the whole set): pad, small
+rotation, elastic warp, Gaussian blur, sensor noise, paper-tone shift, uneven illumination,
+ink bleed/thinning, downsample→upsample, then a final linear calibration of the whole image
+to the measured A&S target mean/contrast.
+
+**Calibration target, independently verified 2026-08-11 (S2):** sampled 15 of the 1082
+rendered `data/pages/*.png`, measured grayscale mean 196.3 / std 32.8 — matches plan.md
+Step 26's stated "~198 / ~32" closely enough to use directly. Full run over all 695 pairs
+lands the degraded set at mean 197.5 / std 31.9 — within ~0.5 of target.
+
+**One design correction made while building this, worth knowing before touching the
+padding logic again:** NIST crops are tightly bound to the formula's own bounding box
+(`crop_padding_pt: 3.0` in `configs/nist_extract.yaml` leaves only a few px), so text
+often sits right at the crop edge. Two padding approaches were tried:
+1. Reflect the crop's own edge pixels (`cv2.BORDER_REFLECT_101`) — assumed the edge was
+   blank background; wrong. It mirrored real glyphs into the margin as garbled duplicate
+   text, caught immediately by rendering the first example.
+2. Flat fill using `target.mean_brightness` (198, the *page-wide* average) — produced a
+   visible two-tone "box" seam, because local paper-white immediately around an isolated
+   formula (measured p90-p99 brightness in whitespace regions of real pages: ~210-219) is
+   measurably lighter than the page-wide mean, which is pulled down by denser ink
+   elsewhere on the page.
+
+Settled on a flat fill at 214 (`padding.fill` in the config, deliberately a *different*
+value from `target.mean_brightness`) — a much more plausible single surface once
+blur/noise/calibration are layered on top, though a faint brightness gradient around the
+original crop's interior is still visible on some examples (see
+`reports/figures/step26_degradation_example_*.png`) — most noticeable on multi-line crops
+with a larger interior area. Not fully eliminated; flagged here rather than papered over,
+in case Step 27/28 see it show up as a systematic edge-of-crop bias in the fine-tune.
+
+**Output:** `data/interim/nist_degraded/images/*.png` (695 degraded crops) +
+`degraded_pairs.jsonl` (same schema as Step 25's `pairs.jsonl`, plus `source_image`) —
+gitignored (`data/interim/` already ignored), reproducible in one seeded run
+(`python scripts/degrade_nist_pairs.py`), so not committed. Only the 3 example
+side-by-side comparisons are committed, to `reports/figures/`.
+
+**Two permanent gaps inherited from Step 25** (not this step's job to fix — see Step 25's
+section above): no stacked sums/integrals/products or radicals anywhere in the 695 pairs,
+and imperfect overline accents on the few pairs that have one. This step only changes how
+the crops *look*; it never touches `text`.
