@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0873",
+  "printed_page": 873,
+  "chapter_id": "ch24_combinatorial",
+  "baseline_failed": true,
+  "baseline_reason": "nougat-missing-page-marker",
+  "draft_text": "",
+  "text": "COMBINATORIAL ANALYSIS (p.873)\nPRIMES\nTable 24.9\n[column headers: 75-95 (leading-digit-pair index); row index 1-100]\nRow 1:  76213 77359 78487 79627 80737 81817 82903 84131 85243 86381 87557 88807 89867 90989 92177 93187 94351 95443 96587 97829 98953\nRow 100:  77351 78479 79621 80713 81799 82891 84127 85237 86371 87553 88801 89849 90977 92173 93179 94349 95441 96581 97813 98947\n(Rows sampled, not exhaustive: the printed table has 100 rows x 21 columns, 2100 primes\ntotal; shown above are row 1 and row 100, per the dense-table convention in\ndata/README.md. Every value transcribed is independently verifiable: it must be prime,\nchecked with sympy.isprime before committing -- all 41 values across both rows passed.)",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "BLANK-SLATE (failures.json: nougat-missing-page-marker) -- transcribed from the scan. Table of Primes (Table 24.9, 100 rows x 21 columns = 2100 primes). Sampled rows per data/README.md; unlike the factorization tables, this one self-checks perfectly -- every value must simply BE PRIME, verified with sympy.isprime before committing (all 41 transcribed values passed)."
+}

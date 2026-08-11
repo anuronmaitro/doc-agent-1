@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p1028",
+  "printed_page": 1028,
+  "chapter_id": "ch29_laplace",
+  "baseline_failed": true,
+  "baseline_reason": "empty-or-near-empty",
+  "draft_text": "",
+  "text": "LAPLACE TRANSFORMS (p.1028)\nf(s)  F(t)\n29.3.107  \\frac{1}{s^2}\\ln(s^2+a^2) \\quad (a>0)  \\frac2a[at\\ln a+\\sin at-at\\, \\mathrm{Ci}(at)] \\quad ^5\n29.3.108  \\ln \\frac{s^2+a^2}{s^2}  \\frac2t(1-\\cos at)\n29.3.109  \\ln \\frac{s^2-a^2}{s^2}  \\frac2t(1-\\cosh at)\n29.3.110  \\arctan \\frac ks  \\frac1t \\sin kt\n29.3.111  \\frac1s \\arctan \\frac ks  \\mathrm{Si}(kt) \\quad ^5\n29.3.112  e^{k^2s^2}\\, \\mathrm{erfc}\\ ks \\quad (k>0) \\quad ^7  \\frac{1}{k\\sqrt\\pi} \\exp\\left(-\\frac{t^2}{4k^2}\\right)\n29.3.113  \\frac1s e^{k^2s^2}\\, \\mathrm{erfc}\\ ks \\quad (k>0) \\quad ^7  \\mathrm{erf} \\frac{t}{2k} \\quad ^7\n29.3.114  e^{ks}\\, \\mathrm{erfc}\\sqrt{ks} \\quad (k>0) \\quad ^7  \\frac{\\sqrt k}{\\pi\\sqrt t(t+k)}\n29.3.115  \\frac{1}{\\sqrt s}\\, \\mathrm{erfc}\\sqrt{ks} \\quad (k\\geq0) \\quad ^7  \\frac{1}{\\sqrt{\\pi t}}u(t-k)\n29.3.116  \\frac{1}{\\sqrt s}e^{ks}\\, \\mathrm{erfc}\\sqrt{ks} \\quad (k\\geq0) \\quad ^7  \\frac{1}{\\sqrt{\\pi(t+k)}}\n29.3.117  \\mathrm{erf} \\frac{k}{\\sqrt s} \\quad ^7  \\frac{1}{\\pi t}\\sin 2k\\sqrt t\n29.3.118  \\frac{1}{\\sqrt s}e^{k^2/s}\\, \\mathrm{erfc} \\frac{k}{\\sqrt s} \\quad ^7  \\frac{1}{\\sqrt{\\pi t}}e^{-2k\\sqrt t}\n29.3.119  K_0(ks) \\quad (k>0) \\quad ^9  \\frac{1}{\\sqrt{t^2-k^2}}u(t-k)\n29.3.120  K_0(k\\sqrt s) \\quad (k>0) \\quad ^9  \\frac{1}{2t} \\exp\\left(-\\frac{k^2}{4t}\\right)\n29.3.121  \\frac1s e^{ks}K_1(ks) \\quad (k>0) \\quad ^9  \\frac1k \\sqrt{t(t+2k)}\n29.3.122  \\frac{1}{\\sqrt s}K_1(k\\sqrt s) \\quad (k>0) \\quad ^9  \\frac1k \\exp\\left(-\\frac{k^2}{4t}\\right)\n29.3.123  \\frac{1}{\\sqrt s}e^{k/s}K_0\\left(\\frac ks\\right) \\quad (k>0) \\quad ^9  \\frac{2}{\\sqrt{\\pi t}}K_0(2\\sqrt{2kt}) \\quad ^9\n29.3.124  \\pi e^{-ks}I_0(ks) \\quad (k>0) \\quad ^9  \\frac{1}{\\sqrt{t(2k-t)}}[u(t)-u(t-2k)]\n29.3.125  e^{-ks}I_1(ks) \\quad (k>0) \\quad ^9  \\frac{k-t}{\\pi k\\sqrt{t(2k-t)}}[u(t)-u(t-2k)]",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "Continuation of the f(s)|F(t) table, 29.3.107-29.3.125, 19 entries -- transcribed in full. From 29.3.112 onward the footnote marker sits between f(s) and F(t) rather than at the right margin (a genuine layout shift on this page, not a transcription choice) -- kept in that position."
+}

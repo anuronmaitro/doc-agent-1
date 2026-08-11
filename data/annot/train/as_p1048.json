@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p1048",
+  "printed_page": 1048,
+  "chapter_id": "ch29_laplace",
+  "baseline_failed": true,
+  "baseline_reason": "empty-or-near-empty",
+  "draft_text": "",
+  "text": "[UNREADABLE] -- page severely under-inked in the original 1964 scan; text does not\nseparate from paper tone even after aggressive contrast/gamma enhancement. Two section\nheadings are faintly legible but not with enough confidence to transcribe as gold:\npossibly \"Notation for Greek Letters\" (left/right two-column index-style layout) and,\nfurther down the page, possibly \"Miscellaneous Notations\". No individual entries,\npage numbers, or symbols could be read reliably. Recommend a second annotator attempt\nthis page against a higher-quality source (e.g. a different scan/printing of NBS AMS-55)\nbefore treating it as permanently blank.",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "BLANK-SLATE (failures.json: empty-or-near-empty) -- and having now inspected the scan directly, this is a genuine SOURCE DEFECT, not an OCR failure: the page is severely under-inked (measured mean pixel value ~190/255 on a page that should be ~198 with real ink strokes at ~45-60; actual ink here barely separates from paper tone at all). Tried percentile contrast stretch, then an additional gamma=0.4 boost, on the full page and a 2x-zoomed crop of the top third -- text remains a gray smudge. Only the two section headings are legible enough to guess at ('Notation for Greek Letters' and 'Miscellaneous Notations', both LOW CONFIDENCE), and even those are marked [UNREADABLE] below rather than asserted as gold, per data/README.md's rule that a wrong guess is worse than an honest gap. This is a genuinely unreadable page for any reader, pretrained or fine-tuned -- worth flagging to the team as a corpus defect, not counted against Step 28/30's fine-tune if it still fails to produce output here."
+}
