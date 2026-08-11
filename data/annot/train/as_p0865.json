@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0865",
+  "printed_page": 865,
+  "chapter_id": "ch24_combinatorial",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\n\n\\begin{tabular}{c c|c|c||c|c|c|c|c||c|c|c|c|c|c|c} \\multicolumn{10}{l}{**Primitive Roots, Factorization of \\(p\\)—1**} & \\multicolumn{1}{c}{**Table 24.8**} \\\\ ",
+  "text": "COMBINATORIAL ANALYSIS (p.865)\nPrimitive Roots, Factorization of p-1\nTable 24.8\ng, G denote the least positive and least negative (respectively) primitive roots of p. \\epsilon denotes whether 10, -10 both or neither are primitive roots.\np  p-1  g  -G  \\epsilon\n1301  2^2\\cdot5^2\\cdot13  2  2  \\pm10\n1303  2\\cdot3\\cdot7\\cdot31  6  2  10\n1307  2\\cdot653  2  3  -10\n1319  2\\cdot659  13  2  -10\n1321  2^3\\cdot3\\cdot5\\cdot11  13  13  -----\n1831  2\\cdot3\\cdot5\\cdot61  3  9  -----\n1847  2\\cdot13\\cdot71  5  2  10\n1861  2^2\\cdot3\\cdot5\\cdot31  2  2  \\pm10\n2377  2^3\\cdot3^3\\cdot11  5  5  -----\n2381  2^2\\cdot5\\cdot7\\cdot17  3  3  -----\n2383  2\\cdot3\\cdot397  5  13  10\n2903  2\\cdot1451  5  2  10\n2909  2^2\\cdot727  2  2  \\pm10\n(Rows sampled, not exhaustive: the printed table lists primes p=1301 up through 2909 across 3 side-by-side blocks; the rows above are the first 5 of block 1, the first 3 of block 2, and the first 3 plus last 2 of block 3, per the dense-table convention in data/README.md.)",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "Continuation of Table 24.8 (Primitive Roots), p=1301-2909, three side-by-side blocks. Sampled rows verified via sympy: p prime and p-1 equals the printed factorization."
+}

@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p0862",
+  "printed_page": 862,
+  "chapter_id": "ch24_combinatorial",
+  "baseline_failed": false,
+  "baseline_reason": null,
+  "draft_text": "\n\n\\begin{table}\n\\begin{tabular}{c c c c c c c c c c}  & \\multicolumn{4}{c}{COMBINATORIAL ANALYSIS} \\\\ \\hline \\multicolumn{1}{c}{Table 24.7} & \\multicolumn{4}{c}{Factorizations} & \\multicolumn{4}{c}{} \\\\\n9000 & & & & & & & & & & & \\\\\n9499 & & & & & & & & & & \\\\\n862 & & & & & & & & & & \\\\ COMBINATORIAL ANALYSIS & & & & & & & & & & \\\\\n862 & & & & & & & & & \\\\ COMBINATORIAL ANALYSIS & & & & & & & & & \\\\ COMBINATORIAL ANALYSIS & & & & & & &",
+  "text": "COMBINATORIAL ANALYSIS (p.862)\nTable 24.7  Factorizations\nN=9000-9499\nN  0  1  2  3  4  5  6  7  8  9\n900  2^3\\cdot3^2\\cdot5^3  9001  2\\cdot7\\cdot643  3\\cdot3001  2^2\\cdot2251  5\\cdot1801  2\\cdot3\\cdot19\\cdot79  9007  2^4\\cdot563  3^2\\cdot7\\cdot11\\cdot13\n949  2\\cdot5\\cdot13\\cdot73  9491  2^2\\cdot3\\cdot7\\cdot113  11\\cdot863  2\\cdot47\\cdot101  3^2\\cdot5\\cdot211  2^3\\cdot1187  9497  2\\cdot3\\cdot1583  7\\cdot23\\cdot59\n(Rows sampled, not exhaustive: the printed table runs N=900-949 (representing 9000-9499) in 50 rows x 10 columns, 500 factorizations total; only the first and last row are given, for the reliability reason in the note above.)",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "Same Table 24.7 layout, this block N=9000-9499. Headers + first/last row only, same reliability reasoning as p.852's note -- verified: every entry re-multiplies to its target number (9000-9009, 9490-9499) via sympy.factorint before committing."
+}
