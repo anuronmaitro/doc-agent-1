@@ -1,0 +1,12 @@
+{
+  "page_id": "as_p1007",
+  "printed_page": 1007,
+  "chapter_id": "ch27_misc",
+  "baseline_failed": true,
+  "baseline_reason": "repetition-degeneration",
+  "draft_text": "",
+  "text": "MISCELLANEOUS FUNCTIONS (p.1007)\nSymmetry Relations\n27.9.13  (j_1j_2m_1m_2|j_1j_2jm)=(-1)^{j_1+j_2-j}(j_1j_2-m_1-m_2|j_1j_2j-m)\n27.9.14  =(j_2j_1-m_2-m_1|j_2j_1j-m)\n27.9.15  =(-1)^{j_1+j_2-j}(j_2j_1m_1m_2|j_2j_1jm)\n27.9.16  =\\sqrt{\\frac{2j+1}{2j_1+1}} (-1)^{j_2+m_2}(jj_2-mm_2|jj_2j_1-m_1)\n27.9.17  =\\sqrt{\\frac{2j+1}{2j_1+1}} (-1)^{j_1-m_1+j-m}(jj_2m-m_2|jj_2j_1m_1)\n27.9.18  =\\sqrt{\\frac{2j+1}{2j_1+1}} (-1)^{j-m+j_1-m_1}(j_2jm_2-m|j_2jj_1-m_1)\n27.9.19  =\\sqrt{\\frac{2j+1}{2j_2+1}} (-1)^{j_1-m_1}(j_1jm_1-m|j_1jj_2-m_2)\n27.9.20  =\\sqrt{\\frac{2j+1}{2j_2+1}} (-1)^{j_1-m_1}(jj_1m-m_1|jj_1j_2m_2)\nTable 27.9.1  (j_1\\ \\tfrac12\\ m_1\\ m_2\\ |\\ j_1\\ \\tfrac12\\ j\\ m)\nj=  m_2=\\tfrac12  m_2=-\\tfrac12\nj_1+\\tfrac12  \\sqrt{\\dfrac{j_1+m+\\tfrac12}{2j_1+1}}  \\sqrt{\\dfrac{j_1-m+\\tfrac12}{2j_1+1}}\nj_1-\\tfrac12  -\\sqrt{\\dfrac{j_1-m+\\tfrac12}{2j_1+1}}  \\sqrt{\\dfrac{j_1+m+\\tfrac12}{2j_1+1}}\nTable 27.9.2  (j_1\\ 1\\ m_1\\ m_2\\ |\\ j_1\\ 1\\ j\\ m)\nj=  m_2=1  m_2=0  m_2=-1\nj_1+1  \\sqrt{\\dfrac{(j_1+m)(j_1+m+1)}{(2j_1+1)(2j_1+2)}}  \\sqrt{\\dfrac{(j_1-m+1)(j_1+m+1)}{(2j_1+1)(j_1+1)}}  \\sqrt{\\dfrac{(j_1-m)(j_1-m+1)}{(2j_1+1)(2j_1+2)}}\nj_1  -\\sqrt{\\dfrac{(j_1+m)(j_1-m+1)}{2j_1(j_1+1)}}  \\dfrac{m}{\\sqrt{j_1(j_1+1)}}  \\sqrt{\\dfrac{(j_1-m)(j_1+m+1)}{2j_1(j_1+1)}}\nj_1-1  \\sqrt{\\dfrac{(j_1-m)(j_1-m+1)}{2j_1(2j_1+1)}}  -\\sqrt{\\dfrac{(j_1-m)(j_1+m)}{j_1(2j_1+1)}}  \\sqrt{\\dfrac{(j_1+m+1)(j_1+m)}{2j_1(2j_1+1)}}",
+  "annotator": "Elias Mainur (2105058)",
+  "annotated_at": "2026-08-11T05:49:41Z",
+  "note": "BLANK-SLATE (failures.json: repetition-degeneration) -- transcribed from the scan. Clebsch-Gordan coefficient symmetry relations 27.9.13-27.9.20, then two small closed-form tables (27.9.1 is 2x2, 27.9.2 is 3x3) -- both transcribed in full since they are small, not the 50-row dense-table case data/README.md's sampling rule targets."
+}
