@@ -1,0 +1,582 @@
+{
+  "stage_a_done": true,
+  "curve_points": {
+    "25": {
+      "done": true,
+      "n_train_pages": 25,
+      "train_elapsed_s": 532.9120802879333,
+      "eval_elapsed_s": 1218.7552893161774,
+      "adapter_dir": "data/models/ocr_lora/curve_n25",
+      "val_metrics": {
+        "n_pages": 20,
+        "n_failed": 7,
+        "failure_rate": 0.35,
+        "mean_char_f1_among_successes": 0.34750061679207,
+        "formula_weighted_exact_match": 0.0,
+        "advanced_construct_mean_f1": 0.31222393148242794,
+        "plain_mean_f1": 0.3886567496533191,
+        "glyph_confusion_spotcheck": {
+          "nu_occurrences_in_gold": 70,
+          "bare_v_occurrences_in_pred": 0,
+          "note": "rough presence-count proxy, not a token-aligned diff -- eyeball per_page below if this looks off"
+        },
+        "hallucinated_vec_pages": 0,
+        "per_page": [
+          {
+            "page_id": "as_p0332",
+            "failed": false,
+            "pred_text": "8. Legendre Functions\nMathematical Properties\nNotation\n8.1. Differential Equation\nThe conventions used are _z=x+iy, z, y_ real, and in particular, x always means a real number in the interval \\(-1\\leq x\\leq+1\\) with cos th=x where th is likewise a real number; n and m are positive integers or zero; n and m are unrestricted except where otherwise indicated.\nOther notations are:\n\nP^n(x) for p^n|Px(x), Q^n(z)-Associated Legendre Functions (Spherical Harmonics) of the First and Second Kinds2\n[arg (z\u00b11)|<=r, |arg z|<=x\n(x^{2}\u22121)^{\\mu}=(z\u22121)^{\\mu}=0, Legendre polynomials, see chapter 22.)\n\nP^n(z)=0, Legendre polynomials, see chapter 22.)\n\nFor (For (a, b; c; z) see chapter 15.)",
+            "char_f1": 0.28763316350162116
+          },
+          {
+            "page_id": "as_p0334",
+            "failed": true,
+            "pred_text": "334 \\((x^{2}-1)\\frac{dP_{p}^{*}(z)}{dz}=(v+\\mu)(v-\\mu+1)(z^{2}-1)!P_{p}^{*-1}(z) = \\frac{(2^{2}-1)^{1/2}\n\n",
+            "failure_reason": "empty-or-near-empty"
+          },
+          {
+            "page_id": "as_p0340",
+            "failed": false,
+            "pred_text": "340  LegendRE FUNCTIONS   n  P_{n,(31415 92654)}  P_{n}(2.6)  0  1  1  1  .31415 92654  2.6  2  -.35195 59340  9.64  3 -.39372 32064  4 -.04750 63122  174.952  8.53 with increasing values of n (calculated from the above)  8.5.3  8.5.\n\n",
+            "char_f1": 0.09745873722818968
+          },
+          {
+            "page_id": "as_p0350",
+            "failed": false,
+            "pred_text": "350  LEGENDRE FUNCTIONS  Table 8.5  LOG=FUNCTO (x)  \\(p_{0}(x)=1\\)  \\(p_{1}(x)=x\\)  \\(p_{2}(x)=p_{3}(x)=p_{4}(x)=p_{5}(x)=p_{6}(x)=p_{7}(x)=p_{8}(x)=p_{9}(x)=p_{10}(x)=p_{11}(x)=p_{12}(x)=p_{13}(x)=p_{14}(x)=p_{15}(x)=p_{16}(x)=p_{17}(x)=p_{18}(x)=p_{19}(x)=p_{20}(x)=p_{21}(x)=p_{22}(x)=p_{23}(x)=p_{24}(x)=p_{25}(x)=p_{26}(x)=p_{27}(x)=p_{28}(x)=p_{29}(x)=p_{3}(x)=p_{4}(x)=p_{5}(x)=p_{6}(x)=p_{7}(x)=p_{8}(x)=p_{9}(x)=p_{10}(x)=p_{2}(x)=p_{3}(x)=p_{4}(x)=p_{5}(x)=p_{6}(x)=p_{7}(x)=p_{8}(x)=p_{9}(x)=p_{10}(x)=p_{11}(x)=p_{12}(x)=p_{13}(x)=p_{14}(x)=p_{15}(x)=p_{16}(x)=p_{17}(x)=p_{18}(x)=p_{19}(x)=p_{20}(x)=p_{21}(x)=p_{23}(x)=p_{3}(x)=p_{4}(x)=p_{5}(x)=p_{6}(x)=p_{7}(x)=p_{8}(x)=p_{9}(x)=p_{10}(x)=p_{11}(x)=p_{12}(x)=p_{13}(x)=p_{14}(x)=p_{15}(x)=p_{16}(x)=p_{17}(x)=p_{18}(x)=p_{19}(x)=p_{20}(x)=p_{21}(x)=p_{21}(x)=p_{22}(x)=p_{3}(x)=p_{4}(x)=p_{5}(x)=p_{6}(x)=p_{7}(x)=p_{8}(x)=p_{9}(x)=p_{10}(x)=p_{12}(x)=p_{23}(x)=p_{14}(x)=p_{15}(x)=p_{16}(x)=p_{17}(x)=p_{18}(x)=p_{19}(x)=p_{20}(x)=p_{21}(x)=p_{21}(x)=p_{22}(x)=p_{3}(x)=p_{4}(x)=p_{5}(x)=p_{6}(x)=p_{7}(x)=p_{8}(x)=p_{9}(x)=p_{10}(x)=p_{11}(x)=p_{12}(x)=p_{23}(x)=p_{13}(x)=p_{14}(x)=p_{15}(x)=p_{16}(x)=p_{17}(x)=p_{18}(x)=p_{19}(x)=p_{21}(x)=p_{22}(x)=p_{3}(x)=p_{4}(x)=p_{5}(x)=p_{6}(x)=p_{7}(x)=p_{8}(x)=p_{9}(x)=p_{10}(x)=p_{1}(x)=p_{23}(x)=p_{24}(x)=p_{3}(x)=p_{4}(x)=p_{5}(x)=p_{6}(x)=p_{7}(x)=p_{8}(x)=p_{9}(x)=p_{10}(x)=p_{1}(x)=p_{1}(x)=p_{25}(x)=p_{1}(x)=p_{26}(x)=p_{3}(x)=p_{4}(x)=p_{5}(x)=p_{6}(x)=p_{7}(x)=p_{8}(x)=p_{9}(x)=p_{10}(x)=p_{1}(x)=p_{1}(x)=p_{2}(x)=p_{3}(x)=p_{4}(x",
+            "char_f1": 0.20909477263068424
+          },
+          {
+            "page_id": "as_p0351",
+            "failed": true,
+            "pred_text": "LEGENDRE FUNCTIONS 351\nDELIVATIVE OF THE LEGENDRE FUNCTION\u2014FIRST KIND \\(P_{i}^{\\prime}(x)\\)Table 8.6\n[ENDFIGURE",
+            "failure_reason": "empty-or-near-empty"
+          },
+          {
+            "page_id": "as_p0438",
+            "failed": false,
+            "pred_text": "438   g=1.2, \\sqrt{n}=0.5, \\sqrt{n}=0.6, \\sqrt{n}=0.7, \\sqrt{n}=0.9, \\sqrt{n}=0.8, \\sqrt{n}=0.9, \\sqrt{n}=0.8, \\sqrt{n}=0.9, \\sqrt{n}=0.8, \\sqrt{n}=0.9, \\sqrt{n}=0.8, \\sqrt{n}=0.9, \\sqrt{n}=0.\n\n",
+            "char_f1": 0.19079497907949794
+          },
+          {
+            "page_id": "as_p0439",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER 439\n\\begin{tabular}{c c} Spherical Bessel Functions of the Second and Third Kind & Modulus and Phase \\\\\n10.1.15 \\(y_{n}(z)=\\left(-1\\right)^{n+1}j_{-n-1}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) & \n\\begin{tabular}{c} \\(j_{n}(z)=\\sqrt{2\\pi/2}M_{n+1}(z)\\cos\\theta_{n+1}(z)\\), \\\\ \\(y_{n}(z)=\\sqrt{2\\pi/2}M_{n+1}(z)\\sin\\theta_{n+1}(z)\\) \\\\ (See 9.2.17.) \\\\\n10.1.27 \\(h^{(1)}_{n}(z)=i\\left(-1\\right)^{n}l^{(1)}_{n}(z)\\) (n=0, 1, 2, \\ldots) & \\begin{tabular}{c} \\(k^{(1)}_{n}(z)=i\\left(-1\\right)^{n}l^{(1)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(2)}_{n}(z)=i\\left(-1\\right)^{n}l^{(2)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(2)}_{n}(z)=i\\left(-1\\right)^{n}l^{(2)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(2)}_{n}(z)=i\\left(-1\\right)^{n}l^{(2)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(2)}_{n}(z):j_{n}(z),\\, y_{n}(z),\\, h^{(1)}_{n}(z),\\, h^{(2)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(1)}_{n}(z)=i\\left(-1\\right)^{n}l^{(1)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(1)}_{n}(z)=i\\left(-1\\right)^{n}l^{(1)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(2)}_{n}(z)=i\\left(-1\\right)^{n}l^{(2)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(1)}_{n}(z)=i\\left(-1\\right)^{n}l^{(1)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(2)}_{n}(z)=i\\left(-1\\right)^{n}l^{(2)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(1)}_{n}(z)=i\\left(-1\\right)^{n}l^{(1)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(1)}_{n}(z)=i\\left(-1\\right)^{n}l^{(1)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \\begin{tabular}{c} \\(k^{(2)}_{n}(z)=i\\left(-1\\right)^{n}l^{(2)}_{n}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\ \\end{tabular} & \n\\begin{tabular}{c} \\(k^{(1)}_{n}(z)=i\\",
+            "char_f1": 0.4444444444444445
+          },
+          {
+            "page_id": "as_p0441",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER\n441 \\(\\beta\\)=\\(\\pi(s+\\frac{1}{2}n-\\frac{1}{2})\\) for \\(a^{\\prime}_{n,\\;s}\\), \\(\\beta\\)=\\(\\pi(s+\\frac{1}{2}n)\\) for \\(b^{\\prime}_{n,\\;s}\\);\n0.1.65  \\(j_{n}(a^{\\prime}_{n,\\;s})\\sim\\sqrt{\\frac{1}{2}\\pi}\\Delta i(a^{\\prime}_{n})(n+ \\frac{1}{2})^{-s/6}\\)  \\(h[(n+1)^{-s/3}a^{\\prime}_{n}]",
+            "char_f1": 0.17569841804106362
+          },
+          {
+            "page_id": "as_p0444",
+            "failed": true,
+            "pred_text": "8.215  (n=0, \\pm 1, \\pm 2, \\ldots)",
+            "failure_reason": "empty-or-near-empty"
+          },
+          {
+            "page_id": "as_p0453",
+            "failed": false,
+            "pred_text": "Recall 2. Compute \\(j_{1s}(x)\\) for x=24.6.\n\nTo compute \\(j_{1s}(x)\\) for x=24.6 by Miller's device, take, for example, \\(N\\)=39 and assume \\(F_{w}\\)=0, \\(F_{sq}\\)=1. Using 10.1.19 with decreasing \\(N\\), i.e., \\(F_{N\\sim 1}[(2N+1)/x]I_{N}\\)=-\\(F_{N\\sim 1}\\), \\(N\\)=39, 38, \\(\\cdot\\) ., 1, 0, generate the sequence \\(F_{N}\\), \\(F_{q}\\), . . . . , \\(F_{1}\\), \\(F_{0}\\), compute from Table 4.6, \\(j_{0}(24.6)\\)=(sin 24.6)/24.6 == .02064 620296, and obtain the factor of proportionality\n\n\\[p\\text{=}j_{0}(24.6)/F_{6}\\text{=}.00000\\ 03839\\ 17642.\\]\n\nThe value \\(pF_{15}\\) equals \\(j_{1s}(24.6)\\) to 8 decimals. The final part of the computations is shown in the following table, in which the correct values are given for comparison.\n\nIt may be observed that the normalization of the sequence \\(F_{N}\\), \\(F_{N\\sim 1}\\), . . ., ., ., . can also be obtained from formula 10.1.50 by computing the sum \\(\\sigma\\text{=}\\sum\\limits_{0}^{n}\\)\\((2k\\text{+}1)F_{k}^{2}\\) and finding \\(p\\text{=}1/\\sqrt{\\sigma}\\). This yields, in the case of the example, \\(p\\text{=}1/\\sqrt{\\sigma}\\text{=}.000000\\ 03839\\ 177\\).\n\nTo compute \\(\\sqrt{\\frac{1}{2}\\pi/x}I_{s\\neq 1}(x)\\), \\(\\sqrt{\\frac{1}{2}\\pi/x}K_{s\\neq 1}(x)\\), \\(n\\text{=}0\\), 1, 2, . ., . for values of z outside the range of Table 10.3, use formulas 10.2.13, 10.2.14 together with 10.2.4 and obtain values for the hyperbolic and exponential functions from Tables 4.4 and 4.15. In those cases when \\(\\sqrt{\\frac{1}{2}\\pi/x}I_{s\\neq 1}(x)\\) and \\(\\sqrt{\\frac{1}{2}\\pi/x}I_{s\\neq 1}(x)\\) are nearly equal, i.e., when \\(x\\) is sufficiently large, compute \\(\\sqrt{\\frac{1}{2}\\pi/x}K_{s\\neq 1}(x)\\) from formula 10.2.15, for which the coefficients \\((n+\\frac{1}{2},k)\\) are given in 10.1.9.\n\nExample 3. Compute \\(\\sqrt{\\frac{1}{2}\\pi/x}I_{s\\neq 1}(x)\\), \\(\\sqrt{\\frac{1}{2}\\pi/x}K_{s\\neq 1}(x)\\) for z=16.2.\n\nFrom 10.2.13, \\(\\sqrt{\\frac{1}{2}\\pi/x}I_{s/2}(x)\\)=\\((3+x^{2})\\) sinh \\(x/x^{2}\\)-3 cosh \\(x/x^{2}\\); from Table 4.4, cosh 16.2=(6)5.4267 59950 and this equals the value of sinh 16.2 to the same number of significant figures. Hence\n\n\\[\\sqrt{\\frac{1}{2}\\pi/16.2}I_{s/2}(16.2) = (.06243\\ 402371\\left.\\begin{matrix} \\\\ \\\\ -.01143\\ 118427\\end{matrix}\\right|(6)5.4267\\ 59950]\\] \\[= 338814.4594\\text{-}62034.29298\\] \\[= 276780.1664.\\]\n\nTo compute \\(\\sqrt{\\frac{1}{2}\\pi/16.2}K_{s/2}(16.2)\\) use 10.2.17 and obtain\n\n\\[\\sqrt{\\frac{1}{2}\\pi/16.2}K_{s/2}(16.2) = \\pi e^{-16.2}\\left[\\frac{1}{32.4}\\text{+}\\frac{6}{(32.4)}\\text{+} \\frac{12}{(32.4)}\\right]\\] \\[= (-7)2.8945\\ 380691.036932\\ 6",
+            "char_f1": 0.6295503211991434
+          },
+          {
+            "page_id": "as_p0459",
+            "failed": true,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER 459\n* SPHERICAL BESSEL FUNCTIONS--ORDERS 3-10Table 10.2\n* (-1)1.681(-2).681(-2).\n\n",
+            "failure_reason": "empty-or-near-empty"
+          },
+          {
+            "page_id": "as_p0505",
+            "failed": true,
+            "pred_text": "13.1.15  y_{4}=z^{1-b}e^{zt}M(1-a, 2-b, -z)\n13.1.15  y_{5}=U(a, b, z)=e^{zt}U(1-a, 2-b, -z)\n13.1.16  y_{6}=z^{1-b}U(1+a-b, 2-b, z)\n13.1.17  y_{6}=z^{1-b}U(1+a-b, 2-b, z)\n13.1.18  y_{7}=e^{zt}U(b-a, b, -z)\n13.1.19  y_{8}=z^{1-b}e^{zt}U(1-a, 2-b, -z)\n13.1.20  W(1, 2)=W(3, 4)=W(1, 4)=W(2, 3)\n13.1.36  Z^{-4}e^{-t/(a)}M(a, b, h(Z))\n13.1.37  Z^{-4}e^{-t/(a)}U(a, b, h(Z))\n13.1.25  W(1, 3)=W(2, 4)=W(5, 6)=W(7, 8)=0\n13.1.26  W(5, 7)=e^{zt}(b-a)^{z}e^{zt}\\begin{pmatrix}&\\text{Number Transformations}\\\\ \\text{Number Transformations}&\\text{13.2.2}\\\\ \\end{pmatrix}\\begin{matrix}\\text{$\\mathbb{P}$}(b-a)\\Gamma(a)\\\\ \\text{$\\mathbb{P}$}(b)\\end{matrix}\\]\n13.1.27  M(a, b, z)=e^{zt}M(b-a, b, -z)\n13.1.28  m^{1}=0^{1}e^{zt}U(1-c)^{-t/(1-c)^{-t/(1-c)^{-t/(1-c)^{-t/(1-c)^{-t/(1-c)^{-t/(1-c)^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}\\end{matrix}\\]\n13.1.28  m^{1}=0^{1}e^{zt}U(1-c)^{-t/(1-c)^{-t/(1-c)^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}\\end{matrix}\\]\n13.1.29  U(a, b, z)=z^{1-b}U(1+a-b, 2-b, z)\n13.1.30  m^{1}=0^{1}e^{zt}U(b-a, b, -z)\n13.1.30  m^{1}=0^{1}e^{zt}U(1-c)^{-t/(1-c)^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}\\end{matrix}\\]\n13.1.31  m^{1}=0^{1}e^{zt}U(1-c)^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}\\end{matrix}\\]\n13.1.32  m^{1}=0^{1}e^{zt}U(1-c)^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}\\end{matrix}\\]\n13.2.7  m^{1}=0^{1}e^{zt}\\begin{pmatrix}e^{zt}e^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}^{-t/(1-c)}\\end{matrix}\\]",
+            "failure_reason": "repetition-degeneration"
+          },
+          {
+            "page_id": "as_p0507",
+            "failed": true,
+            "pred_text": "13.4.6  (a-1 + z)M(a, b, z) + (b \u2212a)M(a \u22121, b, z) + (b \u2212a)M(a, b+1, z) = (b \u2212a)M(a, b \u22121, z) = (b \u22121)M(a, b \u22121, z) = (b \u22121)M(a, b \u22121, z) = (b \u22121)M(a, b \u22121, z) = (b \u22121)M(a, b \u22121, z) = (b \u22121)M(a, b \u22121, z) = (b \u22121)M(a, b \u22121, z) = (b \u22121)M(a, b, z) = (b \u22121)M(a, b \u22121, z) = (b \u22121)M(a, b \u22121, z) = (b \u22121)M(a, b, z) = (b \u22121)M(a, b, z) = (b \u22121)M(a, b, z) = (b \u22121)M(a, b, z) = (b \u22121)M(a, b, z) = (b \u22121)M(a, b, z) = (b \u22121)M(a, b, z) = (b \u22121)M(a, b, z) = (b \u22121)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)M(a, b, z) = (b \u22122)U(a, b, z)",
+            "failure_reason": "repetition-degeneration"
+          },
+          {
+            "page_id": "as_p0509",
+            "failed": true,
+            "pred_text": "If \\(x=(2b-4a)[1+t/(b-2a)^{\\frac{1}{2}}]\\), so that\n13.5.20\nU(a, b, x)=e^{i+a-|x|^{\\frac{1}{2}}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{- \\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}} \\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{- \\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}} \\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{- \\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}} \\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{- \\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}} \\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{- \\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}} \\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{- \\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}} \\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{- \\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}} \\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{- \\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}} \\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{- \\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^{-\\frac{1}{2}} \\Gamma(\\frac{1}{2})^{-\\frac{1}{2}}\\Gamma(\\frac{1}{2})^",
+            "failure_reason": "repetition-degeneration"
+          },
+          {
+            "page_id": "as_p0518",
+            "failed": false,
+            "pred_text": "CONFLUENT DIFFEREOMETRIC FUNCTIONS (a, b, x)\nTable 13.1 CONFLUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nx=0.3\na\\(\\backslash\\)b\n0.1\n0.2\n0.3\n0.4\n0.5\n-1.0\n(0)-2.0000000\n(-1)-5.0000000\n(-1)-5.0000000\n(-1)5.000000000\n(-1)8.91948 91\n(-1)9.07807 88  (-1)9.95645 17\n(-1)9.95485 17\n(-1)9.64133 99\n(-1)9.67839 44\n0.0\n(0)1.00000 00  (0)1.000000 00  (0)1.000000 00  (0)1.000000 00  (0)1.000000 00  (0)1.00421 19\n(0)1.03365 88  (0)1.139672 56  (0)1.33985 88  (0)1.39855 88  (0)1.39855 88  (0)1.\n\n",
+            "char_f1": 0.47237401335761986
+          },
+          {
+            "page_id": "as_p0528",
+            "failed": false,
+            "pred_text": "528   CONPLUENT TYPEGEOMETRIC FUNCTIONS\nTable 13.1\nCONFLUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nx=4.0\na\\b\n0.1\n0.2\n0.3\n0.4\n0.5\n-1.0\n(1)-3.900000 00  (1)-1.900000 00  (1)-1.233333 33  (0)-9.000000 00  (0)-7.000000 00  (0)-5.28985 40  (1)-2.48147 20  (1)-1.55982 88  (1)-1.10723 65  (0)-8.40761 69  (0)-8.8096 57  (1)-1.85166 07  (1)-2.0904 011  (1)-1.43486 25  (1)-2.09014 011  (1)-1.43486 25  (1)-1.05661 02  (1)-2.09014 011  (1)-2.09015 01  (1)-1.11133 79  (0)-1.0928 75  (1)-2.0928 75  (1)-2.0928 75  (1)-1.0928 612  (1)-2.0928 612  (1)-1.\n\n",
+            "char_f1": 0.4981684981684982
+          },
+          {
+            "page_id": "as_p0534",
+            "failed": false,
+            "pred_text": "534   CONFLUENT DIFFEREOMETRIC FUNCTIONS\nTable 18.1   CONFLUENT DIFFEREOMETRIC FUNCTION M(a, b, x)\nx=10.0   a\\backslash b\n0.6  0.7  0.9  1.0  1.0  1.1566666  67  1-1.1566666  67  1-1.1566666  67  1-1.150000  0.8  0.9  2-1.596566  2  2-1.159656  17  1-8.664811  1-6.64811  1-6.64811  1-6.64811  1-6.64821  1-6.\n\n",
+            "char_f1": 0.311614730878187
+          },
+          {
+            "page_id": "as_p0562",
+            "failed": false,
+            "pred_text": "562  **Hypregeometric** FUNCTIONS\n15.4.10  F(a, a+1; c; z)=2^{a+b}(c)^{2}(c)^{3}(d)^{2}(e)^{4}(f)^{2}(g)^{3}(f)^{4}(h)^{2}(h)^{5}(h)^{6}(h)^{7}(h)^{8}(h)^{9}(h)^{10}(h)^{11}(h)^{12}(h)^{13}(h)^{14}(h)^{15}(h)^{16}(h)^{17}(h)^{18}(h)^{19}(h)^{20}(h)^{12}(h)^{13}(h)^{15}(h)^{16}(h)^{18}(h)^{19}(h)^{21}(h)^{22}(h)^{23}(h)^{24}(h)^{25}(h)^{26}(h)^{27}(h)^{28}(h)^{29}(h)^{21}(h)^{22}(h)^{24}(h)^{25}(h)^{26}(h)^{28}(h)^{29}(h)^{22}(h)^{25}(h)^{26}(h)^{28}(h)^{29}(h)^{23}(h)^{25}(h)^{26}(h)^{28}(h)^{29}(h)^{24}(h)^{25}(h)^{26}(h)^{27}(h)^{28}(h)^{29}(h)^{28}(h)^{29}(h)^{25}(h)^{28}(h)^{29}(h)^{29}(h)^{26}(h)^{29}(h)^{28}(h)^{29}(h)^{29}(h)^{29}(h)^{28}(h)^{29}(h)",
+            "char_f1": 0.20922533657029355
+          },
+          {
+            "page_id": "as_p0563",
+            "failed": false,
+            "pred_text": "has three (regular) singular points _z_=0, 1, . The pairs of exponents at these points are\n15.5.2 p_{l}^{(n)}=0,1-c, p_{l}^{(n)}=0,c-a-b, p_{l}^{(n)}=a, b\nrespectively. The general theory of differential equations of the Fuchsian type distinguishes between the following cases.\nA. None of the numbers e, e--a--b; e--b is equal to an integer. Then two linearly independent solutions of 15.5.1 in the neighborhood of the singular points 0, 1, . are respectively\n15.5.3 w_{(i0)}=F(a, b; c; z)=(1-z)^{c-a-b}F(c-a, c-b; c; z)\n15.5.4 w_{(i0)}=x^{i-e}F(a-e+1, b-e+1; z^{-1})=x^{i-e}(1-z)^{c-a-b}F(1-a, c-a; b-a+1; z^{-1})\nThe second set of the above expressions is obtained by applying 15.3.3 to the first set.\n\nAnother set of representations is obtained by applying 15.3.4 to 15.5.3 through 15.5.8. This gives 15.5.9 w_{(i0)}=(1-z)^{-a}F\\left( a, c-b; c;\\frac{z}{z-1}\\right)=(1-z)^{-b}F\\left( b, c-a; c;\\frac{z}{z-1}\\right)\\]\n15.5.10 w_{(i0)}=z^{i-e}(1-z)^{c-a-1}F\\left( a-c+1, 1-b; 2-c;\\frac{z}{z-1}\\right)=z^{i-e}(1-z)^{c-a-b}F\\left( b-c+1, 1-a; 2-c;\\frac{z}{z-1}\\right)\\]\n15.5.11 w_{(i1)}=z^{-a}F(a, a-c+1; a+b-e+1; 1-z^{-1})=z^{-b}F(b, b-c+1; a+b-e+1; 1-z^{-1})\n15.5.12 w_{(i0)}=z^{i-e}(1-z)^{c-a-b}F(c-a, 1-a; c-a-b+1; 1-z^{-1})=z^{i-e}(1-z)^{c-a-b}F(e-b, 1-b; e-a-b+1; 1-z^{-1})\n15.5.13 w_{(i0)}=(z-1)^{-a}F\\left( a, c-b; a-b+1; \\frac{1}{1-z}\\right)=(z-1)^{-b}F\\left( b, c-a; b-a+1; \\frac{1}{1-z}\\right)\\]\n15.5.14 w_{(i0)}=z^{1-e}(z-1)^{c-a-1}F\\left( a-c+1, 1-b; a-b+1; \\frac{1}{1-z}\\right)=z^{i-e}(z-1)^{c-b-1}F\\left( b-c+1, 1-a; b-a+1; \\frac{1}{1-z}\\right)\\]\n15.5.16 w_{(i0)}=F(a, b; 1; z)",
+            "char_f1": 0.6314631463146315
+          },
+          {
+            "page_id": "as_p0564",
+            "failed": false,
+            "pred_text": "564 \\(w=P\\left\\{\\begin{matrix}0&\\infty&1\\\\ \\alpha&\\beta&\\gamma\\\\ \\alpha^{\\prime}&\\beta^{\\prime}&\\gamma^{\\prime}\\end{matrix}\\right.\\)\n\nThe papergeometric function with the (regular) singular points 0, 1, \\(\\infty\\) is a special case of Riemann's differential equation with three (regular) singular points _a, b, c_\n\nThe pairs of the exponents with respect to the singular points _a; b; e_ are \\(\\alpha\\), \\(\\alpha^{\\prime}\\); \\(\\beta\\), \\(\\beta^{\\prime}\\); \\(\\gamma\\), \\(\\gamma^{\\prime}\\) respectively subject to the condition\n\nThe complete set of solutions of 15.6.1 is denoted by the symbol\n\nThe generalized hypergeometric function with the (regular) singular points \\(a\\), \\(b\\), \\(c\\)\n\nThe Legendre functions \\(P^{*}_{\\tau}(z)\\), \\(Q^{*}_{\\tau}(z)\\)",
+            "char_f1": 0.3599874568830354
+          }
+        ]
+      }
+    },
+    "50": {
+      "done": true,
+      "n_train_pages": 50,
+      "train_elapsed_s": 964.3418943881989,
+      "eval_elapsed_s": 1402.6060509681702,
+      "adapter_dir": "data/models/ocr_lora/curve_n50",
+      "val_metrics": {
+        "n_pages": 20,
+        "n_failed": 3,
+        "failure_rate": 0.15,
+        "mean_char_f1_among_successes": 0.4283924906804736,
+        "formula_weighted_exact_match": 0.0,
+        "advanced_construct_mean_f1": 0.45391230112333075,
+        "plain_mean_f1": 0.391935618619249,
+        "glyph_confusion_spotcheck": {
+          "nu_occurrences_in_gold": 179,
+          "bare_v_occurrences_in_pred": 0,
+          "note": "rough presence-count proxy, not a token-aligned diff -- eyeball per_page below if this looks off"
+        },
+        "hallucinated_vec_pages": 0,
+        "per_page": [
+          {
+            "page_id": "as_p0332",
+            "failed": false,
+            "pred_text": "8. Legendre Functions\nMathematical Properties\nNotation\nThe conventions used are z=x+iy, x, y real, and in particular, x always means a real number in the interval -1\\leq r\\leq+1 with cos th=x where th is likewise a real number; n and m are positive integers or zero; n and m are unrestricted except where otherwise indicated.\nOther notations are:\nP^n(x) for p^n|P_n(x)\nP_n(x) for (-1)^nP^m(x)\nT^m(x) for (-1)^nP^m(x)\nP^m(x) for (-1)^nsqrt(2n+1)(n-m)! P^m(x)\nPx(z) for P^m(x), 0x's(z) for 0x'(z)\n[Rx>1]\nC^n(z) for e^n'iQ^n(z)\nQ^n(z) for sin (n+u)n\n[Qx(z) for Esin (n+u)n]\n[Qx(z) for Esin (n+u)n]\n",
+            "char_f1": 0.2791461412151067
+          },
+          {
+            "page_id": "as_p0334",
+            "failed": false,
+            "pred_text": "334 |Legendre functions\n8.5.2  (z^{2}-1)\\frac{dP_{\\tau}^{n}(z)}{dz}=(v+\\mu)(v-\\mu+1)(z^{2}-1)!P_{\\tau}^{n-1}(z)  |Varying Degree\n8.5.3  (v-\\mu+1)P_{\\tau}^{n}(z)=(2v+1)zP_{\\tau}^{n}(z)-(v+\\mu)P_{\\tau}^{n}(z)  |S.5.4  (z^{2}-1)\\frac{dP_{\\tau}^{n}(z)}{dz}=vzP_{\\tau}^{n}(z)-(v+\\mu)P_{\\tau}^{n}(z)\n8.6.1  (Ying Order and Degree\n8.5.5  \\begin{array}{l}P_{\\tau+1}^{n}(z)=P_{\\tau-1}^{n}(z)+(2v+1)(z^{2}-1)!P_{\\tau}^{n}-1(z)\n8.6.1  (x=0)\n8.6.1  (y=0)\n8.6.2  (z^{2}-1)\\cos\\,[\\tfrac{1}{2}\\pi(v+\\mu)]\\Gamma(\\tfrac{1}{2}v+\\tfrac{1}{2}\\mu+1)/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}\\mu+1)\n8.6.3  (z^{2}-1)\\frac{dP_{\\tau}^{n}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}\\mu+1)\\)\n8.6.4  (z^{2}-1)\\frac{dP_{\\tau}^{n}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}\\mu+1)\\)\n8.6.5  (z^{2}-1)\\frac{dP_{\\tau}^{n}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}\\mu+1)\\)\n8.6.5  (z^{2}-1)\\frac{dP_{\\tau}^{n}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}\\mu+1)\\)\n8.6.7  (z^{2}-1)\\frac{dP_{\\tau}^{n}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}\\mu+1)\\)\n8.6.5  (z^{2}-1)\\frac{dP_{\\tau}^{n}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}\\mu+1)\\)\n8.6.8  (z^{2}-1)^{n}\\frac{d^{n}P_{\\tau}(z)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}\\mu+1)\\)\n8.6.9  (z^{2}-1)^{n}\\frac{d^{n}Q_{\\tau}(z)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)\\)\n8.6.10  (z^{2}-1)^{n}\\frac{d^{n}Q_{\\tau}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)\\)\n8.6.11  (z^{2}-1)^{n}\\frac{d^{n}Q_{\\tau}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)\\)\n8.6.12  (z^{2}-1)^{n}\\frac{d^{n}Q_{\\tau}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)\\)\n8.6.13  (z^{2}-1)^{n}\\frac{d^{n}Q_{\\tau}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)\\)\n8.6.14  (z^{2}-1)^{n}\\frac{d^{n}Q_{\\tau}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)\\)\n8.6.15  (z^{2}-1)^{n}\\frac{d^{n}Q_{\\tau}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)\\)\n8.6.16  (z^{2}-1)^{n}\\frac{d^{n}Q_{\\tau}(0)}{dz}=\\tfrac{1}{2}\\pi(v-\\mu+1)\\)",
+            "char_f1": 0.5333333333333333
+          },
+          {
+            "page_id": "as_p0340",
+            "failed": false,
+            "pred_text": "340  LEGENDRE FUNCTIONS   n  P_n(.31415 92654)  \\text{P}_n(.31415 92654)  \\text{Q}_n(.31415 92654)  \\text{Q}_n(.31415 92654)\n\nComputing P_n(x) using Table 22.9 carrying ten significant figures, P_n(.31415 92654)=-.256T7 2933 and P_n(.6)=78402.55526.\n\nComputation of Q_n(x)\nFor x<1, use of 8.5.3 for increasing values of n leads to very little loss of significant figures. However, for x>1, the recurrence relation 8.5.3 should be used only for decreasing values of n, after having first obtained Q_n_ using the formulas in terms of hypergeometric functions.\n\nExample 2: Compute Q_n(x) for x=.31415 92654 and n=0(1)4.\n\nUsing the results of Example 1 together with 8.6.19, we find Q_n(x)=12P_n(x)ln(1+x)-W_n(x) where W_n=\\frac{7}{4}P_n+\\frac{1}{3}P_1, giving Q_n(.31415 92654)=.59974 26989.\n\n## References\n\n* [8.1] A. Erddyi et al., Higher transcendental functions, vol. 1, ch. 3 (McGraw-Hill Book Co., Inc., New York, N.Y., 1953).\n* [8.2] E. W. Hobson, The theory of spherical and ellipsoidal harmonics (Chelsea Publishing Co., New York, N.Y., 1955).\n* [8.3] J. Lense, Kugelfunktionen (Akademische Verlagsgesellschaft, Leipzig, Germany, 1950).\n* [8.4] T. M. MacRobert, Spherical harmonics, 2d rev. ed. (Dover Publications, Inc., New York, N.Y., 1948).\n* [8.5] W. Magnus and F. Oberhettinger, Formulas and theorems for the special functions of mathematical physics (Chelsea Publishing Co., New York, N.Y., 1949).\n* [8.6] G. Prasad, A treatise on spherical harmonics and the functions of Bessel and Lam\u00e9, Part II (Advanced) (Mahamandal Press, Benares City, India, 1932).\n\nExample 3: Compute Q_n(x) for x=2.6. Ten terms in the series for \\(F\\left(\\frac{v+2}{2},\\frac{v+1}{2};v+\\frac{3}{2};\\frac{1}{2^{2}}\\right)\\) of 8.1.3 are necessary to obtain nine significant figures giving Q_n(2.6)=4.8182 4468\\times 10^{-8}. Using 8.5.3 with increasing values of n carrying ten significant figures we obtain\n\n\\begin{tabular}{c c c}  & \\text{P}_n(.31415 92654) & \\text{Q}_n(2.6) \\\\  \\text{Q}_n(.31415 92654) & 0 .40546 51081 \\\\  \\text{Q}_n(x) & 0 .05420 928 \\\\  \\text{Q}_n(.31415 92654) & 0 .00868 364 \\\\  \\text{Q}_n(.31415 92654) & 0 .00148 95 \\\\  \\text{Q}_n(.31415 92654) & 0 .0004 81 \\\\ \\end{tabular}\nwhere Q_0 and Q_i are obtained using 8.4.2 and 8.4.4.\n\nFor all values of z, P_n(x) and Q_n(x) are most easily computed by means of 8.13.\n\nExample 4: Compute Q_n(x) for x=2.6. Using 8.13.3 and interpolating in Table 17.1 for X(.5), we find\n\n\\begin{tabular}{c c}  & \\text{P}_n(.31415 92654) \\\\  \\text{Q}_n(.32515 34813) \\\\  \\text{Q}_n(.31415 92654) = (.74535 59925)(1.90424 1417) \\\\  \\text{Q}_n(.59974 26989) \\\\ \\end{tabular} On the other hand, at least nine terms in the expansion of \\(F\\left(\\frac{v+2}{2},\\frac{v+1}{2};v+\\frac{3}{2};\\frac{1}{2^{2}}\\right)\\) of 8.1.3 are necessary to obtain comparable accuracy.\n\n## References\n\n* [8.7] L. Robin, Fonctions spheriques de Legendre e fonctions spheroidales. Tome I, II, III (Gauthier-Villars, Paris, France, 1957).\n* [8.8] C. Snow, Hypergeometric and Legendre functions with applications to integral equations of potential theory, NBS Applied Math. Series 19",
+            "char_f1": 0.5644724977457168
+          },
+          {
+            "page_id": "as_p0350",
+            "failed": false,
+            "pred_text": "350  LEGENDRE FUNCTIONS  Table 8.5\nLEGENDRE FUNCTION\u2014FIRST KIND P_{n}(x)\nP_{0}(x)=1  P_{1}(x)=x\nx\nPx(x)\nPx2(x)\nPx3(x)\nPx4(x)\nPx5(x)\nPx6(x)\nPx7(x)\nPx8(x)\nPx9(x)\nPx10(x)\n",
+            "char_f1": 0.2857142857142857
+          },
+          {
+            "page_id": "as_p0351",
+            "failed": false,
+            "pred_text": "LEGENDRE FUNCTIONS (p.1)\nTable 8.6\nColumbia Unity. Press, N.Y., 1945 (with permission).\nSample rows: (p.2), p.300, p.400, p.500, p.600, p.700, p.800, p.900, p.\n\n",
+            "char_f1": 0.23176823176823175
+          },
+          {
+            "page_id": "as_p0438",
+            "failed": false,
+            "pred_text": "438  pESSEL FUNCTIONS OF FRACTIONAL ORDER\n10.1.10   j_{n}(z)=f_{n}(z)\\sin z+(-1)^{n+1}f_{-n-1}(z)\\cos z\\times f_{0}(z)=z^{-1}, f_{1}(z)=z^{-2}, f_{n-1}(z)+f_{n+1}(z)=(2n+1)z^{-1}f_{n}(z)\\times f_{n}(n=0,\\pm 1,\\pm 2,\\ldots)\\] The Functions j_{n}(z), y_{n}(z) for n=0, 1, 2\n10.1.11  j_{0}(z)=\\frac{\\sin z}{z}\\times j_{1}(z)=\\frac{\\sin z}{z^{2}}\\times\\frac{\\cos z}{z}\\times j_{2}(z)=\\left(\\frac{3}{z^{2}}\\frac{1}{z}\\right)\\sin z\\times-\\frac{3}{z^{2}}\\cos z\\times 10.1.12   y_{0}(z)=-j_{-1}(z)=-\\frac{\\cos z}{z}\\times y_{1}(z)=j_{-2}(z)=-\\frac{\\cos z}{z^{2}}\\times\\frac{\\sin z}{z}\\times y_{2}(z)=-j_{-3}(z)=\\left(-\\frac{3}{z^{2}}+\\frac{1}{z}\\right)\\cos z\\times-\\frac{3}{z^{2}}\\sin z\\times 10.1.13   j_{n}(z)=\\frac{z^{n}}{2^{n+1}n}\\int_{0}^{\\pi}\\cos(z\\cos\\theta)\\sin^{n+1}\\theta d\\theta\\) (See 9.1.20.)  10.1.14  =\\frac{1}{2}(-i)^{n}\\int_{0}^{\\pi}e^{tx\\cos\\theta}P_{n}(\\cos\\theta)\\sin\\theta d\\theta\\) (n=0, 1, 2, \\ldots)",
+            "char_f1": 0.8408728046833422
+          },
+          {
+            "page_id": "as_p0439",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER 439\nColumns: \n\\begin{tabular}{}\n**Supplemental Bessel Functions of the Second and Third Kind**\n10.1.15 \\(y_{n}(z)=(-1)^{n+1}j_{-n-1}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) \\\\\n10.1.16 \\(h_{n}^{(0)}(z)=i^{n-1}z^{-1}e^{t\\frac{n}{2}}\\sum\\limits_{0}^{n}\\left(n+1/2,k\\right)\\left(-2iz\\right)^{-k}\\) (10.1.17 \\(h_{n}^{(0)}(z)=i^{n+1}z^{-1}e^{t\\frac{n}{2}}\\sum\\limits_{0}^{n}\\left(n+1/2,k\\right)\\left(2iz\\right)^{-k}\\) (10.1.18 \\(h_{n-1}^{(1)}(z)=i\\left(-1\\right)^{n}h_{n}^{(1)}(z)\\) (n=0, 1, 2, \\ldots) ) \\\\\n**Elementary Properties**\n\nRecurrence Relations \\(f_{n}(z):j_{n}(z),\\ y_{n}(z),\\ h_{n}^{(0)}(z),\\ h_{n}^{(1)}(z),\\ h_{n}^{(2)}(z)\\) (n=0, \\pm 1, \\pm 2, \\ldots) (n=0, \\pm 1, \\pm 2, \\ldots) (n=0, \\pm 1, \\pm 2, \\ldots) (n=0, \\pm 1, \\pm 2, \\ldots) (n=0, \\pm 1, \\pm 2, \\ldots) (n=0, \\pm 1, \\pm 2, \\ldots) (n=0, \\pm 1, \\pm 2, \\ldots) (n=0, \\pm 1, \\pm 2, \\ldots) (n=0, \\pm 1, \\pm 2, \\ldots) (n=1, \\pm 1, \\pm 2, \\ldots) (n=0, \\pm 1, \\pm 2, \\ldots) (n=1, \\pm 2, \\ldots) \\\\\n**Rayleigh's Formulas**\n10.1.25 \\(j_{n}(z)=z^{n}\\left(-\\frac{1}{z}\\frac{d}{dz}\\right)^{n}\\sin z\\) (10.1.26 \\(y_{n}(z)=-z^{n}\\left(-\\frac{1}{z}\\frac{d}{dz}\\right)^{n}\\cos z\\) (n=0, 1, 2, \\ldots) (n=0, 1, 2, \\ldots) (n=0, 1, \\pm 2, \\ldots) (n=0, 1, \\pm 2, \\ldots) (n=0, 1, \\pm 2, \\ldots) (n=0, 1, \\pm 2, \\ldots) (n=0, 1, \\pm 2, \\ldots) (n=0, 1, \\pm 2, \\ldots) (n=0, 1, \\pm 2, \\ldots) (n=0, 1, \\pm 2, \\ldots) (n=0, 1, \\pm 2, \\ldots)",
+            "char_f1": 0.45949335339854525
+          },
+          {
+            "page_id": "as_p0441",
+            "failed": true,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER\n441 \\beta=\\pi(s+\\frac{1}{2}n-\\frac{1}{2})\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)\\) for b'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)/(n+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)/(n+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)/(n+\\frac{1}{2}n)\\) for b'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)/(n+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)/(n+\\frac{1}{2}n)\\) for b'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)/(n+\\frac{1}{2}n)\\) for a'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)/(n+\\frac{1}{2}n)\\) for b'_{n, n}, \\beta=\\pi(s+\\frac{1}{2}n)/(n+\\frac{1}{2}n)\\) for a'_{",
+            "failure_reason": "repetition-degeneration"
+          },
+          {
+            "page_id": "as_p0444",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.444)\nColorectal Spherical Bessel Functions of the Third Kind\n10.2.15\n\\sqrt{3\\pi/z}K_{n+1}(z)=\\frac{1}{2}\\pi ie^{(n+1)+r/l}h_{n}^{(1)}(ze^{-1|r|})\n((1/2\\pi/2)e^{-z}\\sum\\limits_{0}^{n}\\left(n+\\frac{1}{2},k\\right)(2z)^{-k}\\)\n10.2.16\n\\(K_{n+1}(z)=K_{-n-1}(z)\\)\n(n=0, 1, 2, \\ldots)\nThe Functions\\sqrt{3\\pi/z}K_{n+1}(z),n=0, 1, 2\n10.2.17\n\\sqrt{3\\pi/z}K_{1/2}(z)=(\\frac{1}{2}\\pi/2)e^{-z}\\)\n(n=0, \\pm 1, \\pm 2, \\ldots)\n10.2.18\nf_{n-1}(z)-f_{n+1}(z)=(2n+1)2^{-1}f_{n}(z)\n10.2.19\nnf_{n-1}(z)+(n+1)f_{n+1}(z)=(2n+1)\\frac{d}{dz}f_{n}(z)\n10.2.20\n\\frac{n+1}{z}f_{n}(z)+\\frac{d}{dz}f_{n}(z)=f_{n-1}(z)\n(See 10.2.22.)\n10.2.21\n-\\frac{n}{z}f_{n}(z)+\\frac{d}{dz}f_{n}(z)=f_{n+1}(z)\n(See 10.2.23.)\nDifferentiation Formulas\nf_{n}(z):\\sqrt{3\\pi/2}I_{n+1}(z),(-1)^{n+1}\\sqrt{3\\pi/2}K_{n+1}(z)\n(n=0, \\pm 1, \\pm 2, \\ldots)\n10.2.22\n(1/2\\frac{d}{dz})^{m}[s^{n+1}f_{n}(z)]=z^{n-m+1}f_{n-m}(z)\n10.2.23\n(1/2\\frac{d}{dz})^{m}[s^{-1}f_{n}(z)]=z^{-n-m}f_{n+m}(z)\n(m=1, 2, 3, \\ldots)",
+            "char_f1": 0.6729788783685361
+          },
+          {
+            "page_id": "as_p0453",
+            "failed": true,
+            "pred_text": "\\frac{p(x)}{p(x)}=1/\\sqrt{x^{2}}\\).\n\n[MISSING_PAGE_POST]\n\n",
+            "failure_reason": "nougat-missing-page-marker"
+          },
+          {
+            "page_id": "as_p0459",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.1)\n459\nSPHERICAL BESSEL FUNCTIONS--ORDERS 3-10Table 10.2\nColumns: \\(x,y,z,\\lambda,\\mu,\\nu=\\mu^{2}/\\mu^{2}\\)",
+            "char_f1": 0.17459080280592362
+          },
+          {
+            "page_id": "as_p0505",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS 505 |\n13.1.15  y_{4}=z^{-b}e^{2}M(1-a,2-b,-z) | W(1,2)=W(3,4)=W(1,4)=W(1,6)=W(2,8)=W(1,7)=W(2,9)=W(3,1)=W(4,1)=W(5,1)=W(6,1)=W(7,1)=W(8,1)=W(9,1)=W(10,1)=W(11,1)=W(12,1)=W(13,1)=W(14,1)=W(15,1)=W(16,1)=W(17,1)=W(18,1)=W(19,1)=W(12,1)=W(13,1)=W(14,1)=W(15,1)=W(16,1)=W(17,1)=W(18,1)=W(19,1)=W(19,2)=W(20,2)=W(21,2)=W(22,2)=W(23,2)=W(24,2)=W(25,2)=W(26,2)=W(27,2)=W(28,2)=W(29,2)=W(21,2)=W(22,2)=W(23,2)=W(24,2)=W(25,2)=W(26,2)=W(27,2)=W(28,2)=W(29,2)=W(21,2)=W(22,2)=W(23,2)=W(24,2)=W(25,2)=W(26,2)=W(27,2)=W(28,2)=W(29,2)=W(21,2)=W(22,2)=W(23,2)=W(24,2)=W(25,2)=W(26,2)=W(27,2)=W(28,2)=W(29,2)=W(21,2)=W(22,2)=W(23,2)=W(24,2)=W(25,2)=W(26,2)=W(27,2)=W(28,2)=W(29,2)=W(21,2)=W(22,2)=W(22,2)=W(23,2)=W(24,2)=W(25,2)=W(26,2)=W(27,2)=W(28,2)=W(29,2)=W(29,2)=W(21,2)=W(22,2)=W(22,2)=W(23,2)=W(24,2)=W(25,2)=W(26,2)=W(27,2)=W(28,2)=W(29,2)=W(29,2)=W(21,2)=W(22,2)=W(22,2)=W(23,2)=W(24,2)=W(25,2)=W(26,2)=W(27,2)=W(28,2)=W(29,2)=W(29,2)=W(21,2)=W(22,2)=W(22,2)=W(23,2)=W(24,2)=W(25,2)=W(26,2)=W(27,2)=W(28,2)=W(29,2)=W(29,2)=W(21,2)=W(22,2)=W(22,2)=W(2",
+            "char_f1": 0.22288992078667033
+          },
+          {
+            "page_id": "as_p0507",
+            "failed": false,
+            "pred_text": "CONFLUENCE CONFLUENCE FOR 13.4.6  (a-1+z)M(a, b, z) + (b-a)M(a-1, b, z) + (1-b)M(a, b-1, z) = 0\n13.4.7  (b-a)M(a, b, z) + (b-a)M(a, b, z) = (b-1)M(a, b, z) = (b-1)M(a, b, z) = (b-1)M(a, b, z) = (b-2a-z)U(a, b, z) U(a-1, b, z) = (b-2a-z)U(a, b, z) U(a-1, b, z) = (b-2a-z)U(a, b, z) U(a-1, b, z) = (b-2a-z)U(a, b, z) U(a-1, b, z) = (b-2a-z)U(a, b, z) U(a-1, b, z) = (b-2a-z)U(a, b, z) U(a-1, b, z) U(a-1, b, z) U(a-1, b, z) U(a-1, b, z) U(a-1, b,",
+            "char_f1": 0.3363711681855841
+          },
+          {
+            "page_id": "as_p0509",
+            "failed": false,
+            "pred_text": "(2b-4a) \\ln x=(2b-4a)/(2b-4a)\nCONFLUENT HYPEPEGGOMETRIC FUNCTIONS\n509\nIf x=(2b-4a)[1+t/(b-2a)^{\\frac{n}{2}}], so that\n13.5.19\nM(a, b, z)=e^{\\frac{n}{2}}(b-2a)^{\\frac{1}{2}}\\Gamma(b)[\\text{Ai}(t)\\cos(a\\pi)\\times\\left[\\sin(a\\pi)+O(|\\tfrac{1}{2}b-a|^{-1})\\right]\\]\n13.5.20\nU(a, b, z)=e^{\\frac{n}{2}}(\\frac{n!}{2n+1})^{-n}H_{\\infty n+1}(z)\\)\nU(1+n)e^{\\frac{n}{2}}(\\frac{n!}{2n+1})^{-n}H_{\\infty n+1}(z)\\)\nU(1+n)e^{\\frac{n}{2}}(\\frac{n!}{2n+1})^{-n}H_{\\infty n+1}(z)\\)\nU(1+n)e^{-\\frac{n}{2}}(\\frac{n!",
+            "char_f1": 0.2418470418470418
+          },
+          {
+            "page_id": "as_p0518",
+            "failed": true,
+            "pred_text": "CONFLUENT DIFFEREOOMETRIC FUNCTIONS (p.18)\n\n[MISSING_PAGE_POST]\n\n",
+            "failure_reason": "nougat-missing-page-marker"
+          },
+          {
+            "page_id": "as_p0528",
+            "failed": false,
+            "pred_text": "528   CONPLUENT TYPEREGOMETRIC FUNCTIONS\nTable 13.1  CONPLUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nx=4.0\na\\b\n0.1\n0.2\n0.3\n0.4\n0.5\n-1.0\n(1)-3.900000 00  (1)-1.900000 00  (1)-1.233333  (0)-9.000000  (0)-7.000000 00  (0)-7.000000 00  (1)-2.48147 20  (1)-1.55982 88  (1)-1.10723 65  (0)-8.40761 69  (0)-8.40761 69  (0)-8.0867 57  (1)-1.85166 07  (1)-2.0904 011  (1)-1.43486 25  (1)-2.09014 011  (1)-2.09015 011  (1)-1.11333 79  (0)-1.0928 75  (1)-2.25456 24  (1)-2.0126 30  (1)-1.35254 14  (0)-9.36252 11  (1)-2.0126 30  (1)-1.35254 14  (0)-9.36252 11  (1)-2.73610 36  (1)-1.57295 45  (1)-1.02255 01  (0)-7.11353 67  (0)-7.11353 67  (0)-7.76752 93  (1)-1.58055 26  (0)-8.86027 55  (0)-5.58125 37  (0)-3.73199 87  0.0\n(0)+1.000000 00  (0)+1.\n\n",
+            "char_f1": 0.5132743362831859
+          },
+          {
+            "page_id": "as_p0534",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.1)\nTable 13.1 CONFLIUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nx=10.0\na\\backslash b\n0.1\n0.3\n0.4\n0.5\n-1.0\n(1)-9.900000 00  (1)-4.900000 0.8\n(2)-3.256572 95  (3)-1.04774 98  (2)-5.63504 48  (1)-2.400000 00  (1)-1.900000 00  (1)-1.900000 00  (2)-3.45535 97  (2)-2.28812 39  (3)-1.04774 98  (2)-3.45535 97  (2)-3.45535 97  (2)-5.14535 92  (4)-1.04716 94  (2)-5.14716 94  (2)-5.14716 94  (2)-5.14716 94  (2)-5.14716 94  (2)-5.14716 94  (2)-5.14716 94  (2)-5.14716 94  (2)-5.28873 98  (3)-1.48115 95  (4)-2.20264 66  (4)1.51374 58  (4)1.09611 92  (3)8.02783 98  (3)5.99449 62  (4)2.20264 66  0.7\n(0)+1.00000 00  (0)+1.51668 83  (3)8.58922 62  (4)1.55166 83  (3)8.599449 62  (4)1.55174 366  (4)1.15166 83  (3)8.58922 66  (4)1.160942 26  (4)1.19892 63  (4)4.23152 76  (4)2.20264 66  (4)1.60910 69  (4)4.220264 66  (4)1.60910 69  (4)2.20264 66  (4)1.16091 69  (4)2.20264 66  (4)1.53174 58  (4)1.09611 92  (3)8.02783 98  (3)5.99449 62  0.7\n(0)+1.00000 00  (0)+1.51668 83  (3)8.58922 62  (4)1.55166 83  (3)8.599449 62  0.9\n(0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.000000 00  (0)+1.\n\n",
+            "char_f1": 0.5151793928242869
+          },
+          {
+            "page_id": "as_p0562",
+            "failed": false,
+            "pred_text": "15.4.10  F(a, a+b+1; c; z)=2^{\\alpha-1}\\Gamma(c)2^{\\beta-1}\\Gamma(1-z)^{\\alpha-4}\\Gamma(1-x)^{\\beta-1}\\Gamma(1-z)^{\\gamma-3}\\Gamma(1-x)^{\\gamma-4}\\Gamma(1-x",
+            "char_f1": 0.07447864945382324
+          },
+          {
+            "page_id": "as_p0563",
+            "failed": false,
+            "pred_text": "363\nHYPERGEOMETRIC FUNCTIONS (p.1, p.2)\n563\nhas three (regular) singular points \\(z = 0, 1, \\infty\\). The pairs of exponents at these points are\n15.5.2\np_{i,1}^{(n)}=0,1-c,\np_{k,2}^{(n)}=0,c-a-b,\np_{k,3}^{(n)}=a,b\nrespectively. The general theory of differential equations of the Fuchsian type distinguishes between the following cases.\nA. None of the numbers c, e-a-b; c-b is equal to an integer. Then two linearly independent solutions of 15.5.1 in the neighborhood of the singular points 0, 1, \\infty\\) are respectively\n15.5.3\nw_{(10)}=F(a, b; c; z)=(1-z)^{c-a-b}F(c-a, c-b; c; z)\n15.5.4\nw_{(20)}=z^{1-c}F(a-c+1, b-c+1; \\;2-c; z)=z^{1-c}(1-z)^{c-a-b}F(1-a, 1-b; \\;2-c; z)\n15.5.5\nw_{(10)}=F(a, b; a+b+1-c; \\;1-z)=z^{1-c}F(1+b-c, \\;1+a-c; a+b+1-c; \\;1-z)\n15.5.6\nw_{(20)}=(1-z)^{c-a-b}F(c-b, c-a; c-a-b+1; \\;1-z)=z^{1-c}(1-z)^{c-a-b}F(1-a, 1-b; c-a-b+1; \\;1-z)\n15.5.7\nw_{(10)}=z^{a}F(a, a-c+1; a-b+1; \\;z^{-1})=z^{2-c}(z-1)^{c-a-b}F(1-b, c-b; a-b+1; \\;z^{-1})\n15.5.8\nw_{(20)}=z^{-b}F(b, b-c+1; b-a+1; \\;z^{-1})=z^{a-c}(z-1)^{c-a-b}F(1-a, c-a; b-a+1; \\;z^{-1})\nThe second set of the above expressions is obtained by applying 15.3.3 to the first set.\nAnother set of representations is obtained by applying 15.3.4 to 15.5.3 through 15.5.8. This gives 15.5.9\nw_{(10)}=(1-z)^{-a}F\\left(a, c-b; c;\\frac{z}{z-1}\\right)=(1-z)^{-b}F\\left(b, c-a; c;\\frac{z}{z-1}\\right)\\]\n15.5.10\nw_{(20)}=z^{1-c}(1-z)^{c-a-1}F\\left(a-c+1, \\;1-b; \\;2-c;\\frac{z}{z-1}\\right)=z^{1-c}(1-z)^{c-a-b}F\\left(b-c+1, \\;1-a; \\;2-c;\\frac{z}{z-1}\\right)\n15.5.11\nw_{(1)}=z^{-a}F(a, a-c+1; a+b-c+1; \\;1-z^{-1})=z^{-b}F(b, b-c+1; a+b-c+1; \\;1-z^{-1})\n15.5.12\nw_{(20)}=z^{a-c}(1-z)^{c-a-b}F(c-a, \\;1-a; c-a-b+1; \\;1-z^{-1})=z^{b-c}(1-z)^{c-a-b}F(e-b, \\;1-b; c-a-b+1; \\;1-z^{-1})\n15.5.13\nw_{(20)}=(z-1)^{-a}F\\left(a, c-b; a-b+1; \\;\\frac{1}{1-z}\\right)=(z-1)^{-b}F\\left(b, c-a; b-a+1; \\;\\frac{1}{1-z}\\right)\\]\n15.5.14\nw_{(20)}=z^{1-c}(z-1)^{c-a-1}F\\left(a-c+1, \\;1-b; a-b+1; \\;\\frac{1}{1-z}\\right)=z^{1-c}(z-1)^{c-b-1}F\\left(b-c+1, \\;1-a; b-a+1; \\;\\frac{1}{1-z}\\right)\n15.5.3 to 15.5.14 constitute Kummer's 24 solutions of the hypergeometric equation. The analytic continuation of w_{1,200}(z) can then be obtained by means of 15.3.3 to 15.3.9.\nB. One of ",
+            "char_f1": 0.7867632661053456
+          },
+          {
+            "page_id": "as_p0564",
+            "failed": false,
+            "pred_text": "564 \\text{Hypergeometric FUNCTIONS}\n15.5.17 w_{2(0)}=F(a,b;1;z)\\ln z+\\sum\\limits_{n=1}^{\\infty}(\\frac{\\alpha}{n!}(b)^{n}\\)_{2}^{n}[\\psi(a+n)-\\psi(a)+\\psi(b+n)-\\psi(b)-2\\psi(n+1)+2\\psi(1)]\\quad(|z|<1)\nE. The number c=m+1, m=1, 2, 3, \\ldots. A fundamental system is\n15.5.18 w_{2(0)}=F(a,b;m+1;z)\\ln z+\\sum\\limits_{n=1}^{\\infty}(\\frac{\\alpha}{n!}(b)^{n}\\)_{2}^{n}[\\psi(a+n)-\\psi(a)+\\psi(b+n)-\\psi(b)-\\psi(m+1+n)\\]\n15.5.21\nw_{2(0)}=z^{n}F(a+m, b+m;1+m;z)\\ln z+z^{n}\\sum\\limits_{n=1}^{\\infty}(\\frac{n-m}{1-a)_{n}(1-b)_{n}}z^{-n}\\quad(|z|<1\\text{ and }a,b>=0,1,2,\\ldots.\\) (m-1))\nF. The number c=1-m, m=1, 2, 3, \\ldots. A fundamental system is\n15.5.20 w_{1(0)}=z^{n}F(a+m, b+m; 1+m; z)\\ln z+z^{n}\\sum\\limits_{n=1}^{\\infty}z^{n}\\frac{(a+m)_{n}(b+m)_{n}}{(1+m)_{n}n!}[\\psi(a+m+n)-\\psi(a+m)+\\psi(b+m+n)\\qquad-\\psi(b+m)-\\psi(m+1+n)+\\psi(m+1)-\\psi(n+1)+\\psi(1)]-\\sum\\limits_{n=1}^{n}\\frac{(n-1)!(-m)_{n}}{(1-a-m)_{n}(1-b-m)_{n}}z^{n-n}\\]\n15.6. Riemann's Differential Equation\nThe hypergeometric differential equation 15.5.1 with the (regular) singular points 0, 1, \\(\\infty\\) is a special case of Riemann's differential equation with three (regular) singular points _a, b, c_\n15.6.1\n(12-a-c')(2-b)(2-c)",
+            "char_f1": 0.5494982370490915
+          }
+        ]
+      }
+    },
+    "105": {
+      "done": true,
+      "n_train_pages": 105,
+      "train_elapsed_s": 1894.873430967331,
+      "eval_elapsed_s": 1389.5958259105682,
+      "adapter_dir": "data/models/ocr_lora/curve_n105",
+      "val_metrics": {
+        "n_pages": 20,
+        "n_failed": 3,
+        "failure_rate": 0.15,
+        "mean_char_f1_among_successes": 0.5090015285667564,
+        "formula_weighted_exact_match": 0.022598870056497175,
+        "advanced_construct_mean_f1": 0.5776776446023035,
+        "plain_mean_f1": 0.34417885008144306,
+        "glyph_confusion_spotcheck": {
+          "nu_occurrences_in_gold": 179,
+          "bare_v_occurrences_in_pred": 0,
+          "note": "rough presence-count proxy, not a token-aligned diff -- eyeball per_page below if this looks off"
+        },
+        "hallucinated_vec_pages": 0,
+        "per_page": [
+          {
+            "page_id": "as_p0332",
+            "failed": false,
+            "pred_text": "8. Legendre Functions\nMathematical Properties\nNotation\nThe conventions used are z=x+iy, x, y real, and in particular, x always means a real number in the interval -1\\leq r\\leq+1 with cos th=x where th is likewise a real number; n and m are positive integers or zero; n and m are unrestricted except where otherwise indicated.\n\nOther notations are:\nP^n(x) for n|P_n(x)\nP_m(x) for (-1)^mP_n(x)\nT_n(x) for (-1)^mP_n(x)\n\\overline{P_{\\pi}^{m}}(x) for (-1)^m\\sqrt{\\frac{(2n+1)(n-m)!}{2(n+m)!}}P_{\\pi}^{m}(x)\n\\Phi_{\\xi}^{\\pi}(z) for P_{\\tau}^{\\mu}(z),\\,\\Im_{\\tau}^{\\mu}(z) for Q_{\\tau}^{\\mu}(z)\\qquad(\\Re z>1)\n\\Sigma_{\\xi}^{\\pi}(z) for e^{\\omega\\tau t}Q_{\\tau}^{\\mu}(z)\nQ_{\\tau}^{\\mu}(z) for \\frac{\\sin\\,(\\psi+u)\\pi}{\\sin\\,\\nu\\pi}\\,Q_{\\tau}^{\\mu}(z)\nVarious other definitions of the functions occur as well as mixing of definitions.\n8.1.3 Q_{\\xi}^{\\pi}(z)=e^{i\\pi^{2}-\\nu-1/2}\\frac{\\Gamma(\\nu+\\mu+1)}{\\Gamma(\\nu+\\beta)}\\,z^{-\\nu-\\mu-1}(z^{2}-1)^{ib}F\\left(1+\\frac{\\nu}{2}+\\frac{\\mu}{2},\\frac{1}{2}+\\frac{\\nu}{2}+\\frac{\\mu}{2};\\,\\nu+\\frac{3}{2};\\frac{1}{2}\\right)\\quad(|z|>1)\nAlternate Forms\n(Additional forms may be obtained by means of the transformation formulas of the hypergeometric function, see [8.1].)\n8.1.4 P_{\\tau}^{\\mu}(z)=2\\pi^{\\mu}(z^{2}-1)^{-ib}\\left(\\frac{F\\left(-\\frac{\\nu}{2},\\frac{\\mu}{2},\\frac{1}{2}+\\frac{\\nu}{2},\\frac{\\mu}{2};\\frac{1}{2};\\frac{2}{2}\\right)}{\\Gamma\\left(\\frac{1}{2}+\\frac{\\nu}{2},\\frac{\\mu}{2}\\right)\\Gamma\\left(-\\frac{\\nu}{2},\\frac{\\mu}{2}\\right)}-2z\\,\\frac{F\\left(\\frac{1}{2}-\\frac{\\nu}{2},\\frac{\\mu}{2};\\frac{1}{2}+\\frac{\\nu}{2},\\frac{\\mu}{2};\\frac{\\nu}{2};\\frac{3}{2};z^{\\prime}\\right)}{\\Gamma\\left(\\frac{1}{2}+\\frac{\\nu}{2},\\frac{\\mu}{2}\\right)\\Gamma\\left(-\\frac{\\nu}{2},\\frac{\\mu}{2}\\right)}\\right)\\quad(|z^{2}|<1)\n8.1.5 P_{\\tau}^{\\mu}(z)=\\frac{2^{-\\nu-1}\\pi^{-1}\\Gamma(-\\frac{1}{2}-\\nu)z^{-\\nu+\\mu-1}}{(z^{2}-1)^{\\mu}\\Gamma(-\\nu-\\mu)}\\,\\,F\\left(\\frac{1}{2}+\\frac{\\nu}{2},\\frac{\\mu}{2};\\frac{1}{2}+\\frac{\\nu}{2},\\frac{\\mu}{2};\\nu+\\frac{3}{2};z^{-2}\\right)\\quad+\\frac{2^{\\Gamma}(3+\\nu)z^{\\mu}}{(z^{2}-1)^{\\mu}\\Gamma(1+y-\\mu)}\\,F\\left(-\\frac{\\nu}{2},\\frac{\\mu}{2},\\frac{1}{2},\\frac{\\nu}{2};\\frac{\\mu}{2};\\frac{1}{2}-\\nu;\\,z^{-2}\\right)\\quad(|z^{-2}|<1)\n8.1.6 e^{-\\iota\\nu}Q_{\\tau}^{\\mu}(z)=\\frac{\\Gamma(1+\\nu+\\mu)\\Gamma(-\\mu)(z-1)^{ib}(z+1)^{-1\\mu}}{2\\Gamma(1+\\nu-\\mu)}\\,F\\left(-\\nu,1+\\nu;1+\\mu;\\frac{1-\\varepsilon}{2}\\right)\\quad+\\Gamma(\\mu)(z-1)^{\\mu}\\Gamma(-\\nu,1+\\nu;1-\\mu;\\frac{1-\\varepsilon}{2})\\quad(|1-z|<2)",
+            "char_f1": 0.7192184605019369
+          },
+          {
+            "page_id": "as_p0334",
+            "failed": false,
+            "pred_text": "334  LEGENDRE FUNCTIONS  8.5.2  (x^{2}-1) \\frac{dP_{\\tau}^{n}(z)}{dz}=(v+\\mu)(v-\\mu+1)(z^{2}-1)!P_{\\tau}^{n-1}(z)  -\\mu x^{D_{\\tau}^{n}(z)}\n\\",
+            "char_f1": 0.07014590347923681
+          },
+          {
+            "page_id": "as_p0340",
+            "failed": false,
+            "pred_text": "LEGENDRE FUNCTIONS (p.340)\nn  P_{n}(31415\\ 92654)  P_{n}(2.6)\n0  1  1  1  31415\\ 92654  2.6\n2  -.35195\\ 59340\\ 9.64\n3  -.39372\\ 32064\\ 40.04\n4  0.04750\\ 83122\\ 174.952\n5  3.34184\\ 27517\\ 786.74336\n6  1.5729\\ 86975\\ 3604.350016\n7  -.20123\\ 39354\\ 16729.51005\n8  -.25617\\ 29328\\ 78402.55522\nComputing P_{n}(x) using Table 22.9 carrying ten significant figures, P_{n}(3.1415\\ 92654)=-.25617\\ 2933 and P_{n}(2.6)=78402.55526.\nComputation of Q_{n}(x)\nFor x<1, use of 8.5.3 for increasing values of n leads to very little loss of significant figures. However, for x>1, the recurrence relation 8.5.3 should be used only for decreasing values of n, after having first obtained Q_{n} using the formulas in terms of hypergeometric functions.\nTable 2: Compute Q_{n}(x) for x=.31415\\ 92654 and n=0(1)4.\nWith the aid of 8.4.2 and 8.4.4 we obtain\nN  Q_{n}(31415\\ 92654)\n0  .32515\\ 34813\n1  -.89785\\ 00212\n2  -.58567\\ 85953\n3  .29190\\ 60854\n4  .59974\\ 26989\nUsing the results of Example 1 together with 8.6.19, we find Q_{n}(x)=\\frac{1}{2}P_{n}(x)\\ln\\left(\\frac{1+x}{1-x}\\right)-W_{3}(x) where W_{3}=\\frac{7}{4}P_{3}+\\frac{1}{3}P_{1}, giving Q_{4}(31415\\ 92654)=.59974\\ 26989.\nTable 3: Compute Q_{n}(x) for x=2.6. Ten terms in the series for F\\left(\\frac{v+2}{2},\\frac{v+1}{2};v+\\frac{3}{2};\\frac{1}{2^{2}}\\right) of 8.1.3 are necessary to obtain nine significant figures giving Q_{5}(2.6)=4.8182\\ 4468\\times 10^{-3}. Using 8.5.3 with increasing values of n carrying ten significant figures we obtain\nNumber Q_{0} and Q_{1} are obtained using 8.4.2 and 8.4.4.\nTable 4: For all values of z, P_{x\\pm i}(x) and Q_{x\\pm i}(x) are most easily computed by means of 8.13.\nExample 4: Compute Q_{-i}(x) for x=2.6.\nUsing 8.13.3 and interpolating in Table 17.1 for K(.5), we find\nNumber Q_{-i}(2.6)=\\sqrt[2]{\\frac{2}{x+1}}K\\left(\\sqrt{\\frac{2}{x+1}}\\right)\nNumber Q_{-i}(2.6)=(.74535\\ 59925)(1.90424\\ 1417)\nNumber Q_{-i}(x) for x=.2.6.\nOn the other hand, at least nine terms in the expansion of F\\left(\\frac{v+2}{2},\\frac{v+1}{2};v+\\frac{3}{2};\\frac{1}{2^{2}}\\right) of 8.1.3 are necessary to obtain comparable accuracy.\n\n## References\n\n* [8.1] A. Erddyi et al., Higher transcendental functions, vol. 1, ch. 3 (McGraw-Hill Book Co., Inc., New York, N.Y., 1953).\n* [8.2] E. W. Hobson, The theory of spherical and ellipsoidal harmonics (Chelsea Publishing Co., New York, N.Y., 1955).\n* [8.3] J. Lense, Kugelfunktionen (Akademische Verlagsgesellschaft, Leipzig, Germany, 1950).\n* [8.4] T. M. MacRobert, Spherical harmonics, 2d rev. ed. (Dover Publications, Inc., New York, N.Y., 1948).\n* [8.5] W. Magnus and F. Oberhettinger, Formulas and theorems for the special functions of mathematical physics (Chelsea Publishing Co., New York, N.Y., 1949).\n* [8.6] G. Prasad, A treatise on spherical harmonics and the functions of Bessel and Lam&, Part II (Advanced) (Mahamandal Press, Benares City, India, 1932).\nSample Q_{s}(x) for x=2.6. Ten terms in ",
+            "char_f1": 0.8275646045418951
+          },
+          {
+            "page_id": "as_p0350",
+            "failed": false,
+            "pred_text": "LEGENDRE FUNCTIONS (p.350)\nTable 8.5  LEGENDRE FUNCTION--FIRST KIND P_n(x)\np_{0}(x)=1  p_{1}(x)=x\nx   P_{2}(x)   P_{3}(x)   P_{4}(x)   P_{5}(x)   P_{6}(x)   P_{7}(x)   P_{9}(x)   P_{10}(x)\n1.0  1.00  1.00  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.00000  1.000000  1.000000  1.000000  1.000000  1.000000  1.000000  1.000000  1.000000  1.000000  1.000000  1.000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.0000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.00000000  1.000000000  1.00000000  1.000000000  1.00000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.000000000  1.0000000000  1.000000000  1.000000000  1.0000000000  1.000000000  1.0000000000  1.0000000000  1.000000000  1.\n\n",
+            "char_f1": 0.2796492847254269
+          },
+          {
+            "page_id": "as_p0351",
+            "failed": true,
+            "pred_text": "LEGENDRE FUNCTIONS (p.1)\nLERIVATIVE OF THE LEGENDRE FUNCTION--FIRST KIND P'(x)\nTable 8.6\nP'_{1}(x)=1  P'_{2}(x)=3x\n\n[MISSING_PAGE_POST]\n\n",
+            "failure_reason": "nougat-missing-page-marker"
+          },
+          {
+            "page_id": "as_p0438",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.1.10)\np_{n}(x)=f_{n}(z)\\sin z+(-1)^{n+1}f_{-n-1}(z)\\cos z\nf_{0}(z)=z^{-1}, f_{1}(z)=z^{-2}\nf_{n-1}(z)+f_{n+1}(z)=(2n+1)z^{-1}f_{n}(z)\n(n=0,\\pm1,\\pm2,\\ldots)\nThe Functions j_{n}(z), y_{n}(z) for n=0,1,2\n10.1.11  j_{0}(z)=\\frac{\\sin z}{z}\nj_{1}(z)=\\frac{\\sin z}{z^{2}}-\\frac{\\cos z}{z}\nj_{2}(z)=\\left(\\frac{3}{z^{2}}-\\frac{1}{z}\\right)\\sin z-\\frac{3}{z^{2}}\\cos z\n10.1.12\ny_{0}(z)=-j_{-1}(z)=-\\frac{\\cos z}{z}\ny_{1}(z)=j_{-2}(z)=-\\frac{\\cos z}{z^{2}}-\\frac{\\sin z}{z}\ny_{2}(z)=-j_{-3}(z)=\\left(-\\frac{3}{z^{2}}+\\frac{1}{z}\\right)\\cos z-\\frac{3}{z^{2}}\\sin z\nFIGURE 10.2. y_{n}(z). n=0(1)3.\ny_{0}(z)=-j_{-1}(z)=-\\frac{\\cos z}{z}\ny_{1}(z)=j_{-2}(z)=-\\frac{\\cos z}{z^{2}}-\\frac{\\sin z}{z}\ny_{2}(z)=-j_{-3}(z)=\\left(-\\frac{3}{z^{2}}+\\frac{1}{z}\\right)\\cos z-\\frac{3}{z^{2}}\\sin z\nFIGURE 10.3. j_{n}(z), y_{n}(x). x=10.\nPoisson's Integral and Gegenbauer's Generalization (p.1.13)  j_{n}(z)=\\frac{z^{n}}{2^{n+1}n!}\\int_{0}^{x}\\cos(z\\cos\\theta)\\sin^{2n+1}\\theta d\\theta\\) (See 9.1.20.)\n10.1.14\n(n=0,1,2,\\ldots)",
+            "char_f1": 0.8305084745762713
+          },
+          {
+            "page_id": "as_p0439",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.1)\nSpherical Bessel Functions of the Second and Third Kind\n10.1.15  \\beta_{n}(z)=(-1)^{n+1}j_{-n-1}(z)  (n=0,\\pm 1,\\pm2,\\ldots)\n10.1.16  \\beta_{n}^{(0)}(z)=i^{n+1}j_{-n-1}(z)  (n=0,\\pm1,\\pm2,\\ldots)\n10.1.17  \\beta_{n}^{(0)}(z)=i^{n+1}j_{-n}^{(0)}(z)  (n=0,1,2,\\ldots)\n10.1.18  \\beta_{n}^{(1)}(z)=i^{(-1)}h_{n}^{(1)}(z)\\]\n10.1.19  \\beta_{n-1}^{(2)}(z)=-i^{(-1)}h_{n}^{(1)}(z)\\]\n10.1.20  \\beta_{n-1}^{(3)}(z)-\\beta_{n-1}^{(4)}h_{n}^{(1)}(z)\\]\n10.1.21  \\beta_{n+1}^{(1)}\\frac{n+1}{2}f_{n}(z)+\\frac{d}{dz}f_{n}(z)=f_{n-1}(z)\n(See 10.1.23.)\n10.1.22  \\frac{n}{2}f_{n}(z)-\\frac{d}{dz}f_{n}(z)=f_{n+1}(z)\n(See 10.1.24.)\n### Differentiation Formulas\nf_{n}(z):j_{n}(z),\\,y_{n}(z),\\,h_{n}^{(1)}(z),\\,h_{n}^{(2)}(z)\n(n=0,\\pm 1,\\pm2,\\ldots)\n10.1.23  \\left(\\frac{1}{2}\\frac{d}{dz}\\right)^{n}[z^{n+1}f_{n}(z)]=z^{n-m+1}f_{n-n}(z)\n10.1.24  \\left(\\frac{1}{2}\\frac{d}{dz}\\right)^{n}[z^{-nf}f_{n}(z)]=(-1)^{m}z^{-n-nf}_{n+n}(z)\n(m=1,2,3,\\ldots)\nRayleigh's Formulas\n10.1.25  \\beta_{n}(z)=z^{n}\\left(-\\frac{1}{2}\\frac{d}{dz}\\right)^{n}\\frac{\\sin z}{z}\n10.1.26  \\beta_{n}(z)=-z^{n}\\left(-\\frac{1}{2}\\frac{d}{dz}\\right)^{n}\\frac{\\cos z}{z}\\quad\\quad(n=0,1,2,\\ldots)\nModulus and Phase\n\\beta_{n}(z)=\\sqrt[3]{2\\pi/2}M_{n+1}(z)\\,\\cos\\,\\theta_{n+1}(z),\\quad y_{n}(z)=\\sqrt[3]{2\\pi/2}M_{n+1}(z)\\,\\sin\\,\\theta_{n+1}(z)\\]\n(See 9.2.17.)\n10.1.27  (\\frac{1}{2}\\pi/z)M_{n+1}^{2}(z)=\\frac{1}{z^{2}}\\sum_{0}^{n}\\frac{(2n-k)!(2n-2k)!}{k![(n-k)!]^{2}}(2z)^{2k-2n}\n10.1.28  (\\frac{1}{2}\\pi/z)M_{1/2}^{2}(z)=j_{0}^{2}(z)+y_{0}^{2}(z)=z^{-2}\n10.1.29  (\\frac{1}{2}\\pi/z)M_{3/2}^{2},\\langle z\\rangle=j_{1}^{2}(z)+y_{1}^{2}(z)=z^{-2}+z^{-4}\n10.1.30  (\\frac{1}{2}\\pi/z)M_{5/2}^{2}(z)=j_{2}^{2}(z)+y_{2}^{2}(z)=z^{-2}+3z^{-4}+9z^{-6}\nCross Products\n10.1.31  \\beta_{n}(z)y_{n-1}(z)-j_{n-1}(z)y_{n}(z)=z^{-2}\n10.1.32  \\beta_{n+1}(z)y_{n-1}(z)-\\beta_{n-1}(z)y_{n+1}(z)=(2n+1)z^{-8}\n10.1.33  \\beta_{0}(z)j_{n}(z)+y_{0}(z)y_{n}(z)\n=",
+            "char_f1": 0.7211093990755008
+          },
+          {
+            "page_id": "as_p0441",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (continued)\n441\nMcMahon's Expansions for n Fixed and s Large\nColumns: \\mu=(2n+1)^{2} \\mu=(2n+1)^{2} \\mu=(3n+1)^{2} \\mu=(4n+1)^{2} \\mu=(5n+1)^{2} \\mu=(6n+1)^{2} \\mu=(7n+1)^{2} \\mu=(8n+1)^{2} \\mu=(9n+1)^{2} \\mu=(10n+1)^{2} \\mu=(11n+1)^{2} \\mu=(12n+1)^{2} \\mu=(13n+1)^{2} \\mu=(14n+1)^{2} \\mu=(15n+1)^{2} \\mu=(16n+1)^{2} \\mu=(17n+1)^{2} \\mu=(18n+1)^{2} \\mu=(19n+1)^{2} \\mu=(19n+1)^{2} \\mu=(19n+1)^{2} \\mu=(17n+1)^{2} \\mu=(18n+1)^{2} \\mu=(19n+1)^{2} \\mu=",
+            "char_f1": 0.24186927691821916
+          },
+          {
+            "page_id": "as_p0444",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.444)\nModified Spherical Bessel Functions of the Third Kind\nColumns: \\sqrt{12\\pi/z}K_{n+1}(x)=\\frac{1}{2}\\pi ie^{(n+1)\\pi/2}h_{n}^{(1)}(ze^{1-\\pi i})\n(\\frac{1}{2}\\pi<\\arg z\\leq\\frac{1}{2}\\pi)\n(\\frac{1}{2}\\pi<\\arg z\\leq\\pi)\n(\\frac{1}{2}\\pi/2)e^{-z}\\sum\\limits_0^n (n+\\frac{1}{2},k)(2z)^{-k}\n10.2.16\nE x+1 (z)=K_{-\\pi-1}(x) (n=0,1,2,\\ldots)\nThe Functions \\sqrt{12\\pi/z}K_{n+1}(x),n=0,1,2\n10.2.17 \\sqrt{3\\pi/2}K_{1/2}(z)=(\\frac{1}{2}\\pi/2)e^{-z}\n\\sqrt{2\\pi/2}K_{1/2}(z)=(\\frac{1}{2}\\pi/2)e^{-z}(1+z^{-1})\n\\sqrt{12\\pi/2}K_{1/2}(z)=(\\frac{1}{2}\\pi/2)e^{-z}(1+3z^{-1}+3z^{-2})\nElementary Properties Recurrence Relations f_n(z): \\sqrt{2\\pi/z}I_{n+1}(z),(-1)^{n+1}\\sqrt{12\\pi/z}K_{n+1}(x)\n(n=0,\\pm1,\\pm2,\\ldots)\n10.2.18  f_{n-1}(z)-f_{n+1}(z)=(2n+1)2^{-1}f_n(z)\n10.2.19  nf_{n-1}(z)+(n+1)f_{n+1}(z)=(2n+1)\\fracd{dz}f_n(z)\n10.2.20 \\frac{n+1}{z}f_n(z)+\\fracd{dz}f_n(z)=f_{n-1}(z)\n(See 10.2.22.)\n10.2.21 -\\fracn \\frac{n}{z}f_n(z)+\\fracd{dz}f_n(z)=f_{n+1}(x)\n(See 10.2.23.)\nDifferentiation Formulas f_n(z): \\sqrt{2\\pi/2}I_{n+1}(x),(-1)^{n+1}\\sqrt{2\\pi/2}K_{n+1}(x)\n(n=0,\\pm1,\\pm2,\\ldots)\n10.2.22 \\left(\\frac{1}{z}\\fracd{dz}\\right)^m [z^{n+1}f_n(z)]=z^{n-m+1}f_n-m(z)\n10.2.23 \\left(\\frac{1}{z}\\fracd{dz}\\right)^m [z^{-1}f_n(z)]=z^{-n-m}f_{n+1}(x)\n(m=1,2,3,\\ldots)",
+            "char_f1": 0.8002602472348731
+          },
+          {
+            "page_id": "as_p0453",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.8, p.9)\nSample 2. Compute j_1s(x) for x=24.6. Interpolation in Table 10.3 yields for x=24.6\n\n\\begin{tabular}{c c c} x^{-n}e^{x/x}j_2(x)=(-28)3.934616 & x^{-20}e^{x/x}j_2(x)=(-27)9.48683 \\\\  & \\(y_{21}(24.6)=-.05604\\) & \\(y_{20}(24.6)=.03896\\) & \\(y_{22}(24.6)=.03896\\) \\\\ \\end{tabular}\nFor comparison, the correct values are shown in brackets.\n\nTo compute j_1s(x) for x=24.6 by Miller's device, take, for example, \\(N\\)=39 and assume F_w=0, F_sq=1. Using 10.1.19 with decreasing \\(N\\), i.e., \\(F_{N\\rightarrow\\text{1}}[(2N+1)/x]F_{N\\rightarrow\\text{1}}, N\\)=39, 38, \\cdot \\cdot \\cdot \\cdot 1, 0, generate the sequence F_3s, F_3s, \\cdot \\cdot \\cdot \\cdot F_1, F_0, compute from Table 4.6, j_0(24.6)=(sin24.6)/24.6 ==-.02064 620296, and obtain the factor of proportionality\n\n\\[p\\text{=}j_0(24.6)/F_0=.00000\\text{~03839~17642.}\\]\n\nThe value pF_1s equals j_1s(24.6) to 8 decimals. The final part of the computations is shown in the following table, in which the correct values are given for comparison.\n\nIt may be observed that the normalization of the sequence F_N, F_N-1, \\cdot \\cdot \\cdot \\cdot F_0 can also be obtained from formula 10.1.50 by computing the sum \\sigma=\\sum_0^n (2k+1)F_1^x and finding p=1/\\sqrt{\\sigma}. This yields, in the case of the example, p=1/\\sqrt{\\sigma}=.0000003839~177.\n\nTo compute \\sqrt{\\frac{1}{2\\pi/x}}I_{x+1}(x), \\sqrt{\\frac{1}{2\\pi/x}}K_{x+1}(x), n=0, 1, 2, \\cdot \\cdot \\cdot \\cdot \\cdot \\cdot f\\) values of z outside the range of Table 10.3, use formulas 10.2.13, 10.2.14 together with 10.2.4 and obtain values for the hyperbolic and exponential functions from Tables 4.4 and 4.15. In those cases when \\sqrt{\\frac{1}{2\\pi}}\\pi I_{x+1}(x) and \\sqrt{\\frac{1}{2\\pi}}\\pi I_{x-1}(x) are nearly equal, i.e., when x is sufficiently large, compute \\sqrt{\\frac{1}{2\\pi}}\\pi K_{x+1}(x) from formula 10.2.15, for which the coefficients (n+1, k) are given in 10.1.9.\n\nExample 3. Compute \\sqrt{\\frac{1}{2\\pi}}\\pi I_{5/2}(x), \\sqrt{\\frac{1}{2\\pi}}\\pi K_{5/2}(x) for x=16.2.\n\nFrom 10.2.13, \\sqrt{\\frac{1}{2\\pi}}\\pi/Z_{5/2}(x)=(3+x^2)\\sinh x/x^2-3cosh x/x^2; from Table 4.4, cosh 16.2=(6)5.426759950 and this equals the value of sinh 16.2 to the same number of significant figures. Hence\n\n\\[\\sqrt{\\frac{1}{2\\pi/16.2}}I_{5/2}(16.2)=.(06243~402371\\times-.01143~118427)[(65).4267~59950]\n=.338814.4594-.62034.29298\\times=276780.1664.\n\nTo compute \\sqrt{\\frac{1}{2\\pi/2}}\\pi I_{x+1}(x), \\sqrt{\\frac{1}{2\\pi}}\\pi K_{x+1}(x), \\sqrt{\\frac{1}\n\n",
+            "char_f1": 0.662682999701225
+          },
+          {
+            "page_id": "as_p0459",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.459)\nSPHERICAL BESSEL FUNCTIONS--ORDERS 3-10  Table 10.2   x | \\beta_{x}(x) | \\beta_{y}(x) | \\beta_{z}(x) | \\beta_{y}(x) | \\beta_{x}(y) | 10^{9/2}-j_{y}(x) | 10^{11/2}-10^{10/2}_{10}(x)\n0.0  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.5273493  9.727309  1.869155  1.00  -3.00666  -3.01101  -5.07701  -7.00701  -8.28656  1.491375  6.111656  26.\n\n",
+            "char_f1": 0.36983606557377047
+          },
+          {
+            "page_id": "as_p0505",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.1)\n13.1.15  y_{\\rm t}=z^{-b}e^{x}M(1-a,2-b,-z)\n13.1.16  y_{\\rm t}=U(a,b,z)\n13.1.17  y_{\\rm t}=z^{-b}U(1+a-b,2-b,2)\n13.1.18  y_{\\rm t}=e^{x}U(b-a,b,-z)\n13.1.19  y_{\\rm t}=z^{-b}e^{x}U(1-a,2-b,-z)\nWronskians\nIf W(m,n)=y_{\\rm t}=y_{\\rm t}^{-}y_{\\rm t}^{-}\\eta_{\\rm t}^{-}\\eta_{\\rm t}^{-}\\eta_{\\rm t}^{-}\\epsilon=sgn~(\\mathscr{I})=1\\) if \\(\\varkappa z>0,\n=-1\\) if \\(\\varkappa z\\leq0\\)\n13.1.20  W(1,2)=W(3,4)=W(1,4)=-W(2,3)\n=(1-b)z^{-b}e^{z}\n13.1.21  W(1,3)=W(2,4)=W(5,6)=W(7,8)=0\n13.1.22  W(1,5)=-\\Gamma(b)z^{-b}e^{z}/\\Gamma(a)\n13.1.23  W(1,7)=\\Gamma(b)e^{\\epsilon\\pi i}z^{-b}e^{z}/\\Gamma(b-a)\n13.1.24  W(2,5)=-\\Gamma(2-b)z^{-b}e^{z}/\\Gamma(1+a-b)\n13.1.25  W(2,7)=-\\Gamma(2-b)z^{-b}e^{z}/\\Gamma(1-a)\n13.1.26  W(5,7)=e^{\\epsilon\\pi i(b-a)}z^{-b}e^{z}\nKummer Transformations\n13.1.27  M(a,b,z)=e^{x}M(b-a,b,-z)\n13.1.28  a^{1-b}M(1+a-b,2-b,z)=z^{1-b}e^{x}M(1-a,2-b,-z)\n13.1.29  U(a,b,z)=z^{1-b}U(1+a-b,2-b,z)\n13.1.30  e^{x}U(b-a,b,-z)=e^{\\epsilon\\pi i(1-b)}e^{z}e^{1-b}U(1-a,2-b,-z)\nWhittaker's Equation\n13.1.31  M^{2}w  dz^{2}+[-\\frac{1}{4}\\frac{\\kappa}{z}+\\frac{(3-\\mu^{2})}{z^2}] w=0\nSolutions:\nWhittaker's Functions\n13.1.32  M_{\\rm x,\\mu}(z)=e^{-\\mu z^{2}+\\mu}M(1+\\mu-\\kappa,1+2\\mu,z)\n13.1.33  Gerald Confluent Equation\n13.1.35  w^{\\prime}+[\\frac{2A}{Z}+2f^{\\prime}+\\frac{bh^{\\prime}}{h}-h^{\\prime}-\\frac{h^{\\prime}\\tau^{\\prime}}{h^7}]w^{\\prime} +[(\\frac{bh^{\\prime}}{h}-h^{\\prime}-\\frac{h^{\\prime}\\tau^{\\prime}}{h^7})(\\frac{A}{Z}+f^{\\prime})+\\frac{A(A-1)}{Z^2}+\\frac{2Af^{\\prime}}{Z}+f^{\\prime}+f^{\\prime}-\\frac{dh^{\\prime}}{h}]w=0\nSolutions:\n13.1.36  Z^{-4}e^{-\\gamma(\\alpha)}M(a,b,h(Z))\n13.1.37  Z^{-4}e^{-\\gamma(\\alpha)}U(a,b,h(Z))\n13.2. Integral Representations\nR b>Ba>0\n13.2.1 \\Gamma(b-a)\\Gamma(a)\\Gamma(b)M(a,b,z)\n=\\int_{0}^{1}e^{zt}t^{a-1}(1-t)^{\\lambda-a-1}dt\n13.2.2 \\qquad=2^{1-b}e^{kt}\\int_{-1}^{+1}e^{-kt}(1+t)^{\\lambda-a-1}(1-t)^{\\lambda-1}dt\n13.2.3 \\qquad=2^{1-b}e^{kt}\\int_{0}^{\\sigma}e^{-\\mu z\\cos t}\\sin^{\\alpha-1}\\theta\\cot^{\\beta-\\alpha}(\\frac{1}{2\\theta})d\\theta\n13.2.4 \\qquad=e^{-\\Delta z}\\int_{\\lambda}^{",
+            "char_f1": 0.7045256744995647
+          },
+          {
+            "page_id": "as_p0507",
+            "failed": true,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (a-1+z)M(a, b, z) + (1-b)M(a, b-1, z) =0\n\n[MISSING_PAGE_POST]\n\nFigure captions\n\n",
+            "failure_reason": "nougat-missing-page-marker"
+          },
+          {
+            "page_id": "as_p0509",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPEFGEOMETRIC FUNCTIONS (p.509)\nIf x=(2b-4a)[1+t/(b-2a)^{\\frac{1}{2}}], so that\n13.5.19\nM(a, b, x)=e^{bx}(b-2a)^{1-x}\\Gamma(b)[\\operatorname{Ai}(t)\\cos(a\\pi)+O(|\\tfrac{1}{2}b-a|^{-1})]\n13.5.20\nU(a, b, x)=e^{bx+a-1b}\\Gamma(\\tfrac{1}{2})\\pi^{-1}x6^{-1}\\qquad U(a, b, x)=\\exp\\left\\{(b-2a)\\cos^{2}\\theta\\right\\}[(b-2a)\\cos\\theta]^{1-y}\\qquad [(\\tfrac{1}{2}b-a)\\sin2\\theta]^{-1}\\{\\sin\\left\\{(3\\,b-a)\\sin\\left\\{(3\\,b-a)\\sin\\left\\{(3\\,b-a)\\sin\\left\\{(3\\,b-a)\\sin\\left\\{(3\\,b-a)\\sin\\left\\{(3\\,b-a)\\right\\}\\right\\}}}\\right.\\right.\\right.\\}\\right.\\]\n\nIf cos^2\\theta=x/(2b-4a)\\cos that 2b-4a>x>0,\n13.6. Special Cases\nColumns: \n\n",
+            "char_f1": 0.2748004561003421
+          },
+          {
+            "page_id": "as_p0518",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.18)\nColumns:\nTable 13.1  CONFLUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nColumns:\nColumns:\n",
+            "char_f1": 0.16415662650602408
+          },
+          {
+            "page_id": "as_p0528",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.8)\nColumns:\nTable 13.1  CONFLUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nColumns:\nSample rows:\n0.5  \\lambda\\backslash 0.1  0.2  0.3  0.4  0.5  -1.0  \\lambda/3.90000  \\lambda/3.90000  \\lambda/3.900000  \\lambda/3.900000  \\lambda/3.900000  \\lambda/3.900000  \\lambda/3.\n\n",
+            "char_f1": 0.2745644599303136
+          },
+          {
+            "page_id": "as_p0534",
+            "failed": true,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.1)\nColumns:\nTable 13.1  CONFLIUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nx=10.0\nColumns:\n0.4  \\lambda b\n0.1  0.2  0.3  0.4  0.5\nColumns:\n\n[MISSING_PAGE_POST]\n\n",
+            "failure_reason": "nougat-missing-page-marker"
+          },
+          {
+            "page_id": "as_p0562",
+            "failed": false,
+            "pred_text": "HYPERGEOMETRIC FUNCTIONS (p.562)\n15.4.10   F(a, a+1; c; z)=2^{\\alpha-1}\\Gamma(c)2^{\\beta-1\\nu}(1-z)^{\\mu-a-1}P_{\\alpha-\\xi}^{1-\\sigma}[(1-z)^{-1}]\\qquad(\\mid\\arg\\mid<\\pi,\\mid\\arg(1-z)|<\\pi,\\mid\\arg(2-1)|<\\pi,\\mid\\arg(2-1)|<\\pi,\\mid\\arg(2-1)|<\\pi,\\mid\\arg(2-1)|<\\pi,\\mid\\arg(1-z)|<\\pi,\\mid\\arg(1-z)|>0,\\ zero\\)\n15.4.21   F(a, b; a+b-1; x)=2^{\\alpha+b-1}\\Gamma(a+b-1)\\Gamma(1-\\alpha)^{\\mu-\\alpha-\\eta}(1-z)^{\\mu-\\sigma}[(1-z)^{\\mu}]\\qquad(0<x<1)\n15.4.22   F(a, b; 2; 2\\cdot \\pi-12^{\\alpha+b-1}\\Gamma(3/2+b)\\Gamma(3/",
+            "char_f1": 0.18594000457980303
+          },
+          {
+            "page_id": "as_p0563",
+            "failed": false,
+            "pred_text": "HYPERGEOMETRIC FUNCTIONS (p.563)\n15.5.2  \\rho_{x,1}^{(n)}=0,1-c, \\rho_{x,2}^{(n)}=0,c-a-b, \\rho_{x,3}^{(n)}=a,b respectively. The general theory of differential equations of the Fuchsian type distinguishes between the following cases.\nA. None of the numbers c, e--a--b; c--b is equal to an integer. Then two linearly independent solutions of 15.5.1 in the neighborhood of the singular points 0, 1, co are respectively\n15.5.3   w_{1:0}=F(a, b; c; z)=(1-z)^{c-a-b}F(c-a, c-b; c; z)\n15.5.4   w_{2:0}=z^{-c}F(a-e+1, b-e+1; 2-c; z)=z^{1-c}(1-z)^{c-a-b}F(1-a, 1-b; 2-c; z)\n15.5.5   w_{1:0}=F(a, b; a+b+1-c; 1-z)=z^{1-c}F(1+b-c, 1+a-e; a+b+1-c; 1-z)\n15.5.6   w_{2:0}=(1-z)^{c-a-b}F(c-b, c-a; c-a-b+1; 1-z)=z^{1-c}(1-z)^{c-a-b}F(1-a, 1-b; c-a-b+1; 1-z)\n15.5.7   w_{1:(a)}=z^{-a}F(a, a-e+1; a-b+1; z^{-1})=z^{b-c}(z-1)^{c-a-b}F(1-b, c-b; a-b+1; z^{-1})\n15.5.8   w_{2:(a)}=z^{-b}F(b, b-e+1; b-a+1; z^{-1})=z^{a-c}(z-1)^{c-a-b}F(1-a, c-a; b-a+1; z^{-1})\nThe second set of the above expressions is obtained by applying 15.3.3 to the first set.\nAnother set of representations is obtained by applying 15.3.4 to 15.5.3 through 15.5.8. This gives 15.5.9-15.5.14.\n15.5.9   w_{1:(0)}=(1-z)^{-a}F\\left(a, c-b; c;\\frac{z}{z-1}\\right)=(1-z)^{-b}F\\left(b, c-a; c;\\frac{z}{z-1}\\right)\n15.5.10   w_{2:(0)}=z^{1-c}(1-z)^{c-a-1}F\\left(a-c+1, 1-b; 2-c;\\frac{z}{z-1}\\right)=z^{1-c}(1-z)^{c-a-b}F\\left(b-c+1, 1-a; 2-c;\\frac{z}{z-1}\\right)\n15.5.11   w_{1:(1)}=z^{-a}F(a, a-c+1; a+b-c+1; 1-z^{-1})=z^{-b}F(b, b-c+1; a+b-c+1; 1-z^{-1})\n15.5.12   w_{2:(0)}=z^{a-c}(1-z)^{c-a-b}F(c-a, 1-a; c-a-b+1; 1-z^{-1})=z^{b-c}(1-z)^{c-a-b}F(e-b, 1-b; e-a-b+1; 1-z^{-1})\n15.5.13   w_{1:(a)}=(z-1)^{-a}F\\left(a, c-b; a-b+1; \\frac{1}{1-z}\\right)=(z-1)^{-b}F\\left(b, c-a; b-a+1; \\frac{1}{1-z}\\right)\n15.5.14   w_{2:(a)}=z^{1-c}(z-1)^{c-a-1}F\\left(a-c+1, 1-b; a-b+1; \\frac{1}{1-z}\\right)=z^{1-c}(z-1)^{c-b-1}F\\left(b-c+1, 1-a; b-a+1; \\frac{1}{1-z}\\right)\n15.5.3 to 15.5.14 constitute Kummer's 24 solutions of the hypergeometric equation. The analytic continuation of w_{1:,40}(z) can then be obtained by means of 15.3.3 to 15.3.9.\nB. One of the numbers a, b, c--a, c--b is an integer. Then one of the hypergeometric series for instance w_{1:,40}, 15.5.3, 15.5.4 terminates and the corresponding solution is of the form\n15.5.15   w=z^{a}(1-z)^{a}p_{a",
+            "char_f1": 0.8165838746656476
+          },
+          {
+            "page_id": "as_p0564",
+            "failed": false,
+            "pred_text": "564  W_{2(0)}=F(a,b;1;z)\\ln z+\\sum\\limits_{n=1}^{\\infty}(\\frac{\\alpha}{n!})^{n}\\,z^{n}[\\psi(a+n)-\\psi(a)+\\psi(b+n)-\\psi(b)-2\\psi(n+1)+2\\psi(1)]\\quad(|z|<1)\nE. The number c=m+1, m=1, 2, 3, \\ldots . A fundamental system is\n15.5.18 w_{2(0)}=F(a,b;m+1;z)\\ln z+\\sum\\limits_{n=1}^{\\infty}(\\frac{\\alpha}{n!})^{n}\\,z^{n}[\\psi(a+n)-\\psi(a)+\\psi(b+n)-\\psi(b)-\\psi(m+1+n)\\]\n+\\psi(m+1)-\\psi(n+1)+\\psi(1)-\\sum\\limits_{n=1}^{\\infty}(\\frac{n-1}{1-\\alpha})^{n}\\,z^{-n}\\qquad(|z|<1\\text{ and }a,b\\neq0,1,2,\\ldots .\\ (m-1))\n. F. The number c=1-m, m=1, 2, 3, \\ldots . A fundamental system is\n15.5.20 w_{2(0)}=z^{n}F(a+m, b+m; 1+m; 2)\\ln z+\\sum\\limits_{n=1}^{\\infty}z^{n}\\,(\\frac{a+m)_{n}(b+m)_{n}}{(1+m)_{n}n!}\\,[\\psi(a+m+n)-\\psi(a+m)+\\psi(b+m+n)\\]\n15.5.21 w_{2(0)}=z^{n}F(a+m, b+m; 1+m; z)\\ln z+z^{n}\\sum\\limits_{n=1}^{\\infty}z^{n}\\,(\\frac{a+m)_{n}(b+m)_{n}}{(1+m)_{n}n!}\\,[\\psi(a+m+n)-\\psi(a+m)+\\psi(b+m+n)\\]\n-\\psi(b+m)-\\psi(m+1+n)+\\psi(m+1)-\\psi(n+1)+\\psi(1)]-\\sum\\limits_{n=1}^{\\infty}\\frac{(n-1)!(-m)_{n}}{(1-a-m)_{n}(1-b-m)_{n}}z^{n-n}\\]\n(|z|<1\\text{ and }a,b\\neq 0,-1,-2,\\ldots .-(m-1))\n15.6. Riemann's Differential Equation\nThe hypergeometric differential equation 15.5.1 with the (regular) singular points 0, 1, \\infty is a special case of Riemann's differential equation with three (regular) singular points \\(a,b,c\\)\n15.6.1 \\[\\frac{d^{q}w}{dz^{2}}+\\left[\\frac{1-\\alpha-\\alpha^{\\prime}}{z-a}+\\frac{1-\\beta-\\beta^{\\prime}}{z-b}+\\frac{1-\\gamma-\\gamma^{\\prime}}{z-c}\\right]\\frac{dw}{dz}\\]\nThe pairs of the exponents with respect to the singular points \\(a;b;e\\) are \\(\\alpha,\\alpha';\\beta,\\beta';\\gamma,\\gamma'\\) respectively subject to the condition\n15.6.2 \\alpha+\\alpha'+\\beta+\\beta'+\\gamma+\\gamma'=1\nThe complete set of solutions of 15.6.1 is denoted by the symbol\n15.6.3  w=P\\,\\begin{Bmatrix}a&b&c\\\\ \\alpha&\\beta&\\gamma&z\\\\ \\alpha'&\\beta'&\\gamma'\\end{Bmatrix}\\,\\]\nA fundamental system is\n15.5.19 w_{2(0)}=F(a,b;m+1;z)\\ln z+\\sum\\limits_{n=1}^{\\infty}\\frac{(a)_{n}(b)_{n}}{(1+m)_{n}n!}\\,z^{n}[\\psi(a+n)-\\psi(a)+\\psi(b+n)-\\psi(b)-\\psi(m+1+n)\\]\n+\\psi(m+1)-\\psi(n+1)+\\psi(1)]-\\sum\\limits_{n=1}^{\\infty}\\frac{(n-1)!(-m)_{n}}{(1-a)_{n}(1-b)_{n}}z^{n-n}\\qquad(|z|<1\\text{ and }a,b\\neq0,1,2,\\ldots .\\ (m-1))\n. F. The number c=1-m, m=1, 2, 3, \\ldots . A fundamental system is\n15.5.20 w_{2(0)}=z^{n}F(a+m, b+m; 1+m; z)\\ln z+\\sum\\limits_{n=1}^{\\infty}\\frac{(a)_{n}(b)_{n}}{(1+m)_{n}n!}\\,z^{n}[\\psi(a",
+            "char_f1": 0.7096101730248072
+          }
+        ]
+      }
+    },
+    "122": {
+      "done": true,
+      "n_train_pages": 122,
+      "train_elapsed_s": 2231.2868509292603,
+      "eval_elapsed_s": 1385.804506778717,
+      "adapter_dir": "data/models/ocr_lora/curve_n122",
+      "val_metrics": {
+        "n_pages": 20,
+        "n_failed": 2,
+        "failure_rate": 0.1,
+        "mean_char_f1_among_successes": 0.4894654126872316,
+        "formula_weighted_exact_match": 0.01951219512195122,
+        "advanced_construct_mean_f1": 0.514392675244738,
+        "plain_mean_f1": 0.43961088757221883,
+        "glyph_confusion_spotcheck": {
+          "nu_occurrences_in_gold": 179,
+          "bare_v_occurrences_in_pred": 0,
+          "note": "rough presence-count proxy, not a token-aligned diff -- eyeball per_page below if this looks off"
+        },
+        "hallucinated_vec_pages": 0,
+        "per_page": [
+          {
+            "page_id": "as_p0332",
+            "failed": false,
+            "pred_text": "8. Legendre Functions\nMathematical Properties\nNotation\nThe conventions used are z=x+iy, x, y real, and in particular, x always means a real number in the interval -1\\leq r\\leq+1 with cos th=x where th is likewise a real number; n and m are positive integers or zero; n and m are unrestricted except where otherwise indicated.\n\nOther notations are:\nP^n(x) for n|P_n(x)\nP_m(x) for (-1)^mP_n(x)\nT_n(x) for (-1)^mP_n(x)\nP_n(x)\nP_n(x) for (-1)^m\\sqrt{\\frac{(2n+1)(n-m)!}{2(n+m)!}}P_n(x)\n\\Phi_{\\tau}^s(z) for P_{\\tau}^p(z), \\Im_{\\tau}^s(z) for \\Omega_{\\tau}^s(z)\\)\n\\Im_{\\tau}^s(z) for \\omega^{\\mu}\\Omega_{\\tau}^s(z)\nQ_{\\tau}^s(z) for \\sin\\frac{(\\nu+u)\\pi}{\\sin\\nu\\pi}Q_{\\tau}^{\\mu}(z)\nVarious other definitions of the functions occur as well as mixing of definitions.\n8.1.3 Q_{\\tau}^c(z)=e^{i\\omega^{2}-\\nu-1/2}\\frac{\\Gamma(\\nu+\\mu+1)}{\\Gamma(\\nu+\\beta)}z^{-\\nu-\\mu-1}(z^{2}-1)^{ib}F\\left(1+\\frac{\\nu}{2}+\\frac{\\mu}{2},\\frac{1}{2}+\\frac{\\nu}{2}+\\frac{\\mu}{2};\\nu+\\frac{3}{2};\\frac{1}{2}^{2}\\right)\\quad(|z|>1)\nAlternate Forms\n(Additional forms may be obtained by means of the transformation formulas of the hypergeometric function, see [8.1].)\n8.1.4 P_{\\tau}^s(z)=2\\pi^{1}(z^{2}-1)^{-ib}\\left[\\begin{array}{l}F\\left(-\\frac{\\nu}{2}\\frac{\\mu}{2}\\frac{1}{2}\\frac{\\nu}{2}\\frac{\\mu}{2}\\frac{1}{2}\\frac{\\nu}{2}\\frac{\\mu}{2}\\frac{1}{2}z^{2}\\right)\\\\ \\Gamma\\left(\\frac{1}{2}\\frac{\\nu}{2}-\\frac{\\mu}{2}\\right)\\Gamma\\left(1+\\frac{\\nu}{2}-\\frac{\\mu}{2}\\right)\\Gamma\\left(-\\frac{\\nu}{2}\\frac{\\mu}{2}\\right)\\Gamma\\left(1+\\frac{\\nu}{2}-\\frac{\\mu}{2}\\right)\\end{array}-2z\\frac{F\\left(\\frac{1}{2}-\\frac{\\nu}{2}\\frac{\\mu}{2},1+\\frac{\\nu}{2}-\\frac{\\mu}{2},\\frac{\\mu}{2};\\nu+\\frac{3}{2};\\frac{\\nu}{2};z^{2}\\right)}{\\Gamma\\left(\\frac{1}{2}+\\frac{\\nu}{2},\\frac{\\mu}{2}\\right)\\Gamma\\left(-\\frac{\\nu}{2}\\frac{\\mu}{2}\\right)}\\right]\\quad(|z^{2}|<1)\n8.1.5 P_{\\tau}^s(z)=\\frac{2^{-\\nu-1}\\pi^{-1}\\Gamma(-\\frac{1}{2}-\\nu)z^{-\\nu+\\mu-1}}{(z^{2}-1)^{\\mu}\\Gamma(-\\nu-\\mu)}\\ F\\left(\\frac{1}{2}+\\frac{\\nu}{2}\\frac{\\mu}{2},1+\\frac{\\nu}{2},\\frac{\\mu}{2};\\nu+\\frac{3}{2};z^{-2}\\right)\\quad+\\frac{2^{\\Gamma}(3+\\nu)z^{2}+\\mu}{(z^{2}-1)^{\\mu}\\Gamma(1+y-\\mu)}\\ F\\left(-\\frac{\\nu}{2}\\frac{\\mu}{2}\\frac{1}{2},\\frac{\\nu}{2};\\frac{\\mu}{2};\\frac{1}{2}-\\nu;z^{-2}\\right)\\quad(|z^{-2}|<1)\n8.1.6 e^{-i\\nu}Q_{\\tau}^s(z)=\\frac{\\Gamma(1+\\nu+\\mu)\\Gamma(-\\mu)(z-1)^{ib}(z+1)^{-1\\mu}}{2\\Gamma(1+\\nu-\\mu)}F\\left(-\\nu,1+\\nu;1+\\mu;\\frac{1-z}{2}\\right)\\quad+\\Gamma(\\nu)(z+1)^{\\mu}(z-1)^{-1\\mu}F\\left(-\\nu,1+\\nu;1-\\mu;\\frac{1-z}{2}\\right)\\quad(|1-z|<2)",
+            "char_f1": 0.7051325058705132
+          },
+          {
+            "page_id": "as_p0334",
+            "failed": false,
+            "pred_text": "334  LEGENDRE FUNCTIONS  8.5.2  (x^{2}-1) \\frac{dP_{\\tau}^{n}(z)}{dz}=(v+\\mu)(v-\\mu+1)(z^{2}-1)!P_{\\tau}^{n-1}(z)  -\\mu x^{D_{\\tau}^{n}(z)}  \\quad Varying Degree\n8.5.3  (v-\\mu+1)P_{\\tau}^{n}+(z)=(2v+1)zP_{\\tau}^{n}(z)-(v+\\mu)P_{\\tau}^{n}-1(z)  8.5.4  (x^{2}-1) \\frac{dP_{\\tau}^{n}(z)}{dz}=vxP_{\\tau}^{n}(z)-(v+\\mu)P_{\\tau}^{n}-1(z)  \\quad Varying Order and Degree\n8.5.5  P_{\\tau+1}^{n}(z)=P_{\\tau-1}^{n}(z)+(2v+1)(z^{2}-1)!P_{\\tau}^{n}-1(z)  8.6. Special Values\nx=0\n8.6.1   P_{\\tau}^{n}(0)  =2^{n}\\pi^{-1}\\cos[\\tfrac{1}{3}\\pi(v+\\mu)]\\Gamma(\\tfrac{1}{2}v+\\tfrac{1}{2}u+\\tfrac{1}{2})/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}u+1)\n8.6.2   Q_{\\tau}^{n}(0)=-2^{-1}\\pi^{1}\\sin[\\tfrac{1}{2}\\pi(v+\\mu)]\\Gamma(\\tfrac{1}{2}v+\\tfrac{1}{2}u+\\tfrac{1}{2})/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}u+1)\n8.6.3   Q_{\\tau}^{n}(x)=-2^{n}\\pi^{-1}\\sin[\\tfrac{1}{2}\\pi(v+\\mu)]\\Gamma(\\tfrac{1}{2}v+\\tfrac{1}{2}u+1)/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}u+1)\n8.6.4   Q_{\\tau}^{n}(x)=-2^{-1}\\pi^{1}\\sin[\\tfrac{1}{2}\\pi(v+\\mu)]\\Gamma(\\tfrac{1}{2}v+\\tfrac{1}{2}u+\\tfrac{1}{2})/\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}u+1)\n8.6.5   Q_{\\tau}^{n}(x),Q_{\\tau}^{n}(x)\\}_{x=0}=\\frac{2^{n}\\Gamma(\\tfrac{1}{2}v+1)/\\Gamma(\\tfrac{1}{2}v+\\tfrac{1}{2}u+\\tfrac{1}{2})}{\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}u+1)\\Gamma(\\tfrac{1}{2}v-\\tfrac{1}{2}u+1)}\n\\mu=m=1,2,3,\\ldots\n8.6.6   P_{\\tau}^{n}(z)=(z^{2}-1)!^{\\mathrm{in}}\\frac{d^{n}P_{\\tau}(z)}{dz^{n}},\nP_{\\tau}^{n}(x)=(-1)^{n}(1-x^{2})!^{\\mathrm{in}}\\frac{d^{n}P_{\\tau}(x)}{dx^{n}}\n8.6.7   Q_{\\tau}^{n}(z)=(z^{2}-1)!^{\\mathrm{in}}\\frac{d^{n}Q_{\\tau}(z)}{dz^{n}},\nQ_{\\tau}^{n}(x)=(-1)^{n}(1-x^{2})!^{\\mathrm{in}}\\frac{d^{n}Q_{\\tau}(x)}{dx^{n}}\n8.6.8   Q_{\\tau}^{n}(z)=(z^{2}-1)^{\\mathrm{in}}\\frac{d^{n}Q_{\\tau}(z)}{dz^{n}},\n",
+            "char_f1": 0.5689962383686399
+          },
+          {
+            "page_id": "as_p0340",
+            "failed": false,
+            "pred_text": "LEGENDRE FUNCTIONS (p.340)\nn  P_{n}(31415\\ 92654)  P_{n}(2.6)\n0  1  1  1  1  .31415\\ 92654  2.6\n2  -.35195\\ 59340  9.64\n3  -.39372\\ 32064  40.04\n4  0.04750\\ 83122  174.952\n5  3.34184\\ 27517  786.74336\n6  1.15729\\ 86975  3604.350016\n7  -.20123\\ 39354  16729.51005\n8  -.25617\\ 29328  78402.55522\nComputing P_{\\rm s}(x) using Table 22.9 carrying ten significant figures, P_{\\rm s}(3.1415\\ 92654)=-.25617\\ 2933 and P_{\\rm s}(2.6)=78402.55526.\nComputation of Q_{\\rm s}(x)\nFor x<1, use of 8.5.3 for increasing values of n leads to very little loss of significant figures. However, for x>1, the recurrence relation 8.5.3 should be used only for decreasing values of n, after having first obtained Q_{\\rm s} using the formulas in terms of hypergeometric functions.\nExample 2. Compute Q_{\\rm s}(x) for x=.31415\\ 92654 and n=0(1)4.\nWith the aid of 8.4.2 and 8.4.4 we obtain\nN  Q_{\\rm s}(31415\\ 92654)\n0  .32515\\ 34813\n1  -.89785\\ 00212\n2  -.58567\\ 85953\n3  .29190\\ 60854\n4  .59974\\ 26989\nUsing the results of Example 1 together with 8.6.19, we find Q_{\\rm s}(x)=\\frac{1}{2}P_{\\rm s}(x)\\ln\\left(\\frac{1+x}{1-x}\\right)-W_{\\rm s}(x)\\) where W_{\\rm s}=\\frac{7}{4}P_{\\rm s}+\\frac{1}{3}P_{\\rm t}, giving Q_{\\rm t}(31415\\ 92654)=.59974\\ 26989.\nTable Texts\n[8.1] A. Erddyi et al., Higher transcendental functions, vol. 1, ch. 3 (McGraw-Hill Book Co., Inc., New York, N.Y., 1953).\n[8.2] E. W. Hobson, The theory of spherical and ellipsoidal harmonics (Chelsea Publishing Co., New York, N.Y., 1955).\n[8.3] J. Lense, Kugelfunktionen (Akademische Verlagsgesellschaft, Leipzig, Germany, 1950).\n[8.4] T. M. MacRobert, Spherical harmonics, 2d rev. ed. (Dover Publications, Inc., New York, N.Y., 1948).\n[8.5] W. Magnus and F. Oberhettinger, Formulas and theorems for the special functions of mathematical physics (Chelsea Publishing Co., New York, N.Y., 1949).\n[8.6] G. Prasad, A treatise on spherical harmonics and the functions of Bessel and Lam&, Part II (Advanced) (Mahamandal Press, Benares City, India, 1932).\nTable Texts in the series for F(\\frac{v+2}{2},\\frac{v+1}{2};v+\\frac{3}{2};\\frac{1}{2^{2}}) of 8.1.3 are necessary to obtain nine significant figures giving Q_{\\rm s}(2.6)=4.8182\\ 4468\\times 10^{-8}. Using 8.5.3 with increasing values of n carrying ten significant figures we obtain\nN  Q_{\\rm s}(2.6)\n0  .40546\\ 51081\n1  .05420\\ 928\n2  .00868\\ 364\n3  .00148\\ 95\n4  .00026\\ 49\n5  .00004\\ 81\nwhere Q_{0} and Q_{\\rm i} are obtained using 8.4.2 and 8.4.4.\nComputation of P_{\\rm s}\\pm(x), Q_{\\rm s}\\pm(x)\nFor all values of z, P_{\\pm i}(x) and Q_{\\pm i}(x) are most easily computed by means of 8.13.\nExample 4.Compute Q_{-i}(x) for x=2.6.\nUsing 8.13.3 and interpolating in Table 17.1 for K(.5), we find\n\\[Q_{-i}(2.6)=\\sqrt{\\frac{2}{x+1}}K\\left(\\sqrt{\\frac{2}{x+1}}\\right)\\]\n=(.74535\\ 59925)(1.90424\\ 1417)\n=1.41933\\ 7751",
+            "char_f1": 0.6530547136704419
+          },
+          {
+            "page_id": "as_p0350",
+            "failed": false,
+            "pred_text": "LEGENDRE FUNCTIONS (p.1)\n350  (p.2):\nTable 8.5  (p.3):\nLegendre FUNCTION--FIRST KIND P_n(x)\nP_{0}(x)=1  (p.1)=x\nx  (p.2):\nPx(x):\n",
+            "char_f1": 0.20534759358288773
+          },
+          {
+            "page_id": "as_p0351",
+            "failed": true,
+            "pred_text": "LEGENDRE FUNCTIONS (p.1)\nDEPOSITIVE OF THE LEGENDRE FUNCTION--FIRST KIND P'(x)\nTable 8.6\np'_{1}(x)=1  p'_{2}(x)=3x\np'_{3}(x)=1.0  6.00  (1)1.00000  (1)1.50000  (1)4.50000  (1)1.50000  (1)4.50000  (1)1.550000  (1)1.550000  (1)1.2,9300  (1)2.12400  (1)4.57230  (1)4.570757  (1)1.535866  (1)1.4(1)1.3200  (1)3.75200  (2)1.01688  (1)4.50787  (1)4.113477  (1)1.7707  (1)5.96800  (2)1.92723  (4)1.74282  (4)1.74282  (4)5.24824  (1)3.4845  (5)1.85808  (2)6.0626\np'_{1}(x)=1\\quad p'_{2}(x)=3x\np'_{1}(x)=1.0  6.00  (1)1.0000  (1)1.50000  (1)1.50000  (1)4.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.50000  (1)1.500000  (1)1.\n\n",
+            "failure_reason": "repetition-degeneration"
+          },
+          {
+            "page_id": "as_p0438",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.1.10)\np_n(x)=f_n(x)\\sin z+(-1)^{n+1}f_{-n-1}(x)\\cos z\nf_0(z)=z^{-1}, f_1(z)=z^{-2}\nf_n-1(z)+f_n+1(z)=(2n+1)z^{-1}f_n(x)\n(n=0,\\pm1,\\pm2,\\ldots)\nThe Functions j_n(z), y_n(x) for n=0,1,2\n10.1.11  j_0(z)=\\frac{\\sin z}{z}\nj_1(z)=\\frac{\\sin z}{z^2}-\\frac{\\cos z}{z}\nj_2(z)=\\left(\\frac{3}{z^2}-\\frac{1}{z}\\right)\\sin z-\\frac{3}{z^2}\\cos z\n10.1.12\ny_0(z)=-j_1(z)=-\\frac{\\cos z}{z}\ny_1(z)=j_2(z)=-\\frac{\\cos z}{z^2}-\\frac{\\sin z}{z}\nFigure 10.2. y_n(x). n=0(1)3.\ny_2(z)=-j_3(z)=\\left(-\\frac{3}{z^2}+\\frac{1}{z}\\right)\\cos z-\\frac{3}{z^2}\\sin z\nFigure 10.3. j_n(x), y_n(x). x=10.\nPoisson's Integral and Gegenbauer's Generalization 10.1.13 j_n(z)=\\frac{z^n}{2^n+1}\\int_0^n\\infty(z\\cos\\theta)\\sin^{2n+1}\\theta d\\theta\\]\n(See 9.1.20.)\n10.1.14\n=\\frac{1}{2}(-i)^n\\int_0^n\\infty e^{iz\\cos\\theta P_n}(\\cos\\theta)\\sin\\theta d\\theta\n(n=0,1,2,\\ldots)",
+            "char_f1": 0.8890046899426784
+          },
+          {
+            "page_id": "as_p0439",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.1)\nSpherical Bessel Functions of the Second and Third Kind\n10.1.15   y_{n}(z)=(-1)^{n+1}j_{n-1}(z)  (n=0,\\pm1,\\pm2,\\ldots)\n10.1.16  ",
+            "char_f1": 0.11402902557014515
+          },
+          {
+            "page_id": "as_p0441",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (continued)\n441\nMcMahon's Expansions for n Fixed and s Large\n10.1.58   a_{n,\\eta}^{\\prime} \\sim \\beta-(\\mu+7)(8\\beta)^{-1}  -\\frac{4}{3}(7\\mu^{2}+154\\mu+95)(8\\beta)^{-3}  -\\frac{32}{15}(85\\mu^{2}+3535\\mu^{2}+3561\\mu+6133)(8\\beta)^{-5}  -\\frac{64}{105}(6949\\mu^{4}+474908\\mu^{3}+330638\\mu^{2}+9046780\\mu-5075147)(8\\beta)^{-7}--\\ldots \\beta=\\pi(s+\\tfrac{1}{2}n-\\tfrac{1}{2})\\) for a_{n,\\eta}^{\\prime},\\beta=\\pi(s+\\tfrac{1}{2}n)\\) for b_{n,\\varepsilon}^{\\prime}; \\mu=(2n+1)^{2} Asymptotic Expansions of Zeros and Associated Values for n Large\n10.1.59   a_{n,1}^{\\prime} \\sim (n+\\tfrac{1}{2})+8086165(n+\\tfrac{1}{2})^{1/3}--236680(n+\\tfrac{1}{2})^{-1/8}  -20736(n+\\tfrac{1}{2})^{-1/8}  10.1.60   b_{n,1}^{\\prime} \\sim (n+\\tfrac{1}{2})+1.8210980(n+\\tfrac{1}{2})^{1/8}  +802728(n+\\tfrac{1}{2})^{-1/8}--11740(n+\\tfrac{1}{2})^{-1/8}  +0.0249(n+\\tfrac{1}{2})^{-5/8}+\\ldots \\beta_{n}(a_{n,1}^{\\prime})\\sim 8458430(n+\\tfrac{1}{2})^{-5/6}\\{1--566032(n+\\tfrac{1}{2})^{-2/8} \\ldots \\beta_{n}(b_{n,1}^{\\prime})\\sim 7183921(n+\\tfrac{1}{2})^{-5/6}\\{1--274769(n+\\tfrac{1}{2})^{-2/8} \\ldots \\beta_{n}(b_{n,1}^{\\prime})\\sim 7183921(n+\\tfrac{1}{2})^{-5/6}\\{1--274769(n+\\tfrac{1}{2})^{-2/8} \\ldots \\beta_{n}(b_{n,1}^{\\prime})\\sim 7183921(n+\\tfrac{1}{2})^{-5/6}\\{1--274769(n+\\tfrac{1}{2})^{-2/8} \\ldots \\beta_{n}(b_{n,1}^{\\prime})\\sim 7183921(n+\\tfrac{1}{2})^{-5/6}\\{1--274769(n+\\tfrac{1}{2})^{-2/8} \\ldots \\beta_{n}(b_{n,1}^{\\prime})\\sim -4^{n/3}--1.\n\n",
+            "char_f1": 0.5843902439024391
+          },
+          {
+            "page_id": "as_p0444",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.444)\nModified Spherical Bessel Functions of the Third Kind\n10.2.15\n\\sqrt{3\\pi/z}K_{n+1}(z)=\\tfrac{1}{2}\\pi ie^{(n+1)\\pi/2}h_{n}^{(1)}(ze^{1\\pi i})\n(-\\pi<\\arg z\\leq\\tfrac{1}{2}\\pi)\n=-\\tfrac{1}{2}\\pi ie^{-(n+1)\\pi/2}h_{n}^{(2)}(ze^{-1\\pi i})\n(\\tfrac{1}{2}\\pi<\\arg z\\leq\\pi)\n=(\\tfrac{1}{2}\\pi/2)e^{-z}\\sum\\limits_{0}^{\\alpha}(n+\\tfrac{1}{2},k)(2z)^{-k}\n10.2.16\nK_{n+1}(z)=K_{-n-1}(z) (n=0,1,2,\\ldots)\nThe Functions \\sqrt{\\frac{1}{2}\\pi/z}K_{n+1}(z),n=0,1,2\n10.2.17 \\sqrt{\\tfrac{1}{2}\\pi/2}K_{1/2}(z)=(\\tfrac{1}{2}\\pi/2)e^{-z}\n\\sqrt{\\tfrac{1}{2}\\pi/2}K_{1/2}(z)=(\\tfrac{1}{2}\\pi/2)e^{-z}(1+z^{-1})\n\\sqrt{\\tfrac{1}{2}\\pi/2}K_{1/2}(z)=(\\tfrac{1}{2}\\pi/2)e^{-z}(1+3z^{-1}+3z^{-2})\nElementary Properties Recurrence Relations f_n(z):\\sqrt{\\tfrac{1}{2}\\pi/2}I_{n+1}(z),(-1)^{n+1}\\sqrt{\\tfrac{1}{2}\\pi/2}K_{n+1}(z)\n(n=0,\\pm1,\\pm2,\\ldots)\n10.2.18  f_{n-1}(z)-f_{n+1}(z)=(2n+1)2^{-1}f_n(z)\n10.2.19  n\\delta_{n-1}(z)+(n+1)f_{n+1}(z)=(2n+1)\\fracd{dz}f_n(z)\n10.2.20 \\frac{n+1}{z}f_n(z)+\\fracd{dz}f_n(z)=f_{n-1}(z)\n(See 10.2.22.)\n10.2.21 -\\fracn{z}f_n(z)+\\fracd{dz}f_n(z)=f_{n+1}(z)\n(See 10.2.23.)\nDifferentiation Formulas f_n(z):\\sqrt{\\tfrac{1}{2}\\pi/2}I_{n+1}(z),(-1)^{n+1}\\sqrt{\\tfrac{1}{2}\\pi/2}K_{n+1}(z)\n(n=0,\\pm1,\\pm2,\\ldots)\n10.2.22 \\left(\\frac{1}{z}\\frac{d}{dz}\\right)^m[s^{n+1}f_n(z)]=z^{n-m+1}f_n-n(z)\n10.2.23 \\left(\\frac{1}{z}\\frac{d}{dz}\\right)^m[s^{-1}f_n(z)]=z^{-n-1}f_n+n(z)\n(m=1,2,3,\\ldots)\nFIGURE 10.5. \\sqrt{\\tfrac{\\pi}{2x}}I_{n+1}(z),\\sqrt{\\tfrac{\\pi}{2x}}K_{n+1}(z). \\ x=10.\n\n",
+            "char_f1": 0.8865161683953631
+          },
+          {
+            "page_id": "as_p0453",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.453)\nSample 2. Compute j_1s(x) for x=24.6. Interpolation in Table 10.3 yields for x=24.6\n[x^{-n}e^{\\sin x/\\beta_1}, x^{-n}e^{\\sin x/\\beta_2}, x^{-n}e^{\\sin x/\\beta_1}, x^{-n}e^{\\cos x/\\beta_2}]\n\nThe value pF_1s equals j_1s(24.6) to 8 decimals. The final part of the computations is shown in the following table, in which the correct values are given for comparison.\n\nIt may be observed that the normalization of the sequence F_N, F_N=1, \\cdot \\cdot \\cdot, F_0 can also be obtained from formula 10.1.50 by computing the sum \\sigma=\\sum_0^n (2k+1)F_1^x and finding p=1/\\sqrtz. This yields, in the case of the example, p=1/\\sqrtz=0.00000 03839 177.\nTo compute \\sqrt{\\frac{1}{2\\pi/x}}I_{\\pi+1}(x), \\sqrt{\\frac{1}{2\\pi/x}}Z_{\\pi+1}(x), n=0, 1, 2,",
+            "char_f1": 0.294234592445328
+          },
+          {
+            "page_id": "as_p0459",
+            "failed": false,
+            "pred_text": "BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.459)\nSPHERICAL BESSEL FUNCTIONS--ORDERS 3-10  Table 10.2   x | j_{x}(x) | j_{x}(x) | j_{y}(x) | j_{\\rm s}(x) | 10^{9} - j_{\\rm s}(x) | 10^{1/2}-10^{1/3}j_{\\rm t}(x)\nSample rows: (x=0",
+            "char_f1": 0.2560706401766004
+          },
+          {
+            "page_id": "as_p0505",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.1)\n13.1.15   y_{\\pm}=z^{-b}e^{\\pm}M(1-a,2-b,-z)\n13.1.16   y_{\\pm}=U(a,b,z)\n13.1.17   y_{\\pm}=z^{-b}U(1+a-b,2-b,2)\n13.1.18   y_{\\pm}=e^{+}U(b-a,b,-z)\n13.1.19   y_{\\pm}=z^{-b}e^{+}U(1-a,2-b,-z)\nWronskians\nIf W(m,n)=y_{\\pm}y_{\\pm}^{-}-y_{\\pm}^{+}n and\n\\epsilon=sgn(\\varkappa)=1 if \\varkappa z>0,\n=-1 if \\varkappa z\\leq0\n13.1.20\nW(1,2)=W(3,4)=W(1,4)=-W(2,3)\n=(1-b)z^{-b}e^{\\pm}\n13.1.21\nW(1,3)=W(2,4)=W(5,6)=W(7,8)=0\n13.1.22\nW(1,5)=-\\Gamma(b)z^{-b}e^{\\pm}/\\Gamma(a)\n13.1.23\nW(1,7)=\\Gamma(b)e^{\\pm e^{\\mp i}b^{2}-b}e^{\\pm}/\\Gamma(b-a)\n13.1.24\nW(2,5)=-\\Gamma(2-b)z^{-b}e^{\\pm}/\\Gamma(1+a-b)\n13.1.25\nW(2,7)=-\\Gamma(2-b)z^{-b}e^{\\pm}/\\Gamma(1-a)\n13.1.26\nW(5,7)=e^{\\pm e^{\\mp i}(b-a)}z^{-b}e^{\\pm}\nKummer Transformations\n13.1.27\nM(a,b,z)=e^{\\pm}M(b-a,b,-z)\n13.1.28\ns^{1-b}M(1+a-b,2-b,z)=z^{1-b}e^{\\pm}M(1-a,2-b,-z)\n13.1.29\nU(a,b,z)=z^{1-b}U(1+a-b,2-b,z)\n13.1.30\ne^{+}U(b-a,b,-z)=e^{\\mp i(1-b)}e^{\\pm}e^{\\pm}e^{\\pm}U(1-a,2-b,-z)\nWhittaker's Equation\n13.1.31\n\\frac{d^{2}w}{dz^{2}}+[-\\frac{1}{4}\\frac{\\kappa}{z}+\\frac{(3-\\mu^{2})}{z^2}]w=0\nSolutions:\nWhittaker's Functions\n13.1.32\nM_{\\pm}(z)=e^{-\\mathrm{i}z^{2}+\\mathrm{i}z^{4}}M(1+\\mu-\\kappa,1+2\\mu,z)\nWs_{\\pm}(z)=e^{-\\mathrm{i}z^{2}+\\mathrm{i}\\nu}U(\\tfrac{3}{2}+\\mu-\\kappa,1+2\\mu,z)\n(-\\pi<\\arg z\\leq\\pi,\\kappa=\\tfrac{1}{2}b-a,\\mu=\\tfrac{1}{2}b-\\tfrac{1}{2})\nWs_{\\pm}(z)=e^{-\\mathrm{i}z^{2}+\\mathrm{i}\\nu}U(\\tfrac{3}{2}+\\mu-\\kappa,1+2\\mu,z)\n(-\\pi<\\arg z\\leq\\pi,\\kappa=\\tfrac{1}{2}b-a,\\mu=\\tfrac{1}{2}b-\\tfrac{1}{2})\n13.1.34\nW_{\\pm}(z)=\\frac{\\Gamma(-2\\mu)}{\\Gamma(\\tfrac{1}{2}-\\mu-\\kappa)}M_{\\pm}(z)+\\frac{\\Gamma(2\\mu)}{\\Gamma(\\tfrac{1}{2}+\\mu-\\kappa)}M_{\\pm}(z)\\]\nGeneral Confluent Equation\n13.1.35\nw^{\\prime}+[\\frac{2A}{Z}+2f^{\\prime}+\\frac{bh^{\\prime}}{h}-h^{\\prime}-\\frac{h^{\\prime}\\tau'}{h^7}]w^{\\prime}\n+[\\Big{(}\\frac{bh^{\\prime}}{h}-h^{\\prime}-\\frac{h^{\\prime}\\tau'}{h^7}\\Big{)}\\Big{(}\\frac{A}{Z}+f^{\\prime}\\Big{)}+\\frac{A(A-1)}{Z^2}+\\frac{2Af^{\\prime}}{Z}+f^{\\prime}+f^{\\prime}-\\frac{dh^{\\prime}}{h}]w=0\nSolutions:\n13.1.36\nZ^{-4}e^{-\\pi(2)}M(a,b,h(Z))",
+            "char_f1": 0.6771378708551483
+          },
+          {
+            "page_id": "as_p0507",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (a-1+z)M(a, b, z)+(b-a)M(a-1, b, z)+(1-b)M(a, b-1, z)=0\n13.4.7  \\quad b(1-b+z)M(a, b, z)+b(b-1)M(a-1, b-1, z)-{}_{-az}M(a+1, b+1, z)=0\n13.4.8  \\quad M^{\\prime}(a, b, z)=\\frac{a}{b}M(a+1, b+1, z)\n13.4.9  \\quad\\frac{d^{n}}{dz^{n}}\\left\\{M(a, b, z)\\right\\}=\\frac{(a)_{n}}{(b)_{n}}M(a+n, b+n, z)\n13.4.10  \\quad aM(a+1, b, z)=aM(a, b, z)+zM^{\\prime}(a, b, z)\n13.4.11  \\quad(b-a)M(a-1, b, z)=(b-a-z)M(a, b, z)+zM^{\\prime}(a, b, z)\n13.4.12  \\quad(b-a)M(a, b+1, z)=bM(a, b, z)-bM^{\\prime}(a, b, z)\n13.4.13  \\quad(b-1)M(a, b-1, z)=(b-1)M(a, b, z)+zM^{\\prime}(a, b, z)\n13.4.14  \\quad(b-1)M(a-1, b-1, z)=(b-1-z)M(a, b, z)+zM^{\\prime}(a, b, z)\n13.4.15  \\quad U(a-1, b, z)+(b-2a-z)U(a, b, z)+a(1+a-b)U(a+1, b, z)=0\n13.4.16  \\quad(b-a-1)U(a, b-1, z)+(1-b-z)U(a, b, z)+zU(a, b+1, z)=0\n13.4.17  \\quad U(a, b, z)-aU(a+1, b, z)-U(a, b-1, z)=0\n13.4.18  \\quad M^{\\prime}(a, b, z)=\\frac{a}{b}M(a+1, b+1, z)\n13.4.20  \\",
+            "char_f1": 0.5464909155682223
+          },
+          {
+            "page_id": "as_p0509",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPEPEGGOMETRIC FUNCTIONS (p.1)\nColumns:\n13.5.20\n\\Gamma(a,b,x)=\\Gamma(b-4a)\\Gamma(b-4a)\\Gamma(c-6)\\Gamma(d-9)\\Gamma(e^{4}+1)\\Gamma(e^{4}+1)\\Gamma(f-1)\\Gamma(g-1)",
+            "char_f1": 0.0993985438429883
+          },
+          {
+            "page_id": "as_p0518",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.18)\nTable 13.1  CONFLUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nx=0.3\n\\alpha\\backslash 0.1  0.2  0.3\n-1.0  (0)-2.000000 00  (-1)-5.000000 00  (-1)5.74128 57  (-1)6.250000 00  (-1)6.66666 67  (-1)7.000000 00  (-1)6.666666 67  (-1)6.996663 0  (-1)6.996663 0  (-1)6.996664 38  (0)1.13248 30  (0)1.449858 0  (0)1.349856 88  (0)1.391248 30  (0)1.444759 99  (0)1.39185 54  (0)1.34985 88",
+            "char_f1": 0.42531645569620247
+          },
+          {
+            "page_id": "as_p0528",
+            "failed": false,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.1)\nTable 13.1  CONFLUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nx=4.0\n\\lambda\\vartheta  0.1  0.2  0.3  0.4  0.5\n-1.0  (1)-3.90000 00  (1)-1.90000 00  (1)-1.23333 33  (0)-9.00000 00  (0)-7.00000 00  (0)-8.40761 69  (0)-8.8 (0)-7.50985 56  (0)-6.04428 51  (0)-4.96765 07  (0)-4.16932 54  (0)-3.58103 67  (0)-3.56303 67  (0)-5.38234 50  (0)-4.41593 73  (0)-3.67394 51  (0)-5.1873 12  (0)-3.51873 12  (0)-3.52149 77  (0)-3.21081 98  (0)-1.00808 43  (0)-1.25577 95  (1)-1.3093 64  (1)-3.4983 35  (1)-1.3524 14  (0)-3.\n\n",
+            "char_f1": 0.4765386959171237
+          },
+          {
+            "page_id": "as_p0534",
+            "failed": true,
+            "pred_text": "CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.1)\nTable 13.1  CONFLUENT HYPERGEOMETRIC FUNCTION M(a, b, x)\nx=10.0\na\\backslash b\n0.1  0.2  0.3  0.4  0.5\n-1.0  (1)-9.90000 0  (1)-4.90000 0  (1)-3.233333 3  (1)-2.40000 00  (1)-2.40000 00  (1)-1.90000 00  (2)-3.45535 97  (2)-2.28812 39  -0.8  (3)-5.74321 45  (3)-2.26606 51  (3)-1.20865 20  (2)-7.34339 26  (2)-4.81371 33  -0.7  (3)-9.29144 29  (3)-5.6531 21  (3)-1.94041 89  (3)-1.17365 02  (2)-7.65615 52  -0.6  (4)-1.30473 07  (3)-5.11412 18  (3)-2.70839 91  (3)-1.63300 24  (3)-1.00713 13  -0.5  (4)-1.6086 19  (3)-6.49508 42  (3)-4.3144 26  (3)-2.06370 40  (3)-1.33814 35  -0.4  (4)-1.93829 90  (3)-7.56478 22  (3)-3.98819 28  (3)-2.39329 23  (3)-1.54831 36  -0.3  (4)-2.05153 93  (3)-7.99214 74  (3)-2.40553 66  (3)-2.51877 45  (3)-1.62617 94  -0.2  (4)-1.88911 87  (3)-7.31898 36  (3)-3.84460 18  (3)-2.28844 83  (3)-1.48115 57  -0.1  (4)-1.426894 82  (3)-4.92715 82  -5.93885 05  (3)-1.54205 59  (2)-9.91916 94  0.0  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.00000 00  (0)+1.000000 00  (0)+1.\n\n",
+            "failure_reason": "repetition-degeneration"
+          },
+          {
+            "page_id": "as_p0562",
+            "failed": false,
+            "pred_text": "HYPERGEOMETRIC FUNCTIONS (p.562)\n15.4.10   F(a, a+\\tfrac1; c; z)=2^{\\alpha-1}\\Gamma(c)2^{\\beta-1\\nu}(1-z)^{\\mu-a-1}P_{\\alpha-\\delta}^{1-\\sigma}[(1-z)^{-1}]\\qquad(\\text{\\quad(\\arg~z|<\\pi,\\ |\\arg~(1-\\sigma)|<\\pi,\\ \\varepsilon\\ \\text{not between}\\ 0\\ \\text{and}\\ -\\infty)}\\]\n15.4.11   F(a, a+\\tfrac1; c; x)=2^{\\alpha-1}\\Gamma(c)(-x)^{1-\\nu}(1-x)^{\\mu-\\alpha-\\nu}P_{\\alpha-\\delta}^{1-\\sigma}[(1-x)^{-\\mu}]\\qquad(\\text{\\quad(\\!\\!-\\!\\infty\\!/\\!\\!\\infty\\!",
+            "char_f1": 0.16001866106834617
+          },
+          {
+            "page_id": "as_p0563",
+            "failed": false,
+            "pred_text": "HYPERGEOMETRIC FUNCTIONS (p.563)\nhas three (regular) singular points \\varepsilon=0,1,\\infty. The pairs of exponents at these points are\n15.5.2  \\rho_{x,1}^{(n)}=0,1-c, \\rho_{x,2}^{(k)}=0,c-a-b, \\rho_{x,3}^{(n)}=a,b respectively. The general theory of differential equations of the Fuchsian type distinguishes between the following cases.\nA. None of the numbers c, e--a-b; c--b is equal to an integer. Then two linearly independent solutions of 15.5.1 in the neighborhood of the singular points 0,1,\\infty are respectively\n15.5.3   w_{1:(0)}=F(a, b; c; z)=(1-z)^{c-a-b}F(c-a, c-b; c; z)\n15.5.4   w_{2:(0)}=z^{1-c}F(a-e+1, b-e+1; 2-c; z)=z^{1-c}(1-z)^{c-a-b}F(1-a, 1-b; 2-c; z)\n15.5.5   w_{1:(0)}=F(a, b; a+b+1-c; 1-z)=z^{1-c}F(1+b-c, 1+a-e; a+b+1-c; 1-z)\n15.5.6   w_{2:(0)}=(1-z)^{c-a-b}F(c-b, c-a; c-a-b+1; 1-z)=z^{1-c}(1-z)^{c-a-b}F(1-a, 1-b; c-a-b+1; 1-z)\n15.5.7   w_{1:(a)}=z^{a}F(a, a-e+1; a-b+1; z^{1})=z^{b-c}(z-1)^{c-a-b}F(1-b, c-b; a-b+1; z^{-1})\n15.5.8   w_{2:(a)}=z^{b}F(b, b-e+1; b-a+1;  z^{-1})=z^{a-c}(z-1)^{c-a-b}F(1-a, c-a; b-a+1; z^{-1})\nThe second set of the above expressions is obtained by applying 15.3.3 to the first set.\nAnother set of representations is obtained by applying 15.3.4 to 15.5.3 through 15.5.8. This gives 15.5.9-15.5.14.\n15.5.9   w_{1:(0)}=(1-z)^{-a}F\\left(a, c-b; c;\\frac{z}{z-1}\\right)=(1-z)^{-b}F\\left(b, c-a; c;\\frac{z}{z-1}\\right)\n15.5.10   w_{2:(0)}=z^{1-c}(1-z)^{c-a-1}F\\left(a-c+1, 1-b; 2-c;\\frac{z}{z-1}\\right)=z^{1-c}(1-z)^{c-a-b}F\\left(b-c+1, 1-a; 2-c;\\frac{z}{z-1}\\right)\n15.5.11   w_{1:(1)}=z^{-a}F(a, a-c+1; a+b-c+1; 1-z^{-1})=z^{-b}F(b, b-c+1; a+b-c+1; 1-z^{-1})\n15.5.12   w_{2:(0)}=z^{a-c}(1-z)^{c-a-b}F(c-a, 1-a; c-a-b+1; 1-z^{-1})=z^{b-c}(1-z)^{c-a-b}F(c-b, 1-b; c-a-b+1; 1-z^{-1})\n15.5.13   w_{1:(a)}=(z-1)^{-a}F\\left(a, c-b; a-b+1; \\frac{1}{1-z}\\right)=(z-1)^{-b}F\\left(b, c-a; b-a+1; \\frac{1}{1-z}\\right)\n15.5.14   w_{2:(a)}=z^{1-c}(z-1)^{c-a-1}F\\left(a-c+1, 1-b; a-b+1; \\frac{1}{1-z}\\right)=z^{1-c}(z-1)^{c-b-1}F\\left(b-c+1, 1-a; b-a+1; \\frac{1}{1-z}\\right)\n15.5.3 to 15.5.14 constitute Kummer's 24 solutions of the hypergeometric equation. The analytic continuation of w_{1:,40}(z) can then be obtained by means of 15.3.3 to 15.3.9.\nB. One of the numbers a, b, c--a, c--b is an integer. Then one of the hypergeometric series for instance w_{1:,40}, 15.5.3, 15.5.4 terminates and the ",
+            "char_f1": 0.8239530036005306
+          },
+          {
+            "page_id": "as_p0564",
+            "failed": false,
+            "pred_text": "564  W_{2(0)}=F(a,b;1;z)\\ln z+\\sum_{n=1}^{\\infty}(\\frac{\\alpha}{n!})^{n}\\,[\\psi(a+n)-\\psi(a)+\\psi(b+n)-\\psi(b)-2\\psi(n+1)+2\\psi(1)]\\quad (|z|<1)\nE. The number c=m+1, m=1, 2, 3, \\ldots . A fundamental system is\n15.5.18 w_{2(0)}=F(a,b;m+1;z)\\ln z+\\sum_{n=1}^{\\infty}(\\frac{\\alpha}{n!})^{n}\\,[\\psi(a+n)-\\psi(a)+\\psi(b+n)-\\psi(b)-\\psi(m+1+n)\\]\nE. The number c=m+1, m=1, 2, 3, \\ldots . A fundamental system is\n15.5.19 w_{2(0)}=F(a,b;m+1;z)\\ln z+\\sum_{n=1}^{\\infty}(\\frac{\\alpha}{1+m})^{n!}\\,z^{n}[\\psi(a+n)-\\psi(a)+\\psi(b+n)-\\psi(b)-\\psi(m+1+n)\\]\nE. The number c=m+1, m=1, 2, 3, \\ldots . A fundamental system is\n15.5.20 w_{2(0)}=z^{n}F(a+m, b+m;1+m;z)\\ln z+\\sum_{n=1}^{\\infty}z^{n}\\,(\\frac{a+m}{1+m})^{n!}\\,[\\psi(a+m+n)-\\psi(a+m)+\\psi(b+m+n)\\]\nE. The number c=1-m, m=1, 2, 3, \\ldots . A fundamental system is\n15.5.20 w_{2(0)}=z^{n}F(a+m, b+m;1+m;z)\\ln z+\\sum_{n=1}^{\\infty}(\\frac{\\alpha-1}{1-\\alpha})^{n}\\,[\\psi(a+m+n)-\\psi(a+m)+\\psi(b+m+n)\\]\nE. The number c=1-m, m=1, 2, 3, \\ldots . A fundamental system is\n15.5.20 w_{2(0)}=z^{n}F(a+m, b+m;1+m;z)\\ln z+\\sum_{n=1}^{\\infty}(\\frac{\\alpha-1}{1-\\alpha})^{n}\\,[\\psi(a+m+n)-\\psi(a+m)+\\psi(b+m+n)\\]\nE. The hypergeometric function\n15.6.4  w=P\\left\\{\\begin{array}{c c ",
+            "char_f1": 0.4447468698965705
+          }
+        ]
+      }
+    }
+  },
+  "stage_a_elapsed_s": 1346.5203113555908
+}
