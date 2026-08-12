@@ -1,0 +1,9 @@
+{
+  "source_pdf": "data/raw/NIST_Handbook_Mathematical_Functions.pdf",
+  "pdf_pages_scanned": 967,
+  "pages_with_tables": 5,
+  "table_pairs_written": 9,
+  "out_dir": "data/annot/nist_tables",
+  "render_dpi": 300,
+  "elapsed_s": 4.4
+}

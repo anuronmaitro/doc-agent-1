@@ -1,0 +1,16 @@
+{
+  "id": "eliasmainur/mathscholar-stage-c-tables",
+  "title": "Mathscholar Stage C Tables",
+  "code_file": "kaggle_stage_c.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": ["eliasmainur/mathscholar-curve-n122-adapter"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
