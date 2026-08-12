@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v1
+      - uses: astral-sh/setup-uv@v9.0.0
       - run: uv sync --frozen --extra dev
       - run: uv run ruff check .
       - run: uv run black --check .

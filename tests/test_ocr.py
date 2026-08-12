@@ -111,6 +111,54 @@ class TestFailureReasonRepetitionDegeneration:
         text = "Normal opening text. " + (pattern + " ") * 4
         assert _failure_reason(text) == "repetition-degeneration"
 
+    def test_step28_real_spiral_longer_than_old_20char_cap_is_now_caught(self):
+        """Real regression: the fine-tuned reader's validation run (Step 28, curve point
+        n=122) produced `as_p0334`'s worst-scoring prediction (char-F1 0.067) as a spiral
+        on the unit "-\\mu xP_{\\tau}^{n}(z) " -- 22 characters, past the OLD
+        DEGEN_REPEAT_UNIT_MAX_LEN=20 cap, so it was scored as a low-quality success instead
+        of a failure. Reproduced verbatim (short prose lead-in + the real repeated unit)."""
+        unit = "-\\mu xP_{\\tau}^{n}(z) "
+        assert len(unit) > 20  # the exact old-threshold miss this regression guards
+        text = "(z^2-1)!P_{\\tau}^{n-1}(z) " + unit * 15
+        assert _failure_reason(text) == "repetition-degeneration"
+
+    def test_legitimate_varying_table_rows_are_not_caught_by_wider_unit_cap(self):
+        """Guard against the 20->60 widening creating a new false positive: real table
+        rows are long-ish and share structure, but their actual digits differ row to row,
+        so no fixed unit can repeat consecutively -- must stay unflagged."""
+        rows = "\n".join(f"{i}.0  {i}.0000  {i}.1234  {i}.5678  {i}.9012" for i in range(20))
+        assert _failure_reason(rows + "\n" * 2 + rows.replace("0.0", "1.1")) is None
+
+
+class TestFailureReasonBlockRepetition:
+    def test_duplicate_display_equation_block_is_caught(self):
+        """Step 21 finding 1: `as_p0441`-style failure -- a display equation block repeats
+        once, verbatim, later on the page, with different content in between. The
+        consecutive-unit spiral check above cannot see this (the blocks aren't adjacent)."""
+        block = "\\(J_{\\nu}(z)\\sim(\\tfrac12 z)^{\\nu}/\\Gamma(\\nu+1)\\quad(z\\to0)\\)"
+        assert len(block) >= 60
+        text = (
+            "9.1.7\n\n"
+            + block
+            + "\n\nSome unrelated intervening prose about convergence.\n\n"
+            + block
+        )
+        assert _failure_reason(text) == "block-repetition-degeneration"
+
+    def test_short_duplicate_block_under_the_floor_is_not_caught(self):
+        """A short, incidentally-repeated block (e.g. a one-line section header appearing
+        twice, legitimately) must not trip the check -- only blocks >= MIN_BLOCK_DUP_CHARS."""
+        text = "Notation\n\nSome real content paragraph here that is not repeated.\n\nNotation"
+        assert _failure_reason(text) != "block-repetition-degeneration"
+
+    def test_distinct_blocks_are_not_caught(self):
+        """A normal multi-paragraph page (every block different) must not be flagged."""
+        text = "\n\n".join(
+            f"Paragraph {i} discusses a distinct topic in enough length to clear any floor."
+            for i in range(5)
+        )
+        assert _failure_reason(text) is None
+
 
 class _FakeReader:
     """Duck-typed stand-in for Reader: `_retry_page_by_region` only ever calls

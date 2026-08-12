@@ -47,16 +47,30 @@ data:
 # glyph/layout recognition cheaply, not to be the model selection signal -- that is
 # Stage B's job, on real A&S pages. See plan.md Step 27's DECISION for why Stage A's
 # per-formula crops don't get a held-out split of their own.
+#
+# max_epochs raised 1 -> 4 at Step 28 (2026-08-11), together with a real bug fix in
+# training/datamodule.py (SeedByEpochCallback): the on-the-fly degradation RNG used to be
+# seeded by (seed, pair index) only, identical every epoch regardless of how many ran.
+# Fixed so each epoch degrades the same 695 pairs differently -- without that fix, raising
+# max_epochs here would have just repeated identical images, not added real exposure. No
+# validation split still means this number isn't tuned by a metric; kept modest (not 5+)
+# for that reason -- see plan.md Step 28 for the full reasoning.
 stage_a:
   batch_size: 4
-  max_epochs: 1
+  max_epochs: 4
   lr: 5.0e-5
   num_workers: 0
 
 # --- Stage B: A&S fine-tune (the target distribution, early-stopped on val) -----------
+# max_epochs raised 8 -> 16 at Step 28 (2026-08-11): real evidence from curve point n=25's
+# actual Kaggle run showed `Trainer.fit` stopping at `max_epochs=8` with early stopping
+# (patience 3) never triggering -- val_loss was still monotonically falling every epoch
+# (down to 0.51459 at epoch 7). The old cap was cutting training off before convergence,
+# not after; early stopping (unchanged: patience 3 on val_loss) is what actually bounds
+# this now, not the epoch count.
 stage_b:
   batch_size: 1   # whole-page images; keep small, raise via Kaggle GPU memory at Step 28
-  max_epochs: 8
+  max_epochs: 16
   lr: 2.0e-5
   num_workers: 0
   early_stopping_patience: 3

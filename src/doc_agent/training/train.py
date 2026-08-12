@@ -37,11 +37,16 @@ def _build_logger(cfg: dict[str, Any], run_name: str) -> Any:
 
 
 def _build_trainer(
-    cfg: dict[str, Any], stage_cfg: dict[str, Any], *, early_stopping: bool, run_name: str
+    cfg: dict[str, Any],
+    stage_cfg: dict[str, Any],
+    *,
+    early_stopping: bool,
+    run_name: str,
+    extra_callbacks: list[Any] | None = None,
 ) -> L.Trainer:
     from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint
 
-    callbacks: list[Any] = []
+    callbacks: list[Any] = list(extra_callbacks) if extra_callbacks else []
     if early_stopping:
         callbacks.append(
             EarlyStopping(

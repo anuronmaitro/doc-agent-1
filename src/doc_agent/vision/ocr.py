@@ -113,9 +113,18 @@ MIN_PAGE_CHARS = 120
 #    starts catching short units (e.g. "\," x14 = ~1% of an otherwise-good page) that read
 #    as coincidental formula spacing rather than a stuck decoder, so a MIN_SPIRAL_SPAN_CHARS
 #    floor (naturally scaling with unit length) guards against exactly that.
-DEGEN_REPEAT_UNIT_MAX_LEN = 20
+# Step 28 correction (2026-08-12): widened 20 -> 60 after the fine-tuned reader's real
+# Kaggle validation run produced a spiral this threshold still missed. `as_p0334`'s
+# lowest-scoring prediction (char-F1 0.067, curve point n=122) repeats the unit
+# `-\mu xP_{\tau}^{n}(z) ` -- 22 characters, past the old 20-char cap -- more than a dozen
+# times, and was scored as a low-quality "success" instead of counted as a failure because
+# the detector's own unit-length window couldn't see it. Found by actually reading the
+# generated text, not just the aggregate char-F1 number, the same discipline that found
+# the original DEGEN_REPEAT_UNIT_MAX_LEN=4 -> 20 gap at Step 18b. 60 gives real headroom
+# above the one measured case rather than being set to exactly fit it.
+DEGEN_REPEAT_UNIT_MAX_LEN = 60
 DEGEN_MIN_UNIT_REPEATS = 13
-# Compiles to (.{1,20}?)\1{12,} : a 1-20 character unit, then 12 more copies = 13 total.
+# Compiles to (.{1,60}?)\1{12,} : a 1-60 character unit, then 12 more copies = 13 total.
 DEGEN_REPEAT_RE = re.compile(
     rf"(.{{1,{DEGEN_REPEAT_UNIT_MAX_LEN}}}?)\1{{{DEGEN_MIN_UNIT_REPEATS - 1},}}",
     re.DOTALL,
@@ -123,6 +132,35 @@ DEGEN_REPEAT_RE = re.compile(
 TABULAR_UNIT_RE = re.compile(r"^[lcr|@{}&\s.0-9]*$")
 WS_RE = re.compile(r"\s+")
 MIN_SPIRAL_SPAN_CHARS = 60
+
+# Step 21 finding 1 (block-level repetition), implemented at Step 28: a WHOLE block
+# (paragraph or display equation, separated from its neighbors by a blank line) repeating
+# verbatim later in the same page is a different failure shape from DEGEN_REPEAT_RE above
+# -- that regex looks for a short-to-medium unit repeating CONSECUTIVELY, not one block
+# reappearing once, much later, with different content in between. Measured on the 20
+# validation pages: `as_p0340` emits 3 blocks twice (19% of the page duplicated),
+# `as_p0441` emits 2 display equations twice (14%) -- both recorded as successes by the
+# unit-regex check alone. Exact-match only (not near-duplicate/fuzzy): both measured cases
+# are byte-identical repeats, and exact match is the check least likely to false-positive
+# on legitimate content that merely looks similar (e.g. two different rows of a table that
+# happen to share most of their text).
+MIN_BLOCK_DUP_CHARS = 60
+_BLOCK_SPLIT_RE = re.compile(r"\n\s*\n")
+
+
+def _has_duplicate_block(text: str) -> bool:
+    """True if any block (paragraph/equation, split on blank lines) of at least
+    `MIN_BLOCK_DUP_CHARS` characters appears more than once, verbatim, in `text`."""
+    seen: set[str] = set()
+    for block in _BLOCK_SPLIT_RE.split(text):
+        block = block.strip()
+        if len(block) < MIN_BLOCK_DUP_CHARS:
+            continue
+        if block in seen:
+            return True
+        seen.add(block)
+    return False
+
 
 # Step 18b defect 5, found on the full-book run (not the 20-page smoke sample): a region
 # crop with a near-zero width or height crashes Nougat's OWN preprocessing, not ours.
@@ -330,6 +368,14 @@ def _failure_reason(text: str) -> str | None:
         span = m.end() - m.start()
         if span >= MIN_SPIRAL_SPAN_CHARS and not TABULAR_UNIT_RE.match(m.group(1)):
             return "repetition-degeneration"
+
+    # Block-level repetition (Step 21 finding 1, implemented at Step 28): a whole
+    # paragraph/equation block repeating once, verbatim, much later in the page -- a
+    # different shape from the consecutive-unit spiral above, so it needs its own check
+    # rather than a bigger DEGEN_REPEAT_UNIT_MAX_LEN. See `_has_duplicate_block`'s
+    # docstring for the two real pages (as_p0340, as_p0441) that motivated this.
+    if _has_duplicate_block(stripped):
+        return "block-repetition-degeneration"
 
     tokens = stripped.split()
 
