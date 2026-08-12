@@ -67,6 +67,11 @@ class _NistStageADataset(Dataset):
             raise ValueError(f"_NistStageADataset: {pairs_path} is empty")
         self._deg_cfg = degradation_cfg
         self._seed = seed
+        # Bumped by `SeedByEpochCallback` before each epoch (default 0, i.e. unchanged
+        # behavior for a 1-epoch run). See that callback's docstring for why this exists:
+        # without it, every epoch beyond the first would replay the IDENTICAL degraded
+        # image per pair rather than a new augmented variant.
+        self.epoch = 0
 
     def __len__(self) -> int:
         return len(self._pairs)
@@ -75,13 +80,32 @@ class _NistStageADataset(Dataset):
         rec = self._pairs[idx]
         src = Image.open(rec["image"]).convert("L")
         arr = np.asarray(src, dtype=np.float32)
-        # Same per-sample-seeded RNG convention as scripts/degrade_nist_pairs.py
-        # (config seed + pair index) -- any given index's degraded image is reproducible
-        # across runs/workers without needing to persist it.
-        rng = np.random.default_rng(self._seed + idx)
+        # Per-sample-seeded RNG (config seed + pair index + epoch * dataset size) -- any
+        # given (index, epoch) pair's degraded image is reproducible across runs/workers
+        # without needing to persist it. The epoch term was added at Step 28 (found running
+        # the real multi-epoch Stage A on Kaggle, see SeedByEpochCallback): without it this
+        # was `seed + idx` alone, identical every epoch regardless of how many epochs ran --
+        # fine for the 1-epoch default this shipped with, silently wrong for >1.
+        rng = np.random.default_rng(self._seed + idx + self.epoch * len(self._pairs))
         degraded = degrade_one(arr, self._deg_cfg, rng)
         image = Image.fromarray(degraded).convert("RGB")
         return {"image": image, "text": rec["text"]}
+
+
+class SeedByEpochCallback(L.Callback):
+    """Advances `_NistStageADataset.epoch` before each training epoch, so a multi-epoch
+    Stage A run degrades each pair differently per epoch instead of replaying the same
+    image (see that dataset's own comment for the bug this fixes -- found running the real
+    Step 28 Kaggle GPU job with `stage_a.max_epochs > 1`). No-op for a 1-epoch run (Step
+    27's own smoke test and default config), since `on_train_epoch_start` only ever sets
+    `epoch = 0` there -- safe to always attach, not something that needs conditioning on
+    `max_epochs`."""
+
+    def __init__(self, dataset: "_NistStageADataset") -> None:
+        self._dataset = dataset
+
+    def on_train_epoch_start(self, trainer: Any, pl_module: Any) -> None:  # noqa: ARG002
+        self._dataset.epoch = trainer.current_epoch
 
 
 class _ASStageBDataset(Dataset):
