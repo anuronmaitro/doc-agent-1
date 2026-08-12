@@ -28,8 +28,12 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RUN_FINETUNE = (REPO_ROOT / "scripts" / "run_finetune.py").read_text(encoding="utf-8")
 RUN_FINETUNE_TABLES = (REPO_ROOT / "scripts" / "run_finetune_tables.py").read_text(encoding="utf-8")
-DATAMODULE = (REPO_ROOT / "src" / "doc_agent" / "training" / "datamodule.py").read_text(encoding="utf-8")
-TRAIN_MODULE = (REPO_ROOT / "src" / "doc_agent" / "training" / "train.py").read_text(encoding="utf-8")
+DATAMODULE = (REPO_ROOT / "src" / "doc_agent" / "training" / "datamodule.py").read_text(
+    encoding="utf-8"
+)
+TRAIN_MODULE = (REPO_ROOT / "src" / "doc_agent" / "training" / "train.py").read_text(
+    encoding="utf-8"
+)
 OCR_MODULE = (REPO_ROOT / "src" / "doc_agent" / "vision" / "ocr.py").read_text(encoding="utf-8")
 TRAIN_CFG = (REPO_ROOT / "configs" / "train_ocr.yaml").read_text(encoding="utf-8")
 
@@ -50,7 +54,10 @@ def md(src: str) -> dict:
 
 def code(src: str) -> dict:
     return {
-        "cell_type": "code", "execution_count": None, "metadata": {}, "outputs": [],
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
         "source": src.splitlines(keepends=True),
     }
 
@@ -58,7 +65,7 @@ def code(src: str) -> dict:
 def build_cells() -> list[dict]:
     cells: list[dict] = []
 
-    cells.append(md(f"""# MathScholar — Stage C: table-focused continuation fine-tune
+    cells.append(md("""# MathScholar — Stage C: table-focused continuation fine-tune
 
 Continues fine-tuning from the saved `curve_n122` adapter (Step 28's best checkpoint),
 table-focused, per the direct request after Step 28's curve showed strong formula/prose
@@ -82,12 +89,15 @@ ADAPTER_DATASET_SLUG = "{ADAPTER_DATASET.split('/')[-1]}"
 """))
 
     cells.append(md("""## 1. Clone the repo and install pinned dependencies"""))
-    cells.append(code("""import os, subprocess
+    cells.append(code("""import os
+import subprocess
+
 if not os.path.exists("/kaggle/working/repo"):
     subprocess.run(["git", "clone", "--branch", BRANCH, "--depth", "1", REPO_URL, "/kaggle/working/repo"], check=True)
 %cd /kaggle/working/repo
 !pip install -q --no-cache-dir -r requirements.lock
 import pkg_resources  # noqa: F401
+
 print("pkg_resources OK")
 """))
 
@@ -103,11 +113,12 @@ somewhere underneath it. Rather than guess a third exact path shape, this walks 
 `/kaggle/input` tree and finds whichever directory actually contains `adapter_config.json`
 -- the file that uniquely identifies the PEFT adapter's own contents -- so it's independent
 of naming/nesting quirks entirely."""))
-    cells.append(code("""import shutil, os
+    cells.append(code("""import os
+import shutil
 
 print("Available /kaggle/input/ entries:", os.listdir("/kaggle/input"))
 adapter_dir = None
-for root, dirs, files in os.walk("/kaggle/input"):
+for root, _dirs, files in os.walk("/kaggle/input"):
     if "adapter_config.json" in files:
         adapter_dir = root
         break
@@ -134,19 +145,34 @@ train pages `run_finetune_tables.py` reuses, not just val."""))
     cells.append(code("""!ANNOT=1 bash scripts/get_data.sh
 """))
 
-    cells.append(md("""## 4. Write the NIST table pairs (9 pairs, embedded -- small enough to inline, see
-this notebook's own generator docstring for why it isn't a Dataset like the adapter)."""))
-    img_lines = ["import base64, os", 'os.makedirs("data/annot/nist_tables/images", exist_ok=True)']
+    cells.append(
+        md("""## 4. Write the NIST table pairs (9 pairs, embedded -- small enough to inline, see
+this notebook's own generator docstring for why it isn't a Dataset like the adapter).""")
+    )
+    img_lines = [
+        "import base64",
+        "import os",
+        "",
+        'os.makedirs("data/annot/nist_tables/images", exist_ok=True)',
+    ]
     for name, b64 in NIST_TABLES_IMAGES.items():
-        img_lines.append(f'open("data/annot/nist_tables/images/{name}", "wb").write(base64.b64decode("{b64}"))')
-    img_lines.append('print(f"wrote {len(os.listdir(\'data/annot/nist_tables/images\'))} table images")')
+        img_lines.append(
+            f'open("data/annot/nist_tables/images/{name}", "wb").write(base64.b64decode("{b64}"))'
+        )
+    img_lines.append(
+        "print(f\"wrote {len(os.listdir('data/annot/nist_tables/images'))} table images\")"
+    )
     cells.append(code("\n".join(img_lines)))
     cells.append(code("%%writefile data/annot/nist_tables/pairs.jsonl\n" + NIST_TABLES_PAIRS))
     cells.append(code("%%writefile data/annot/nist_tables/summary.json\n" + NIST_TABLES_SUMMARY))
 
     cells.append(md("""## 5. Write the code (5 files -- run_finetune.py is imported by
 run_finetune_tables.py for its shared eval/adapter helpers)."""))
-    cells.append(code('import os\nos.makedirs("src/doc_agent/training", exist_ok=True)\nos.makedirs("src/doc_agent/vision", exist_ok=True)\n'))
+    cells.append(
+        code(
+            'import os\n\nos.makedirs("src/doc_agent/training", exist_ok=True)\nos.makedirs("src/doc_agent/vision", exist_ok=True)\n'
+        )
+    )
     cells.append(code("%%writefile src/doc_agent/training/datamodule.py\n" + DATAMODULE))
     cells.append(code("%%writefile src/doc_agent/training/train.py\n" + TRAIN_MODULE))
     cells.append(code("%%writefile src/doc_agent/vision/ocr.py\n" + OCR_MODULE))
@@ -164,6 +190,7 @@ run_finetune_tables.py for its shared eval/adapter helpers)."""))
 
     cells.append(md("""## 7. Package the output for download"""))
     cells.append(code("""import shutil
+
 out_dir = "/kaggle/working/out"
 os.makedirs(out_dir, exist_ok=True)
 shutil.copytree("data/models/ocr_lora/table_ft", f"{out_dir}/table_ft", dirs_exist_ok=True)

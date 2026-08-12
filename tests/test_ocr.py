@@ -119,18 +119,14 @@ class TestFailureReasonRepetitionDegeneration:
         of a failure. Reproduced verbatim (short prose lead-in + the real repeated unit)."""
         unit = "-\\mu xP_{\\tau}^{n}(z) "
         assert len(unit) > 20  # the exact old-threshold miss this regression guards
-        text = (
-            "(z^2-1)!P_{\\tau}^{n-1}(z) " + unit * 15
-        )
+        text = "(z^2-1)!P_{\\tau}^{n-1}(z) " + unit * 15
         assert _failure_reason(text) == "repetition-degeneration"
 
     def test_legitimate_varying_table_rows_are_not_caught_by_wider_unit_cap(self):
         """Guard against the 20->60 widening creating a new false positive: real table
         rows are long-ish and share structure, but their actual digits differ row to row,
         so no fixed unit can repeat consecutively -- must stay unflagged."""
-        rows = "\n".join(
-            f"{i}.0  {i}.0000  {i}.1234  {i}.5678  {i}.9012" for i in range(20)
-        )
+        rows = "\n".join(f"{i}.0  {i}.0000  {i}.1234  {i}.5678  {i}.9012" for i in range(20))
         assert _failure_reason(rows + "\n" * 2 + rows.replace("0.0", "1.1")) is None
 
 
@@ -142,7 +138,9 @@ class TestFailureReasonBlockRepetition:
         block = "\\(J_{\\nu}(z)\\sim(\\tfrac12 z)^{\\nu}/\\Gamma(\\nu+1)\\quad(z\\to0)\\)"
         assert len(block) >= 60
         text = (
-            "9.1.7\n\n" + block + "\n\nSome unrelated intervening prose about convergence.\n\n"
+            "9.1.7\n\n"
+            + block
+            + "\n\nSome unrelated intervening prose about convergence.\n\n"
             + block
         )
         assert _failure_reason(text) == "block-repetition-degeneration"

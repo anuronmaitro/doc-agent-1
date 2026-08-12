@@ -161,6 +161,7 @@ def _has_duplicate_block(text: str) -> bool:
         seen.add(block)
     return False
 
+
 # Step 18b defect 5, found on the full-book run (not the 20-page smoke sample): a region
 # crop with a near-zero width or height crashes Nougat's OWN preprocessing, not ours.
 # layout.detect() (TATR, a learned model) does not guarantee a sane bbox on every region --

@@ -101,7 +101,7 @@ class SeedByEpochCallback(L.Callback):
     `epoch = 0` there -- safe to always attach, not something that needs conditioning on
     `max_epochs`."""
 
-    def __init__(self, dataset: "_NistStageADataset") -> None:
+    def __init__(self, dataset: _NistStageADataset) -> None:
         self._dataset = dataset
 
     def on_train_epoch_start(self, trainer: Any, pl_module: Any) -> None:  # noqa: ARG002

@@ -18,8 +18,12 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = (REPO_ROOT / "scripts" / "run_finetune.py").read_text(encoding="utf-8")
-DATAMODULE = (REPO_ROOT / "src" / "doc_agent" / "training" / "datamodule.py").read_text(encoding="utf-8")
-TRAIN_MODULE = (REPO_ROOT / "src" / "doc_agent" / "training" / "train.py").read_text(encoding="utf-8")
+DATAMODULE = (REPO_ROOT / "src" / "doc_agent" / "training" / "datamodule.py").read_text(
+    encoding="utf-8"
+)
+TRAIN_MODULE = (REPO_ROOT / "src" / "doc_agent" / "training" / "train.py").read_text(
+    encoding="utf-8"
+)
 OCR_MODULE = (REPO_ROOT / "src" / "doc_agent" / "vision" / "ocr.py").read_text(encoding="utf-8")
 TRAIN_CFG = (REPO_ROOT / "configs" / "train_ocr.yaml").read_text(encoding="utf-8")
 
@@ -46,16 +50,38 @@ def _check_embeds_complete(notebook_source_blob: str) -> None:
     version instead. Diffs against `main` (not just `git status`), so this also catches a
     file that's already committed on this branch but not yet merged."""
     result = subprocess.run(
-        ["git", "diff", "--name-only", "main", "--",
-         "src/doc_agent", "configs/train_ocr.yaml", "scripts/run_finetune.py"],
-        cwd=REPO_ROOT, capture_output=True, text=True, check=True,
+        [
+            "git",
+            "diff",
+            "--name-only",
+            "main",
+            "--",
+            "src/doc_agent",
+            "configs/train_ocr.yaml",
+            "scripts/run_finetune.py",
+        ],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=True,
     )
     changed = {ln.strip().replace("\\", "/") for ln in result.stdout.splitlines() if ln.strip()}
     # Untracked (brand new) files under the same paths -- `git diff` alone misses these.
     result_u = subprocess.run(
-        ["git", "status", "--porcelain", "-uall", "--",
-         "src/doc_agent", "configs/train_ocr.yaml", "scripts/run_finetune.py"],
-        cwd=REPO_ROOT, capture_output=True, text=True, check=True,
+        [
+            "git",
+            "status",
+            "--porcelain",
+            "-uall",
+            "--",
+            "src/doc_agent",
+            "configs/train_ocr.yaml",
+            "scripts/run_finetune.py",
+        ],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=True,
     )
     for ln in result_u.stdout.splitlines():
         if ln.startswith("??"):
@@ -66,8 +92,9 @@ def _check_embeds_complete(notebook_source_blob: str) -> None:
         raise SystemExit(
             "build_kaggle_notebook: these files differ from main (or are untracked) and "
             "are NOT embedded in the notebook -- Kaggle would clone the stale `main` "
-            "version instead:\n  " + "\n  ".join(sorted(missing)) +
-            "\n\nAdd them to EMBEDDED_PATHS and embed their content, or this push repeats "
+            "version instead:\n  "
+            + "\n  ".join(sorted(missing))
+            + "\n\nAdd them to EMBEDDED_PATHS and embed their content, or this push repeats "
             "the exact class of bug that already happened 4 times in Step 28."
         )
     # Also confirm every declared embed actually made it into the notebook, not just that
@@ -75,6 +102,7 @@ def _check_embeds_complete(notebook_source_blob: str) -> None:
     for path in EMBEDDED_PATHS:
         if f"%%writefile {path}" not in notebook_source_blob:
             raise SystemExit(f"build_kaggle_notebook: {path} is declared but never embedded")
+
 
 OWNER = "eliasmainur"
 KERNEL_SLUG = "mathscholar-step28-finetune"
@@ -120,11 +148,15 @@ repo file and regenerate (`python scripts/build_kaggle_notebook.py`), so the two
 drift apart.
 """))
 
-    cells.append(code("""FRESH_START = True  # False on a resumed push -- see "Resuming after a timeout" below
+    cells.append(
+        code(
+            f"""FRESH_START = True  # False on a resumed push -- see "Resuming after a timeout" below
 RESEED_DATASET = None  # e.g. "eliasmainur/mathscholar-step28-ckpt" -- set + FRESH_START=False to resume
-REPO_URL = "%s"
+REPO_URL = "{REPO_URL}"
 BRANCH = "main"  # Step 27 is merged to main; Step 28's own new files are embedded below, not cloned
-""" % REPO_URL))
+"""
+        )
+    )
 
     cells.append(md("""## 1. Clone the repo and install pinned dependencies
 
@@ -134,7 +166,8 @@ BRANCH = "main"  # Step 27 is merged to main; Step 28's own new files are embedd
 step's own deliverable, still on Elias's local branch) or the train/val page **images**
 (gitignored) -- both are handled in the cells below."""))
 
-    cells.append(code("""import os, subprocess, sys
+    cells.append(code("""import os
+import subprocess
 
 if not os.path.exists("/kaggle/working/repo"):
     subprocess.run(["git", "clone", "--branch", BRANCH, "--depth", "1", REPO_URL, "/kaggle/working/repo"], check=True)
@@ -142,7 +175,9 @@ if not os.path.exists("/kaggle/working/repo"):
 !git log --oneline -3
 """))
 
-    cells.append(code("""# --no-cache-dir: pip's download cache otherwise sits on /kaggle/working's disk doing
+    cells.append(
+        code(
+            """# --no-cache-dir: pip's download cache otherwise sits on /kaggle/working's disk doing
 # nothing useful after install -- one of several contributors to the disk exhaustion
 # that crashed the first real run (see scripts/run_finetune.py's _no_ckpt_cfg docstring
 # for the dominant cause, Lightning's own full-model checkpoint).
@@ -151,9 +186,12 @@ if not os.path.exists("/kaggle/working/repo"):
 # drops pkg_resources, which `import lightning` needs) -- requirements.lock already pins
 # setuptools==80.10.2, this just confirms the pinned install actually took.
 import pkg_resources  # noqa: F401
+
 print("pkg_resources OK")
 !df -h /kaggle/working
-"""))
+"""
+        )
+    )
 
     cells.append(md("""## 2. Resume from a previous push's checkpoint (skip if this is a fresh run)
 
@@ -211,6 +249,7 @@ completed run). **If you change any of the five real files, regenerate this note
 `scripts/build_kaggle_notebook.py`; do not hand-edit the embedded copies separately.**"""))
 
     cells.append(code("""import os
+
 os.makedirs("src/doc_agent/training", exist_ok=True)
 os.makedirs("src/doc_agent/vision", exist_ok=True)
 """))
@@ -329,12 +368,12 @@ else:
     print("no run_state.json yet -- Stage A hasn't started or written its first checkpoint")
 """))
 
-    cells.append(md("""## Resuming after a timeout
+    cells.append(md(f"""## Resuming after a timeout
 
 If step 8 above didn't finish (Kaggle killed the session at the ~9h/12h ceiling) before
 you can reopen this:
 
-1. **Try downloading this version's Output first** (`kaggle kernels output %s/%s -p ./out`,
+1. **Try downloading this version's Output first** (`kaggle kernels output {OWNER}/{KERNEL_SLUG} -p ./out`,
    or Output tab on kaggle.com) -- if `ocr_lora_ckpt/run_state.json` is there, whatever
    finished survived even though the run didn't complete.
 2. If it downloaded successfully, upload it as a Kaggle Dataset (or version an existing
@@ -351,7 +390,7 @@ If the download in step 1 comes back empty (Kaggle sometimes doesn't preserve
 gracefully) there is nothing to resume from that push -- re-run from `FRESH_START = True`.
 Stage A alone is the expensive shared step; everything after it is checkpointed per curve
 point, so the worst case is redoing Stage A once, not the whole curve.
-""" % (OWNER, KERNEL_SLUG)))
+"""))
 
     return cells
 
@@ -372,8 +411,10 @@ def main() -> None:
     }
     out = REPO_ROOT / "KAGGLE" / "kaggle.ipynb"
     out.write_text(json.dumps(nb, indent=1), encoding="utf-8")
-    print(f"wrote {out} ({len(nb['cells'])} cells, {out.stat().st_size} bytes) "
-          f"-- embed completeness verified against `main`")
+    print(
+        f"wrote {out} ({len(nb['cells'])} cells, {out.stat().st_size} bytes) "
+        f"-- embed completeness verified against `main`"
+    )
 
 
 if __name__ == "__main__":

@@ -59,20 +59,20 @@ TABLE_CAPTION_RE = re.compile(r"^Table\s+(\d{1,2}\.\d{1,2}(?:\.\d{1,3})?)\s*:?\s
 # followed directly by prose containing the next display formula with no other boundary.
 SECTION_BREAK_RE = re.compile(r"^(Table\s+[\d.]+|§[\d.]+|\d{1,2}\.\d{1,2}\.\d{1,3})\b")
 
-ROW_TOL_PT = 2.5          # two fragments within this y0 gap are the same physical row
-COLUMN_GAP_PT = 30.0      # an x-gap at least this wide between fragments marks a NEW column
-                           # band -- measured on p.97: real inter-column gaps are ~70-110pt,
-                           # intra-value gaps (e.g. within "0.26356 03197 18141") are <10pt.
-MIN_DATA_ROWS = 3         # a "table" with fewer accepted rows than this isn't worth a pair
-MAX_TABLE_ROWS = 15       # caps a single pair's row count -- keeps crops formula-pair-sized
-                           # (Step 27's own finding: an extreme aspect-ratio Stage-A crop
-                           # already loses effective resolution; a whole long table crammed
-                           # into one crop would be worse) rather than one giant tall image.
+ROW_TOL_PT = 2.5  # two fragments within this y0 gap are the same physical row
+COLUMN_GAP_PT = 30.0  # an x-gap at least this wide between fragments marks a NEW column
+# band -- measured on p.97: real inter-column gaps are ~70-110pt,
+# intra-value gaps (e.g. within "0.26356 03197 18141") are <10pt.
+MIN_DATA_ROWS = 3  # a "table" with fewer accepted rows than this isn't worth a pair
+MAX_TABLE_ROWS = 15  # caps a single pair's row count -- keeps crops formula-pair-sized
+# (Step 27's own finding: an extreme aspect-ratio Stage-A crop
+# already loses effective resolution; a whole long table crammed
+# into one crop would be worse) rather than one giant tall image.
 MAX_ROWS_SCANNED_BELOW_CAPTION = 200  # safety bound; real tables never come close
-PROBE_ROW_COUNT = 3       # rows used to establish column bands -- the first few rows right
-                           # after the header, almost certainly genuine table content
+PROBE_ROW_COUNT = 3  # rows used to establish column bands -- the first few rows right
+# after the header, almost certainly genuine table content
 CAPTION_X_MARGIN_PT = 60.0  # a fragment further left than this, relative to the caption's
-                             # own x0, is unrelated running prose, not part of the table
+# own x0, is unrelated running prose, not part of the table
 
 
 @dataclass
@@ -280,13 +280,15 @@ def _extract_page_tables(page: pymupdf.Page, pdf_page_1based: int, cfg: dict) ->
         clip = rect & page.rect
         if clip.is_empty or clip.width <= 0 or clip.height <= 0:
             continue
-        out.append({
-            "pair_id": f"nisttbl_p{pdf_page_1based:04d}_{table_id.replace('.', '-')}",
-            "pdf_page": pdf_page_1based,
-            "table_id": table_id,
-            "text": text,
-            "clip": [clip.x0, clip.y0, clip.x1, clip.y1],
-        })
+        out.append(
+            {
+                "pair_id": f"nisttbl_p{pdf_page_1based:04d}_{table_id.replace('.', '-')}",
+                "pdf_page": pdf_page_1based,
+                "table_id": table_id,
+                "text": text,
+                "clip": [clip.x0, clip.y0, clip.x1, clip.y1],
+            }
+        )
     return out
 
 
@@ -325,8 +327,10 @@ def run(cfg_path: str, limit_pages: int = 0) -> dict:
                 out_fh.write(json.dumps(pair, ensure_ascii=False) + "\n")
                 written += 1
             if (i + 1) % 100 == 0:
-                print(f"  page {i + 1}/{n_pages}: {written} table pairs so far "
-                      f"({time.time() - t0:.0f}s)")
+                print(
+                    f"  page {i + 1}/{n_pages}: {written} table pairs so far "
+                    f"({time.time() - t0:.0f}s)"
+                )
     doc.close()
 
     summary = {

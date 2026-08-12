@@ -60,18 +60,18 @@ from typing import Any
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from doc_agent.logging_conf import get_logger  # noqa: E402
-from doc_agent.training.datamodule import make_collate_fn  # noqa: E402
-from doc_agent.training.degrade import degrade_one  # noqa: E402
-from doc_agent.training.lit_modules import LitComponent  # noqa: E402
-from doc_agent.training.train import _build_trainer  # noqa: E402
-
 from run_finetune import (  # noqa: E402
     _evaluate_on_val,
     _load_val_records,
     _no_ckpt_cfg,
     _save_adapter,
 )
+
+from doc_agent.logging_conf import get_logger  # noqa: E402
+from doc_agent.training.datamodule import make_collate_fn  # noqa: E402
+from doc_agent.training.degrade import degrade_one  # noqa: E402
+from doc_agent.training.lit_modules import LitComponent  # noqa: E402
+from doc_agent.training.train import _build_trainer  # noqa: E402
 
 logger = get_logger(__name__)
 
@@ -82,10 +82,32 @@ logger = get_logger(__name__)
 # `as_p0351`, the two pages that motivated this whole continuation, are VAL pages, so
 # reusing them here would leak the held-out set -- they are correctly absent below).
 AS_TABLE_DENSE_PAGES: tuple[str, ...] = (
-    "as_p0024", "as_p0040", "as_p0044", "as_p0050", "as_p0051", "as_p0106", "as_p0114",
-    "as_p0115", "as_p0127", "as_p0140", "as_p0141", "as_p0143", "as_p0161", "as_p0181",
-    "as_p0748", "as_p0749", "as_p0765", "as_p0813", "as_p0864", "as_p0865", "as_p0915",
-    "as_p0998", "as_p1000", "as_p1004", "as_p1010", "as_p1017",
+    "as_p0024",
+    "as_p0040",
+    "as_p0044",
+    "as_p0050",
+    "as_p0051",
+    "as_p0106",
+    "as_p0114",
+    "as_p0115",
+    "as_p0127",
+    "as_p0140",
+    "as_p0141",
+    "as_p0143",
+    "as_p0161",
+    "as_p0181",
+    "as_p0748",
+    "as_p0749",
+    "as_p0765",
+    "as_p0813",
+    "as_p0864",
+    "as_p0865",
+    "as_p0915",
+    "as_p0998",
+    "as_p1000",
+    "as_p1004",
+    "as_p1010",
+    "as_p1017",
 )
 
 # A second run tried diluting this 100% table-shaped mix with 20 non-table A&S pages
@@ -106,7 +128,7 @@ STATE_PATH = OUT_DIR / "run_state.json"
 LR = 5.0e-6  # well below Stage B's 2e-5 -- see module docstring point 2
 MAX_EPOCHS = 6
 EARLY_STOPPING_PATIENCE = 2  # tighter than Stage B's 3 -- this is a small delicate nudge,
-                             # not a fresh curriculum; stop sooner if val_loss backslides
+# not a fresh curriculum; stop sooner if val_loss backslides
 
 
 class _NistTableDataset:
@@ -117,7 +139,11 @@ class _NistTableDataset:
     shared class's branching."""
 
     def __init__(self, pairs_path: Path, degradation_cfg: dict[str, Any], seed: int) -> None:
-        self._pairs = [json.loads(ln) for ln in pairs_path.read_text(encoding="utf-8").splitlines() if ln.strip()]
+        self._pairs = [
+            json.loads(ln)
+            for ln in pairs_path.read_text(encoding="utf-8").splitlines()
+            if ln.strip()
+        ]
         if not self._pairs:
             raise ValueError(f"_NistTableDataset: {pairs_path} is empty")
         self._deg_cfg = degradation_cfg
@@ -229,10 +255,10 @@ def _region_level_table_diagnostic(
     pages that motivated this whole continuation. See module docstring for why this is
     printed for a human read rather than scored."""
     from PIL import Image as PILImage
+    from run_finetune import _generate_page
 
     from doc_agent.contracts import Page
     from doc_agent.vision import layout
-    from run_finetune import _generate_page
 
     print("\n=== Non-training diagnostic: whole-page vs. region-crop generation ===")
     for page_id in KNOWN_TABLE_HALLUCINATION_PAGES:
@@ -250,8 +276,10 @@ def _region_level_table_diagnostic(
         try:
             regions = layout.detect([page], {})
         except Exception as exc:  # layout.detect's real dependencies may not be present
-            print(f"  {page_id}: layout.detect() failed ({type(exc).__name__}: {exc}), "
-                  "skipping region-crop comparison for this page")
+            print(
+                f"  {page_id}: layout.detect() failed ({type(exc).__name__}: {exc}), "
+                "skipping region-crop comparison for this page"
+            )
             continue
         table_regions = [r for r in regions if r.kind == "table"]
         if not table_regions:
@@ -276,7 +304,9 @@ def main() -> None:
     # pass. Must be set before the first CUDA matmul, so as early as possible.
     os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
 
-    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     p.add_argument("--cfg", default="configs/train_ocr.yaml")
     p.add_argument("--smoke", action="store_true", help="tiny CPU dry run of the control flow")
     args = p.parse_args()
@@ -337,8 +367,10 @@ def main() -> None:
     nist_ds = _NistTableDataset(nist_pairs_path, degradation_cfg, cfg["seed"])
     ast_ds = _ASTableDataset(ast_page_ids, cfg["data"]["train_annot_dir"])
     train_ds = _ConcatDataset(nist_ds, ast_ds)
-    logger.info(f"run_finetune_tables: table training set = {len(nist_ds)} NIST + "
-                f"{len(ast_ds)} A&S = {len(train_ds)} pairs")
+    logger.info(
+        f"run_finetune_tables: table training set = {len(nist_ds)} NIST + "
+        f"{len(ast_ds)} A&S = {len(train_ds)} pairs"
+    )
 
     import lightning as L
 
@@ -357,17 +389,21 @@ def main() -> None:
             from torch.utils.data import DataLoader
 
             return DataLoader(
-                train_ds, batch_size=1, shuffle=True, num_workers=0, collate_fn=collate_fn,
+                train_ds,
+                batch_size=1,
+                shuffle=True,
+                num_workers=0,
+                collate_fn=collate_fn,
             )
 
         def val_dataloader(self):  # noqa: ANN201
             from torch.utils.data import DataLoader
 
             class _ValWrap:
-                def __len__(self_inner) -> int:
+                def __len__(self) -> int:
                     return len(val_records)
 
-                def __getitem__(self_inner, idx: int) -> dict[str, Any]:
+                def __getitem__(self, idx: int) -> dict[str, Any]:
                     from PIL import Image
 
                     rec = val_records[idx]
@@ -375,12 +411,17 @@ def main() -> None:
                     return {"image": image, "text": rec["text"]}
 
             return DataLoader(
-                _ValWrap(), batch_size=1, shuffle=False, num_workers=0, collate_fn=collate_fn,
+                _ValWrap(),
+                batch_size=1,
+                shuffle=False,
+                num_workers=0,
+                collate_fn=collate_fn,
             )
 
     lit.set_stage({"lr": LR})
     stage_cfg = {
-        "lr": LR, "max_epochs": max_epochs,
+        "lr": LR,
+        "max_epochs": max_epochs,
         "early_stopping_patience": EARLY_STOPPING_PATIENCE,
         "early_stopping_monitor": "val_loss",
     }
@@ -388,7 +429,10 @@ def main() -> None:
         stage_cfg["max_steps"] = 3
         stage_cfg["limit_val_batches"] = 1
     trainer = _build_trainer(
-        _no_ckpt_cfg(cfg), stage_cfg, early_stopping=True, run_name="stage_c_tables",
+        _no_ckpt_cfg(cfg),
+        stage_cfg,
+        early_stopping=True,
+        run_name="stage_c_tables",
     )
     t0 = time.time()
     trainer.fit(lit, datamodule=_TableDataModule())
@@ -425,23 +469,29 @@ def main() -> None:
         if before_f1 is not None and after_f1 is not None and after_f1 < before_f1 - 0.05:
             regressions.append({"page_id": pid, "before_f1": before_f1, "after_f1": after_f1})
 
-    state.update({
-        "done": True,
-        "train_pairs": {"nist": len(nist_ds), "as_table_dense": len(ast_ds)},
-        "train_elapsed_s": train_elapsed,
-        "eval_elapsed_s": eval_elapsed,
-        "before_metrics": before_metrics,
-        "after_metrics": after_metrics,
-        "regressions_over_0.05_f1": regressions,
-        "adapter_dir": str(out_dir),
-    })
+    state.update(
+        {
+            "done": True,
+            "train_pairs": {"nist": len(nist_ds), "as_table_dense": len(ast_ds)},
+            "train_elapsed_s": train_elapsed,
+            "eval_elapsed_s": eval_elapsed,
+            "before_metrics": before_metrics,
+            "after_metrics": after_metrics,
+            "regressions_over_0.05_f1": regressions,
+            "adapter_dir": str(out_dir),
+        }
+    )
     _atomic_write_json(state_path, state)
 
     print("\n=== Stage C (table-focused continuation) summary ===")
-    print(f"BEFORE: failure_rate={before_metrics['failure_rate']:.2f}  "
-          f"char_f1={before_metrics['mean_char_f1_among_successes']:.3f}")
-    print(f"AFTER:  failure_rate={after_metrics['failure_rate']:.2f}  "
-          f"char_f1={after_metrics['mean_char_f1_among_successes']:.3f}")
+    print(
+        f"BEFORE: failure_rate={before_metrics['failure_rate']:.2f}  "
+        f"char_f1={before_metrics['mean_char_f1_among_successes']:.3f}"
+    )
+    print(
+        f"AFTER:  failure_rate={after_metrics['failure_rate']:.2f}  "
+        f"char_f1={after_metrics['mean_char_f1_among_successes']:.3f}"
+    )
     if regressions:
         print(f"\n⚠️  {len(regressions)} page(s) regressed by >0.05 char-F1:")
         for r in regressions:

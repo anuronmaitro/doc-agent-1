@@ -62,7 +62,6 @@ from doc_agent.training.datamodule import (  # noqa: E402
 from doc_agent.training.lit_modules import LitComponent  # noqa: E402
 from doc_agent.training.train import _build_trainer  # noqa: E402
 from doc_agent.vision.ocr import (  # noqa: E402
-    MAX_NEW_TOKENS,
     REPETITION_PENALTY,
     _failure_reason,
 )
@@ -128,7 +127,9 @@ def _load_val_records(val_dir: str) -> list[dict[str, Any]]:
         actual = _chapter_of(row["printed_page"])
         if actual not in VAL_CHAPTERS:
             raise ValueError(f"LEAK — {row['page_id']} (chapter {actual}) is not a VAL chapter")
-        records.append({"page_id": row["page_id"], "image_path": str(png_path), "text": row["text"]})
+        records.append(
+            {"page_id": row["page_id"], "image_path": str(png_path), "text": row["text"]}
+        )
     return records
 
 
@@ -198,7 +199,9 @@ def _evaluate_on_val(
         # old 20-char unit cap) requires re-running generate() on every page instead of
         # just re-applying the fixed detector to text already on disk.
         row: dict[str, Any] = {
-            "page_id": rec["page_id"], "failed": reason is not None, "pred_text": pred,
+            "page_id": rec["page_id"],
+            "failed": reason is not None,
+            "pred_text": pred,
         }
         if reason is not None:
             n_failed += 1
@@ -245,7 +248,9 @@ def _evaluate_on_val(
 
 def _save_adapter(lit: LitComponent, out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
-    lit.model.save_pretrained(str(out_dir))  # portable PEFT adapter dir: PeftModel.from_pretrained(base, out_dir)
+    lit.model.save_pretrained(
+        str(out_dir)
+    )  # portable PEFT adapter dir: PeftModel.from_pretrained(base, out_dir)
 
 
 def _no_ckpt_cfg(cfg: dict[str, Any]) -> dict[str, Any]:
@@ -297,7 +302,10 @@ def _run_stage_a(cfg: dict[str, Any], collate_fn: Any, state: dict[str, Any]) ->
     dm_a.setup()
     seed_cb = SeedByEpochCallback(dm_a.train_dataset)
     trainer_a = _build_trainer(
-        _no_ckpt_cfg(cfg), cfg["stage_a"], early_stopping=False, run_name="stage_a_nist",
+        _no_ckpt_cfg(cfg),
+        cfg["stage_a"],
+        early_stopping=False,
+        run_name="stage_a_nist",
         extra_callbacks=[seed_cb],
     )
     t0 = time.time()
@@ -309,11 +317,16 @@ def _run_stage_a(cfg: dict[str, Any], collate_fn: Any, state: dict[str, Any]) ->
     state["stage_a_done"] = True
     state["stage_a_elapsed_s"] = elapsed
     _atomic_write_json(STATE_PATH, state)
-    logger.info(f"run_finetune: Stage A complete in {elapsed:.1f}s, adapter saved to {STAGE_A_CKPT}")
+    logger.info(
+        f"run_finetune: Stage A complete in {elapsed:.1f}s, adapter saved to {STAGE_A_CKPT}"
+    )
 
 
 def _run_curve_point(
-    cfg: dict[str, Any], collate_fn: Any, n_pages: int, val_records: list[dict[str, Any]],
+    cfg: dict[str, Any],
+    collate_fn: Any,
+    n_pages: int,
+    val_records: list[dict[str, Any]],
     state: dict[str, Any],
 ) -> None:
     key = str(n_pages)
@@ -427,7 +440,9 @@ def _measure(cfg: dict[str, Any], collate_fn: Any) -> None:
     lit.set_stage(cfg["stage_a"])
     dm_a = DocDataModule(cfg, data_stage="nist", collate_fn=collate_fn)
     trainer_a = _build_trainer(
-        _no_ckpt_cfg(cfg), {**cfg["stage_a"], "max_steps": 5}, early_stopping=False,
+        _no_ckpt_cfg(cfg),
+        {**cfg["stage_a"], "max_steps": 5},
+        early_stopping=False,
         run_name="measure_stage_a",
     )
     t0 = time.time()
@@ -463,31 +478,40 @@ def _measure(cfg: dict[str, Any], collate_fn: Any) -> None:
     stage_a_full_steps = math.ceil(695 / int(cfg["stage_a"]["batch_size"]))
     stage_a_total_s = stage_a_full_steps * stage_a_step_s
     per_curve_point_worst_s = (
-        max(CURVE_POINTS) * int(cfg["stage_b"]["max_epochs"]) * stage_b_step_s
-        + 20 * generate_s
+        max(CURVE_POINTS) * int(cfg["stage_b"]["max_epochs"]) * stage_b_step_s + 20 * generate_s
     )
     total_worst_s = stage_a_total_s + len(CURVE_POINTS) * per_curve_point_worst_s
 
     print("\n=== run_finetune --measure ===")
-    print(f"  Stage A: {stage_a_step_s:.2f}s/step measured, {stage_a_full_steps} steps for the "
-          f"full 695 pairs -> ~{stage_a_total_s/60:.1f} min")
+    print(
+        f"  Stage A: {stage_a_step_s:.2f}s/step measured, {stage_a_full_steps} steps for the "
+        f"full 695 pairs -> ~{stage_a_total_s/60:.1f} min"
+    )
     print(f"  Stage B: {stage_b_step_s:.2f}s/step measured (batch_size=1)")
-    print(f"  eval generate(): {generate_s:.1f}s/page measured (max_new_tokens="
-          f"{cfg['data']['max_target_length']})")
-    print(f"  worst-case per curve point (max_epochs, no early stop, +20-page eval): "
-          f"~{per_curve_point_worst_s/60:.1f} min")
+    print(
+        f"  eval generate(): {generate_s:.1f}s/page measured (max_new_tokens="
+        f"{cfg['data']['max_target_length']})"
+    )
+    print(
+        f"  worst-case per curve point (max_epochs, no early stop, +20-page eval): "
+        f"~{per_curve_point_worst_s/60:.1f} min"
+    )
     print(f"  worst-case TOTAL for Stage A + all 4 curve points: ~{total_worst_s/3600:.2f} h")
-    print(f"  Kaggle ceiling (plan.md §11.4): ~9h interactive / ~12h commit")
+    print("  Kaggle ceiling (plan.md §11.4): ~9h interactive / ~12h commit")
     if total_worst_s > 9 * 3600:
-        print("  -> projected total exceeds the interactive ceiling. Plan to run this via "
-              "'Save & Run All (Commit)' and/or split curve points across multiple pushes "
-              "(this script resumes from data/models/ocr_lora/run_state.json automatically).")
+        print(
+            "  -> projected total exceeds the interactive ceiling. Plan to run this via "
+            "'Save & Run All (Commit)' and/or split curve points across multiple pushes "
+            "(this script resumes from data/models/ocr_lora/run_state.json automatically)."
+        )
     else:
         print("  -> projected total fits inside a single interactive session, with margin.")
 
 
 def main() -> None:
-    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     p.add_argument("--cfg", default="configs/train_ocr.yaml")
     p.add_argument("--measure", action="store_true", help="measure real step time, don't train")
     p.add_argument("--smoke", action="store_true", help="tiny CPU dry run of the control flow")
@@ -513,7 +537,10 @@ def main() -> None:
     if args.smoke:
         cfg["stage_a"] = {**cfg["stage_a"], "batch_size": 1, "max_steps": 3, "max_epochs": 1}
         cfg["stage_b"] = {
-            **cfg["stage_b"], "batch_size": 1, "max_steps": 3, "max_epochs": 1,
+            **cfg["stage_b"],
+            "batch_size": 1,
+            "max_steps": 3,
+            "max_epochs": 1,
             "limit_val_batches": 1,
         }
         cfg["data"] = {**cfg["data"], "max_target_length": 128}
@@ -539,8 +566,10 @@ def main() -> None:
         _measure(cfg, collate_fn)
         return
 
-    logger.info(f"run_finetune: starting on device={cfg['device']}, "
-                f"wandb_mode={cfg['logging']['wandb_mode']}, curve={CURVE_POINTS}")
+    logger.info(
+        f"run_finetune: starting on device={cfg['device']}, "
+        f"wandb_mode={cfg['logging']['wandb_mode']}, curve={CURVE_POINTS}"
+    )
     state = _load_state()
     _run_stage_a(cfg, collate_fn, state)
 
