@@ -1,7 +1,7 @@
 {
   "id": "eliasmainur/mathscholar-stage-c-tables",
   "title": "Mathscholar Stage C Tables",
-  "code_file": "kaggle_stage_c.ipynb",
+  "code_file": "kaggle_stage_c_tables.ipynb",
   "language": "python",
   "kernel_type": "notebook",
   "is_private": true,

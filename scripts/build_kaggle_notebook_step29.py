@@ -1,4 +1,5 @@
-"""Step 29 — generates KAGGLE/step29/kaggle_step29.ipynb from scripts/run_test_eval.py.
+"""Step 29 — generates KAGGLE/step29_test_eval/kaggle_step29_test_eval.ipynb from
+scripts/run_test_eval.py.
 
 Same discipline as scripts/build_kaggle_notebook.py (Step 28): the notebook is generated
 from the real repo file, never hand-edited on kaggle.com, so the two can't drift apart.
@@ -6,7 +7,7 @@ Change scripts/run_test_eval.py, then:
 
     python scripts/build_kaggle_notebook_step29.py
 
-and push the regenerated notebook (`kaggle kernels push -p KAGGLE/step29/`).
+and push the regenerated notebook (`kaggle kernels push -p KAGGLE/step29_test_eval/`).
 
 **v2 (2026-08-13): adds the region-routing hybrid pass** (plan.md Step 29's 2026-08-13
 update, Step 28 point 11) -- a deliberate SECOND TEST-set measurement, on top of the
@@ -229,9 +230,9 @@ def main() -> None:
         "nbformat": 4,
         "nbformat_minor": 5,
     }
-    out_dir = REPO_ROOT / "KAGGLE" / "step29"
+    out_dir = REPO_ROOT / "KAGGLE" / "step29_test_eval"
     out_dir.mkdir(parents=True, exist_ok=True)
-    out = out_dir / "kaggle_step29.ipynb"
+    out = out_dir / "kaggle_step29_test_eval.ipynb"
     out.write_text(json.dumps(nb, indent=1), encoding="utf-8")
     print(f"wrote {out} ({len(nb['cells'])} cells, {out.stat().st_size} bytes)")
 

@@ -1,7 +1,7 @@
 {
   "id": "eliasmainur/mathscholar-step28-finetune",
   "title": "Mathscholar Step28 Finetune",
-  "code_file": "kaggle.ipynb",
+  "code_file": "kaggle_step28_finetune.ipynb",
   "language": "python",
   "kernel_type": "notebook",
   "is_private": true,
