@@ -57,6 +57,20 @@ dev = ["ruff>=0.4", "black>=24.4", "mypy>=1.10", "pytest>=8.2", "pre-commit>=3.7
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+# Frozen Kaggle output exhibits: exact, unedited copies of what was actually run and
+# what it actually printed (real execution outputs embedded, downloaded straight from
+# Kaggle). Rewriting their source to satisfy UP031/E402/I001 without re-running on a GPU
+# would desync the code from the outputs it claims to have produced -- the one thing a
+# grounding exhibit can't do. Each has a maintained, lint-clean `kaggle_*.ipynb` sibling
+# (or, for step16_baseline_ocr, its sibling in step18b_ocr_repair/ -- same underlying
+# kernel, edited in place across both runs) that IS linted; these are reference-only.
+extend-exclude = [
+    "KAGGLE/step16_baseline_ocr/mathscholar-step16-baseline-ocr.ipynb",
+    "KAGGLE/step18b_ocr_repair/mathscholar-step18b-ocr-repair.ipynb",
+    "KAGGLE/step28_finetune/mathscholar-step28-finetune.ipynb",
+    "KAGGLE/stage_c_tables/mathscholar-stage-c-tables.ipynb",
+    "KAGGLE/step29_test_eval/mathscholar-step29-test-eval.ipynb",
+]
 [tool.ruff.lint]
 select = ["E","F","I","N","B","UP"]
 # These three fire only on course-provided stub patterns we are told not to restructure:

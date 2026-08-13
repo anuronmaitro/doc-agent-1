@@ -1,4 +1,5 @@
-"""Stage C — generates KAGGLE/kaggle_stage_c.ipynb from scripts/run_finetune_tables.py.
+"""Stage C — generates KAGGLE/stage_c_tables/kaggle_stage_c_tables.ipynb from
+scripts/run_finetune_tables.py.
 
 Same self-contained-embed philosophy as scripts/build_kaggle_notebook.py (see that file's
 own docstring): none of Stage C's dependencies are on `main` yet, so this notebook embeds
@@ -211,7 +212,7 @@ def main() -> None:
         "nbformat": 4,
         "nbformat_minor": 5,
     }
-    out = REPO_ROOT / "KAGGLE" / "stage_c" / "kaggle_stage_c.ipynb"
+    out = REPO_ROOT / "KAGGLE" / "stage_c_tables" / "kaggle_stage_c_tables.ipynb"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(nb, indent=1), encoding="utf-8")
     print(f"wrote {out} ({len(nb['cells'])} cells, {out.stat().st_size / 1e6:.2f} MB)")

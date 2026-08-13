@@ -4,8 +4,8 @@
 run_finetune.py, vision/ocr.py, vision/layout.py, all committed via the merged Step 28 +
 Stage C PR) -- but validate_region_routing.py itself lives on this branch until its own PR
 merges, so the notebook still embeds it via `%%writefile` (same reasoning as
-KAGGLE/kaggle.ipynb and KAGGLE/stage_c/'s generators). Safe to drop the embed cell once
-this file is on `main`.
+KAGGLE/step28_finetune/'s and KAGGLE/stage_c_tables/'s generators). Safe to drop the embed
+cell once this file is on `main`.
 
 Regenerate after changing validate_region_routing.py:
     python KAGGLE/region_routing_check/build_notebook.py

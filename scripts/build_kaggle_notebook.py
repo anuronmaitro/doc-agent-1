@@ -1,13 +1,15 @@
-"""Step 28 — generates KAGGLE/kaggle.ipynb from scripts/run_finetune.py.
+"""Step 28 — generates KAGGLE/step28_finetune/kaggle_step28_finetune.ipynb from
+scripts/run_finetune.py.
 
-`KAGGLE/kaggle.ipynb` is a thin wrapper (clone main -> install -> materialize the Stage B
-page images -> embed this script verbatim via `%%writefile` -> run it -> zip the output).
-The embedded copy and the real file must never drift apart, so the notebook is generated
-here rather than hand-edited on kaggle.com -- change `scripts/run_finetune.py`, then run:
+`kaggle_step28_finetune.ipynb` is a thin wrapper (clone main -> install -> materialize the
+Stage B page images -> embed this script verbatim via `%%writefile` -> run it -> zip the
+output). The embedded copy and the real file must never drift apart, so the notebook is
+generated here rather than hand-edited on kaggle.com -- change `scripts/run_finetune.py`,
+then run:
 
     python scripts/build_kaggle_notebook.py
 
-and push the regenerated `KAGGLE/kaggle.ipynb` (`kaggle kernels push -p KAGGLE/`).
+and push the regenerated notebook (`kaggle kernels push -p KAGGLE/step28_finetune/`).
 """
 
 from __future__ import annotations
@@ -381,7 +383,7 @@ you can reopen this:
    `kaggle datasets version -p ./out/ocr_lora_ckpt -m "resume after timeout"` after.
 3. Attach that dataset to this kernel (Add Input), set `RESEED_DATASET` (cell 2 above) to
    its slug, set `FRESH_START = False`, and re-push:
-   `kaggle kernels push -p KAGGLE/`.
+   `kaggle kernels push -p KAGGLE/step28_finetune/`.
 4. Cell 2's resume logic copies the checkpoint back in; `run_finetune.py` reads
    `run_state.json` and continues from the next unfinished curve point.
 
@@ -409,7 +411,7 @@ def main() -> None:
         "nbformat": 4,
         "nbformat_minor": 5,
     }
-    out = REPO_ROOT / "KAGGLE" / "kaggle.ipynb"
+    out = REPO_ROOT / "KAGGLE" / "step28_finetune" / "kaggle_step28_finetune.ipynb"
     out.write_text(json.dumps(nb, indent=1), encoding="utf-8")
     print(
         f"wrote {out} ({len(nb['cells'])} cells, {out.stat().st_size} bytes) "
