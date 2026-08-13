@@ -303,3 +303,29 @@ every curve point, unchanged, so the curve's y-axis stays comparable point to po
 adapter checkpoint, or plot a real learning curve — that's Step 28, using
 `configs/train_ocr.yaml` UNMODIFIED (the smoke script only overrides a copy of the config
 in memory, never the file on disk) plus the `max_pages` knob above for each curve point.
+
+## Step 30 prep — `data/old baseline ocr/` (S1, 2026-08-13)
+
+Step 30's fine-tuned re-OCR writes directly into `data/ocr/`, overwriting the Step 18b
+repaired-baseline transcripts that were there (744 `.mmd` + `meta.jsonl` + `failures.json`).
+Moved that snapshot to `data/old baseline ocr/` and un-ignored it (`.gitignore`) **before**
+running Step 30, so it survives as a citable BEFORE reference rather than being silently
+lost the moment `data/ocr/` gets overwritten.
+
+**Anything reading "our OCR output" needs to pick the right one on purpose — they are not
+interchangeable:**
+- `data/ocr/` = whatever the CURRENT/latest reader produced (pretrained → Step 18b-repaired
+  → Step 30 fine-tuned, in place). `vision/ocr.py`'s `OCR_DIR` constant, `data/validate.py`'s
+  `validate()` default, `scripts/build_index.sh`, and `notebooks/eda.ipynb` all correctly
+  read this — they want "the best OCR we currently have," which is exactly what Step 30
+  is supposed to change. No code changes needed there.
+- `data/old baseline ocr/` = the FROZEN Step 18b snapshot, specifically for anything that
+  must stay pinned to the pre-fine-tune baseline regardless of what Step 30 does later.
+  `notebooks/kb_demo.ipynb`'s "Step 16/18b scratch" section (cells computing the Step 29
+  BEFORE-number comparison point) was moved to read from here instead of `data/ocr/` —
+  otherwise it would have silently started reporting Step 30's fine-tuned numbers under a
+  "Step 18b baseline" label the moment Step 30 ran, making its own BEFORE/AFTER table
+  compare the fine-tuned reader against itself. Verified: re-running those cells against
+  the current repo state (`data/ocr/` empty, `data/old baseline ocr/` populated) reproduces
+  the exact same numbers as the previously-embedded output, byte for byte — the move only
+  changed where the numbers come from, not what they are.

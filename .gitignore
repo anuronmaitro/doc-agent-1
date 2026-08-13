@@ -57,6 +57,15 @@ data/annot/train/*.png
 !data/ocr/**
 !data/models/
 !data/models/**
+#
+# data/old baseline ocr/ -- the Step 18b repaired-baseline data/ocr/ snapshot, preserved
+# here (2026-08-13, ahead of Step 30) since Step 30's fine-tuned re-OCR overwrites
+# data/ocr/ in place. Nothing above actually ignores it (no blanket data/* rule exists),
+# so these two lines are belt-and-suspenders documentation, not a functional fix -- kept
+# paired with the pattern every other un-ignored data/ subfolder above uses, so a future
+# blanket data/* rule doesn't silently swallow it.
+!data/old baseline ocr/
+!data/old baseline ocr/**
 
 # Secrets — never commit
 .env
