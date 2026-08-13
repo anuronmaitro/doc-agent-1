@@ -1,0 +1,1114 @@
+{
+  "baseline": [
+    {
+      "page_id": "as_p0243",
+      "region_type": "table",
+      "pred_text": "\n\n\\begin{table}\n\\begin{tabular}{l c c c c c}  & SINE, COSNE AND EXPONENTIAL INTEGRALS & Table 5.1 \\\\ \\(r\\) & Si(s) & Ci(_r_) & _i__re_-El(_r_) & _i__re_-E(_r_) \\\\ \\(r\\) & 1.45496 & 0.7669 & 52875 & 1.22240 & 8053 & 0.88684 & 7675 \\\\\n\n[MISSING_PAGE_POST]\n\n",
+      "gen_seconds": 132.3018877506256,
+      "failed": true,
+      "failure_reason": "nougat-missing-page-marker"
+    },
+    {
+      "page_id": "as_p0255",
+      "region_type": "prose+formula",
+      "pred_text": "\n\n**6. Gamma Function and Related Functions**\n\n**Mathematical Properties**\n\n**6.1. Gamma (Factorial) Function**\n\n**Euler's Integral**\n\n**6.1.1**: \\(\\Gamma(z)\\!=\\!\\int_{0}^{\\infty}t^{-\\!z}e^{-t}dt\\)\\((\\mathscr{R}z\\!>\\!\\!0)\\)\n\n**6.1.2**: \\(\\Gamma(z)\\!=\\!\\lim_{n\\to n}\\frac{n!n^{\\ast}}{z(z\\!+\\!1)\\ldots\\,(z\\!+\\!n)}\\)\\((z\\!\\neq\\!0,\\!-\\!1,\\!-\\!2,\\ldots)\\)\n\n**Euler's Infinite Product**\n\n**6.1.3**: \\(\\frac{1}{\\Gamma(z)}\\!=\\!ze^{in}\\!\\sum_{n=1}^{\\infty}\\!\\!\\left[\\!\\left(1\\!+\\! \\frac{z}{n}\\right)\\!e^{-t/n}\\right]\\)\\((|z|\\!<\\!\\infty)\\)\n\n**7**: \\(\\gamma\\!=\\!\\lim_{m\\to\\infty}\\!\\!\\left[\\!1\\!+\\!\\frac{1}{2}\\!+\\!\\frac{1}{3}\\!+ \\!\\frac{1}{4}\\!+\\!\\ldots\\!+\\!\\frac{1}{m}\\!-\\!\\ln\\,m\\!\\right]\\)\n\n**8**: \\(\\gamma\\) is known as Euler's constant and is given to 25 decimal places in chapter **1**. \\(\\Gamma(z)\\) is single valued and analytic over the entire complex plane, save for the points \\(z\\!=\\!-n\\!(n\\!=\\!0,\\,1,\\,2,\\,\\ldots\\,)\\) where it possesses simple poles with residue \\((-1)^{n}\\!/n!\\). Its reciprocal \\(1/\\Gamma(z)\\) is an entire function possessing simple zeros at the points \\(z\\!=\\!-n\\!(n\\!=\\!0,\\,1,\\,2,\\,\\ldots)\\).\n\n**6.1.4**: \\(\\frac{1}{\\Gamma(z)}\\!=\\!\\frac{i}{2\\pi}\\!\\int_{C}\\,(-t)^{-\\! z}e^{-t}dt\\)\\((|z|\\!<\\!\\infty)\\)\n\nThe path of integration \\(C\\) starts at \\(+\\!\\infty\\) on the real axis, circles the origin in the counterclockwise direction and returns to the starting point.\n\n**Factorial and \\(\\Pi\\) Notations**\n\n**6.1.5**: \\(\\Pi(z)\\!=\\!z!!=\\!\\Gamma(z\\!+\\!1)\\)\n\n**Integer Values**\n\n**6.1.6**: \\(\\Gamma(n\\!+\\!1)\\!=\\!1\\!\\cdot\\!23\\,\\ldots\\,(n\\!-\\!1)n\\!=\\!n!\\)\n\n**6.1.7**: \\(\\lim_{z\\mapsto n}\\frac{1}{\\Gamma(-z)}\\!=\\!0\\!=\\!\\!\\frac{1}{(-n\\!-\\!1)!}\\)\\((n\\!=\\!0,\\,1,\\,2,\\ldots)\\)\n\n**6.1.8**: \\(\\Gamma(\\frac{1}{2})\\!=\\!2\\!\\int_{0}^{\\infty}e^{-t^{2}}dt\\!=\\!x^{\\frac{1}{2}}\\! =\\!1.77245\\;38509\\ldots\\!=\\!(-\\frac{1}{2})!\\)\n\n**6.1.9**: \\(\\Gamma(3/2)\\!=\\!\\frac{1}{2}\\!\\pi^{\\frac{1}{2}}\\!=\\!88622\\;69254\\ldots\\!=\\!( \\frac{1}{2})!\\)\n\n**6.1.10**: \\(\\Gamma(n\\!+\\!\\frac{1}{4})\\!=\\!\\frac{1\\!\\cdot\\!5\\!\\cdot\\!9\\!\\cdot\\!13\\ldots\\,(4 n\\!-\\!3)}{4^{n}}\\;\\Gamma(\\frac{1}{4})\\)\n\n**6.1.11**: \\(\\Gamma(\\frac{1}{4})\\!=\\!3.62560\\;90982\\ldots\\)\n\n**6.1.11**: \\(\\Gamma(n\\!+\\!\\frac{1}{3})\\!=\\!\\frac{1\\!\\cdot\\!4\\!\\cdot\\!7\\!\\cdot\\!10\\,\\ldots\\,(3 n\\!-\\!2)}{3^{n}}\\;\\Gamma(\\frac{1}{4})\\)\n\n**6.1.12**: \\(\\Gamma(n\\!+\\!\\frac{1}{2})\\!=\\!\\frac{1\\!\\cdot\\!3\\!\\cdot\\!5\\!\\cdot\\!7\\ldots\\,(2n \\!-\\!1)}{2^{n}}\\;\\Gamma(\\frac{1}{2})\\)\n\n**",
+      "gen_seconds": 94.7752754688263,
+      "failed": false,
+      "char_f1": 0.8119417019275975,
+      "exact_match": 0.0,
+      "formula_weight": 14
+    },
+    {
+      "page_id": "as_p0360",
+      "region_type": "formula",
+      "pred_text": "\n\n**Abstract.** The _Semi-infinite_ (\\(t\\))-dimensional (\\(t\\)-dimensional) (\\",
+      "gen_seconds": 110.64597582817078,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0229",
+      "region_type": "formula",
+      "pred_text": "\n\n**5.1.10**: \\(E_{a}(z)=\\gamma+\\ln z+\\sum\\limits_{n=1}^{\\infty}\\frac{x^{n}}{nn!}\\) (\\(x>0\\))\n**5.1.11**: \\(E_{1}(z)=-\\gamma-\\ln z-\\sum\\limits_{s=1}^{\\infty}\\frac{(-1)^{s}z^{n}}{nn!}\\) (\\(|\\arg\\,\\,z|<\\pi\\))\n**5.1.12**: \\(E_{n}(z)=\\frac{(-z)^{n-1}}{(n-1)!}[-\\ln z+\\psi(n)]\\underset{m=n-1}{\\overset{ \\alpha}{\\longrightarrow}}\\frac{(-z)^{m}}{(m-n+1)\\,m!}\\) (\\(m\\geq n<\\pi\\)) **5.1.24**: \\(E_{0}(z)=\\frac{e^{-z}}{z}\\) **5.1.25**: \\(\\alpha_{0}(z)=\\frac{e^{-z}}{z}\\) \\(\\theta_{0}(z)=\\frac{2}{z}\\sinh z\\)",
+      "gen_seconds": 21.97019338607788,
+      "failed": false,
+      "char_f1": 0.39938398357289534,
+      "exact_match": 0.0,
+      "formula_weight": 16
+    },
+    {
+      "page_id": "as_p0230",
+      "region_type": "formula",
+      "pred_text": "\n\n**5.1.26**: \\(\\frac{dE_{s}(z)}{dz}\\!=\\!-E_{n-1}(z)\\)__(_n_=1,2,3,...)__\n**5.1.27**: \\(\\frac{d^{n}}{dz^{n}}[e^{*}\\!E_{1}(z)]\\!=\\!\\frac{d^{n-1}}{dz^{n-1}}[e^{*}\\!E_{1}( z)]\\)__\\(+\\frac{(-1)^{n}(n\\!-\\!1)!}{z^{n}}\\)__(_n_=1,2,3,...)__\n**5.1.36**: \\(\\int_{0}^{1}\\frac{e^{-st}\\sin bt}{t}\\,dt\\!=\\!\\arctan\\frac{b}{a}+\\mathcal{I}E_{1}( a\\!+\\!ib)\\)__(_a_>0,\\(b\\) real)__**5.1.37**: \\(\\int_{0}^{1}\\frac{e^{st}(1\\!-\\!\\cos bt)}{t}\\,dt\\!=\\!\\!\\frac{1}{2}\\ln\\left(1\\!+\\! \\frac{b^{2}}{a^{2}}\\right)\\!+\\!\\text{Ei}(a)\\)__\\(+\\mathcal{R}E_{1}(-a\\!+\\!ib)\\)__(_a_>0,\\(b\\) real)__**5.1.38**: \\(\\int_{0}^{1}\\frac{e^{-st}(1\\!-\\!\\cos bt)}{t}\\,dt\\!=\\!\\!\\frac{1}{2}\\ln\\left(1\\!+\\! \\frac{b^{2}}{a^{2}}\\right)\\!-\\!E_{1}(a)\\)__\\(+\\mathcal{R}E_{1}(a\\!+\\!ib)\\)__(_a_>0,\\(b\\) real)__**5.1.39**: \\(\\int_{0}^{z}\\frac{1\\!-\\!e^{-t}}{t}\\,dt\\!=\\!E_{1}(z)\\!+\\!\\ln\\,z\\!+\\!\\gamma\\)__**5.1.40**: \\(\\int_{0}^{z}\\frac{e^{t}-1}{t}\\,dt\\!=\\!\\text{Ei}\\left(z\\right)\\!-\\!\\ln\\,x\\!-\\!\\gamma\\)__(_z_>0)__**5.1.41**: \\(\\int\\!\\frac{e^{tx}}{a^{2}\\!+\\!x^{2}}\\,dx\\!=\\!\\!\\frac{i}{2a}\\left[e^{-s}\\!E_{1}(-a \\!-\\!iz)\\!-\\!e^{*}\\!E_{1}(a\\!-\\!iz)\\right]\\)__**5.1.30**: \\(\\int_{0}^{z}\\frac{t-ib}{t^{2}\\!+\\!b^{2}}\\,e^{tu}\\!dt\\!=\\!e^{ab}\\!E_{1}(ab)\\)__(_a_>0,_b_>0)__**5.1.31**: \\(\\int_{0}^{z}\\frac{t+ib}{t^{2}\\!+\\!b^{2}}\\,e^{au}\\!dt\\!=\\!e^{-ab}\\!(-\\!\\text{Ei} (ab)\\!+\\!i\\pi)\\)__(_a_>0,_b_>0)__**5.1.32**: \\(\\int_{0}^{z}\\frac{e^{-st}\\!-\\!e^{-bt}}{t}\\,dt\\!=\\!\\ln\\frac{b}{a}\\)__**5.1.33**: \\(\\int_{0}^{z}E_{1}^{2}(t)dt\\!=\\!2\\ln 2\\)__(_a_>0,_b_>0)__**5.1.34**: \\(\\int_{0}^{z}e^{-st}E_{n}(t)dt\\!=\\!\\!\\frac{1}{2}\\ln\\frac{(-1)^{n}(n\\!-\\!1)!}{z^{ n}}\\)__**5.1.35**: \\(\\int_{0}^{z}\\frac{e^{st}}{t}\\,dt\\!=\\!\\!\\frac{1}{2}\\ln\\left(1\\!+\\!\\frac{b^{2}}{a^{2}} \\right)\\!+\\!\\text{Ei}(a)\\)__**5.1.36**: \\(\\int_{0}^{z}\\frac{e^{st}}{t}\\,\\text{Ei}\\left(-a\\!+\\!ib\\right)\\)__**5.1.37**: \\(\\int_{0}^{1}\\frac{e^{st}(1\\!-\\!\\cos bt)}{t}\\,dt\\!=\\!\\!\\frac{1}{2}\\ln\\left(1\\!+ \\!\\frac{b^{2}}{",
+      "gen_seconds": 95.75874161720276,
+      "failed": false,
+      "char_f1": 0.5128828390860476,
+      "exact_match": 0.0,
+      "formula_weight": 24
+    },
+    {
+      "page_id": "as_p0232",
+      "region_type": "formula",
+      "pred_text": "\n\n\\begin{tabular}{c c c c}\n5.2.5 & si(_z_)=Si(_z_)-\\(\\frac{\\pi}{2}\\) & 5.2.16 & Ci(_z_)=\\(\\gamma\\)+ln _z_+\\(\\sum\\limits_{n=1}^{\\infty}\\frac{(-1)^{n}z^{2n}}{2n(2n)!}\\) \\\\ Auxiliary Functions & & & \\\\\n5.2.6 & \\(f(z)\\)=Ci(_z_) sin _z_-si(_z_) cos \\(z\\) & & \\\\\n5.2.7 & \\(g(z)\\)=\\(-\\)Ci(_z_) cos _z_-si(_z_) sin \\(z\\) & & \\\\\n**Sine and Cosine Integrals in Terms of Auxiliary Functions** & & & \\\\\n5.2.8 & Si(_z_)=\\(\\frac{\\pi}{2}\\)-\\(f(z)\\) cos _z_-\\(g(z)\\) sin \\(z\\) & & \\\\\n5.2.9 & Ci(_z_)=\\(f(z)\\) sin _z_-\\(g(z)\\) cos \\(z\\) & & Ci(_z_)=\\(\\overline{\\text{Ci}(z)}\\)-i\\(\\pi\\) (0\\(<\\)arg _z\\(<\\)\\(\\pi\\)_) \\\\  & Integral Representations & & Ci(_z_)=\\(\\overline{\\text{Ci}(z)}\\) \\\\\n5.2.10 & si(_z_)=-\\(\\int_{0}^{z}e^{-z\\cos t}\\cos\\,(z\\sin t)dt\\) & & Relation to Exponential Integral \\\\  & & & \\\\\n5.2.11 & Ci(_z_)+\\(E_{1}(z)\\)=\\(\\int_{0}^{\\frac{\\pi}{2}}e^{-z\\cos t}\\sin\\,(z\\sin\\,t)dt\\) & & \\\\\n5.2.12 & \\(f(z)\\)=\\(\\int_{0}^{\\infty}\\frac{\\sin t}{t+z}\\,dt\\)=\\(\\int_{0}^{\\infty}\\frac{e^{-zt}}{t^{2}+1}\\,dt\\) & (_Rez\\(>\\)_0) & \\\\\n5.2.13 & \\(g(z)\\)=\\(\\int_{0}^{\\infty}\\frac{\\cos t}{t+z}\\,dt\\)=\\(\\int_{0}^{\\infty}\\frac{te^{-zt}}{t^{2}+1}\\,dt\\) & (_Rez\\(>\\)_0) & \\\\  & & & Ci(_z_)=\\(-\\frac{1}{2}\\left\\{E_{1}(iz)+E_{1}(-iz)\\right\\}\\) ((arg _z\\(|\\)\\(<\\)\\(\\overline{z}\\)_) \\\\  & & & \\\\\n5.2.24 & Ci(_ix_)=\\(\\frac{1}{2}\\left[\\text{Ei}(x)-E_{1}(x)\\right]+\\text{i}\\frac{\\pi}{2}\\) (\\(x\\)\\(>\\)0) & \\\\  & Value at Infinity & & \\\\\n5.2.25 & \\(\\lim\\limits_{x\\rightarrow\\infty}\\text{Si}(x)\\)=\\(\\frac{\\pi}{2}\\) & & \\\\\n**Integrals** & & & \\\\ \\end{tabular}\n\n(For more extensive tables of integrals see [5.3], [5.6], [5.11], [5.12], [5.13].)\n\n\\begin{tabular}{l l l l}\n5.2.26 & \\(\\int_{z}^{a}\\frac{\\sin t}{t}\\,dt\\)=\\(-\\)si (_z_) & ((arg _z_\\(|\\)\\(<\\)\\(\\pi\\)) \\\\\n5.2.27 & \\(\\int_{z}^{a}\\frac{\\cos t}{t}\\,dt\\)=\\(-\\)Ci (_z_) & ((arg _z_\\(|\\)\\(<\\)\\(\\pi\\)) \\\\\n5.2.28 & \\(\\int_{0}^{a}e^{-at}\\text{Ci}\\,(t)dt\\)=\\(\\frac{1}{2a}\\,\\ln\\,(1+a^{a})\\) (\\(\\mathcal{R}a\\)\\(>\\)0) \\\\  & & & \\\\\n5.2.29 & \\(\\int_{0}^{a}e^{-at}\\text{si}\\,(t)dt\\)=\\(-\\)\\(\\frac{1}{a}\\arctan a\\) (\\(\\mathcal{R}a\\)\\(>\\)0) \\\\  & & & \\\\\n5.2.30 & \\(\\int_{0}^{a}\\cos\\,t\\text{ Ci}\\,(t)dt\\)=\\(\\int_{",
+      "gen_seconds": 95.79993033409119,
+      "failed": false,
+      "char_f1": 0.5799812909260993,
+      "exact_match": 0.0,
+      "formula_weight": 26
+    },
+    {
+      "page_id": "as_p0234",
+      "region_type": "table",
+      "pred_text": "\n\n\\begin{tabular}{c c c|c c c}  & \\multicolumn{5}{c}{exponential INTEGRAL AND RELATED FUNCTIONS} \\\\ \\(n\\) & _E_a(1.275) & _E_a(1.275) & \\(n\\) & 104E_a(12.3) & _104E_a(12.3) & \\(n\\) \\\\\n1 & .1408099 & 6 & .0430168 & 12 & .191038 & .191038 & 12 \\\\\n2 & .0998984 & 7 & .0374307 & 11 & .199213 & .183498 & 13 \\\\\n3 & .0760303 & 8 & .0331009 & 10 & .208098 & .176516 & 14 \\\\\n4 & .0608307 & 9 & .0296534 & 9 & .217793 & .170042 & 15 \\\\\n5 & .0504679 & 10 & .0268469 & 8 & .228406 & .164015 & 16 \\\\ \\end{tabular}\n\nInterpolating directly in Table 5.4 for _n_=10 we get _E_i0(1.275)=.0268470 as a check.\n\n**Example 5.** Compute _E_a(z), _n_=1(1)_N_ to 5S for _x_=10, _N_=10.\n\nIf, as in this example, \\(z\\) is appreciably larger than five and _N_<=_z_, then the recurrence relation **5.1.14 may be safely used in decreasing order of _n_([5.5]). From Table 5.5 for _x_+1=.1 we get \\((x^{+}10)e^{*}\\!E_{\\text{t0}}(x)\\!=\\!1.02436\\) so that \\(E_{\\text{t0}}(10)\\!=\\!2.32529\\times\\!10^{-6}\\). Using this as the initial value we obtain column (2).\n\nFrom Table 5.2 we get _xe_'_E_i(_x_)=.915633 so that _E_i(10)=4.15697\\(\\times 10^{-6}\\) as a check. Forward recurrence starting with _E_i(10)=4.1570\\(\\times 10^{-6}\\) yields the values in column (1). The underlined figures are in error.\n\n**Example 6.** Compute _E_a(z), _n_=1(1)_N_, to 5S for _x_=12.3, _N_=20.\n\nIf \\(N\\) is appreciably larger than \\(x\\), and \\(x\\) appreciably larger than five, then the recurrence relation **5.1.14** should be used in the backward direction to generate _E_a(x) for _n_<=_n_0, and in the forward direction to generate _E_a(x) for _n_>_n_0, where \\(n\\)0=_<_x_.\n\nFrom **5.1.52**, with _n_=12, _x_=12.3, we have\n\n\\[E_{\\text{s}_{0}}(x)\\!=\\!\\frac{e^{-12.3}}{24.3}(1\\!+\\!.02032\\!-\\!.00043\\!-\\!.00001) =\\!1.91038\\!\\times\\!10^{-7}.\\]\n\nUsing the recurrence relation **5.1.14**, as indicated, we get\n\n\\[E_{\\text{s}_{1}}(x)\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad ",
+      "gen_seconds": 95.79912543296814,
+      "failed": true,
+      "failure_reason": "repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0242",
+      "region_type": "table",
+      "pred_text": "",
+      "gen_seconds": 2.5974106788635254,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0247",
+      "region_type": "table",
+      "pred_text": "\\[\\begin{array}{lcllllll}&\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit \\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span\\omit\\span \\omit\\span\\omit\\",
+      "gen_seconds": 96.14481735229492,
+      "failed": true,
+      "failure_reason": "repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0256",
+      "region_type": "formula",
+      "pred_text": "\\(256\\) **Scourc",
+      "gen_seconds": 3.2043697834014893,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0258",
+      "region_type": "formula",
+      "pred_text": "\n\\(\\ln\\,\\,\\Gamma(z)+z-(z-\\frac{1}{2})\\,\\ln\\,z-\\frac{1}{2}\\ln\\,\\,(2\\pi)\\)\n\n\\[=\\frac{a_{0}}{z+z+\\frac{a_{1}}{z+\\frac{a_{3}}{z+z+\\frac{a_{4}}{z+\\ldots}}}}{(2n-1)}\\,\\,!\\,1=1\\cdot\\!3\\cdot\\!5\\,\\ldots\\,\\,(2n-1)=r^{-1}\\,\\,2^{*}\\,\\,\\Gamma(n+\\frac{1}{2})\\]\n\n\\[a_{0}=\\frac{1}{12}\\,\\,;\\,a_{1}=\\frac{1}{30}\\,\\,;\\,a_{2}=\\frac{53}{210}\\,\\,;\\,a_{3}=\\frac{195}{371}\\]\n\n\\[a_{4}=\\frac{22999}{22737}\\,\\,a_{5}=\\frac{29944523}{19733142}\\,\\,a_{6}=\\frac{109535241009}{48264275462}\\]\n\n\\[\\frac{2}{\\pi}\\int_{0}^{\\pi z/\\left(\\sin\\right)^{2n}}\\!x\\,dx =\\] \\[= \\frac{(2n)!!}{2^{2n}(n!!)^{2}}\\!\\!=\\!\\!\\frac{1}{2^{n}}\\binom{2n}{ n}\\!\\!=\\!\\!\\frac{\\Gamma(n\\!+\\!\\frac{1}{2})}{\\pi\\Gamma(n\\!+\\!1)}\\] \\[\\sim \\frac{1}{\\pi^{2}n!}\\!\\left[\\!1\\!-\\!\\frac{1}{8n}\\!+\\!\\frac{1}{128n^{2}}\\,\\,\\cdots\\!\\!\\right]\\]\n\n\\[\\hskip 14.226378pt\\mbox{\\bf Some Definite Integrals}\\]\n\n\\[\\ln\\,\\,\\Gamma(z) = \\!\\!\\!\\int_{0}^{\\pi}\\!\\!\\left[\\!\\,(z\\!-\\!1)\\,\\,e^{-t}\\!-\\!\\frac{e^{-t}\\!-\\!e^{- t}\\!-\\!t^{-t}}{1\\!-\\!e^{-t}}\\!\\right]\\!\\!\\frac{dt}{t}\\,\\,\\,\\,\\,(\\mathcal{R}\\,z>0)\\] \\[= \\!\\!\\!(z\\!-\\!\\frac{1}{2})\\,\\ln\\,\\,z\\!-\\!z\\!+\\!\\frac{1}{\\ln\\,\\,2 \\pi}\\] \\[+2\\!\\int_{0}^{\\infty}\\!\\frac{\\arctan\\,(t/z)}{e^{2\\pi i}\\!-\\!1}\\,dt ",
+      "gen_seconds": 96.54388618469238,
+      "failed": false,
+      "char_f1": 0.5493530499075786,
+      "exact_match": 0.0,
+      "formula_weight": 11
+    },
+    {
+      "page_id": "as_p0259",
+      "region_type": "formula",
+      "pred_text": "6.3.19\n6.3.7\n6.3.8\n6.3.9\n6.3.10\n6.3.11\n6.3.12\n6.3.13\n6.3.14\n6.3.15\n6.3.15\n6.3.20\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.28\n6.3.29\n6.3.21\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.28\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.21\n6.3.23\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.22\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.28\n6.3.29\n6.3.27\n6.3.29\n6.3.28\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.24\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.28\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.24\n6.3.28\n6.3.29\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.29\n6.3.21\n6.3.23\n6.3.25\n6.3.26\n6.3.28\n6.3.29\n6.3.27\n6.3.29\n6.3.28\n6.3.29\n6.3.21\n6.3.22\n6.3.23\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.24\n6.3.29\n6.3.25\n6.3.26\n6.3.28\n6.3.29\n6.3.27\n6.3.29\n6.3.28\n6.3.29\n6.3.21\n6.3.23\n6.3.25\n6.3.26\n6.3.27\n6.3.28\n6.3.29\n6.3.29\n6.3.28\n6.3.29\n6.3.21\n6.3.21\n6.3.22\n6.3.23\n6.3.2",
+      "gen_seconds": 96.21900749206543,
+      "failed": false,
+      "char_f1": 0.12759170653907498,
+      "exact_match": 0.0,
+      "formula_weight": 16
+    },
+    {
+      "page_id": "as_p0260",
+      "region_type": "formula",
+      "pred_text": "\n\n### Polygamma Functions\n\n\\[\\begin{array}{l}\\psi^{(n)}(z)\\!=\\!\\frac{d^{n}}{dz^{n}}\\,\\psi(z)\\!=\\!\\frac{d^{n+1}}{ dz^{n+1}}\\ln\\,\\Gamma(z)\\\\ \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\",
+      "gen_seconds": 95.30946683883667,
+      "failed": true,
+      "failure_reason": "repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0262",
+      "region_type": "formula",
+      "pred_text": "\n\n#### 6.5.5 Probability Integral of the x-Distribution\n\n\\[P({\\chi^{2}|v}) = \\frac{1}{2^{\\frac{1}{3}r}\\Gamma\\left(\\frac{y}{2}\\right)}{\\int_{0}^{x}\\!\\!",
+      "gen_seconds": 95.915762424469,
+      "failed": false,
+      "char_f1": 0.0953131153997637,
+      "exact_match": 0.0,
+      "formula_weight": 25
+    },
+    {
+      "page_id": "as_p0280",
+      "region_type": "table",
+      "pred_text": "\n\n\\begin{table}\n\\begin{tabular}{l c",
+      "gen_seconds": 95.77250242233276,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0281",
+      "region_type": "table",
+      "pred_text": "\\[y = 1.4\\]\n\n\\[y \\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad \\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad\\quad ",
+      "gen_seconds": 95.04070949554443,
+      "failed": true,
+      "failure_reason": "repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0298",
+      "region_type": "formula",
+      "pred_text": "\n\\[\\frac{1}{x+\\sqrt{x^{2}+2}}<e^{t^{2}}\\int_{z}^{\\infty}e^{-t^{2}}dt\\leq\\frac{1}{x+ \\sqrt{x^{2}+\\frac{4}{\\pi}}}\\quad(x\\geq 0)\\]\n\n(For other inequalities see [7.2].)\n\n\\[2e^{t^{2}}\\int_{z}^{\\infty}e^{-t^{2}}dt=\\!\\frac{1}{z+}\\frac{1/2}{ z+}\\frac{1}{z+}\\frac{3/2}{z+}\\frac{2}{z+}\\cdot\\cdot\\cdot(\\mathcal{R}z>0)\\]\n\n\\[\\begin{array}{c}\\frac{1}{\\sqrt{\\pi}}\\int_{-\\infty}^{\\infty}\\frac{e^{-t^{2}} dt}{z-t}=\\!\\frac{1}{z-}\\frac{1/2}{z-}\\frac{1}{z-}\\frac{3/2}{z-}\\frac{2}{z-} \\cdot\\cdot\\cdot\\\\ \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad=\\!\\frac {1}{\\sqrt{\\pi}}\\lim\\limits_{n\\to\\infty}\\sum_{k=1}^{\\infty}\\frac{H_{k}^{(n)}}{ z-x_{k}^{(n)}}\\quad(\\mathcal{I}_{\\varnothing}\\neq 0)\\end{array}\\]\n\n\\(x_{k}^{(n)}\\) and \\(H_{k}^{(n)}\\) are the zeros and weight factors of the Hermite polynomials. For numerical values see chapter 25.\n\n\\[\\text{Var}\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, \\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\,\\, ",
+      "gen_seconds": 93.83691120147705,
+      "failed": true,
+      "failure_reason": "repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0301",
+      "region_type": "formula",
+      "pred_text": "\n\n**7.3.14**: \\(S(z){=}{-}\\cos\\left(\\frac{\\pi}{2}\\,z^{2}\\right){\\sum\\limits_{n=0}^{n}}\\frac{(-1)^{ n}\\pi^{2n+1}}{1\\cdot 3\\ldots\\,(4n{+}3)}\\,z^{4n+3}\\)__\n**7.3.9**: \\(C(z){=}\\frac{1}{2}{+}f(z)\\sin\\left(\\frac{\\pi}{2}\\,z^{2}\\right){-}g(z)\\;\\cos\\left( \\frac{\\pi}{2}\\,z^{2}\\right)\\)__\n**7.3.10**: \\(S(z){=}\\frac{1}{2}{-}f(z)\\,\\cos\\left(\\frac{\\pi}{2}\\,z^{2}\\right){-}g(z)\\,\\sin \\left(\\frac{\\pi}{2}\\,z^{2}\\right)\\)__\n**7.3.14**: \\(S(z){=}\\frac{1}{2}{+}f(z)\\sin\\left(\\frac{\\pi}{2}\\,z^{2}\\right){-}g(z)\\,\\sin \\left(\\frac{\\pi}{2}\\,z^{2}\\right)\\)__\n**7.3.15**: \\(C_{2}(z){=}J_{1/2}(z){+}J_{3/2}(z){+}J_{9/2}(z){+}\\ldots\\)__\n**7.3.16**: \\(S_{2}(z){=}J_{3/2}(z){+}J_{7/2}(z){+}J_{11/2}(z){+}\\ldots\\)__\n**For Bessel functions** \\(J_{n{+}1/2}(z)\\) see chapter 10**.**\n\n**7.3.17**: \\(C({-}z){=}{-}C(z)\\), \\(S({-}z){=}{-}S(z)\\)__\n**7.3.18**: \\(C(iz){=}iC(z)\\), \\(S(iz){=}-iS(z)\\)__\n**7.3.19**: \\(C(\\widetilde{z}){=}\\overline{C(\\widetilde{z})}\\), \\(S(\\widetilde{z}){=}\\overline{S(\\widetilde{z})}\\)__\n**7.3.20**: \\(C(x){\\rightarrow}\\frac{1}{2}\\)__\n**7.3.21**: \\(\\underline{df(x)}{dx}{=}{-}\\pi xg(x)\\), \\(\\underline{dg(x)}{dx}{=}\\pi xf(x){-}1\\)__\n**Relation to Error Function (see 7.1.1, 7.1.3)**\n\n**7.3.22**: \\(C(z){+}iS(z){=}\\frac{1{+}i}{2}\\operatorname{erf}\\left[\\frac{\\sqrt{\\pi}}{2}\\;(1{ -}i)z\\right]\\)__\n**7.3.23**: \\(g(x){=}\\not{R}\\left\\{\\frac{1{+}i}{2}w\\left[\\frac{\\sqrt{\\pi}}{2}\\;(1{+}i)x\\right]\\right\\}\\)__\n**7.3.24**: \\(f(x){=}\\not{S}\\left\\{\\frac{1{+}i}{2}w\\left[\\frac{\\sqrt{\\pi}}{2}\\;(1{+}i)x\\right]\\right\\}\\)__\n**Relation to Confluent Hypergeometric Function (see chapter 13)**\n\n**7.3.25**: \\(C(z){+}iS(z){=}zM\\left(\\frac{1}{2},\\frac{3}{2}\\;i\\;\\frac{\\pi}{2}\\,z^{2}\\right)\\)__\n**7.3.26**: \\(C_{2}(z){=}\\frac{1}{2}{\\int_{0}^{z}J_{-}}_{-}(t)dt\\)_, \\(S_{2}(z){=}\\frac{1}{2}{\\int_{0}^{z}J_{-}}_{-}\\dot{\\frac{1}{2}}\\,(t)dt\\)__",
+      "gen_seconds": 79.90784955024719,
+      "failed": false,
+      "char_f1": 0.6383691706227311,
+      "exact_match": 0.0,
+      "formula_weight": 19
+    },
+    {
+      "page_id": "as_p0302",
+      "region_type": "formula",
+      "pred_text": "\n\n**7.3.27**\n\n\\[\\pi zf(z) \\sim 1 + {\\sum\\limits_{m=1}^{n}}(-1)^{m}\\frac{1 \\cdot 3 \\ldots(4m - 1)}{(\\pi z^{2})^{2m}}\\]\n\n\\[\\begin{array}{l} {\\left( {z\\rightarrow\\infty,\\,|\\arg z| < \\frac{\\pi}{2}} \\right)} \\\\ {\\left( {z\\rightarrow\\infty,\\,|\\arg z| < \\frac{\\pi}{2}} \\right)} \\\\ \\end{array}\\]\n\n**7.3.28**\n\n\\[\\pi zg(z) \\sim {\\sum\\limits_{m=0}^{\\infty}}(-1)^{m}\\frac{1 \\cdot 3 \\ldots(4m + 1)}{(\\pi z^{2})^{2m+1}}\\]\n\n\\[\\begin{array}{l} {\\left( {z\\rightarrow\\infty,\\,|\\arg z| < \\frac{\\pi}{2}} \\right)} \\\\ \\end{array}\\]\n\nIf \\(R_{s}^{(r)}(z)\\), \\(R_{s}^{(\\alpha)}(z)\\) are the remainders after \\(n\\) terms in 7.3.27, 7.3.28, respectively, then\n\n**7.3.29**\n\n\\[\\begin{array}{l} {R_{s}^{(r)}(z) = (-1)^{n}\\frac{1 \\cdot 3 \\ldots(4n - 1)}{(\\pi z^{2})^{2n}}\\,\\theta^{(r)},} \\\\ {\\theta^{(r)} = \\frac{1}{\\Gamma(2n + \\frac{1}{2})}\\int_{0}^{\\infty}\\frac{e^{-t/2t^{2n}}}{1 + \\left( {\\frac{2t}{2\\pi^{2}}} \\right)^{2}}dt\\left( {|\\arg z| < \\frac{\\pi}{4}} \\right)} \\\\ {\\bf 7.3.30} \\\\ {R_{s}^{(\\alpha)}(z) = (-1)^{n}\\frac{1 \\cdot 3 \\ldots(4n + 1)}{(\\pi z^{2})^{2n}}\\,\\theta^{(\\alpha)},} \\\\ {\\theta^{(\\alpha)} = \\frac{1}{\\Gamma(2n + \\frac{1}{2})}\\int_{0}^{\\infty}\\frac{e^{-t/2t^{2n}}}{1 + \\left( {\\frac{2t}{2\\pi^{2}}} \\right)^{2}}dt\\left( {|\\arg z| < \\frac{\\pi}{4}} \\right)} \\\\ \\end{array}\\]\n\n**7.3.31**\n\nFor \\(x\\) real, \\(R_{s}^{(r)}(x)\\) and \\(R_{s}^{(\\alpha)}(x)\\) are less in absolute value than the first neglected term and of the same sign.\n\n**7.3.32**\n\n\\[\\begin{array}{l} {\\left( {0\\leq x\\leq n} \\right)} \\\\ {\\bf 7.3.32} \\\\ {f(x) = \\frac{1 + .926x}{2 + 1 .792x + 3 .104x^{2}} + \\epsilon(x)} \\\\ {\\bf 7.3.33} \\\\ {g(x) = \\frac{1}{2 + 4 .142x + 3 .492x^{2} + 6 .670x^{2}} + \\epsilon(x)} \\\\ {\\bf 7.4.9} \\\\ {\\bf 7.4.9} \\\\ {\\bf 7.4.9} \\\\ {\\bf 7.4.9} \\\\ {\\bf 7.4.9} \\\\ {\\bf 7.4.9} \\\\ {\\bf 7.4.11} \\\\ \\end{array}\\]\n\n(For more accurate approximations see [7.1].)\n\n### Definite and Indefinite Integrals\n\nFor a more extensive list of integrals see [7.5], [7.8], [7.15].\n\n**7.4.1**\n\n\\[\\int_{0}^{\\infty}e^{-t^{2}}dt = \\frac{\\sqrt{\\pi}}{2}\\]\n\n**7.4.2**\n\n\\[\\int_{0}^{\\infty}t^{2n}e^{-it^{2}}dt = \\frac{1 \\cdot 3 \\ldots(2n - 1)}{2^{n + 2}u^{n}}\\sqrt{\\frac{\\pi}{a}}\\]\n\n\\[\\begin{array}{l} {\\left( {0+ \\frac{1}{2}} \\right)} \\\\ {\\left( {2a + 1} \\right)} \\\\ {\\left( {2a +",
+      "gen_seconds": 95.12692213058472,
+      "failed": false,
+      "char_f1": 0.5847544688719951,
+      "exact_match": 0.0,
+      "formula_weight": 20
+    },
+    {
+      "page_id": "as_p0303",
+      "region_type": "formula",
+      "pred_text": "\n\\[\\begin{array}{l}\\int_{-\\infty}^{\\infty}\\frac{(x{-}t)\\,e^{-t^{2}}dt}{(x{-}t)^{2} +y^{2}}{=}_{\\pi}\\mathscr{I}w(x{+}iy)\\qquad(x\\;{\\rm real},y{>}0)\\\\ \\end{array}\\quad\\begin{array}{l}\\int_{0}^{\\infty}e^{-at}\\,\\frac{\\sin\\,(t^{2})} {t}\\,dt{=}\\frac{\\pi}{2}\\!\\left[\\!\\frac{1}{2}\\!-C\\!\\left(\\frac{a}{2}\\sqrt{\\! \\frac{2}{\\pi}}\\right)\\!\\right]\\!\\!\\right]\\\\ \\end{array}\\]\n\n\\[\\begin{array}{l}\\int_{0}^{\\infty}\\frac{[t^{2}{-}(x^{2}{-}y^{2})]e^{-t^{2}} dt}{t^{2}{-}(x^{2}{-}y^{2})t^{2}{+}(x^{2}{+}y^{2})^{2}}{=}\\frac{\\pi}{2}\\,\\mathscr{I} \\frac{w(x{+}iy)}{y{-}ix}\\\\ \\end{array}\\quad\\begin{array}{l}\\int_{0}^{\\infty}e^{-at}\\,\\frac{\\sin\\,(t^{2})} {t}\\,dt{=}\\frac{\\pi}{2}\\!\\left[\\!\\frac{1}{2}\\!-C\\!\\left(\\frac{a}{2}\\sqrt{\\! \\frac{2}{\\pi}}\\right)\\!\\right]\\!\\!\\right]\\\\ \\end{array}\\quad\\begin{array}{l}\\int_{0}^{\\infty}\\frac{[t^{2}{-}(x^{2}{-}y^{2})] e^{-t^{2}}dt}{t^{2}{-}(x^{2}{-}y^{2})t^{2}{+}(x^{2}{+}y^{2})^{2}}{=}\\frac{\\pi}{2}\\, \\mathscr{I}\\frac{w(x{+}iy)}{y{-}ix}\\\\ \\end{array}\\quad\\begin{array}{l}\\int_{0}^{\\infty}e^{-at}\\frac{\\sin\\,(t^{2})} {t}\\,dt{=}\\frac{\\pi}{2}\\!\\left[\\!\\frac{1}{2}\\!-C\\!\\left(\\sqrt{\\!\\frac{2a\\bar{b} }{\\pi}}\\right)\\!\\right]\\!\\cos\\,(ab)\\\\ \\end{array}\\quad\\begin{array}{l}\\int_{0}^{\\infty}\\frac{2xye^{-t^{2}}dt}{t^{2}{-} (x^{2}{-}y^{2})t^{2}{+}(x^{2}{+}y^{2})^{2}}{=}\\frac{\\pi}{2}\\,\\mathscr{I}\\frac{ w(x{+}iy)}{y{-}ix}\\\\ \\end{array}\\quad\\begin{array}{l}\\mathscr{I}\n\n",
+      "gen_seconds": 93.67531776428223,
+      "failed": false,
+      "char_f1": 0.3976172747580045,
+      "exact_match": 0.0,
+      "formula_weight": 19
+    },
+    {
+      "page_id": "as_p0312",
+      "region_type": "table",
+      "pred_text": "\n\n\\begin{table}\n\\begin{tabular}{l c",
+      "gen_seconds": 94.50029826164246,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0318",
+      "region_type": "table",
+      "pred_text": "\n\n\\begin{table}\n\\begin{tabular}{l l l l l}  & \\multicolumn{2}{c}{\\(2^{\\rm r}\\Gamma\\left(\\frac{n}{2}+1\\right)^{\\rm i\\,r}\\mbox{\\rm erfc}\\,x\\)} \\\\ \\(x\\) & \\(n=5\\) & \\(n=6\\) & \\(n=10\\) & \\(n=11\\) \\\\\n0, 0 & 1.00000 & 1.00000 & 1.00000 & 1.00000 \\\\\n\n[MISSING_PAGE_POST]\n\n",
+      "gen_seconds": 94.23898816108704,
+      "failed": true,
+      "failure_reason": "nougat-missing-page-marker"
+    },
+    {
+      "page_id": "as_p0324",
+      "region_type": "table",
+      "pred_text": "\n\n\\begin{table}\n\\begin{tabular}{c c",
+      "gen_seconds": 93.55792307853699,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0361",
+      "region_type": "formula",
+      "pred_text": "\n\n**9.1.27**\n\n\\[{\\cal C}_{r-1}(z)+{\\cal C}_{r+1}(z)= \\frac{2v}{z}{\\cal C}_{r}(z)\\] \\[{\\cal C}_{r-1}(z)-{\\cal C}_{r+1}(z)= 2{\\cal C}^{\\prime}_{r}(z)\\] \\[{\\cal C}^{\\prime}_{r}(z)= {\\cal C}_{r-1}(z)-\\frac{v}{z}{\\cal C}_{r}(z)\\] \\[{\\cal C}^{\\prime}\\!(z)= -{\\cal C}_{r+1}(z)+\\frac{v}{z}{\\cal C}_{r}(z)\\]\n\n\\({\\cal C}\\) denotes \\(J\\), \\(Y\\), \\(H^{(1)}\\), \\(H^{(2)}\\) or any linear combination of these functions, the coefficients in which are independent of \\(z\\) and \\(v\\).\n\n**9.1.28**\n\n\\[J^{\\prime}_{v}(z)= -J_{1}(z)\\qquad Y^{\\prime}_{v}(z)= -Y_{1}(z)\\]\n\nIf \\(f_{r}(z)= z^{p}{\\cal C}_{r}(\\lambda z^{q})\\) where \\(p\\), \\(q\\), \\(\\lambda\\) are independent of \\(v\\), then\n\n**9.1.29**\n\n\\[f_{r-1}(z)+f_{r+1}(z)= (2v/\\lambda)z^{- q}f_{r}(z)\\] \\[(2v+q)f_{r-1}(z)+(p-q)f_{r+1}(z)= (2v/\\lambda)z^{1- q}f^{\\prime}_{r}(z)\\] \\[zf^{\\prime}_{r}(z)= \\lambda qz^{q}f_{r-1}(z)+(p-pq)f_{r}(z)\\] \\[zmf^{\\prime}_{r}(z)= -\\lambda qz^{q}f_{r+1}(z)+(p+q)f_{r}(z)\\] Formulas for Derivatives **9.1.30**\n\n\\[\\begin{array}{l}\\left(\\frac{1}{z}\\frac{d}{dz}\\right)^{\\!\\!*}\\{z^{ \\prime}{\\cal C}_{r}(z)\\!=\\!z^{- p- k}{\\cal C}_{r+k}(z)\\] \\[\\left(\\frac{1}{z}\\frac{d}{dz}\\right)^{\\!\\!*}\\{z^{- \\gamma}{\\cal C}_{r}(z)\\}\\!=\\!(-)^{k}z^{-\\gamma- k}{\\cal C}_{r+k}(z)\\] \\[(k\\!=\\!0,1,2,\\ldots)\\] & \\\\ \\end{array}\\]\n\n**9.1.31**\n\n\\[{\\cal C}^{(n)}_{v}(z)= \\frac{1}{2^{k}}\\{{\\cal C}_{r-k}(z)\\!-\\!\\binom{k}{1}{\\cal C}_{r \\to k+2}(z)\\] \\[+ \\binom{k}{2}{\\cal C}_{r\\to k+4}(z)-\\ldots+(-)^{k}{\\cal C}_{ r+k}(z)\\}\\] \\[(k\\!=\\!0,1,2,\\ldots)\\]\n\n**It**\n\n**9.1.32**\n\n\\[\\begin{array}{l}p_{r}= J_{r}(a)Y_{r}(b)-J_{r}(b)Y_{r}(a)\\\\ q_{r}= J_{r}(a)Y^{\\prime}_{r}(b)-J^{\\prime}_{r}(b)Y_{r}(a)\\\\ r_{r}= J^{\\prime}_{r}(a)Y_{r}(b)-J_{r}(b)Y^{\\prime}_{r}(a)\\\\ s_{r}= J^{\\prime}_{r}(a)Y^{\\prime}_{r}(b)-J^{\\prime}_{r}(b)Y^{\\prime}_{r}(a) \\end{array}\\]\n\nthen\n\n**9.1.33**\n\n\\[\\begin{array}{l}p_{r+1}-p_{r-1}= -\\frac{2v}{a}\\,q_{r}\\frac{2v}{b}\\,r_{r}\\\\ q_{r+1}+r_{r}=\\frac{v}{a}\\,p_{r}\\frac{v+1}{b}\\,p_{r+1}\\\\ r_{r+1}+q_{r}=\\frac{v}{b}\\,p_{r}\\frac{v+1}{a}\\,p_{r+1}\\\\ \\sin\\,(z\\,\\cos\\,\\theta)= 2\\sum\\limits_{k",
+      "gen_seconds": 93.49101448059082,
+      "failed": false,
+      "char_f1": 0.5179968701095461,
+      "exact_match": 0.0,
+      "formula_weight": 22
+    },
+    {
+      "page_id": "as_p0362",
+      "region_type": "formula",
+      "pred_text": "362\n\n**Other Differential Equations**\n\n\\[\\begin{array}{l} {\\bf 9.1.49}\\;\\;w^{\\prime\\prime}+\\!\\left(\\!\\lambda^{z}\\frac{p^{2}-1}{z^{2}}\\!\\right) w=0,\\;\\;\\;\\;\\;w=z^{i}\\mathscr{C},\\langle\\lambda z\\rangle\\\\ \\\\ {\\bf 9.1.50}\\;\\;w^{\\prime\\prime}+\\!\\left(\\!\\frac{\\lambda^{2}}{4z}\\frac{p^{2}-1}{4z^{2}}\\! \\right)w=0,\\;\\;\\;\\;\\;w=z^{1}\\mathscr{C},\\langle\\lambda z^{1}\\!\\rangle\\\\ \\\\ {\\bf 9.1.51}\\;\\;w^{\\prime\\prime}+\\!\\lambda^{z}p^{-n}\\!w=\\!0,\\;\\;\\;\\;\\;w=z^{1} \\mathscr{C}_{1/p}(2\\lambda z^{1/p})\\\\ \\\\ {\\bf 9.1.52}\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\; \\",
+      "gen_seconds": 94.39090466499329,
+      "failed": true,
+      "failure_reason": "repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0366",
+      "region_type": "prose+formula",
+      "pred_text": "366\n\nBessel functions of integer order\n\n9.3.3\n\n\\(J_{r}(v\\;{\\rm sec}\\;\\beta) = \\begin{array}{l|l}J_{v}(v\\;{\\rm sec}\\;\\beta) = & \\\\ \\sqrt{2/(\\pi r\\tan\\beta)}\\,\\{\\cos\\,(v\\tan\\beta-r\\beta-\\frac{1}{4}\\pi)+O\\,(v^{-1})\\} \\\\ \\end{array}\\)\n\n\\(\\gamma\\frac{2/(\\pi r\\tan\\beta)}{2/(\\pi r\\tan\\beta)}\\,\\{\\cos\\,(v\\tan\\beta-r\\beta- \\frac{1}{4}\\pi)+O\\,(v^{-1})\\}\\)\n\n\\(\\gamma\\frac{2}{(0{<}\\beta{<}\\frac{1}{2\\pi})}\\)\n\n\\(\\gamma\\frac{2}{(0{<}\\beta{<}\\frac{1}{2\\pi})}\\)\n\n\\(\\gamma\\frac{2}{(0{<}\\beta{<}\\frac{1}{2\\pi})}\\)\n\n\\(\\gamma\\frac{2}{(0{<}\\beta{<}\\frac{1}{2\\pi})}\\)\n\nFor \\(u_{5}(t)\\) and \\(u_{6}(t)\\) see [9.4] or [9.21].\n\n\\(J_{s}(v+zv^{4}) = 2^{4}u_{p}-i4\\;{\\rm Ai}(-2^{4}z)+O(v^{-1})\\)\n\n\\(\\gamma\\frac{2}{(x+y^{4})} = -2^{4}u_{p}-i4\\;{\\rm Bi}(-2^{4}z)+O(v^{-1})\\)\n\n\\(J_{s}(v+zv^{4}) = -2^{4}u_{p}-i4\\;{\\rm Bi}(-2^{4}z)+O(v^{-1})\\)\n\n\\(\\gamma\\frac{2^{4}}{(x+y^{4})} = -2^{4}u_{p}-i4\\;{\\rm Bi}(-2^{4}z)+O(v^{-1})\\)\n\n\\(\\gamma\\frac{2}{(x+y^{4})} = -2^{4}u_{p}-i4\\;{\\rm Bi}(-2^{4}z)+O(v^{-1})\\)\n",
+      "gen_seconds": 94.75633549690247,
+      "failed": true,
+      "failure_reason": "block-repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0367",
+      "region_type": "prose+formula",
+      "pred_text": "\n\\[M(\\nu,\\beta)\\!\\sim\\!-i\\sum_{k=0}^{\\infty}\\frac{u_{2n+1}(i\\cot\\beta)}{p^{3k+1}}\\]\n\n\\[\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad\\qquad \\qquad\\",
+      "gen_seconds": 94.6149423122406,
+      "failed": true,
+      "failure_reason": "repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0368",
+      "region_type": "prose+formula",
+      "pred_text": "368\n* 9.3.31 \\(J_{\\nu}(\\nu)\\!\\sim\\!\\frac{a}{\\nu^{1/3}}(1\\!+\\!\\sum\\limits_{k=1}^{\\infty}\\frac{ \\alpha_{k}}{\\nu^{2k}})\\!-\\!\\frac{b}{\\nu^{1/3}}\\!\\sum\\limits_{k=0}^{\\infty}\\frac{ \\beta_{k}}{\\nu^{3k}}\\)\n* 9.3.32 \\(Y_{\\nu}(\\nu)\\!\\sim\\!-\\!\\frac{3^{1/2}a}{\\nu^{1/3}}(1\\!+\\!\\sum\\limits_{k=1}^{\\infty }\\frac{\\alpha_{k}}{\\nu^{2k}})\\!-\\!\\frac{3^{1/2}b}{\\nu^{5/3}}\\!\\sum\\limits_{k=0} ^{\\infty}\\frac{\\beta_{k}}{\\nu^{2k}}\\)\n* 9.3.33 \\(J^{\\prime}_{\\nu}(\\nu)\\!\\sim\\!\\frac{b}{\\nu^{1/3}}(1\\!+\\!\\sum\\limits_{k=1}^{\\infty }\\frac{\\gamma_{k}}{\\nu^{2k}})\\!-\\!\\frac{a}{\\nu^{1/3}}\\!\\sum\\limits_{k=0}^{\\infty }\\frac{\\delta_{k}}{\\nu^{2k}}\\)\n* 9.3.34 \\(Y^{\\prime}_{\\nu}(\\nu)\\!\\sim\\!\\frac{3^{1/2}b}{\\nu^{1/3}}(1\\!+\\!\\sum\\limits_{k=1} ^{\\infty}\\frac{\\gamma_{k}}{\\nu^{2k}})\\!+\\!\\frac{3^{1/2}a}{\\nu^{1/3}}\\!\\sum\\limits _{k=0}^{\\infty}\\frac{\\delta_{k}}{\\nu^{2k}}\\) where\n* \\(a\\!\\!=\\!\\!\\frac{2^{1/3}}{3^{2/3}\\Gamma(\\frac{3}{3})}\\!=\\!.44730\\ 73184,\\quad 3\\!",
+      "gen_seconds": 93.86494088172913,
+      "failed": false,
+      "char_f1": 0.312141186476717,
+      "exact_match": 0.0,
+      "formula_weight": 12
+    },
+    {
+      "page_id": "as_p0369",
+      "region_type": "prose+formula",
+      "pred_text": "\n\n\\begin{tabular}{c c|c c c}  & **Uniform Expansions of the Derivatives** & For \\(\\xi\\)\\(>\\)10 use \\\\ With the conditions of the preceding subsection & & & \\(b_{0}(\\xi)\\sim\\frac{1}{12}\\;\\xi^{-1}-.104\\xi^{-2},\\qquad a_{1}(\\xi)=.003\\), \\\\   \\[J^{\\prime}_{s}(\\nu z)\\sim\\frac{2}{z}\\left(\\frac{1-z^{2}}{4\\xi}\\right)^{\\sharp}( \\frac{A\\mathrm{i}\\;(\\nu^{2/3}\\xi)}{\\nu^{4/3}}\\sum\\limits_{k=0}^{\\infty}\\frac{c_ {k}(\\xi)}{\\nu^{2k}}\\] & & \\(c_{0}(\\xi)\\sim\\frac{1}{12}\\;\\xi^{4}+.146\\xi^{-1},\\qquad d_{1}(\\xi)=.003\\). \\\\   \\[+\\frac{A\\mathrm{i}^{r}\\;(\\nu^{2/3}\\xi)}{\\nu^{2/3}}\\sum\\limits_{k=0}^{\\infty}\\frac {d_{k}(\\xi)}{\\nu^{2k}}\\] & & For \\(\\xi\\)\\(<\\)\\(-\\)10 use \\\\   \\[J^{\\prime}_{s}(\\nu z)\\sim\\frac{2}{z}\\left(\\frac{1-z^{2}}{4\\xi}\\right)^{\\sharp}( \\frac{B\\mathrm{i}\\;(\\nu^{2/3}\\xi)}{\\nu^{4/3}}\\sum\\limits_{k=0}^{\\infty}\\frac{c_ {k}(\\xi)}{\\nu^{2k}}\\] & & \\(b_{0}(\\xi)\\sim\\frac{1}{12}\\;\\xi^{-2},\\qquad a_{1}(\\xi)=.000\\), \\\\   \\[+\\frac{B\\mathrm{i}^{r}\\;(\\nu^{2/3}\\xi)}{\\nu^{2/3}}\\sum\\limits_{k=0}^{\\infty}\\frac {d_{k}(\\xi)}{\\nu^{2k}}\\] & & \\(c_{0}(\\xi)\\sim-\\frac{5}{12}\\;\\xi^{-1}-1.33(-\\xi)^{-5/2},\\qquad d_{1}(\\xi)=.000\\). \\\\   \\[\\cdot\\] & Maximum values of higher coefficients : & & \\\\   \\[J^{\\prime}_{s}(\\nu z)\\sim\\frac{4e^{2\\pi i/3}}{z}\\left(\\frac{1-z^{2}}{4\\xi}\\right)^{ \\sharp}(\\frac{A\\mathrm{i}\\;(e^{2\\pi i/3}\\nu^{2/3}\\xi)}{\\nu^{4/3}}\\sum\\limits_{ k=0}^{\\infty}\\frac{c_{k}(\\xi)}{\\nu^{2k}}\\] & & \\(|b_{1}(\\xi)|=.003\\), & \\(|a_{2}(\\xi)|=.008\\), & \\(|d_{2}(\\xi)|=.001\\) \\\\   \\[+\\frac{e^{2\\pi i/3}\\;\\Delta\\mathrm{i}^{r}\\;(e^{2\\pi i/3}\\nu^{2/3}\\xi)}{\\nu^{2/3}} \\sum\\limits_{k=0}^{\\infty}\\frac{d_{k}(\\xi)}{\\nu^{2k}}\\] & & \\(|c_{1}(\\xi)=.008\\) (\\(\\xi\\)\\(<\\)\\(10\\)), & \\(e_{1}(\\xi)\\sim-.003\\tau^{\\sharp}\\) as \\(\\xi\\)\\(\\to\\)\\(+\\)\\(\\infty\\). \\\\ \\end{tabular}\n\nwhere \n\\begin{tabular}{c c|c c}   \\[\\mathbf{9.3.46}\\] & & & & \\\\   \\[c_{k}(\\xi)=-\\xi^{\\sharp}\\sum\\limits_{a=0}^{2k+1}\\mu_{k}\\xi^{-3/2}\\nu_{2k-\\epsilon +1}\\{\\;(1-z^{2})^{-1}\\}\\] & & & \\\\   \\[d_{k}(\\xi)=\\sum\\limits_{a=0}^{2k}\\lambda_{i}\\xi^{-3/\\kappa}\\nu_{2k-\\epsilon}\\{(1-z ^{2})^{-1}\\}\\] & & & \\\\   \\[\\cdot\\] & & & \\\\   \\[\\cdot\\] & & & & \\\\   \\[\\cdot\\] & & & & \\\\   \\[\\cdot\\] & & & & \\\\   \\[\\cdot\\",
+      "gen_seconds": 94.31485033035278,
+      "failed": false,
+      "char_f1": 0.38734040640172634,
+      "exact_match": 0.0,
+      "formula_weight": 7
+    },
+    {
+      "page_id": "as_p0376",
+      "region_type": "formula",
+      "pred_text": "376\n\n\\({}^{\\bullet}\\)\\",
+      "gen_seconds": 94.8014075756073,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0379",
+      "region_type": "formula",
+      "pred_text": "\n\n**9.8.5** 0\\(<\\)\\(x\\)\\(\\leq\\)2\n\n\\[K_{0}(x)\\!=\\!-\\ln\\,(x/2)I_{0}(x)\\!-\\!57721\\,\\,566\\]\n\n\\[+.42278\\,\\,420(x/2)^{2}\\!+\\!.23069\\,\\,756(x/2)^{4}\\]\n\n\\[+.03488\\,\\,590(x/2)^{6}\\!+\\!.00262\\,\\,698(x/2)^{8}\\]\n\n\\[+.00010\\,\\,750(x/2)^{10}\\!+\\!.00000\\,\\,740(x/2)^{12}\\!+\\!\\epsilon\\]\n\n\\[|\\epsilon|\\!<\\!1\\!\\times\\!10^{-8}\\]\n\n**9.8.6** 2\\(\\leq\\)\\(x\\)\\(<\\)\\(\\infty\\)\n\n\\[x^{4}w^{6}\\!+\\!2z^{3}w^{??}\\!-\\!(1\\!+\\!2\\!^{p})(x^{4}w^{\\prime\\prime}\\!-\\!xw^{ \\prime})\\]\n\n\\[+(\\nu^{4}\\!-\\!4\\!r^{2}\\!+\\!x^{4})w\\!=\\!0,\\]\n\n\\[+.02189\\,\\,568(x/2)^{2}\\!-\\!.01062\\,\\,446(x/2)^{3}\\]\n\n\\[+.00587\\,\\,872(x/2)^{4}\\!-\\!.00251\\,\\,540(x/2)^{5}\\]\n\n\\[+.00053\\,\\,208(2/x)^{6}\\!+\\!\\epsilon\\]\n\n\\[|\\epsilon|\\!<\\!1.9\\!\\times\\!10^{-7}\\]\n\n**9.9.5**\n\n**9.8.7** 0\\(<\\)\\(x\\)\\(\\leq\\)2\n\n\\[x\\!K_{1}(x)\\!=\\!x\\ln\\,(x/2)I_{1}(x)\\!+\\!1.15443\\,\\,144(x/2)^{2}\\]\n\n\\[-.67278\\,\\,579(x/2)^{4}\\!-\\!.18156\\,\\,897(x/2)^{6}\\]\n\n\\[-.01919\\,\\,402(x/2)^{8}\\!-\\!.00110\\,\\,404(x/2)^{10}\\]\n\n\\[-.00004\\,\\,686(x/2)^{12}\\!+\\!\\epsilon\\]\n\n\\[|\\epsilon|\\!<\\!8\\!\\times\\!10^{-9}\\]\n\n**9.9.6**\n\n**9.8.8** 2\\(\\leq\\)\\(x\\)\\(<\\)\\(\\infty\\)\n\n\\[x\\!\\varepsilon^{k}\\!K_{1}(x)\\!=\\!1.25331\\,\\,414+\\!.23498\\,\\,619(2/x)\\]\n\n\\[-.03655\\,\\,620(x/2)^{2}\\!+\\!.01504\\,\\,268(2/x)^{3}\\]\n\n\\[-.00780\\,\\,\\,353(2/x)^{4}\\!+\\!.00325\\,\\,614(2/x)^{5}\\]\n\n\\[-.00068\\,\\,245(2/x)^{6}\\!+\\!\\epsilon\\]\n\n\\[|\\epsilon|\\!<\\!2.2\\!\\times\\!10^{-7}\\]\n\nFor expansions of \\(I_{0}(x)\\), \\(K_{0}(x)\\), \\(I_{1}(x)\\), and \\(K_{1}(x)\\) in series of Chebyshev polynomials for the ranges 0\\(\\leq\\)\\(x\\)\\(\\leq\\)8 and 0\\(\\leq\\)8/\\(\\simeq\\)1, see [9.37].\n\n**Kelvin Functions**\n\n**9.9. Definitions and Properties**\n\nIn this and the following section \\(\\nu\\) is real, \\(x\\) is real and non-negative, and \\(n\\) is again a positive integer or zero.\n\n**Definitions**\n\n**9.9.1** **ber, \\(x\\!+\\!i\\) bei, \\(x\\!=\\!J_{\\nu}(ze^{3\\pi iA})\\!=\\!e^{\\pi u}J_{\\nu}(ze^{-\\pi iB})\\)\n\n\\[=\\!e^{\\frac{i}{2}\\nu^{\\pi i}I_{\\nu}(ze^{q\\pi iA})}\\!=\\!e^{\\frac{i}{2}\\nu^{\\pi",
+      "gen_seconds": 94.77775716781616,
+      "failed": false,
+      "char_f1": 0.4770606531881804,
+      "exact_match": 0.0,
+      "formula_weight": 15
+    },
+    {
+      "page_id": "as_p0383",
+      "region_type": "prose+formula",
+      "pred_text": "\n\n**Asymptotic Expansions of Modulus and Phase**\n\nWhen \\(\\nu\\) is fixed, \\(x\\) is large and \\(\\mu\\)=4\\({}^{\\mu^{2}}\\)\n\n**9.10.21**\n\n\\[M_{r}\\!\\!=\\!\\!\\frac{e^{\\pi i\\eta^{2}}}{\\sqrt{2\\pi x}}\\left\\{1\\!-\\!\\frac{\\mu\\!-\\! 1}{8\\sqrt{2}}\\frac{1}{x}+\\!\\frac{(\\mu\\!-\\!1)^{2}}{256}\\frac{1}{x^{2}}\\right.\\]\n\n\\[\\left.-\\frac{(\\mu\\!-\\!1)(\\mu\\!+\\!14\\mu\\!-\\!399)}{6144\\sqrt{2}}\\frac{1}{x^{3}}\\! +\\!O\\left(\\frac{1}{x^{4}}\\right)\\!\\right\\}\\]\n\n**9.10.22**\n\n\\[\\ln M_{r}\\!\\!=\\!\\!\\frac{x}{\\sqrt{2}}\\!-\\!\\frac{1}{2}\\ln\\,\\left(2\\pi x\\right)\\!- \\!\\frac{\\mu\\!-\\!1}{8\\sqrt{2}}\\frac{1}{x}\\frac{(\\mu\\!-\\!1)(\\mu\\!-\\!25)}{384 \\sqrt{2}}\\frac{1}{x^{3}}\\]\n\n**9.10.31**\n\n\\[\\left.-\\frac{(\\mu\\!-\\!1)(\\mu\\!-\\!13)}{128}\\frac{1}{x^{4}}\\!+\\!O\\left(\\frac{1} {x^{3}}\\right)\\!\\right\\}\\]\n\n**9.10.23**\n\n\\[\\theta_{r}\\!\\!=\\!\\!\\frac{x}{\\sqrt{2}}\\!+\\!\\left(\\!\\frac{1}{2}\\,v\\!-\\!\\frac{1} {8}\\right)\\pi\\!+\\!\\frac{\\mu\\!-\\!1}{8\\sqrt{2}}\\frac{1}{x}\\!+\\!\\frac{\\mu\\!-\\!1} {16}\\frac{1}{x^{2}}\\]\n\n**9.10.32**\n\n\\[\\left.-\\frac{(\\mu\\!-\\!1)(\\mu\\!-\\!25)}{384\\sqrt{2}}\\frac{1}{x^{3}}\\!+\\!O\\left( \\frac{1}{x^{3}}\\right)\\!\\right\\}\\]\n\n**9.10.24**\n\n\\[N_{r}\\!\\!=\\!\\!\\sqrt{\\frac{\\pi}{2x}}\\,e^{-\\pi i/\\overline{z}}\\!\\left\\{1\\!+\\! \\frac{\\mu\\!-\\!1}{8\\sqrt{2}}\\frac{1}{x}\\!+\\!\\frac{(\\mu\\!-\\!1)^{2}}{256}\\frac{1} {x^{2}}\\right.\\]\n\n\\[\\left.+\\frac{(\\mu\\!-\\!1)(\\mu\\!+\\!14\\mu\\!-\\!399)}{6144\\sqrt{2}}\\frac{1}{x^{3}} \\!+\\!O\\left(\\frac{1}{x^{3}}\\right)\\!\\right\\}\\]\n\n**9.10.25**\n\n\\[\\ln N_{s}\\!\\!=\\!\\!-\\frac{x}{\\sqrt{2}}\\!+\\!\\frac{3}{2}\\ln\\left(\\frac{\\pi}{2x} \\right)\\!\\!+\\!\\frac{\\mu\\!-\\!1}{8\\sqrt{2}}\\frac{1}{x}\\!+\\!\\frac{(\\mu\\!-\\!1)( \\mu\\!-\\!25)}{384\\sqrt{2}}\\frac{1}{x^{3}}\\]\n\n**9.10.34**\n\n\\[\\left.-\\frac{(\\mu\\!-\\!1)(\\mu\\!-\\!13)}{128}\\frac{1}{x^{4}}\\!+\\!O\\left(\\frac{1} {x^{3}}\\right)\\!\\right\\}\\]\n\n**9.10.26**\n\n\\[\\phi_{r}\\!\\!=\\!\\!-\\frac{x}{\\sqrt{2}}\\!-\\!\\left(\\!\\frac{1}{2}\\,v\\!+\\!\\frac{1} {8}\\right)\\pi\\!-\\!\\frac{\\mu\\!-\\!1}{8\\sqrt{2}}\\frac{1}{x}\\!+\\!\\frac{\\mu\\!-\\!1} {16}\\frac{1}{x^{2}}\\]\n\n**Asymptotic Expansions of Cross-Products**\n\nIf \\(x\\) is large\n\n**9.10.27**\n\n\\[\\begin{array}{l}\\mbox{ber}^{x}\\!+\\!\\mbox{bei}^{2}\\;x\\!\\sim\\!\\frac{e",
+      "gen_seconds": 94.48515820503235,
+      "failed": true,
+      "failure_reason": "block-repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0385",
+      "region_type": "prose+formula",
+      "pred_text": "\n\n**Numerical Methods**\n\n**Example 1.** To evaluate \\(J_{n}(1.55)\\), \\(n\\)=0, 1, 2, \\(\\cdot\\cdot\\cdot\\), each to 5 decimals. The recurrence relation\n\n\\[J_{n-1}(x)+J_{n+1}(x)=(2n/x)J_{n}(x)\\]\n\ncan be used to compute \\(J_{0}(x)\\), \\(J_{1}(x)\\), \\(J_{2}(x)\\), \\(\\cdot\\cdot\\cdot\\), successively provided that \\(n\\)<\\(x\\), otherwise severe accumulation of rounding errors will occur. Since, however, \\(J_{n}(x)\\) is a decreasing function of \\(n\\) when \\(n\\)>\\(x\\), recurrence can always be carried out in the direction of decreasing \\(n\\).\n\nInspection of Table 9.2 shows that \\(J_{n}(1.55)\\) vanishes to 5 decimals when \\(n\\)>7. Taking arbitrary values zero for \\(J_{0}\\) and unity for \\(J_{0}\\), we compute by recurrence the entries in the second column of the following table, rounding off to the nearest integer at each step.\n\nWe normalize the results by use of the equation\n\n**9.146,** namely\n\n\\[J_{0}(x)+2J_{2}(x)+2J_{4}(x)+\\ \\cdot\\ \\cdot\\ \\cdot\\ \\ =1\\]\n\nThis yields the normalization factor\n\n\\[1/322376=.00000\\ 31019\\ 7\\]",
+      "gen_seconds": 26.805421113967896,
+      "failed": false,
+      "char_f1": 0.505103528725576,
+      "exact_match": 0.0,
+      "formula_weight": 7
+    },
+    {
+      "page_id": "as_p0423",
+      "region_type": "table",
+      "pred_text": "\n\n\\begin{tabular}{c c c c c c c c c c} \\multicolumn{12}{l}{**BESSEL FUNCTIONS--ORDERS 3-9**} & \\multicolumn{1}{c}{**Table 9.9**} \\\\  & \\(x\\) & \\(e^{-z}I_{3}(x)\\) & \\(e^{-z}I_{4}(x)\\) & \\(e^{-z}I_{5}(x)\\) & \\(e^{-z}I_{6}(x)\\) & \\(e^{-z}I_{7}(x)\\) & \\(e^{-z}I_{8}(x)\\) & \\(e^{-z}I_{9}(x)\\) \\\\  & 0.0 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\\\  & 0.2 & (-41),2680 & (-5),43182 & (-6),8434 & (-81),13888 & (-11),12656 & (-13),2932 & (-15),22985 \\\\  & 0.4 & +0.0273 & (-5),45047 & (-6),17995 & (-5),5925 & (-91),710,7109 & (-11),42750 & (-13),94957 \\\\  & 0.6 & (-32),2572 & (-48),18058 & (-5),1221,281 & (-7),56268 & (-9),24084 & (-10),9021 & (-13),15037 \\\\  & 0.8 & (-3),4977 & (-4),9483 & (-5),9377 & (-6),26152 & (-71),4902 & (-97),4343 & (-10),2983 \\\\  & 1.0 & 0.8 & (-3),81553 & (-3),10696 & (-5),9866 & (-6),2731 & (-7),5832 & (-8),3643 & (-9),20301 \\\\  & 1.2 & (-2),11895 & (-3),14714 & (-2),0719 & (-5),20544 & (-6),14797 & (-7),171505 & (-9),86707 \\\\  & 1.4 & (-21),5911 & (-3),27189 & (-4),73459 & (-5),43203 & (-6),42831 & (-7),7225 & (-8),26797 \\\\  & 1.6 & (-2),21608 & (-3),9110 & (-4),61288 & (-5),80504 & (-9),0974 & (-9),0718 & (-8),79596 \\\\  & 1.8 & (-2),24495 & (-3),5023 & (-4),92798 & (-4),13,3686 & (-51),7349 & (-6),1932 & (-7),19131 \\\\  & 2.0 & (-2),28791 & (-3),8654 & (-31),3299 & (-4),24165 & (-5),3042 & (-3),7487 & (-7),41399 \\\\  & 2.2 & (-2),25799 & (-3),5701 & (-3),81424 & (-5),23294 & (-5),49776 & (-6),97325 & (-7),81206 \\\\  & 2.4 & (-2),7001 & (-2),10306 & (-2),3241 & (-4),6097 & (-5),7000 & (-5),11339 & (-4),4088 \\\\  & 2.6 & (-2),4022 & (-2),12283 & (-20),493",
+      "gen_seconds": 94.73991012573242,
+      "failed": false,
+      "char_f1": 0.462882096069869,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0600",
+      "region_type": "formula",
+      "pred_text": "The case \\(n{<}0\\) can be reduced to the case \\(\\sin^{2}a{<}N{<}1\\) by writing\n\n**17.7.15**: \\[N{=}(\\sin^{2}\\alpha{-}n)(1{-}n)^{-1}\\] \\[p_{z}{=}[{-}n(1{-}n)^{-1}(\\sin^{2}\\alpha{-}n)]^{\\sharp}\\] **17.7.16**: \\[\\begin{array}{l}\\!\\!",
+      "gen_seconds": 95.30203652381897,
+      "failed": false,
+      "char_f1": 0.1058965102286402,
+      "exact_match": 0.0,
+      "formula_weight": 11
+    },
+    {
+      "page_id": "as_p0619",
+      "region_type": "table",
+      "pred_text": "\\(K(\\omega)Z(v,\\omega)\\!=\\!K(\\omega)E(v,\\omega)\\!-\\!E(\\omega)F(v,\\omega)\\)\n\n\\(K(90^{\\prime})Z(v,\\omega)\\!-\\!K(90^{\\prime})Z(u,1)\\!-\\!K(90^{\\prime})\\tanh u\\! =\\!\\ast\\) for all \\(u\\)\n\n\\(\\omega\\)e' 0deg 5deg 10deg 15deg 20deg 25deg 80deg\n\no' 0deg 0.000000 0.000000 0.000000 0.0000000 0.0000000 0.0000000 0.0000000 2 0.00000364 0.0000364 0.0000367 0.000144 4 0.0003322 0.000655 0.000957 0.001231 0.001467 0.001658 6 0.000746 0.001474 0.001255 0.002770 0.003302 0.003734 8 0.001331 0.002621 0.003322 0.004928 0.005875 0.006644 10 0.002080 0.004098 0.005992 0.007706 0.009188 0.010393 12 0.002997 0.005905 0.008635 0.011107 0.013246 0.014987 14 0.0040028 0.008043 0.011765 0.015136 0.018055 0.020433 16 0.005537 0.015016 0.015844 0.0174976 0.023621 0.0267640 18 0.006761 0.013324 0.019496 0.025094 0.029951 0.033919 20 0.008357 0.016470 0.024105 0.031035 0.037055 0.041981 22 0.010125 0.019958 0.02916 0.037627 0.049424 0.050941 24 0.012067 0.023791 0.032914 0.048478 0.05626 0.00814 26 0.014186 0.027972 0.040968 0.052799 0.063119 0.071617 28 0.016483 0.032508 0.047624 0.061401 0.073438 0.083373 30 0.089626 0.037403 0.054811 0.070696 0.084599 0.096103 32 0.021625 0.042664 0.05240 0.080700 0.096624 0.100934 34 0.024476 0.048298 0.070823 0.091430 0.109534 0.124596 36 0.027520 0.058315 0.079674 0.120295 0.123356 0.140421 38 0.030761 0.060725 0.089108 0.115148 0.138120 0.157347\n\n40 0. 0.034205 0.067540 0.099145 0.128185 0.153860 0.175418 42 0.037860 0.074774 0.109807 142046 0.170614 0.194683 44 0.041734 0.082444 0.121118 0.156765 0.188428 0.0215197 46 0.045835 0.090569 0.133109 0.172383 0.207353 0.237025",
+      "gen_seconds": 95.16470050811768,
+      "failed": false,
+      "char_f1": 0.4149984111852558,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0621",
+      "region_type": "table",
+      "pred_text": "\\(\\Box\\)\n\n## elliptic integrals\n\n**JACOBIAN ZETA FUNCTION \\(Z(\\varphi\\,\\omega)\\)**Table 17.7\n\n\\(K(\\alpha)Z(\\varphi\\,\\omega)\\!-\\!K(\\alpha)E(\\varphi\\,\\omega)\\!-\\!E(\\alpha)F( \\varphi\\,\\omega)\\)\n\n\\(K(90^{\\circ})Z(\\omega\\,\\omega)\\!-\\!K(90^{\\circ})Z(\\omega\\,|1)\\!-\\!K(90^{\\circ})\\) tanh \\(u\\!=\\!\\infty\\) for all \\(u\\)\n\n\\(\\alpha\\backslash v\\)\\(65^{\\circ}\\)\\(70^{\\circ}\\)\\(75^{\\circ}\\)\\(80^{\\circ}\\)\\(85^{\\circ}\\)\\(90^{\\circ}\\)\n\n\\(0^{\\circ}\\)\\(0.\\;000000\\)\\(0.\\;000000\\)\\(0.\\;000000\\)\\(0.\\;000000\\)\\(0.\\;000000\\)\\(0.\\;000000\\)\\(0\\)\n\n[MISSING_PAGE_POST]\n\n\\(30\\)\\(0.\\",
+      "gen_seconds": 94.39104342460632,
+      "failed": true,
+      "failure_reason": "nougat-missing-page-marker"
+    },
+    {
+      "page_id": "as_p0622",
+      "region_type": "table",
+      "pred_text": "",
+      "gen_seconds": 2.6985385417938232,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0625",
+      "region_type": "table",
+      "pred_text": "\\(625\\)\n\n**ELLIPTIC INTEGRAL OF THE THIRD KIND \\(\\Pi(n;\\,\\varphi\\backslash a)\\) Table 17.9**\n\n\\[\\Pi(n;\\,\\varphi\\backslash a){=}{\\int_{0}^{\\sigma}}(1{-}n\\sin^{2}\\theta)^{-1}[1{-} \\sin^{2}\\alpha\\sin^{2}\\theta]^{-\\frac{1}{2}}d\\theta\\]\n\n\\[\\begin{array}{cccccc}n&a\\backslash\\varphi&0^{o}&15^{o}&30^{o}&45^{o}&60^{o}&75^ {o}&90^{o}\\\\ 0,0&0^{o}&0&0.26180&0.52360&0.78540&1.04720&1.30900&1.57080\\\\ 0.0&15&0&0.26200&0.52513&0.79025&1.05774&1.32733&1.59814\\\\ 0.0&30&0.62654&0.52943&0.80437&1.08955&1.38457&1.68575\\\\ 0.0&45&0&0.26330&0.53562&0.82602&1.14243&1.48788&1.58407\\\\ 0.0&60&0.26406&0.54223&0.85122&1.21260&1.64918&2.15651\\\\ 0.0&75&0&0.26463&0.54736&0.87270&1.28371&1.87145&2.76806\\\\ 0.0&90&0&0.26484&0.54931&0.88137&1.31696&2.02759&\\infty\\\\ 0.1&0&0&0.26239&0.52820&0.80013&1.07949&1.36560&1.65576\\\\ 0.1&15&0&0.26259&0.52975&0.80514&1.09058&1.38520&1.68536\\\\ 0.1&30&0.2614&0.5342&0.81972&1.12405&1.44649&1.78030\\\\ 0.1&45&0&0.26390&0.54041&0.84210&1.17980&1.55739&1.96326\\\\ 0.1&60&0&0.26467&0.54712&0.86817&1.25593&1.73121&2.29355\\\\ 0.1&75&0&0.26524&0.55234&0.89040&1.32926&1.97204&2.96601\\\\ 0.1&90&0&0.26545&0.55431&0.89939&1.36454&2.14201&\\infty\\\\ 0.2&0&0&0.26299&0.53294&0.81586&1.11534&1.43078&1.75620\\\\ 0.2&15&0&0.26319&0.53452&0.82104&1.12705&1.45187&1.78850\\\\ 0.2&30&0&0.26374&0.53896&0.83612&1.16241&1.51792&1.89229\\\\ 0.2&45&0&0.26450&0.54535&0.85928&1.22139&1.63775&2.09296\\\\ 0.2&60&0&0.26527&0.55217&0.80829&1.30003&1.82643&2.45715\\\\ 0.2&75&0&0.26585&0.55747&0.90934&1.38016&2.08942&3.20448\\\\ 0.2&90&0&0.26606&0.55948&0.91867&1.41777&2.27604&\\infty\\\\ 0.3&0&0&0.26359&0.53784&0.83271&1.15551&1.50701&1.87746\\\\ 0.3&15&0&0.26379&0.53945&0.83808&1.16791&1.52988&1.91309\\\\ 0.3&30&0&0",
+      "gen_seconds": 94.96997666358948,
+      "failed": false,
+      "char_f1": 0.49696969696969695,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    }
+  ],
+  "finetuned": [
+    {
+      "page_id": "as_p0243",
+      "region_type": "table",
+      "pred_text": "(p.89) |p.243\nCORECONSTITIAL INTEGRAL AND RELATED FUNCTIONS (p.243)\nSample rows:\nSample rows:\nTable S1:\nSample rows:\nTable S2:\nSample rows:\nTable S3:\nSample rows:\nTable S4:\nSample rows:\nTable S5:\nSample rows:\nTable S6:\nSample rows:\nTable S7:\nSample rows:\nTable S8:\nSample rows:\nTable S9:\nSample rows:\nTable S10:\nTable S11:\nTable S12:\nSample rows:\nTable S13:\nTable S14:\nSample rows:Table\nTable S15:\n\n[MISSING_PAGE_POST]\n\n",
+      "gen_seconds": 106.29116725921631,
+      "failed": true,
+      "failure_reason": "nougat-missing-page-marker"
+    },
+    {
+      "page_id": "as_p0255",
+      "region_type": "prose+formula",
+      "pred_text": "6. Gamma Function and Related Functions\nMathematical Properties\n6.1. Gamma (Factorial) Function\nEuler's Integral\n6.1.1 \\Gamma(z)=\\int_{0}^{\\infty}t^{-1}e^{-t}dt (Rx>0)\n=k^{\\prime}\\int_{0}^{\\infty}t^{-1}e^{-ht}dt (Rx>0,Rx>0)\nEuler's Formula\n6.1.2 \\Gamma(z)=\\lim_{n\\to\\infty}\\frac{n!n^{s}}{z(z+1)\\dots(z+n)} (z\\neq0,-1,-2,\\dots)\nEuler's Infinite Product\n6.1.3 \\Gamma(z)=ze^{nz}\\sum_{n=1}^{\\infty}\\left[(1+\\tfrac{x}{m})e^{-tz/n}\\right] (|z|<\\infty)\n\\gamma=\\lim_{m\\to\\infty}\\left[1+\\tfrac{1}{2}+\\tfrac{1}{3}+\\tfrac{1}{4}+\\dots+\\tfrac{1}{m}-\\ln m\\right]=.57721\\;56649\\dots\ng is known as Euler's constant and is given to 25 decimal places in chapter 1. \\Gamma(z) is single valued and analytic over the entire complex plane, save for the points z=-n(n=0, 1, 2, \\dots) where it possesses simple poles with residue (-1)\"/n!. Its reciprocal 1/\\Gamma(z) is an entire function possessing simple zeros at the points z=-n(n=0, 1, 2, \\dots).\nHankel's Contour Integral\n6.1.4 \\Gamma(z)=\\frac{i}{2\\pi}\\int_{C}(-t)^{-ie}e^{-it}dt (|z|<\\infty)\nThe path of integration C starts at +\\infty on the real axis, circles the origin in the counterclockwise direction and returns to the starting point.\nFactorial and \\Pi Notations\n6.1.5 \\Pi(z)=z!=\\Gamma(z+1) Integer Values\n6.1.6 \\Gamma(n+1)=1:2:3\\dots(n-1)n=n!\n6.1.7 \\lim_{z\\to n}\\frac{1}{\\Gamma(-z)}=0=\\frac{1}{(-n-1)!} (n=0, 1, 2, \\dots)\nFractional Values\n6.1.8 \\Gamma(1)=2\\int_{0}^{\\infty}e^{-t^{2}}dt=x^{1}=1.77245\\;38509\\dots=(-\\tfrac{1}{2})!\nFigure 6.1. Gamma function.\n\\Gamma(3/2)=\\tfrac{3}{2}\\pi^{\\tfrac{3}{2}}=88622\\;69254\\dots=(\\tfrac{1}{2})!\n6.1.10 \\Gamma(n+\\tfrac{1}{4})=\\tfrac{1:5:9:13\\dots(4n-3)}{4^{n}}\\Gamma(\\tfrac{1}{2})=3.62560\\;99082\\dots\n6.1.11 \\Gamma(n+\\tfrac{1}{3})=\\tfrac{1:4:7:10\\dots(3n-2)}{3^{n}}\\Gamma(\\tfrac{1}{3})\n\\Gamma(3)=2.67893\\;85347\\dots\n6.1.12 \\Gamma(n+\\tfrac{1}{2})=\\tfrac{1:3:5:7\\dots(2n-1)}{2^{n}}\\Gamma(\\tfrac{1}{2})\n6.1.13 \\Gamma(n+\\tfrac{1}{3})=\\tfrac{2:5:8:11\\dots(3n-1)}{3^{n}}\\Gamma(\\tfrac{3}{3})\n\\Gamma(\\tfrac{3}{2})=1.35411\\;79394\\dots\n6.1.14 \\Gamma(n+\\tfrac{1}{4})=\\tfrac{3:7:11:15\\dots(4n-1)}{4^{n}}\\Gamma(\\tfrac{3}{2})\n\\Gamma(\\tfrac{3}{2})=1.22541\\;67024\\;.\\dots",
+      "gen_seconds": 82.89608883857727,
+      "failed": false,
+      "char_f1": 0.9063001145475373,
+      "exact_match": 0.0,
+      "formula_weight": 14
+    },
+    {
+      "page_id": "as_p0360",
+      "region_type": "formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.1.7)\n360   BESSEL FUNCTIONS OF INTEGER ORDER  Limiting Forms for Small Arguments (p.1.1)  When p is fixed and z\\to0  9.1.7   J_{v}(z)\\sim(\\tfrac12x)^{-\\eta}/\\Gamma(v+1)  (v\\neq-1,-2,-3,\\ldots)  9.1.8   Y_{v}(z)\\sim-iH_{v}^{(1)}(z)\\sim iH_{v}^{(2)}(z)\\sim(2/\\pi)\\ln z  9.1.9   Y_{v}(z)\\sim-iH_{v}^{(1)}(z)\\sim iH_{v}^{(2)}(z)\\sim-(1/\\pi)\\Gamma(v)(\\tfrac12x)^{-\\eta}  (\\Re v>0)  (\\Re v>0)  .  Ascending Series  9.1.10   J_{v}(z)=(\\tfrac12x)^{-\\eta}\\sum_{k=0}^{\\infty}\\frac{(-\\tfrac12x^2)^k}{k!\\Gamma(v+k+1)}  9.1.11   Y_{n}(z)=-\\tfrac12x^{-n}\\sum_{k=0}^{\\infty}\\tfrac{n-1}{k!}(\\tfrac12x^2)^k\n(\\Re v>0)\n",
+      "gen_seconds": 105.38718366622925,
+      "failed": false,
+      "char_f1": 0.4160919540229885,
+      "exact_match": 0.0,
+      "formula_weight": 13
+    },
+    {
+      "page_id": "as_p0229",
+      "region_type": "formula",
+      "pred_text": "EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.229)\nSymmetry Relation\n5.1.10   E_{\\alpha}(z)=\\tfrac{1}{n}\\tfrac{x^{n}}{nn!}\\",
+      "gen_seconds": 105.83385491371155,
+      "failed": false,
+      "char_f1": 0.1443553362122147,
+      "exact_match": 0.0,
+      "formula_weight": 16
+    },
+    {
+      "page_id": "as_p0230",
+      "region_type": "formula",
+      "pred_text": "230  EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS  Derivatives\n5.1.26  \\frac{dE_{n}(z)}{dz}=-E_{n-1}(z)  (n=1,2,3,\\ldots)\n5.1.27\nd^{\\infty}\\frac{d^{\\infty}}{dz^{\\infty}}[e^{x}E_{1}(z)]=\\frac{d^{n-1}}{dz^{n-1}}[e^{x}E_{1}(z)]+\\frac{(-1)^{\\infty}(n-1)!}{z^{n}}  (n=1,2,3,\\ldots)\nDefinite and Indefinite Integrals\n(For more extensive tables of integrals see [5.3], [5.6], [5.11], [5.12], [5.13]. For integrals involving \\(E_{n}(x)\\) see [5.9].)\n5.1.28  \\int_{0}^{\\infty}\\frac{e^{-at}}{b+t}dt=e^{\\infty}E_{1}(ab)\n5.1.29\n\\int_{0}^{\\infty}\\frac{e^{at}}{b+t}dtt=e^{-to}E_{1}(-iab) \\quad(a>0,b>0)\n5.1.30\n\\int_{0}^{\\infty}\\frac{t-ib}{t^{2}+b^{2}}e^{ia}dt=e^{\\infty}E_{1}(ab) \\quad(a>0,b>0)\n5.1.31\n\\int_{0}^{\\infty}\\frac{t+ib}{t^{2}+b^{2}}e^{ia}dt=e^{-ab}(-Ei(ab)+i\\pi)\n(a>0,b>0)\n5.1.32  \\int_{0}^{\\infty}\\frac{e^{-at}-e^{-bt}}{t}dt=\\ln\\frac{b}{a}\n5.1.33  \\int_{0}^{\\infty}E_{1}^{2}(t)dt=2\\ln2\n5.1.34\n\\int_{0}^{\\infty}e^{-at}E_{n}(t)dt=\\]\n5.1.36\n\\int_{0}^{\\infty}\\frac{e^{-at}\\sin bt}{t}dt=\\arctan\\frac{b}{a}+\\mathcal{I}E_{1}(a+ib)\n(a>0,b real)\n5.1.37\n\\int_{0}^{1}\\frac{e^{at}(1-\\cos bt)}{t}dt=\\frac{1}{2}\\ln\\left(1+\\frac{b^{2}}{a^{2}}\\right)+\\mathrm{Ei}(a)\n+\\mathcal{R}E_{1}(-a+ib) \\quad(a>0,b real)\n5.1.38\n\\int_{0}^{1}\\frac{e^{-at}(1-\\cos bt)}{t}dt=\\frac{1}{2}\\ln\\left(1+\\frac{b^{2}}{a^{2}}\\right)-E_{1}(a)\n+\\mathcal{R}E_{1}(a+ib) \\quad(a>0,b real)\n5.1.39\n\\int_{0}^{z}\\frac{1-e^{-t}}{t}dt=E_{1}(z)+\\ln z+\\gamma\n5.1.40\n\\int_{0}^{z}\\frac{e^{t}-1}{t}dt=\\mathrm{Ei}(x)-\\ln x-\\gamma \\quad(x>0)\n5.1.41\n\\int e^{tx}\\frac{e^{tx}}{a^{2}+x^{2}}dx=\\frac{i}{2a}[e^{-a}E_{1}(-a-ix)-e^{a}E_{1}(a-iz)]+\\mathrm{const}.\\]\n5.1.42\n\\int e^{tx}\\frac{ze^{tx}}{a^{2}+x^{2}}dx=-\\frac{1}{2}[e^{-a}E_{1}(-a-iz)+e^{a}E_{1}(a-iz)]+\\mathrm{const}.\\]\n5.1.43\n\\int e^{z}\\frac{e^{z}}{a^{2}+x^{2}}dx=-\\frac{1}{a}\\mathcal{I}(e^{iz}E_{1}(-z+i\\omega))+\\mathrm{const}.\\quad(a>0)\n5.1.44\n\\int e^{zt}\\frac{ze^{t}}{a^{2}+x^{2}}dx=-\\mathcal{R}(e^{az}E_{1}(-x+ia))+\\mathrm{ const}.\\quad(a>0)\n5.1.34\n\\int e^{z}\\frac{e^{z}}{a^{2}+x^{2}}dx=-\\mathcal{R}(e^{az}E_{1}(-x+ia))+\\mathrm{ const}.\\quad(a>0)\n5.1.35\n\\int_{0}^{\\infty}e^{-at}E_{n}(t)dt=\\]\n5.1.36\n\\int_{0}^{1",
+      "gen_seconds": 105.23856353759766,
+      "failed": false,
+      "char_f1": 0.8196794300979519,
+      "exact_match": 0.041666666666666664,
+      "formula_weight": 24
+    },
+    {
+      "page_id": "as_p0232",
+      "region_type": "formula",
+      "pred_text": "EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.232)\n5.2.5   si(z)=Si(z)-\\frac{\\pi}{2}\nAuxiliary Functions\n5.2.6    f(z)=Ci(z)\\sin z-si(z)\\cos z\n5.2.7    g(z)=-Ci(z)\\cos z-si(z)\\sin z\nSince and Cosine Integrals in Terms of Auxiliary Functions\n5.2.8   Si(z)=\\frac{\\pi}{2}-f(z)\\cos z-g(z)\\sin z\n5.2.9   Ci(z)=f(z)\\sin z-g(z)\\cos z\nIntegral Representations\n5.2.10   si(z)=-\\int_{0}^{\\frac{\\pi}{2}}e^{-z\\cos t}\\cos(z\\sin t)dt\n5.2.11   Ci(z)+E_{1}(z)=\\int_{0}^{\\frac{\\pi}{2}}e^{-z\\cos t}\\sin(z\\sin t)dt\n5.2.12   f(z)=\\int_{0}^{\\infty}\\frac{\\sin t}{t+z}dt=\\int_{0}^{\\infty}\\frac{e^{-zt}}{t^{2}+1}dt\\quad(\\Re z>0)\n5.2.13   g(z)=\\int_{0}^{\\infty}\\frac{\\cos t}{t+z}dt=\\int_{0}^{\\infty}\\frac{te^{-zt}}{t^{2}+1}dt\\quad(\\Re z>0)\n5.2.14   Si(z)=\\sum_{n=0}^{\\infty}\\frac{\\sin t}{(2n+1)(2n+1)!}\n5.2.16   Ci(z)=\\gamma+\\ln z+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n}z^{2n}}{2n(2n)!}\n5.2.17   Shi(z)=\\sum_{n=0}^{\\infty}\\frac{z^{2n+1}}{(2n+1)(2n+1)!}\n5.2.18   Chi(z)=\\gamma+\\ln z+\\sum_{n=1}^{\\infty}\\frac{z^{2n}}{2n(2n)!}\nSymmetry Relations\n5.2.19   Si(z)=\\frac{\\pi}{2}-f(z)\\cos z-g(z)\\sin z\n5.2.20\nCi(z)=f(z)\\sin z-g(z)\\cos z\nCi(z)=\\frac{\\Gamma(z)}{\\Gamma(z)}-i\\pi\\quad(0<\\arg z<\\pi)\nCi(z)=\\overline{\\Gamma(z)}\\]\nRelation to Exponential Integral\n5.2.21   Si(z)=\\frac{1}{2i}[E_{1}(iz)-E_{1}(-iz)]+\\frac{\\pi}{2}\\quad(|\\arg z|<\\frac{\\pi}{2})\n5.2.22   Si(ix)=\\frac{i}{2}[Ei(x)+E_{1}(x)]\\quad(x>0)\n5.2.23   Ci(z)=-\\frac{1}{2}[E_{1}(iz)+E_{1}(-iz)]\\quad(|\\arg z|<\\frac{\\pi}{2})\n5.2.24   Ci(ix)=\\frac{1}{2}[Ei(x)-E_{1}(x)]+\\frac{\\pi}{2}\\quad(x>0)\nVolume at Infinity\n5.2.25   i_{x+\\infty}Si(x)=\\frac{\\pi}{2}\nIntegrals\n(For more extensive tables of integrals see [5.3], [5.6], [5.11], [5.12], [5.13].)\n5.2.26   i_{x}^{-\\infty}\\frac{\\sin t}{t}dt=-\\mathrm{si}(z)\\quad(|\\arg z|<\\pi)\n5.2.27   i_{x}^{-\\infty}\\frac{\\cos t}{t}dt=-\\mathrm{Ci}(z)\\quad(|\\arg z|<\\pi)\n5.2.28   i_{0}^{-\\infty}e^{-at}\\mathrm{Ci}(t)dt=\\frac{1}{2a}\\ln(1+a^{2})\\quad(\\Re a>0)\n5.2.29   i_{0}^{-\\infty}e^{-at}\\mathrm{si}(t)dt=-\\frac{1}{a}\\arctan a\\quad(\\Re a>0)\n5.2.30   i_{0}^{-\\infty}\\cos t\\mathrm{Ci}(t)dt=\\int_{0}^{\\infty}\\sin t\\mathrm{si}(t)dt=-\\frac{\\pi}{4}\n\n",
+      "gen_seconds": 95.09799337387085,
+      "failed": false,
+      "char_f1": 0.8680109990834097,
+      "exact_match": 0.0,
+      "formula_weight": 26
+    },
+    {
+      "page_id": "as_p0234",
+      "region_type": "table",
+      "pred_text": "284  EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS\nn   E_{n}(1.275)  E_{n}(1.275)\n1  1.1408099  6.0430168  2  0.09989884  7.0374307\n3  0.0760303  8.031009\n4  0.0608307  9.0296534  5.0504679\nInterpolating directly in Table 5.4 for n=10 we get E_{10}(1.275)=.0268470 as a check.\nSample 5. Compute E_{n}(x), n=1(1)N_ to 5S for x=10, N=10.\nII, as in this example, z is appreciably larger than five and N\\leq x, then the recurrence relation 5.1.14 may be safely used in decreasing order of n([5.5]). From Table 5.5 for x^{n+1}=.1 we get (x^{\\pm 1}0)e^E_{10}(x)=1.02436 so that E_{10}(10)=2.32529\\times\\times 10^{-6}. Using this as the initial value we obtain column (2).\nFrom Table 5.2 we get xe^E_{1}(x)=.915633 so that E_{1}(10)=4.15697\\times 10^{-6} as a check. Forward recurrence starting with E_{1}(10)=4.1570\\times 10^{-6} yields the values in column (1). The underlined figures are in error.\nTable 5.2 we get xe^E_{1}(x)=.915633 so that E_{1}(10)=4.15697\\times 10^{-6} as a check. Forward recurrence starting with E_{1}(10)=4.1570\\times 10^{-6} yields the values in column (1). The underlined figures are in error.\nTable 5.2 we get xe^E_{1}(x)=.915633 so that E_{1}(10)=4.15697\\times 10^{-6} as a check. Forward recurrence starting with E_{1}(10)=4.1570\\times 10^{-6} yields the values in column (1). The underlined figures are in error.\nTable 5.3. Compute E_{n}(x), n=1(1)N, to 5S for x=12.3, N=20.\nIf N is appreciably larger than x, and x appreciably larger than five, then the recurrence relation 5.1.14 should be used in the backward direction to generate E_{n}(x) for n<n_0, and in the forward direction to generate E_{n}(x) for n>n_0, where n_0=\\langle x\\rangle.\nFrom 5.1.52, with n_0=12, x=12.3, we have\nUsing the recurrence relation 5.1.14, as indicated, we get\nn  10^E_{n}(12.3) 10^E_{n}(12.3) \\pi\n12  .191038  .191038  12  11  .199213  .183498  13  10  .208098  .176516  14  9  .217793  .170042  15  8  .228406  .164015  16  7  240073  .158397  17  6  .252951  .153144  18  5  .267234  .148226  19  4.283155  .143608  20  3.300998  22  3.321117  11  343953  10076676  20  12.321117  11  343953  110  12.2573  2.32533  10076676  20  12.191038  .191038  12.19213  1.183498  13.183498  13.16516  14.16015  16.16416  16.16416  17.240073  158.240073  16.158397  17.240073  16.153144  18.24226  19.153144  18.24226  19.153155  1.143608  20.153155  1.143608  20.153160  21.343953  11.\n\n",
+      "gen_seconds": 105.30975317955017,
+      "failed": false,
+      "char_f1": 0.6386430678466076,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0242",
+      "region_type": "table",
+      "pred_text": "EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.242)\nTable S1: SNE, COSINE AND EXPONENTIAL INTEGRALS\nColumns: x |\\sin(x) |\\quad xe^{-x}\\mathrm{Fi}(x) |\\quad xe^{x}E_{1}(x)\nSample rows: 0.75881 |\\quad x^{-1}\\mathrm{Fi}(x)/\\mathrm{G}=0.7581 |\\quad x^{-1}\\mathrm{G}=0.7593 |\\quad x^{-1}\\mathrm{G}=0.6000 |\\quad x^{-1}\\mathrm{G}=0.8000 |\\quad x^{-1}\\mathrm{G}=0.8000 |\\quad x^{-1}\\mathrm{G}=0.9000 |\\quad x^{-1}\\mathrm{G}=0.8000 |\\quad x^{-1}\\mathrm{G}=0.9000 |\\quad x^{-1}\\mathrm{G}=0.8000 |\\quad x^{-1}\\mathrm{G}=0.\n\n",
+      "gen_seconds": 104.51412343978882,
+      "failed": false,
+      "char_f1": 0.47542627883650956,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0247",
+      "region_type": "table",
+      "pred_text": "EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.247)\nCOPYRIGHT: 1.00  (continued)\nSample rows: \\(x_{n}=1.0",
+      "gen_seconds": 104.89048409461975,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0256",
+      "region_type": "formula",
+      "pred_text": "(p.256)  Gamma FUNCTION AND RELATED FUNCTIONS (p.1.15)  \\Gamma(x+1)=z\\Gamma(z)=z|=z(z-1)!\n6.1.16  \\Gamma(n+z)=(n-1+z)(n-2+z)\\cdot\\cdot\\cdot(1+z)\\Gamma(1+z)\\qquad=(n-1+z)!\n\\qquad=(n-1+z)(n-2+z)\\cdot\\cdot\\cdot(1+z)z!\n\\qquad",
+      "gen_seconds": 105.36034536361694,
+      "failed": false,
+      "char_f1": 0.14443084455324356,
+      "exact_match": 0.0,
+      "formula_weight": 20
+    },
+    {
+      "page_id": "as_p0258",
+      "region_type": "formula",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS (p.258)\nContinued Fraction\n6.1.48\nln \\Gamma(z)+z-(z-\\frac{1}{2})\\ln z-\\frac{1}{2}\\ln (2\\pi)\n=\\frac{a_0}{z+z+\\frac{a_1}{2}+\\frac{a_3}{z+z+\\frac{a_4}{2}+\\dots}}\\quad(\\mathcal{R}z>0)\\]\na_0=\\frac112', a_1=\\frac130', a_2=\\frac5320', a_3=\\frac1955', a_4=\\frac229999\na_4=\\frac{22999}{22737^7}\\, a_5=\\frac{29944523}{1973314^2}\\, a_6=\\frac{109535241009}{48264275462}\nWallis' Formula'\n6.1.49\n2\\pi\\int_0^{\\pi/2}\\!\\binom{\\sin}{\\cos}^2\\pi\\,dx=\\frac{1\\cdot3\\cdot5\\dots(2n-1)}{2\\cdot4\\cdot6\\cdot\\dots(2n)}=\\frac{(2n)!}{2^{2n}(n!!)^2=\\frac1}{2^{2n}(n)}=\\frac{\\Gamma(n+\\frac1)}{\\pi\\Gamma(n+1)}\\sim\\frac1\\pi^{2}n[1-\\frac18n+\\frac1128n^2-\\dots]\nSome Definite Integrals\n6.1.50\nIn \\Gamma(z)=\\int_0^{n}\\!\\!\\Big{[}(z-1)\\ e^{-t}-\\frac{e^{-t}-e^{-tt}}{1-e^{-t}}\\Big{]}\\fracdt{t}\\quad(\\mathcal{R}z>0)\\qquad=(z-\\frac{1}{2})\\ln\\,z-z+\\frac{1}{2}\\ln\\,2\\pi",
+      "gen_seconds": 104.73570585250854,
+      "failed": false,
+      "char_f1": 0.6047032474804032,
+      "exact_match": 0.0,
+      "formula_weight": 11
+    },
+    {
+      "page_id": "as_p0259",
+      "region_type": "formula",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS 259\nRefection Formula\n6.3.7 \\psi(1-z)=\\psi(z)+\\pi\\cot\\pi z\nDuplication Formula\n6.3.8 \\psi(2z)=\\psi(z)+\\tfrac{1}{2}\\psi(z+\\tfrac{1}{2})+\\ln2\\]\nPsi Function in the Complex Plane\n6.3.9 \\psi(z)=\\overline{\\psi(z)}\n6.3.10 \\mathcal{R}\\psi(iy)=\\mathcal{R}\\psi(-iy)=\\mathcal{R}\\psi(1+iy)=\\mathcal{R}\\psi(1-iy)\n6.3.11 \\mathcal{I}\\psi(iy)=\\tfrac{1}{2}y^{-1}+\\tfrac{1}{2}\\pi\\coth\\pi y\n6.3.12 \\mathcal{I}\\psi(\\tfrac{1}{2}+iy)=\\tfrac{1}{2}\\pi\\tanh\\pi y\n6.3.13 \\mathcal{I}\\psi(1+iy)=-\\tfrac{1}{2y}+\\tfrac{1}{2}\\pi\\coth\\pi y\n=y\\sum_{n=1}^{\\infty}(n^2+y^2)^{-1}\nSeries Expansions\n6.3.14 \\psi(1+z)=-\\gamma+\\sum_{n=2}^{\\infty}(-1)^n^k(n)z^{n-1} (|z|<1)\n6.3.15 \\psi(1+z)=\\tfrac{1}{2}z^{-1}-\\tfrac{1}{2}\\pi\\cot\\pi z-(1-z^2)^{-1}+1-\\gamma\n-\\sum_{n=1}^{\\infty}[\\zeta(2n+1)-1]z^{2n} (|z|<2)\n6.3.16 \\psi(1+z)=-\\gamma+\\sum_{n=1}^{\\infty}\\frac{z}{n(n+z)} (z\\neq-1,-2,-3,\\dots)\n6.3.17 \\mathcal{R}\\psi(1+iy)=1-\\gamma-\\frac{1}{1+y^2} +\\tfrac{\\infty}{\\alpha=1}(-1)^{n+1}[\\zeta(2n+1)-1]y^{2n} (|y|<2)\n=-\\gamma+y^2\\sum_{n=1}^{\\infty}n^{-1}(n^2+y^2)^{-1} (-\\infty<y<\\infty)\nAsymptotic Formulas\n6.3.18 \\psi(z)\\sim\\ln z-\\frac{1}{2z}-\\sum_{n=1}^{\\infty}\\frac{B_{2n}}{2nz^{2n}} =\\ln z-\\frac{1}{12z^2}+\\frac{1}{120z^4}-\\frac{1}{252z^6}+\\dots (z\\to\\infty\\text{ in }|\\arg z|<\\pi)\n716:454 O-64-18\n6.3.19 \\mathcal{R}\\psi(1+iy)\\sim\\ln y+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}B_{2n}}{2ny^{2n}} =\\ln y+\\frac{1}{12y^2}+\\frac{1}{120y^4}+\\frac{1}{252y^6}+\\dots (y\\to\\infty)\nExtrema'of\\Gamma(x)--Zeros of\\psi(x)\n\\Gamma^{\\prime}(x_{n})=\\psi(x_{n})=0\n\\begin{array}{c} x_{n} \\\\ \\quad 0 +1.462 \\\\ 1 -0.504 \\\\ 2 -1.573 \\\\ 3 -2.611 \\\\ 4 -3.635 \\\\ 5 -4.653 \\\\ 6 -5.667 \\\\ 7 -6.678 \\\\ \\quad x_{0}=1.46163 \\\\ \\quad 1449 68362 \\\\ \\quad 1\\cap(x_{0})=.88560 \\\\ \\quad 10889 \\\\ \\quad x_{a}=-n+(\\ln n)^{-1}+o[(\\ln n)^{-2}]\\end{array}\\]\n6.3.20 \\chi(2n)=-n+(\\ln n)^{-1}+o[(\\ln n)^{-2}]\n6.3.21 \\psi(z)=\\int_{0}^{\\infty}\\!",
+      "gen_seconds": 105.09298276901245,
+      "failed": false,
+      "char_f1": 0.8013105546454482,
+      "exact_match": 0.125,
+      "formula_weight": 16
+    },
+    {
+      "page_id": "as_p0260",
+      "region_type": "formula",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS (p.260)\n6.4. Polygamma Functions7\nFootnote 7: \\psi^{(n)}(z)=\\frac{d^{n}}{dz^{n}}\\psi(z)=\\frac{d^{n+1}}{dz^{n+1}}\\ln\\Gamma(z)\\quad(n=1,2,3,\\dots)\\quad(\\Re z>0)\\quad(\\Re z=1,\\Im\\nu)\\quad",
+      "gen_seconds": 104.76966834068298,
+      "failed": false,
+      "char_f1": 0.14365881032547698,
+      "exact_match": 0.0,
+      "formula_weight": 18
+    },
+    {
+      "page_id": "as_p0262",
+      "region_type": "formula",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS (p.6.5.5)\nProbability Integral of the x^x-Distribution\nP(\\chi^2|v)=\\frac{1}{2^3r\\Gamma(\\frac20",
+      "gen_seconds": 105.02625012397766,
+      "failed": false,
+      "char_f1": 0.10724070450097847,
+      "exact_match": 0.0,
+      "formula_weight": 25
+    },
+    {
+      "page_id": "as_p0280",
+      "region_type": "table",
+      "pred_text": "(p.89) (p.10.4625)\nSample rows: 280  GAMMA FUNCTION AND RELATED FUNCTIONS (p.10.00000)\nTable 6.7  Gamma FUNCTION FOR COMPLEX ARGUMENTS\nColumns: x-1.3  y \\beta^{n}\\ln\\Gamma(x) \\times \\ln\\Gamma(x)  y \\cdot n\\Gamma(x)\n0.0  -0.10817\\,48095\\,08  0.00000\\,00000\\,000  5.0  -5.64541\\,41381\\,33  4.24823\\,90621\\,27  0.11383\\,61080\\,85  -0.01671\\,99199\\,34  5.1  -5.78673\\,2355\\,37  4.41126\\,31957\\,95  0.2  -0.13070\\,20636\\,90  -0.03225\\,84033\\,35  5.2  -5.99235\\,3506\\,66  4.57620\\,80623\\,67  0.3  -0.15843\\,10081\\,49  -0.04549\\,95427\\,81  5.3  -6.07026\\,64370\\,51  4.74303\\,39118\\,17  0.4  -0.19649\\,12771\\,78  -0.05544\\,82296\\,06  5.4  -6.21246\\,02140\\,03  4.91171\\,10050\\,12  0.5  -0.24420\\,93680\\,45  -0.06126\\,78750\\,55  5.5  -6.35492\\,47217\\,66  5.08220\\,495017\\,7  0.6  -0.30082\\,24343\\,022  5.6  -0.49765\\,03035\\,97  5.25480\\,39432\\,947  7.5  -0.35539\\,3002\\,19  -0.58055\\,2852\\,04  5.7  -6.04605\\,03713\\,722  5.42851\\,2533\\,50  0.8  -0.43754\\,53407\\,27  2.04820\\,73993\\,35  5.8  -6.78384\\,88113\\,55  5.60427\\,51684\\,12  0.9  -0.51609\\,74046\\,40  -0.03257\\,37450\\,94  5.9  -6.92730\\,48028\\,21  5.78172\\,89485\\,09  1.0  -0.60048\\,45154\\,05  -0.01107\\,52190\\,48  6.0  -7.07098\\,80742\\,52  5.56805\\,07788\\,45  1.1  -0.69006\\,62005\\,12  +0.01627\\,9089\\,044  6.1  -7.24819\\,1193\\,682  6.1  4.1616\\,37268\\,552  1.2  -0.78427\\,3001\\,02  0.49491\\,0710\\,23  6.2  -7.35907\\,1087\\,13  6.32397\\,1016  4.3  -0.88259\\,13601\\,03  0.08822\\,2550\\,96  6.3  -7.50322\\,90147\\,58  6.50795\\,94158\\,99  1.4  -0.98458\\,61322\\,90  0.13255\\,01649\\,50  6.4  -7.64785\\,05510\\,98  6.69349\\,23498\\,81  1.5  -1.08986\\,7615\\,16  0.18223\\,70479\\,17  6.5  -7.79256\\,5565\\,27  6.88056\\,6176\\,38  1.6  -1.18989\\,86148\\,04  0.23711\\,0920\\,47  6.6  -7.93746\\,8205\\,2587\\,24",
+      "gen_seconds": 104.68720388412476,
+      "failed": false,
+      "char_f1": 0.33834168057874237,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0281",
+      "region_type": "table",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS (p.281)\nSAMUDA FUNCTION FOR COMPLEX ARGUMENTS (p.35, p.49)\nColumns: \\ n = 1.4\nSample rows: \\ n = 1.0\n\n[MISSING_PAGE_POST]",
+      "gen_seconds": 105.31923007965088,
+      "failed": true,
+      "failure_reason": "nougat-missing-page-marker"
+    },
+    {
+      "page_id": "as_p0298",
+      "region_type": "formula",
+      "pred_text": "ERROR FUNCTION AND FRESHEL INTEGRALS (p.1.15)\nColumns: \\frac{1}{x+\\sqrt{x^{2}+2}}{x-1}=\\frac{1}{x+\\sqrt{x^{2}+\\frac{4}{\\pi}}}\\quad x=0.\\]\n\n(For other inequalities see [7.2].)\nColumns: \\frac{1}{\\sqrt{\\pi}}\\int_{-\\infty}^{\\infty}e^{-t^2}dt=\\frac{1}{z-\\sqrt{x^{2}+\\frac{4}{\\pi}}}\\quad x=\\frac{1}{\\sqrt{x}}\\int_{-\\infty}^{\\infty}e^{-t^2}dt=\\",
+      "gen_seconds": 104.91467547416687,
+      "failed": false,
+      "char_f1": 0.2643478260869565,
+      "exact_match": 0.0,
+      "formula_weight": 11
+    },
+    {
+      "page_id": "as_p0301",
+      "region_type": "formula",
+      "pred_text": "ERROR FUNCTION AND FRESNEL INTEGRALS (301)\n7.3.8   S(x)=S_{1}\\left(x\\sqrt{\\frac{\\pi}{2}}\\right)=S_{2}\\left(\\frac{\\pi}{2}\\,x^{2}\\right)\n7.3.9   C(z)=\\frac{1}{2}+f(z)\\sin\\left(\\frac{\\pi}{2}\\,z^{2}\\right)-g(z)\\;\\cos\\left(\\frac{\\pi}{2}\\,z^{2}\\right)\n7.3.10   S(z)=\\frac{1}{2}-f(z)\\;\\cos\\left(\\frac{\\pi}{2}\\,z^{2}\\right)-g(z)\\;\\sin\\left(\\frac{\\pi}{2}\\,z^{2}\\right)\nSeries Expansions\n7.3.11   C(z)=\\sum\\limits_{n=0}^{\\infty}\\frac{(-1)^{n}(\\pi/2)^{2n}}{(2n)!(4n+1)}\\,z^{4n+1}\\]\n7.3.12   C(z)=\\cos\\left(\\frac{\\pi}{2}\\,z^{2}\\right)\\sum\\limits_{n=0}^{\\infty}\\frac{(-1)^{n}\\pi^{2n}}{1\\cdot3\\ldots(4n+1)}\\,z^{4n+1}\\]\n7.3.13   S(z)=\\sum\\limits_{n=0}^{\\infty}\\frac{(-1)^{n}(\\pi/2)^{2n+1}}{(2n+1)!(4n+3)}\\,z^{4n+3}\n7.3.14   S(z)=\\sum\\limits_{n=0}^{\\infty}\\frac{(-1)^{n}(\\pi/2)^{2n+1}}{(2n+1)!(4n+3)}\\,z^{4n+3}\n7.3.15   C(z)=J_{1/2}(z)+J_{3/2}(z)+J_{9/2}(z)+\\ldots\n7.3.16   S_{2}(z)=J_{3/2}(z)+J_{7/2}(z)+J_{11/2}(z)+\\ldots\nFor Bessel functions J_{n+1/2}(z) see chapter 10.\nCommentary Relations\n7.3.17   C(-z)=-C(z), S(-z)=-S(z)\n7.3.18   C(iz)=iC(z), S(iz)=-iS(z)\n7.3.19   C(z)=C(z), S(z)=-\\overline{S(z)}\nValue at Infinity\n7.3.20   C(x)=\\frac{1}{2}, S(x)=\\frac{1}{2} (x\\to\\infty)\nDerivatives\n7.3.21  \\frac{df(x)}{dx}=-\\pi xg(x), d\\,g(x)=\\pi xf(x)-1\nRelation to Error Function (see 7.1.1, 7.1.3)\n7.3.22   C(z)+iS(z)=\\frac{1+i}{2}\\operatorname{erf}\\left[\\frac{\\sqrt{\\pi}}{2}\\,(1-i)z\\right]\n=\\frac{1+i}{2}\\left\\{1-e^{\\frac{\\pi}{2}x^{4}}w\\left[\\frac{\\sqrt{\\pi}}{2}\\,(1+i)z\\right]\\right\\}\n7.3.23   g(x)=\\mathcal{R}\\left\\{\\frac{1+i}{2}w\\left[\\frac{\\sqrt{\\pi}}{2}\\,(1+i)x\\right]\\right\\}\n7.3.24   f(x)=\\mathcal{F}\\left\\{\\frac{1+i}{2}w\\left[\\frac{\\sqrt{\\pi}}{2}\\,(1+i)x\\right]\\right\\}\nRelation to Confluent Hypergeometric Function (see chapter 13)\n7.3.25   C(z)+iS(z)=zM\\left(\\frac{1}{2},\\frac{3}{2};i\\frac{\\pi}{2}\\,z^{2}\\right)\n=ze^{\\frac{\\pi}{2}z^{4}}M\\left(1,\\frac{3}{2}-i\\frac{\\pi}{2}\\,z^{2}\\right)\nRelation to Spherical Bessel Functions (see chapter 10)\n7.3.26   C_{2}(z)=\\frac{1}{2}\\int_{0}^{z}J_{-1}(t)dt, S_{2}(z)=\\frac{1}{2}\\int_{0}^{z}J_{1}(t)dt",
+      "gen_seconds": 95.22506403923035,
+      "failed": false,
+      "char_f1": 0.8871554862194487,
+      "exact_match": 0.15789473684210525,
+      "formula_weight": 19
+    },
+    {
+      "page_id": "as_p0302",
+      "region_type": "formula",
+      "pred_text": "ERROR FUNCTION AND FRENNEL INTEGRALS\n302  ExtroR FUNCTION AND FRENNEL INTEGRALS\nAsymptotic Expansions\n7.3.27  \\pi zf(z)\\sim1+\\sum_{m=1}^{n}(-1)^{m}\\frac{1\\cdot3\\ldots(4m-1)}{(\\pi^{2})^{2n+1}} \\left(z\\to\\infty,|\\arg z|<\\tfrac{\\pi}{2}\\right)\\quad \\int_{0}^{\\infty}e^{-a(\\pi^{2}+20t+\\omega)dt}=\\frac{1}{2}\\sqrt{\\frac{\\pi}{a}}e^{\\frac{y^{2}-a\\phi}{4}}\\text{erfc}\\,\\frac{b}{\\sqrt{a}}\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}-\\frac{b}{2}}dt=\\frac{1}{2}\\sqrt{\\frac{\\pi}{a}}e^{-2\\sqrt{\\alpha}}\\quad (\\mathcal{D}a>0,\\mathcal{D}b>0)\\quad \\int_{0}^{\\infty}t^{2n}e^{-a^{2}dt}=\\frac{1\\cdot3\\ldots(2n-1)}{2^{n+1}a^{n}}\\sqrt{\\frac{\\pi}{a}}\\quad =\\frac{\\Gamma(n+\\tfrac{1}{2})}{2a^{n+1}}\\quad (\\mathcal{R}a>0;n=0,1,2,\\ldots)\\quad \\int_{0}^{\\infty}t^{2n+1}e^{-a^{2}dt}-\\frac{n!}{2a^{n+1}}\\quad (\\mathcal{R}a>0;n=0,1,2,\\ldots)\\quad \\int_{0}^{\\infty}e^{-a^{2}}\\cos\\,(2xt)dt=\\frac{1}{2}\\sqrt{\\frac{\\pi}{a}}e^{-\\frac{x^{2}}{a}}\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}t}\\sin\\,(2xt)dt=\\frac{1}{\\sqrt{a}}e^{-a^{2}/a}\\int_{0}^{\\infty}e^{-a^{2}t}dt\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}t}\\cos\\,(2xt)dt=\\frac{1}{2}\\sqrt{\\frac{\\pi}{a}}e^{-\\frac{x^{2}}{a}}\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}}\\sin\\,(2xt)dt=\\frac{1}{\\sqrt{a}}e^{-a^{2}t/a}\\int_{0}^{\\infty}e^{-a^{2}t}\\sin\\,(2xt)dt=\\frac{1}{\\sqrt{a}}e^{-a^{2}t/a}\\int_{0}^{\\infty}e^{-a^{2}t}dt\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}t}dt=\\frac{1}{\\sqrt{a}}e^{a^{2}t}\\mathrm{erfc}\\,\\sqrt{a}z\\quad (\\mathcal{D}a>0,\\mathcal{D}z>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}dt}\\int_{0}^{\\infty}\\frac{e^{-a^{2}}dt}{t+z}=e^{-a^{2}}\\left[\\sqrt{\\pi}\\int_{0}^{\\infty}e^{-\\pi^{2}}dt-\\frac{1}{2}\\operatorname{Ei}(az^{2})\\right]\\quad (\\mathcal{D}a>0,x>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}dt}\\int_{0}^{\\infty}e^{-a^{2}dt}=\\frac{\\pi}{2x}e^{a^{2}}\\mathrm{erfc}\\,\\sqrt{a}x\\quad (a>0,x>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}}\\mathrm{erfc}\\,\\sqrt{a}x\\quad (a>0,x>0)\\quad \\int_{0}^{",
+      "gen_seconds": 104.77373242378235,
+      "failed": false,
+      "char_f1": 0.5485762144053601,
+      "exact_match": 0.0,
+      "formula_weight": 20
+    },
+    {
+      "page_id": "as_p0303",
+      "region_type": "formula",
+      "pred_text": "ERROR FUNCTION AND FRESNEL INTEGRALS (303)\n7.4.14  \\int_{-\\infty}^{\\infty}\\frac{(x-t)e^{-t^2}dt}{(x-t)^2+y^2}=\\pi|\\omega(x+iy) (x\\text{ real,}y>0)\n7.4.15  \\int_{0}^{\\infty}\\frac{[t^2-(x^2-y^2)]e^{-t^2}dt}{t^4-2(x^2-y^2)t^2+(x^2+y^2)^2}=\\pi 2\\not\\partial\\frac{w(x+iy)}{y-ix}\n(x\\text{ real,}y>0)\n7.4.16  \\int_{0}^{\\infty}\\frac{2xye^{-t^2}dt}{t^4-2(x^2-y^2)t^2+(x^2+y^2)^2}=\\pi 2\\not\\partial\\frac{w(x+iy)}{y-ix}\n(x\\text{ real,}y>0)\n7.4.17  \\int_{0}^{\\infty}e^{-st}\\text{ erf bt dt=\\frac1{a}e^{ab^2}\\text{ erfc}\\frac{a}{2b}} \\Big{(}\\Big{(}\\Big{(}\\Big{(}\\Big{(}\\Big{(}\\Big{(}\\Big{(}\\Big{(}\\Big{(}\\Big{(}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{}\\Big{(}\\Big{(}\\Big{}\\Big{(}\\",
+      "gen_seconds": 104.91501355171204,
+      "failed": true,
+      "failure_reason": "repetition-degeneration"
+    },
+    {
+      "page_id": "as_p0312",
+      "region_type": "table",
+      "pred_text": "SH12  ERROR FUNCTION AND FRESNEL INTEGRALS\nTable 7.2  DERIVATIVE OF THE ERROR FUNCTION\n(continued)\n",
+      "gen_seconds": 105.17669439315796,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0318",
+      "region_type": "table",
+      "pred_text": "318  ERROR FUNCTION AND FRESNEL INTEGRALS\nTable 7.4  REPEATED INTEGRALS OF THE ERROR FUNCTION\nx   n=5   n=6   n=10   n=11\n0,0  1.00000  1.00000  1.00000  0.100000  0.100000  0.100000  0.1\\cdot(-1)7.13475  (-1)6.93283  (-1)6.28971  (-1)6.15727  0.2\\cdot(-1)5.03608  (-1)4.75548  (-1)3.91490  (-1)3.75188  0.3\\cdot(-1)3.51572  (-1)3.22652  (-1)2.41089  (-1)2.26201  0.4\\cdot(-1)2.42671  (-1)2.16478  (-1)1.46861  (-1)1.34906  0.5\\cdot(-1)1.65569  (-1)1.43588  (-2)8.84744  (-2)7.95749  0.6\\cdot(-1)1.11630  (-2)9.41309  (-2)5.27007  (-2)4.64127  0.7\\cdot(-2)4.45288  (-2)6.09742  (-2)3.13023  (-2)2.67626  0.8\\cdot(-2)2.89212  0.9\\cdot(-2)3.17704  (-2)2.46567  (-2)1.03859  (-3)8.59126  1.0\\cdot(-2)2.03707  (-2)1.53850  (-3)5.90062  (-3)4.78106  1.1\\cdot(-2)1.28901  (-3)9.47623  (-3)3.31130  (-3)2.62835  1.2\\cdot(-3)8.04765  (-3)5.76033  (-3)1.83510  (-3)1.42708  1.3\\cdot(-3)4.95614  (-3)3.45489  (-3)1.00415  (-4)7.65146  1.4\\cdot(-3)3.01008  (-3)2.04411  (-4)5.42413  (-4)4.05030  1.5\\cdot(-3)1.80252  (-3)1.19278  (-4)2.89186  (-4)2.21641  1.6\\cdot(-3)1.06403  (-4)6.86307  (-4)1.52145  (-4)1.09146  1.7\\cdot(-4)6.19032  (-4)3.89303  (-5)7.89765  (-5)5.55435  1.8\\cdot(-4)3.54870  (-4)2.17663  (-5)4.04407  (-5)2.78871  1.9\\cdot(-4)2.00419  (-4)1.19930  (-5)2.04244  (-5)1.38116  2.0\\cdot(-4)1.11492  (-5)6.51088  (-5)1.01722  (-6)6.74666  2.1\\cdot(-6)6.74666  2.2\\cdot(-5)5.29497  (-5)3.29497  (-5)1.83427  (-6)2.41807  (-6)1.15378  (-7)7.22681  2.4\\cdot(-6)9.14767  (-6)4.86044  (-7)5.42553  (-7)3.33519  2.5\\cdot(-6)4.70641  (-6)2.44418  (-7)2.51397  (-7)1.51693  2.6\\cdot(-6)2.38278  (-7)1.20988  (-7)1.14766  (-8)6.79864  2.7\\cdot(-6)1.18695  (-7)5.89495  (-8)5.16116  (-8)3.00212  2.8\\cdot(-7)5.81672  2.82592  2.9\\cdot(-7)2.80391  (-7)1.33308  (-9)9.97266  (-9)5.59577  3.0\\cdot(-7)1.32935  (-",
+      "gen_seconds": 105.3390703201294,
+      "failed": false,
+      "char_f1": 0.45824255628177196,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0324",
+      "region_type": "table",
+      "pred_text": "ERROR FUNCTION AND FRESHEL INTEGRALS (p.86)\nTable 7.8   Auxiliary FUNCTIONS (x^{-1})  \\nu^{-1}=2  f(x)=f_2(u)  \\delta x^{2}>  \\omega w^{-1}=0.0  0.53661\n0.90  0.51566 20156 17741 0.25946 14023 65674 0.04986 0.6317 93636 1.2\n0.88  0.49299 85571 12455 0.25512 0.90512 80091 0.04754 3984725 1.2\n0.84  0.44919 89113 82565 0.24618 0.29944 4393 0.04299 0.5078 69390 1.2\n0.82  0.42806 31349 39962 0.24157 92449 31459 0.04075 92107 68723 1.2\n0.80  0.40743 66543 15252 0.23689 0.07256 57089 0.03856 203423 27312 1.2\n0.78  0.38731 96955 0.34836 0.23217 47126 4632 0.03604 19045 75704 1.3\n0.70  0.3194 36884 60115 0.21214 23821 60229 0.02819 347473 19381 1.3\n0.68  0.29437 29827 42770 0.20693 57789 65521 0.02626 48498 36510 1.3\n0.66  0.2731 15728 43138 0.20164 60404 80635 0.0243918 1.3588 2.4\n0.62  0.2471 66404 98098 0.19082 37987 55563 0.02082 45674 44482 2.4\n0.60  0.22918 31180 52329 0.18529 53067 79209 0.01913 61240 35536 2.4\n0.60  0.22918 31180 52329 0.18529 53067 79209 0.01913 61240 35536 2.4\n0.58  0.21415 88914 24454 0.17969 17083 86674 0.017514 24357 2.5\n0.56  0.19664 39690 14474 0.17047 50760 20.01596 22.58470 2.55669 3.02803 250.14703 2.5\n0.54  0.18563 83256 22387 0.16827 0.2799 47273 0.01488 30.2683 2.58694 1.3586 3.60963 2.64570 2.6696 3.60967 2.6\n0.52  0.17214 19864 48194 0.16245 86594 19322 0.01307 70253 60097 2.26\n0.50  0.51915 49430 913895 0.15656 43216 36302 0.01174 6599 24659 24659 2.6\n0.48  0.14667 79554 49410 15.16059 0597 56320 0.01495 152015 2.7\n0.46  0.13470 87438 32980 0.14862 28400 0.000317 72046 0.000317 72046 0.000317 72046 0.000317 72047 2.5\n0.44  0.12324 95879 30364 0.13862 28400 0.00",
+      "gen_seconds": 105.25947713851929,
+      "failed": false,
+      "char_f1": 0.4203461674320028,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0361",
+      "region_type": "formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.1.27)\nCol_{\\nu-1}(z)+\\Col_{\\nu+1}(z)=\\frac{2v}{z}\\Col_{\\nu-1}(z)-\\frac{v}{z}\\Col_{\\nu}(z)\nCol_{\\nu}(z)=-\\Col_{\\nu+1}(z)+\\frac{v}{z}\\Col_{\\nu}(z)\nCol_{\\nu}(z)=\\frac{1}{2^3}\\Col_{\\nu-k+1}(z)-\\dots+(-\\lambda^{k}\\Col_{\\nu+k}(z))\n(k=0,1,2,\\dots)\nRecurrence Relations for Cross-Products\n9.1.32   p_{\\nu}=J_{\\nu}(a)Y_{\\nu}(b)-J_{\\nu}(b)Y_{\\nu}(a)\nq_{\\nu}=J_{\\nu}(a)Y_{\\nu}(b)-J_{\\nu}^{\\prime}(b)Y_{\\nu}(a)\nr_{\\nu+1}=\\frac{1}{2}\\Col_{\\nu-k+1}(z)-\\dots+(-\\lambda^{k}\\Col_{\\nu+k}(z))\n(k=0,1,2,\\dots)\nRecurrence Relations for Cross-Products\n9.1.33   p_{\\nu}=J_{\\nu}(a)Y_{\\nu}(b)-J_{\\nu}(b)Y_{\\nu}(a)\nq_{\\nu}=J_{\\nu}(a)Y_{\\nu}(b)-J_{\\nu}^{\\prime}(b)Y_{\\nu}(a)\nr_{\\nu}=J_{\\nu}^{\\prime}(a)Y_{\\nu}(b)-J_{\\nu}(b)Y_{\\nu}^{\\prime}(a)\nthen\n9.1.33   p_{\\nu+1}-p_{\\nu-1}=-\\frac{2v}{a}q_{\\nu}-\\frac{2v}{b}r_{\\nu}\nq_{\\nu+1}+r_{\\nu}=\\frac{v}{a}p_{\\nu}-\\frac{v+1}{b}p_{\\nu+1}\nr_{\\nu+1}+q_{\\nu}=\\frac{v}{b}p_{\\nu}-\\frac{v+1}{a}p_{\\nu+1}\nq_{\\nu}=\\frac{1}{2}p_{\\nu+1}+\\frac{1}{2}p_{\\nu-1}-\\frac{v^2}{ab}p_{\\nu}\nq_{\\nu+1}+r_{\\nu}=\\frac{v}{a}p_{\\nu}-\\frac{v+1}{b}p_{\\nu+1}\nr_{\\nu+1}+q_{\\nu}=\\frac{v}{b}p_{\\nu}-\\frac{v+1}{a}p_{\\nu+1}\nq_{\\nu}=\\frac{1}{2}p_{\\nu+1}+\\frac{1}{2}p_{\\nu-1}-\\frac{v^2}{ab}p_{\\nu}\nq_{\\nu}=\\frac{4}{x^{\\alpha}ab}\nq_{\\nu}=\\frac{4}{x^{\\alpha}ab}\n",
+      "gen_seconds": 104.639719247818,
+      "failed": false,
+      "char_f1": 0.45209903121636164,
+      "exact_match": 0.0,
+      "formula_weight": 22
+    },
+    {
+      "page_id": "as_p0362",
+      "region_type": "formula",
+      "pred_text": "362  BESSEL FUNCTIONS OF INTEGER ORDER\nOther Differential Equations\n9.1.49   w^{\\prime}+(\\sqrt[2^{n-1/2}]{z^{2}})w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.50   w^{\\prime}+(\\sqrt[2^{n}]{4z^{2}})w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.51   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{1/\\nu}(2\\lambda z^{1/p})\n9.1.52   w^{\\prime}+\\frac{2v-1}{z}w^{\\prime}+\\lambda^{2}w=0,  w=z^{2}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.53   z^{2}w^{\\prime}+(1-2p)zu^{\\prime}+(\\lambda^{2}q^{2}z^{1}+p^{2}-r^{2}q^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.54   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda e^{\\alpha})\n9.1.55   z^{2}(z^{2}-r^{2})w^{\\prime}+z(z^{2}-3v^{2})w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.56   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda e^{\\alpha})\n9.1.55   z^{2}(z^{2}-r^{2})w^{\\prime}+z(z^{2}-3v^{2})w^{\\prime}+(\\lambda^{2}q^{2}z^{1}+p^{2}-r^{2}q^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.56   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda e^{\\alpha})\n9.1.55   z^{2}(z^{2}-r^{2})w^{\\prime}+z(z^{2}-3v^{2})w^{\\prime}+(\\lambda^{2}e^{2}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.56   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.50   w^{\\prime}+(\\lambda^{2}e^{2z}-4v^{2})w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda x^{\\alpha})\n9.1.51   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.52   w^{\\prime}+\\lambda^{2}w^{\\prime}+\\lambda^{2}w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.53   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.54   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.55   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.52   w^{\\prime}+\\lambda^{2}w^{\\prime}+\\lambda^{2}w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.53   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.54   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}\n\n",
+      "gen_seconds": 106.34320259094238,
+      "failed": false,
+      "char_f1": 0.4628041309294591,
+      "exact_match": 0.0,
+      "formula_weight": 23
+    },
+    {
+      "page_id": "as_p0366",
+      "region_type": "prose+formula",
+      "pred_text": "366  BESSEL FUNCTIONS OF INTEGER ORDER\n9.3.3   J_{\\nu}(v\\sec\\beta)= \\sqrt{2/(\\pi\\nu\\tan\\beta)}\\,\\{\\cos\\,(\\nu\\tan\\beta-\\nu\\beta-\\frac{1}{4}\\pi)+O(\\nu^{-1})\\} \\sqrt{2/(\\pi\\nu\\tan\\beta)}\\,\\{\\cos\\,(\\nu\\tan\\beta-\\nu\\beta-\\frac{1}{4}\\pi)+O(\\nu^{-1})\\} \\sqrt{2/(\\pi",
+      "gen_seconds": 106.23403882980347,
+      "failed": false,
+      "char_f1": 0.13647995450668182,
+      "exact_match": 0.0,
+      "formula_weight": 15
+    },
+    {
+      "page_id": "as_p0367",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.3.18)\n9.3.18  \\lambda^{\\infty}_{\\nu=0}\\frac{v_{2+1}(i\\cot\\beta)}{v^{2k+1}}=\\frac{3\\cot\\beta+5\\cot^{3}\\beta}{24\\nu}\\dots\\]\n\nAlso\n9.3.19  \\lambda^{\\prime}_{\\nu}(\\nu\\sec\\beta)=\\sqrt{(\\sin2\\beta)/(\\pi\\nu)}\\{-N(\\nu,\\beta)\\sin\\Psi \\quad-O(\\nu,\\beta)\\cos\\Psi\\}\\quad-\\tfrac{",
+      "gen_seconds": 105.96956849098206,
+      "failed": false,
+      "char_f1": 0.16177832664402594,
+      "exact_match": 0.0,
+      "formula_weight": 13
+    },
+    {
+      "page_id": "as_p0368",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER\n9.3.31  J_{\\nu}(\\nu) \\sim \\frac{a}{v^{1/2}}(1+\\sum\\limits_{k=1}^{\\infty}\\frac{\\alpha_{k}}{v^{2k}})-\\frac{b}{v^{1/2}}\\sum\\limits_{k=0}^{\\infty}\\frac{\\beta_{k}}{v^{2k}}\\]\n9.3.32  Y_{\\nu}(\\nu) \\sim -\\frac{3^{1/2}a}{v^{1/3}}(1+\\sum\\limits_{k=1}^{\\infty}\\frac{\\alpha_{k}}{v^{2k}})-\\frac{3^{1/2}b}{v^{5/3}}\\sum\\limits_{k=0}^{\\infty}\\frac{\\beta_{k}}{v^{2k}}\\]\n9.3.33  J_{\\nu}^{\\prime}(\\nu) \\sim \\frac{b}{v^{1/3}}(1+\\sum\\limits_{k=1}^{\\infty}\\frac{\\gamma_{k}}{v^{2k}})-\\frac{a}{v^{1/3}}\\sum\\limits_{k=0}^{\\infty}\\frac{\\delta_{k}}{v^{2k}}\\]\n9.3.34  Y_{\\nu}^{\\prime}(\\nu) \\sim \\frac{3^{1/2}b}{v^{1/3}}(1+\\sum\\limits_{k=1}^{\\infty}\\frac{\\gamma_{k}}{v^{2k}})+\\frac{3^{1/2}a}{v^{1/3}}\\sum\\limits_{k=0}^{\\infty}\\frac{\\delta_{k}}{v^{2k}}\\]\nwhere a=\\frac{2^{1/3}}{3^{2/3}\\Gamma(\\frac3})=.4473073184,  3!a=.747590021 b=\\frac{2^{1/3}}{3^{1/3}\\Gamma(\\frac3})=.41085 01939, 3!b=.71161 34101\na_{0}=1,  a_{1}=-\\frac{1}{225}=-.004,  a_{2}=.00069 3735 . . . ,   a_{3}=-.00035 38 . . . ,   b_{0}=\\frac{1}{70}=.01428 57143 . . . ,  \\beta_{1}=-\\frac{1213}{10 23750}=-.00118 48596 . . ,  \\beta_{2}=.00043 78 . . ,  \\beta_{3}=-.00038 . . . ,  \\gamma_{0}=1, \\gamma_{1}=\\frac{23}{3150}=.00730 15873 . . . ,  \\gamma_{2}=-.00093 7300 . . . ,  \\gamma_{3}=.00044 40 . . . . ,  \\delta_{0}=\\frac{1}{5}, \\delta_{1}=-\\frac{947}{3 46500}=-.00273 30447 . . . ,  \\delta_{2}=.00060 47 . . . ,  \\delta_{3}=-.00038 . . .  Uniform Asymptotic Expansions\nThese are more powerful than the previous expansions of this section, save for 9.3.31 and 9.3.32, but their coefficients are more complicated. They reduce to 9.3.31 and 9.3.32 when the argument equals the order.\n9.3.35  J_{\\nu}(\\nu z) \\sim \\left(\\frac{4\\xi}{1-z^{2}}\\right)^{1/4}(\\frac{\\mathrm{Ai}\\,(\\nu^{2/3}\\xi)}{v^{1/3}})\\sum\\limits_{k=0}^{\\infty}\\frac{a_{k}(\\xi)}{v^{2k}}\\]\n9.3.36  Y_{\\nu}(\\nu z) \\sim -\\left(\\frac{4\\xi}{1-z^{2}}\\right)^{1/4}(\\frac{\\mathrm{Bi}\\,(\\nu^{2/3}\\xi)}{v^{1/3}})\\sum\\limits_{k=0}^{\\infty}\\frac{a_{k}(\\xi)}{v^{2k}}\\]\n9.3.37  H_{\\nu}^{(1)}(\\nu z) \\sim 2e^{-\\nu/3}(\\frac{4\\xi}{1-z^{2}})^{1/4}(\\frac{\\mathrm{Ai}\\,(\\nu^{2/3}\\xi)}{v^{1/3}})\\sum\\limits_{k=0}^{\\infty}\\frac{a_{k}(\\xi)}\n\n",
+      "gen_seconds": 106.09193992614746,
+      "failed": false,
+      "char_f1": 0.6164244677255829,
+      "exact_match": 0.0,
+      "formula_weight": 12
+    },
+    {
+      "page_id": "as_p0369",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.369)\nUniform Expansions of the Derivatives\nWith the conditions of the preceding subsection\n\n[MISSING_PAGE_POST]\n\n",
+      "gen_seconds": 105.86468625068665,
+      "failed": true,
+      "failure_reason": "nougat-missing-page-marker"
+    },
+    {
+      "page_id": "as_p0376",
+      "region_type": "formula",
+      "pred_text": "376  BESSEL FUNCTIONS OF INTEGER ORDER\nIntegral Representations\n9.6.16  \\Gamma_{0}(z)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{\\pm x\\cos\\theta}d\\theta=\\frac{1}{\\pi}\\int_{0}^{\\pi}\\cosh(z\\cos\\theta)d\\theta\\]\n9.6.17  \\Gamma_{0}(x)=-\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{\\pm z\\cos\\theta}\\left\\{\\gamma+\\ln(2z\\sin^2\\theta)\\right\\}d\\theta\\]\n9.6.18  \\Gamma_{r}(z)=\\frac{(\\frac{3}{2})^{\\nu}}{\\pi^{1}\\Gamma(\\nu+\\frac{1}{2})}\\int_{0}^{\\pi}e^{\\pm z\\cos\\theta}\\sin^2\\theta\\;d\\theta\\]\n9.6.19  \\Gamma_{n}(z)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{z\\cos\\theta}\\cos\\left(n\\theta\\right)d\\theta\\]\n9.6.20  \\Gamma_{r}(z)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{z\\cos\\theta}\\cos\\left(\\eta\\theta\\right)d\\theta\\]\n9.6.21  \\Gamma_{n}(z)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{z\\cos\\theta}\\cos\\left(\\eta\\theta\\right)d\\theta\\]\n9.6.22  \\Gamma_{r}(x)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{z\\cos\\theta}\\cos\\left(\\eta\\phi\\right)d\\theta\\]\n9.6.23  \\Gamma_{r}(x)=\\frac{\\pi^{1}(\\frac{3}{2})^{\\nu}}{\\Gamma(\\nu+\\frac{1}{2})}\\int_{0}^{\\infty}e^{-z\\cosh\\nu\\tanh^2\\eta\\tau}\\,dt\\]\n9.6.25  \\Gamma_{r}(x)=\\frac{\\pi^{1}(\\frac{3}{2})^{\\nu}}{\\Gamma(\\nu+\\frac{1}{2})}\\int_{1}^{\\infty}e^{-\\omega t(t^2-1)^{\\nu-1}}\\,dt\\]\n9.6.24  \\Gamma_{r}(z)=\\int_{0}^{\\infty}e^{-\\epsilon\\cdot\\cosh\\left(\\eta t\\right)dt}\\,(\\exp\\,i\\,\\tan\\",
+      "gen_seconds": 105.9642653465271,
+      "failed": false,
+      "char_f1": 0.41101606509493016,
+      "exact_match": 0.0,
+      "formula_weight": 25
+    },
+    {
+      "page_id": "as_p0379",
+      "region_type": "formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.8.5)\n9.8.5  0<x\\leq2  |\\epsilon|<1\\times10^{-8}\n9.8.6  2\\times x<\\infty\nx^{2}\\epsilon^{2}K_{0}(x)=1.25331414+.23498619(2/x)  -.03655620(2/x)^{2}+.01504268(2/x)^{3}  -.00780353(2/x)^{4}+.00325614(2/x)^{5}  -.00068245(2/x)^{6}+\\epsilon\nFor expansions of \\(I_{0}(x), K_{0}(x), I_{1}(x), and K_{1}(x) in series of Chebyshev polynomials for the ranges 0\\leq x\\leq8 and 0\\leq8/x\\leq1, see [9.37].\n\n### Kelvin Functions\n9.9. Definitions and Properties\nIn this and the following section r is real, x is real and non-negative, and n is again a positive integer or zero.\n\nDefinitions\n9.9.1 ber, x+i bei, x=J_{v}(ze^{x\\pi i/k})=e^{v\\pi}J_{v}(ze^{-v\\pi i/k})=e^{\\xi v\\pi i}I_{v}(ze^{-3\\pi i/k})\n9.9.2 ker, x+i kei, x=e^{-1\\pi i}K_{v}(ze^{v\\pi i/k})=\\xi^{-v\\pi i}H_{v}^{(2)}(ze^{-v\\pi i/k})\nWhen r=0, suffices are usually suppressed.\n\nDefinitions\n9.9.1 ber, x+i bei, x=J_{v}(ze^{x\\pi i/k})=e^{v\\pi}J_{v}(ze^{-v\\pi i/k})\n=e^{\\xi v\\pi i}I_{v}(ze^{v\\pi i/k})=e^{\\xi v\\pi i}I_{v}(ze^{-3\\pi i/k})\n9.9.2 ker, x+i kei, x=e^{-1\\pi i}K_{v}(ze^{v\\pi i/k})=\\xi^{-v\\pi i}H_{v}^{(2)}(ze^{-v\\pi i/k})\nWhen r=0, suffices are usually suppressed.\n\nDifferential Equations\n9.9.3\nx^{2}v^{\\eta^{\\prime}\\prime}+2v\\eta^{\\prime}-(ix^{2}+v^{2})w=0, w=ber, x+i bei, x, ber\\to x+i bei\\to x, ker, x+i kei, x, ker, x+i kei, x\n9.9.4\nx^{4}v^{\\eta^{\\eta}\\epsilon}+2x^{3}v^{\\eta^{\\prime}\\prime}-(1+2v^{2})(x^{4}w^{\\prime}-xw^{\\prime})+(v^{\\prime}-4v^{2}+x^{4})w=0, w=ber, x+x, bei\\to x, ker\\to x, kei\\to x\nReletions Between Solutions\n9.9.5 ber\\to x=cos(v\\pi) ber, x+sin(v\\pi) bei, x\n+(2/\\pi) sin(v\\pi) kei, x=-sin(v\\pi) ber, x+cos(v\\pi) bei, x\n+(2/\\pi) sin(v\\pi) kei, x\n+(2/\\pi) sin(v\\pi) kei, x\nker\\to x=cos(v\\pi) ker, x-sin(v\\pi) kei, x\nkei\\to x=sin(v\\pi) ker, x+cos(v\\pi) kei, x\n9.9.7 ber\\to x=-sin(v\\pi) ber, x+cos(v\\pi) kei, x\n9.9.8 ker\\to x=-sin(v\\pi) kei, x\nKer\\to x=cos(v\\pi) ker, x-sin(v\\pi) kei, x\nkei\\to x=sin(v\\pi) ker, x+cos(v\\pi) kei, x\n9.9.7 ber\\to x=(-)^{n} ber\\to x, kei\\to x=(-)^{n} bei, x=(-)^{n} bei, x\n9.9.8 ker\\to x=(-)^{n} kera\\to x, kei\\to x=(-)^{n} kei, x\nAscealing Series\n9.9.9 ber, x=(1\\over x^{n})\\sum_{k=0}^{\\infty}{\\cos\\{({3\\over k}+1\\over k!\\Gamma(v+k+1)\\})({1\\over k}x^{2})^{k}}\nbei, x=(1\\over x^{2})^{r}\\sum_{k=0}^{\\infty}{\\sin\\{({3\\over k}+1\\over k!\\Gamma(v+k+1)\\})({1\\over k}x^{2})^{k}}\n9.9.10 ber x=1-{({1\\over k}x^{2})^{2}\\over(2!)^{2}}+{(3x^{",
+      "gen_seconds": 105.98442387580872,
+      "failed": false,
+      "char_f1": 0.5502978160158836,
+      "exact_match": 0.0,
+      "formula_weight": 15
+    },
+    {
+      "page_id": "as_p0383",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.10.25)\nAsymptotic Expansions of Modulus and Phase\nWhen n is fixed, x is large and m=4x^2\n9.10.21\nM_{\\gamma}=\\frac{e^{\\pi i\\eta^2}}{\\sqrt{2\\pi x}}\\left(1-\\frac{\\mu-1}{8\\sqrt2}\\frac{1}{x}+\\frac{(\\mu-1)^2}{256}\\frac{1}{x^2}\\right.\\qquad\\qquad\\qquad\\qquad\\qquad\\",
+      "gen_seconds": 104.91095161437988,
+      "failed": false,
+      "char_f1": 0.12101000476417344,
+      "exact_match": 0.0,
+      "formula_weight": 16
+    },
+    {
+      "page_id": "as_p0385",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.11.8)\n9.11.9  0<x\\leq8  | | | x+i kei x=f(x)(1+e_{i}) f(x)=\\sqrt{\\frac{\\pi}{2x}}\\exp\\left[-\\frac{1+i}{\\sqrt2}x+\\theta(-x)\\right] ",
+      "gen_seconds": 104.66400718688965,
+      "failed": false,
+      "char_f1": 0.10906355772846935,
+      "exact_match": 0.0,
+      "formula_weight": 7
+    },
+    {
+      "page_id": "as_p0423",
+      "region_type": "table",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER\nColumns: \\(x,y,\\ldots,\\) (full-cell): \\(x=1.0,\\ldots,1.5,1.0)\nSample rows: \\(x_{1},\\ldots,x_{n}\\); \\(x_{2},\\ldots,x_{n}\\); \\(x_{3},\\ldots,x_{4}\\); \\(x_{5},\\ldots,x_{6}\\); \\(x_{7},\\ldots,x_{8}\\); \\(x_{9},\\ldots,x_{10}\\); \\(x_{10},\\ldots,x_{11}\\); \\(x_{12},\\ldots,x_{13}\\); \\(x_{14},\\ldots,x_{15}\\); \\(x_{16},\\ldots,x_{17}\\); \\(x_{17},\\ldots,x_{18}\\); \\(x_{18},\\ldots,x_{19}\\); \\(x_{20},\\ldots,x_{21}\\); \\(x_{21},\\ldots,x_{22}\\); \\(x_{22},\\ldots,x_{23}\\); \\(x_{23},\\ldots,x_{24}\\); \\(x_{24},\\ldots,x_{25}\\); \\(x_{25},\\ldots,x_{26}\\); \\(x_{27},\\ldots,x_{28}\\); \\(x_{29},\\ldots,x_{27}\\); \\(x_{30},\\ldots,x_{24}\\); \\(x_{31},\\ldots,x_{32}\\); \\(x_{32},\\ldots,x_{33}\\); \\(x_{4},\\ldots,x_{25}\\); \\(x_{34},\\ldots,x_{35}\\); \\(x_{4},\\ldots,x_{26}\\); \\(x_{5},\\ldots,x_{27}\\); \\(x_{6},\\ldots,x_{10}\\); \\(x_{7},\\ldots,x_{11}\\); \\(x_{8},\\ldots,x_{12}\\); \\(x_{9},\\ldots,x_{28}\\); \\(x_{10},\\ldots,x_{13}\\); \\(x_{11},\\ldots,x_{12}\\); \\(x_{12},\\ldots,x_{29}\\); \\(x_{20},\\ldots,x_{21}\\); \\(x_{33},\\ldots,x_{34}\\); \\(x_{4},\\ldots,x_{25}\\); \\(x_{5},\\ldots,x_{26}\\); \\(x_{6},\\ldots,x_{10}\\); \\(x_{7},\\ldots,x_{12}\\); \\(x_{8},\\ldots,x_{13}\\); \\(x_{9},\\ldots,x_{27}\\); \\(x_{10},\\ldots,x_{11}\\); \\(x_{12},\\ldots,x_{29}\\); \\(x_{13},\\ldots,x_{14}\\); \\(x_{15},\\ldots,x_{16}\\); \\(x_{17},\\ldots,x_{18}\\); \\(x_{19},\\ldots,x_{20}\\); \\(x_{21},\\ldots,x_{23}\\); \\(x_{34},\\ldots,x_{35}\\); \\(x_{4},\\ldots,x_{25}\\); \\(x_{5},\\ldots,x_{26}\\); \\(x_{6},\\ldots,x_{11}\\); \\(x_{7},\\ldots,x_{12}\\); \\(x_{8},\\ldots,x_{13}\\); \\(x_{9},\\ldots,x_{27}\\); \\(x_{10},\\ldots,x_{11}\\); \\(x_{12},\\ldots,x_{28}\\); \\(x_{13},\\ldots,x_{14}\\); \\(x_{15},\\ldots,x_{16}\\); \\(x_{17},\\ldots,x_{18}\\); \\(x_{19},\\ldots,x_{20}\\); \\(x_{20},\\ldots,x_{21}\\); \\(x_{21},\\ldots,x_{22}\\); \\(x_{23},\\ldots,x_{24}\\); \\(x_{24},\\ldots,x_{25}\\); \\(x_{35},\\ldots,x_{26}\\); \\(x_{4},\\ldots,x_{27}\\); \\(x_{5},\\",
+      "gen_seconds": 105.79324054718018,
+      "failed": false,
+      "char_f1": 0.21856978085351786,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0600",
+      "region_type": "formula",
+      "pred_text": "ELLIPTIC INTEGRALS (p.1)\nColumns: \\min(n;\\varphi\\backslash a)\nColumns: \\min(n;\\varphi)\nColumns: \\min(n;\\varphi)\n",
+      "gen_seconds": 104.32859587669373,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0619",
+      "region_type": "table",
+      "pred_text": "ELIPPICK INTEGRALS (p.619)\nJACobian ZETA FUNCTION Z(\\varphi,\\alpha)\nTable 17.7\nK(\\omega)Z(v,\\omega)=K(\\omega)E(v)-E(\\omega)F(v)\\]\n10  0.02080  0.03450  0.04580  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.0501777  0.0501777  0.0501777  0.0501777  0.0501777  0.0501777  0.0501777  0.05017777  0.05017777  0.05017777  0.050177777  0.050177777  0.0501777777  0.05017777777  0.05017777777777  0.05017",
+      "gen_seconds": 104.58706831932068,
+      "failed": false,
+      "char_f1": 0.26854460093896715,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0621",
+      "region_type": "table",
+      "pred_text": "ELIPPITE MATERIALS (p.621)\nSample rows: \\ x = 0.000000, 0.\n\n",
+      "gen_seconds": 105.30941033363342,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0622",
+      "region_type": "table",
+      "pred_text": "ELIPPICK INTEGRALS (p.18)\nTable 17.8   HEUMAN'S Lambda FUNCTION A_0(v|\\alpha)\n[full page, printed in the table below]\n[full page, printed in the table below]\n[full page, printed in the table above]\n[full page, printed in the table below]\n[full page, printed in the table below]\n[full page, printed in the table below]\n",
+      "gen_seconds": 105.58481049537659,
+      "failed": false,
+      "char_f1": 0.19845944721341185,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0625",
+      "region_type": "table",
+      "pred_text": "ELLIPTIC INTEGRALS (p.625)\nELLIPTIC INTEGRAL OF THE THIRD KIND n(n;ph)  Table 17.9\n\\eta(n;ph)=\\int_0^\\infty(1-n\\sin^2\\theta)^{-1}[1-\\sin^2\\alpha\\sin^2\\theta]^{-\\frac13}d\\theta\nn  a\\backslash\\varphi 0^\\circ 15^\\circ 30^\\circ 45^\\circ 60^\\circ 75^\\circ 90^\\circ\n0,0 0^\\circ 0.26180 0.52360 0.78540 1.04720 1.30900 1.57080\n\n[MISSING_PAGE_POST]\n\n",
+      "gen_seconds": 105.53906083106995,
+      "failed": true,
+      "failure_reason": "nougat-missing-page-marker"
+    }
+  ],
+  "hybrid": [
+    {
+      "page_id": "as_p0243",
+      "region_type": "table",
+      "pred_text": "",
+      "gen_seconds": 1.4066696166992188e-05,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0255",
+      "region_type": "prose+formula",
+      "pred_text": "6. Gamma Function and Related Functions\nMathematical Properties\n6.1. Gamma (Factorial) Function\nEuler's Integral\n6.1.1 \\Gamma(z)=\\int_{0}^{\\infty}t^{-1}e^{-t}dt (Rx>0)\n=k^{\\prime}\\int_{0}^{\\infty}t^{-1}e^{-ht}dt (Rx>0,Rx>0)\nEuler's Formula\n6.1.2 \\Gamma(z)=\\lim_{n\\to\\infty}\\frac{n!n^{s}}{z(z+1)\\dots(z+n)} (z\\neq0,-1,-2,\\dots)\nEuler's Infinite Product\n6.1.3 \\Gamma(z)=ze^{nz}\\sum_{n=1}^{\\infty}\\left[(1+\\tfrac{x}{m})e^{-tz/n}\\right] (|z|<\\infty)\n\\gamma=\\lim_{m\\to\\infty}\\left[1+\\tfrac{1}{2}+\\tfrac{1}{3}+\\tfrac{1}{4}+\\dots+\\tfrac{1}{m}-\\ln m\\right]=.57721\\;56649\\dots\ng is known as Euler's constant and is given to 25 decimal places in chapter 1. \\Gamma(z) is single valued and analytic over the entire complex plane, save for the points z=-n(n=0, 1, 2, \\dots) where it possesses simple poles with residue (-1)\"/n!. Its reciprocal 1/\\Gamma(z) is an entire function possessing simple zeros at the points z=-n(n=0, 1, 2, \\dots).\nHankel's Contour Integral\n6.1.4 \\Gamma(z)=\\frac{i}{2\\pi}\\int_{C}(-t)^{-ie}e^{-it}dt (|z|<\\infty)\nThe path of integration C starts at +\\infty on the real axis, circles the origin in the counterclockwise direction and returns to the starting point.\nFactorial and \\Pi Notations\n6.1.5 \\Pi(z)=z!=\\Gamma(z+1) Integer Values\n6.1.6 \\Gamma(n+1)=1:2:3\\dots(n-1)n=n!\n6.1.7 \\lim_{z\\to n}\\frac{1}{\\Gamma(-z)}=0=\\frac{1}{(-n-1)!} (n=0, 1, 2, \\dots)\nFractional Values\n6.1.8 \\Gamma(1)=2\\int_{0}^{\\infty}e^{-t^{2}}dt=x^{1}=1.77245\\;38509\\dots=(-\\tfrac{1}{2})!\nFigure 6.1. Gamma function.\n\\Gamma(3/2)=\\tfrac{3}{2}\\pi^{\\tfrac{3}{2}}=88622\\;69254\\dots=(\\tfrac{1}{2})!\n6.1.10 \\Gamma(n+\\tfrac{1}{4})=\\tfrac{1:5:9:13\\dots(4n-3)}{4^{n}}\\Gamma(\\tfrac{1}{2})=3.62560\\;99082\\dots\n6.1.11 \\Gamma(n+\\tfrac{1}{3})=\\tfrac{1:4:7:10\\dots(3n-2)}{3^{n}}\\Gamma(\\tfrac{1}{3})\n\\Gamma(3)=2.67893\\;85347\\dots\n6.1.12 \\Gamma(n+\\tfrac{1}{2})=\\tfrac{1:3:5:7\\dots(2n-1)}{2^{n}}\\Gamma(\\tfrac{1}{2})\n6.1.13 \\Gamma(n+\\tfrac{1}{3})=\\tfrac{2:5:8:11\\dots(3n-1)}{3^{n}}\\Gamma(\\tfrac{3}{3})\n\\Gamma(\\tfrac{3}{2})=1.35411\\;79394\\dots\n6.1.14 \\Gamma(n+\\tfrac{1}{4})=\\tfrac{3:7:11:15\\dots(4n-1)}{4^{n}}\\Gamma(\\tfrac{3}{2})\n\\Gamma(\\tfrac{3}{2})=1.22541\\;67024\\;.\\dots",
+      "gen_seconds": 4.9114227294921875e-05,
+      "failed": false,
+      "char_f1": 0.9063001145475373,
+      "exact_match": 0.0,
+      "formula_weight": 14
+    },
+    {
+      "page_id": "as_p0360",
+      "region_type": "formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.1.7)\n360   BESSEL FUNCTIONS OF INTEGER ORDER  Limiting Forms for Small Arguments (p.1.1)  When p is fixed and z\\to0  9.1.7   J_{v}(z)\\sim(\\tfrac12x)^{-\\eta}/\\Gamma(v+1)  (v\\neq-1,-2,-3,\\ldots)  9.1.8   Y_{v}(z)\\sim-iH_{v}^{(1)}(z)\\sim iH_{v}^{(2)}(z)\\sim(2/\\pi)\\ln z  9.1.9   Y_{v}(z)\\sim-iH_{v}^{(1)}(z)\\sim iH_{v}^{(2)}(z)\\sim-(1/\\pi)\\Gamma(v)(\\tfrac12x)^{-\\eta}  (\\Re v>0)  (\\Re v>0)  .  Ascending Series  9.1.10   J_{v}(z)=(\\tfrac12x)^{-\\eta}\\sum_{k=0}^{\\infty}\\frac{(-\\tfrac12x^2)^k}{k!\\Gamma(v+k+1)}  9.1.11   Y_{n}(z)=-\\tfrac12x^{-n}\\sum_{k=0}^{\\infty}\\tfrac{n-1}{k!}(\\tfrac12x^2)^k\n(\\Re v>0)\n",
+      "gen_seconds": 1.8596649169921875e-05,
+      "failed": false,
+      "char_f1": 0.4160919540229885,
+      "exact_match": 0.0,
+      "formula_weight": 13
+    },
+    {
+      "page_id": "as_p0229",
+      "region_type": "formula",
+      "pred_text": "EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.229)\nSymmetry Relation\n5.1.10   E_{\\alpha}(z)=\\tfrac{1}{n}\\tfrac{x^{n}}{nn!}\\",
+      "gen_seconds": 0.02277684211730957,
+      "failed": false,
+      "char_f1": 0.1443553362122147,
+      "exact_match": 0.0,
+      "formula_weight": 16
+    },
+    {
+      "page_id": "as_p0230",
+      "region_type": "formula",
+      "pred_text": "230  EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS  Derivatives\n5.1.26  \\frac{dE_{n}(z)}{dz}=-E_{n-1}(z)  (n=1,2,3,\\ldots)\n5.1.27\nd^{\\infty}\\frac{d^{\\infty}}{dz^{\\infty}}[e^{x}E_{1}(z)]=\\frac{d^{n-1}}{dz^{n-1}}[e^{x}E_{1}(z)]+\\frac{(-1)^{\\infty}(n-1)!}{z^{n}}  (n=1,2,3,\\ldots)\nDefinite and Indefinite Integrals\n(For more extensive tables of integrals see [5.3], [5.6], [5.11], [5.12], [5.13]. For integrals involving \\(E_{n}(x)\\) see [5.9].)\n5.1.28  \\int_{0}^{\\infty}\\frac{e^{-at}}{b+t}dt=e^{\\infty}E_{1}(ab)\n5.1.29\n\\int_{0}^{\\infty}\\frac{e^{at}}{b+t}dtt=e^{-to}E_{1}(-iab) \\quad(a>0,b>0)\n5.1.30\n\\int_{0}^{\\infty}\\frac{t-ib}{t^{2}+b^{2}}e^{ia}dt=e^{\\infty}E_{1}(ab) \\quad(a>0,b>0)\n5.1.31\n\\int_{0}^{\\infty}\\frac{t+ib}{t^{2}+b^{2}}e^{ia}dt=e^{-ab}(-Ei(ab)+i\\pi)\n(a>0,b>0)\n5.1.32  \\int_{0}^{\\infty}\\frac{e^{-at}-e^{-bt}}{t}dt=\\ln\\frac{b}{a}\n5.1.33  \\int_{0}^{\\infty}E_{1}^{2}(t)dt=2\\ln2\n5.1.34\n\\int_{0}^{\\infty}e^{-at}E_{n}(t)dt=\\]\n5.1.36\n\\int_{0}^{\\infty}\\frac{e^{-at}\\sin bt}{t}dt=\\arctan\\frac{b}{a}+\\mathcal{I}E_{1}(a+ib)\n(a>0,b real)\n5.1.37\n\\int_{0}^{1}\\frac{e^{at}(1-\\cos bt)}{t}dt=\\frac{1}{2}\\ln\\left(1+\\frac{b^{2}}{a^{2}}\\right)+\\mathrm{Ei}(a)\n+\\mathcal{R}E_{1}(-a+ib) \\quad(a>0,b real)\n5.1.38\n\\int_{0}^{1}\\frac{e^{-at}(1-\\cos bt)}{t}dt=\\frac{1}{2}\\ln\\left(1+\\frac{b^{2}}{a^{2}}\\right)-E_{1}(a)\n+\\mathcal{R}E_{1}(a+ib) \\quad(a>0,b real)\n5.1.39\n\\int_{0}^{z}\\frac{1-e^{-t}}{t}dt=E_{1}(z)+\\ln z+\\gamma\n5.1.40\n\\int_{0}^{z}\\frac{e^{t}-1}{t}dt=\\mathrm{Ei}(x)-\\ln x-\\gamma \\quad(x>0)\n5.1.41\n\\int e^{tx}\\frac{e^{tx}}{a^{2}+x^{2}}dx=\\frac{i}{2a}[e^{-a}E_{1}(-a-ix)-e^{a}E_{1}(a-iz)]+\\mathrm{const}.\\]\n5.1.42\n\\int e^{tx}\\frac{ze^{tx}}{a^{2}+x^{2}}dx=-\\frac{1}{2}[e^{-a}E_{1}(-a-iz)+e^{a}E_{1}(a-iz)]+\\mathrm{const}.\\]\n5.1.43\n\\int e^{z}\\frac{e^{z}}{a^{2}+x^{2}}dx=-\\frac{1}{a}\\mathcal{I}(e^{iz}E_{1}(-z+i\\omega))+\\mathrm{const}.\\quad(a>0)\n5.1.44\n\\int e^{zt}\\frac{ze^{t}}{a^{2}+x^{2}}dx=-\\mathcal{R}(e^{az}E_{1}(-x+ia))+\\mathrm{ const}.\\quad(a>0)\n5.1.34\n\\int e^{z}\\frac{e^{z}}{a^{2}+x^{2}}dx=-\\mathcal{R}(e^{az}E_{1}(-x+ia))+\\mathrm{ const}.\\quad(a>0)\n5.1.35\n\\int_{0}^{\\infty}e^{-at}E_{n}(t)dt=\\]\n5.1.36\n\\int_{0}^{1",
+      "gen_seconds": 1.71661376953125e-05,
+      "failed": false,
+      "char_f1": 0.8196794300979519,
+      "exact_match": 0.041666666666666664,
+      "formula_weight": 24
+    },
+    {
+      "page_id": "as_p0232",
+      "region_type": "formula",
+      "pred_text": "EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.232)\n5.2.5   si(z)=Si(z)-\\frac{\\pi}{2}\nAuxiliary Functions\n5.2.6    f(z)=Ci(z)\\sin z-si(z)\\cos z\n5.2.7    g(z)=-Ci(z)\\cos z-si(z)\\sin z\nSince and Cosine Integrals in Terms of Auxiliary Functions\n5.2.8   Si(z)=\\frac{\\pi}{2}-f(z)\\cos z-g(z)\\sin z\n5.2.9   Ci(z)=f(z)\\sin z-g(z)\\cos z\nIntegral Representations\n5.2.10   si(z)=-\\int_{0}^{\\frac{\\pi}{2}}e^{-z\\cos t}\\cos(z\\sin t)dt\n5.2.11   Ci(z)+E_{1}(z)=\\int_{0}^{\\frac{\\pi}{2}}e^{-z\\cos t}\\sin(z\\sin t)dt\n5.2.12   f(z)=\\int_{0}^{\\infty}\\frac{\\sin t}{t+z}dt=\\int_{0}^{\\infty}\\frac{e^{-zt}}{t^{2}+1}dt\\quad(\\Re z>0)\n5.2.13   g(z)=\\int_{0}^{\\infty}\\frac{\\cos t}{t+z}dt=\\int_{0}^{\\infty}\\frac{te^{-zt}}{t^{2}+1}dt\\quad(\\Re z>0)\n5.2.14   Si(z)=\\sum_{n=0}^{\\infty}\\frac{\\sin t}{(2n+1)(2n+1)!}\n5.2.16   Ci(z)=\\gamma+\\ln z+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n}z^{2n}}{2n(2n)!}\n5.2.17   Shi(z)=\\sum_{n=0}^{\\infty}\\frac{z^{2n+1}}{(2n+1)(2n+1)!}\n5.2.18   Chi(z)=\\gamma+\\ln z+\\sum_{n=1}^{\\infty}\\frac{z^{2n}}{2n(2n)!}\nSymmetry Relations\n5.2.19   Si(z)=\\frac{\\pi}{2}-f(z)\\cos z-g(z)\\sin z\n5.2.20\nCi(z)=f(z)\\sin z-g(z)\\cos z\nCi(z)=\\frac{\\Gamma(z)}{\\Gamma(z)}-i\\pi\\quad(0<\\arg z<\\pi)\nCi(z)=\\overline{\\Gamma(z)}\\]\nRelation to Exponential Integral\n5.2.21   Si(z)=\\frac{1}{2i}[E_{1}(iz)-E_{1}(-iz)]+\\frac{\\pi}{2}\\quad(|\\arg z|<\\frac{\\pi}{2})\n5.2.22   Si(ix)=\\frac{i}{2}[Ei(x)+E_{1}(x)]\\quad(x>0)\n5.2.23   Ci(z)=-\\frac{1}{2}[E_{1}(iz)+E_{1}(-iz)]\\quad(|\\arg z|<\\frac{\\pi}{2})\n5.2.24   Ci(ix)=\\frac{1}{2}[Ei(x)-E_{1}(x)]+\\frac{\\pi}{2}\\quad(x>0)\nVolume at Infinity\n5.2.25   i_{x+\\infty}Si(x)=\\frac{\\pi}{2}\nIntegrals\n(For more extensive tables of integrals see [5.3], [5.6], [5.11], [5.12], [5.13].)\n5.2.26   i_{x}^{-\\infty}\\frac{\\sin t}{t}dt=-\\mathrm{si}(z)\\quad(|\\arg z|<\\pi)\n5.2.27   i_{x}^{-\\infty}\\frac{\\cos t}{t}dt=-\\mathrm{Ci}(z)\\quad(|\\arg z|<\\pi)\n5.2.28   i_{0}^{-\\infty}e^{-at}\\mathrm{Ci}(t)dt=\\frac{1}{2a}\\ln(1+a^{2})\\quad(\\Re a>0)\n5.2.29   i_{0}^{-\\infty}e^{-at}\\mathrm{si}(t)dt=-\\frac{1}{a}\\arctan a\\quad(\\Re a>0)\n5.2.30   i_{0}^{-\\infty}\\cos t\\mathrm{Ci}(t)dt=\\int_{0}^{\\infty}\\sin t\\mathrm{si}(t)dt=-\\frac{\\pi}{4}",
+      "gen_seconds": 0.02343153953552246,
+      "failed": false,
+      "char_f1": 0.8680109990834097,
+      "exact_match": 0.0,
+      "formula_weight": 26
+    },
+    {
+      "page_id": "as_p0234",
+      "region_type": "table",
+      "pred_text": "284  EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS\nn   E_{n}(1.275)  E_{n}(1.275)\n1  1.1408099  6.0430168  2  0.09989884  7.0374307\n3  0.0760303  8.031009\n4  0.0608307  9.0296534  5.0504679\nInterpolating directly in Table 5.4 for n=10 we get E_{10}(1.275)=.0268470 as a check.\nSample 5. Compute E_{n}(x), n=1(1)N_ to 5S for x=10, N=10.\nII, as in this example, z is appreciably larger than five and N\\leq x, then the recurrence relation 5.1.14 may be safely used in decreasing order of n([5.5]). From Table 5.5 for x^{n+1}=.1 we get (x^{\\pm 1}0)e^E_{10}(x)=1.02436 so that E_{10}(10)=2.32529\\times\\times 10^{-6}. Using this as the initial value we obtain column (2).\nFrom Table 5.2 we get xe^E_{1}(x)=.915633 so that E_{1}(10)=4.15697\\times 10^{-6} as a check. Forward recurrence starting with E_{1}(10)=4.1570\\times 10^{-6} yields the values in column (1). The underlined figures are in error.\nTable 5.2 we get xe^E_{1}(x)=.915633 so that E_{1}(10)=4.15697\\times 10^{-6} as a check. Forward recurrence starting with E_{1}(10)=4.1570\\times 10^{-6} yields the values in column (1). The underlined figures are in error.\nTable 5.2 we get xe^E_{1}(x)=.915633 so that E_{1}(10)=4.15697\\times 10^{-6} as a check. Forward recurrence starting with E_{1}(10)=4.1570\\times 10^{-6} yields the values in column (1). The underlined figures are in error.\nTable 5.3. Compute E_{n}(x), n=1(1)N, to 5S for x=12.3, N=20.\nIf N is appreciably larger than x, and x appreciably larger than five, then the recurrence relation 5.1.14 should be used in the backward direction to generate E_{n}(x) for n<n_0, and in the forward direction to generate E_{n}(x) for n>n_0, where n_0=\\langle x\\rangle.\nFrom 5.1.52, with n_0=12, x=12.3, we have\nUsing the recurrence relation 5.1.14, as indicated, we get\nn  10^E_{n}(12.3) 10^E_{n}(12.3) \\pi\n12  .191038  .191038  12  11  .199213  .183498  13  10  .208098  .176516  14  9  .217793  .170042  15  8  .228406  .164015  16  7  240073  .158397  17  6  .252951  .153144  18  5  .267234  .148226  19  4.283155  .143608  20  3.300998  22  3.321117  11  343953  10076676  20  12.321117  11  343953  110  12.2573  2.32533  10076676  20  12.191038  .191038  12.19213  1.183498  13.183498  13.16516  14.16015  16.16416  16.16416  17.240073  158.240073  16.158397  17.240073  16.153144  18.24226  19.153144  18.24226  19.153155  1.143608  20.153155  1.143608  20.153160  21.343953  11.",
+      "gen_seconds": 0.027739286422729492,
+      "failed": false,
+      "char_f1": 0.6386430678466076,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0242",
+      "region_type": "table",
+      "pred_text": "EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.242)\nTable S1: SNE, COSINE AND EXPONENTIAL INTEGRALS\nColumns: x |\\sin(x) |\\quad xe^{-x}\\mathrm{Fi}(x) |\\quad xe^{x}E_{1}(x)\nSample rows: 0.75881 |\\quad x^{-1}\\mathrm{Fi}(x)/\\mathrm{G}=0.7581 |\\quad x^{-1}\\mathrm{G}=0.7593 |\\quad x^{-1}\\mathrm{G}=0.6000 |\\quad x^{-1}\\mathrm{G}=0.8000 |\\quad x^{-1}\\mathrm{G}=0.8000 |\\quad x^{-1}\\mathrm{G}=0.9000 |\\quad x^{-1}\\mathrm{G}=0.8000 |\\quad x^{-1}\\mathrm{G}=0.9000 |\\quad x^{-1}\\mathrm{G}=0.8000 |\\quad x^{-1}\\mathrm{G}=0.",
+      "gen_seconds": 0.027860641479492188,
+      "failed": false,
+      "char_f1": 0.47542627883650956,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0247",
+      "region_type": "table",
+      "pred_text": "EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS (p.247)\nRows: x | E_{2}(x)  | E_{3}(x)  | E_{4}(x)  | E_{50}(x)\n1.00  0.14849\\,55  0.10969\\,20  0.08606\\,25  0.03639\\,40  0.01834\\,60  1.01\n1.00  0.14631\\,99  0.10821\\,79  0.08497\\,30  0.03503\\,40  0.01340\\,60  1.01070\\,50  1.009\n1.00  0.14849\\,55  0.10969\\,20  0.08606\\,25  0.03693\\,40  0.01834\\,60  1.01034\\,60  1.01084\\,60  1.01070\\,50  1.0090\n1.00  0.12828\\,11  0.09588\\,0  0.07580\\,0  0.03257\\,84  0.01651\\,37  1.01207\\,50  1.0090\n1.00  0.12828\\,11  0.09588\\,0  0.07580\\,0  0.03257\\,84  0.01651\\,37  1.01207\\,50  1.0090\n1.00  0.14849\\,55  0.10969\\,20  0.08606\\,25  0.03693\\,40  0.01834\\,60  1.01034\\,60  1.01084\\,60  1.01070\\,50  1.0090\n1.00  0.12828\\,11  0.09588\\,0  0.07580\\,0  0.03257\\,84  0.01651\\,37  1.01207\\,50  1.0090\n1.00  0.12828\\,11  0.09588\\,0  0.07580\\,0  0.03257\\,84  0.01651\\,37  1.01207\\,50  1.0090\n1.00  0.12828\\,11  0.09588\\,0  0.07580\\,0  0.03257\\,84  0.01651\\,37  1.01207\\,50  1.0090\n1.00  0.12828\\,11  0.09588\\,0  0.07580\\,0  0.03257\\,84  0.01651\\,37  1.01207\\,50  1.00906\\,20  1.01409\\,50  1.\n\n",
+      "gen_seconds": 1.33514404296875e-05,
+      "failed": false,
+      "char_f1": 0.43567482241515393,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0256",
+      "region_type": "formula",
+      "pred_text": "(p.256)  Gamma FUNCTION AND RELATED FUNCTIONS (p.1.15)  \\Gamma(x+1)=z\\Gamma(z)=z|=z(z-1)!\n6.1.16  \\Gamma(n+z)=(n-1+z)(n-2+z)\\cdot\\cdot\\cdot(1+z)\\Gamma(1+z)\\qquad=(n-1+z)!\n\\qquad=(n-1+z)(n-2+z)\\cdot\\cdot\\cdot(1+z)z!\n\\qquad",
+      "gen_seconds": 0.025843143463134766,
+      "failed": false,
+      "char_f1": 0.14443084455324356,
+      "exact_match": 0.0,
+      "formula_weight": 20
+    },
+    {
+      "page_id": "as_p0258",
+      "region_type": "formula",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS (p.258)\nContinued Fraction\n6.1.48\nln \\Gamma(z)+z-(z-\\frac{1}{2})\\ln z-\\frac{1}{2}\\ln (2\\pi)\n=\\frac{a_0}{z+z+\\frac{a_1}{2}+\\frac{a_3}{z+z+\\frac{a_4}{2}+\\dots}}\\quad(\\mathcal{R}z>0)\\]\na_0=\\frac112', a_1=\\frac130', a_2=\\frac5320', a_3=\\frac1955', a_4=\\frac229999\na_4=\\frac{22999}{22737^7}\\, a_5=\\frac{29944523}{1973314^2}\\, a_6=\\frac{109535241009}{48264275462}\nWallis' Formula'\n6.1.49\n2\\pi\\int_0^{\\pi/2}\\!\\binom{\\sin}{\\cos}^2\\pi\\,dx=\\frac{1\\cdot3\\cdot5\\dots(2n-1)}{2\\cdot4\\cdot6\\cdot\\dots(2n)}=\\frac{(2n)!}{2^{2n}(n!!)^2=\\frac1}{2^{2n}(n)}=\\frac{\\Gamma(n+\\frac1)}{\\pi\\Gamma(n+1)}\\sim\\frac1\\pi^{2}n[1-\\frac18n+\\frac1128n^2-\\dots]\nSome Definite Integrals\n6.1.50\nIn \\Gamma(z)=\\int_0^{n}\\!\\!\\Big{[}(z-1)\\ e^{-t}-\\frac{e^{-t}-e^{-tt}}{1-e^{-t}}\\Big{]}\\fracdt{t}\\quad(\\mathcal{R}z>0)\\qquad=(z-\\frac{1}{2})\\ln\\,z-z+\\frac{1}{2}\\ln\\,2\\pi",
+      "gen_seconds": 1.9788742065429688e-05,
+      "failed": false,
+      "char_f1": 0.6047032474804032,
+      "exact_match": 0.0,
+      "formula_weight": 11
+    },
+    {
+      "page_id": "as_p0259",
+      "region_type": "formula",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS 259\nRefection Formula\n6.3.7 \\psi(1-z)=\\psi(z)+\\pi\\cot\\pi z\nDuplication Formula\n6.3.8 \\psi(2z)=\\psi(z)+\\tfrac{1}{2}\\psi(z+\\tfrac{1}{2})+\\ln2\\]\nPsi Function in the Complex Plane\n6.3.9 \\psi(z)=\\overline{\\psi(z)}\n6.3.10 \\mathcal{R}\\psi(iy)=\\mathcal{R}\\psi(-iy)=\\mathcal{R}\\psi(1+iy)=\\mathcal{R}\\psi(1-iy)\n6.3.11 \\mathcal{I}\\psi(iy)=\\tfrac{1}{2}y^{-1}+\\tfrac{1}{2}\\pi\\coth\\pi y\n6.3.12 \\mathcal{I}\\psi(\\tfrac{1}{2}+iy)=\\tfrac{1}{2}\\pi\\tanh\\pi y\n6.3.13 \\mathcal{I}\\psi(1+iy)=-\\tfrac{1}{2y}+\\tfrac{1}{2}\\pi\\coth\\pi y\n=y\\sum_{n=1}^{\\infty}(n^2+y^2)^{-1}\nSeries Expansions\n6.3.14 \\psi(1+z)=-\\gamma+\\sum_{n=2}^{\\infty}(-1)^n^k(n)z^{n-1} (|z|<1)\n6.3.15 \\psi(1+z)=\\tfrac{1}{2}z^{-1}-\\tfrac{1}{2}\\pi\\cot\\pi z-(1-z^2)^{-1}+1-\\gamma\n-\\sum_{n=1}^{\\infty}[\\zeta(2n+1)-1]z^{2n} (|z|<2)\n6.3.16 \\psi(1+z)=-\\gamma+\\sum_{n=1}^{\\infty}\\frac{z}{n(n+z)} (z\\neq-1,-2,-3,\\dots)\n6.3.17 \\mathcal{R}\\psi(1+iy)=1-\\gamma-\\frac{1}{1+y^2} +\\tfrac{\\infty}{\\alpha=1}(-1)^{n+1}[\\zeta(2n+1)-1]y^{2n} (|y|<2)\n=-\\gamma+y^2\\sum_{n=1}^{\\infty}n^{-1}(n^2+y^2)^{-1} (-\\infty<y<\\infty)\nAsymptotic Formulas\n6.3.18 \\psi(z)\\sim\\ln z-\\frac{1}{2z}-\\sum_{n=1}^{\\infty}\\frac{B_{2n}}{2nz^{2n}} =\\ln z-\\frac{1}{12z^2}+\\frac{1}{120z^4}-\\frac{1}{252z^6}+\\dots (z\\to\\infty\\text{ in }|\\arg z|<\\pi)\n716:454 O-64-18\n6.3.19 \\mathcal{R}\\psi(1+iy)\\sim\\ln y+\\sum_{n=1}^{\\infty}\\frac{(-1)^{n-1}B_{2n}}{2ny^{2n}} =\\ln y+\\frac{1}{12y^2}+\\frac{1}{120y^4}+\\frac{1}{252y^6}+\\dots (y\\to\\infty)\nExtrema'of\\Gamma(x)--Zeros of\\psi(x)\n\\Gamma^{\\prime}(x_{n})=\\psi(x_{n})=0\n\\begin{array}{c} x_{n} \\\\ \\quad 0 +1.462 \\\\ 1 -0.504 \\\\ 2 -1.573 \\\\ 3 -2.611 \\\\ 4 -3.635 \\\\ 5 -4.653 \\\\ 6 -5.667 \\\\ 7 -6.678 \\\\ \\quad x_{0}=1.46163 \\\\ \\quad 1449 68362 \\\\ \\quad 1\\cap(x_{0})=.88560 \\\\ \\quad 10889 \\\\ \\quad x_{a}=-n+(\\ln n)^{-1}+o[(\\ln n)^{-2}]\\end{array}\\]\n6.3.20 \\chi(2n)=-n+(\\ln n)^{-1}+o[(\\ln n)^{-2}]\n6.3.21 \\psi(z)=\\int_{0}^{\\infty}\\!",
+      "gen_seconds": 0.02313375473022461,
+      "failed": false,
+      "char_f1": 0.8013105546454482,
+      "exact_match": 0.125,
+      "formula_weight": 16
+    },
+    {
+      "page_id": "as_p0260",
+      "region_type": "formula",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS (p.260)\n6.4. Polygamma Functions7\nFootnote 7: \\psi^{(n)}(z)=\\frac{d^{n}}{dz^{n}}\\psi(z)=\\frac{d^{n+1}}{dz^{n+1}}\\ln\\Gamma(z)\\quad(n=1,2,3,\\dots)\\quad(\\Re z>0)\\quad(\\Re z=1,\\Im\\nu)\\quad",
+      "gen_seconds": 7.152557373046875e-05,
+      "failed": false,
+      "char_f1": 0.14365881032547698,
+      "exact_match": 0.0,
+      "formula_weight": 18
+    },
+    {
+      "page_id": "as_p0262",
+      "region_type": "formula",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS (p.6.5.5)\nProbability Integral of the x^x-Distribution\nP(\\chi^2|v)=\\frac{1}{2^3r\\Gamma(\\frac20",
+      "gen_seconds": 0.023534536361694336,
+      "failed": false,
+      "char_f1": 0.10724070450097847,
+      "exact_match": 0.0,
+      "formula_weight": 25
+    },
+    {
+      "page_id": "as_p0280",
+      "region_type": "table",
+      "pred_text": "(p.89) (p.10.4625)\nSample rows: 280  GAMMA FUNCTION AND RELATED FUNCTIONS (p.10.00000)\nTable 6.7  Gamma FUNCTION FOR COMPLEX ARGUMENTS\nColumns: x-1.3  y \\beta^{n}\\ln\\Gamma(x) \\times \\ln\\Gamma(x)  y \\cdot n\\Gamma(x)\n0.0  -0.10817\\,48095\\,08  0.00000\\,00000\\,000  5.0  -5.64541\\,41381\\,33  4.24823\\,90621\\,27  0.11383\\,61080\\,85  -0.01671\\,99199\\,34  5.1  -5.78673\\,2355\\,37  4.41126\\,31957\\,95  0.2  -0.13070\\,20636\\,90  -0.03225\\,84033\\,35  5.2  -5.99235\\,3506\\,66  4.57620\\,80623\\,67  0.3  -0.15843\\,10081\\,49  -0.04549\\,95427\\,81  5.3  -6.07026\\,64370\\,51  4.74303\\,39118\\,17  0.4  -0.19649\\,12771\\,78  -0.05544\\,82296\\,06  5.4  -6.21246\\,02140\\,03  4.91171\\,10050\\,12  0.5  -0.24420\\,93680\\,45  -0.06126\\,78750\\,55  5.5  -6.35492\\,47217\\,66  5.08220\\,495017\\,7  0.6  -0.30082\\,24343\\,022  5.6  -0.49765\\,03035\\,97  5.25480\\,39432\\,947  7.5  -0.35539\\,3002\\,19  -0.58055\\,2852\\,04  5.7  -6.04605\\,03713\\,722  5.42851\\,2533\\,50  0.8  -0.43754\\,53407\\,27  2.04820\\,73993\\,35  5.8  -6.78384\\,88113\\,55  5.60427\\,51684\\,12  0.9  -0.51609\\,74046\\,40  -0.03257\\,37450\\,94  5.9  -6.92730\\,48028\\,21  5.78172\\,89485\\,09  1.0  -0.60048\\,45154\\,05  -0.01107\\,52190\\,48  6.0  -7.07098\\,80742\\,52  5.56805\\,07788\\,45  1.1  -0.69006\\,62005\\,12  +0.01627\\,9089\\,044  6.1  -7.24819\\,1193\\,682  6.1  4.1616\\,37268\\,552  1.2  -0.78427\\,3001\\,02  0.49491\\,0710\\,23  6.2  -7.35907\\,1087\\,13  6.32397\\,1016  4.3  -0.88259\\,13601\\,03  0.08822\\,2550\\,96  6.3  -7.50322\\,90147\\,58  6.50795\\,94158\\,99  1.4  -0.98458\\,61322\\,90  0.13255\\,01649\\,50  6.4  -7.64785\\,05510\\,98  6.69349\\,23498\\,81  1.5  -1.08986\\,7615\\,16  0.18223\\,70479\\,17  6.5  -7.79256\\,5565\\,27  6.88056\\,6176\\,38  1.6  -1.18989\\,86148\\,04  0.23711\\,0920\\,47  6.6  -7.93746\\,8205\\,2587\\,24",
+      "gen_seconds": 0.028786182403564453,
+      "failed": false,
+      "char_f1": 0.33834168057874237,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0281",
+      "region_type": "table",
+      "pred_text": "GAMMA FUNCTION AND RELATED FUNCTIONS (p.281)\nSAMUDA FUNCTION FOR COMPLEX ARGUMENTS\nTable 6.7\nx-1.4\ny \\sigma^{1}\\ln\\Gamma(x) \\cdot\\sum\\ln\\Gamma(x)  y \\varkappa\\ln\\Gamma(x) \\varkappa\\ln\\Gamma(x)\n0.0  -0.11961\\,29141\\,72 0.00000\\,0000\\,0000\\,000\n5.0  -5.48319\\,80511\\,50\n4.38842\\,59888\\,87\n0.1  -0.12473\\,21357\\,76\n0.2  -0.14000\\,01552\\,88  -0.01097\\,08056\\,6  5.2  -5.76231\\,08530\\,59\n4.71703\\,54898\\,14\n0.3  -0.16515\\,59551\\,89  -0.01405\\,93840\\,03\n5.3  -5.90236\\,26637\\,68\n4.88416\\,59286\\,80\n0.4  -0.11135\\,39012\\,79\n0.5  -0.2437\\,34438\\,09\n0.01124\\,72025\\,18\n5.5  -6.18339\\,73257\\,62\n5.22391\\,06968\\,84\n0.6  -0.29530\\,16779\\,62\n0.0007\\,16796\\,22\n0.0000\\,0000\\,0000\\,000\n0.5  -5.48319\\,80511\\,50\n0.0007\\,16796\\,20\n0.0000\\,0000\\,0000\\,000\n0.5  -5.48319\\,80511\\,50\n0.0007\\,16796\\,20\n0.0000\\,0000\\,0000\\,000\n0.5  -5.48319\\,80511\\,50\n0.0007\\,16796\\,20\n0.0000\\,0000\\,0000\\,000\n",
+      "gen_seconds": 1.3828277587890625e-05,
+      "failed": false,
+      "char_f1": 0.4481927710843373,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0298",
+      "region_type": "formula",
+      "pred_text": "ERROR FUNCTION AND FRESHEL INTEGRALS (p.1.15)\nColumns: \\frac{1}{x+\\sqrt{x^{2}+2}}{x-1}=\\frac{1}{x+\\sqrt{x^{2}+\\frac{4}{\\pi}}}\\quad x=0.\\]\n\n(For other inequalities see [7.2].)\nColumns: \\frac{1}{\\sqrt{\\pi}}\\int_{-\\infty}^{\\infty}e^{-t^2}dt=\\frac{1}{z-\\sqrt{x^{2}+\\frac{4}{\\pi}}}\\quad x=\\frac{1}{\\sqrt{x}}\\int_{-\\infty}^{\\infty}e^{-t^2}dt=\\",
+      "gen_seconds": 0.0257415771484375,
+      "failed": false,
+      "char_f1": 0.2643478260869565,
+      "exact_match": 0.0,
+      "formula_weight": 11
+    },
+    {
+      "page_id": "as_p0301",
+      "region_type": "formula",
+      "pred_text": "ERROR FUNCTION AND FRESNEL INTEGRALS (301)\n7.3.8   S(x)=S_{1}\\left(x\\sqrt{\\frac{\\pi}{2}}\\right)=S_{2}\\left(\\frac{\\pi}{2}\\,x^{2}\\right)\n7.3.9   C(z)=\\frac{1}{2}+f(z)\\sin\\left(\\frac{\\pi}{2}\\,z^{2}\\right)-g(z)\\;\\cos\\left(\\frac{\\pi}{2}\\,z^{2}\\right)\n7.3.10   S(z)=\\frac{1}{2}-f(z)\\;\\cos\\left(\\frac{\\pi}{2}\\,z^{2}\\right)-g(z)\\;\\sin\\left(\\frac{\\pi}{2}\\,z^{2}\\right)\nSeries Expansions\n7.3.11   C(z)=\\sum\\limits_{n=0}^{\\infty}\\frac{(-1)^{n}(\\pi/2)^{2n}}{(2n)!(4n+1)}\\,z^{4n+1}\\]\n7.3.12   C(z)=\\cos\\left(\\frac{\\pi}{2}\\,z^{2}\\right)\\sum\\limits_{n=0}^{\\infty}\\frac{(-1)^{n}\\pi^{2n}}{1\\cdot3\\ldots(4n+1)}\\,z^{4n+1}\\]\n7.3.13   S(z)=\\sum\\limits_{n=0}^{\\infty}\\frac{(-1)^{n}(\\pi/2)^{2n+1}}{(2n+1)!(4n+3)}\\,z^{4n+3}\n7.3.14   S(z)=\\sum\\limits_{n=0}^{\\infty}\\frac{(-1)^{n}(\\pi/2)^{2n+1}}{(2n+1)!(4n+3)}\\,z^{4n+3}\n7.3.15   C(z)=J_{1/2}(z)+J_{3/2}(z)+J_{9/2}(z)+\\ldots\n7.3.16   S_{2}(z)=J_{3/2}(z)+J_{7/2}(z)+J_{11/2}(z)+\\ldots\nFor Bessel functions J_{n+1/2}(z) see chapter 10.\nCommentary Relations\n7.3.17   C(-z)=-C(z), S(-z)=-S(z)\n7.3.18   C(iz)=iC(z), S(iz)=-iS(z)\n7.3.19   C(z)=C(z), S(z)=-\\overline{S(z)}\nValue at Infinity\n7.3.20   C(x)=\\frac{1}{2}, S(x)=\\frac{1}{2} (x\\to\\infty)\nDerivatives\n7.3.21  \\frac{df(x)}{dx}=-\\pi xg(x), d\\,g(x)=\\pi xf(x)-1\nRelation to Error Function (see 7.1.1, 7.1.3)\n7.3.22   C(z)+iS(z)=\\frac{1+i}{2}\\operatorname{erf}\\left[\\frac{\\sqrt{\\pi}}{2}\\,(1-i)z\\right]\n=\\frac{1+i}{2}\\left\\{1-e^{\\frac{\\pi}{2}x^{4}}w\\left[\\frac{\\sqrt{\\pi}}{2}\\,(1+i)z\\right]\\right\\}\n7.3.23   g(x)=\\mathcal{R}\\left\\{\\frac{1+i}{2}w\\left[\\frac{\\sqrt{\\pi}}{2}\\,(1+i)x\\right]\\right\\}\n7.3.24   f(x)=\\mathcal{F}\\left\\{\\frac{1+i}{2}w\\left[\\frac{\\sqrt{\\pi}}{2}\\,(1+i)x\\right]\\right\\}\nRelation to Confluent Hypergeometric Function (see chapter 13)\n7.3.25   C(z)+iS(z)=zM\\left(\\frac{1}{2},\\frac{3}{2};i\\frac{\\pi}{2}\\,z^{2}\\right)\n=ze^{\\frac{\\pi}{2}z^{4}}M\\left(1,\\frac{3}{2}-i\\frac{\\pi}{2}\\,z^{2}\\right)\nRelation to Spherical Bessel Functions (see chapter 10)\n7.3.26   C_{2}(z)=\\frac{1}{2}\\int_{0}^{z}J_{-1}(t)dt, S_{2}(z)=\\frac{1}{2}\\int_{0}^{z}J_{1}(t)dt",
+      "gen_seconds": 1.4781951904296875e-05,
+      "failed": false,
+      "char_f1": 0.8871554862194487,
+      "exact_match": 0.15789473684210525,
+      "formula_weight": 19
+    },
+    {
+      "page_id": "as_p0302",
+      "region_type": "formula",
+      "pred_text": "ERROR FUNCTION AND FRENNEL INTEGRALS\n302  ExtroR FUNCTION AND FRENNEL INTEGRALS\nAsymptotic Expansions\n7.3.27  \\pi zf(z)\\sim1+\\sum_{m=1}^{n}(-1)^{m}\\frac{1\\cdot3\\ldots(4m-1)}{(\\pi^{2})^{2n+1}} \\left(z\\to\\infty,|\\arg z|<\\tfrac{\\pi}{2}\\right)\\quad \\int_{0}^{\\infty}e^{-a(\\pi^{2}+20t+\\omega)dt}=\\frac{1}{2}\\sqrt{\\frac{\\pi}{a}}e^{\\frac{y^{2}-a\\phi}{4}}\\text{erfc}\\,\\frac{b}{\\sqrt{a}}\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}-\\frac{b}{2}}dt=\\frac{1}{2}\\sqrt{\\frac{\\pi}{a}}e^{-2\\sqrt{\\alpha}}\\quad (\\mathcal{D}a>0,\\mathcal{D}b>0)\\quad \\int_{0}^{\\infty}t^{2n}e^{-a^{2}dt}=\\frac{1\\cdot3\\ldots(2n-1)}{2^{n+1}a^{n}}\\sqrt{\\frac{\\pi}{a}}\\quad =\\frac{\\Gamma(n+\\tfrac{1}{2})}{2a^{n+1}}\\quad (\\mathcal{R}a>0;n=0,1,2,\\ldots)\\quad \\int_{0}^{\\infty}t^{2n+1}e^{-a^{2}dt}-\\frac{n!}{2a^{n+1}}\\quad (\\mathcal{R}a>0;n=0,1,2,\\ldots)\\quad \\int_{0}^{\\infty}e^{-a^{2}}\\cos\\,(2xt)dt=\\frac{1}{2}\\sqrt{\\frac{\\pi}{a}}e^{-\\frac{x^{2}}{a}}\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}t}\\sin\\,(2xt)dt=\\frac{1}{\\sqrt{a}}e^{-a^{2}/a}\\int_{0}^{\\infty}e^{-a^{2}t}dt\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}t}\\cos\\,(2xt)dt=\\frac{1}{2}\\sqrt{\\frac{\\pi}{a}}e^{-\\frac{x^{2}}{a}}\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}}\\sin\\,(2xt)dt=\\frac{1}{\\sqrt{a}}e^{-a^{2}t/a}\\int_{0}^{\\infty}e^{-a^{2}t}\\sin\\,(2xt)dt=\\frac{1}{\\sqrt{a}}e^{-a^{2}t/a}\\int_{0}^{\\infty}e^{-a^{2}t}dt\\quad (\\mathcal{D}a>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}t}dt=\\frac{1}{\\sqrt{a}}e^{a^{2}t}\\mathrm{erfc}\\,\\sqrt{a}z\\quad (\\mathcal{D}a>0,\\mathcal{D}z>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}dt}\\int_{0}^{\\infty}\\frac{e^{-a^{2}}dt}{t+z}=e^{-a^{2}}\\left[\\sqrt{\\pi}\\int_{0}^{\\infty}e^{-\\pi^{2}}dt-\\frac{1}{2}\\operatorname{Ei}(az^{2})\\right]\\quad (\\mathcal{D}a>0,x>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}dt}\\int_{0}^{\\infty}e^{-a^{2}dt}=\\frac{\\pi}{2x}e^{a^{2}}\\mathrm{erfc}\\,\\sqrt{a}x\\quad (a>0,x>0)\\quad \\int_{0}^{\\infty}e^{-a^{2}}\\mathrm{erfc}\\,\\sqrt{a}x\\quad (a>0,x>0)\\quad \\int_{0}^{",
+      "gen_seconds": 1.7642974853515625e-05,
+      "failed": false,
+      "char_f1": 0.5485762144053601,
+      "exact_match": 0.0,
+      "formula_weight": 20
+    },
+    {
+      "page_id": "as_p0303",
+      "region_type": "formula",
+      "pred_text": "ERROR FUNCTION AND FRESNEL INTEGRALS (303)\n7.4.14  \\int_{-\\infty}^{\\infty}\\frac{(x-t)e^{-t^2}dt}{(x-t)^2+y^2}=\\pi|\\mathcal{F}w(x+iy) (x real,y>0)\n7.4.15  \\int_{0}^{\\infty}\\frac{[t^2-(x^2-y^2)]e^{-t^2}dt}{t^4-2(x^2-y^2)t^2+(x^2+y^2)^2}=\\pi 2\\mathcal{R}\\frac{w(x+iy)}{y-ix}\n(x real,y>0)\n7.4.16  \\int_{0}^{\\infty}\\frac{2xye^{-t^2}dt}{t^4-2(x^2-y^2)t^2+(x^2+y^2)2}=\\pi 2\\mathcal{F}\\frac{w(x+iy)}{y-ix}\n(x real,y>0)\n7.4.17  \\int_{0}^{\\infty}e^{-st}\\text{ erf bt dt=\\frac1{a}e^{ab^2}\\text{ erfc}\\frac{a}{2b}\n(\\mathcal{R}a>0,|\\arg b|<\\frac{\\pi}{4})\n7.4.18  \\int_{0}^{\\infty}\\sin(2at)\\text{ erfc bt dt=\\frac1{2a}[1-e^{-au/b^2}](a>0,\\mathcal{R}b>0)\n7.4.19  \\int_{0}^{\\infty}e^{-st}\\text{ erf}\\sqrt{bt}dt=\\frac1{a}\\sqrt{\\fracb{a+b}} (\\mathcal{R}(a+b)>0)\n7.4.20  \\int_{0}^{\\infty}e^{-st}\\text{ erfc}\\sqrt{\\fracb{t}dt=\\frac1{a}e^{-2/\\cosh} (\\mathcal{R}a>0,\\mathcal{R}b>0)\n7.4.21  \\int_{0}^{\\infty}e^{(a-bt)}\\text{ erfc}\\left(\\sqrt{at}+\\sqrt{\\fracc{t}}\\right)dt=\\frace^{-2/(\\sqrtc+\\sqrtbc)}{\\sqrtb(\\sqrta+\\sqrtb)}\n(\\mathcal{R}b>0,\\mathcal{R}c>0)\n7.4.22  \\int_{0}^{\\infty}e^{-st}\\cos(t^2)dt=\\sqrt{\\frac\\pi}2\\Big{\\{}\\Big{[}\\frac1{2}-S\\Big{(}\\frac2{a}\\sqrt{2}\\Big{)}\\Big{]}\\cos(\\fraca^2)\n(\\mathcal{R}a>0)\n7.4.23  \\int_{0}^{\\infty}e^{-at}\\sin(t^2)dt=\\sqrt{\\frac\\pi}2\\Big{\\{}\\Big{[}\\frac1{2}-C\\Big{(}\\frac2{a}\\sqrt{2}\\Big{)}\\Big{]}\\cos(\\fraca^2)\n(\\mathcal{R}a>0)\n7.4.25  \\int_{0}^{\\infty}e^{-at}\\sin(t^2)dt=\\pi\\sqrt{\\frac2}2\\Big{\\{}\\Big{[}\\frac1{2}-C\\Big{(}\\frac2{a}\\sqrt{2}\\Big{)}\\Big{]}\\cos(\\fraca^2)\n(\\mathcal{R}a>0)\n7.4.26  \\int_{0}^{\\infty}e^{-at}\\frac{\\sin(t^2)}{t^2+b^2}=\\frac{\\pi}{b}\\sqrt2\\Big{\\{}\\Big{[}\\frac1{2}-C\\Big{(}\\sqrt{\\frac2ab}{\\pi}\\Big{)}\\Big{]}\\cos(ab)\n(\\mathcal{R}a>0,\\mathcal{R}b>0)\n(\\mathcal{R}a>0)\n(\\mathcal{R}a>0)\n",
+      "gen_seconds": 1.5974044799804688e-05,
+      "failed": false,
+      "char_f1": 0.6478214665249734,
+      "exact_match": 0.0,
+      "formula_weight": 19
+    },
+    {
+      "page_id": "as_p0312",
+      "region_type": "table",
+      "pred_text": "SH12  ERROR FUNCTION AND FRESNEL INTEGRALS\nTable 7.2  DERIVATIVE OF THE ERROR FUNCTION\nx  \\frac{2}{\\sqrt{\\pi}} e^{-x^{2}}   x  \\frac{2}{\\sqrt{\\pi}} e^{-x^",
+      "gen_seconds": 1.239776611328125e-05,
+      "failed": false,
+      "char_f1": 0.35395683453237403,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0318",
+      "region_type": "table",
+      "pred_text": "318  ERROR FUNCTION AND FRESNEL INTEGRALS\nTable 7.4  REPEATED INTEGRALS OF THE ERROR FUNCTION\nx   n=5   n=6   n=10   n=11\n0,0  1.00000  1.00000  1.00000  0.100000  0.100000  0.100000  0.1\\cdot(-1)7.13475  (-1)6.93283  (-1)6.28971  (-1)6.15727  0.2\\cdot(-1)5.03608  (-1)4.75548  (-1)3.91490  (-1)3.75188  0.3\\cdot(-1)3.51572  (-1)3.22652  (-1)2.41089  (-1)2.26201  0.4\\cdot(-1)2.42671  (-1)2.16478  (-1)1.46861  (-1)1.34906  0.5\\cdot(-1)1.65569  (-1)1.43588  (-2)8.84744  (-2)7.95749  0.6\\cdot(-1)1.11630  (-2)9.41309  (-2)5.27007  (-2)4.64127  0.7\\cdot(-2)4.45288  (-2)6.09742  (-2)3.13023  (-2)2.67626  0.8\\cdot(-2)2.89212  0.9\\cdot(-2)3.17704  (-2)2.46567  (-2)1.03859  (-3)8.59126  1.0\\cdot(-2)2.03707  (-2)1.53850  (-3)5.90062  (-3)4.78106  1.1\\cdot(-2)1.28901  (-3)9.47623  (-3)3.31130  (-3)2.62835  1.2\\cdot(-3)8.04765  (-3)5.76033  (-3)1.83510  (-3)1.42708  1.3\\cdot(-3)4.95614  (-3)3.45489  (-3)1.00415  (-4)7.65146  1.4\\cdot(-3)3.01008  (-3)2.04411  (-4)5.42413  (-4)4.05030  1.5\\cdot(-3)1.80252  (-3)1.19278  (-4)2.89186  (-4)2.21641  1.6\\cdot(-3)1.06403  (-4)6.86307  (-4)1.52145  (-4)1.09146  1.7\\cdot(-4)6.19032  (-4)3.89303  (-5)7.89765  (-5)5.55435  1.8\\cdot(-4)3.54870  (-4)2.17663  (-5)4.04407  (-5)2.78871  1.9\\cdot(-4)2.00419  (-4)1.19930  (-5)2.04244  (-5)1.38116  2.0\\cdot(-4)1.11492  (-5)6.51088  (-5)1.01722  (-6)6.74666  2.1\\cdot(-6)6.74666  2.2\\cdot(-5)5.29497  (-5)3.29497  (-5)1.83427  (-6)2.41807  (-6)1.15378  (-7)7.22681  2.4\\cdot(-6)9.14767  (-6)4.86044  (-7)5.42553  (-7)3.33519  2.5\\cdot(-6)4.70641  (-6)2.44418  (-7)2.51397  (-7)1.51693  2.6\\cdot(-6)2.38278  (-7)1.20988  (-7)1.14766  (-8)6.79864  2.7\\cdot(-6)1.18695  (-7)5.89495  (-8)5.16116  (-8)3.00212  2.8\\cdot(-7)5.81672  2.82592  2.9\\cdot(-7)2.80391  (-7)1.33308  (-9)9.97266  (-9)5.59577  3.0\\cdot(-7)1.32935  (-",
+      "gen_seconds": 0.027408599853515625,
+      "failed": false,
+      "char_f1": 0.45824255628177196,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0324",
+      "region_type": "table",
+      "pred_text": "ERROR FUNCTION AND FRESHEL INTEGRALS (p.86)\nTable 7.8   Auxiliary FUNCTIONS (x^{-1})  \\nu^{-1}=2  f(x)=f_2(u)  \\delta x^{2}>  \\omega w^{-1}=0.0  0.53661\n0.90  0.51566 20156 17741 0.25946 14023 65674 0.04986 0.6317 93636 1.2\n0.88  0.49299 85571 12455 0.25512 0.90512 80091 0.04754 3984725 1.2\n0.84  0.44919 89113 82565 0.24618 0.29944 4393 0.04299 0.5078 69390 1.2\n0.82  0.42806 31349 39962 0.24157 92449 31459 0.04075 92107 68723 1.2\n0.80  0.40743 66543 15252 0.23689 0.07256 57089 0.03856 203423 27312 1.2\n0.78  0.38731 96955 0.34836 0.23217 47126 4632 0.03604 19045 75704 1.3\n0.70  0.3194 36884 60115 0.21214 23821 60229 0.02819 347473 19381 1.3\n0.68  0.29437 29827 42770 0.20693 57789 65521 0.02626 48498 36510 1.3\n0.66  0.2731 15728 43138 0.20164 60404 80635 0.0243918 1.3588 2.4\n0.62  0.2471 66404 98098 0.19082 37987 55563 0.02082 45674 44482 2.4\n0.60  0.22918 31180 52329 0.18529 53067 79209 0.01913 61240 35536 2.4\n0.60  0.22918 31180 52329 0.18529 53067 79209 0.01913 61240 35536 2.4\n0.58  0.21415 88914 24454 0.17969 17083 86674 0.017514 24357 2.5\n0.56  0.19664 39690 14474 0.17047 50760 20.01596 22.58470 2.55669 3.02803 250.14703 2.5\n0.54  0.18563 83256 22387 0.16827 0.2799 47273 0.01488 30.2683 2.58694 1.3586 3.60963 2.64570 2.6696 3.60967 2.6\n0.52  0.17214 19864 48194 0.16245 86594 19322 0.01307 70253 60097 2.26\n0.50  0.51915 49430 913895 0.15656 43216 36302 0.01174 6599 24659 24659 2.6\n0.48  0.14667 79554 49410 15.16059 0597 56320 0.01495 152015 2.7\n0.46  0.13470 87438 32980 0.14862 28400 0.000317 72046 0.000317 72046 0.000317 72046 0.000317 72047 2.5\n0.44  0.12324 95879 30364 0.13862 28400 0.00",
+      "gen_seconds": 0.026987314224243164,
+      "failed": false,
+      "char_f1": 0.4203461674320028,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0361",
+      "region_type": "formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.1.27)\nCol_{\\nu-1}(z)+\\Col_{\\nu+1}(z)=\\frac{2v}{z}\\Col_{\\nu-1}(z)-\\frac{v}{z}\\Col_{\\nu}(z)\nCol_{\\nu}(z)=-\\Col_{\\nu+1}(z)+\\frac{v}{z}\\Col_{\\nu}(z)\nCol_{\\nu}(z)=\\frac{1}{2^3}\\Col_{\\nu-k+1}(z)-\\dots+(-\\lambda^{k}\\Col_{\\nu+k}(z))\n(k=0,1,2,\\dots)\nRecurrence Relations for Cross-Products\n9.1.32   p_{\\nu}=J_{\\nu}(a)Y_{\\nu}(b)-J_{\\nu}(b)Y_{\\nu}(a)\nq_{\\nu}=J_{\\nu}(a)Y_{\\nu}(b)-J_{\\nu}^{\\prime}(b)Y_{\\nu}(a)\nr_{\\nu+1}=\\frac{1}{2}\\Col_{\\nu-k+1}(z)-\\dots+(-\\lambda^{k}\\Col_{\\nu+k}(z))\n(k=0,1,2,\\dots)\nRecurrence Relations for Cross-Products\n9.1.33   p_{\\nu}=J_{\\nu}(a)Y_{\\nu}(b)-J_{\\nu}(b)Y_{\\nu}(a)\nq_{\\nu}=J_{\\nu}(a)Y_{\\nu}(b)-J_{\\nu}^{\\prime}(b)Y_{\\nu}(a)\nr_{\\nu}=J_{\\nu}^{\\prime}(a)Y_{\\nu}(b)-J_{\\nu}(b)Y_{\\nu}^{\\prime}(a)\nthen\n9.1.33   p_{\\nu+1}-p_{\\nu-1}=-\\frac{2v}{a}q_{\\nu}-\\frac{2v}{b}r_{\\nu}\nq_{\\nu+1}+r_{\\nu}=\\frac{v}{a}p_{\\nu}-\\frac{v+1}{b}p_{\\nu+1}\nr_{\\nu+1}+q_{\\nu}=\\frac{v}{b}p_{\\nu}-\\frac{v+1}{a}p_{\\nu+1}\nq_{\\nu}=\\frac{1}{2}p_{\\nu+1}+\\frac{1}{2}p_{\\nu-1}-\\frac{v^2}{ab}p_{\\nu}\nq_{\\nu+1}+r_{\\nu}=\\frac{v}{a}p_{\\nu}-\\frac{v+1}{b}p_{\\nu+1}\nr_{\\nu+1}+q_{\\nu}=\\frac{v}{b}p_{\\nu}-\\frac{v+1}{a}p_{\\nu+1}\nq_{\\nu}=\\frac{1}{2}p_{\\nu+1}+\\frac{1}{2}p_{\\nu-1}-\\frac{v^2}{ab}p_{\\nu}\nq_{\\nu}=\\frac{4}{x^{\\alpha}ab}\nq_{\\nu}=\\frac{4}{x^{\\alpha}ab}\n",
+      "gen_seconds": 2.5272369384765625e-05,
+      "failed": false,
+      "char_f1": 0.45209903121636164,
+      "exact_match": 0.0,
+      "formula_weight": 22
+    },
+    {
+      "page_id": "as_p0362",
+      "region_type": "formula",
+      "pred_text": "362  BESSEL FUNCTIONS OF INTEGER ORDER\nOther Differential Equations\n9.1.49   w^{\\prime}+(\\sqrt[2^{n-1/2}]{z^{2}})w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.50   w^{\\prime}+(\\sqrt[2^{n}]{4z^{2}})w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.51   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{1/\\nu}(2\\lambda z^{1/p})\n9.1.52   w^{\\prime}+\\frac{2v-1}{z}w^{\\prime}+\\lambda^{2}w=0,  w=z^{2}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.53   z^{2}w^{\\prime}+(1-2p)zu^{\\prime}+(\\lambda^{2}q^{2}z^{1}+p^{2}-r^{2}q^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.54   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda e^{\\alpha})\n9.1.55   z^{2}(z^{2}-r^{2})w^{\\prime}+z(z^{2}-3v^{2})w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.56   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda e^{\\alpha})\n9.1.55   z^{2}(z^{2}-r^{2})w^{\\prime}+z(z^{2}-3v^{2})w^{\\prime}+(\\lambda^{2}q^{2}z^{1}+p^{2}-r^{2}q^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.56   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda e^{\\alpha})\n9.1.55   z^{2}(z^{2}-r^{2})w^{\\prime}+z(z^{2}-3v^{2})w^{\\prime}+(\\lambda^{2}e^{2}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.56   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.50   w^{\\prime}+(\\lambda^{2}e^{2z}-4v^{2})w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda x^{\\alpha})\n9.1.51   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.52   w^{\\prime}+\\lambda^{2}w^{\\prime}+\\lambda^{2}w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.53   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.54   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.55   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.52   w^{\\prime}+\\lambda^{2}w^{\\prime}+\\lambda^{2}w=0,  w=z^{\\alpha}\\mathcal{C}_{\\nu}(\\lambda z)\n9.1.53   w^{\\prime}+\\lambda^{2}z^{p-n}w=0,  w=z^{1}\\mathcal{C}_{\\nu}(\\lambda z^{\\alpha})\n9.1.54   w^{\\prime}+(\\lambda^{2}e^{2z}-r^{2})w=0,  w=z^{\\alpha}\\mathcal{C}",
+      "gen_seconds": 0.025592803955078125,
+      "failed": false,
+      "char_f1": 0.4628041309294591,
+      "exact_match": 0.0,
+      "formula_weight": 23
+    },
+    {
+      "page_id": "as_p0366",
+      "region_type": "prose+formula",
+      "pred_text": "366  BESSEL FUNCTIONS OF INTEGER ORDER\n9.3.3   J_{\\nu}(v\\sec\\beta)= \\sqrt{2/(\\pi\\nu\\tan\\beta)}\\,\\{\\cos\\,(\\nu\\tan\\beta-\\nu\\beta-\\frac{1}{4}\\pi)+O(\\nu^{-1})\\} \\sqrt{2/(\\pi\\nu\\tan\\beta)}\\,\\{\\cos\\,(\\nu\\tan\\beta-\\nu\\beta-\\frac{1}{4}\\pi)+O(\\nu^{-1})\\} \\sqrt{2/(\\pi",
+      "gen_seconds": 0.02457571029663086,
+      "failed": false,
+      "char_f1": 0.13647995450668182,
+      "exact_match": 0.0,
+      "formula_weight": 15
+    },
+    {
+      "page_id": "as_p0367",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.3.18)\n9.3.18  \\lambda^{\\infty}_{\\nu=0}\\frac{v_{2+1}(i\\cot\\beta)}{v^{2k+1}}=\\frac{3\\cot\\beta+5\\cot^{3}\\beta}{24\\nu}\\dots\\]\n\nAlso\n9.3.19  \\lambda^{\\prime}_{\\nu}(\\nu\\sec\\beta)=\\sqrt{(\\sin2\\beta)/(\\pi\\nu)}\\{-N(\\nu,\\beta)\\sin\\Psi \\quad-O(\\nu,\\beta)\\cos\\Psi\\}\\quad-\\tfrac{",
+      "gen_seconds": 2.2172927856445312e-05,
+      "failed": false,
+      "char_f1": 0.16177832664402594,
+      "exact_match": 0.0,
+      "formula_weight": 13
+    },
+    {
+      "page_id": "as_p0368",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER\n9.3.31  J_{\\nu}(\\nu) \\sim \\frac{a}{v^{1/2}}(1+\\sum\\limits_{k=1}^{\\infty}\\frac{\\alpha_{k}}{v^{2k}})-\\frac{b}{v^{1/2}}\\sum\\limits_{k=0}^{\\infty}\\frac{\\beta_{k}}{v^{2k}}\\]\n9.3.32  Y_{\\nu}(\\nu) \\sim -\\frac{3^{1/2}a}{v^{1/3}}(1+\\sum\\limits_{k=1}^{\\infty}\\frac{\\alpha_{k}}{v^{2k}})-\\frac{3^{1/2}b}{v^{5/3}}\\sum\\limits_{k=0}^{\\infty}\\frac{\\beta_{k}}{v^{2k}}\\]\n9.3.33  J_{\\nu}^{\\prime}(\\nu) \\sim \\frac{b}{v^{1/3}}(1+\\sum\\limits_{k=1}^{\\infty}\\frac{\\gamma_{k}}{v^{2k}})-\\frac{a}{v^{1/3}}\\sum\\limits_{k=0}^{\\infty}\\frac{\\delta_{k}}{v^{2k}}\\]\n9.3.34  Y_{\\nu}^{\\prime}(\\nu) \\sim \\frac{3^{1/2}b}{v^{1/3}}(1+\\sum\\limits_{k=1}^{\\infty}\\frac{\\gamma_{k}}{v^{2k}})+\\frac{3^{1/2}a}{v^{1/3}}\\sum\\limits_{k=0}^{\\infty}\\frac{\\delta_{k}}{v^{2k}}\\]\nwhere a=\\frac{2^{1/3}}{3^{2/3}\\Gamma(\\frac3})=.4473073184,  3!a=.747590021 b=\\frac{2^{1/3}}{3^{1/3}\\Gamma(\\frac3})=.41085 01939, 3!b=.71161 34101\na_{0}=1,  a_{1}=-\\frac{1}{225}=-.004,  a_{2}=.00069 3735 . . . ,   a_{3}=-.00035 38 . . . ,   b_{0}=\\frac{1}{70}=.01428 57143 . . . ,  \\beta_{1}=-\\frac{1213}{10 23750}=-.00118 48596 . . ,  \\beta_{2}=.00043 78 . . ,  \\beta_{3}=-.00038 . . . ,  \\gamma_{0}=1, \\gamma_{1}=\\frac{23}{3150}=.00730 15873 . . . ,  \\gamma_{2}=-.00093 7300 . . . ,  \\gamma_{3}=.00044 40 . . . . ,  \\delta_{0}=\\frac{1}{5}, \\delta_{1}=-\\frac{947}{3 46500}=-.00273 30447 . . . ,  \\delta_{2}=.00060 47 . . . ,  \\delta_{3}=-.00038 . . .  Uniform Asymptotic Expansions\nThese are more powerful than the previous expansions of this section, save for 9.3.31 and 9.3.32, but their coefficients are more complicated. They reduce to 9.3.31 and 9.3.32 when the argument equals the order.\n9.3.35  J_{\\nu}(\\nu z) \\sim \\left(\\frac{4\\xi}{1-z^{2}}\\right)^{1/4}(\\frac{\\mathrm{Ai}\\,(\\nu^{2/3}\\xi)}{v^{1/3}})\\sum\\limits_{k=0}^{\\infty}\\frac{a_{k}(\\xi)}{v^{2k}}\\]\n9.3.36  Y_{\\nu}(\\nu z) \\sim -\\left(\\frac{4\\xi}{1-z^{2}}\\right)^{1/4}(\\frac{\\mathrm{Bi}\\,(\\nu^{2/3}\\xi)}{v^{1/3}})\\sum\\limits_{k=0}^{\\infty}\\frac{a_{k}(\\xi)}{v^{2k}}\\]\n9.3.37  H_{\\nu}^{(1)}(\\nu z) \\sim 2e^{-\\nu/3}(\\frac{4\\xi}{1-z^{2}})^{1/4}(\\frac{\\mathrm{Ai}\\,(\\nu^{2/3}\\xi)}{v^{1/3}})\\sum\\limits_{k=0}^{\\infty}\\frac{a_{k}(\\xi)}\n\n",
+      "gen_seconds": 3.7670135498046875e-05,
+      "failed": false,
+      "char_f1": 0.6164244677255829,
+      "exact_match": 0.0,
+      "formula_weight": 12
+    },
+    {
+      "page_id": "as_p0369",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.369)\nUniform Expansions of the Derivatives\nWith the conditions of the preceding subsection\n9.3.43  \\lambda J_{x}^{\\prime}(\\nu z)\\sim-\\frac22\\left(\\frac1-z^2\\right)^1/\\left(\\frac{A\\mathrm{i}\\,(\\nu^2/3\\xi)}{\\nu^{2/3}}\\sum_{k=0}^{n}\\fracc_k(\\xi)\\over\\nu^2^2\\right)+\\frac{A\\mathrm{i}\\,(\\nu^2/3\\xi)}{\\nu^2/3}\\sum_{k=0}^{n}\\fracd_k(\\xi)/\\eta^2^2\\right\\}\\]\n9.3.44  \\lambda T_{y}^{\\prime}(\\nu z)\\sim\\frac22\\left(\\frac1-z^2\\right)^1/\\left\\{\\frac{B\\,[\\nu^2/3\\xi]}{\\nu^{2/3}}\\sum_{k=0}^{n}\\fracc_k(\\xi)/\\eta^2^2\\right\\}+\\frac{B\\mathrm{i}\\,(\\nu^2/3\\xi)}{\\nu^2/3}\\sum_{k=0}^{n}\\fracd_k(\\xi)/\\eta^2^2\\right\\}\\]\n9.3.45  \\lambda H_{y}^{(1)}{}^{\\prime}(\\nu z)\\sim\\frac{4e^{2\\pi i/3}}{z}\\left(\\frac1-z^2\\right)^1/\\left\\{\\frac{A\\mathrm{i}\\,(\\mathrm{i}\\,(e^2\\pi i/3\\rho^2/3\\xi)}{\\nu^{4/3}}\\sum_{k=0}^{n}\\fracc_k(\\xi)/\\eta^2^2\\right\\}+\\frac{e^2\\pi i/3\\,\\Lambda^1/\\nu^2\\,\\exp^2\\pi/3\\xi)\\sum_{k=0}^{n}\\fracd_k(\\xi)/\\eta^2^2\\right\\}\\]\nwhere\n9.3.46  \\lambda c_k(\\xi)=-\\xi^1\\sum_a=0^2k+1\\mu_k-3\\eta^2v_2k-\\varepsilon+1\\{ (1-z^2)^-1\\}\nd_k(\\xi)=\\sum_a=0^2k\\lambda t_k-3\\eta e_2k-\\{ (1-z^2)^-1\\} and \\nu_k is given by 9.3.13 and 9.3.14. For bounds on the remainder terms in 9.3.43 and 9.3.44 see [9.38].\nFor \\xi>10 use\nb_0(\\xi)\\sim\\frac112\\xi^{-1}-.104\\xi^{-2}, a_1(\\xi)=.003,\nc_0(\\xi)\\sim\\frac112\\xi^3+.146\\xi^{-1}, d_1(\\xi)=.003.\nFor \\xi<-10 use\nb_0(\\xi)\\sim\\frac112\\xi^{-2}, a_1(\\xi)=.000,\nc_0(\\xi)\\sim-\\frac15\\xi^{-1}-1.33(-\\xi)^{-s/2}, d_1(\\xi)=.000.\nMaximum values of higher coefficients:\n|b_1(\\xi)|=.003, |a_2(\\xi)|=.0008, |d_2(\\xi)|=.001\n|c_1(\\xi)|=.008 (\\xi<10), e_1(\\xi)\\sim-.003\\xi^1 as \\xi\\to+\\infty.\n9.4. Polynomial Approximations\n9.4.1  -3\\leq x\\leq3\nJ_0(x)=1-2.24999 97(x/3)^2+1.26562 08(x/3)^4\n-.31638 66(x/3)^3+.04444 79(x/3)^8\n-.00394 44(x/3)^10+.00021 00(x/3)^12+\\epsilon\n|e|<<5\\times10^{-8}\n9.4.2  0<x\\leq3\nY_0(x)=(2/\\pi)\\ln(12\\nu)J_0(x)+.36746 691\n+.60559 366(x/3)^2-.74350 384(x/3)^4\n+.25300 117(x/3)^8--.04261 214(x/3)^8\n+.00427 916(x/3)^10--.00024 846(x/3)^12+\\epsilon\n|e|<<1.4\\times10^{-8}\n9.4.3  3\\leq x<\\infty\nJ_0(x)=x^{-1}f_0\\cos\\theta_0  Y_0(x)=x^{-1}f_0\\sin\\theta_0\nf_0=.79788 456-.00000 077(x/3)/\\infty--.00",
+      "gen_seconds": 1.3828277587890625e-05,
+      "failed": false,
+      "char_f1": 0.6452047867857745,
+      "exact_match": 0.0,
+      "formula_weight": 7
+    },
+    {
+      "page_id": "as_p0376",
+      "region_type": "formula",
+      "pred_text": "376  BESSEL FUNCTIONS OF INTEGER ORDER\nIntegral Representations\n9.6.16  \\Gamma_{0}(z)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{\\pm x\\cos\\theta}d\\theta=\\frac{1}{\\pi}\\int_{0}^{\\pi}\\cosh(z\\cos\\theta)d\\theta\\]\n9.6.17  \\Gamma_{0}(x)=-\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{\\pm z\\cos\\theta}\\left\\{\\gamma+\\ln(2z\\sin^2\\theta)\\right\\}d\\theta\\]\n9.6.18  \\Gamma_{r}(z)=\\frac{(\\frac{3}{2})^{\\nu}}{\\pi^{1}\\Gamma(\\nu+\\frac{1}{2})}\\int_{0}^{\\pi}e^{\\pm z\\cos\\theta}\\sin^2\\theta\\;d\\theta\\]\n9.6.19  \\Gamma_{n}(z)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{z\\cos\\theta}\\cos\\left(n\\theta\\right)d\\theta\\]\n9.6.20  \\Gamma_{r}(z)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{z\\cos\\theta}\\cos\\left(\\eta\\theta\\right)d\\theta\\]\n9.6.21  \\Gamma_{n}(z)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{z\\cos\\theta}\\cos\\left(\\eta\\theta\\right)d\\theta\\]\n9.6.22  \\Gamma_{r}(x)=\\frac{1}{\\pi}\\int_{0}^{\\pi}e^{z\\cos\\theta}\\cos\\left(\\eta\\phi\\right)d\\theta\\]\n9.6.23  \\Gamma_{r}(x)=\\frac{\\pi^{1}(\\frac{3}{2})^{\\nu}}{\\Gamma(\\nu+\\frac{1}{2})}\\int_{0}^{\\infty}e^{-z\\cosh\\nu\\tanh^2\\eta\\tau}\\,dt\\]\n9.6.25  \\Gamma_{r}(x)=\\frac{\\pi^{1}(\\frac{3}{2})^{\\nu}}{\\Gamma(\\nu+\\frac{1}{2})}\\int_{1}^{\\infty}e^{-\\omega t(t^2-1)^{\\nu-1}}\\,dt\\]\n9.6.24  \\Gamma_{r}(z)=\\int_{0}^{\\infty}e^{-\\epsilon\\cdot\\cosh\\left(\\eta t\\right)dt}\\,(\\exp\\,i\\,\\tan\\",
+      "gen_seconds": 0.024593591690063477,
+      "failed": false,
+      "char_f1": 0.41101606509493016,
+      "exact_match": 0.0,
+      "formula_weight": 25
+    },
+    {
+      "page_id": "as_p0379",
+      "region_type": "formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.8.5)\n9.8.5  0<x\\leq2  |\\epsilon|<1\\times10^{-8}\n9.8.6  2\\times x<\\infty\nx^{2}\\epsilon^{2}K_{0}(x)=1.25331414+.23498619(2/x)  -.03655620(2/x)^{2}+.01504268(2/x)^{3}  -.00780353(2/x)^{4}+.00325614(2/x)^{5}  -.00068245(2/x)^{6}+\\epsilon\nFor expansions of \\(I_{0}(x), K_{0}(x), I_{1}(x), and K_{1}(x) in series of Chebyshev polynomials for the ranges 0\\leq x\\leq8 and 0\\leq8/x\\leq1, see [9.37].\n\n### Kelvin Functions\n9.9. Definitions and Properties\nIn this and the following section r is real, x is real and non-negative, and n is again a positive integer or zero.\n\nDefinitions\n9.9.1 ber, x+i bei, x=J_{v}(ze^{x\\pi i/k})=e^{v\\pi}J_{v}(ze^{-v\\pi i/k})=e^{\\xi v\\pi i}I_{v}(ze^{-3\\pi i/k})\n9.9.2 ker, x+i kei, x=e^{-1\\pi i}K_{v}(ze^{v\\pi i/k})=\\xi^{-v\\pi i}H_{v}^{(2)}(ze^{-v\\pi i/k})\nWhen r=0, suffices are usually suppressed.\n\nDefinitions\n9.9.1 ber, x+i bei, x=J_{v}(ze^{x\\pi i/k})=e^{v\\pi}J_{v}(ze^{-v\\pi i/k})\n=e^{\\xi v\\pi i}I_{v}(ze^{v\\pi i/k})=e^{\\xi v\\pi i}I_{v}(ze^{-3\\pi i/k})\n9.9.2 ker, x+i kei, x=e^{-1\\pi i}K_{v}(ze^{v\\pi i/k})=\\xi^{-v\\pi i}H_{v}^{(2)}(ze^{-v\\pi i/k})\nWhen r=0, suffices are usually suppressed.\n\nDifferential Equations\n9.9.3\nx^{2}v^{\\eta^{\\prime}\\prime}+2v\\eta^{\\prime}-(ix^{2}+v^{2})w=0, w=ber, x+i bei, x, ber\\to x+i bei\\to x, ker, x+i kei, x, ker, x+i kei, x\n9.9.4\nx^{4}v^{\\eta^{\\eta}\\epsilon}+2x^{3}v^{\\eta^{\\prime}\\prime}-(1+2v^{2})(x^{4}w^{\\prime}-xw^{\\prime})+(v^{\\prime}-4v^{2}+x^{4})w=0, w=ber, x+x, bei\\to x, ker\\to x, kei\\to x\nReletions Between Solutions\n9.9.5 ber\\to x=cos(v\\pi) ber, x+sin(v\\pi) bei, x\n+(2/\\pi) sin(v\\pi) kei, x=-sin(v\\pi) ber, x+cos(v\\pi) bei, x\n+(2/\\pi) sin(v\\pi) kei, x\n+(2/\\pi) sin(v\\pi) kei, x\nker\\to x=cos(v\\pi) ker, x-sin(v\\pi) kei, x\nkei\\to x=sin(v\\pi) ker, x+cos(v\\pi) kei, x\n9.9.7 ber\\to x=-sin(v\\pi) ber, x+cos(v\\pi) kei, x\n9.9.8 ker\\to x=-sin(v\\pi) kei, x\nKer\\to x=cos(v\\pi) ker, x-sin(v\\pi) kei, x\nkei\\to x=sin(v\\pi) ker, x+cos(v\\pi) kei, x\n9.9.7 ber\\to x=(-)^{n} ber\\to x, kei\\to x=(-)^{n} bei, x=(-)^{n} bei, x\n9.9.8 ker\\to x=(-)^{n} kera\\to x, kei\\to x=(-)^{n} kei, x\nAscealing Series\n9.9.9 ber, x=(1\\over x^{n})\\sum_{k=0}^{\\infty}{\\cos\\{({3\\over k}+1\\over k!\\Gamma(v+k+1)\\})({1\\over k}x^{2})^{k}}\nbei, x=(1\\over x^{2})^{r}\\sum_{k=0}^{\\infty}{\\sin\\{({3\\over k}+1\\over k!\\Gamma(v+k+1)\\})({1\\over k}x^{2})^{k}}\n9.9.10 ber x=1-{({1\\over k}x^{2})^{2}\\over(2!)^{2}}+{(3x^{",
+      "gen_seconds": 0.024520397186279297,
+      "failed": false,
+      "char_f1": 0.5502978160158836,
+      "exact_match": 0.0,
+      "formula_weight": 15
+    },
+    {
+      "page_id": "as_p0383",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.10.25)\nAsymptotic Expansions of Modulus and Phase\nWhen n is fixed, x is large and m=4x^2\n9.10.21\nM_{\\gamma}=\\frac{e^{\\pi i\\eta^2}}{\\sqrt{2\\pi x}}\\left(1-\\frac{\\mu-1}{8\\sqrt2}\\frac{1}{x}+\\frac{(\\mu-1)^2}{256}\\frac{1}{x^2}\\right.\\qquad\\qquad\\qquad\\qquad\\qquad\\",
+      "gen_seconds": 1.8596649169921875e-05,
+      "failed": false,
+      "char_f1": 0.12101000476417344,
+      "exact_match": 0.0,
+      "formula_weight": 16
+    },
+    {
+      "page_id": "as_p0385",
+      "region_type": "prose+formula",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER (p.11.8)\n9.11.9  0<x\\leq8  | | | x+i kei x=f(x)(1+e_{i}) f(x)=\\sqrt{\\frac{\\pi}{2x}}\\exp\\left[-\\frac{1+i}{\\sqrt2}x+\\theta(-x)\\right]",
+      "gen_seconds": 0.029235363006591797,
+      "failed": false,
+      "char_f1": 0.10906355772846935,
+      "exact_match": 0.0,
+      "formula_weight": 7
+    },
+    {
+      "page_id": "as_p0423",
+      "region_type": "table",
+      "pred_text": "BESSEL FUNCTIONS OF INTEGER ORDER\nColumns: \\(x,y,\\ldots,\\) (full-cell): \\(x=1.0,\\ldots,1.5,1.0)\nSample rows: \\(x_{1},\\ldots,x_{n}\\); \\(x_{2},\\ldots,x_{n}\\); \\(x_{3},\\ldots,x_{4}\\); \\(x_{5},\\ldots,x_{6}\\); \\(x_{7},\\ldots,x_{8}\\); \\(x_{9},\\ldots,x_{10}\\); \\(x_{10},\\ldots,x_{11}\\); \\(x_{12},\\ldots,x_{13}\\); \\(x_{14},\\ldots,x_{15}\\); \\(x_{16},\\ldots,x_{17}\\); \\(x_{17},\\ldots,x_{18}\\); \\(x_{18},\\ldots,x_{19}\\); \\(x_{20},\\ldots,x_{21}\\); \\(x_{21},\\ldots,x_{22}\\); \\(x_{22},\\ldots,x_{23}\\); \\(x_{23},\\ldots,x_{24}\\); \\(x_{24},\\ldots,x_{25}\\); \\(x_{25},\\ldots,x_{26}\\); \\(x_{27},\\ldots,x_{28}\\); \\(x_{29},\\ldots,x_{27}\\); \\(x_{30},\\ldots,x_{24}\\); \\(x_{31},\\ldots,x_{32}\\); \\(x_{32},\\ldots,x_{33}\\); \\(x_{4},\\ldots,x_{25}\\); \\(x_{34},\\ldots,x_{35}\\); \\(x_{4},\\ldots,x_{26}\\); \\(x_{5},\\ldots,x_{27}\\); \\(x_{6},\\ldots,x_{10}\\); \\(x_{7},\\ldots,x_{11}\\); \\(x_{8},\\ldots,x_{12}\\); \\(x_{9},\\ldots,x_{28}\\); \\(x_{10},\\ldots,x_{13}\\); \\(x_{11},\\ldots,x_{12}\\); \\(x_{12},\\ldots,x_{29}\\); \\(x_{20},\\ldots,x_{21}\\); \\(x_{33},\\ldots,x_{34}\\); \\(x_{4},\\ldots,x_{25}\\); \\(x_{5},\\ldots,x_{26}\\); \\(x_{6},\\ldots,x_{10}\\); \\(x_{7},\\ldots,x_{12}\\); \\(x_{8},\\ldots,x_{13}\\); \\(x_{9},\\ldots,x_{27}\\); \\(x_{10},\\ldots,x_{11}\\); \\(x_{12},\\ldots,x_{29}\\); \\(x_{13},\\ldots,x_{14}\\); \\(x_{15},\\ldots,x_{16}\\); \\(x_{17},\\ldots,x_{18}\\); \\(x_{19},\\ldots,x_{20}\\); \\(x_{21},\\ldots,x_{23}\\); \\(x_{34},\\ldots,x_{35}\\); \\(x_{4},\\ldots,x_{25}\\); \\(x_{5},\\ldots,x_{26}\\); \\(x_{6},\\ldots,x_{11}\\); \\(x_{7},\\ldots,x_{12}\\); \\(x_{8},\\ldots,x_{13}\\); \\(x_{9},\\ldots,x_{27}\\); \\(x_{10},\\ldots,x_{11}\\); \\(x_{12},\\ldots,x_{28}\\); \\(x_{13},\\ldots,x_{14}\\); \\(x_{15},\\ldots,x_{16}\\); \\(x_{17},\\ldots,x_{18}\\); \\(x_{19},\\ldots,x_{20}\\); \\(x_{20},\\ldots,x_{21}\\); \\(x_{21},\\ldots,x_{22}\\); \\(x_{23},\\ldots,x_{24}\\); \\(x_{24},\\ldots,x_{25}\\); \\(x_{35},\\ldots,x_{26}\\); \\(x_{4},\\ldots,x_{27}\\); \\(x_{5},\\",
+      "gen_seconds": 0.02674126625061035,
+      "failed": false,
+      "char_f1": 0.21856978085351786,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0600",
+      "region_type": "formula",
+      "pred_text": "ELLIPTIC INTEGRALS (p.1: p.0)\nTable 1.7.15  \\min(n; p\\backslash a).\nThe case n<0 can be reduced to the case \\sin^2\\alpha<N<1 by writing\n17.7.15  \\max=(\\sin^2\\alpha-n)(1-n)^{-1}  \\max=[-n(1-n)^{-1}(\\sin^2\\alpha-n)]^{1}  \\max=[(1-n)(1-n^{-1}\\sin^2\\alpha)]^{1}\\Pi(n; p\\backslash a)  \\max+p_{z}^{-1}\\sin^2\\alpha F(p\\backslash a)+\\arctan\\left(\\tfrac12p_2\\sin\\frac2\\varphi/\\Delta(\\varphi)\\right)\n17.7.17  \\min(n\\backslash a)=(-n\\cos^2\\alpha)(1-n)^{-1}(\\sin^2\\alpha-n)^{-1}\\Pi(N \\backslash a)+\\sin^2\\alpha(\\sin^2\\alpha-n)^{-1}\\Pi(x)\nNumerical Methods\n17.8. Use and Extension of the Tables\nExample 1. Reduce to canonical form \\int y^{-t}dx, where\ny^2=-3x^4+34x^3-119x^2+172x-90\nBy inspection or by solving an equation of the fourth degree we find that\ny^2=Q_1, Q_2 where \\ Q_1=3x^2-10x+9, Q_2=-x^2+8x-10\nFirst Method\nQ_1=\\lambda Q_2=(3+\\lambda)x^2-(10+8\\lambda)x+9+10\\lambda is a perfect square if the discriminant\nNumerical Methods\n17.7.18  \\max=0\n\\min(0; \\ \\varphi\\backslash a)=F(\\varphi\\backslash a)\n17.7.19  \\max=0, \\ \\alpha=0\n\\min(0; \\ \\varphi\\backslash 0)=\\varphi\n17.7.20  \\max=0\n\\min(n; \\ \\varphi\\backslash 0)=(1-n)^{-1}\\arctanh\\left[(1-n)^{1}\\tan\\varphi\\right],\nn<1\n=(n-1)^{-1}\\arctanh\\left[(n-1)^{1}\\tan\\varphi\\right],\nn>1\n=tan\\varphi n=1\n17.7.21  \\max=\\pi/2\n\\min(n; \\ \\varphi\\backslash\\pi/2)=(1-n)^{-1}[\\ln\\left(\\tan\\varphi+\\sec\\varphi\\right)\n-\\frac{1}{2}n^{1}\\ln\\left(1+n^{1}\\sin\\varphi\\right)(1-n^{1}\\sin\\varphi)^{-1}]\nn\\neq1\n17.7.22  \\max=\\pm\\sin\\alpha\n(1\\mp\\sin\\alpha)\\{2\\Pi(\\pm\\sin\\alpha; \\ \\varphi\\backslash a)-F(\\varphi\\backslash a)\\}\n=arctan\\left[(1\\mp\\sin\\alpha)\\tan\\varphi/\\Delta(\\varphi)\\right]\n17.7.23  \\max=1\\pm\\cos\\alpha\n2\\cos\\alpha\\Pi(1\\pm\\cos\\alpha; \\ \\varphi\\backslash a)=\\pm\\frac{1}{2}\\ln\\left[(1+\\tan\\varphi\\right.\\cdot\\Delta(\\varphi))(1-\\tan\\varphi.\\cdot\\Delta(\\varphi))^{-1}]^{-\\frac{1}{2}}\\ln\\left[(1\\Delta(\\varphi)+\\cos\\alpha\\cdot\\tan\\varphi)(\\Delta(\\varphi)-\\cos\\alpha\\tan\\varphi)^{-1}]\n\\mp(1\\mp\\cos\\alpha)F(\\varphi\\backslash a)\n17.7.24  \\max=\\sin^2\\alpha\n\\min(\\sin^2\\alpha; \\varphi\\backslash a)=\\sec^2\\alpha E(\\varphi\\backslash a)-(\\tan^2\\alpha\\sin2\\varphi)/(2\\Delta(\\varphi))\n17.7.25  \\max=1\n\\min(1; \\varphi\\backslash a)=F(\\varphi\\backslash a)-\\sec^2\\alpha E(\\varphi\\backslash a)+\\sec^2\\alpha\\tan\\varphi\\Delta(\\varphi)\nNumerical Methods\n17.8. Use and Extension of the Tables\nExample 1. Reduce to canonical form \\int y^{-t}dx, where\ny^2=-3x^4+34x^3-119x^2+172x-90\nBy inspection or by solving an equation of the fourth degree we find that\ny^2=Q_1, Q_2 where \\ Q_1=3x^2-10x+9, Q_2=-x^2+8x-10\nFirst Method\nQ_1=\\lambda Q_2=(3+\\lambda)x^2-(10+8\\lambda)x+9+10\\lambda is a perfect square if the discriminant\n17.7.18  \\max=0\n\\min(0; \\ \\varphi\\backslash a)=F(\\varphi\\backslash a)\n17.7.19  \\max=0, \\ \\alpha=0\n\\min(0; \\ \\varphi\\backslash 0)=\\varphi\n17.7.20  \\max=0\n\\min(n; \\ \\varphi\\backslash 0)=(1-n)^{-1}\\arctanh\\left[(1-n)^{1}\\tan\\varphi\\right],\nn<1",
+      "gen_seconds": 1.2874603271484375e-05,
+      "failed": false,
+      "char_f1": 0.7245890640724588,
+      "exact_match": 0.0,
+      "formula_weight": 11
+    },
+    {
+      "page_id": "as_p0619",
+      "region_type": "table",
+      "pred_text": "ELIPPICK INTEGRALS (p.619)\nJACobian ZETA FUNCTION Z(\\varphi,\\alpha)\nTable 17.7\nK(\\omega)Z(v,\\omega)=K(\\omega)E(v)-E(\\omega)F(v)\\]\n10  0.02080  0.03450  0.04580  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.050177  0.0501777  0.0501777  0.0501777  0.0501777  0.0501777  0.0501777  0.0501777  0.05017777  0.05017777  0.05017777  0.050177777  0.050177777  0.0501777777  0.05017777777  0.05017777777777  0.05017",
+      "gen_seconds": 0.026143789291381836,
+      "failed": false,
+      "char_f1": 0.26854460093896715,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0621",
+      "region_type": "table",
+      "pred_text": "ELIPPICK MATERIALS (p.621)\nSample rows: \\ x = 0.000000, 0.\n\n",
+      "gen_seconds": 1.5735626220703125e-05,
+      "failed": true,
+      "failure_reason": "empty-or-near-empty"
+    },
+    {
+      "page_id": "as_p0622",
+      "region_type": "table",
+      "pred_text": "ELIPPICK INTEGRALS (p.18)\nTable 17.8   HEUMAN'S Lambda FUNCTION A_0(v|\\alpha)\n[full page, printed in the table below]\n[full page, printed in the table below]\n[full page, printed in the table above]\n[full page, printed in the table below]\n[full page, printed in the table below]\n[full page, printed in the table below]",
+      "gen_seconds": 0.02657794952392578,
+      "failed": false,
+      "char_f1": 0.19845944721341185,
+      "exact_match": 0.0,
+      "formula_weight": 0
+    },
+    {
+      "page_id": "as_p0625",
+      "region_type": "table",
+      "pred_text": "ELLIPTIC INTEGRALS (p.625)\n625\nELLIPTIC INTEGRAL OF THE THIRD KIND n(n;ph)  Table 17.9\nR\\ln(n;ph)=\\int_0^\\infty (1-nsin^2\\theta)^{-1}[1-sin^2\\alpha\\sin^2\\theta]^{-\\frac13}d\\theta\nn  a\\backslash\\varphi 0^\\circ 15^\\circ 30^\\circ 45^\\circ 60^\\circ 75^\\circ 90^\\circ\n0,0 0^\\circ 0.26180 0.52360 0.78540 1.04720 1.30900 1.57080\n\n[MISSING_PAGE_POST]\n\n",
+      "gen_seconds": 1.4066696166992188e-05,
+      "failed": true,
+      "failure_reason": "nougat-missing-page-marker"
+    }
+  ]
+}
