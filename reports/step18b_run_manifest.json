@@ -1,0 +1,1955 @@
+{
+  "step": "18b",
+  "title": "OCR repair re-run (pretrained facebook/nougat-base, inference-path fixes)",
+  "owner": "S1 Anuron Maitro (2105037)",
+  "run_mode": "full",
+  "generated_at_utc": "2026-08-10T05:11:02Z",
+  "repo": {
+    "url": "https://github.com/anuronmaitro/doc-agent-1.git",
+    "branch": "Anuron-step-18B",
+    "commit": "2b0f7209e017e3c933f7b682fcfc160ff9a16516",
+    "subject": "step 18b: guard against degenerate region crops crashing the full-book run"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "4.44.2",
+    "pymupdf": "1.28.2:",
+    "opencv": "4.13.0",
+    "numpy": "2.0.2",
+    "pydantic": "2.12.3"
+  },
+  "gpu": "Tesla T4",
+  "models": {
+    "ocr": "facebook/nougat-base",
+    "ocr_revision": "abfecedbb34367c820e233f710fdc7f54e6ab249",
+    "ocr_finetuned": false,
+    "ocr_max_new_tokens": 1536,
+    "ocr_repetition_penalty": 1.1,
+    "layout": "microsoft/table-transformer-detection",
+    "layout_revision": "2357cbe2b5a5d1c03e54f32764f06058933b65ab"
+  },
+  "config_yaml": {
+    "seed": 42,
+    "device": "cuda",
+    "enhance": {
+      "enabled": false,
+      "model": "none",
+      "type": "none"
+    },
+    "layout": {
+      "model": "microsoft/table-transformer-detection",
+      "score_thr": 0.5,
+      "method": "projection-profile+tatr"
+    },
+    "ocr": {
+      "model": "facebook/nougat-base",
+      "finetune": true,
+      "adapter": "lora",
+      "fallback": "vikp/texify",
+      "baseline": "tesseract",
+      "render_dpi": 300
+    },
+    "embed": {
+      "model": "BAAI/bge-m3",
+      "dim": 1024
+    },
+    "index": {
+      "type": "faiss:flat",
+      "chunk_tokens": 512,
+      "overlap": 0,
+      "strategy": "semantic-formula-block"
+    },
+    "retrieve": {
+      "k": 10,
+      "k_step": 10,
+      "k_max": 40,
+      "weak_threshold": 0.35,
+      "rerank": true,
+      "reranker": "BAAI/bge-reranker-v2-m3"
+    },
+    "agent": {
+      "max_steps": 8,
+      "autonomy": "act-then-log",
+      "budget_usd": 0.05
+    },
+    "rl": {
+      "algo": "ppo",
+      "train_policy": false
+    },
+    "serve": {
+      "batch": true
+    },
+    "deploy": {
+      "target": "hf-spaces"
+    }
+  },
+  "counts": {
+    "content_pages_in_corpus": 1040,
+    "pages_processed_this_run": 1040,
+    "regions_detected": 6235,
+    "region_kinds": {
+      "heading": 487,
+      "text": 4201,
+      "table": 1190,
+      "figure": 357
+    },
+    "transcripts_on_disk": 744,
+    "chunks_produced": 4589,
+    "pages_failed_degenerate": 296,
+    "words_from_our_ocr": 161941,
+    "chars_from_our_ocr": 1372677
+  },
+  "timings_seconds": {
+    "corpus_render": 1190.0,
+    "loader": 52.4,
+    "preprocess": 405.8,
+    "layout": 249.9,
+    "ocr_gated_subset": 489.9,
+    "ocr_full_book": 39954.5,
+    "total": 42403.5
+  },
+  "before_repair_reference": {
+    "naive_failure_rate": 0.429,
+    "book_wide_word_coverage_vs_pdf_text_layer": 0.151,
+    "median_page_coverage_vs_pdf_text_layer": 0.28,
+    "as_p0360_precision": 0.813,
+    "as_p0360_recall": 0.28,
+    "spirals_hidden_in_successes": 41
+  },
+  "after_repair_coverage": {
+    "median_page_coverage_vs_pdf_text_layer": 0.4371,
+    "mean_page_coverage_vs_pdf_text_layer": 0.6304,
+    "book_wide_word_coverage_vs_pdf_text_layer": 0.2826,
+    "pages_with_zero_coverage": 0,
+    "no_output_rate": 0.2846
+  },
+  "after_repair_gold_page_metrics": {
+    "mean_char_f1": 0.3905,
+    "mean_precision": 0.5359,
+    "mean_recall": 0.4705,
+    "mean_exact_formula_match_unweighted": 0.0,
+    "weighted_exact_formula_match": 0.0,
+    "total_gold_formulas": 27,
+    "n_gold_pages": 3
+  },
+  "after_repair_per_page": [
+    {
+      "page_id": "as_p0243",
+      "printed_page": 243,
+      "char_f1": 0.336,
+      "precision": 0.2734,
+      "recall": 0.4359,
+      "exact_formula_match": 0.0,
+      "n_gold_formulas": 0,
+      "n_pred_formulas": 0,
+      "gold_chars": 1107,
+      "pred_chars": 1629,
+      "degenerate": false
+    },
+    {
+      "page_id": "as_p0255",
+      "printed_page": 255,
+      "char_f1": 0.2446,
+      "precision": 0.8763,
+      "recall": 0.1421,
+      "exact_formula_match": 0.0,
+      "n_gold_formulas": 14,
+      "n_pred_formulas": 3,
+      "gold_chars": 2333,
+      "pred_chars": 451,
+      "degenerate": false
+    },
+    {
+      "page_id": "as_p0360",
+      "printed_page": 360,
+      "char_f1": 0.591,
+      "precision": 0.4579,
+      "recall": 0.8334,
+      "exact_formula_match": 0.0,
+      "n_gold_formulas": 13,
+      "n_pred_formulas": 18,
+      "gold_chars": 1828,
+      "pred_chars": 4278,
+      "degenerate": false
+    }
+  ],
+  "failures": [
+    {
+      "page_id": "as_p0100",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:11:05Z"
+    },
+    {
+      "page_id": "as_p1028",
+      "reason": "empty-or-near-empty",
+      "chars": 4,
+      "detected_at": "2026-08-10T04:58:03Z"
+    },
+    {
+      "page_id": "as_p0002",
+      "reason": "nougat-missing-page-marker",
+      "chars": 133,
+      "detected_at": "2026-08-09T18:06:09Z"
+    },
+    {
+      "page_id": "as_p0011",
+      "reason": "empty-or-near-empty",
+      "chars": 55,
+      "detected_at": "2026-08-09T18:10:59Z"
+    },
+    {
+      "page_id": "as_p0018",
+      "reason": "repetition-degeneration",
+      "chars": 2642,
+      "detected_at": "2026-08-09T18:14:20Z"
+    },
+    {
+      "page_id": "as_p0028",
+      "reason": "nougat-missing-page-marker",
+      "chars": 84,
+      "detected_at": "2026-08-09T18:19:39Z"
+    },
+    {
+      "page_id": "as_p0032",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T18:22:16Z"
+    },
+    {
+      "page_id": "as_p0034",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T18:24:18Z"
+    },
+    {
+      "page_id": "as_p0036",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T18:25:59Z"
+    },
+    {
+      "page_id": "as_p0038",
+      "reason": "nougat-missing-page-marker",
+      "chars": 173,
+      "detected_at": "2026-08-09T18:28:17Z"
+    },
+    {
+      "page_id": "as_p0040",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T18:29:46Z"
+    },
+    {
+      "page_id": "as_p0043",
+      "reason": "nougat-missing-page-marker",
+      "chars": 213,
+      "detected_at": "2026-08-09T18:32:22Z"
+    },
+    {
+      "page_id": "as_p0044",
+      "reason": "nougat-missing-page-marker",
+      "chars": 180,
+      "detected_at": "2026-08-09T18:34:06Z"
+    },
+    {
+      "page_id": "as_p0046",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T18:36:22Z"
+    },
+    {
+      "page_id": "as_p0050",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T18:38:41Z"
+    },
+    {
+      "page_id": "as_p0052",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T18:40:43Z"
+    },
+    {
+      "page_id": "as_p0056",
+      "reason": "nougat-missing-page-marker",
+      "chars": 238,
+      "detected_at": "2026-08-09T18:43:54Z"
+    },
+    {
+      "page_id": "as_p0058",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T18:46:33Z"
+    },
+    {
+      "page_id": "as_p0062",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T18:49:45Z"
+    },
+    {
+      "page_id": "as_p0078",
+      "reason": "repetition-degeneration",
+      "chars": 1826,
+      "detected_at": "2026-08-09T18:57:01Z"
+    },
+    {
+      "page_id": "as_p0081",
+      "reason": "repetition-degeneration",
+      "chars": 1656,
+      "detected_at": "2026-08-09T18:58:45Z"
+    },
+    {
+      "page_id": "as_p0101",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T19:11:55Z"
+    },
+    {
+      "page_id": "as_p0102",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:13:21Z"
+    },
+    {
+      "page_id": "as_p0103",
+      "reason": "nougat-missing-page-marker",
+      "chars": 258,
+      "detected_at": "2026-08-09T19:14:13Z"
+    },
+    {
+      "page_id": "as_p0104",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:15:21Z"
+    },
+    {
+      "page_id": "as_p0106",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:16:30Z"
+    },
+    {
+      "page_id": "as_p0110",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:18:29Z"
+    },
+    {
+      "page_id": "as_p0116",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:24:21Z"
+    },
+    {
+      "page_id": "as_p0120",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:27:47Z"
+    },
+    {
+      "page_id": "as_p0122",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:29:26Z"
+    },
+    {
+      "page_id": "as_p0123",
+      "reason": "repetition-degeneration",
+      "chars": 2537,
+      "detected_at": "2026-08-09T19:30:33Z"
+    },
+    {
+      "page_id": "as_p0125",
+      "reason": "repetition-degeneration",
+      "chars": 2537,
+      "detected_at": "2026-08-09T19:32:57Z"
+    },
+    {
+      "page_id": "as_p0127",
+      "reason": "repetition-degeneration",
+      "chars": 2537,
+      "detected_at": "2026-08-09T19:35:22Z"
+    },
+    {
+      "page_id": "as_p0128",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:36:28Z"
+    },
+    {
+      "page_id": "as_p0131",
+      "reason": "nougat-missing-page-marker",
+      "chars": 896,
+      "detected_at": "2026-08-09T19:39:11Z"
+    },
+    {
+      "page_id": "as_p0136",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:43:36Z"
+    },
+    {
+      "page_id": "as_p0138",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:46:07Z"
+    },
+    {
+      "page_id": "as_p0139",
+      "reason": "empty-or-near-empty",
+      "chars": 72,
+      "detected_at": "2026-08-09T19:47:18Z"
+    },
+    {
+      "page_id": "as_p0140",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:48:46Z"
+    },
+    {
+      "page_id": "as_p0142",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:50:12Z"
+    },
+    {
+      "page_id": "as_p0143",
+      "reason": "repetition-degeneration",
+      "chars": 2841,
+      "detected_at": "2026-08-09T19:51:04Z"
+    },
+    {
+      "page_id": "as_p0144",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:51:56Z"
+    },
+    {
+      "page_id": "as_p0148",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:54:39Z"
+    },
+    {
+      "page_id": "as_p0150",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:56:24Z"
+    },
+    {
+      "page_id": "as_p0152",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T19:57:51Z"
+    },
+    {
+      "page_id": "as_p0156",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:00:11Z"
+    },
+    {
+      "page_id": "as_p0160",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:05:43Z"
+    },
+    {
+      "page_id": "as_p0161",
+      "reason": "nougat-missing-page-marker",
+      "chars": 599,
+      "detected_at": "2026-08-09T20:07:11Z"
+    },
+    {
+      "page_id": "as_p0165",
+      "reason": "repetition-degeneration",
+      "chars": 2841,
+      "detected_at": "2026-08-09T20:10:24Z"
+    },
+    {
+      "page_id": "as_p0166",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:11:16Z"
+    },
+    {
+      "page_id": "as_p0169",
+      "reason": "repetition-degeneration",
+      "chars": 2841,
+      "detected_at": "2026-08-09T20:13:29Z"
+    },
+    {
+      "page_id": "as_p0170",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:14:13Z"
+    },
+    {
+      "page_id": "as_p0178",
+      "reason": "nougat-missing-page-marker",
+      "chars": 270,
+      "detected_at": "2026-08-09T20:20:46Z"
+    },
+    {
+      "page_id": "as_p0180",
+      "reason": "nougat-missing-page-marker",
+      "chars": 166,
+      "detected_at": "2026-08-09T20:23:05Z"
+    },
+    {
+      "page_id": "as_p0181",
+      "reason": "empty-or-near-empty",
+      "chars": 62,
+      "detected_at": "2026-08-09T20:23:57Z"
+    },
+    {
+      "page_id": "as_p0184",
+      "reason": "nougat-missing-page-marker",
+      "chars": 147,
+      "detected_at": "2026-08-09T20:26:27Z"
+    },
+    {
+      "page_id": "as_p0186",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:27:37Z"
+    },
+    {
+      "page_id": "as_p0189",
+      "reason": "repetition-degeneration",
+      "chars": 2537,
+      "detected_at": "2026-08-09T20:29:22Z"
+    },
+    {
+      "page_id": "as_p0190",
+      "reason": "nougat-missing-page-marker",
+      "chars": 227,
+      "detected_at": "2026-08-09T20:31:18Z"
+    },
+    {
+      "page_id": "as_p0192",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:33:32Z"
+    },
+    {
+      "page_id": "as_p0194",
+      "reason": "nougat-missing-page-marker",
+      "chars": 202,
+      "detected_at": "2026-08-09T20:35:13Z"
+    },
+    {
+      "page_id": "as_p0196",
+      "reason": "nougat-missing-page-marker",
+      "chars": 198,
+      "detected_at": "2026-08-09T20:36:38Z"
+    },
+    {
+      "page_id": "as_p0197",
+      "reason": "empty-or-near-empty",
+      "chars": 39,
+      "detected_at": "2026-08-09T20:36:56Z"
+    },
+    {
+      "page_id": "as_p0198",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T20:37:30Z"
+    },
+    {
+      "page_id": "as_p0200",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:39:14Z"
+    },
+    {
+      "page_id": "as_p0202",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:40:45Z"
+    },
+    {
+      "page_id": "as_p0203",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T20:41:21Z"
+    },
+    {
+      "page_id": "as_p0204",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:42:13Z"
+    },
+    {
+      "page_id": "as_p0205",
+      "reason": "empty-or-near-empty",
+      "chars": 36,
+      "detected_at": "2026-08-09T20:42:49Z"
+    },
+    {
+      "page_id": "as_p0206",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:43:41Z"
+    },
+    {
+      "page_id": "as_p0208",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:45:22Z"
+    },
+    {
+      "page_id": "as_p0209",
+      "reason": "empty-or-near-empty",
+      "chars": 38,
+      "detected_at": "2026-08-09T20:45:57Z"
+    },
+    {
+      "page_id": "as_p0210",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:47:06Z"
+    },
+    {
+      "page_id": "as_p0211",
+      "reason": "empty-or-near-empty",
+      "chars": 37,
+      "detected_at": "2026-08-09T20:48:16Z"
+    },
+    {
+      "page_id": "as_p0212",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:49:43Z"
+    },
+    {
+      "page_id": "as_p0213",
+      "reason": "repetition-degeneration",
+      "chars": 2841,
+      "detected_at": "2026-08-09T20:50:34Z"
+    },
+    {
+      "page_id": "as_p0217",
+      "reason": "nougat-missing-page-marker",
+      "chars": 58,
+      "detected_at": "2026-08-09T20:53:49Z"
+    },
+    {
+      "page_id": "as_p0218",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:54:38Z"
+    },
+    {
+      "page_id": "as_p0219",
+      "reason": "repetition-degeneration",
+      "chars": 3144,
+      "detected_at": "2026-08-09T20:55:29Z"
+    },
+    {
+      "page_id": "as_p0220",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:56:21Z"
+    },
+    {
+      "page_id": "as_p0221",
+      "reason": "repetition-degeneration",
+      "chars": 2841,
+      "detected_at": "2026-08-09T20:57:13Z"
+    },
+    {
+      "page_id": "as_p0222",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T20:58:16Z"
+    },
+    {
+      "page_id": "as_p0228",
+      "reason": "repetition-degeneration",
+      "chars": 1324,
+      "detected_at": "2026-08-09T21:00:00Z"
+    },
+    {
+      "page_id": "as_p0239",
+      "reason": "nougat-missing-page-marker",
+      "chars": 748,
+      "detected_at": "2026-08-09T21:04:08Z"
+    },
+    {
+      "page_id": "as_p0240",
+      "reason": "nougat-missing-page-marker",
+      "chars": 167,
+      "detected_at": "2026-08-09T21:04:58Z"
+    },
+    {
+      "page_id": "as_p0241",
+      "reason": "repetition-degeneration",
+      "chars": 2841,
+      "detected_at": "2026-08-09T21:05:50Z"
+    },
+    {
+      "page_id": "as_p0242",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T21:06:08Z"
+    },
+    {
+      "page_id": "as_p0244",
+      "reason": "nougat-missing-page-marker",
+      "chars": 125,
+      "detected_at": "2026-08-09T21:07:19Z"
+    },
+    {
+      "page_id": "as_p0246",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T21:08:06Z"
+    },
+    {
+      "page_id": "as_p0247",
+      "reason": "repetition-degeneration",
+      "chars": 2838,
+      "detected_at": "2026-08-09T21:08:59Z"
+    },
+    {
+      "page_id": "as_p0248",
+      "reason": "nougat-missing-page-marker",
+      "chars": 218,
+      "detected_at": "2026-08-09T21:10:11Z"
+    },
+    {
+      "page_id": "as_p0249",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T21:11:21Z"
+    },
+    {
+      "page_id": "as_p0256",
+      "reason": "empty-or-near-empty",
+      "chars": 16,
+      "detected_at": "2026-08-09T21:13:42Z"
+    },
+    {
+      "page_id": "as_p0260",
+      "reason": "repetition-degeneration",
+      "chars": 302,
+      "detected_at": "2026-08-09T21:17:46Z"
+    },
+    {
+      "page_id": "as_p0268",
+      "reason": "nougat-missing-page-marker",
+      "chars": 135,
+      "detected_at": "2026-08-09T21:20:45Z"
+    },
+    {
+      "page_id": "as_p0269",
+      "reason": "nougat-missing-page-marker",
+      "chars": 330,
+      "detected_at": "2026-08-09T21:21:55Z"
+    },
+    {
+      "page_id": "as_p0270",
+      "reason": "nougat-missing-page-marker",
+      "chars": 140,
+      "detected_at": "2026-08-09T21:23:05Z"
+    },
+    {
+      "page_id": "as_p0271",
+      "reason": "nougat-missing-page-marker",
+      "chars": 47,
+      "detected_at": "2026-08-09T21:24:33Z"
+    },
+    {
+      "page_id": "as_p0272",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T21:25:43Z"
+    },
+    {
+      "page_id": "as_p0274",
+      "reason": "nougat-missing-page-marker",
+      "chars": 260,
+      "detected_at": "2026-08-09T21:26:53Z"
+    },
+    {
+      "page_id": "as_p0277",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T21:28:40Z"
+    },
+    {
+      "page_id": "as_p0278",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T21:29:33Z"
+    },
+    {
+      "page_id": "as_p0280",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T21:31:37Z"
+    },
+    {
+      "page_id": "as_p0281",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T21:32:30Z"
+    },
+    {
+      "page_id": "as_p0283",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T21:34:32Z"
+    },
+    {
+      "page_id": "as_p0284",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T21:36:01Z"
+    },
+    {
+      "page_id": "as_p0286",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T21:37:29Z"
+    },
+    {
+      "page_id": "as_p0287",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T21:38:22Z"
+    },
+    {
+      "page_id": "as_p0288",
+      "reason": "empty-or-near-empty",
+      "chars": 73,
+      "detected_at": "2026-08-09T21:39:33Z"
+    },
+    {
+      "page_id": "as_p0291",
+      "reason": "empty-or-near-empty",
+      "chars": 67,
+      "detected_at": "2026-08-09T21:41:01Z"
+    },
+    {
+      "page_id": "as_p0313",
+      "reason": "repetition-degeneration",
+      "chars": 2837,
+      "detected_at": "2026-08-09T21:50:37Z"
+    },
+    {
+      "page_id": "as_p0318",
+      "reason": "nougat-missing-page-marker",
+      "chars": 277,
+      "detected_at": "2026-08-09T21:54:16Z"
+    },
+    {
+      "page_id": "as_p0319",
+      "reason": "repetition-degeneration",
+      "chars": 2534,
+      "detected_at": "2026-08-09T21:55:09Z"
+    },
+    {
+      "page_id": "as_p0322",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T21:57:47Z"
+    },
+    {
+      "page_id": "as_p0324",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T21:59:36Z"
+    },
+    {
+      "page_id": "as_p0327",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T22:01:03Z"
+    },
+    {
+      "page_id": "as_p0328",
+      "reason": "repetition-degeneration",
+      "chars": 859,
+      "detected_at": "2026-08-09T22:03:05Z"
+    },
+    {
+      "page_id": "as_p0335",
+      "reason": "repetition-degeneration",
+      "chars": 172,
+      "detected_at": "2026-08-09T22:06:18Z"
+    },
+    {
+      "page_id": "as_p0342",
+      "reason": "nougat-missing-page-marker",
+      "chars": 315,
+      "detected_at": "2026-08-09T22:08:32Z"
+    },
+    {
+      "page_id": "as_p0344",
+      "reason": "nougat-missing-page-marker",
+      "chars": 231,
+      "detected_at": "2026-08-09T22:09:42Z"
+    },
+    {
+      "page_id": "as_p0346",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T22:12:04Z"
+    },
+    {
+      "page_id": "as_p0348",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T22:13:33Z"
+    },
+    {
+      "page_id": "as_p0353",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T22:16:09Z"
+    },
+    {
+      "page_id": "as_p0369",
+      "reason": "repetition-degeneration",
+      "chars": 1417,
+      "detected_at": "2026-08-09T22:23:56Z"
+    },
+    {
+      "page_id": "as_p0374",
+      "reason": "repetition-degeneration",
+      "chars": 1544,
+      "detected_at": "2026-08-09T22:26:36Z"
+    },
+    {
+      "page_id": "as_p0390",
+      "reason": "nougat-missing-page-marker",
+      "chars": 115,
+      "detected_at": "2026-08-09T22:34:12Z"
+    },
+    {
+      "page_id": "as_p0392",
+      "reason": "nougat-missing-page-marker",
+      "chars": 225,
+      "detected_at": "2026-08-09T22:35:21Z"
+    },
+    {
+      "page_id": "as_p0394",
+      "reason": "nougat-missing-page-marker",
+      "chars": 115,
+      "detected_at": "2026-08-09T22:37:24Z"
+    },
+    {
+      "page_id": "as_p0396",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T22:39:10Z"
+    },
+    {
+      "page_id": "as_p0397",
+      "reason": "nougat-missing-page-marker",
+      "chars": 227,
+      "detected_at": "2026-08-09T22:40:31Z"
+    },
+    {
+      "page_id": "as_p0400",
+      "reason": "nougat-missing-page-marker",
+      "chars": 181,
+      "detected_at": "2026-08-09T22:42:28Z"
+    },
+    {
+      "page_id": "as_p0401",
+      "reason": "nougat-missing-page-marker",
+      "chars": 278,
+      "detected_at": "2026-08-09T22:43:37Z"
+    },
+    {
+      "page_id": "as_p0402",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T22:45:23Z"
+    },
+    {
+      "page_id": "as_p0404",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T22:46:16Z"
+    },
+    {
+      "page_id": "as_p0405",
+      "reason": "repetition-degeneration",
+      "chars": 2534,
+      "detected_at": "2026-08-09T22:47:08Z"
+    },
+    {
+      "page_id": "as_p0406",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T22:48:45Z"
+    },
+    {
+      "page_id": "as_p0408",
+      "reason": "nougat-missing-page-marker",
+      "chars": 115,
+      "detected_at": "2026-08-09T22:50:48Z"
+    },
+    {
+      "page_id": "as_p0410",
+      "reason": "nougat-missing-page-marker",
+      "chars": 301,
+      "detected_at": "2026-08-09T22:52:30Z"
+    },
+    {
+      "page_id": "as_p0412",
+      "reason": "nougat-missing-page-marker",
+      "chars": 174,
+      "detected_at": "2026-08-09T22:55:45Z"
+    },
+    {
+      "page_id": "as_p0416",
+      "reason": "nougat-missing-page-marker",
+      "chars": 163,
+      "detected_at": "2026-08-09T22:58:56Z"
+    },
+    {
+      "page_id": "as_p0417",
+      "reason": "repetition-degeneration",
+      "chars": 2537,
+      "detected_at": "2026-08-09T22:59:42Z"
+    },
+    {
+      "page_id": "as_p0418",
+      "reason": "nougat-missing-page-marker",
+      "chars": 131,
+      "detected_at": "2026-08-09T23:00:29Z"
+    },
+    {
+      "page_id": "as_p0420",
+      "reason": "nougat-missing-page-marker",
+      "chars": 151,
+      "detected_at": "2026-08-09T23:01:35Z"
+    },
+    {
+      "page_id": "as_p0427",
+      "reason": "repetition-degeneration",
+      "chars": 1366,
+      "detected_at": "2026-08-09T23:06:39Z"
+    },
+    {
+      "page_id": "as_p0428",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T23:07:54Z"
+    },
+    {
+      "page_id": "as_p0430",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T23:09:03Z"
+    },
+    {
+      "page_id": "as_p0431",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T23:09:47Z"
+    },
+    {
+      "page_id": "as_p0432",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T23:10:29Z"
+    },
+    {
+      "page_id": "as_p0452",
+      "reason": "empty-or-near-empty",
+      "chars": 58,
+      "detected_at": "2026-08-09T23:17:30Z"
+    },
+    {
+      "page_id": "as_p0457",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T23:20:09Z"
+    },
+    {
+      "page_id": "as_p0461",
+      "reason": "empty-or-near-empty",
+      "chars": 75,
+      "detected_at": "2026-08-09T23:22:12Z"
+    },
+    {
+      "page_id": "as_p0462",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T23:23:56Z"
+    },
+    {
+      "page_id": "as_p0464",
+      "reason": "nougat-missing-page-marker",
+      "chars": 362,
+      "detected_at": "2026-08-09T23:25:38Z"
+    },
+    {
+      "page_id": "as_p0466",
+      "reason": "nougat-missing-page-marker",
+      "chars": 105,
+      "detected_at": "2026-08-09T23:27:06Z"
+    },
+    {
+      "page_id": "as_p0468",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T23:29:32Z"
+    },
+    {
+      "page_id": "as_p0469",
+      "reason": "empty-or-near-empty",
+      "chars": 16,
+      "detected_at": "2026-08-09T23:30:42Z"
+    },
+    {
+      "page_id": "as_p0470",
+      "reason": "nougat-missing-page-marker",
+      "chars": 184,
+      "detected_at": "2026-08-09T23:32:09Z"
+    },
+    {
+      "page_id": "as_p0471",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T23:32:44Z"
+    },
+    {
+      "page_id": "as_p0472",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T23:33:27Z"
+    },
+    {
+      "page_id": "as_p0473",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T23:35:07Z"
+    },
+    {
+      "page_id": "as_p0474",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T23:36:26Z"
+    },
+    {
+      "page_id": "as_p0475",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-09T23:37:38Z"
+    },
+    {
+      "page_id": "as_p0478",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-09T23:40:34Z"
+    },
+    {
+      "page_id": "as_p0480",
+      "reason": "repetition-degeneration",
+      "chars": 199,
+      "detected_at": "2026-08-09T23:42:26Z"
+    },
+    {
+      "page_id": "as_p0484",
+      "reason": "repetition-degeneration",
+      "chars": 1316,
+      "detected_at": "2026-08-09T23:44:51Z"
+    },
+    {
+      "page_id": "as_p0485",
+      "reason": "repetition-degeneration",
+      "chars": 1054,
+      "detected_at": "2026-08-09T23:45:48Z"
+    },
+    {
+      "page_id": "as_p0486",
+      "reason": "repetition-degeneration",
+      "chars": 1314,
+      "detected_at": "2026-08-09T23:47:47Z"
+    },
+    {
+      "page_id": "as_p0488",
+      "reason": "repetition-degeneration",
+      "chars": 1340,
+      "detected_at": "2026-08-09T23:50:29Z"
+    },
+    {
+      "page_id": "as_p0492",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-09T23:53:02Z"
+    },
+    {
+      "page_id": "as_p0516",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T00:01:00Z"
+    },
+    {
+      "page_id": "as_p0517",
+      "reason": "empty-or-near-empty",
+      "chars": 117,
+      "detected_at": "2026-08-10T00:01:59Z"
+    },
+    {
+      "page_id": "as_p0518",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T00:03:28Z"
+    },
+    {
+      "page_id": "as_p0534",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T00:17:46Z"
+    },
+    {
+      "page_id": "as_p0543",
+      "reason": "repetition-degeneration",
+      "chars": 1937,
+      "detected_at": "2026-08-10T00:21:29Z"
+    },
+    {
+      "page_id": "as_p0546",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T00:23:29Z"
+    },
+    {
+      "page_id": "as_p0552",
+      "reason": "nougat-missing-page-marker",
+      "chars": 175,
+      "detected_at": "2026-08-10T00:26:30Z"
+    },
+    {
+      "page_id": "as_p0572",
+      "reason": "nougat-missing-page-marker",
+      "chars": 170,
+      "detected_at": "2026-08-10T00:32:46Z"
+    },
+    {
+      "page_id": "as_p0583",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-10T00:37:28Z"
+    },
+    {
+      "page_id": "as_p0584",
+      "reason": "nougat-missing-page-marker",
+      "chars": 302,
+      "detected_at": "2026-08-10T00:39:10Z"
+    },
+    {
+      "page_id": "as_p0585",
+      "reason": "repetition-degeneration",
+      "chars": 2537,
+      "detected_at": "2026-08-10T00:40:05Z"
+    },
+    {
+      "page_id": "as_p0601",
+      "reason": "repetition-degeneration",
+      "chars": 1663,
+      "detected_at": "2026-08-10T00:45:30Z"
+    },
+    {
+      "page_id": "as_p0609",
+      "reason": "empty-or-near-empty",
+      "chars": 27,
+      "detected_at": "2026-08-10T00:48:32Z"
+    },
+    {
+      "page_id": "as_p0610",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T00:49:41Z"
+    },
+    {
+      "page_id": "as_p0612",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T00:52:18Z"
+    },
+    {
+      "page_id": "as_p0614",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T00:54:20Z"
+    },
+    {
+      "page_id": "as_p0616",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T00:55:30Z"
+    },
+    {
+      "page_id": "as_p0617",
+      "reason": "nougat-missing-page-marker",
+      "chars": 865,
+      "detected_at": "2026-08-10T00:56:38Z"
+    },
+    {
+      "page_id": "as_p0618",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T00:57:43Z"
+    },
+    {
+      "page_id": "as_p0620",
+      "reason": "nougat-missing-page-marker",
+      "chars": 594,
+      "detected_at": "2026-08-10T00:59:55Z"
+    },
+    {
+      "page_id": "as_p0622",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T01:01:27Z"
+    },
+    {
+      "page_id": "as_p0640",
+      "reason": "repetition-degeneration",
+      "chars": 1407,
+      "detected_at": "2026-08-10T01:11:21Z"
+    },
+    {
+      "page_id": "as_p0647",
+      "reason": "empty-or-near-empty",
+      "chars": 11,
+      "detected_at": "2026-08-10T01:13:28Z"
+    },
+    {
+      "page_id": "as_p0648",
+      "reason": "empty-or-near-empty",
+      "chars": 12,
+      "detected_at": "2026-08-10T01:13:47Z"
+    },
+    {
+      "page_id": "as_p0651",
+      "reason": "repetition-degeneration",
+      "chars": 1760,
+      "detected_at": "2026-08-10T01:17:00Z"
+    },
+    {
+      "page_id": "as_p0653",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-10T01:18:48Z"
+    },
+    {
+      "page_id": "as_p0655",
+      "reason": "empty-or-near-empty",
+      "chars": 12,
+      "detected_at": "2026-08-10T01:20:10Z"
+    },
+    {
+      "page_id": "as_p0659",
+      "reason": "empty-or-near-empty",
+      "chars": 18,
+      "detected_at": "2026-08-10T01:22:37Z"
+    },
+    {
+      "page_id": "as_p0660",
+      "reason": "empty-or-near-empty",
+      "chars": 12,
+      "detected_at": "2026-08-10T01:24:59Z"
+    },
+    {
+      "page_id": "as_p0662",
+      "reason": "nougat-missing-page-marker",
+      "chars": 531,
+      "detected_at": "2026-08-10T01:27:30Z"
+    },
+    {
+      "page_id": "as_p0665",
+      "reason": "repetition-degeneration",
+      "chars": 477,
+      "detected_at": "2026-08-10T01:29:04Z"
+    },
+    {
+      "page_id": "as_p0673",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T01:32:23Z"
+    },
+    {
+      "page_id": "as_p0676",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T01:35:04Z"
+    },
+    {
+      "page_id": "as_p0677",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-10T01:36:27Z"
+    },
+    {
+      "page_id": "as_p0678",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T01:38:01Z"
+    },
+    {
+      "page_id": "as_p0680",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T01:40:11Z"
+    },
+    {
+      "page_id": "as_p0682",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T01:41:21Z"
+    },
+    {
+      "page_id": "as_p0702",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T01:49:59Z"
+    },
+    {
+      "page_id": "as_p0703",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T01:51:27Z"
+    },
+    {
+      "page_id": "as_p0704",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T01:52:03Z"
+    },
+    {
+      "page_id": "as_p0707",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T01:54:21Z"
+    },
+    {
+      "page_id": "as_p0713",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T01:57:34Z"
+    },
+    {
+      "page_id": "as_p0714",
+      "reason": "nougat-missing-page-marker",
+      "chars": 190,
+      "detected_at": "2026-08-10T01:58:38Z"
+    },
+    {
+      "page_id": "as_p0715",
+      "reason": "nougat-missing-page-marker",
+      "chars": 195,
+      "detected_at": "2026-08-10T02:00:05Z"
+    },
+    {
+      "page_id": "as_p0716",
+      "reason": "nougat-missing-page-marker",
+      "chars": 182,
+      "detected_at": "2026-08-10T02:00:54Z"
+    },
+    {
+      "page_id": "as_p0718",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T02:01:47Z"
+    },
+    {
+      "page_id": "as_p0719",
+      "reason": "nougat-missing-page-marker",
+      "chars": 159,
+      "detected_at": "2026-08-10T02:02:55Z"
+    },
+    {
+      "page_id": "as_p0726",
+      "reason": "repetition-degeneration",
+      "chars": 2675,
+      "detected_at": "2026-08-10T02:05:26Z"
+    },
+    {
+      "page_id": "as_p0729",
+      "reason": "empty-or-near-empty",
+      "chars": 24,
+      "detected_at": "2026-08-10T02:05:57Z"
+    },
+    {
+      "page_id": "as_p0761",
+      "reason": "nougat-missing-page-marker",
+      "chars": 607,
+      "detected_at": "2026-08-10T02:19:05Z"
+    },
+    {
+      "page_id": "as_p0762",
+      "reason": "nougat-missing-page-marker",
+      "chars": 562,
+      "detected_at": "2026-08-10T02:20:04Z"
+    },
+    {
+      "page_id": "as_p0763",
+      "reason": "nougat-missing-page-marker",
+      "chars": 593,
+      "detected_at": "2026-08-10T02:21:01Z"
+    },
+    {
+      "page_id": "as_p0764",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T02:21:46Z"
+    },
+    {
+      "page_id": "as_p0765",
+      "reason": "nougat-missing-page-marker",
+      "chars": 744,
+      "detected_at": "2026-08-10T02:22:50Z"
+    },
+    {
+      "page_id": "as_p0769",
+      "reason": "empty-or-near-empty",
+      "chars": 32,
+      "detected_at": "2026-08-10T02:25:01Z"
+    },
+    {
+      "page_id": "as_p0774",
+      "reason": "empty-or-near-empty",
+      "chars": 65,
+      "detected_at": "2026-08-10T02:27:47Z"
+    },
+    {
+      "page_id": "as_p0793",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T02:34:06Z"
+    },
+    {
+      "page_id": "as_p0794",
+      "reason": "nougat-missing-page-marker",
+      "chars": 111,
+      "detected_at": "2026-08-10T02:34:58Z"
+    },
+    {
+      "page_id": "as_p0797",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T02:36:59Z"
+    },
+    {
+      "page_id": "as_p0798",
+      "reason": "nougat-missing-page-marker",
+      "chars": 111,
+      "detected_at": "2026-08-10T02:37:34Z"
+    },
+    {
+      "page_id": "as_p0801",
+      "reason": "empty-or-near-empty",
+      "chars": 45,
+      "detected_at": "2026-08-10T02:38:43Z"
+    },
+    {
+      "page_id": "as_p0809",
+      "reason": "empty-or-near-empty",
+      "chars": 19,
+      "detected_at": "2026-08-10T02:42:07Z"
+    },
+    {
+      "page_id": "as_p0812",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T02:43:30Z"
+    },
+    {
+      "page_id": "as_p0828",
+      "reason": "nougat-missing-page-marker",
+      "chars": 145,
+      "detected_at": "2026-08-10T02:51:30Z"
+    },
+    {
+      "page_id": "as_p0829",
+      "reason": "nougat-missing-page-marker",
+      "chars": 214,
+      "detected_at": "2026-08-10T02:53:36Z"
+    },
+    {
+      "page_id": "as_p0830",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T02:56:14Z"
+    },
+    {
+      "page_id": "as_p0835",
+      "reason": "empty-or-near-empty",
+      "chars": 43,
+      "detected_at": "2026-08-10T03:00:00Z"
+    },
+    {
+      "page_id": "as_p0836",
+      "reason": "nougat-missing-page-marker",
+      "chars": 102,
+      "detected_at": "2026-08-10T03:01:44Z"
+    },
+    {
+      "page_id": "as_p0838",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T03:03:11Z"
+    },
+    {
+      "page_id": "as_p0840",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T03:05:13Z"
+    },
+    {
+      "page_id": "as_p0843",
+      "reason": "empty-or-near-empty",
+      "chars": 16,
+      "detected_at": "2026-08-10T03:08:22Z"
+    },
+    {
+      "page_id": "as_p0845",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T03:09:15Z"
+    },
+    {
+      "page_id": "as_p0846",
+      "reason": "empty-or-near-empty",
+      "chars": 83,
+      "detected_at": "2026-08-10T03:10:24Z"
+    },
+    {
+      "page_id": "as_p0847",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T03:11:34Z"
+    },
+    {
+      "page_id": "as_p0851",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T03:13:02Z"
+    },
+    {
+      "page_id": "as_p0853",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T03:14:30Z"
+    },
+    {
+      "page_id": "as_p0857",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T03:16:17Z"
+    },
+    {
+      "page_id": "as_p0859",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T03:18:03Z"
+    },
+    {
+      "page_id": "as_p0871",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T03:23:00Z"
+    },
+    {
+      "page_id": "as_p0873",
+      "reason": "nougat-missing-page-marker",
+      "chars": 19,
+      "detected_at": "2026-08-10T03:24:28Z"
+    },
+    {
+      "page_id": "as_p0877",
+      "reason": "repetition-degeneration",
+      "chars": 2766,
+      "detected_at": "2026-08-10T03:26:18Z"
+    },
+    {
+      "page_id": "as_p0878",
+      "reason": "repetition-degeneration",
+      "chars": 1729,
+      "detected_at": "2026-08-10T03:27:10Z"
+    },
+    {
+      "page_id": "as_p0888",
+      "reason": "nougat-missing-page-marker",
+      "chars": 632,
+      "detected_at": "2026-08-10T03:30:55Z"
+    },
+    {
+      "page_id": "as_p0894",
+      "reason": "nougat-missing-page-marker",
+      "chars": 481,
+      "detected_at": "2026-08-10T03:34:21Z"
+    },
+    {
+      "page_id": "as_p0895",
+      "reason": "repetition-degeneration",
+      "chars": 2454,
+      "detected_at": "2026-08-10T03:35:21Z"
+    },
+    {
+      "page_id": "as_p0900",
+      "reason": "nougat-missing-page-marker",
+      "chars": 261,
+      "detected_at": "2026-08-10T03:37:49Z"
+    },
+    {
+      "page_id": "as_p0902",
+      "reason": "nougat-missing-page-marker",
+      "chars": 200,
+      "detected_at": "2026-08-10T03:39:26Z"
+    },
+    {
+      "page_id": "as_p0903",
+      "reason": "nougat-missing-page-marker",
+      "chars": 165,
+      "detected_at": "2026-08-10T03:40:18Z"
+    },
+    {
+      "page_id": "as_p0905",
+      "reason": "nougat-missing-page-marker",
+      "chars": 310,
+      "detected_at": "2026-08-10T03:42:38Z"
+    },
+    {
+      "page_id": "as_p0906",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T03:43:48Z"
+    },
+    {
+      "page_id": "as_p0910",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T03:47:16Z"
+    },
+    {
+      "page_id": "as_p0911",
+      "reason": "nougat-missing-page-marker",
+      "chars": 566,
+      "detected_at": "2026-08-10T03:48:26Z"
+    },
+    {
+      "page_id": "as_p0916",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T03:51:54Z"
+    },
+    {
+      "page_id": "as_p0920",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T03:55:37Z"
+    },
+    {
+      "page_id": "as_p0922",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T03:56:41Z"
+    },
+    {
+      "page_id": "as_p0929",
+      "reason": "empty-or-near-empty",
+      "chars": 43,
+      "detected_at": "2026-08-10T03:59:58Z"
+    },
+    {
+      "page_id": "as_p0933",
+      "reason": "repetition-degeneration",
+      "chars": 1355,
+      "detected_at": "2026-08-10T04:03:41Z"
+    },
+    {
+      "page_id": "as_p0940",
+      "reason": "repetition-degeneration",
+      "chars": 640,
+      "detected_at": "2026-08-10T04:06:40Z"
+    },
+    {
+      "page_id": "as_p0943",
+      "reason": "empty-or-near-empty",
+      "chars": 43,
+      "detected_at": "2026-08-10T04:08:41Z"
+    },
+    {
+      "page_id": "as_p0949",
+      "reason": "empty-or-near-empty",
+      "chars": 101,
+      "detected_at": "2026-08-10T04:11:36Z"
+    },
+    {
+      "page_id": "as_p0955",
+      "reason": "empty-or-near-empty",
+      "chars": 107,
+      "detected_at": "2026-08-10T04:14:34Z"
+    },
+    {
+      "page_id": "as_p0966",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T04:18:25Z"
+    },
+    {
+      "page_id": "as_p0968",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T04:19:18Z"
+    },
+    {
+      "page_id": "as_p0969",
+      "reason": "nougat-missing-page-marker",
+      "chars": 296,
+      "detected_at": "2026-08-10T04:20:11Z"
+    },
+    {
+      "page_id": "as_p0973",
+      "reason": "nougat-missing-page-marker",
+      "chars": 680,
+      "detected_at": "2026-08-10T04:22:35Z"
+    },
+    {
+      "page_id": "as_p0976",
+      "reason": "empty-or-near-empty",
+      "chars": 33,
+      "detected_at": "2026-08-10T04:24:37Z"
+    },
+    {
+      "page_id": "as_p0978",
+      "reason": "repetition-degeneration",
+      "chars": 1514,
+      "detected_at": "2026-08-10T04:26:03Z"
+    },
+    {
+      "page_id": "as_p0984",
+      "reason": "nougat-missing-page-marker",
+      "chars": 147,
+      "detected_at": "2026-08-10T04:28:55Z"
+    },
+    {
+      "page_id": "as_p0985",
+      "reason": "empty-or-near-empty",
+      "chars": 21,
+      "detected_at": "2026-08-10T04:30:17Z"
+    },
+    {
+      "page_id": "as_p0999",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T04:37:48Z"
+    },
+    {
+      "page_id": "as_p1000",
+      "reason": "repetition-degeneration",
+      "chars": 2655,
+      "detected_at": "2026-08-10T04:39:02Z"
+    },
+    {
+      "page_id": "as_p1003",
+      "reason": "repetition-degeneration",
+      "chars": 1222,
+      "detected_at": "2026-08-10T04:40:25Z"
+    },
+    {
+      "page_id": "as_p1004",
+      "reason": "empty-or-near-empty",
+      "chars": 21,
+      "detected_at": "2026-08-10T04:41:47Z"
+    },
+    {
+      "page_id": "as_p1005",
+      "reason": "repetition-degeneration",
+      "chars": 1435,
+      "detected_at": "2026-08-10T04:43:16Z"
+    },
+    {
+      "page_id": "as_p1007",
+      "reason": "repetition-degeneration",
+      "chars": 979,
+      "detected_at": "2026-08-10T04:44:37Z"
+    },
+    {
+      "page_id": "as_p1008",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T04:45:25Z"
+    },
+    {
+      "page_id": "as_p1009",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T04:46:35Z"
+    },
+    {
+      "page_id": "as_p1017",
+      "reason": "empty-or-near-empty",
+      "chars": 76,
+      "detected_at": "2026-08-10T04:50:49Z"
+    },
+    {
+      "page_id": "as_p1023",
+      "reason": "empty-or-near-empty",
+      "chars": 46,
+      "detected_at": "2026-08-10T04:53:32Z"
+    },
+    {
+      "page_id": "as_p1031",
+      "reason": "empty-or-near-empty",
+      "chars": 68,
+      "detected_at": "2026-08-10T05:00:01Z"
+    },
+    {
+      "page_id": "as_p1032",
+      "reason": "empty-or-near-empty",
+      "chars": 10,
+      "detected_at": "2026-08-10T05:00:42Z"
+    },
+    {
+      "page_id": "as_p1035",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T05:02:56Z"
+    },
+    {
+      "page_id": "as_p1037",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T05:04:05Z"
+    },
+    {
+      "page_id": "as_p1039",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T05:05:48Z"
+    },
+    {
+      "page_id": "as_p1041",
+      "reason": "empty-or-near-empty",
+      "chars": 0,
+      "detected_at": "2026-08-10T05:07:14Z"
+    },
+    {
+      "page_id": "as_p1043",
+      "reason": "empty-or-near-empty",
+      "chars": 8,
+      "detected_at": "2026-08-10T05:08:07Z"
+    },
+    {
+      "page_id": "as_p1048",
+      "reason": "empty-or-near-empty",
+      "chars": 44,
+      "detected_at": "2026-08-10T05:10:37Z"
+    }
+  ]
+}
