@@ -118,8 +118,9 @@ if not os.path.exists("/kaggle/working/repo"):
 
     cells.append(code("""!pip install -q --no-cache-dir -r requirements.lock
 import pkg_resources  # noqa: F401
-print("pkg_resources OK")
 import torch
+
+print("pkg_resources OK")
 print("CUDA available:", torch.cuda.is_available())
 """))
 
@@ -138,6 +139,7 @@ pipeline code)."""))
 baseline reader on 2 pages first so a GPU-time estimate is real, not guessed."""))
 
     cells.append(code("""import time
+
 t0 = time.time()
 !python scripts/run_test_eval.py --run baseline --limit 2
 elapsed = time.time() - t0
