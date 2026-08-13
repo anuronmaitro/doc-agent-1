@@ -34,7 +34,7 @@
 - [x] Step 26 — synthetic degradation pipeline — S2
 - [x] Step 27 — training/ + LoRA adapt — S1-(modified)
 - [x] Step 28 — Kaggle: fine-tune + learning curve — S3(modified)
-- [ ] Step 29 — final TEST measurement (once) — S2
+- [x] Step 29 — final TEST measurement (once) — S2
 - [ ] Step 30 — Kaggle: re-OCR + rebuild index — S3
 - [ ] Step 31 — notebooks/kb_demo.ipynb — S1
 - [ ] Step 32 — reports/pipeline_diagram.md — S2
