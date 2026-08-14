@@ -5,6 +5,8 @@ device: cuda
 enhance:  {enabled: false, model: "none", type: "none"}        # A1 trade-off: no generative repair
 layout:   {model: "microsoft/table-transformer-detection", score_thr: 0.5, method: "projection-profile+tatr"}
 ocr:      {model: "facebook/nougat-base", finetune: true, adapter: "lora",
+           adapter_dir: "data/models/ocr_lora/curve_n122",
+           table_adapter_dir: "data/models/ocr_lora/table_ft",
            fallback: "vikp/texify", baseline: "tesseract", render_dpi: 300}
 embed:    {model: "BAAI/bge-m3", dim: 1024}
 index:    {type: "faiss:flat", chunk_tokens: 512, overlap: 0, strategy: "semantic-formula-block"}

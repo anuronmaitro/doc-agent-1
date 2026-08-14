@@ -282,3 +282,198 @@ class TestGenerateRegionCropGuard:
 
         sane = Region(page_id="as_p0001", bbox=(0, 0, 50, 50), kind="text")
         assert reader._generate_region(sane) == ("ok", 0.7)
+
+
+class _FakeRoutingReader:
+    """Duck-typed stand-in for Reader: `_route_table_regions` only ever calls
+    `has_table_adapter`, `set_active_adapter`, and `_generate` -- no real model needed."""
+
+    def __init__(self, has_table_adapter: bool, crop_texts: dict[tuple, str]) -> None:
+        self.has_table_adapter = has_table_adapter
+        self._crop_texts = crop_texts
+        self.active_adapter = "primary"
+        self.adapter_calls: list[str] = []
+
+    def set_active_adapter(self, name: str) -> None:
+        self.active_adapter = name
+        self.adapter_calls.append(name)
+
+    def _generate(self, image) -> tuple[str, float]:
+        # Keyed by the crop's (width, height) so each test controls exactly what a given
+        # region's crop "generates" without needing a real model.
+        return self._crop_texts[image.size], 0.9
+
+
+class TestRouteTableRegions:
+    """Step 28 point 11: the region-routing hybrid, with the 3 real bugs found and fixed
+    validating it on the 20 A&S val pages (plan.md Step 28 point 11) -- each has its own
+    regression test here so a future change can't silently reintroduce any of them."""
+
+    def _page_with_image(self, tmp_path, monkeypatch, size=(100, 100)):
+        from PIL import Image as PILImage
+
+        import doc_agent.vision.ocr as ocr_mod
+
+        PILImage.new("RGB", size, "white").save(tmp_path / "as_p0001.png")
+        monkeypatch.setattr(ocr_mod, "INTERIM_DIR", tmp_path)
+        monkeypatch.setattr(ocr_mod, "PAGES_DIR", tmp_path)
+        return ocr_mod
+
+    def test_no_table_adapter_returns_whole_page_unchanged(self, tmp_path, monkeypatch):
+        ocr_mod = self._page_with_image(tmp_path, monkeypatch)
+        reader = _FakeRoutingReader(has_table_adapter=False, crop_texts={})
+        regions = [Region(page_id="as_p0001", bbox=(0, 0, 100, 100), kind="table")]
+        result = ocr_mod._route_table_regions(reader, "as_p0001", regions, "some page text")
+        assert result == "some page text"
+
+    def test_no_table_regions_returns_whole_page_unchanged(self, tmp_path, monkeypatch):
+        ocr_mod = self._page_with_image(tmp_path, monkeypatch)
+        reader = _FakeRoutingReader(has_table_adapter=True, crop_texts={})
+        regions = [Region(page_id="as_p0001", bbox=(0, 0, 100, 100), kind="text")]
+        result = ocr_mod._route_table_regions(reader, "as_p0001", regions, "some page text")
+        assert result == "some page text"
+
+    def test_table_region_gets_substituted_with_fresh_crop_text(self, tmp_path, monkeypatch):
+        ocr_mod = self._page_with_image(tmp_path, monkeypatch)
+        # Two regions -> two blank-line-delimited blocks, matched 1:1 by _split_markdown_to_regions.
+        whole_page = (
+            "a real prose paragraph here, plenty of characters. " * 3
+            + "\n\n"
+            + ("an original table chunk with enough characters to not trip the ratio guard " * 2)
+        )
+        table_crop_text = "a much better table transcription from the table adapter " * 3
+        reader = _FakeRoutingReader(
+            has_table_adapter=True, crop_texts={(100, 100): table_crop_text}
+        )
+        regions = [
+            Region(page_id="as_p0001", bbox=(0, 0, 50, 50), kind="text"),
+            Region(page_id="as_p0001", bbox=(0, 0, 100, 100), kind="table"),
+        ]
+        result = ocr_mod._route_table_regions(reader, "as_p0001", regions, whole_page)
+        assert table_crop_text in result
+        assert reader.adapter_calls == ["table", "primary"]  # switched over and back
+
+    def test_empty_original_chunk_is_skipped_not_substituted(self, tmp_path, monkeypatch):
+        """Fix 2 (real bug found in validation): more layout regions than text blocks ->
+        _split_markdown_to_regions pads the shortfall with "". Substituting a fresh crop
+        into that slot reliably produced degenerate output on 2 of 20 val pages -- the fix
+        is to skip it entirely, not generate a crop for it at all."""
+        ocr_mod = self._page_with_image(tmp_path, monkeypatch)
+        whole_page = "the only real text block on this page, no second block exists here"
+        reader = _FakeRoutingReader(has_table_adapter=True, crop_texts={})
+        regions = [
+            Region(page_id="as_p0001", bbox=(0, 0, 50, 50), kind="text"),
+            Region(page_id="as_p0001", bbox=(0, 0, 100, 100), kind="table"),  # gets padded ""
+        ]
+        result = ocr_mod._route_table_regions(reader, "as_p0001", regions, whole_page)
+        assert result == whole_page  # untouched -- no crop was even generated
+        assert reader.adapter_calls == []  # never switched adapters at all
+
+    def test_degenerate_short_crop_is_not_substituted(self, tmp_path, monkeypatch):
+        """Fix 3: a crop shorter than MIN_TABLE_CROP_CHARS / MIN_TABLE_CROP_RATIO of the
+        original is more likely a bad decode than a genuinely short table -- keep the
+        original chunk instead of the near-empty replacement."""
+        ocr_mod = self._page_with_image(tmp_path, monkeypatch)
+        whole_page = (
+            "a real prose paragraph here, plenty of characters. " * 3
+            + "\n\n"
+            + ("an original table chunk with enough characters to not trip the ratio guard " * 2)
+        )
+        reader = _FakeRoutingReader(has_table_adapter=True, crop_texts={(100, 100): "x"})
+        regions = [
+            Region(page_id="as_p0001", bbox=(0, 0, 50, 50), kind="text"),
+            Region(page_id="as_p0001", bbox=(0, 0, 100, 100), kind="table"),
+        ]
+        result = ocr_mod._route_table_regions(reader, "as_p0001", regions, whole_page)
+        assert result == whole_page  # the near-empty "x" crop was rejected
+
+    def test_splice_that_introduces_a_new_failure_is_reverted(self, tmp_path, monkeypatch):
+        """Production-hardening guard (not in the original validation script): table-
+        routing must never turn an already-working page into a failing one."""
+        ocr_mod = self._page_with_image(tmp_path, monkeypatch)
+        whole_page = (
+            "a real prose paragraph here, plenty of characters. " * 3
+            + "\n\n"
+            + ("an original table chunk with enough characters to not trip the ratio guard " * 2)
+        )
+        degenerate_crop = "\\qquad" * 30  # long enough to pass the length guard, but degenerate
+        reader = _FakeRoutingReader(
+            has_table_adapter=True, crop_texts={(100, 100): degenerate_crop}
+        )
+        regions = [
+            Region(page_id="as_p0001", bbox=(0, 0, 50, 50), kind="text"),
+            Region(page_id="as_p0001", bbox=(0, 0, 100, 100), kind="table"),
+        ]
+        result = ocr_mod._route_table_regions(reader, "as_p0001", regions, whole_page)
+        assert result == whole_page  # reverted to the pre-splice text, not the degenerate splice
+        assert ocr_mod._failure_reason(result) is None
+
+
+class TestSetActiveAdapter:
+    def test_noop_with_warning_on_non_peft_reader(self, monkeypatch):
+        import doc_agent.vision.ocr as ocr_mod
+
+        reader = ocr_mod.Reader({"ocr": {}})
+        reader.set_active_adapter("table")  # must not raise
+
+
+class TestSkipKnownFailures:
+    """`transcribe()`'s resume check is `mmd_path.exists()`, and a failed page writes no
+    .mmd -- so every resumed push re-runs each known failure at full inference cost to
+    reproduce a result it already recorded (measured: 2.10h, 47.6% of Step 30's OCR stage,
+    for zero chunks). `skip_known_failures` makes that skippable. It must stay OFF by
+    default: a page one reader cannot read may well succeed under another, which is exactly
+    what Step 18b and Step 28 changed, so the retry has to remain the default behaviour."""
+
+    def _setup(self, tmp_path, monkeypatch):
+        import json
+
+        from PIL import Image as PILImage
+
+        import doc_agent.vision.ocr as ocr_mod
+
+        PILImage.new("RGB", (200, 200), "white").save(tmp_path / "as_p0001.png")
+        for attr in ("OCR_DIR", "PAGES_DIR", "INTERIM_DIR"):
+            monkeypatch.setattr(ocr_mod, attr, tmp_path)
+        monkeypatch.setattr(ocr_mod, "META_PATH", tmp_path / "meta.jsonl")
+        monkeypatch.setattr(ocr_mod, "FAILURES_PATH", tmp_path / "failures.json")
+        # Same shape _write_failures produces: a JSON array of rows, not an object.
+        (tmp_path / "failures.json").write_text(
+            json.dumps(
+                [
+                    {
+                        "page_id": "as_p0001",
+                        "reason": "empty-or-near-empty",
+                        "chars": 0,
+                        "detected_at": "2026-08-13T16:30:12Z",
+                    }
+                ]
+            ),
+            encoding="utf-8",
+        )
+        return ocr_mod
+
+    def _regions(self):
+        return [Region(page_id="as_p0001", bbox=(0, 0, 100, 100), kind="text")]
+
+    def test_known_failure_is_not_re_run_when_enabled(self, tmp_path, monkeypatch):
+        ocr_mod = self._setup(tmp_path, monkeypatch)
+
+        def _boom(self, image):
+            raise AssertionError("a known-failed page must not reach the model")
+
+        monkeypatch.setattr(ocr_mod.Reader, "_generate", _boom)
+        chunks = ocr_mod.transcribe(self._regions(), {"ocr": {}}, skip_known_failures=True)
+        assert chunks == []  # a skipped page yields no chunks, exactly as re-failing would
+
+    def test_known_failure_is_still_re_run_by_default(self, tmp_path, monkeypatch):
+        ocr_mod = self._setup(tmp_path, monkeypatch)
+        calls = []
+
+        def _record(self, image):
+            calls.append(image)
+            return ("", 0.5)  # fails again -> still no chunks, but the model WAS consulted
+
+        monkeypatch.setattr(ocr_mod.Reader, "_generate", _record)
+        ocr_mod.transcribe(self._regions(), {"ocr": {}})
+        assert calls, "default behaviour must still give a previously-failed page a retry"
