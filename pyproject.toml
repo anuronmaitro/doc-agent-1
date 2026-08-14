@@ -13,6 +13,15 @@ dependencies = [
   "torchmetrics>=1.3,<1.5",
   "sentence-transformers>=2.7,<3.0",
   "faiss-cpu>=1.8,<1.9",
+  # faiss-cpu 1.8.x ships a prebuilt extension compiled against NumPy 1.x's C-ABI
+  # and declares no upper bound on numpy itself, so an unpinned resolver can pick
+  # numpy>=2.0 and the extension fails at import with "compiled using NumPy 1.x
+  # cannot be run in NumPy 2.x" -- found on Step 30's Kaggle run, where `uv pip
+  # compile pyproject.toml -o requirements.lock` (compiling only the core deps,
+  # without the numba/ydata-profiling dev extras whose own numpy caps otherwise
+  # keep this in check) resolved numpy==2.5.1 and crashed store.build() after a
+  # ~4.4h OCR run completed successfully.
+  "numpy>=1.24,<2.0",
   "gymnasium>=0.29,<1.0",
   "fastapi>=0.111,<0.116",
   "gradio>=4.31,<5.0",
