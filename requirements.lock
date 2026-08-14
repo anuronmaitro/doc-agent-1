@@ -173,8 +173,9 @@ networkx==3.6.1
     # via torch
 nltk==3.10.2
     # via doc-agent (pyproject.toml)
-numpy==2.5.1
+numpy==1.26.4
     # via
+    #   doc-agent (pyproject.toml)
     #   accelerate
     #   contourpy
     #   datasets
@@ -192,7 +193,7 @@ numpy==2.5.1
     #   torchmetrics
     #   torchvision
     #   transformers
-opencv-python-headless==5.0.0.93
+opencv-python-headless==4.11.0.86
     # via doc-agent (pyproject.toml)
 orjson==3.11.9
     # via gradio
@@ -306,7 +307,7 @@ safetensors==0.8.0
     #   transformers
 scikit-learn==1.9.0
     # via sentence-transformers
-scipy==1.18.0
+scipy==1.17.1
     # via
     #   scikit-learn
     #   sentence-transformers
