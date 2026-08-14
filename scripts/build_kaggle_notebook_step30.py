@@ -119,16 +119,14 @@ exactly where it left off. See **"Resuming after a timeout"** near the bottom.
 `src/doc_agent/vision/ocr.py` + `configs/config.yaml`. Change those, then regenerate."""))
 
     cells.append(
-        code(
-            f"""# Resumed push: the 2026-08-13 run's OCR + embeddings are reseeded from the
+        code(f"""# Resumed push: the 2026-08-13 run's OCR + embeddings are reseeded from the
 # checkpoint dataset below, so this push only has to finish chunk -> index -> validate.
 # Set FRESH_START = True and RESEED_DATASET = None for a genuine from-scratch re-OCR.
 FRESH_START = False
 RESEED_DATASET = "{CKPT_DATASET}"
 REPO_URL = "{REPO_URL}"
 BRANCH = "main"
-"""
-        )
+""")
     )
 
     cells.append(md("""## 1. Clone the repo and install pinned dependencies"""))
