@@ -1,0 +1,46 @@
+1014  SCALES OF NOTATION
+For example, in converting X=(2531)_{\oplus} to the decimal scale, we find first X=(10101011001)_{\varpi}\) and then obtain, using (I) with \overline{b}=10=(1010)_{\varpi},
+10 101 011 001/1010=10001 000+1001/1010,
+10 001 000/1010=1101+110/1010,
+1101/1010=1+11/1010,
+1/1010=0+1/1010.
+Thus, on converting to the decimal scale,
+A_{0}=(1001)_{\varpi}=9, A_{1}=(110)_{\varpi}=6,
+A_{2}=(11)_{\varpi}=3, A_{3}=1,
+whence
+X=(1369)_{\varpi}00.
+x=(3.355)_{\varpi}00 to the binary scale.
+We first convert to the octal scale, using decimal arithmetic. By (III), we find with \overline{b}=8
+(0.355)\cdot8=2+0.840, (0.080)\cdot8=0+0.640
+(0.840)\cdot8=6+0.720, (0.640)\cdot8=5+0.120
+(0.720)\cdot8=5+0.760, (0.120)\cdot8=0+0.960
+(0.760)\cdot8=6+0.080, (0.960)\cdot8=7+0.680
+whence x=(0.26560507 \ldots )_{(\varpi)}. Thus, on converting to the binary scale,
+x=(0.010 110 101 110 000 101 000 111 \ldots )_{\varpi}.
+In order that inverse conversion of x from the binary to the decimal scale yield again x to the given number n of decimal digits, we must round x in the binary scale to at least \overline{n} digits where \overline{n} is chosen such that 2^n>10". As a working rule, we may take n\geq\frac{10}{3}n. Hence, to obtain x=(0.355)_{\varpi}00 by inverse conversion, x must be rounded in the binary scale to n\geq\frac{10}{3}3=10 digits. Thus,
+z=(0.010 110 110 0)_{\varpi}.
+To carry out the inverse conversion we can first convert to the octal scale,
+x=(0.266)_{(0)},
+and then apply (IV) with b=8, using decimal arithmetic:
+x_{-2}=6/8+6=6.75,
+x_{-1}=6.75/8+2=2.84375,
+x=2.84375/8=0.355 46875.
+Alternatively, we can apply (III) with \overline{b}=(1010)_{\varpi}, using binary arithmetic:
+(0.010 110 11)\cdot 1010=11+(0.100 011 1),
+(0.100 011 1)\cdot 1010=10+(0.100 011),
+(0.100 011)\cdot 1010=101+(0.011 11),
+(0.011 11)\cdot 1010=100+(0.101 11).
+Converting the integral parts to the decimal scale, we find
+\overline{a}_{-1}=(11)_{\varpi}=3, \overline{a}_{-2}=\overline{a}_{-3}=(101)_{\varpi}=5,
+\tilde{a}_{-i}=(100)_{\varpi}=4,
+and thus
+x=(0.3554)_{\varpi}00
+Note that the fractional part in any step is the unconverted remainder. Thus, to round at any step, it is only necessary to ascertain whether the unconverted portion to be neglected is greater or less than 1; i.e., whether, in the binary scale, the first neglected digit is 1 or 0.
+Example 4. Convert x=(3.141593)_{\varpi}0\cdot 10^{-9} to the binary scale.
+The desired representation is
+x=(1.a_{-1}a_{-2}\cdot\cdot\cdot\cdot\cdot a_{-n})_{\varpi}.2^{-k}\]
+where n and k are such that inverse conversion from the binary scale to the decimal scale will produce x to the same given 15 decimal digits. Accordingly, by the rule stated in Example 3, n and k are to be chosen so as to satisfy n+k\geq\frac{10}{3}\cdot 15=50.
+From Table 28.1 we find
+2^{-29}<(3.141593)_{\varpi}0\cdot 10^{-9}<2^{-29}\]
+Thus, we must take k=29 and, consequently, choose n>21. The conversion on a desk calculator thus proceeds as follows. First, we obtain by use of Table 28.1
+2^{29}x=(1.686

@@ -1,0 +1,43 @@
+958  PROBABILITY FUNCTIONS
+Since R<1, the approximation 26.3.25 is used. This results in
+Px(R^2|2, r^2)=\frac{2(.54)^2}{4+(.54)^2}exp\frac{-2(1.21)^2}{4+(.54)^2}=(.1359)e^{-.682}=.06869
+The answer to SD is .06870.
+Interpolation for Q(x^2|r)
+Sample 11. Find Q(25.298|20) using the interpolation formula given with Table 26.7.
+Taking x^2=25, th=.298 and applying the interpolation formula results in
+A less accurate interpolate may be obtained by setting th' equal to zero in the above formula. This results in the value .19003. The correct value to 6D is Q(25.298|20)=.190259.
+On the other hand if x^2=25.298 is assumed to have an error of +-5x10-4, then how large an error arises in Q(x^2|r)? Denoting the error in x^2 by Dx^2 and the resulting error in Q(x^2|r) by DQ(x^2|r), we then have the approximate relationship
+\Delta Q(x^2|r)\approx\frac{\partial Q(x^2|r)}{\partial x^2}\Delta x^2
+Using 26.4.8 we can write
+
+\[\frac{\partial Q(x^2|r)}{\partial x^2}=\frac{1}{2}[Q(x^2|r-2)-Q(x^2|r)]\]
+and
+
+\[\Delta Q(x^2|r)\approx\frac{1}{2}[Q(x^2|r-2)-Q(x^2|r)]\Delta x^2
+For practical purposes it is sufficient to evaluate the derivative to one or two significant figures. Consequently we can write
+
+\[\frac{\partial Q(x^2|r)}{\partial x^2}\approx\frac{\partial Q(x^2|r)}{\partial x^2}\]
+where x_2^2 is the closest value to x^2 for which Q is tabulated. Hence
+\Delta Q(x^2|r)=\frac{1}{2}[Q(x^2|r-2)-Q(x^2|r)]\Delta x^2
+For this example Dx^2=\pm 5x10^{-4}\text{and x_a=25. This results in
+\Delta Q(x^2|r)=\frac{1}{2}(-.076)(\pm 5)10^{-4}=\pm 2x10^{-8} as the possible error in Q(x^2|r).
+Calculation of Q(x^2|r) Outside the Range of Table 26.7
+Example 12. Find the value of Q(84|72). Since this value is outside the range of Table 26.7 we can approximate Q(84|72) by (1) using the Edgeworth expansion for Q(x^2|r) given in Example 6, (2) the cube root approximation 26.4.14, (3) the improved cube root approximation 26.4.15 or (4) the square root approximation 26.4.13. The results of using all four methods are presented below:
+1. Edgeworth expansion
+The successive terms of the Edgeworth expansion for the distribution of chi-square result in
+1-Q(84|72)=.841345
+.0000000
+.001120
+.842465
+Hence Q(84|72)=.15754.
+The successive terms of the Edgeworth expansion for the distribution of \sqrt{2x^2} result in
+1-Q(84|72)=.842544
+.0000034
+.842372
+Hence Q(84|72)=.15764.
+2. Cube root approximation 26.4.14
+Using the cube root approximation we have
+Q(84|72)=Q(x) where
+This results in Q(84|72)=Q(1.0046)=1-P(1.0046)=.15754.
+3. Improved cube root approximation 26.4.15
+The improved cube root approximation involves calculating a correction factor h, to x. Linearly interpolating for h_b00 (which appears below 26.4.15) with x=1.0046 results in h_b0=-.0006 and hence 

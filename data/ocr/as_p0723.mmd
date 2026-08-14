@@ -1,0 +1,29 @@
+MATEIEV FUNCTIONS (p.1)
+Equation 20.2.2 can be reduced to one of four simpler types, given in 20.2.3 and 20.2.4 below
+20.2.3   y_{n}=\sum_m=0^n  A_{2n+p}cos(2m+p)z, p=0 or1
+20.2.4   y_{1}=\sum_m=0^n  B_{2n+p}sin(2m+p)z, p=0 or1
+If p=0, the solution is of period p; if p=1, the solution is of period 2p.
+Recurrence Relations Among the Coefficients
+Even solutions of period p:
+20.2.5   aA_0-qA_2=0
+20.2.6  (a-4)A_2-q(2A_0+A_4)=0
+20.2.7  (a-m^2)A_m=q(A_{m-2}+A_{m+2})=0
+Even solutions of period 2p:
+20.2.8  (a-1)A_1-q(A_1+A_3)=0, along with 20.2.7 for m>3.
+Odd solutions of period r:
+20.2.9  (a-4)B_2-qB_4=0
+20.2.10  (a~m^2)B_m-q(B_{m-2}+B_{m+2})=0
+Odd solutions of period 2p:
+20.2.11  (a-1)B_1+q(B_1-B_3)=0, along with 20.2.10 for m>3.
+Let
+20.2.12   Ge_m=A_m/A_{m-2}, G_0=B_m/B_m-2;
+G_m=Ge_m or Go_m when the same operations apply to both, and no ambiguity is likely to arise. Further let
+20.2.13   V_m=(a-m^2)/q.
+Equations 20.2.5-20.2.7 are equivalent to
+20.2.14   Ge_2=V_0; Ge_4=V_2-\frac{2}{Ge_2}
+20.2.15   G_m=1/(V_m-G_m+2)  (m>3), for even solutions of period \pi.
+Similarly
+20.2.16   V_1-1=Ge_3; for even solutions of period 2p, along with 20.2.15
+20.2.17   V_1+1=G_0_3, for odd solutions of period 2p, along with 20.2.15
+20.2.18   V_2=Go_4, for odd solutions of period \pi, along with 20.2.15
+20.2.19   G_m=\frac{1}{V_m-G_m+2}, \Gamma=\frac{1}{V_m+2}, \Gamma=\frac{1}{V_m+4}, \Gamma=\frac{1}{V_m+2}, \Gamma=\frac{1}{V_m+2}, \Gamma=\frac{1}{V_m+2}, \Gamma=\frac{1}{V_m+1}, \Gamma=\frac{1}{V_m+2}, \Gamma=\frac{1}{V_m+1}, \

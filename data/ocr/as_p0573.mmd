@@ -1,0 +1,47 @@
+JACOBIAN ELLIPTIC FUNCTIONS AND TETETA FUNCTIONS (continued)
+16.9. Relations Between the Squares of the Functions
+16.9.1  -dn^2u+m_1=-mcn^3u=msn^2u-m
+16.9.2  -m_1nd^2u+m_1=-mmnsd^2u=mcd^2u-m
+16.9.3   m_1scc^2u+m_1=m_1ncc^4u-m
+16.9.4   cs^8u+m_1=ds^2u=ns^3u-m
+In using the above results remember that m+m_1=1.
+If pq u, rt u are any two of the twelve functions, one entry expresses tq^3u in terms of pq^3u and another expresses qt^2u in terms of rt^2u. Since tq^4u\cdot qt^3u=1, we can obtain from the table the bilinear relation between pq^3u and rt^4u. Thus for the functions cd u, sn u we have
+16.9.5   nd^4u=\frac{1-mcd^2u}{m_1}dm^2u=1-msn^2u
+and therefore
+16.9.6  (1-mcd^2u)(1-msn^2u)=m_1.
+16.10. Change of Parameter
+Negative Parameter
+If m is a positive number, let
+16.10.1  \mu=\frac{m}{1+m}\mu_1=\frac{1}{1+m'}v=\frac{u}{\mu_1}\quad(0<\mu<1)
+16.10.2   sn(u|-m)=\mu_1^sd (v|\mu)
+16.10.3   cn(u|-m)=cd (v|\mu)
+16.10.4   dn(u|-m)=nd (v|\mu).
+16.11. Reciprocal Parameter (Jacobi's Real Transformation)
+16.11.1  \mu>0,\mu=m^{-1},\rho=um^{1/2}
+16.11.2   sn(u|m)=\mu^{1/2}Sn (v|\mu)
+16.11.3   cn(u|m)=dn (v|\mu)
+16.11.4   dn(u|m)=cn (v|\mu)
+Here if m>1 then m^1=\mu<1.
+Thus elliptic functions whose parameter is real can be made to depend on elliptic functions whose parameter lies between 0 and 1.
+16.12. Descending Landen Transformation (Gauss' Transformation)
+To decrease the parameter, let
+16.12.1  \mu=\left(\frac{1-m_1^{1/2}}{1+m_1^{1/2}}\right)^2,v=\frac{u}{1+\mu^{1/2}}\]
+then
+16.12.2   sn(u|m)=\frac{\left\langle 1+\mu^{1/2}\right\rangle\sin(v|\mu)}{1+\mu^{1/2}\sin^2(v|\mu)}
+16.12.3   cn(u|m)=\frac{\mathrm{cn}(v|\mu)\mathrm{dn}(v|\mu)}{1+\mu^{1/2}\sin^2(v|\mu)}
+16.12.4   dn(u|m)=\frac{\mathrm{dn}^2(v|\mu)-(1-\mu^{1/2})}{\mathrm{(1+\mu^{1/2})-dn}^2(v|\mu)}.
+Note that successive applications can be made conveniently to find sn (u|m) in terms of sn (v|\mu) and dn (u|m) in terms of dn (v|\mu), but that the calculation of cn (u|m) requires all three functions.
+16.13. Approximation in Terms of Circular Functions
+When the parameter m is so small that we may neglect m^2 and higher powers, we have the approximations
+16.13.1
+sn(u|m)\approx\sin u-\frac{1}{4}m(u-\sin u\cos u)\cos u
+16.13.2
+cn(u|m)\approx\cos u+\frac{1}{4}m(u-\sin u\cos u)\sin u
+16.13.3   dn(u|m)\approx 1-\frac{1}{2}m\sin^2u
+16.13.4   am(u|m)\approx u-\frac{1}{4}m(u-\sin u\cos u).
+One way of calculating the Jacobian functions is to use Landen's descending transformation to reduce the parameter sufficiently for the above formulae to become applicable. See also 16.14.
+16.14. Ascending Landen Transformation
+To increase the parameter, let
+16.14.1  \mu=\frac{4m^{1/2}}{(1+m^{1/2})^1}\mu_1=\left(\frac{1-m^{1/2}}{1+m^{1/2}}\right)^2,v=\frac{u}{1+\mu_1/2}\]
+16.14.2   sn(u|m)=(1+\mu_1/2)\frac{\mathrm{sn}(v|\mu)\mathrm{cn}(v|\mu)}{\mathrm{dn}(v|\mu)}
+16.14.3   cn(u|m)=\frac{1+\mu_1/2}{\mu}\frac{\mathrm{dn}^2(v|\mu)-\mu_1/2}{\mathrm{dn}(

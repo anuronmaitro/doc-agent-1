@@ -1,0 +1,49 @@
+PROBABILITY FUNCTIONS (p.40)
+Integral Over an Ellipse With Center at (m_x, m_y)
+26.3.21
+\iint_{A}(\sigma_x\sigma_y)^{-1}g\left(\frac{x-m_z}{\sigma_x},\frac{y-m_y}{\sigma_y},\rho\right)dxdy=1-e^{-\sigma/2}\]
+where A is the area enclosed by the ellipse
+\Big(\frac{x-m_x}{\sigma_x}\Big)^2-\frac{2\rho(x-m_x)}{\sigma_x\sigma_y}+\Big(\frac{y-m_y}{\sigma_y}\Big)^2=a^2(1-\rho^2)
+Integral Over an Arbitrary Region
+26.3.22
+\iint_{A^{*}(k,\eta)}(\sigma_x\sigma_y)^{-1}g\Big(\frac{x-m_x}{\sigma_x},\frac{y-m_y}{\sigma_y},\rho\Big)dxdy=\iint_{A^{*}(k,\eta)}g(s,t,0)dsdt
+where A'(s, t) is the transformed region obtained from the transformation
+\[s=\frac{1}{\sqrt2+2\rho}\Big(\frac{x-m_x}{\sigma_x}+\frac{y-m_y}{\sigma_y}\Big)
+t=\frac{-1}{\sqrt2-2\rho}\Big(\frac{x-m_x}{\sigma_x},\frac{y-m_y}{\sigma_y}\Big)
+Integral of the Circular Normal Probability Function With Parameters m_z=m_z=0,\sigma=1 Over the Triangle Bounded by y=0, y=ax, x=h
+26.3.23
+V(h,ah)=\frac{1}{2\pi}\int_0^{\infty}\int_0^{\infty}e^{-ix^2+x^2+y^2}dxdy
+=\frac{1}{4}+L(h,0,\rho)-L(0,0,\rho)-\frac{1}{2}Q(h) where
+r=-\frac{a}{\sqrt1+a^2}
+Integral of Circular Normal Distribution Over an Offset Circle With Radius R and Center a Distance r r From (m_x, m_y)
+26.3.24
+\int_x\int\sigma^{-2}g\Big(\frac{x-m_x}{\sigma},\frac{y-m_y}{\sigma},0\Big)dxdy=P(R^2|2,r^2)
+where P(R^2|2,r^2) is the c.d.f. of the non-central x^2 distribution (see 26.4.25) with r=2 degrees of freedom and noncentrality parameter r^2.
+Approximation to P(R^2|2,r^2)
+Approximation Condition
+2R^2+R^2 exp-\frac{2r^2}{4+R^2} R<1
+26.3.26 P(x_1) R>1
+26.3.27 P(x_2) R>5
+x_1=\frac{[R^2/(2+r^2)]^{1/\alpha}-[1-\frac29\frac{2+2r^2^2}{(2+r^2)^2}]}{[2\frac2+2r^2^2^2+r^2]^2}
+x_2=r-\sqrtR^2-1
+26.3.28
+Inequality
+Q(h)-\frac{1-\rho^2}{\rho h-k}Z(k)\Big[Q\Big(\frac{h-\rho k}{\sqrt1-\rho^2}\Big)]<L(h,k,\rho)<Q(h)
+where
+ph-k>0,0<p<1.
+Series Expansion
+26.3.29
+L(h,k,\rho)=Q(h)Q(k)+\sum_n=0,Z^{(n)}(h)Z^{(n)}(k)\over(n+1)!}\rho^{n+1}
+26.4. Chi-Square Probability Function
+26.4.1
+P(x^2|r)=\Big[2^{\mu/2}\Gamma\Big(\frac2\nu\Big)^{-1}\int_0^{x^2}(t)^{\frac2}-1e^{-\fract2}dt\]
+(0<x^2<o)
+26.4.2
+Q(x^2|r)=1-P(x^2|r)
+(0<x^2<o)
+=\Big[2^{\mu/2}\Gamma\Big(\frac2\nu\Big)^{-1}\int_x^2}(t)^{\frac2}-1e^{-\fract2}dt\]
+Relation to Normal Distribution
+Let X_1, X_2, \ldots, X_r, be independent and identically distributed random variables each following a normal distribution with mean zero and unit variance. Then X_2=\sum\limits_{i=1}^x_2i is said to follow the chi-square distribution with r degrees of freedom and the probability that X_2<x' is given by P(x^2|r).
+Cumulants
+26.4.3
+x_n+1=2^n_1y  (n=0,1,\ldots)

@@ -1,0 +1,25 @@
+732  M_{1}^{\nu}(z, q)=\frac{1}{C_{2s}}\sum_{n=-\infty}^{\infty}c_{n}^{\nu}(-1)^{n}Z_{n+1}^{\nu}(\sqrt{q}e^{\nu})J_{n-i}(\sqrt{q}e^{-\eta})\]
+
+It can be verified from 20.4.8 and 20.4.12 that
+20.4.13  \frac{y_{1}^{(1)}(x)}{M_{2}^{\nu}(z, q)}=F_{\nu}(0), (\partial x\rho>0) provided \(c_{n}\mapsto 0\). If \(c_{2s}=0\), the coefficient of 1/e_{2s} in 20.4.11 vanishes identically. For details see [20.43], [20.15], [20.36].
+
+If s is chosen so that |c_{2s}| is the largest coefficient of the set |c_{2s}|, then rapid convergence of 20.4.12 is obtained, when \(\partial x\rho>0\). Even then one must be on guard against the possible loss of significant figures in the process of summing the series, especially so when q is large, and |z| small. (If j\mapsto1, then the phase of the logarithmic terms occurring in 20.4.12 must be defined, to make the functions single-valued.)
+20.5. Properties of Orthogonality and Normalization
+If a(v+2p, q), a(v+2s, q) are simple roots of 20.3.10 then
+20.5.1  \int_{0}^{\pi r}F_{r+2p}(z)F_{r+2s}(-z)dz=0, if p\neq s. Define
+20.5.2   ce_{s}(z, q)=\frac{1}{2}[F_{\nu}(z)+F_{\nu}(-z)];
+ses, (z, q)=-i\frac{1}{2}[F_{\nu}(z)-F_{\nu}(-z)]
+ce_{s}(z, q), se_{s}(z, q) are thus even and odd functions of z, respectively, for all v (when not identically zero).
+If r is an integer, then ee_{r}(z, q), se_{s}(z, q) are either Floquet solutions or identically zero. The solutions ce_{r}(z, q) are associated with a_r; se_{r}(z, q) are associated with b_r; r an integer.
+Normalization for Integral Values of r and Real q
+20.5.3  \int_{0}^{2\pi}[ce_{r}(z, q)]dz=\int_{0}^{2\pi}[se_{r}(z, q)]dz=\pi
+For integral values of r the summation in 20.3.8 reduces to the simpler forms 20.2.3-20.2.4; on account of 20.5.3, the coefficients A_{n} and B_{n} (for all orders r) have the property
+20.5.4  2A_{0}^{2+}+A_{1}^{2+}+\dots=A_{1}^{2+}+A_{2}^{2+}+\dots=B_{1}^{2+}+B_{2}^{2+}+\dots=B_{2}^{2+}+B_{2}^{2+}+\dots=1.\]
+20.5.5   A_{0}^{2+}=\frac{1}{2\pi}\int_{0}^{2\pi}ce_{s}(z, q)dz;A_{t}^{2+}=\frac{1}{\pi}\int_{0}^{2\pi}ce_{r}(z, q)\cos nzdz
+B_{t}^{2+}=\frac{1}{\pi}\int_{0}^{2\pi}se_{r}(z, q)\sin nzdz
+n\mapsto 0
+For integral values of r, the functions ee_{r}(z, q) and se_{e}(z, q) form a complete orthogonal set for the interval o\leq z\leq 2\pi. Each of the four systems ee_{r}(z), ee_{r+1}(z), ee_{r+2}(z), se_{m}(z), se_{k+1}(z) is complete in the smaller interval 0\leq z\leq 1\pi, and each of the systems ee_{r}(z), se_{r}(z) is complete in 0\leq z\leq\pi.
+If q is not real, there exist multiple roots of 20.3.10; for such special values of a(q), the integrals in 20.5.3 vanish, and the normalization is therefore impossible. In applications, the particular normalization adopted is of little importance, except possibly for obtaining quantitative relations between solutions of various types. For this reason the normalization of F_{\nu}(z), for arbitrary complex values of a, q, will not be specified here. It is worth noting, however, that solutions
+acc_{r}(z, q), \beta se_{r}(z, q) defined so that
+acc_{r}(0, q)=1; \left[\frac{d}{dz}\beta se_{r}(z, q)\right]_{z=0}=1\]
+are always possible. This normalization has in fact been used in [20.59], and also in [20.58], where 

@@ -1,0 +1,28 @@
+INTEGRALS OF BESSEL FUNCTIONS (p.1)
+Rexurrence Relations
+11.2.5  \tau(r-1)f_{r+1, n}(z)=2(r-1)g_{r, n}(z)  -[(1-r)^2-n^2+z]f_{r-1, n}(z)  +(2r-3)g_{r-2, n}(z)-z^2f_{r-3, n}(z)
+11.2.6  \tau f_{r+1, o}(z)=2f_{r,0}(z)-(r-1)f_{r-1,0}(z)+g_{r-2,0}(z)
+11.2.7  \tau f_{r+1, n+1}(z)=f_{r+1, n-1}(z)-2f_{r, n}(z)
+Repeated Integrals of K_0(z)
+Let
+11.2.8  \mathrm{Ki}_0(z)=K_0(z),
+\mathrm{Ki}_1(z)=\int_{z}^{\infty}K_0(t)dt, \ldots, \mathrm{Ki}_1(z)=\int_{z}^{\infty}\mathrm{Ki}_{r-1}(t)dt
+11.2.9  \mathrm{Ki}_{-r}(z)=(-)^{\gamma}\frac{d^{\gamma}}{dz^{\sigma}}K_0(z)
+Then
+11.2.10  \mathrm{Ki}_1(z)=\int_{0}^{\infty}\frac{e^{-z\cosh t}dt}{\cosh^T(\pi z\geq 0,\,\beta r>0,\,\beta r>0,\,r=0)}
+11.2.11  \mathrm{Ki}_1(z)=\frac{1}{\Gamma(\nu)}\int_{z}^{\infty}(t-z)^{r-1}K_0(t)dt
+(\beta r\geq 0,\,\beta r>0)
+11.2.12  \mathrm{Ki}_12\nu(0)=\frac{\Gamma(\nu)\Gamma(\lambda)}{\Gamma(\nu+\frac{1}{2})}\qquad(\beta r>0)
+11.2.13  \mathrm{Ki}_12\nu+1(0)=\frac{\frac{\pi}{2}\Gamma(\nu+\frac{1}{2})}{\Gamma(\frac{1}{2})\Gamma(\nu+1)}\qquad(\beta r>-\frac{1}{2})
+11.2.14  \mathrm{rKi}_{r+i+i}(z)=-z\mathrm{Ki}_1\nu(z)+(r-1)\mathrm{Ki}_{r-1}(z)+z\mathrm{Ki}_{r-1}(z)
+11.3. Reduction Formulas for Indefinite Integrals
+Let
+11.3.1   g_{s,\nu}(z)=\int^{z}e^{-rt}\nu Z_{r}(t)dt
+where Z_1(z) represents any of the Bessel functions of the first three kinds or the modified Bessel functions. The parameters a and b appearing in the reduction formulae are associated with the particular type of Bessel function as delineated in the following table.
+Table captions: 
+\begin{tabular}{c c c}
+11.3.2 & Z_r(z) & a & b \\ J_{\nu}(z), Y_{r}(z), H_{\nu}^{(1)}(z), H_{\nu}^{(2)}(z) & 1 & 1 \\ J_{\nu}(z) & -1 & 1 \\ K_{\nu}(z) & 1 & -1 \\
+11.3.3  \mathrm{pg}_{\mu,\nu}(z)=-e^{-zt}\nu Z_{r}(z) & +(\mu+\nu)g_{\mu-1,\nu}(z)-ag_{\mu,\nu+1}(z) \\
+11.3.4  \mathrm{pg}_{\mu,\nu+1}(z)=-e^{-zt}\nu Z_{\nu+1}(z) & +(\mu-\nu-1)g_{\mu-1,\nu+1}(z)+bg_{\mu,\nu}(z) \\
+11.3.5  \mathrm{(p^2+ab)g_{\mu,\nu}(z)=ae^{-pt}\nu Z_{\nu+1}(z)} +(\mu-\nu-1)e^{-zt}\nu z^{-1}Z_{r}(z)-pe^{-zt}\nu Z_{r}(z) +p(2\mu-1)g_{\mu-1,\nu}(z)+[p^2-(\mu-1)^2]g_{\mu-2,\nu}(z) \\
+11.3.6  \mathrm{a}(\nu-\mu)g_{\mu,\nu+1}(z)=-2re^{-pt}\nu z^{\prime}Z_{r}(z)-2rpg_{\mu,\nu}(z) +b(\mu+\nu)g_{\mu,\nu-1}(z) \\ Case 1: \mathrm{p^2+ab=0,\,\nu=\pm(\mu-1)} \mathrm{11.3.7} \mathrm{g

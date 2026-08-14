@@ -1,0 +1,22 @@
+Bessel FUNCTIONS OF INTEGER ORDER
+and multiplying the trial values by this factor we obtain the required results, given in the third column. As a check we may verify the value of \(J_{0}(1.55)\) by interpolation in Table 9.1.
+
+OF INTEGER ORDER  Remarks. (i) An alternative way of computing \(Y_{0}(x),\) should \(J_{0}(x),\)\(J_{2}(x),\)\(J_{4}(x),\cdot\cdot\cdot,\) be available (see Example I), is to use formula 9.1.89. The other starting value for the recurrence, \(Y_{1}(x),\) can then be found from the Wronskian relation \(J_{1}(x)Y_{0}(x)-J_{0}(x)Y_{1}(x)=2/(\pi x).\) This is a convenient procedure for use with an automatic computer.  (ii) Similar methods can be used to compute the modified Bessel function \(K_{n}(x)\) by means of the recurrence relation 9.6.26 and the relation 9.6.54, except that if \(x\) is large severe cancellation will occur in the use of 9.6.54 and other methods for evaluating \(K_{0}(x)\) may be preferable, for example, use of the asymptotic expansion 9.7.2 or the polynomial approximation 9.8.6.
+Example 3. To evaluate \(J_{0}(.36)\) and \(Y_{0}(.36)\) each to 5 decimals, using the multiplication theorem. From 9.1.74 we have
+
+\[\mathcal{C}_{0}(\lambda z)=\sum_{k=0}^{\infty}a_{k}\mathcal{C}_{k}(z),\text{ where }a_{k}=\frac{(-)^{k}(\lambda^{2}-1)^{k}(\tfrac{2}z)^{k}}{k!}.\]
+
+We take \(z=4.\) Then \(\lambda=9,\)\((\lambda^{2}-1)(\tfrac{3}z)=-.038,\) and extracting the necessary values of \(J_{k}(.4)\) and \(Y_{k}(.4)\) from Tables 9.1 and 9.2, we compute the required results as follows:
+
+\begin{tabular}{l c c}   \[k\] & \[a_{k}\] & \[a_{k}Y_{k}(.4)\] & \[a_{k}Y_{k}(.4)\] \\   \[0+1.0\] & \[+.96040\] & \[-.60602\] \\   \[1+0.038\] & \[+.00745\] & \[-.06767\] \\   \[2+0.7220\times 10^{-3}\] & \[+.00001\] & \[-.00599\] \\   \[3+0.914\times 10^{-5}\] & \[-.00074\] \\   \[4+0.87\times 10^{-7}\] & \[-.00011\] \\   \[5+0.7\times 10^{-9}\] & \[-.00002\] \\ \end{tabular}
+
+**Remark.** This procedure is equivalent to interpolating by means of the Taylor series
+
+\[\mathcal{C}_{0}(z+h)=\sum_{k=0}^{\infty}\frac{h^{k}}{k!}\mathcal{C}_{0}(z)\]
+
+at \(z=4,\) and expressing the derivatives \(\mathcal{C}_{0}^{(\lambda)}(z)\) in terms of \(\mathcal{C}_{k}(z)\) by means of the recurrence relations and differential equation for the Bessel functions.
+Example 4. To evaluate \(J_{s}(x),\)\(J_{r}(x),\)\(Y_{y}(x)\) and \(Y_{r}^{\prime}(x)\) for \(r=50,\)\(x=75,\) each to 6 decimals.
+
+We use the asymptotic expansions 9.3.35, 9.3.36, 9.3.43, and 9.3.44. Here \(z=x/y=3/2.\) From 9.3.39 we find
+
+\[\frac{2}{3}(-\xi)^{3/2}=\frac{1}{2}\sqrt{5}-\arccos\frac{2}{3}=+.2769653.\]

@@ -1,0 +1,24 @@
+629
+18. Weierstrass Elliptic and Related Functions
+Mathematical Properties
+18.1. Definitions, Symbolism, Restrictions and Conventions
+An elliptic function is a single-valued doubly periodic function of a single complex variable which is analytic except at poles and whose only singularities in the finite plane are poles. If \omega and \omega' are a pair of (primitive) half-periods of such a function f(z), then f(z+2M\omega+2N\omega')=f(z), M and N being integers. Thus the study of any such function can be reduced to consideration of its behavior in a _fundamental period parallelogram_ (FPP). An elliptic function has a finite number of poles (and the same number of zeros) in a FPP; the number of such poles (zeros) (an irreducible set) is the order of the function (poles and zeros are counted according to their multiplicity). All other poles (zeros) are called _congruent_ to the irreducible set. The simplest (nontrivial) elliptic functions are of order two. One may choose as the standard function of order two either a function with two simple poles (Jacobi's choice) or one double pole (Weierstrass' choice) in a FPP.
+
+_Weierstrass' \(\mathcal{O}\)-Function._ Let \omega, \omega' denote a pair of complex numbers with \(\mathcal{I}(\omega^{/}\omega)>0\). Then \(\mathcal{O}(z)=\mathcal{O}(z|\omega_{i}\omega')\) is an elliptic function of order two with periods 2\omega, 2\omega' and having a double pole at z=0, whose principal part is \(z^{-2}\); \(\mathcal{O}(z)-z^{-2}\) is analytic in a neighborhood of the origin and vanishes at z=0.
+
+_Weierstrass' \(\mathcal{I}\)-Function_\xi(z)=\zeta(z|\omega, \omega') satisfies the condition \(\zeta'(z)=-\mathcal{O}(z)\); further, \xi(z) has a simple pole at z=0 whose principal part is \(z^{-1}\); \(\mathcal{K}(z)-z^{-1}\) vanishes at z=0 and is analytic in a neighborhood of the origin. \xi(z) is NOT an elliptic function, since it is not periodic. However, it is quasi-periodic (see "period" relations), so reduction to FPP is possible.
+
+_Weierstrass' \(\sigma\)-Function_\sigma(z)=\sigma(z|\omega, \omega') satisfies the condition \(\sigma'(z)/\sigma(z)=\zeta(z)\); further, \sigma(z) is an entire function which vanishes at the origin. Like \xi, it is NOT an elliptic function, since it is not periodic. However, it is quasi-periodic (see "period" relations), so reduction to FPP is possible.
+
+Invariants \rho_2\text{ and }\rho_3\)
+Let W=2M\omega+2N\omega', M and N being integers. Then
+18.1.1  g_4=602'W-4 and g_5=1402'W-6
+are the INVARIANTS, summation being over all pairs M, N except M=N=0.
+Alternate Symbolism Emphasizing Invariants
+18.1.2 \begin{pmatrix}\mathcal{D}(z)=\mathcal{D}(z;g_3,g_3)\\ \mathcal{D}'(z)=\mathcal{D}'(z;g_2,g_3)\\ \mathcal{E}(z)=\mathcal{E}(z;g_3,g_3)\end{pmatrix}\] Fundamental Differential Equation, Discriminant and Related Quantities
+18.1.6 \begin{pmatrix}\mathcal{D}^{\prime\prime}(z)=4\mathcal{D}^{3}(z)-g_3 \mathcal{D}(z)-g_3\\ \mathcal{E}(z)=\mathcal{D}^{\prime\prime}(z;g_3,g_3)\end{pmatrix}\] Fundamental Differential Equation, Discriminant and Related Quantities
+18.1.7 \begin{pmatrix}\mathcal{D}^{\prime\prime}(z)=4\mathcal{D}^{3}(z)-g_3 \mathcal{D}(z)-g_3\\ \mathcal{E}(z)-e_1)(\mathcal{D}(z)-e_2)(\mathcal{D}(z)-e_3) \\ \end{pmatrix}\] Fundament Differential Equation, Discriminant and Related Quantities
+18.1.8 \begin{pmatrix}\Delta=g_3^2-27g_3^2=16(e_2-e_3)^2(e_3-e_1)^2(e_1-e_2)^2 \\ \end{pmatrix}\]
+18.1.9 \begin{pmatrix}g_2=-4(e_1e_2+e_1e_3+e_2e_3)=2(e_1^2+e_2^2+e_3^2) \\ \end{pmatrix}\]
+18.1.10 \begin{pmatrix}g_3=4e_1e_2e_3=\frac{4}{3}(e_1^3+e_2^2+e_3^2) \\ \end{pmatrix}\]
+18.1.11 \begin{pmatrix}e_1+e_2+e_2=0 \\ e_1^2+e_2^2+e_2^2+e_3^2

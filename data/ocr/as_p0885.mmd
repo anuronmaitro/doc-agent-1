@@ -1,0 +1,23 @@
+NUMBERICAL ANALYSIS (p.85)
+Laplacian
+25.3.30
+\nabla^{2}u_{0,0}=\frac{1}{h^{2}}(u_{1,0}+u_{0,1}+u_{-1,0}+u_{0,-1}-4u_{0,0})+O(h^{2})
+25.3.31
+\nabla^{2}u_{0,0}=\frac{1}{12h^{2}}[-60u_{0,0}+16(u_{1,0}+u_{0,1}+u_{-1,0}+u_{0,-1})-(u_{2,0}+u_{0,2}+u_{-2,0}+u_{0,-2})]+O(h^{4})
+Biharmonic Operator
+25.3.32
+\nabla^{4}u_{0,0}=\frac{1}{32x^{2}}+2\frac{\partial^{4}u}{\partial^{2}\partial y^{2}}+\frac{\partial^{4}u}{\partialy^{4}})_{0,0}=\frac{1}{h^{4}}[20u_{0,0}-8(u_{1,0}+u_{0,1}+u_{-1,0}+u_{0,-1})+2(u_{1,1}+u_{-1,1}+u_{-1,1}+u_{-1,-1})+(u_{0,2}+u_{2,0}+u_{-2,0}+u_{0,-2})]+O(h^{2})
+\nabla^{4}u_{0,0}=\frac{1}{6h^{4}}[-(u_{0,3}+u_{0,-3}+u_{0,0}+u_{-2,0})+14(u_{0,2}+u_{0,-2}+u_{0,-2}+u_{-2,0})-77(u_{0,1}+u_{0,-1}+u_{0,1}+u_{-1,0})+184u_{0,0}+20(u_{1,1}+u_{1,-1}+u_{-1,1}+u_{-1,-1})-(u_{1,2}+u_{1,1}+u_{-1,-2}+u_{-2,1}+u_{-1,-2}+u_{-2,1}+u_{-1,-2}+u_{-2,-1})+u_{0}(h^{4})
+25.4. Integration
+Trapezoidal Rule
+25.4.1
+\int_{x_{0}}^{x_{1}}f(x)dx=\frac{h}{2}(f_{0}+f_{1})-\frac{1}{2}\int_{x_{0}}^{x_{1}}(t-z_{0})(x_{1}-t)f^{\prime\prime}(t)dt=\frac{h}{2}(f_{0}+f_{1})-\frac{h^{3}}{12}f^{\prime\prime}(\xi)(x_{0}<k<z_{1}) Extended Trapezoidal Rule
+25.4.2
+\int_{x_{0}}^{x_{m}}f(x)dx=h\left[\frac{f_{0}}{2}+f_{1}+\ldots+f_{m-1}+\frac{f_{m}}{2}\right]-\frac{mk^{3}}{12}f^{\prime\prime}(\xi)
+Error Term in Trapezoidal Formula for Periodic Functions
+If f(x) is periodic and has a continuous kth derivative, and if the integral is taken over a period, then
+25.4.3
+|Error|<=\frac{\text{constant}}{m^{k}} Modified Trapezoidal Rule
+25.4.4
+\int_{x_{0}}^{x_{m}}f(x)dx=h\left[\frac{f_{0}}{2}+f_{1}+\ldots+f_{m-1}+\frac{f_{m}}{2}\right]+\frac{h}{24}[-f_{-1}+f_{1}+f_{n-1}-f_{m+1}]+\frac{11m}{720}h^{5/(\alpha)}
+

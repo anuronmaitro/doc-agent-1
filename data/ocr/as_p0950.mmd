@@ -1,0 +1,22 @@
+950  PROBABILITY FUNCTIONS
+which occur in
+X_{n+1}=a_x_X_n+b_s  (mod T)
+When a is chosen so that a  \pi^{T/2}, the correlation p_i\pi T^{-\nu/2}.
+The sequence defined by the multiplicative congruence method will have a full period of T numbers if
+(i)    b is relatively prime to T
+(ii)    a=1 (mod p) if p is a prime factor of T
+(iii)    a=1 (mod 4) if 4 is a factor of T.
+Consequently if T=2^n, b need only be odd, and
+Congurence methods for generating random numbers
+X_{n+1}=X_n+b(mod T), T and b relatively prime
+When the numbers are generated using a congruence scheme, the least significant digits have short periods. Hence the entire word length cannot be used. If one desired random numbers with as many digits as possible, one would have to modify the congruence schemes. One way is to generate the numbers mod T+1. This unfortunately reduces the period. An alternative way which makes use of double precision arithmetic on a computer is to let T=t' and modify 26.8.1 to be
+X_{n+1}=(T+1)X_n+b(mod T)
+where b is chosen relatively prime to (T+1). The most significant q digits of X_n are used as the random number. That is if X_n=(Y_n, Z_n) where Y_n and Z_n both contain q digits, the random number used would be Y_n. When b<T this method consists of
+Y_{n+1}=Y_n+Z_n+ {carry of Z_n+b, mod T}, mod T
+It results in the correlation between X_n and X_n+ being approximately r_e_I-1 for (s<T).
+Generation of Random Deviates
+Let {X} be a generated sequence of independent random numbers having the domain (0, T). Then {U}=(T^{-1}X) is a sequence of random deviates (numbers) from a uniform distribution on the interval (0, 1). This is usually a necessary preliminary step in the generation of random deviates having a given cumulative distribution function F(y) or probability density function f(y). Below are summarized some general techniques for producing arbitrary random deviates. (In what follows {U} will always denote a sequence of random deviates from a uniform distribution on the interval (0, 1).)
+1. Inverse Method
+The solutions {y} of the equations {u=F(y)} form a sequence of independent random deviates with cumulative distribution function F(y). (If F(y) has a discontinuity at y=y_0, then whenever u is such that F(y_0=0)<u<F(y_0), select y0 as the corresponding deviate.) Generally the inverse method is not practical unless the inverse function y=F^{-1}(u) can be obtained explicitly or can be conveniently approximated.
+2. Generating a Discrete Random Variable
+Let Y be a discrete random variable with point probabilities p_i=Pr(Y=y_1) for i=1, 2,

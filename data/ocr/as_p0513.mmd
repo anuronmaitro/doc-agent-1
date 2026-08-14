@@ -1,0 +1,43 @@
+CONFLUENT HYPERGEOMETRIC FUNCTIONS 513
+Thus the values of \(M_{x,\mu}(x)\) and \(W_{x,\mu}(x)\) can always be found if the values of \(M(a,b,x)\) and \(U(a,b,x)\) are known.
+13.9. Calculation of Zeros and Turning Points
+Example 14. Compute the smallest positive zero of \(M(-4,.6,x)\). This is outside the range of Table 13.2. Using 13.7.2 we have, as a first approximation
+
+\[X_{0}=\frac{(.55\pi)^{2}}{17.2}=.174.\]
+Using 13.7.3 we have
+
+\[X_{1}=X_{0}-M(-4,.6,X_{0})/M^{\prime}(-4,.6,X_{0}).\]
+But, by 13.4.8,
+
+\[M^{\prime}(-4,.6,X_{0})=-(.15)^{-1}M(-3,1.6,X_{0})\]
+Hence
+
+\[X_{1}=X_{0}+.15M(-4,.6,X_{0})/M(-3,1.6,X_{0}),\]
+
+\[=.174+(.15)(.030004)\]
+
+\[=.17850\text{ as a second approximation.}\]
+If we repeat this calculation, we find that
+
+\[X_{2}=X_{1}+.00002~99=.17852~99~to~7S.\]
+Calculation of Maxima and Minima
+Example 15. Compute the value of \(x\) at which \(M(-1.8,-.2,x)\) has a turning value. Using 13.4.8 and Table 13.2, we find that \(M^{\prime}(-1.8,-.2,x)\) = 9 M(-.8,.8,x)=0 when \(x=.94291~59\). Also \(M^{\prime\prime}(-1.8,-.2,x)=9M^{\prime}(-.8,.8,x)=-9M(2,1.8,x)\) and \(M(.2,1.8,94291~59)>0. Hence \(M(-1.8,-.2,x)\) has a maximum in \(x\) when x=.94291~59.
+
+Example 16. Compute the smallest positive value of \(x\) for which \(M(-3,.6,x)\) has a turning value, \(X_{1}^{\prime}\). This is outside the range of Table 13.2. Using 13.4.8 we have
+
+\[M^{\prime}(-3,.6,x)=-3M(-2,1.6,x)/.6.\]
+By 13.7.2 for \(M(-2,1.6,x)\),
+
+\[X_{0}=(1.05\pi)^{2}/(11.2)=.9715.\]
+This is a first approximation to \(X_{0}^{\prime}\) for \(M(-3,.6,x)\). Using 13.7.5 and 13.4.8 we find a second approximation
+
+\[X_{1}^{\prime}=X_{0}^{\prime}[1-\frac{M^{\prime}(-3,.6,X_{0}^{\prime\prime})}{-3M(-3,.6,X_{0}^{\prime\prime})}]\]
+
+\[=X_{0}^{\prime}[1-M(-2,1.6,X_{0}^{\prime})/.6M(-3,.6,X_{0}^{\prime\prime})]\]
+
+\[=.9715\times 1.0163=.9873~to~4S.\]
+This process can be repeated to give as many significant figures as are required.
+FIGURE 13.1.
+shows the curves on which \(M(a,b,x)\) =0 in the \(a,b\) plane when \(z=1\). The function is positive in the unshaded areas, and negative in the shaded areas. The number in each square gives the number of real positive zeros of \(M(a,b,x)\) as a function of \(x\) in that square. The vertical boundaries to the left are to be included in each square.
+13.10. Graphing \(M(a,b,x)\)
+Example 17. Sketch \(M(-4.5,1,x)\). Firstly, from Figure 13.1 we see that the function has five real positive zeros. From 13.5.1, we find that \(M\rightarrow-\infty\), \(M^{\prime}\rightarrow-\infty\) as \(x\rightarrow+\infty\) and that \(M\rightarrow+\infty\), \(M^{\prime}\rightarrow+\infty\) as \(x\rightarrow-\infty\). By 13.7.2 we have as first approximations to the zeros, .3, .1, .5, .7, 6.9, 10.6, and by 13.7.2 and 13.4.8 we find as first approximations to the turning values .9,

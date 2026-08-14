@@ -1,0 +1,31 @@
+BESSEL FUNCTION (p.1.72)
+| |
+
+9.1.75 \mathcal{C},(w\pm v)=\sum_{k=-\infty}^{\infty}\mathcal{C}_{v\mp k}(w)J_{k}(v) (|v|<|w|)
+The restriction |v|<|w| is unnecessary when \mathcal{C}=J\) and \nu is an integer or zero. Special cases are
+9.1.76 |1=J_{0}^{2}(z)+2\sum_{k=1}^{\infty}J_{k}^{2}(z)
+9.1.77 |0=\sum_{k=0}^{2m}(-)^{k}eJ_{k}(z)J_{2n-k}(z)+2\sum_{k=1}^{\infty}J_{k}(z)J_{2n+k}(z) (n>1)
+9.1.78 |J_{n}(2z)=\sum_{k=0}^{2n}J_{k}(z)J_{n-k}(z)+2\sum_{k=1}^{\infty}(-)^{k}eJ_{k}(z)J_{n+k}(z)
+Graf's
+9.1.79 |\mathcal{C},(w)\sum_{k=-\infty}^{\infty}\mathcal{C}_{v+k}(w)J_{k}(v)\sum_{i=1}^{\infty}k\alpha(|ve^{\pm i\alpha}|<|w|)
+Gegenbauer's
+9.1.80 |\mathcal{C},(w)|w^{\nu}=2^{\nu}\Gamma(v)\sum_{k=0}^{\infty}(v+k)\frac{\mathcal{C}_{v+k}(w)}{w^{\nu}}\frac{eJ_{v+k}(v)}{w^{\nu}}\frac{e^{\nu}(v)}{w^{\nu}}C_{k}^{(\nu)}(cos\alpha)
+(v\neq 0,-1,\dots,|ve^{\pm i\alpha}|<|w|)
+
+S OF INTEGER ORDER 363
+In 9.1.79 and 9.1.80, w=\sqrt{(u^2+v^2-2w\cos\alpha)}, u-v\cos\alpha=w\cos\chi, v\sin\alpha=w\sin\chi the branches being chosen so that w-u and x-x0 as r-0. C'(z)(cos a) is Gegenbauer's polynomial (see chapter 22).
+Gegenbauer's addition theorem.
+If u, v are real and positive and 0<a<=\pi, then w,\chi are real and non-negative, and the geometrical relationship of the variables is shown in the diagram.
+The restrictions |pe^{\pm ia}|<|u| are unnecessary in 9.1.79 when C=J and v is an integer or zero, and in 9.1.80 when C=J.
+Decenerate Form (u=\infty):
+9.1.81
+e^itcos^a=\Gamma(r)(\frac{1}{4}v)^{-\nu}\sum_k=0^m (\nu+k)^ikJ_{+k}(v)C_k^{(r)}(\cos\alpha) (v\neq 0,-1,.. .)
+Neumann's Expansion of an Arbitrary Function in a Series of Bessel Functions
+9.1.82 f(z)=a_0J_0(z)+2\sum_k=1^m  a_ikJ_k(z) (|z|<c) where c is the distance of the nearest singularity of f(z) from z=0,
+9.1.83 a_k=\frac{1}{2\pi i}\int_{|x|=c^i}f(t)O_k(t)dt (0<c^i<c) and O_k(t) is Neumann's polynomial. The latter is defined by the generating function
+9.1.84
+\frac{1}{t-z}=J_0(z)O_0(t)+2\sum_k=1^m J_k(z)O_k(t) (|z|<|t|) O_n(t) is a polynomial of degree n+1 in 1/t; O_0(t)=1/t,
+9.1.85
+O_n(t)=\frac{1}{4}\sum_k=0^m n(n-k-1)!  k! (\frac{2}{t})^{n-2k+1} (n\equiv 1,2,.. .)
+The more general form of expansion
+9.1.86 f(z)=a_0J_Y(z)+2\sum_k=1^m a_ikJ_Y+k(z)

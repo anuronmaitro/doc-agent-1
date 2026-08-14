@@ -1,0 +1,36 @@
+NUMERICAL ANALYSIS (p.1)
+25.4.36  \int_{0}^{1}\frac{f(x)}{\sqrt{1-x}}dx=\sum\limits_{i=1}^{n}w_{i}f(x_{i})+R_{n}
+Related orthogonal polynomials:
+Px_{n}(\sqrt{1-x}),P_{2n}(1)=1
+Abscissas: x_{i}=1-\xi_{i}^2 where x_{i} is the i^{th} positive zero of P_{2n}(x).
+
+Weights: w_{i}=2w_{i}^{(2n)},w_{i}^{(2n)}\) are the Gaussian weights of order 2n.
+Remainder:
+Rx=\frac{2^{(4n+1}}{4n+1}\frac{[(2n)!]^2}{(4n)!!}f^{(2n)}(\xi)\quad(0<\xi<1)
+25.4.37  \int_{a}^{b}\frac{f(y)}{\sqrt{b-y}}dy=\sqrt{b-a}\sum\limits_{i=1}^{n}w_{i}f(y_{i})+R_{n}
+y_{i}=a+(b-a)x_{i}
+Related orthogonal polynomials:
+Px_{2n}(\sqrt{1-x}),P_{2n}(1)=1
+Abscissas:
+x_{i}=1-\xi_{i}^2 where x_{i} is the i^{th} positive zero of P_{2n}(x).
+
+Weights: w_{i}=2w_{i}^{(2n)},w_{i}^{(2n)}\) are the Gaussian weights of order 2n.
+25.4.38  \int_{-1}^{+1}\frac{f(x)}{\sqrt{1-x^2}}dx=\sum\limits_{i=1}^{n}w_{i}f(x_{i})+R_{n}
+Related orthogonal polynomials: Chebyshev Polynomials of First Kind
+Tx_{n}(x),T_{n}(1)=\frac{1}{2^{n-1}}
+Abscissas:
+x_{i}=\cos\frac{(2i-1)\pi}{2n}
+Weights:
+w_{i}=\frac{\pi}{n}
+Remainder:
+Rx=\frac{\pi}{(2n)\mathbb{D}^{2n-1}}f^{(2n)}(\xi)\quad(-1<\xi<1)
+Related orthogonal polynomials:
+Rx_{n}(x),T_{n}(1)=\frac{1}{2^{n-1}}
+Abscissas:
+x_{i}=\cos\frac{(2i-1)\pi}{2n}
+Weights:
+w_{i}=\frac{\pi}{n}
+25.4.40
+\int_{-1}^{+1}f(x)\sqrt{1-x^2}dx=\sum\limits_{i=1}^{n}w_{i}f(x_{i})+R_{n}
+Related orthogonal polynomials: Chebyshev Polynomials of Second Kind
+Tx_{n}^{*}(x)=\frac{\sin\left[(n+1)\text{ arccos }x\right]}{\sin\left(\text{arccos }x\right)}\,

@@ -1,0 +1,33 @@
+JACOBIAN ELLIPTIC FUNCTIONS AND THETA FUNCTIONS (p.16.21)
+16.21. Complex Arguments With the abbreviations
+16.21:1 s=sn(x|m), c=cn(x|m), d=dn(x|m), s_{1}=sn(y|m_1), c_{1}=cn(y|m_1), d_{1}=dn(y|m_1),
+16.21.2\quad sn(x+iy|m)=\frac{8^{-}\cdot d_{1}+ic\cdot d\cdot s_{1}\cdot c_{1}}{c_{1}^{2}+ms^{-}s_{1}^{2}}
+16.21.3\quad cn(x+iy|m)=\frac{e^{-}\cdot c_{1}-is\cdot d\cdot s_{1}\cdot d_{1}}{c_{1}^{2}+ms^{-}s_{1}^{2}}
+16.21.4\quad dn(x+iy|m)=\frac{d\cdot c_{1}\cdot d_{1}-ims\cdot c\cdot s_{1}}{c_{1}^{2}+ms^{-}s_{1}^{2}}
+16.22. Leading Terms of the Series in Ascending Powers of u
+16.22.1
+sn(u|m)=u-(1+m)\frac{u^{3}}{3!}+(1+14m+m^{2})\frac{u^{5}}{5!}-(1+135m+135m^{2}+m^{3})\frac{u^{7}}{7!}+\ldots
+16.22.2
+cn(u|m)=1-\frac{u^{2}}{2!}+(1+4m)\frac{u^{4}}{4!}-(1+4m+16m^{2})\frac{u^{6}}{6!}+\ldots
+16.22.3
+dn(u|m)=1-m\frac{u^{2}}{2!}+m(4+m)\frac{u^{4}}{4!}-(m16+44m+m^{2})\frac{u^{6}}{6!}+\ldots
+No formulae are known for the general coefficients in these series.
+16.23. Series Expansions in Terms of the Name q=e^{-\pi K/K} and the Argument v=\pi u/(2K)
+16.23.1\quad sn(u|m)=\frac{2\pi}{m^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{q^{n+1/2}}{1-q^{2n+1}}\sin\,(2n+1)v
+16.23.2\quad cn(u|m)=\frac{2\pi}{m^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{q^{n+1/2}}{1+q^{2n+1}}\cos\,(2n+1)v
+16.23.3\quad dn(u|m)=\frac{\pi}{2K}+\frac{2\pi}{K}\sum\limits_{n=1}^{\infty}\frac{q^{n}}{1+q^{2n}}\cos\,2nv
+16.23.4
+cd(u|m)=\frac{2\pi}{m^{1/2}K}\sum\limits_{n=0}^{\infty}\frac{(-1)^{n}q^{n+1/2}}{1-q^{2n+1}}\cos\,(2n+1)v
+16.23.5
+sd(u|m)=\frac{2\pi}{(mm_1)^{1/2}K}\sum\limits_{n=0}^{\infty}(-1)^{n}\frac{q^{n+1/2}}{1+q^{2n+1}}\sin\,(2n+1)v
+16.23.6
+nd(u|m)=\frac{\pi}{2m_1^{1/2}K}+\frac{2\pi}{m_1^{1/2}K}\sum\limits_{n=1}^{\infty}(-1)^{n}\frac{q^{n}}{1+q^{2n}}\cos\,2nv
+16.23.7
+de(u|m)=\frac{\pi}{2K}\sec v
++\frac{2\pi}{K}\sum\limits_{n=0}^{\infty}(-1)^{n}\frac{q^{2n+1}}{1-q^{2n+1}}\cos\,(2n+1)v
+16.23.8
+nc(u|m)=\frac{\pi}{2m_1^{1/2}K}\sec v
+-\frac{2\pi}{m_1^{1/2}K}\sum\limits_{n=0}^{\infty}(-1)^{n}\frac{q^{2n+1}}{1+q^{2n+1}}\cos\,(2n+1)v
+16.23.9
+se(u|m)=\frac{\pi}{2m_1^{1/2}K}\tan v
++\frac{2\pi}{m_1^{1/2}K}\sum\limits_{n=1}^{\infty}(-1)^{n}\

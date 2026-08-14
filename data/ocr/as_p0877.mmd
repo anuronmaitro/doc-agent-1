@@ -1,0 +1,31 @@
+25. Numerical Interpolation, Differentiation, and Integration
+Numerical analysts have a tendency to accumulate a multiplicity of tools each designed for highly specialized operations and each requiring special knowledge to use properly. From the vast stock of formulas available we have culled the present selection. We hope that it will be useful. As with all such compendia, the reader may miss his favorites and find others whose utility he thinks is marginal.
+We would have liked to give examples to illuminate the formulas, but this has not been feasible. Numerical analysis is partially a science and partially an art, and short of writing a textbook on the subject it has been impossible to indicate where and under what circumstances the various formulas are useful or accurate, or to elucidate the numerical difficulties to which one might be led by uncritical use. The formulas are therefore issued together with a caveat against their blind application.
+Formulas
+Notation: _Abscissas: x_q<=x_1<-\ldots; functions: f_1 g, \ldots; values: f(x_0)=f_{i}f'(x_0)=f_{i}. \(f^{\prime},f^{\prime\infty},\ldots\) indicate 1st, 24, \ldots derivatives. If abscissas are equally spaced, x_{i+1}-x_{i}=h and f_{n}=f(x_0+ph) (p not necessarily integral). R, R_n_ indicate remainders.
+25.1. Differences
+Forward Differences
+25.1.1
+\Delta(f_{n})=\Delta_{n}=\Delta_{n}^{1}=f_{n+1}-f_{n}
+\Delta_{n}^{2}=\Delta_{n+1}^{2}-\Delta_{n}^{1}=f_{n+2}-2f_{n+1}+f_{n}
+\Delta_{n}^{2}=\Delta_{n+1}^{2}-\Delta_{n}^{2}=f_{n+3}-3f_{n+2}+3f_{n+1}-f_{n}
+Central Differences
+25.1.2
+\delta(f_{n+1})=\delta_{n+1}=\delta_{n+1}^{1}=f_{n+1}-f_{n}
+\delta_{n}^{2}=\delta_{n+1}^{2}-\delta_{n-1}^{1}=f_{n+1}-2f_{n}+f_{n-1}
+\delta_{n+1}^{3}=\delta_{n+1}^{2}-\delta_{n}^{2}=f_{n+2}-3f_{n+1}+3f_{n}-f_{n-1}
+We would have liked to give examples to illuminate the formulas, but this has not been feasible. Numerical analysis is particularly simple in practice.
+For the purposes of the above discussion, we will only consider the case of a given set of parameters.
+The following example is a set of \(n\times n\) matrices:
+\[\begin{array}{l} \lambda_{n}=\lambda_{n+1}^{k}-\lambda_{n}^{k-1}=\sum_{j=0}^{k}\left(-1\right)^{j}\binom{k}{j}f_{n+k-j}\end{array}\]
+
+Central Differences
+25.1.2
+\delta(f_{n+1})=\delta_{n+1}=\delta_{n+1}^{1}=f_{n+1}-f_{n}
+\delta_{n}^{2}=\delta_{n+1}^{2}-\delta_{n-1}^{1}=f_{n+1}-2f_{n}+f_{n-1}
+\delta_{n+1}^{3}=\delta_{n+1}^{2}-\delta_{n}^{2}=f_{n+2}-3f_{n+1}+3f_{n}-f_{n-1}
+We would have liked to give examples to illuminate the formulas, but this has not been feasible. Numerical analysis is particularly simple in practice.
+For the purposes of the above discussion, we will only consider the case of a given set of parameters.
+In the following example, we will consider the case of a given set of parameters.
+Each of the above figures shows a set of parameters.
+

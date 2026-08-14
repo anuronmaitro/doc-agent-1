@@ -1,0 +1,44 @@
+BESSEL FUNCTIONS OF INTEGER ORDER
+Hence  x=-.5567724 and \ (\frac{4\xi}{1-2^{n}})^{1/4}=+1.155332. Next,  \nu^{10}=3.684031,  \nu^{23}\xi=-7.556562. Interpolating in Table 10.11, we find that Ai(\nu^{23}\xi)=+.299953,  \mathrm{Ai}'(\nu^{23}\xi)=+.451441,   Bi(\nu^{23}\xi)=-.160565,   Bi'(\nu^{23}\xi)=+.819542. As a check on the interpolation, we may verify that AiPi'-Ai'Bi=1/\pi.
+
+Interpolating in the table following 9.3.46 we obtain
+
+\[b_{0}(\xi)=+.0136, c_{0}(\xi)=+.1442.\]
+
+The contributions of the terms involving a_{1}(\xi) and d_{1}(\xi) are negligible, and substituting in the asymptotic expansions we find that
+
+\[Y_{0}(75)=+1.155332(50^{-1/8}\times.299953\times+50^{-8/8}\times.451441\times.0136)=+.094077,\]
+\[Y_{0}(75)=-(4/3)(1.155332)^{-1}(50^{-1/8}\times.299953\times+.1442+50^{-2/8}\times.451441)=-038658,\]
+\[Y_{0}(75)=-1.155332(-50^{-1/8}\times.160565\times+50^{-8/8}\times.819542\times.0136)=+.050335,\]
+\[Y_{0}(75)=+(4/3)(1.155332)^{-1}(-50^{-1/8}\times.160565\times+50^{-8/8}\times.819542)=+.069543.\]
+
+As a check we may verify that
+
+\[JY^{\prime}-J^{\prime}Y=2/(75\pi).\]
+
+Remarks.This example may also be computed using the Debye expansions 9.3.15, 9.3.16, 9.3.19, and 9.3.20. Four terms of each of these series are required, compared with two in the computations above. The closer the argument-order ratio is to unity, the less effective the Debye expansions become. In the neighborhood of unity the expansions 9.3.23, 9.3.24, 9.3.27, and 9.3.28 will furnish results of moderate accuracy; for high-accuracy work the uniform expansions should again be used.
+
+To evaluate the 5th positive zero of J_{10}(x) and the corresponding value of J_{10}^{\prime}(x), each to 5 decimals.
+
+We use the asymptotic expansions 9.5.22 and 9.5.23 setting \ r=10, s=5. From Table 10.11
+Table 6.64.64.28
+we find  a_{5}=-7.944134,  \mathrm{Ai}'(a_{5})=+.947336. Hence \xi=10^{-2/8}a_{5}=.21544347a_{5}=-1.7115118.
+
+Interpolating in the table following 9.5.26 we obtain
+
+\[z(\xi)=+2.888631, k(\xi)=+.98259, f_{1}(\xi)=+.0107, F_{1}(\xi)=-.001.\]
+
+The bounds given at the foot of the table show that the contributions of higher terms to the asymptotic series are negligible. Hence
+
+\[j_{10,5}=28.88631+.00107+.\cdot.\cdot=28.88738,\]
+
+\[J_{10}^{\prime}(j_{10,3})=-\frac{2}{10^{2/8}}\frac{947336}{2.888631\times.98259}\times\times(1-.00001+.\cdot)=-.14381.\]
+
+To evaluate the first root of J_{0}(x)F_{0}(x)-Y_{0}(x)J_{0}(x)=0 for l=1 to 4 significant figures.
+
+Let a_{3}^{(0)} denote the root. Direct interpolation in Table 9.7 is impracticable owing to the divergence of the differences. Inspection of 9.5.28 suggests that a smoother function is (l=1)a_{3}^{(1)}. Using Table 9.7 we compute the following values
+
+\begin{tabular}{c c c}
+1/\lambda & (\lambda-1)a_{3}^{(1)} & i & p \\
+0.4 & 3.110 & +21 \\
+0.6 & 3.13

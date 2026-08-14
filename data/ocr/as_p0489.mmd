@@ -1,0 +1,44 @@
+INTEGRAILS OF BESSEL FUNCTIONS 489
+which is correct to 10D. The above procedure gives high accuracy though it may be necessary to interpolate twice in J_0(x) to compute J_0(x+\frac{h}{2}) and J_0(x+k). A similar technique based on the trapezoidal rule is less accurate, but at most only one interpolation of J_0(x) is required.
+
+Example 4: Compute\int_0^3J_0(t)dt and\int_0^3Y_0(t)dt to 5D using the representation in terms of Struve functions and the tables in chapters 9 and 12.
+For x=3, from Tables 9.1 and 12.1
+
+\begin{tabular}{c c} J_0=-.260052 & J_1=.339059 \\ Y_0=-.376850 & Y_1=.324674 \\ H_0=-.574306 & H_1=1.020110 \\ \end{tabular}
+Using 11.1.7, we have
+\begin{tabular}{c c} \int_0^3Y_0(t)dt=3(-.260052)+\frac{3\pi}{2}[(.574306)(.339059)-(1.020110)(-.260052)]^{1/2} \\ Similarly, 
+\begin{tabular}{c c} \int_0^3Y_0(t)dt=.19766 \\ \end{tabular}
+Using 11.1.8 and Tables 9.8 and 12.1, one can compute\int_0^zF_0(t)dt and\int_0^zK_0(t)dt.
+
+\begin{tabular}{c c} \int_2^a\fracJ_0(t)dt,\int_2^a\frac\frac\overlineY_0(t)dt,\int_2^a\frac\frac\overlineI_0(t)-1dt,\int_2^a\frac\overlineK_0(t)dt.
+For moderate values of z, use 11.1.19-11.1.23. For x sufficiently large, use the asymptotic expansions or the polynomial approximations 11.1.24-11.1.31.
+Repeated Integrals of J_0(x)
+For moderate values of x and r, use 11.2.4. If r=1, see Example 1. For moderate values of z, use the recurrence formula 11.2.5. If x is large and x>r, see the discussion below.
+
+Example 5: Compute f_{r, (x)}=f_{r}(x) to 5D for z=2 and r=0(1)5 using 11.2.6. We have
+
+\begin{tabular}{c c} \gamma f_{r+1}(x)=xf_{r}(x)-(r-1)f_{r-1}(x)+xf_{r-2}(x) \\ \beta f_{-1}(x)=-J_1(x),f_0(x)=J_0(x),f_1(x)=\int_0^aJ_0(t)dt \\ \end{tabular}
+and the terms on this last line are tabulated. Thus for x=2,
+
+\begin{tabular}{c c} \beta f_{-1}=-.5767248,f_0=.2238908,f_1=1.4257703 \\ \end{tabular}
+The recurrence formula gives
+
+Similarly,
+
+\begin{tabular}{c c} \beta zg_{r+1}(x)=x^2g_r-(r-1)^3g_{r-1}(x) \\ \beta+(r-1)(r-2)g_{r-2}(x),\;r\geq 3 \\ g_1(x)=\int_0^zJ_0(t)dt,\;g_2(x)=g_1(x)-J_1(x) \\ g_2(x)=[x^2g_2(x)-g_1(x)+xJ_0(x)]/x^2 \\ \end{tabular}
+Example 6: Compute g_{r}(x) to 5D for x=10 and r=0(1)6. We have for x=10,
+
+\begin{tabular}{c c} \beta J_0=-.2459358, J_1=.0434727, g_1=1.0670113 \\ \end{tabular}
+Thus
+
+\begin{tabular}{c c} \beta g_2=1.023538, g_3=.9882749 \\ \end{tabular}
+and the forward recurrence formula gives
+
+\begin{tabular}{c c} \beta t=.9868736, g_3=.9411412, g_4=.9047464 \\ \end{tabular}
+For tables of 2^-\gamma f_{r}(x), see [11.16].
+
+Reported Integrals of K_0(x)
+For moderate values of x, use the recurrence formula 11.2.14 for all r.
+Example 7: Compute Ki_0(x) to 5D for x=2 and r=0(1)5. We have
+
+\begin{tabular}{c c} \gamma Ki_{i+1}(x)=-xKi_0(x)+(r-1)Ki_1-1(x)+xKi_1-2(x) \\ Ki_1-1(x

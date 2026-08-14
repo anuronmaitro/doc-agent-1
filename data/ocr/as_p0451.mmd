@@ -1,0 +1,27 @@
+BESSEL FUNCTIONS OF FRACTIONAL ORDER (p.1)
+If p(z,\lambda) can be written in the form
+10.4.109  \varphi(z,\lambda)=\lambda^2p(z)+q(z,\lambda) where q(z,\lambda) is bounded in a region R of the z-plane, then the zeros of p(z) in R are said to be turning points of the equation 10.4.108.
+The Special Case w''+[\lambda^2x+q(z,\lambda)]w=0 Let l=|\lambda|e^{i\omega}\) vary over a sectorial domain S: l|\geq\lambda_0(>0), o_{1}\leq o\leq o_2, and suppose that q(z,\lambda) is continuous in z for |z|<r and l in S, and q(z,\lambda) is \sim\frac{\pi}{6}q_n(z)\lambda^{-n} as l\to\infty in S.
+
+Formal Series Solution
+10.4.110   w(z)=u(z)\sum\limits_0^m \varphi_n(z)\lambda^{-n}+\lambda^{-1}u'(z)\sum\limits_0^m \psi_n(z)\lambda^{-n} u'+\lambda^2zu=0
+\varphi_0(z)=c_0, \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad c_0,c_1 constants
+\varphi_n+1(z)=-\frac{1}2\psi'_n(z)-\frac{1}2\int_0^{z}\frac{\pi}{6}q_n-t(t)\psi_k(t)dt
+\psi_n(z)=\frac{1}2z^{-1}\int_0^{z}t^{-1}\left[\psi_n'(t)+\sum\limits_0^m \psi_n(t)\psi_n(t)\right]dt
+(n=0,1,2,\ldots)
+Uniform Asymptotic Expansions of Solutions
+For z real, i.e. for the equation
+10.4.111   y''+[\lambda^2x+q(x,\lambda)]y=0 where x varies in a bounded interval a<x<b that includes the origin and where, for each fixed l in S, g(x,\lambda) is continuous in x for a<x<b, the following asymptotic representations hold.
+(i) If l is real and positive, there are solutions y_0(z), y_1(x) such that, uniformly in x on a<x<b,
+10.4.112   y_0(x)=\Delta\mathrm{i}\,(-\lambda^{n/2}x)[1+O(\lambda^{-1})] (\lambda\to\infty)   y_1(x)=\Delta\mathrm{ii}\,(-\lambda^{n/2}x)[1+O(\lambda^{-1})] and, uniformly in x on 0<x<b
+10.4.113   y_0(x)=\Delta\mathrm{i}\,(-\lambda^{n/2}x)[1+O(\lambda^{-1})]+\mathrm{Bi}\,(-\lambda^{n/2}x)O(\lambda^{-1}), \eta_1(x)=\Delta\mathrm{ii}\,(-\lambda^{n/2}x)[1+O(\lambda^{-1})]+\mathrm{Ai}\,(-\lambda^{n/2}x)O(\lambda^{-1})\]
+(ii) If \not\exists\lambda\geq 0, \not\lambda\to 0, there are solutions y_0(z), y_1(x) such that, uniformly in x on a<x<b,
+714-554 O-64-30
+10.4.114   y_0(x)=\Delta\mathrm{i}\,(-\lambda^{n/2}x)[1+O(\lambda^{-1})] (\lambda\to\infty)
+\varphi_1(x)=\Delta\mathrm{i}\,(-\lambda^{n/2}x)[1+O(\lambda^{-1})] (\lambda|\to\infty)
+For further representations and details, we refer to [10.4].
+When z is complex (bounded or unbounded), conditions under which the formal series 10.4.110 yields a uniform asymptotic expansion of a solution are given in [10.12] if q(z, l) is independent of l and l|\lambda|\to\infty with fixed l, and in [10.14] if l lies in any region of the complex plane. Further references are [10.2; 10.9; 10.10].
+The General Case w''+[\lambda^2p(z)+q(z,\lambda)]w=0 Let l=|\lambda|e^{i\omega}\) where l|\geq\lambda_0(>0) and -\tau\leq o\leq\pi; suppose that p(z) is analytic in a region R and has a zero z=z_0 in R, and that, for fixed l, l(z, l) is analytic in z for z in R. The transformation k=k(z), v=[p(z)/k]!^w(z), where k is defined as the (unique) solution of the equation
+10.4.115   k\left(\frac{d\xi}{dz}\right)^2=p(z), yields the special case
+10.4.116  \frac{d^{n}w}{d\xi^2}+[\lambda^2x+f(k,\lambda)]w=0,
+f

@@ -1,0 +1,30 @@
+MATHIEU FUNCTIONS (p.4)
+q=\frac{63}{w^2}+\frac{1260}{w^4}+\frac{2943}{w^8}+\frac{486}{w^5}
+q=\frac{527}{w^3}+\frac{15617}{w^b}+\frac{69001}{w^7}+\frac{41607}{w^8}
+20.2.31 b_{r+1}-a_{r}\sim 2^{r+3}\sqrt[2]{x}q^{r+1}\xi^{-4\sqrt[7]{r}}/r!,\quad q\to\infty\]
+
+(given in [20.36] without proof.)
+20.3. Floquet's Theorem and Its Consequences
+Since the coefficients of Mathieu's equation
+20.3.1 y''+(a-2qcos2z)y=0
+are periodic functions of z, it follows from the known theory relating to such equations that there exists a solution of the form
+20.3.2 F_v(z)=e^{i\pi p}P(z), where n depends on a and q, and P(z) is a periodic function, of the same period as that of the coefficients in 20.3.1, namely p. (Floquet's theorem; see [20.16] or [20.22] for its more general form.) The constant r is called the _characteristic exponent_. Similarly
+20.3.3  F_v(-z)=e^{-i\pi p}P(-z) satisfies 20.3.1 whenever 20.3.2 does. Both F_v(z) and F_v(-z) have the property
+20.3.4
+y(z+kx)=C^xy(z), y=F_v(z) or F_v(-z), C=e^{i\pi t} for F_v(-z) Solutions having the property 20.3.4 will hereafter be termed _Floquet_ solutions. Whenever F_v(z) and F_v(-z) are linearly independent, the general solution of 20.3.1 can be put into the form
+20.3.5  y=AF_v(z)+BF_v(-z)
+If ABx=0, the above solution will not be a Floquet solution. It will be seen later, from the method for determining r when a and q are given, that there is some ambiguity in the definition of r; namely, r can be replaced by r+2k, where k is an arbitrary integer. This is as it should be, since the addition of the factor exp (2ikz) in 20.3.2 still leaves a periodic function of period p for the coefficient of exp i\pi z.
+It turns out that when a belongs to the set of characteristic values a, and b, r of 20.2, then r is zero or an integer. It is convenient to associate r=r with a, r(q), and r=-r with b, r(q); see [20.36]. In the special case when r is an integer, F_v(z) is proportional to F_v(-z); the second, independent solution of 20.3.1 then has the form
+20.3.6 y_{2}=ze_v(z, q)+\sum_{k=0}^{\infty}d_{2k+p}\sin(2k+p)z, associated with ce, x(z, q)
+20.3.7 y_{2}=ze_v(z, q)+\sum_{k=0}^{\infty}f_{2k+p}\cos(2k+p)z, associated with se, x(z, q)
+The coefficients d_{2k+p} and f_{2k+p} depend on the corresponding coefficients A_m and B_m, respectively, of 20.2, as well as on a and q. See [20.30], section (7.50)-(7.51) and [20.58], section V, for details.
+If r is not an integer, then the Floquet solutions F_v(z) and F_v(-z) are linearly independent. It is clear that 20.3.2 can be written in the form
+20.3.8 F_v(z)=\sum_{k=-\infty}^{\infty}c_{2k}e^{i(r+2k)z}. From 20.3.8 it follows that if r is a proper fraction m_1/m_2, then every solution of 20.3.1 is periodic, and of period at most 2\pi m_2. This agrees with results already noted in 20.2 i.e., both independent solutions are periodic, if one is, provided the period is different from p and 2\pi.
+Method of Generating the Characteristic Exponent
+Define two linearly independent solutions of 20.3.1, for fixed a, q by
+20.3.9  y_{1}(0)=1; y_{1}^{\prime}(0)=0.\]
+20.3.9  y_{2}(0)=0; y_{2}^{\prime}(0)=1.
+Then it can be shown that
+20.3.10  cos\pi r-y_{1}(\pi)=0
+20.3.11  cos\pi r-1-2y_{1}^{\prime}\left(\frac{\pi}{2}\right)y_{2}\left(\frac{\pi}{2}\right)=0
+Thus r may be obtained from a knowledge of y_1(\pi) or from a knowledge of both y_1(\frac{\pi}{2}) and y_1(\frac{\pi}{2}). For numerical purposes 20.3.11 may be more desirable because of the shorter range of integration, and hence the lesser accumulation of round-errors. Either r, -r, or +-2k

@@ -1,0 +1,39 @@
+NUMERICAL ANALYSIS (p.886)
+Sample Composition's Rule
+25.4.5  \int_{x_0}^{x_2}f(x)dx=\frac{h}{3}[f_0+4f_1+f_2]
+Extended Simpson's Rule
+25.4.6  \int_{x_0}^{x_2}f(x)dx=\frac{h}{3}[f_0+4(f_1+f_3+\dots+f_{x_{n-1}})+f_2]
+Extended Simpson's Rule
+25.4.6  \int_{x_0}^{x_2}f(x)dx=\frac{h}{3}[f_0+4(f_1+f_3+\dots+f_{x_{n-1}})+f_2]
+Euler-Maclaurin Summation Formula
+25.4.7  \int_{x_0}^{x_n}f(x)dx=k\left[\frac{f_0}{2}+f_1+f_2+\dots+f_{x_{n-1}}+\frac{f_n}{2}\right]
+The following formula is given by
+
+(For B_2x, Bernoulli numbers, see chapter 23.)
+If f(x+x)(x) and f(x+x)(x) do not change sign for x_0<x<x_n then k_2x| is less than the first neglected term. If f(x+x)(x) does not change sign for x_0<x<x_n, k_2| is less than twice the first neglected term.
+Lagrange Formula
+25.4.8  \int_{x_0}^{x_0}f(x)dx=\sum_{i=0}^{n}(L_0^{i}(t)-L_1^{i}(x_0))f_i+R_n
+(See 25.2.1.)
+25.4.9  \int_{x_1}^{x_n}f(x)dx=\sum_{i=0}^{n}(L_1^{i}(0)-L_1^{i}(0))f_i+R_n
+(See Table 25.3 for A_i(m).)
+Newton-Cotes Formulas (Closed Type)
+(For Trapezoidal and Simpson's Rules see 25.4.1-25.4.6.)
+25.4.13  (Simpson's \frac{3}{8} rule)
+\int_{x_0}^{x_n}f(x)dx=\frac{3h}{8}(f_0+3f_1+3f_2+f_3)-\frac{3f^{i(0)}k^{8}}{80}
+25.4.14  (Bode's rule)
+\int_{x_0}^{x_k}f(x)dx=\frac{2h}{45}(7f_0+32f_1+12f_2
++32f_3+7f_4)-\frac{8f^{i(0)}k^{7}}{945}
+25.4.15  \int_{x_0}^{x_k}f(x)dx=\frac{5h}{288}(19f_0+75f_1+50f_2+50f_3
++75f_1+19f_3)-\frac{275f^{i(0)}k^{7}}{12096}
+25.4.16  \int_{x_0}^{x_n}f(x)dx=\frac{h}{140}(41f_0+216f_1+27f_2+27f_3
++27f_4+216f_3+41f_0)-\frac{9f^{i(0)}k^{9}}{1400}
+25.4.17  \int_{x_0}^{x_r}f(x)dx=\frac{7h}{17280}(751f_0+3577f_1+1323f_2
++2989f_3+2989f_4+1323f_3+3577f_6
++751f_3)-\frac{8183f^{i(0)}k^{9}}{518400}
+25.4.18  \int_{x_0}^{x_r}f(x)dx=\frac{4h}{14175}(989f_0+5888f_1-928f_2
++10496f_3-4540f_4+10496f_5-928f_6+5888f_7
++989f_3-4266775^{i(0)}k^{11}
+25.4.19  \int_{x_0}^{x_k}f(x)dx=\frac{9h}{8960}(2857(f_0+f_0)
++15741(f_1+f_3)+1080(f_2+f_7)+19344(f_3+f_0)
++5778(f_1+f_3))-\frac{173}{14620}f^{i(00)}(k)h^{11}
+

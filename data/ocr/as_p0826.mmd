@@ -1,0 +1,44 @@
+COMBINATORIAL ANALYSIS (p.826)
+\Pi. Relations
+A. Recurrences
+\sum_{0\leq\frac{30^{2}+k}{2}\leq n}(-1)^nq(n-\frac{3k^2+k}{2})=(-1)^r if n=3r^2+r q(0)=1
+=0 other wise
+q(n)=\tfrac{1}{n}\sum_{k=1}^n\left\{\sigma_1(k)-2\sigma_1(\tfrac2k)\right\}q(n-k)
+B. Check
+\sum_{0\leq\frac{30^{2}+k}{2}\leq n}(-1)^nq(n-\frac{3k^2+k}{2})=1 if n=\tfrac{r^2-r}{2}
+=0 otherwise.
+III. Asymptotics
+q(n)\sim\frac{1}{4.3^{1/4}\cdot\eta^3/4}e^{x\sqrt{|2b}\sqrt{n}}
+24.3. Number Theoretic Functions
+24.3.1 The Mobius Function
+I. Definitions
+A. \mu(n)=1 if n=1
+\min(-1)^k if n is the product of k distinct primes
+=0 if n is divisible by a square>1. B. Generating functions
+\sum_{n=1}^n\mu(n)n^{-r}=1/\zeta(s)\qquad\mathcal{R}s>1
+\sum_{n=1}^n\frac{\mu(n)\mathbb{z}^n}{1-x^n}=x\quad|x|<1
+II. Relations
+A. Recurrence
+\mu(mn)=\mu(m)\mu(n)if(m,n)=1
+=0if(m,n)>1
+B. Check
+\sum_{d(n)}\mu(d)=\delta_{n1}
+C. Numerical analysis
+g(n)=\sum_{d(n)}f(d) for all n if and only if
+g(n)=\sum_{d(n)}\mu(d)g(n/d)for all n
+g(n)=\min_d(n)f(d)for all n if and only if
+g(n)=\min_d(n)g(n/d)^{n(0)}for all n
+g(x)=\sum_{n=1}^n\mu(x/n)for all x>0
+g(x)=\sum_{n=1}^n\mu(n)g(x/n)for all x>0
+g(x)=\sum_{n=1}^n\mu(n)g(x/n)for all x>0 if and only if
+g(x)=\sum_{n=1}^n\mu(n)g(x)for all x>0 if and only if
+g(x)=\sum_{n=1}^n\mu(n)g(x)for all x>0 if and only if
+g(x)=\sum_{n=1}^n\mu(n)g(nx)for all x>0
+g(x)=\sum_{n=1}^n\mu(n)g(nx)for all x>0
+g(x)=\sum_{n=1}^n\mu(n)g(nx)for all x>0
+g(x)=\sum_{n=1}^n\mu(n)g(nx)for all x>0 if and only if
+g(x)=\sum_{n=1}^n\mu(n)g(nx)for all x>0
+g(x)=\sum_{n=1}^n\mu(n)g(nx)for all x>0 if and only if
+g(x)=\sum_{n=1}^n\mu(n)g(nx)for all x>0 if and only if
+g(x)=\sum_{n=1}^n\mu(n)g(nx)for all x>0
+g(x)=\sum_{n=1}^n\mu(n)g(nx)for all x>0 if and only if

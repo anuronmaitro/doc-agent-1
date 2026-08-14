@@ -1,0 +1,47 @@
+JACobian Elliptic Functions and Theta Functions
+574  x a (n|m)
+Note that, when successive applications are to be made, it is simplest to calculate dn (u|m) since this is expressed always in terms of the same function. The calculation of cn (u|m) leads to that of dn (v|m).
+The calculation of sn (u|m) necessitates the evaluation of all three functions.
+16.15. Approximation in Terms of Hyperbolic Functions
+When the parameter m is so close to unity that m_{i}^{2} and higher powers of m_{1} can be neglected we have the approximations
+16.15.1
+sn (u|m) \approx tanh u+\frac{1}{4}m_{1} (sinh u cosh u-u) sech^{2} u
+16.15.2
+cn (u|m) \approx sech u
+-\frac{1}{4}m_{1} (sinh u cosh u-u) tanh u sech u
+16.15.3
+dn (u|m) \approx sech u
++\frac{1}{4}m_{1} (sinh u cosh u+u) tanh u sech u
+16.15.4
+am (u|m) \approx gd u+\frac{1}{4}m_{1} (sinh u cosh u-u) sech u.
+Another way of calculating the Jacobian functions is to use Landen's ascending transformation to increase the parameter sufficiently for the above formulae to become applicable. See also 16.13.
+16.16. Derivatives
+Contract from the above formula
+16.17. Addition Theorems
+16.17.1 sn(u+v)
+= sn u: cn v: dn u+\sin n: cn u': dn u':
+1-m sn^{2}u: sn^{2}v
+16.17.2 en(u+v)
+= sn u: cn v-sn u: dn u': sn^{2}v
+16.17.3 dn(u+v)=\frac{dn u: dn v-msu u: cn u': sn^{2}v
+Addition theorems are derivable one from another and are expressible in a great variety of forms. Thus ns(u+v) comes from 1/sn(u+v) in the form (1-msu^{2}u^{3}sn^{2}v)/(sn u c n v dn p+\sin n v dn u u) from 16.17.1.
+Alternatively ns(u+v)=m^{1}sn {(ik^{\prime}-u)=v} which again from 16.17.1 yields the form (ns u cs v ds u
+-ns vcs u d s)/(ns^2 u-ns^2 e).
+The function pq(u+v) is a rational function of the four functions pq u, pq v, pq'u, pq'v.
+16.18. Double Arguments
+16.18.1 sn2u
+=\frac{2sn u\cdot cn u\cdot dn u}{1-msu^{4}u}=\frac{2sn u\cdot cn u\cdot dn u}{cn^{2}u+sn^{4}u\cdot dn^{3}u}
+16.18.2 cn2u
+=\frac{cn^{2}u-sn^{3}u\cdot dn^{2}u}{1-msu^{4}u}=\frac{cn^{4}u-sn^{4}u\cdot dn^{3}u}{cn^{2}u+sn^{2}u\cdot dn^{3}u}
+16.18.3 dn2u
+=\frac{dn^{3}u-ms^{4}v\cdot cn^{2}u}{1-msu^{4}u}=\frac{dn^{3}u+cn^{2}u(dn^{2}u-1)}{dn^{2}u-cn^{2}u(dn^{2}u-1)}
+16.18.4   \frac{1-cn2u}{1+cn2u}=\frac{sn^{4}u\cdot dn^{3}u}{cn^{2}u}
+16.18.5   \frac{1-dn2u}{1+dn2u}=\frac{msu^{2}u\cdot cn^{2}u}{dn^{2}u}
+16.19. Half Arguments
+16.19.1 sn^{2}u-\frac{1-cnu}{1+dnu}
+16.19.2 cn^{2}u=\frac{dn u+cnu}{1+dnu}
+16.19.3 dn^{2}u=\frac{m_{1}+dnu+mcnu}{1+dnu}
+16.20. Jacobi's Imaginary Transformation
+16.20.1 sn(iu|m)=isc(u|m_{1})
+16.20.2 cn(iu|m)=nc(u|m_{1})
+16.20.3 dn(iu|m)=dc(u|m_{1})

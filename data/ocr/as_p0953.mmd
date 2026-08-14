@@ -1,0 +1,26 @@
+PROBABILITY FUNCTIONS (p53)
+\sum_x_{n}=\left(\sum_{1=1}^nU_{1}-\frac2n\right)/\left(\frac1n\right)^{-1/2} will be distributed asymptotically as a normal random deviate. When n=12, the maximum errors made in the normal deviate are 9\times10^{-3} for |X|<2, 9\times10^{-1} for 2<|X|<3. An improvement can be made by taking a polynomial function of X_n (say)
+
+\[X_{n}^{\ast}=X_{n}\sum_{r=0}^k\alpha_{a_{2}}X_{n}^{\alpha_{3}}\]
+
+as the normal deviate where a_{2}, are suitable coefficients. These coefficients may be calculated using (say) Chebyshev polynomials or simply by making the asymptotic random deviate agree with the correct normal deviate at certain specified points. When n=12, the maximum error in the normal deviate is 8\times10^{-4} using the coefficients
+\begin{tabular}{c c} a_{0}=3.94985 & a_{4}=-.00836 \\ a_{2}=.25241 & a_{4}=-.02990 \\ a_{4}=.07654 \\ \end{tabular}
+(3) Direct method: Generate a pair of uniform deviates (U_1, U_2). Then
+
+\[X_{1}=(-2\ln U_1)^{1/2}\cos 2\pi U_2,\]
+
+\[X_{2}=(-2\ln U_1)^{1/2}\sin 2\pi U_2 will be a pair of independent normal random deviates with mean zero and unit variance. This procedure can be modified by calculating cos 2\pi U and sin 2\pi U using an acceptance rejection method; e.g., (1) generate (U_1, U_2); (2) if (2U_1-1)^2+(2U_2-1)^2\leq 1 generate a third uniform deviate U_3, otherwise reject the pair and start over; (3) calculate
+
+\[y_{1}=(-\ln u_3)^{1/2}\frac{u_{1}^{2}-u_2^{2}}{u_2^{2}+u_2^{2}}y_{2}=\pm 2(-\ln u_3)^{1/2}\frac{u_{1}u_2}{u_{1}^{2}+u_2^{2}}(\pm\tan\tanh\tanh).\] Both \[y_1\] and \[y_2\] are the desired random deviates.
+(4) Acceptance-rejection method: 1) Generate a pair of uniform deviates (U_1, U_2); 2) compute z=-\ln u_1; 3) if e^{-1/2(x-1)^2}\leq u_2 (or equivalently (x-1)^2\geq-2\ln u_2) accept x, otherwise reject the pair and start over. The quantity will be the required normal deviate with mean zero and unit variance. bivariate normal distribution Let (X_1, X_2) be a pair of independent normal deviates with mean zero and unit variance. Then \{X_1, oZX_1+(1-\rho^{1/2}X_2) represent a pair of deviates from a bivariate normal distribution with zero means, unit variances, and correlation coefficient r.
+c Exponential distribution
+(1) Inverse method: Since F(x)=e^{-x/\theta}, X=-\theta ln U will be a deviate from the exponential distribution with parameter r.
+(2) Acceptance-rejection method: 1) Generate a pair of independent uniform deviates (U_0, U_1); 2) if U_1<U_0 generate a third value U_2; 3) if U_1+U_4<U_0 generate a fourth value U_3, etc.; 4) continue generating uniform deviates until an n is obtained such that U_1+U_2+. . . . +U_n-1 <U_0<U_1+. . . +U_s; 5) if n is even reject the procedure and start a fresh trial with a new value of U_0, otherwise if n is odd take X=\theta U_6 as the desired deviate; 6) in general if t is the number of trials until an acceptable sequence is obtained X=\theta(t+U_0). The random deviates produced in this way follow an exponential distribution with parameter r. One can expect to generate approximately six uniform deviates for every exponential deviate.
+(3) Discrete Distribution Method: Let Y and n be discrete random variables with point probabilities
+Pr(Y=r)=(e-1)e^{+1} r=0,1,2, . . .
+Pr(n=s)=[s!(e-1)]^{-1} s=1,2,3, . .
+Then X=Y+\min(U_1, U_2, . . . , U_n) will follow an exponential distribution. The average value of n is 1.58 so that one needs, on the average, only 1.58 u's from which the minimum is selected.
+2. Use and Extension of the Tables
+Use of Probability Function Inequalities
+Lower bounds on A(t)=F(t)-F(-t) t=1 2 3 4 \quad Remarks
+0 \quad.7500 \quad.8889 \quad.9375 \quad no knowledge of F(t); 26.1.37 \quad F(t) is unimodal and continuous; 26.1.40 \quad F(t) is such that \mu_{4}=3; 26.1.41

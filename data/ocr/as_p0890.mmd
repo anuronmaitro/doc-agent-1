@@ -1,0 +1,52 @@
+NUMMERICAL ANALYSIS (p.890)
+Remainder:
+R_{n}=\frac{\pi}{(2n)!2^{n+1}}f^{(2n)}(\xi) (0<k<1)
+25.4.43
+\int_{a}^{b}f(x)\sqrt{\frac{x-a}{b-x}}dx=(b-a)\sum_{i=1}^{n}w_{i}f(y_{i})+R_{n}
+y_{i}=a+(b-a)x_{i}
+Related orthogonal polynomials:
+\frac{1}{\sqrt{x}}T_{2n+1}(\sqrt{x})
+Abscissas:
+z_{i}=\cos^{2}\frac{2i-1}{2n+1}\frac{\pi}{2}
+Weights:
+w_{i}=\frac{2\pi}{2n+1}x_{i}
+25.4.44
+\int_{0}^{1}\ln x f(x)dx=\sum_{i=1}^{n}w_{i}f(x_{i})+R_{n}
+Related orthogonal polynomials: polynomials orthogonal with respect to the weight function -\ln x
+Abscissas: See Table 25.7
+Weights: See Table 25.7
+25.4.45
+\int_{0}^{a}e^{-\gamma f}(x)dx=\sum_{i=1}^{n}w_{i}f(x_{i})+R_{n}
+Related orthogonal polynomials: Laguerre polynomials \(L_{n}(x)\).
+Abscissas: z_{i} is the i" zero of L_{n}(x)
+Weights:
+w_{i}=\frac{(n!)^{2}x_{i}}{(n+1)^{2}[L_{n+1}(x_{i})]^{2}}
+(See Table 25.9 for z_{i} and w_{i}.)
+Remainder:
+R_{n}=\frac{(n!)^{2}}{(2n)!}f^{(2n)}(\xi) (0<k<\infty)
+25.4.46
+\int_{-n}^{-\infty}e^{-\frac{2\pi}{2}f}(x)dx=\sum_{i=1}^{n}w_{i}f(x_{i})+R_{n}
+Related orthogonal polynomials: Hermite polynomials \(H_{n}(x)\).
+Abscissas: z_{i} is the i" zero of H_{n}(x)
+Weights:
+\frac{2^{n-|n!}\sqrt{x}}{n^{2}[H_{n-1}(x)]^{2}}
+(See Table 25.10 for x_{i} and w_{i}.)
+Remainder:
+R_{n}=\frac{n!/\pi}{2^{n}(2n)!}f^{(2n)}(\xi) (-\infty<k<\infty)
+Filon's Integration Formula'
+25.4.47
+\int_{x_{0}}^{x_{2n}}f(x)\cos tx dx=h\left[\alpha(th)(f_{2n}\sin tx_{2n}-f_{0}\sin tx_{0})+\beta(th)\cdot C_{2n}+\gamma(th)\cdot C_{2n-1}+\frac{2}{45}th^{4}S_{2n-1}^{\prime}\right]-R_{n}\]
+25.4.48
+C_{2n}=\sum_{i=0}^{n}f_{2i}\cos\ (tz_{2i})=\frac{1}{2}[f_{2n}\cos\ tx_{2n}+f_{0}\cos tx_{0}]
+25.4.49
+C_{2n-1}=\sum_{i=1}^{n}f_{2i-1}\cos\ tx_{2i-1}
+25.4.50
+S_{2n-1}=\sum_{i=1}^{n}f_{2i-1}^{2n-1}\sin tx_{2i-1}
+25.4.51
+R_{n}=\frac{1}{90}nk^{\delta}f^{(\alpha)}(\xi)+O(tk^{\beta})
+25.4.52
+\alpha(\theta)=\frac{1}{\theta}+\frac{\sin 2\theta}{2\theta^{\alpha}}\frac{2\sin^{\alpha}\theta}{\theta^{\beta}}\beta(\theta)=2\left(\frac{1+\cos^{2}\theta}{\theta^{\beta}}\frac{\sin 2\theta}{\theta^{\beta}}\right)\gamma(\theta)=4\left(\frac{\sin\theta}{\theta^{\beta}}\frac{\cos\theta}{\theta^{\beta}}\right)\]
+For small \(\theta\) we have
+25.4.53
+\alpha=\frac{2\theta^{\delta}}{45}\frac{2\theta^{\delta}}{315}+\frac{2\theta^{\tau}}{4725}\cdot\ldots\]
+\beta=\frac{2}{3}+\frac{2\theta^{\tau}}{1

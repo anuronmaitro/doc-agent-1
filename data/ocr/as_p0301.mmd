@@ -1,0 +1,30 @@
+ERROR FUNCTION AND FRESNEL INTEGRALS (301)
+7.3.8   S(x)=S_{1}\left(x\sqrt{\frac{\pi}{2}}\right)=S_{2}\left(\frac{\pi}{2}\,x^{2}\right)
+7.3.9   C(z)=\frac{1}{2}+f(z)\sin\left(\frac{\pi}{2}\,z^{2}\right)-g(z)\;\cos\left(\frac{\pi}{2}\,z^{2}\right)
+7.3.10   S(z)=\frac{1}{2}-f(z)\;\cos\left(\frac{\pi}{2}\,z^{2}\right)-g(z)\;\sin\left(\frac{\pi}{2}\,z^{2}\right)
+Series Expansions
+7.3.11   C(z)=\sum\limits_{n=0}^{\infty}\frac{(-1)^{n}(\pi/2)^{2n}}{(2n)!(4n+1)}\,z^{4n+1}\]
+7.3.12   C(z)=\cos\left(\frac{\pi}{2}\,z^{2}\right)\sum\limits_{n=0}^{\infty}\frac{(-1)^{n}\pi^{2n}}{1\cdot3\ldots(4n+1)}\,z^{4n+1}\]
+7.3.13   S(z)=\sum\limits_{n=0}^{\infty}\frac{(-1)^{n}(\pi/2)^{2n+1}}{(2n+1)!(4n+3)}\,z^{4n+3}\]
+7.3.14   S(z)=\sum\limits_{n=0}^{\infty}\frac{(-1)^{n}(\pi/2)^{2n}}{(2n+1)!(4n+3)}\,z^{4n+3}
+7.3.15   C(z)=J_{1/2}(z)+J_{3/2}(z)+J_{9/2}(z)+\ldots
+7.3.16   S_{2}(z)=J_{3/2}(z)+J_{7/2}(z)+J_{11/2}(z)+\ldots
+For Bessel functions J_{n+1/2}(z) see chapter 10.
+Simmetry Relations
+7.3.17   C(-z)=-C(z),  S(-z)=-S(z)
+7.3.18   C(iz)=iC(z),  S(iz)=-iS(z)
+7.3.19   C(z)=C(z),  S(z)=-\overline{S(z)}
+Value at Infinity
+7.3.20   C(x)=\frac{1}{2},  S(x)=\frac{1}{2} (x\to\infty)
+Derivatives
+7.3.21  \frac{df(x)}{dx}=-\pi xg(x), \frac{dg(x)}{dx}=\pi xf(x)-1
+Relation to Error Function (see 7.1.1, 7.1.3)
+7.3.22   C(z)+iS(z)=\frac{1+i}{2}\operatorname{erf}\left[\frac{\sqrt{\pi}}{2}\,(1-i)z\right]
+=\frac{1+i}{2}\left\{1-e^{\frac{\pi}{2}x^{2}}w\left[\frac{\sqrt{\pi}}{2}\,(1+i)z\right]\right\}
+7.3.23   g(x)=\mathcal{R}\left\{\frac{1+i}{2}w\left[\frac{\sqrt{\pi}}{2}\,(1+i)x\right]\right\}
+7.3.24   f(x)=\mathcal{F}\left\{\frac{1+i}{2}w\left[\frac{\sqrt{\pi}}{2}\,(1+i)x\right]\right\}
+Relation to Confluent Hypergeometric Function (see chapter 13)
+7.3.25   C(z)+iS(z)=zM\left(\frac{1}{2},\frac{3}{2};i\frac{\pi}{2}\,z^{2}\right)
+=ze^{\frac{\pi}{2}x^{3}}M\left(1,\frac{3}{2}-i\frac{\pi}{2}\,z^{2}\right)
+Relation to Spherical Bessel Functions (see chapter 10)
+7.3.26   C_{2}(z)=\frac{1}{2}\int_{0}^{z}J_{-1}(t)dt,S_{2}(z)=\frac{1}{2}\int_{0}^{z}J_{1}(t)dt

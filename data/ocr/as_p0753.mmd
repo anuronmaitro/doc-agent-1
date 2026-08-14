@@ -1,0 +1,33 @@
+SPEERIDAL WAVE FUNCTIONS (p.753)
+Wave Equation in Oblate Spheroidal Coordinates
+21.5.2
+\nabla^{2}+L^{2q}=\frac{\partial}{\partial\xi}[(\xi^{2}+1)\,\frac{\partial\Phi}{\partial\xi}]+\frac{\partial}{\partial\eta}[(1-\eta^{2})\,\frac{\partial\Phi}{\partial\eta}]+\frac{\xi^{2}+\eta^{2}}{(\xi^{2}+1)(1-\eta^{2})\partial\phi^{2}}+c^{2}(\xi^{2}+\eta^{2})\Phi=0\]
+21.5.2 may be obtained from 21.5.1 by the transformations
+\xi\to\pm i\xi, e\to\mp ic.
+21.6. Differential Equations for Radial and Angular Prolate Spheroidal Wave Functions
+If in 21.5.1 we put
+\Phi=R_{m}(e,\xi)S_{m}(e,\eta)\,\sin\, m\phi
+then the "radial solution" \(R_{m}(e,\xi)\) and the "angular solution" \(S_{m}(e,\eta)\) satisfy the differential equations
+21.6.1
+\frac{d}{d\xi}[(\xi^{2}-1)\,\frac{d}{d\xi}\, R_{mn}(e,\xi)]-(\lambda_{mn}-c^{2}\xi^{2}+\frac{m^{2}}{\xi^{2}-1})\, R_{mn}(e,\xi)=0
+21.6.2
+\frac{d}{d\eta}[(1-\eta^{2})\,\frac{d}{d\eta}\, S_{mn}(e,\eta)]-\frac{\mu^{2}}{\mu^{2}}\, S_{mn}(e,\eta)=0
+where the separation constants (or eigenvalues) \(\lambda_{mn}\) are to be determined so that \(R_{mn}(e,\xi)\) and \(S_{mn}(e,\eta)\) are finite at \xi=\pm 1 and \eta=\pm 1 respectively.
+(21.6.1 and 21.6.2 are identical. Radial and angular prolate spheroidal functions satisfy the same differential equation over different ranges of the variable.)
+Differential Equations for Radial and Angular Oblate Spheroidal Functions
+21.6.3
+\frac{d}{d\xi}[(\xi^{2}+1)\,\frac{d}{d\xi}\, R_{mn}(e,\xi)]-(\lambda_{mn}-c^{2}\xi^{2}-\frac{m^{2}}{\xi^{2}+1})\, R_{mn}(e,\xi)=0
+21.6.4
+\frac{d}{d\eta}[(1-\eta^{2})\,\frac{d}{d\eta}\, S_{mn}(e,\eta)]+(\lambda_{mn}+c^{2}\eta^{2}-\frac{m^{2}}{1-\eta^{2}})\, S_{mn}(e,\eta)=0
+21.6.3 may be obtained from 21.6.1 by the transformations \xi\to\pm ik, e\to\mp ic; 21.6.4 may be obtained from 21.6.2 by the transformation c\to\mp ic.)
+21.7.1
+\beta_{mn}^{(1)}(e,\eta)=\sum_{r=0,1}^{\gamma^{\prime}}d\eta^{m}(e)P_{m+r}^{m}(\eta)=-\Pr\text{Polate angular function of the first kind
+21.7.2
+\beta_{m}^{(2)}(e,\eta)=\sum_{r=-a}^{m}d\eta^{m}(e)Q_{m+r}^{m}(\eta)=-\Pr\text{Polate angular function of the second kind
+($P_{m}^{m}(\eta)$ and $Q_{n}^{m}(\eta) are associated Legendre functions of the first and second kinds respectively. However, for --1\leq z\leq 1, P_{m}^{m}(z)=(1-z^{2})^{m/2}d\eta^{m}P_{n}(z)/dz^{m}(see 8.6.6). The summation is extended over even values or odd values of \(r\).)
+Recurrence Relations Between the Coefficients
+21.7.3
+\alpha_{k}d_{k+2}+(\beta_{k}-\lambda_{mn})d_{k}+\gamma_{k}d_{k-2}=0
+\alpha_{k}=\frac{(2\,m+k+2)\,(2\,m+k+1)e^{2}}{(2\,m+2k+3)\,(2\,m+2k+5)}
+\beta_{k}=(m+k)\,(m+k+1)+\frac{2\,(m+k)\,(m+k+1)-2\,m^{2}-1}{(2\,m+2k-1)\,(2\,m+2 k+3)}\, e^{2}
+\gamma_{k}=\frac{k(k-1)e^{2}}{(2

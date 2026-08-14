@@ -1,0 +1,20 @@
+LAPLACE TRANSFORMS 1029   f(s)   F(0)
+29.3.126   e^{\alpha}E_{1}(as)  (a>0)  5  \frac{1}{t+a}
+29.3.127  \frac{1}{a}-\varepsilon e^{\alpha}E_{1}(as)  (a>0)  5  \frac{1}{(t+a)^{2}}
+29.3.128   a^{1-n}e^{\alpha}E_{n}(as)  (a>0;n=0,1,2,\ldots)  5  \frac{1}{(t+a)^{n}}
+29.3.129  \left[\frac{\pi}{2}-\mathrm{Si}\left(s\right)\right]\cos s+\mathrm{Ci}(s)\sin s  5  \frac{1}{t^{2}+1}
+29.4. Table of Laplace-Stieltjes Transforms 4
+\phi(s)  \Phi(t)
+29.4.1  \int_{0}^{\infty}e^{-nt}d\Psi(t)  \Phi(t)
+29.4.2   e^{-\mathrm{\Delta t}}  (k>0)  u(t-k)
+29.4.3  \frac{1}{1-e^{-\mathrm{\Delta h}}}  (k>0)  \sum_{n=0}^{\infty}u(t-nk)
+29.4.4  \frac{1}{1+e^{-\mathrm{\Delta t}}}  (k>0)  \sum_{n=0}^{\infty}(-1)^{n}u(t-nk)
+29.4.5  \frac{1}{\sinh ks}  (k>0)  \sum_{n=0}^{\infty}u[t-(2n+1)k]
+29.4.6  \frac{1}{\cosh ks}  (k>0)  \sum_{n=0}^{\infty}(-1)^{n}u[t-(2n+1)k]
+29.4.7  \tanh ks  (k>0)  u(t)+2\sum_{n=1}^{\infty}(-1)^{n}u(t-2nk)
+29.4.8  \frac{1}{\sinh(ks+a)}  (k>0)  2\sum_{n=0}^{\infty}e^{-(2n+1)a}u[t-(2n+1)k]
+29.4.9  \frac{e^{-\mathrm{\Delta t}}}{\sinh(ks+a)}  (k>0,h>0)
+29.4.10  \frac{\sinh(hs+b)}{\sinh(ks+a)}  (0<h<k)
+29.4.11  \sum_{n=0}^{\infty}a_{n}e^{-k_{n}x}  (0<k_{0}<k_{1}<\ldots)
+For the definition of the Laplace-Stieltjes transform see [29.7]. In practice, Laplace-Stieltjes transforms are often written as ordinary Laplace transforms involving Dirac's delta function d(t). This "function" may formally be considered as the derivative of the unit step function, du(t)=\delta(t)dt, so that \int_{-\infty}^{\infty}du(t)=\int_{-\infty}^{x}\xi(t)dt=\left\{\begin{array}{l}0\ (x<0)\\ 1\ (x>0).\end{array}\right.\] The correspondence 29.4.2, for instance, then assumes the form e^{-tx}=\int_{0}^{\infty}e^{-tx}\xi(t-k)dt.
+
