@@ -173,6 +173,14 @@ def _has_duplicate_block(text: str) -> bool:
 # in a 1-pixel-tall sliver anyway, so skip the model call rather than let it reach the crash.
 MIN_CROP_DIM_PX = 8
 
+# Region-routing hybrid (Step 28 point 11): degenerate-crop guard thresholds, validated on
+# the 20 A&S val pages (failure_rate 0.05 vs 0.10 for either adapter alone with these
+# values). A fresh table-region crop shorter than this many chars, OR shorter than this
+# fraction of the whole-page text block it would replace, is more likely a bad decode than
+# a genuinely short table -- keep the original (primary-adapter) text instead.
+MIN_TABLE_CROP_CHARS = 50
+MIN_TABLE_CROP_RATIO = 0.20
+
 # The citation anchor our Explainable NFR needs (summary.md 3f / 10): A&S formula numbers
 # look like "6.1.8". Parsed out of a chunk's OWN text, never guessed.
 FORMULA_ID_RE = re.compile(r"\d+\.\d+\.\d+")
@@ -185,7 +193,15 @@ NOUGAT_REVISION = "abfecedbb34367c820e233f710fdc7f54e6ab249"
 
 
 class Reader:
-    """Model set by cfg['ocr']. Baseline: pretrained TrOCR/Donut/Tesseract."""
+    """Model set by cfg['ocr']. Baseline: pretrained TrOCR/Donut/Tesseract.
+
+    Fine-tuned mode (`cfg['ocr']['finetune']: true` + `adapter_dir` set, Step 30): wraps
+    the base model with the Step 28 LoRA adapter via PEFT. An optional second adapter
+    (`table_adapter_dir`, Step 28 point 11's region-routing hybrid) is loaded onto the SAME
+    PeftModel as a second named adapter rather than loading the 1.4 GB base model twice --
+    `set_active_adapter()` switches which one is active before a `generate()` call. Falls
+    back to the plain pretrained model when `finetune` is false/unset, so every existing
+    caller (tests, the Step 16/18b baseline runs) is unaffected."""
 
     def __init__(self, cfg: dict) -> None:
         self.cfg = cfg["ocr"]
@@ -193,6 +209,8 @@ class Reader:
         self._model: Any = None
         self._processor: Any = None
         self._dtype: Any = None  # resolved in _ensure_loaded (fp16 on GPU, fp32 on CPU)
+        self._is_peft = False
+        self.has_table_adapter = False
 
     def _ensure_loaded(self) -> None:
         """Load facebook/nougat-base (or cfg['ocr']['model']) on first use, not at
@@ -228,9 +246,37 @@ class Reader:
         model = VisionEncoderDecoderModel.from_pretrained(
             model_name, revision=revision, torch_dtype=dtype
         )
+
+        adapter_dir = self.cfg.get("adapter_dir")
+        if self.cfg.get("finetune") and adapter_dir:
+            from peft import PeftModel
+
+            model = PeftModel.from_pretrained(model, adapter_dir, adapter_name="primary")
+            self._is_peft = True
+            table_adapter_dir = self.cfg.get("table_adapter_dir")
+            if table_adapter_dir:
+                model.load_adapter(table_adapter_dir, adapter_name="table")
+                self.has_table_adapter = True
+            model.set_adapter("primary")
+            logger.info(
+                f"vision.ocr: loaded fine-tuned adapter from {adapter_dir}"
+                + (f" + table adapter from {table_adapter_dir}" if self.has_table_adapter else "")
+            )
+
         model.eval()
         model.to(device)
         self._model = model
+
+    def set_active_adapter(self, name: str) -> None:
+        """Switch which loaded PEFT adapter generates next ('primary' or 'table'). No-op
+        (and a loud warning, not a silent skip) if this Reader isn't in fine-tuned mode --
+        calling it on the plain pretrained model would otherwise be a silent bug."""
+        if not self._is_peft:
+            logger.warning(
+                f"vision.ocr: set_active_adapter({name!r}) called on a non-PEFT Reader; ignored"
+            )
+            return
+        self._model.set_adapter(name)
 
     def _generate(self, image: Any) -> tuple[str, float]:
         """Run one Nougat forward pass on a single image (a full page or a crop).
@@ -249,7 +295,16 @@ class Reader:
             self.device, dtype=self._dtype
         )
         with torch.no_grad():
-            outputs = self._model.generate(
+            # A generic PeftModel (this project's own apply_lora has no task_type, so it's
+            # not a PeftModelForSeq2SeqLM with its own .generate) forwards unknown
+            # attributes to the wrapped base model via __getattr__ delegation -- same
+            # defensive fallback run_finetune.py's _generate_page already needed for the
+            # identical reason.
+            try:
+                generate_fn = self._model.generate
+            except AttributeError:
+                generate_fn = self._model.base_model.model.generate
+            outputs = generate_fn(
                 pixel_values,
                 min_length=1,
                 max_new_tokens=MAX_NEW_TOKENS,
@@ -507,7 +562,96 @@ def _retry_page_by_region(
     return recombined, region_texts, region_confs
 
 
-def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = None) -> list[Chunk]:
+def _route_table_regions(
+    reader: Reader, page_id: str, page_regions: list[Region], whole_page_markdown: str
+) -> str:
+    """Step 28 point 11's region-routing hybrid: apply the table adapter ONLY to crops of
+    regions `layout.detect()` classifies as `"table"`, splicing the result into the primary
+    adapter's already-SUCCESSFUL whole-page text. Only called when `whole_page_markdown`
+    already passed `_failure_reason` -- see `transcribe()`'s separate table-adapter
+    whole-page fallback for the case where the primary pass itself failed.
+
+    Two real bugs found and fixed validating this on the 20 val pages (full history:
+    plan.md Step 28 point 11; reference validation script:
+    `KAGGLE/region_routing_check/validate_region_routing.py`):
+
+    1. An empty "original chunk" (more layout regions than `_split_markdown_to_regions`
+       found text blocks for -- it pads shortfalls with `""`) means there's nothing real to
+       replace. Substituting a fresh crop into that slot reliably produced degenerate
+       output on 2 of 20 val pages. Fixed: skip that region entirely.
+    2. Degenerate-crop guard: skip a substitution if the fresh crop text is suspiciously
+       short relative to the (non-empty) chunk it would replace (`MIN_TABLE_CROP_CHARS`/
+       `MIN_TABLE_CROP_RATIO`).
+
+    A third guard, added here for full-book production use (not present in the original
+    validation script, which only ever measured aggregate before/after): if the spliced
+    result is WORSE than the pre-splice text -- introduces a failure the whole-page text
+    didn't have -- keep the pre-splice text. Table-routing must never turn an already-
+    working page into a failing one.
+    """
+    if not reader.has_table_adapter or not any(r.kind == "table" for r in page_regions):
+        return whole_page_markdown
+
+    from PIL import Image as PILImage
+
+    chunks = _split_markdown_to_regions(whole_page_markdown, len(page_regions))
+
+    # Only pay for the adapter switch (and image load) if there's at least one table
+    # region with a non-empty original chunk to actually attempt -- most pages either have
+    # no table region at all or hit the empty-chunk guard below, and both cases should
+    # never touch the table adapter.
+    candidates = [i for i, r in enumerate(page_regions) if r.kind == "table" and len(chunks[i]) > 0]
+    if not candidates:
+        return whole_page_markdown
+
+    full_image = PILImage.open(_page_image_path(page_id)).convert("RGB")
+    changed = False
+
+    reader.set_active_adapter("table")
+    try:
+        for i in candidates:
+            region = page_regions[i]
+            original_chunk = chunks[i]
+            crop = full_image.crop(region.bbox)
+            if crop.width < MIN_CROP_DIM_PX or crop.height < MIN_CROP_DIM_PX:
+                continue
+            try:
+                crop_text, _conf = reader._generate(crop)
+            except Exception as exc:
+                logger.warning(
+                    f"vision.ocr: table-region crop generation crashed on {page_id} "
+                    f"bbox={region.bbox} ({type(exc).__name__}: {exc}); keeping whole-page text"
+                )
+                continue
+            if len(crop_text) < MIN_TABLE_CROP_CHARS or len(crop_text) < MIN_TABLE_CROP_RATIO * len(
+                original_chunk
+            ):
+                continue
+            chunks[i] = crop_text
+            changed = True
+    finally:
+        reader.set_active_adapter("primary")
+
+    if not changed:
+        return whole_page_markdown
+
+    spliced = "\n\n".join(c for c in chunks if c.strip())
+    if _failure_reason(spliced) is not None:
+        logger.warning(
+            f"vision.ocr: {page_id} table-routing splice produced a new failure; "
+            "keeping the whole-page (non-routed) text instead"
+        )
+        return whole_page_markdown
+    return spliced
+
+
+def transcribe(
+    regions: list[Region],
+    cfg: dict,
+    *,
+    limit_pages: int | None = None,
+    skip_known_failures: bool = False,
+) -> list[Chunk]:
     """Regions -> text chunks.
 
     Groups regions by page and runs Nougat **once per page** (not once per region): Nougat
@@ -532,6 +676,28 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
     *both* the whole-page attempt and the region retry is actually given up on -- summary.md
     4i: "mark the page as failed rather than writing garbage" still holds, it just now
     happens after a real second chance, not on the first bad decode.
+
+    `skip_known_failures` (default False, so nothing about a normal or fresh run changes)
+    skips pages already listed in data/ocr/failures.json instead of re-running them. It
+    exists because the resume check above is `mmd_path.exists()`, and a failed page writes
+    NO .mmd -- so every resumed push pays full inference cost to reproduce a failure it
+    already recorded. Decoding here is greedy (`_generate` sets no do_sample/temperature),
+    so the same reader on the same page is deterministic: the retry cannot succeed, it can
+    only cost. Measured on Step 30's run, the 53 failed pages burned 7561s (2.10h) -- 47.6%
+    of the whole OCR stage -- to produce zero chunks. A skipped page produces no chunks and
+    counts as failed, exactly as re-failing would, so the resulting index is identical.
+    Pass it ONLY when resuming with the SAME reader: a page that fails under one reader may
+    well succeed under another (that is precisely what Step 18b and Step 28 changed), and
+    that is why this is opt-in rather than the default.
+
+    Step 28 point 11 (region-routing hybrid, active whenever `Reader.has_table_adapter` is
+    true -- i.e. `cfg['ocr']['table_adapter_dir']` is set): a page whose primary whole-page
+    attempt SUCCEEDS is further passed through `_route_table_regions`, which may improve
+    detected table regions using the table adapter (never turns a success into a failure,
+    see that function's own guard). A page whose primary attempt FAILS but has a detected
+    table region gets ONE additional fallback -- the table adapter's own whole-page
+    prediction -- tried before the existing region-by-region retry, since splicing crops
+    into an already-failed base never helped in validation.
     """
     reader = Reader(cfg)
     by_page = _group_by_page(regions)
@@ -542,13 +708,20 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
     failure_rows = _load_failures(FAILURES_PATH)
 
     chunks: list[Chunk] = []
-    n_processed = n_cached = n_failed = n_recovered = 0
+    n_processed = n_cached = n_failed = n_recovered = n_skipped = 0
     t0 = time.time()
 
     for page_id in page_ids:
         page_regions = by_page[page_id]
         doc_id = _chapter_of(int(page_id[4:])) if page_id.startswith("as_p") else page_id
         mmd_path = OCR_DIR / f"{page_id}.mmd"
+
+        if skip_known_failures and not mmd_path.exists() and page_id in failure_rows:
+            # Already recorded as failed by a previous push with this reader; re-running it
+            # is deterministic and would fail identically. Produces no chunks either way.
+            n_failed += 1
+            n_skipped += 1
+            continue
 
         if mmd_path.exists():
             markdown = mmd_path.read_text(encoding="utf-8")
@@ -568,9 +741,43 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
             from PIL import Image as PILImage
 
             image = PILImage.open(image_path).convert("RGB")
+            page_t0 = time.time()
             markdown, confidence = reader._generate(image)
-
             reason = _failure_reason(markdown)
+            status = "processed"
+
+            if reason is None and reader.has_table_adapter:
+                # Step 28 point 11: primary succeeded -- see if table-region routing
+                # improves it further. _route_table_regions guarantees it never turns this
+                # success into a failure, so `reason` stays None either way.
+                routed = _route_table_regions(reader, page_id, page_regions, markdown)
+                if routed != markdown:
+                    markdown = routed
+                    status = "processed+table-routed"
+
+            if (
+                reason is not None
+                and reader.has_table_adapter
+                and any(r.kind == "table" for r in page_regions)
+            ):
+                # Fix 1 (Step 28 point 11): primary's own whole-page prediction failed --
+                # try the table adapter's whole-page prediction before falling through to
+                # the region-by-region retry below. Splicing crops into an already-failed
+                # base never helped in validation (as_p0534 hit exactly this).
+                reader.set_active_adapter("table")
+                try:
+                    fallback_markdown, fallback_confidence = reader._generate(image)
+                finally:
+                    reader.set_active_adapter("primary")
+                if _failure_reason(fallback_markdown) is None:
+                    markdown, confidence = fallback_markdown, fallback_confidence
+                    reason = None
+                    status = "processed+table-fallback"
+                    logger.info(
+                        f"vision.ocr: {page_id} recovered via table-adapter whole-page "
+                        "fallback (primary whole-page attempt failed)"
+                    )
+
             if reason is not None:
                 # Defect 1 fix: don't discard the page untried -- retry region-by-region
                 # before giving up. A single-column crop is closer to Nougat's training
@@ -586,11 +793,14 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
                     _write_failures(FAILURES_PATH, failure_rows)
                     n_failed += 1
                     logger.warning(
-                        f"vision.ocr: {page_id} unusable ({reason}); region retry also failed; skipped"
+                        f"vision.ocr: [{n_processed + n_cached + n_failed}/{len(page_ids)}] "
+                        f"{page_id} FAILED ({reason}); region retry also failed; skipped "
+                        f"({time.time() - page_t0:.1f}s)"
                     )
                     continue
                 markdown, region_texts, region_confs = retry
                 n_recovered += 1
+                status = "recovered-region-retry"
                 logger.info(
                     f"vision.ocr: {page_id} recovered via region-level retry "
                     f"(page-level attempt: {reason})"
@@ -601,6 +811,10 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
 
             mmd_path.write_text(markdown, encoding="utf-8")
             n_processed += 1
+            logger.info(
+                f"vision.ocr: [{n_processed + n_cached}/{len(page_ids)}] {page_id} {status} "
+                f"({time.time() - page_t0:.1f}s, {len(markdown)} chars)"
+            )
 
         for idx, (region, text, conf) in enumerate(
             zip(page_regions, region_texts, region_confs, strict=True)
@@ -623,6 +837,8 @@ def transcribe(regions: list[Region], cfg: dict, *, limit_pages: int | None = No
     logger.info(
         f"vision.ocr: {len(chunks)} chunks from {n_processed} newly-transcribed "
         f"({n_recovered} via region-level retry) + {n_cached} cached pages "
-        f"({n_failed} failed/degenerate, skipped)"
+        f"({n_failed} failed/degenerate, skipped"
+        + (f", of which {n_skipped} known-failed and not re-run" if n_skipped else "")
+        + ")"
     )
     return chunks
