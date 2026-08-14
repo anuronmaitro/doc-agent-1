@@ -39,8 +39,8 @@
 - [x] Step 31 — notebooks/kb_demo.ipynb — S1
 - [x] Step 32 — reports/pipeline_diagram.md — S2
 - [x] Step 33 — configs/design_choices.md — S3
-- [ ] Step 34 — A2 form sections 4 + 5 — S1
-- [ ] Step 35 — A2 form sections 2 + 3 — S2
-- [ ] Step 36 — A2 form sections 1 + 6 + 7 — S3
+- [x] Step 34 — A2 form sections 4 + 5 — S1
+- [x] Step 35 — A2 form sections 2 + 3 — S2
+- [x] Step 36 — A2 form sections 1 + 6 + 7 — S3
 - [ ] Step 37 — transcripts x3 — all
 - [ ] Step 38 — final checks + `a2-submit` tag — S1
