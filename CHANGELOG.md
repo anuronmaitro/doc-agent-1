@@ -38,7 +38,7 @@
 - [x] Step 30 — Kaggle: re-OCR + rebuild index — S3
 - [x] Step 31 — notebooks/kb_demo.ipynb — S1
 - [x] Step 32 — reports/pipeline_diagram.md — S2
-- [ ] Step 33 — configs/design_choices.md — S3
+- [x] Step 33 — configs/design_choices.md — S3
 - [ ] Step 34 — A2 form sections 4 + 5 — S1
 - [ ] Step 35 — A2 form sections 2 + 3 — S2
 - [ ] Step 36 — A2 form sections 1 + 6 + 7 — S3
