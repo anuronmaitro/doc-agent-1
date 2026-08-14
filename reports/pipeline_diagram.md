@@ -1,11 +1,10 @@
 # Knowledge-base pipeline diagram
 
-Diagrams `pipeline.build_knowledge_base(cfg)` (`src/doc_agent/pipeline.py`) exactly as
-written — stage order and function calls below are copied from that file, not redrawn
-from memory, so this stays true to the code rather than to the plan. It does **not**
-cover Stage 5 (retrieval) or Stage 6 (agent) — those are wired by `pipeline.answer()`,
-a separate entry point, and are A3 scope (`retrieval/retriever.py` is still an
-unimplemented stub on purpose).
+This diagrams `pipeline.build_knowledge_base(cfg)` in `src/doc_agent/pipeline.py`,
+copied straight from that file rather than redrawn from memory, so it stays true to
+the code instead of the plan. Retrieval (Stage 5) and the agent (Stage 6) aren't here.
+Those get wired through a separate entry point, `pipeline.answer()`, and they're A3
+scope — `retrieval/retriever.py` still just raises `NotImplementedError`.
 
 ## Stage graph
 
@@ -83,30 +82,29 @@ flowchart TD
 ## The disabled stage — Stage 1, Enhancement
 
 `configs/config.yaml` locks `enhance: {enabled: false, model: "none", type: "none"}`.
-`ingest/enhance.py::run()` checks that flag first and returns `pages` completely
-untouched when it's off — the `Enhancer` class (a VAE/diffusion generative denoiser)
-never gets constructed, so `train()`/`apply()`'s `NotImplementedError` stubs never fire.
+`ingest/enhance.py::run()` checks that flag first and hands `pages` back untouched when
+it's off, so the `Enhancer` class, a VAE/diffusion denoiser, never gets built, and its
+`train()`/`apply()` stubs never get a chance to raise.
 
-**Why off, not just unimplemented:** this is a deliberate A1 trade-off (see the inline
-comment on that config line), not a stub we forgot. A&S is a clean 1964 print scan —
-uniform lighting, no water damage or bleed-through — so classical `preprocess.py`
-(deskew, median/bilateral denoise, CLAHE) already gets the pixels into good shape.
-A generative enhancer's main value is *hallucinating plausible detail into badly
-degraded scans*; on formula-dense math notation, an OCR-facing model inventing
-plausible-looking strokes it wasn't sure about is a correctness risk we don't need to
-take for a corpus that doesn't have the degradation problem this stage exists to solve.
-Turning it on is a one-line config flip (`enhance.enabled: true`) if a future corpus
-needs it — the pipeline stage stays in the fixed order either way (`pipeline.py`'s
-docstring: *"Do not reorder stages or remove hooks.run()/register_all() calls"*), it
-just becomes a pass-through instead of a no-op-because-unbuilt.
+This was a deliberate A1 call, not something we left unfinished. A&S is a clean 1964
+print scan with even lighting and no water damage, so classical preprocessing (deskew,
+denoise, CLAHE) already gets the pixels where they need to be. A generative enhancer
+earns its keep on scans that are actually damaged, by inventing detail the scan lost.
+On formula-dense notation that's a real risk: a model guessing at strokes it wasn't
+sure about can turn a correct-looking formula into a wrong one, and our corpus doesn't
+have the kind of degradation that would justify taking that risk. Turning it on later
+is a one-line config flip. The stage keeps its place in the fixed pipeline order
+either way — `pipeline.py`'s own docstring says not to reorder stages or drop a
+`hooks.run()` call — it would just stop being a pass-through.
 
 ## Extension seams shown but not (yet) used
 
-`hooks.run(AFTER_INGEST)` and `hooks.run(BEFORE_INDEX)` are both called unconditionally
-by `build_knowledge_base()`, but `wiring.register_all()` (the single manifest of what's
-wired where) registers nothing at either one today — only `AFTER_OCR`, `BEFORE_ANSWER`,
-`ON_LOG` (PII), `ON_STEP`/`ON_TOOL_CALL`/`AFTER_ANSWER` (tracing), and `ON_TOOL_CALL`
-(guardrails) have handlers. They're drawn here because they're real, fixed points in
-the stage order (`hooks.py`: *"Do NOT add/remove seams or the `hooks.run()` calls that
-use them"*) — a future horizontal feature (e.g. a corpus-level dedup pass, or a
-before-indexing quality filter) attaches here without touching `pipeline.py` again.
+`hooks.run(AFTER_INGEST)` and `hooks.run(BEFORE_INDEX)` both get called
+unconditionally inside `build_knowledge_base()`, but `wiring.register_all()`, the one
+place that lists what's wired where, attaches nothing to either seam right now. Only
+`AFTER_OCR`, `BEFORE_ANSWER`, and `ON_LOG` (PII), plus `ON_STEP`, `ON_TOOL_CALL`, and
+`AFTER_ANSWER` (tracing and guardrails), have handlers today. The two idle seams are
+still on the diagram because they're real, fixed points in the stage order — `hooks.py`
+says not to add or remove a seam or its `hooks.run()` call. A future feature, a
+corpus-level dedup pass or a before-indexing quality filter, say, would attach at one
+of these two without touching `pipeline.py` again.
