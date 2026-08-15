@@ -1,0 +1,37 @@
+GAMMA FUNCTION AND RELATED FUNCTIONS (p.4)
+6.5.5
+Probability Integral of the x^2-Distribution
+P(x^2|v)=\frac{1}{2^3r\Gamma(\frac{v}{2})}\int_0^{x^2}t^2r-t^2dt
+6.5.6
+(Pearson's Form of the Incomplete Gamma Function)
+I(u, p)=\frac{1}{\Gamma(p+1)}\int_0^{u\sqrt{p+1}}e^{-t^2}dt
+
+6.5.7
+C(x,a)=\int_z^{\infty}t^{a-1}\cos t\,dt
+(Rx<1)
+6.5.8
+S(x,a)=\int_z^{\infty}t^{a-1}\sin t\,dt
+(Rx<1)
+6.5.9
+E_n(x)=\int_1^{\infty}e^{-xt}t^{-n}dt=x^{n-1}\Gamma(1-n,x)
+6.5.10
+\alpha_n(x)=\int_1^{\infty}e^{-xt}t^{n}dt=x^{-n-1}\Gamma(1+n,x)
+6.5.11
+e_n(x)=\sum_j=0^{n}\frac{x^2j}{j!}
+Incomplete Gamma Function as a Confluent Hypergeometric Function (see chapter 13)
+6.5.12
+g(a,x)=a^{-1}x^6-x^3M(1,1+a,x)
+=a^{-1}x^4 M(a,1+a,-x)
+Special Values
+6.5.13
+P(n,x)=1-\left(1+x+\frac{x^2}{2!}+\ldots+\frac{x^{n-1}}{(n-1)!}\right)e^{-x}
+=1-e_{n-1}(x)e^{-x}
+For relation to the Poisson distribution, see 26.4.
+6.5.14
+g^n(-n,x)=x^n
+6.5.15
+g^n(0,x)=\int_z^{\infty}e^{-t^{-1}dt=E_1(x)}
+Replacements
+Recurrence Formulas
+6.5.21
+P(a+1,x)=P(a,x)-\frac{x

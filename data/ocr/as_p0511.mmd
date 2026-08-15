@@ -1,0 +1,41 @@
+CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.1)
+The self-adjoint equation 13.1.1 can also be written
+13.7.6  \frac{d}{dz}[z^{5}e^{-z}\frac{dw}{dz}]=az^{>1}e^{-z}w
+The Sonine-Polya Theorem
+The maxima and minima of |w| form an increasing or decreasing sequence according as
+\[-ax^{20-1}e^{-2x}\]
+13.8. Use and Extension of the Tables
+Calculation of M(a, b, x)
+Kummer's Transformation
+Compute M(3, .2, -.1) to 7S. Using 13.1.27 and Tables 4.4 and 13.1 we have a=3, b=2 so that
+M(3, .2, -.1)=e^{-1}M(-.1, .2, .1)
+=.85784 90.
+Thus 13.1.27 can be used to extend Table 13.1 to negative values of x. Kummer's transformation should also be used when a and b are large and nearly equal, for x large or small.
+Compute M(17, 16, 1) to 7S. Here a=17, b=16, and
+M(17, 16, 1)=e^{1}M(-1, 16, -1)
+=2.71828 18\times1.06250 00
+=2.88817 44.
+Recurrence Relations
+Compute M(-1.3, 1.2, .1) to 7S. Using 13.4.1 and Table 13.1 we have a=-.3, b=.2 so that
+M(-1.3, .2, .1)=2[.7M(-.3, .2, .1)-.3M(.7, .2, .1)]=.35821 23. By 13.4.5 when a=-1.3 and b=.2,
+M(-1.3, .12, .1)=[.26M(-.3, .2, .1)]-.24M(-1.3, .2, .1)]/.15
+=.89241 08. Similarly when a=-.3 and b=.2
+M(-.3, .12, .1)=.97459 52. Check, by 13.4.6,
+M(-1.3, .12, .1)=[.2M(-.3, .2, .1)]+1.2M(-.3, .12, .1)]/1.5
+=.89241 08.
+is an increasing or decreasing function of x, that is, they form an increasing sequence for M(a, b, x) if a>0, x<b-\tfrac12or if a<0, x>b-\tfrac12, and a decreasing sequence if a>0 and x>b-\tfrac12 or if a<0 and x<b-\tfrac12.
+The turning values of |w| lie near the curves
+13.7.7
+w=\pm\Gamma(b)\pi^{-1/2}e^{i/2}(\tfrac12bx-ax)^{1-1/2}\{1-x/(2b-4a)\}^{-1/4}
+Numerical Methods
+In this way 13.4.1-13.4.7 can be used together with 13.1.27 to extend Table 13.1 to the range
+\[-10\leq a\leq 10,\ -10\leq b\leq 10,\ -10\leq x\leq 10.\]
+This extension of ten units in any direction is possible with the loss of about 1S. All the recurrence relations are stable except i) if a<0, b<0 and a|>|b|, x>0, or ii) b<a, b<0, |b-a|>|b|, x<0, when the oscillations may become large, especially if |x| also is large.
+Neither interpolation nor the use of recurrence relations should be attempted in the strips b=-n\pm.1 where the function is very large numerically. In particular M(a, b, x) cannot be evaluated in the neighborhood of the points a=-m, b=-n, m\leq n, as near these points small changes in a, b or x can produce very large changes in the numerical value of M(a, b, x).
+At the point (-1,-1,x), M(a, b, x) is undefined. When a==1, M(-1, b, x)=1-\frack zero for all x. Hence \lim_{b\to-1}M(-1, b, x)=1+x. But M(b, b, x)=e^k for all x, when a=b. Hence \lim_{b\to-1}M(b, b, x)=e^k. In the first case b\to-1 along the line a=-1, and in the second case b\to-1 along the line a=b.
+Derivatives
+To evaluate M'(-.7, -.6, .5) to 7S. By 13.4.8, when a=-.7 and b=-.6, we have
+M'(-.7, -.6, .5)=\frac{-.7}{-.6}M(.3, .4, .5)
+=1.724128. Asymptotic Formulas
+For x\geq 10, a and b small, M(a, b, x) should be evaluated by 13.5.1 using converging factors 13.5.3 and 13.5.4 to improve the accuracy if necessary.
+

@@ -1,0 +1,43 @@
+PARABOLIC CYLINDER FUNCTIONS (p.6.11)
+9.6.11   y_{2}^{\prime}(a,x)+\tfrac{1}{2}xy_{2}(a,x)=y_{1}(a+1,x)
+19.6.12   y_{2}^{\prime}(a,x)-\tfrac{1}{2}xy_{2}(a,x)=y_{1}(a-1,x)
+Asymptotic Expansions
+19.7. Expressions in Terms of Airy Functions
+When a is large and negative, write, for 0\leq x<\infty
+x=2\sqrt{|a|}\xi t=(4|a|)^{\frac{1}{2}}\tau
+19.7.1
+\tau=-(\tfrac3\vartheta_{2})!
+\vartheta_{3}=\tfrac{1}{2}\int_{\xi}^{1}\sqrt{1-\xi^{2}}d_{8}=\tfrac{1}{4}\arccos\xi-\tfrac{1}{4}\xi\sqrt{1-\xi^{2}}\quad(\xi\leq1)\]
+19.7.2
+\tau=+(\tfrac3\vartheta_{2})!
+\vartheta_{2}=\tfrac{1}{2}\int_{1}^{\xi}\sqrt{s^{2}-1}ds=\tfrac{1}{4}\xi\sqrt{s^{2}-1}-\tfrac{1}{2}\arccosh\xi\quad(\xi\geq1)\]
+Then for x\geq 0, a\to-\infty
+19.7.3
+U(a,x)\sim2^{-1-\tfrac{1}{2}\alpha}\Gamma(\tfrac{1}{2}-\tfrac{1}{2}a)\Big{(}\tfrac{t}{\xi^{2}-1}\Big{)}^{\frac{1}{4}}\Deltai(t)
+19.7.4
+\Gamma(\tfrac{1}{2}-a)V(a,x)\sim2^{-1-\tfrac{1}{2}\alpha}\Gamma(\tfrac{1}{2}-\tfrac{1}{2}a)\Big{(}\tfrac{t}{\xi^{2}-1}\Big{)}^{\frac{1}{4}}Bi(t)
+Table 19.3 gives \tau as a function of \xi.
+See [19.5] for further developments.
+19.8. Expansions for x Large and a Moderate
+When x>>|a|
+19.8.1
+U(a,x)\sim e^{-1x^2}x^{-a-1}\Big{\{}1\frac{(a+\tfrac{1}{2})(a+\tfrac{3}{2})}{2x^2}\qquad+\frac{(a+\tfrac{1}{2})(a+\tfrac{3}{2})(a+\tfrac{3}{2})}{2\cdot4x^4}\qquad\dots\Big{\}}\]
+19.8.2
+V(a,x)\sim\sqrt{\tfrac{2}{\pi}e^{4x^2}x^{-b}}\Big{\{}1+\frac{(a-\tfrac{1}{2})(a-\tfrac{3}{2})}{2x^2}\qquad+\frac{(a-\tfrac{1}{2})(a-\tfrac{3}{2})}{2\cdot4x^4}\qquad\dots\Big{\}}\]
+These expansions form the basis for the choice of standard solutions in 19.3. The former is valid for complex x, with |arg x|<\tfrac{1}{2\pi}, in the complete sense of Watson [19.6], although valid for a wider range of |arg x| in Poincare's sense; the second series is completely valid only for x real and positive.
+19.9. Expansions for a Large With x Moderate
+(i) a positive
+When a>>x^2, with p=\sqrt{a}, then
+19.9.1   U(a,x)=\tfrac{\sqrt{\pi}}{2^{ia+1}\Gamma(\tfrac{1}{2}+\tfrac{1}{2}a)}\exp(-px+v_{1})
+19.9.2   U(a,-x)=\tfrac{\sqrt{\pi}}{2^{ia+1}\Gamma(\tfrac{1}{2}+\tfrac{1}{2}a)}\exp(px+v_{2})\]
+where
+19.9.3
+v_1, v_2, \sim\mp\tfrac{2}{3}(\tfrac{1}{2}x)^3-\tfrac{(1}{2}x)^2\mp\tfrac{3}{2}x-\tfrac{3}{2}(2x)^3\]
++\tfrac{2}{(2p)^4}+\tfrac{(1/4}{2}x)^3-\tfrac{5}{2}(2p)^5\mp\tfrac{1}{4}\dots\]
+(a\to+\infty)
+The upper sign gives the first function, and the lower sign the second function.
+(ii) a negative
+When -a>>x^2, with p=\sqrt{-a}, then
+19.9.4
+U(a,x)+i\Gamma(\tfrac{1}{2}-a)\cdot V(a,x)
+=\tfrac{e^{i\pi(4+ik)\Gamma(\tfrac{1}{2}-\tfrac{1}{2}\alpha)}}{2^{ia+1}\sqrt{\pi

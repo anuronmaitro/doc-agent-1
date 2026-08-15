@@ -1,0 +1,21 @@
+284  EXPONENTIAL INTEGRAL AND RELATED FUNCTIONS
+n   E_{\pi}(1.275)  E_{\pi}(1.275)
+1  1.1408099  6.0430168  2  0.0998984  7.0374307
+3  0.07609303  8.031009
+4  0.0608307  9.0296534  5.0504679  10.0268469
+Interpolating directly in Table 5.4 for n=10 we get E_{10}(1.275)=.0268470 as a check.
+Sample 5. Compute E_{\pi}(x), n=1(1)N_ to SS for x=10, N=10.
+If, as in this example, x is appreciably larger than five and N\leq x, then the recurrence relation 5.1.14 may be safely used in decreasing order of n([5.5]). From Table 5.5 for x^{n+1}=.1 we get (x^{\pm 1}+10)e^{x}E_{10}(x)=1.02436 so that E_{10}(10)=2.32529\times\times 10^{-6}. Using this as the initial value we obtain column (2).
+From Table 5.2 we get xe^{\pm 1}E_{1}(x)=.915633 so that E_{1}(10)=4.15697\times 10^{-6} as a check. Forward recurrence starting with E_{1}(10)=4.1570\times 10^{-6} yields the values in column (1). The underlined figures are in error.
+Table 5.2 we get xe^{\pm}E_{1}(x)=.915633 so that E_{1}(10)=4.15697\times 10^{-6} as a check. Forward recurrence starting with E_{1}(10)=4.1570\times 10^{-6} yields the values in column (1). The underlined figures are in error.
+Table 5.2 we get xe^{\pm}E_{1}(x)=.915633 so that E_{1}(10)=4.15697\times 10^{-6} as a check. Forward recurrence starting with E_{1}(10)=4.1570\times 10^{-6} yields the values in column (1). The underlined figures are in error.
+Table 5.3. Compute E_{\pi}(x), n=1(1)N, to SS for x=12.3, N=20.
+If N is appreciably larger than x, and x appreciably larger than five, then the recurrence relation 5.1.14 should be used in the backward direction to generate E_{\pi}(x) for n<n_0, and in the forward direction to generate E_{\pi}(x) for n>n_0, where n_0=\langle x\rangle.
+From 5.1.52, with n_0=12, x=12.3, we have
+\[E_{\pi_0}(x)=\frac{e^{-12.3}}{24.3}(1+.02032-.00043-.00001)=1.91038\times 10^{-7}.\]
+Using the recurrence relation 5.1.14, as indicated, we get
+n  10^{x}E_{\pi}(12.3) 10^{x}E_{\pi}(12.3) \pi
+12  .191038  .191038  12  11  .199213  .183498  13  10  .208098  .176516  14  9  .217793  .170042  15  8  .228406  .164015  16  7  .240073  .158397  17  6  .252951  .153144  18  5  .267234  .148226  19  4.283155  1.43608  20  3.300998  22  3.321117  11  3.343953   From Tables 5.2 and 5.5 we find E_{1}(12.3)=.343953  \times 10^{-6}, E_{20}(12.3)=.143609\times 10^{-6} as a check.
+Table 5.4. Compute a_{\pi}(2) to 68 for n=1(1)5. The recurrence formula 5.1.15 can be used for all x>0 in increasing order of n without loss of accuracy. From 5.1.25 we have a_{0}(2)=\frac{1}{2}e^{-2}=.0676676, so we get
+n  \alpha_{\pi}(2) 0 .0676676  1 .101501  2 .169169  3 .321421  4 .710510  5 1.84394  Independent calculation with 5.1.8 yields the same result for a_{5}(2).
+The functions a_{0}(x) and a_

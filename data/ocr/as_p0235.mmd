@@ -1,0 +1,28 @@
+EXponential INTEGRAL AND RELATED FUNCTIONS (n)=2 sinh1=2.350402 and again carrying 9D, we obtain column (1). The underlined figures are in error. The above shows that three significant figures are lost in forward recurrence, whereas about three significant figures are gained in backward recurrence!
+An alternative procedure is to start with an arbitrary value for n sufficiently large (see also [5.1]). To illustrate, starting with the value zero at n=11 we get
+\begin{tabular}{c c c} n & \beta_{n}(x) & n & \beta_{n}(x) \\
+11 & 0. & 5 & −.324297 \\
+10 & .280560 & 4 & .552373 \\
+9 & −.206984 & 3 & −.449507 \\
+8 & .319908 & 2 & .878885 \\
+7 & −.253812 & 1 & −.735759 \\
+6 & .404621 & 0 & 2.350402 \\ \end{tabular}
+The functions \beta_{0}(x) and \beta_{1}(x) can be obtained from Table 10.8 using 5.1.48, 5.1.49.
+Example 9. Compute E_{1}(z) for z=3.2578 +6.8943i.
+From Table 5.6 we have for z_{0}=x_{0}+iy_{0}=3+7i
+\begin{tabular}{c c c} z_{0}e^{\alpha_{0}}E_{1}(z_{0})=.934958+.095598i, \\ e^{\alpha_{0}}E_{1}(z_{0})=.059898-.107895i. \\ \end{tabular} From Taylor's formula with f(z)=e^{\iota}E_{1}(z) we have
+\begin{tabular}{c c c} f(z)=f(z_{0}+\Delta z)=f(z_{0})+\frac{f^{\prime}(z_{0})}{11}\Delta z\\ +\frac{f^{\prime\prime}(z_{0})}{2!}(\Delta z)^{2}+\ldots\]
+
+Texts
+[5.1] F. J. Corbato, On the computation of auxiliary functions for two-center integrals by means of a high-speed computer, J. Chem. Phys. 24, 452-453 (1956).
+[5.2] A. Erdelyi et al., Higher transcendental functions, vol. 2 (McGraw-Hill Book Co., Inc., New York, N.Y., 1953).
+[5.3] A. Erdelyi et al., Tables of integral transforms, vols. 1, 2 (McGraw-Hill Book Co., Inc., New York, N.Y., 1954).
+[5.4] W. Gautschi, Some elementary inequalities relating to the gamma and incomplete gamma function, J. Math. Phys. 38, 77-81 (1959).
+[5.5] W. Gautschi, Recursive computation of certain integrals, J. Assoc. Comput. Mach. 8, 21-40 (1961).
+[5.6] W. Grobner and N. Hofreiter, Integraltafel (Springer-Verlag, Wien and Innsbruck, Austria, 1949-50).
+[5.7] C. Hastings, Jr., Approximations for digital computers (Princeton Univ. Press, Princeton, N.J., 1955).
+[5.8] E. Hopf, Mathematical problems of radiative equilibrium, Cambridge Tracts in Mathematics and Mathematical Physics, No. 31 (Cambridge Univ. Press, Cambridge, England, 1934).
+[5.9] V. Kourganoff, Basic methods in transfer problems (Oxford Univ. Press, London, England, 1952).
+[5.10] F. Losch and F. Schoblik, Die Fakultat und verwandte Funktionen (B. G. Teubner, Leipzig, Germany, 1951).
+[5.11] N. Nielsen, Theorie des Integrallogarithmus (B. G. Teubner, Leipzig, Germany, 1906).
+

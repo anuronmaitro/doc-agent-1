@@ -1,0 +1,25 @@
+\frac{p_{1}^{2}}{p_{2}^{3}}=668\)
+Weierstrass elliptic AND RELATED FUNCTIONS
+Computation of \sigma for Given z and Arbitrary gz and gz
+(or periods from which g_2 and g_3 can be computed--in any case, periods must be known, at least approximately)
+First reduce the problem (if necessary) to computation for a point z in the Fundamental Rectangle (see 18.2). After final reduction let z denote the point obtained.
+\Delta>0
+If Rz>\omega/2 or,
+\[\mathcal{R}z>\omega^{2}/2,\text{ use duplication formula}\]
+\[\sigma(z)=-\left\langle\mathcal{D}^{\prime}(z/2)\sigma^{4}(z/2),\right.\]
+obtaining \sigma(z/2) by use of Maclaurin series for \sigma and \(\mathcal{D}^{\prime}(z/2)\) by method explained above. Otherwise, simply use Maclaurin series for \sigma directly.
+An alternate method is to use theta functions 18.10 first computing q and \vartheta_{s}(0), i=2,3,4.
+\Delta>0
+Example 13. Compute \sigma(.4+1.3i) for g_2=8, g_3=4. From Example 7, \omega=1.009453 and \omega'=1.484413i. Since \mathcal{R}z>\omega^{7}/2, the Maclaurin series 18.5.6 is used to obtain \sigma(z/2)=\sigma(2+65i)=.1954388+.6494728i, the Laurent series 18.5.4 to obtain \partial^{\prime}(z+65i)=5.0225380-3.5606693; The duplication formula 18.4.8 gives \sigma(.4+1.3i)=.278080+1.272785i.
+Given \sigma(\left\langle\mathcal{D},\mathcal{D}^{\prime},\mathcal{F}\right\rangle) corresponding to a point in the Fundamental Rectangle, as well as g_2 and g_3 or the equivalent, find z.
+Only a few significant figures are obtainable from the use of any of the given (truncated) reversed series, except in a small neighborhood of the center of the series. For greater accuracy, use inverse interpolation procedures.
+If the given function does not correspond to a value of z in the Fundamental Rectangle (see Conformal Maps) the problem can always be reduced to this case by the use of appropriate reduction formulas in 18.2. This process is relatively simple for \left\langle\mathcal{D}(z),\text{ more difficult for the other functions (e.g. if \Delta>0}\text{ and }\mathcal{D}=a+ib,\text{ where }b>0,\text{ simply consider }\overline{\mathcal{D}}=a-ib\text{ and find }z_{1}\text{ in }R_{1}\left[\mathbf{Figure}\ref{fig:18.1}\right]; then compute z_{1}=\overline{z_{1}}+2\omega',\text{ the point in }R_{2}\text{ corresponding to the given }\mathcal{D}').
+\Delta>0
+Example 14. Given \partial=1-i, g_2=10, g_3=2, find z. Using the first three terms of the reversed series 18.5.25 z_1=.727+.423i. The Laurent series 18.5.1 gives
+\partial^{\prime}(z_{1})=\left\langle\mathcal{D}(.727+.423i)=.825-.895i\right.\]
+and \partial^{\prime}(z_{2})=\left\langle\mathcal{D}(.697+.393i)=.938-1.038i.
+Inverse interpolation gives \omega_{1}^{2}=.707+.380i. Repeated applications of the above procedure yield z=.706231+.379893i.
+For example \sigma(.4+1.3i), \omega_{2}=.8, g_3=4. From Example 7, \omega_{2}=.99579~976, \omega_{2}^{2}=.33241~83i. Since \mathcal{R}z>\omega_{2}/2, the Maclaurin series 18.5.6 is used to obtain \sigma(z/2)=\sigma(.4+.2i)=.40038~019+.19962~017i, the Lauter series 18.5.4 to obtain \partial^{\prime}(4+.2i)=-3.70986~70+.22.218544i. The duplication formula 18.4.8 gives \sigma(.8+.4i)=.81465~765+.38819~473i.
+Given \sigma(\left\langle\mathcal{D},\mathcal{D}^{\prime},\mathcal{F}\right\rangle) corresponding to a point in the Fundamental Rectangle, as well as g_2 and g_3 or the equivalent, find z.
+Only a few significant figures are obtainable from the use of any of the given (truncated) reversed series, except in a small neighborhood of the center of the series. For greater accuracy, use inverse interpolation procedures.
+If the given function does not correspond to a value of z in the Fundamental Rectangle (see Conformal Maps) the problem can always be reduced to this case by the use of appropriate reduction formulas in 

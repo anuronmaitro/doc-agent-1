@@ -1,0 +1,21 @@
+ELEMENTARY TRANSCENDENTAL FUNCTIONS (n\times-1)
+4.6.57  \int z\,\mathrm{arcsech}\,z\,dz=\frac{z^{2}}{2}\,\mathrm{arcsech}\,z-\frac{1}{2}\,(1-z^{2})^{\ddagger}\quad\int z\,\mathrm{arcoth}\,z\,dz=\frac{z^{2}-1}{2}\,\mathrm{arcoth}\,z+\frac{z}{2}\]
+4.6.58  \int z^{\ast}\,\mathrm{arcsech}\,z\,dz=\frac{z^{\ast+1}}{n+1}\,\mathrm{arcsech}\,z+\frac{1}{n+1}\,\mathrm{\int}\frac{z^{\pi}}{(1-z^{2})^{\ddagger}}\,dz\quad\int z^{\pi}\,\mathrm{arcoth}\,z\,dz=\frac{z^{\ast+1}}{n+1}\,\mathrm{arcoth}\,z+\frac{1}{n+1}\,\mathrm{\int}\frac{z^{\pi+1}}{z^{2}-1}\,dz\]
+(n\times-1)
+Numerical Methods
+4.7. Use and Extension of the Tables
+Note: In the examples given it is assumed that the arguments are exact.
+Example 1. Computation of Common Logarithms.
+To compute common logarithms, the number must be expressed in the form x\cdot10', (1\leq x<10, -\infty\leq q\leq\infty). The common logarithm of x\cdot10' consists of an integral part which is called the characteristic and a decimal part which is called the mantissa. Table 4.1 gives the common logarithm of x.
+\[x\quad\quad x\cdot10^{4}\quad\quad\quad\log_{10}x\cdot10^{4}\]
+009836 9.836\cdot10^{-3}\quad\overline{3}.99281 85=(-2.00718 15)
+09836 9.836\cdot10^{-4}\quad\overline{2}.99281 85=(-1.00718 15)
+9836 9.836\cdot10^{-1}\quad\overline{1}.99281 85=(-0.00718 15)
+9836 9.836\cdot10^{0}\quad\overline{0}.99281 85
+983.6\quad\overline{9}.836\cdot10^{1}\quad1.99281 85
+Interpolation in Table 4.1 between 983 and 984 gives .99281 85 as the mantissa of 9836.
+Note that \overline{3}.99281 85=-3+.99281 85. When q is negative the common logarithm can be expressed in the alternative forms
+\[\log_{10}(.009836)=\overline{3}.99281 85=7.99281 85-10
+=-2.00718 15.
+The last form is convenient for conversion from common logarithms to natural logarithms.
+The inverse of \log_{10}x\) is called the antilogarithm of x, and is written antilog x or \log^{-1} x. The logarithm of the reciprocal of a number is called the coalgorithm, written colo

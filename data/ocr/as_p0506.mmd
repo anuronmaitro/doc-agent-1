@@ -1,0 +1,21 @@
+CONFLUENT HYPERGEOMETRIC FUNCTIONS (p.2)
+13.2.8 \Gamma(a)U(a,b,z)
+= e^{A}/\int_{\lambda}^{\infty}e^{-u}(t-A)^{a-1}(t+B)^{b-a-1}dt (A=1-B)
+Similar integrals for M_{s,n}(z) and W_{s,n}(z) can be deduced with the help of 13.1.32 and 13.1.33.
+ Barnes-type Contour Integrals
+13.2.9
+\Gamma(b)M(a,b,z)=\frac{1}{2\pi i}\int_{c-ta}^{c+ta}\frac{\Gamma(-s)\Gamma(a+s)}{\Gamma(b+s)}(-z)^{\prime}ds for |arg (-z)|<1\pi, a, b\neq0, −1, −2, \ldots . The contour must separate the poles of \Gamma(-s) from those of \Gamma(a+s); c is finite.
+13.2.10
+\Gamma(a)\Gamma(1+a-b)z^{\mu}U(a,b,z)=\frac{1}{2\pi i}\int_{c-ta\to\infty}^{c+ia}\Gamma(-s)\Gamma(a+s)\Gamma(1+a-b+s)z^{\prime}ds for |arg |<\frac{3\pi}, a\neq0, −1, −2, \ldots . , b-a\neq1, 2, 3, \ldots . The contour must separate the poles of \Gamma(-s) from those of \Gamma(a+s) and \Gamma(1+a-b+s).
+13.3. Connections With Bessel Functions (see chapters 9 and 10)
+ Bessel Functions as Limiting Cases
+If b and z are fixed,
+13.3.1 \lim_{a\to\infty}\{M(a,b,z/a)/\Gamma(b)\}=z^{1-b}I_{5-1}(2\sqrt2)
+13.3.2 \lim_{a\to\infty}\{M(a,b,-z/a)/\Gamma(b)\}=z^{1-b}J_{5-1}(2\sqrt2)
+13.3.3
+\lim_{a\to\infty}\{\Gamma(1+a-b)U(a,b,z/a)\}=2z^{1-b}K_{5-1}(2\sqrt2)
+13.3.4
+\lim_{a\to\infty}\{\Gamma(1+a-b)U(a,b,-z/a)\}=-\pi ie^{\ast n}z^{1-b}H_{5-1}^{(1)}(2\sqrt2) (\zeta_2>0)
+13.3.5 = \pi ie^{-\pi n}z^{1-b}H_{5-1}^{(2)}(2\sqrt2) (\zeta_2<0)
+13.3.6  Expansions in Series
+M(a,b,z)=e^{h}\Gamma(b-a-1)(\tfrac2)^{a-b+1} \cdot\sum_{n=0}^{\infty}\frac{(2b-2a-1)_{n}(b-2a)_{n}(-1)^{n}}{n!(b)_{n}}I_{b-a-1+\pi}(2\exp(b\rho,-1,-2,\ldots) (b\neq 0,-1,-2,

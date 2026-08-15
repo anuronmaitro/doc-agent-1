@@ -1,0 +1,48 @@
+28. Scales of Notation
+Representation of Numbers
+Any positive real number x can be uniquely represented in the scale of some integer b>1 as
+x=(A_{m}\cdot\cdot\cdot A_{1}A_{0}\cdot a_{-1}a_{-2}\cdot\cdot\cdot\cdot)_{(0)}, where every \(A_{+}\) and a_{-j} is one of the integers 0, 1, \cdot\cdot\cdot, b-1, not all \(A_{+}\), a_{-j} are zero, and \(A_{-}\)>0 if x>1. There is a one-to-one correspondence between the number and the sequence
+x=A_{n}b^{m}+\cdot\cdot\cdot+A_{1}b+A_{0}+\sum\limits_{1}^{n}a_{-j}b^{-j} where the infinite series converges. The integer b is called the base or radix of the scale.
+The sequence for x in the scale of b may terminate, i.e., a_{-n-1}=a_{-n-2}=\cdot\cdot\cdot\cdot=0 for some n>1 so that
+x=(A_{m}\cdot\cdot\cdot A_{1}A_{0}\cdot a_{-1}a_{-2}\cdot\cdot\cdot\cdot a_{-n})(b); then x is said to be a finite b-adic number.
+A sequence which does not terminate may have the property that the infinite sequence a_{-1}, a_{-2}, \cdot\cdot\cdot\cdot becomes periodic from a certain digit a_{-n}(n\geq1) on; according as n=1 or n>1 the sequence is then said to be pure or mixed recurring.
+A sequence which neither terminates nor recurs represents an irrational number.
+Names of Scales
+Base
+Scale
+Base
+Scale
+B Binary
+3 Ternary
+4 Quaternary
+5 Quinary
+6 Sensory
+7
+8 Scapary
+9 Dependency
+16 Hexadecimal
+General Conversion Methods
+Any number can be converted from the scale of b to the scale of some integer b>=b, b>1, by using arithmetic operations in either the b-scale or the b-scale. Accordingly, there are four methods of conversion, depending on whether the number to be converted is an integer or a proper fraction.
+1012
+Integers X=(A_{m}\cdot\cdot\cdot A_{1}A_{0})(n)
+(I) b-scale arithmetic. Convert b to the b-scale and define
+X/b=X_{+}+Z_{0}/b,
+X_{1}/b=X_{+}+Z_{1}/b,
+
+X_{\pm}/b=0+Z_{\pm}/b,
+where Z'_0, Z'_1, \cdot\cdot\cdot\cdot, Z'_m'_s are the remainders and X_1, X_2, \cdot\cdot\cdot, X_{\mp}=the quotients (in the b-scale) where X, X_1, \cdot\cdot\cdot, X_{\mp-1}, respectively are divided by b in the b-scale. Then convert the remainders to the b-scale,
+(\overline{A_{0}})(\overline{c_{0}})=\overline{A_{0}},(\overline{A_{1}})(\overline{c_{2}})=\overline{A_{1}},\cdot\cdot\cdot\cdot,(\overline{A_{2}})(\overline{c_{0}})=\overline{A_{2}}\]
+and obtain
+X=(\overline{A_{m}}\cdot\cdot\cdot\cdot\overline{A_{1}}\overline{A_{0}})(\overline{c_{3}}).
+(II) b-scale arithmetic. Convert b and A_0, A_1, \cdot\cdot\cdot, A_m'_to the b-scale and define, using arithmetic operations in the b-scale,
+X_{m-1}=A_{m}b+A_{m-1},
+X_{m-2}=X_{m-1}b+A_{m-2},
+X_{1}=X_{2}b+A_{1},
+then
+X=X_{1}b+A_{0}.
+Proper fractions z=(0.a_{-1}a_{-2}\cdot\cdot\cdot)_{(0)}
+To convert a proper fraction z, given to n digits in the b-scale, to the scale of b\neq b such that inverse conversion from the b-scale may yield the same n rounded digits in the b-scale, the representation of x in the b-scale must be obtained to n rounded digits where n satisfies b^{\frac{n}{b}>b^{n}}.
+(III) b-scale arithmetic. Convert b to the b-scale and define
+x_{\overline{b}}=x_{1}+\overline{d_{-1}},
+x_{\overline{b}}=x_{2}+\overline{d_{-2}},
+x_{\overline{n}-1}\overline{b}=x_{2}+\overline{d_{-2}},

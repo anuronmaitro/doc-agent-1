@@ -1,0 +1,70 @@
+SCALES OF NOTATION
+To convert x back to the decimal scale we only need to obtain from Table28.1 the various powers of 2 which appear in the above representation and sum them. However, since 2^{-m}=2^{-n+1}-2^{-m} for any real constant m, it is more convenient to reduce first the binary representation of x to the form
+
+\[x=2^{-28}-2^{-31}-2^{-33}-2^{-39}+2^{-42}-2^{-46}-2^{-50}\]
+
+and then sum these powers of 2. (Note that the number of summands is thereby decreased from 16 to 7.) From Table28.1 we have
+
+\[+2^{-38}=+3.725 290 298 \cdot 10^{-9}\]
+
+\[-2^{-31}=--4.65 661 287 \cdot 10^{-9}\]
+
+\[-2^{-29}=--1.11 415 322 \cdot 10^{-9}\]
+
+\[-2^{-39}=--.001 818 989 \cdot 10^{-9}\]
+
+\[+2^{-42}=+.000 227 374 \cdot 10^{-9}\]
+
+\[-2^{-48}=--.000 028 422 \cdot 10^{-9}\]
+
+\[-2^{-90}=--.000 000 888 \cdot 10^{-9}\]
+
+\[x=3.141 592 764 \cdot 10^{-9}\]
+
+Nine decimal digits are used for sufficient accuracy reserve. Hence, rounding to seven significant figures, we find
+
+\[x=(3.141593)_{(10)}\cdot 10^{-9}.\]
+
+To convert a number such as
+\[x=(\xi)_{(10)}\cdot 10^{k}\]
+
+to the binary scale, where k is a positive integer so large that Table28.1 cannot be used, apply the following device: Compute
+
+\[\log_2x=\frac{\log_10x}{\log_10x}2=k+\frac{x_1}{\log_102}2\]
+
+where k is the quotient and x_1 the remainder, the division being carried out in the decimal scale. Then find n=10^n, i.e., x_1=\log_10^n, so that \cdot
+
+\[\log_2x=k+\frac{\log_10^n}{\log_10x}2=k+\log_2^n whenever x=(n)_{(10)}2^k.\]
+
+Now convert (n)_{(10)} to the binary scale by any of the methods described above.
+
+A similar device may be used to convert to the decimal scale a binary number that is outside the range of Table28.1.
+
+Example5. Convert x=(2.773)_{(10)}\cdot 10^{83} to the binary scale.
+
+Table5. We first compute, using 4.1.19 and Table4.1,
+
+\[\log_3x=\frac{\log_10x}{\log_10x}2=\frac{83.44295}{.30103}=277+\frac{.05764}{.30103},\]
+
+and find from Table4.1, .05764=\log_10^n 1.1419. Hence
+
+\[\log_2x=277+\frac{\log_10^n 1.1419}{\log_10^n 2}=277+\log_12 1.1419 and so
+
+\[x=(1.1419)_{(10)}\cdot 2^{277}.\]
+
+Now we apply the methods of Example3 to obtain (1.1419)_{(10)}=(1.110516)_{(8)} where octal notation is used for the sake of convenience.
+
+To round such that inverse conversion will yield the same decimal digits of x, observe that the last non-zero decimal digit of x is 3\cdot 10^{80}. Table28.4 shows that 2^{285}<10^{86}<2^{86}. Hence, in the binary scale, x must be a binary integer times 2^{285}; i.e., (1.110516)_{(8)} must be rounded to 4 octal (=12 binary digits. As a result,
+
+\[x=(1.1105)_{(9)}\cdot 2^{277}=(11105)_{(9)}\cdot 2^{285}\]
+
+Conversion back to the decimal scale proceeds as follows, we write
+
+\[\log_10x= \log_102\log_2x\]
+
+\[= \log_102\left\{265+\log_10^{2}(11105)_{(9)}\right\}\]
+
+\[= \log_102\left\{265+\frac{\log_10^{1}(11105)_{(8)}}{\log_102}\right\}\]
+
+\[= 265\log_10^2+\log_10^{1}
+

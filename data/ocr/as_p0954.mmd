@@ -1,0 +1,39 @@
+It is of interest to note that the standard normal distribution is unimodal, has mean zero, unit variance \mu_{4}=3, is continuous, and such that
+A(t)=P(t)-P(-t)=.6827, .9545, .9973, and .9999 for t=1, 2, 3 and 4 respectively.
+Interpolation for P(x) in Table 26.1
+Expands 2. Compute P(x) for x=2.576 to fifteen decimal places using a Taylor expansion.
+Writing x=x_0+\theta we have
+\[P(x)=P(x_0)+Z(x_0)\theta+Z^{(1)}(x_0)\frac{\theta^2}{2!}\times\dots\]
+Taking x_0=2.58 and \theta=-4\times10^{-3} we calculate the successive terms to 16D
++.99505 99842 42230  -- 5 72204 35976 6  -- 2952 57449 6  -- 8 63097 8  -- 1439 4  -- 99500 24676 84265 7 The result correct to 17D is
+P(2.576)=.99500 24676 84264 98 Calculation for Arbitrary Mean and Variance
+Expands 3. Find the value to 5D of
+\[P(X\leq.50)=\frac{1}{2\sqrt2\pi}\int_{-\infty}^{-5}e^{-1/2\left(\frac{t-1}{2}\right)^2}dt\]
+using 26.2.8 and Table 26.1.
+This represents the probability of the random variable being less than or equal to .5 for a normal distribution with mean m=1 and variance s^2=4. Using 26.2.8 we have
+\[P(X\leq.5)=P(\frac{.5-1}{2})=P(-.25)\]
+Since P(-x)=1-P(x), we have
+\[P(-.25)=1-P(.25)=1-.59871=.40129\]
+where a two-term Taylor series was used for interpolation. Note that when interpolating for P(x) for a value of x midway between the tabulated 
+
+[p.28] |p.10999 |p.2846 |p.3574 |p.4099 |p.5099 |p.6099 |p.7099 |p.8099 |p.9099 |p.9109 |p.9209 |p.9309 |p.9409 |p.9509 |p.9609 |p.9709 |p.9809 |p.9909 |p.9910 |p.9209 |p.9309 |p.9409 |p.9509 |p.9609 |p.9709 |p.9809 |p.9810 |p.9820 |p.9830 |p.9840 |p.9850 |p.9860 |p.9870 |p.9880 |p.9880 |p.9881 |p.9882 |p.9883 |p.9884 |p.9885 |p.9886 |p.9887 |p.9888 |p.9889 |p.9890 |p.9891 |p.9892 |p.9893 |p.9894 |p.9895 |p.9896 |p.9897 |p.9898 |p.9899 |p.9899 |p.
+
+
+
+values we can write x=x_{0}+.01 and a two-teri Taylor series is P(x)=P(x_{0})+Z(x_{0})10^{-2}. Thus on need only multiply Z(x_{0}) by 10^{-2} and add the result to P(x_{0}).
+Calculation of P(x) for x Approximate
+Sample 4. Using Table 26.1, find P(x) fo x=1.96, when there is a possible error in x c \pm 5\times 10^{-3}.
+This is an example where the argument is only known approximately. The question arises as t how many decimal places one should retain 1 P(x). If \Delta x and \Delta P(x) denote the error in x an the resulting error in P(x), respectively, then
+\Delta P(x)\approx Z(x)\Delta x
+Hence \Delta P(1.960)=3\times10^{-4} which indicates the P(1.960) need only be calculated to 4D. There fore P(1.960)=.9750.
+Inverse Interpolation for P(x)
+Example 5. Find the value of x for which \rho(x)=.97500 00000 00000 using Table 26.1 and determining as many decimal places as is consistent with the tabulated function.
+For inverse interpolation the tabulated function P(x) may be regarded as having a possible error of .5\times10^{-15}. Hence
+\Delta x\approx\frac{\Delta P(x)}{Z(x)}=\frac{.5\times 10^{-15}}{Z(x)}\]
+
+(p) |
+
+x=x_{0}+t|x_{0}^{2}+2x_{0}^{2}+1/6\] where
+t=P(x)-P(x_{0}) Z(x_{0})
+
+(p.1)

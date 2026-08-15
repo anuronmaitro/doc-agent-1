@@ -1,0 +1,39 @@
+PROBABILITY FUNCTIONS (p.60)
+L_{x}(10,6)=Q(F|12,20)=.10 where x=\frac{20}{20+12F}
+From Table 26.9 the upper 10 percent point of F with 12 and 20 degrees of freedom is F=1.89. Hence
+x=\frac{20}{20+12(1.89)}=.469
+The correct value to 4D is x=.4683.
+Calculation of I_x(a, b) for a or b Small Integers
+Example 17. Calculate I_x(3, 20).
+Values of I_x(a, b) for small integral a or b can conveniently be calculated using 26.5.6 or 26.5.7. Using 26.5.6 we have
+1-I_x0(20,3)=\frac{(.9)^20}{B(3,20)}\left\{\sum_{i=0}^2(-1)^i(2)\frac{9^i}{20+i}\right\}\]
+=\frac{.121576}{.216450\times 10^{-3}}(.110390\times 10^{-7})=.620040
+Binomial Distribution
+Example 18. Find the value of p which satisfies
+\sum_{s=0}^20(\frac50)p'q'^{q-s}=.95,   q=1-p
+using 26.5.24 and Table 26.9.
+Combining 26.5.24 and 26.5.27 we have
+where
+r_1=2(n-a+1), r_2=2(a), and p=\frac{a}{a+(n-a+1)F}
+Hence
+\sum_{s=0}^20(\frac50)p'q'^{q-s}=1-\sum_{s=1}^20(\frac50)p'q'^{q-s}=1-Q(F|r_1,r_2)=.95
+Harmonic interpolation on r_2 in the table for which Q(F|r_1,r_2)=.05 results in F=1.624 for r_1=60, r_2=42, and thus p=\frac{42}{42+60(1.624)}=.301. The correct answer to 4D is p=.3003.
+Approximating the Incomplete Beta Function
+Example 19. Find I_x0(16,10.5) using 26.5.21. Values of I_x(a, b) can conveniently be calculated with good accuracy using the approximation given by 26.5.20 or 26.5.21. For this example (a+b-1)(1-x)=10.20 which is greater than .8 and hence 26.5.21 will be used. Thus
+w_1=[(10.5)(.60)]^{1/2}=1.8469, w_2=[16(4)]^{1/2}=1.8566
+y=\frac{3(1.8469)(.98942)-(1.8566)(.99306))}{\left[\frac{(1.8469)^2}{10.5}+\frac{(1.8566)^2}{16}\right]}=--.0668
+and interpolating in Table 26.1 gives
+P(-.0668)=1-P(.0668)=.47336
+The answer correct to 5D is I_x0(16,10.5)=.47332.
+Interpolation for F in Table 26.9
+Example 20. Find the value of F for which
+Q(F|7,20)=.05 using Table 26.9.
+Interpolation in Table 26.9 is approximately linear when the reciprocals of the degrees of freedom (r_1,r_2) are used as the interpolating variable. For this example it is only necessary to interpolate with respect to 1/r_1. Thus linear interpolation on 1/r_1 results in F=2.51 which is the correct interpolate.
+Calculation of F for Q(F|r_1,r_2)>.50
+Example 21. Find the value of F for which Q(F|4,8)=.90 using 26.6.9 and Table 26.9.
+Table 26.9 only tabulates values of F for which Q(F|r_1,r_2)=p where p=.500, .250, .100, .050, .025, .010, .005, .001. However making use of Table 26.9 we can find the values of F_p for which p=.75, .9, .95, .975, .99, .995, .999. For this example we have
+F_x0(4,8)=\frac{1}{F_x0(8,4)} and referring to the table for which Q(F|r_1,r_2)=.10 gives F_x0(8,4)=3.95 and thus F_x0(4,8)=\frac{1}{3.95}=.253.
+Calculation of Q(F|r_1,r_2) for Small Integral r_1 or r_2
+Example 22. Compute Q(2.5|4,15) using 26.6.4.
+Values of Q(F|r_1,r_2) can be readily computed for small r_1 or r_2 using the expansions 26.
+

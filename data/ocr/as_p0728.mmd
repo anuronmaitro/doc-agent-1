@@ -1,0 +1,14 @@
+systematic tabulation, this method is considerably faster than the method of numerical integration. Thus, when 20.3.8 is substituted into 20.3.1, there result the following recurrence relations:
+20.3.12  \overline{V_{2n}c_{2n}=c_{2n-2}+c_{2n+2}} where
+20.3.13  \overline{V_{2n}}=[a-(2n+p)^2]/q, -\infty<n<\infty. When n is complex, the coefficients \(V_{2n}\) may also be complex. As in 20.2, it is possible to generate the ratios
+G_m=c_m/c_m-2 and H_-m=c_{-m-2}/c_m from the continued fractions
+20.3.14  \overline{G_m}=\frac{1}{V_{m-1}}\frac{1}{V_{m+2}-\cdot\cdot\cdot}, m\geq 0\]
+H_-m=\frac{1}{V_{-m-2}-\cdot\cdot}\frac{1}{V_{-m-4}-\cdot\cdot\cdot}, m\geq 0. From the form of 20.3.13 and the known properties of continued fractions it is assured that for sufficiently large values of |m| both |G_m| and |H_-m| converge. Once values of \(G_m\) and \(H_{-m}\) are available for some sufficiently large value of \(m\), then the finite number of ratios \(G_{m-2}\), \(G_{m-4}\), \(\ldots\), \(G_0\) can be computed in turn, if they exist. Similarly for \(H_{-n+2}\), \(\ldots\), \(H_0\). It is easy to show that n is the correct characteristic exponent, appropriate for the point (a, q), if and only if \(H_0G_0=1\). An iteration technique can be used to improve the value of n, by the method suggested in [20.3]. One coefficient c_j can be assigned arbitrarily; the rest are then completely determined. After all the c_j become available, a multiplier (depending on q but not on z) can be found to satisfy a prescribed normalization.
+It is well known that continued fractions can be converted to determinantal form. Equation 20.3.14 can in fact be written as a determinant with an infinite number of rows--a special case of Hill's determinant. See [20.19], [20.36], [20.15], or [20.30] for details. Although the determinant has actually been used in computations where high-speed computers were available, the direct use of the continued fraction seems much less laborious.
+Special Cases (a, q Real)
+Corresponding to q=0, y_1=cos\sqrt{az}, y_2=sin\sqrt{az}; the Floquet solutions are exp(iaz) and exp(-iaz). As a, q vary continuously in the q-a plane, n describes curves; n is real when (q, a), q\geq 0 lies in the region between a_r(q) and b_r+1(q) and 
+
+FUNCTIONS (p.1)
+FIGURE 20.6: Characteristic Exponent-First Two Stab Regions y=e^{\mu_{\infty}P(x)} where P(x) is a periodic function period \pi: Definition of \nu; In first stable region, 0\leq\nu\leq 1, In second stable region, 1\leq\nu\leq 2. (Constructed from tabular values supplied by T. Tamir, Brooklyn Polytechnic Institute)
+Figure 20.7: Characteristics Exponent in First Unstable Region. Differential equation: y^{\prime}+(a-2g\cos 2x)y=The Floquet solution y=e^{\mu_{\infty}P(x)}, where P(x) is a period function of period \pi. In the first unstable region, \nu=i\mu is given for a\geq-5. (Constructed at NBS.)
+

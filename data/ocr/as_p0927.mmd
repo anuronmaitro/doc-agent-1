@@ -1,0 +1,41 @@
+[p.1] |p.2|p.3|p.4|p.5|p.6|p.7|p.8|p.9|p.10|p.11|p.12|p.13|p.14|p.15|p.16|p.17|p.18|p.19|p.19|p.20|p.21|p.22|p.23|p.24|p.25|p.26|p.27|p.28|p.29|p.30|p.31|p.32|p.33|p.34|p.35|p.36|p.37|p.38|p.39|p.40|p.41|p.42|p.43|p.44|p.45|p.46|p.47|p.48|p.49|p.50|p.51|p.52|p.53|p.54|p.55|p.56|p.57|p.58|p.59|p.60|p.61|p.62|p.63|p.64|p.65|p.66|p.67|p.68|p.69|p.70|p.71|p.72|p.73|p.74|p.75|p.76|p.77|p.78|p.79|p.80|p.81|p.82|p.83|p.84|p.85|p.86|p.87|p.88|p.89|p.91|p.92|p.93|p.94|p.95|p.96|p.97|p.98|p.99|p.99|p.99|p.91|p.92|p.93|p.95|p.96|p.97|p.98|p.99|p.99|p.99|p.91|p.92|p.93|p.94|p.95|p.96|p.97|p.98|p.99|p.99|p.99|p.99|p.91|p.92|p.93|p.95|p.96|p.97|p.98|p.
+
+
+
+Mathematica (p.1)
+[p.25, p.30]
+
+6.1. Probability Functions: Definitions and Properties
+Univariate Cumulative Distribution Functions
+A real-valued function \F(x) is termed a (uni-ariate) cumulative distribution function (c.d.f.) r simply distribution function if
+1. F(x) is non-decreasing, i.e., F(x_{1})\leq F(x_{2}) for x_{1}\leq x_{2}\)
+2. F(x) is everywhere continuous from the right, i.e., F(x)=\lim\limits_{\epsilon>0+}F(x+\epsilon)
+3. F(-\infty)=0, F(\infty)=1.
+The function F(x) signifies the probability of ne event ''X\leq x'' where X is a random variable, e., Pr{X\leq x}=F(x), and thus describes the d.f. of X. The two principal types of distributions on functions are termed _discrete_ and _continuous_.
+Discrete Distributions: Discrete distributions are characterized by the random variable X taking a an enumerable number of values . . ., x_{-1}, , x_{1}, . . with point probabilities
+p_n=Pr{X=x_n}\geq0
+which need only be subject to the restriction
+\sum_n p_n=1.
+The corresponding distribution function can ten be written
+6.1.1 F(x)=Pr{X\leq x}=\sum_n\xi x p_n
+'Comment on notation and conventions. a. We follow the customary convention of denoting a ndom variable by a capital letter, i.e., X, and using the corresponding lower case letter, i.e., x, for a particular value that the random variable assumes. b. For statistical applications it is often convenient to we tabulated the "upper tail area," 1-F(x), or the d.f. for |X|, F(x)-F(-x), instead of simply the c.d.f. (x). We use the notation P to indicate the c.d.f. of , Q=1-P to indicate the "upper tail area''/and A=-Q to denote the c.d.f. of |X|. In particular we use (x), Q(x), and A(x) to denote the corresponding functions r the normal or Gaussian probability function, see (4.2.2-26.2.4. When these distributions depend on other parameters, say \theta_{1}\) and \theta_{2}, we indicate this by writing (x|\theta_{1},\theta_{2}), Q(x|\theta_{1},\theta_{2}), or A(x|\theta_{1},\theta_{2}). For example the chi-square distribution 26.4 depends on the parameter r and the tabulated function is written Q(x^{3}|p).
+
+
+
+[ENDFIGURE]
+
+## 1 Projections
+1 Properties
+where the summation is over all values of x for which x_n\leq x. The set {x_n} of values for which p_n>0 is termed the domain of the random variable X. A discrete distribution of a random variable is called a lattice distribution if there exist numbers a and b  0 such that every possible value of X can be represented in the form a+bn where n takes on only integral values. A summary of some properties of certain discrete distributions is presented in 26.1.19-26.1.24.
+Continuous Distributions. Continuous distributions are characterized by F(x) being absolutely continuous. Hence F(x) possesses a derivative F''(x)=f(x) and the c.d.f. can be written
+26.1.2 F(x)=Pr\left\{X\leq x\right\}=\int_{-\infty}^{x}f(t)dt.\]
+The derivative f(x) is termed the probability density function (p.d.f.) or frequency function, and the values of x for which f(x)>0 make up the domain of the random variable X. A summary of some properties of certain selected continuous distributions is presented in 26.1.25-26.1.34.
+Multivariate Probability Functions
+The real-valued function F(x_1, x_2, . . . x_n) defines an n-variate cumulative distribution function if
+1. F(x_1, x_2, . . x_n) is a non-decreasing function for each x_1. F(x_1, x_2, . . . x_n) is continuous from the right in each x_i; i.e., F(x_1, x_2, . . x_n) =\lim_{\epsilon\to 0+}F(x_1, . . . . x_i+\epsilon, . . . . , x_n)
+2. F(x_1, x_2, . . . x_n)=0 when any x_i=-\infty; F(\infty, . .
+
+
+
+|p|^{2}/|p|^{2}=1.500, |p|^{2}/|p|^{3}=1.500, |p|^{4}=1.000, |p|^{5}=1.000, |p|^{6}=1.000, |p|^{7}=1.000, |p|^{8}=1.000, |p|^{9}=1.000, |p|^{10}=1.000, |p|^{11}=1.000, |p|^{12}=1.000, |p|^{13}=1.000, |p|^{14}=1.000, |p|^{15}=1.000, |p|^{16}=1.000, |p|^{17}=1.000, |p|^{18}=1.000, |p|^{19}=1.000, |p|^{19}=1.000, |p|^{20}=1.000, |p|^{21}=1.000, |p|^{22}=1.000, |p|^{23}=1.000, |p|^{24}=1.
+

@@ -1,0 +1,43 @@
+NUNERICAL ANALYSIS (p.896)
+25.5. Ordinary Differential Equations\({}^{4}\)
+First Order: y'=f(x, y)
+Point Slope F-muula
+y_{n+1}=y_{n}+hy^{2}+O(h^2)
+y_{n+1}=y_{n-1}+2hy^{2}+O(h^3)
+Trapezoidal Formula
+y_{n+1}=y_{n}+\frac{h}{24}(y_{n+1}^{2}+y_{n}^{2}-9y_{n-2}^{2})+O(h^5)
+Adams' Extrapolation Formula
+y_{n+1}=y_{n}+\frac{h}{24}(55y_{n}^{2}-59y_{n-1}^{2}+37y_{n-2}^{2}-9y_{n-3}^{2})+O(h^5)
+Adams' Interpolation Formula
+y_{n+1}=y_{n}+\frac{h}{24}(0y_{n+1}^{2}+10y_{n}^{2}-5y_{n-1}^{2}+y_{n-2}^{2})+O(h^5)
+Runge-Kutta Methods
+Second Order
+25.5.6
+y_{n+1}=y_{n}+\frac{1}{2}(k_{1}+k_{2})+O(h^3)
+k_{1}=hf(x_{n},y_{n}),k_{2}=hf(x_{n}+h,y_{n}+k_{1})
+25.5.7
+y_{n+1}=y_{n}+k_{2}+O(h^3)
+k_{1}=bf(x_{n},y_{n}),k_{2}=hf/(x_{n}+\frac{1}{2}k_{1},y_{n}+\frac{1}{2}k_{1})
+Third Order
+25.5.8
+y_{n+1}=y_{n}+\frac{1}{6}k_{1}+\frac{2}{3}k_{2}+\frac{1}{6}k_{2}+O(h^4)
+k_{1}=hf(x_{n},y_{n}),k_{2}=hf/(x_{n}+\frac{1}{2}k_{1},y_{n}+\frac{1}{2}k_{1})
+Fourth Order
+25.5.10
+y_{n+1}=y_{n}+\frac{1}{6}k_{1}+\frac{1}{3}k_{2}+\frac{1}{3}k_{3}+\frac{1}{6}k_{4}+O(h^5)
+k_{1}=hf(x_{n},y_{n}),k_{2}=hf/(x_{n}+\frac{1}{2}k_{1},y_{n}+\frac{1}{2}k_{2})
+Krowth Order
+25.5.10
+y_{n+1}=y_{n}+\frac{1}{6}k_{1}+\frac{1}{3}k_{2}+\frac{1}{3}k_{3}+\frac{1}{6}k_{4}+O(h^5)
+k_{1}=hf(x_{n},y_{n}),k_{2}=hf/(x_{n}+\frac{1}{2}k_{1},y_{n}+\frac{1}{2}k_{2})
+k_{3}=hf/(x_{n}+\frac{1}{2}k_{1},y_{n}+\frac{1}{2}k_{2})
+25.5.11
+y_{n+1}=y_{n}+\frac{1}{8}k_{1}+\frac{3}{8}k_{2}+\frac{3}{8}k_{3}+\frac{1}{8}k_{4}+O(h^5)
+k_{1}=hf(x_{n},y_{n}),k_{2}=hf/(x_{n}+\frac{1}{3}k_{1},y_{n}+\frac{1}{3}k_{1})
+k_{3}=hf/(x_{n}+\frac{2}{3}k_{3},y_{n}-\frac{1}{3}k_{1}+k_{2})
+k_{4}=hf/(x_{n}+h,y_{n}+k_{1}-k_{2}+k_{3})
+Gill's Method
+25.5.12
+y_{n+1}=y_{n}+\frac{1}{6}\Big(k_{1}+2\Big(1-\sqrt{\frac{1}{2}}\Big)k_{2}+2\Big(1+\sqrt{\frac{1}{2}}\Big)k_{3}+k_{4}\Big)+O(h^5)
+k_{1}=hf/(x_{n},y_{n}),k_{2}=hf/(x_{n}+\frac{1}{2}k_{1},y_{n}+\frac{1}{2}k_{1})
+k

@@ -1,0 +1,64 @@
+602  ELLIPTIC
+n   a_n   b_n   c_n
+0  1.000000  0  1.5555555555  .338338333  3333333  444444444  44444444  4303859753  43735203030  0
+Thus K(80/81)=\frac{1}{2}\pi a_{5}^{-1}=3.59154  5001.
+Example 4. Find E(80/81).
+First Method
+Use 17.3.30 which gives, with m=80/81
+E(80/81)=\frac{10}{9}E(.64)-\frac{1}{5}K(.64)=1.01910  6047
+taking E(.64) and K(.64) from Table 17.1.
+Second Method
+Polynomial approximation, 17.3.36 gives E(80/81)=1.01910  6060. The last two figures must be dropped to keep within the limit of accuracy of the method.
+Third Method
+Arithmetic-geometric mean, 17.6. The numbers were calculated in Example 3, fourth method, and we have
+\[\frac{K(80/81)-E(80/81)}{K(80/81)}=\frac{1}{2}[c_0^2+2c_1^2+2^2c_2^2+\ldots+2^2^c_5]\]
+Using the value of K(80/81) found in Example 3, fourth method, we have
+E(80/81)=1.01910  6048 to 9D.
+Example 5. Find q when m=.9995.
+Here m_1=.0065 and so from Table 17.4
+Q(m)=.00251  563013
+q_1=m_1Q(m)=.00003  12578  15.
+From 17.3.19
+
+(q)=\pi^{2}/10.37324 |132| | q=.05144 | 8470| | q=.38618 | 125|.
+
+
+
+INTEGRALS  The computation could also be made using common logarithms with the aid of 17.3.20.  The point of this procedure is that it enables us to calculate q_{1} without the loss of significant figures which would result from direct interpolation in Table 17.1.  By this means ln (1/q_{1}) can be found without loss of accuracy.
+
+Example 6. Find m to 10D when K^{\prime}/K=.25 and when K^{\prime}/K=3.5.
+
+From 17.3.15 with K^{\prime}/K=.25 we can write the iteration formula
+m^{(n+1)}=1-16e^{-4\pi}\exp[-\pi L(m^{(n)})/K^{\prime}(m^{(n)})].
+
+Then by iteration using Tables 17.1 and 17.4
+n
+m^{(n)}
+0
+1.
+1.
+99994 42025
+2
+99994 42041
+3
+.99994 42041
+Thus m=.99994 42041.
+From 17.3.16 with K^{\prime}/K=3.5 we can write the iteration formula,
+m^{(n+1)}=16e^{-3.5\pi}\exp[-\pi L(m_{1}^{(n)})/K(m^{(n)})]
+m^{(n)}
+0
+1.
+(3)26841 25043
+2
+3.
+(3)26837 65
+3.
+(3)26837 65
+Thus m=.00026 83765.
+The above methods in conjunction with the auxiliary Table 17.4 of L(m) enable us to extend Table 17.3 for K^{\prime}/K>3, and for K^{\prime}/K<.3.
+Example 7. Calculate to 5D the Jacobian elliptic function sn (.75542|.7) using Table 17.5.
+Here
+m=sin^2\alpha=.7,\alpha=56.789089^{\circ}.
+Thus, sn (.75342|.7)=sin\varphi where \varphi is determined from
+F(\varphi)56.789089^{\circ})=.75342.
+Inspection of Table 17.5 shows that \varphi lies between 40deg and 45deg. We have from the table of F(\varphi)\alpha

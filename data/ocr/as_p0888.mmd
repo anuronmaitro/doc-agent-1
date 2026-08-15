@@ -1,0 +1,31 @@
+NUMERICAL ANALYSIS (p.888)
+Related orthogonal polynomials: P_n(x), P_n(1)=1
+
+Abscissas: x_t is the i^{\eta} zero of P_n(x)
+
+Weights: w_t=2/(1-x_t)[P'_n(x)]^{\eta}
+R_n=\frac{(b-a)^{\eta+1}(0|\tau)^{\eta}}{(2n+1)[(2n)!!]^{\eta}}2^{2n+1}f^{(2n)}(\xi)
+Radau's Integration Formula
+25.4.31
+\int_{-1}^{1}f(x)dx=\frac{2}{n^{\eta}}f_{-1}+\sum_{l=1}^{n-1}w_d(x_l)+R_n
+Related polynomials:
+\[\frac{P_{n=1}(x)+P_n(x)}{x+1}\]
+
+Abscissas: x_t is the i^{\eta} zero of
+\[\frac{P_{n=1}(x)+P_n(x)}{x+1}\]
+
+Weights:
+\[w_{i}=\frac{1}{n^{2}}\frac{1-x_{i}}{[P_{n-1}(x_l)]^{\eta}}=\frac{1}{1-x_{i}}\frac{1}{[P'_{n-1}(x_l)]^{\eta}}\]
+Remainder:
+\[R_{n}=\frac{2^{2n-1}n}{[(2n-1)!!]^{\eta}}[(n-1)!!]f^{(2n-1)}(\xi)\quad(-1<\xi<1)\]
+
+Lobatto's Integration Formula
+25.4.32
+\int_{-1}^{1}f(x)dx=\frac{2}{n(n-1)}[f(1)+f(-1)]+\sum_{i=2}^{n-1}w_{i}f(x_l)+R_n
+Related polynomials: P'_n-1(x)
+Abscissas: x_t is the (i-1)^nt zero of P'_n-1(x)
+Weights:
+w_t=\frac{2}{n(n-1)[P_{n-1}(x_l)]^{\eta}}(x_l\neq\pm 1)\]
+(See Table 25.6 for x_ti and w_t;x)
+Remainder:
+R_n=\frac{-n(n-1)^{3}2^{2n-1}[(n-2)!]^{\eta}}{(2n-1)[(2n-2)!]^{\eta}}f^{2n-2}(\xi)\quad(-1<\xi<1)\quad(-

@@ -1,0 +1,29 @@
+GAMMA FUNCTION AND RELATED FUNCTIONS (p.84)
+Table 6.3: Compute p(6.38) to 8S. Using the recurrence relation 6.3.6 and Table 6.1.
+\psi(6.38)=\frac{1}{5.38}+\frac{1}{4.38}+\frac{1}{3.38}+\frac{1}{2.38}+\frac{1}{1.38}+\psi(1.38)=1.7727559.
+Sample 4. Compute p(56.38). Using Table 6.3 we have p(56.38)=ln  56.38-f_3(56.38).
+The error of linear interpolation in the table of the function f_3 is smaller than 8x10^-7 in this region. Hence, f_3(56.38)=.0088953 and p(56.38)=4.023219.
+Sample 5. Compute ln \Gamma(1-i). From the reflection principle 6.1.23 and Table 6.7, ln \Gamma(1-i)=\overline{\ln\Gamma(1+i)}=-6.6509+.3016i.
+Sample 6. Compute ln \Gamma(1+1+i). Taking the logarithm of the recurrence relation 6.1.15 we have,
+
+\ln \Gamma(1+1+i)=\ln \Gamma(\sqrt[3]{2}+1+i)-\ln (1+1+i)=-.23419+.03467i
+--(\frac{1}{2}\ln\frac{1}{2}+iarctan1)=.11239-.75073i
+The logarithms of complex numbers are found from 4.1.2.
+Sample 7. Compute ln \Gamma(3+7i) using the duplication formula 6.1.18. Taking the logarithm of 6.1.18, we have
+\begin{tabular}{c c c}   \[-\frac{1}{2}\ln2\pi=-\] & .91894 \\   (\sqrt[3]{2}+7i)\ln2=\] & 1.73287+ & 4.85203i \\   \[\ln\Gamma(\sqrt[3]{2}+\frac{1}{4}i)=-3.31598+\frac{2}{3.23553i}\] \\   \[\ln\Gamma(2+\frac{1}{4}i)=-2.66047+2.93869i\] \\   \[\ln\Gamma(3+7i)=-5.16252+10.11625i\] \\ \end{tabular}
+Sample 8. Compute ln \Gamma(3+7i) to 5D using the asymptotic formula 6.1.41. We have
+\ln (3+7i)=2.0302215+1.1659045i.
+Then,
+(2.5+7i)\ln (3+7i)=-3.0857779+17.1263119i-\frac{-3(3+7i)}=-3.0000000-7.0000000i\frac{1}{2}\ln (2\pi)=\quad.9189385\left[12(3+7i)]^{-1}=\quad.0043103-\frac{0}{0100575i}-[360(3+7i)]^{-1}=\quad.0000059-\quad.0000022i\frac{1}{264}\ln \Gamma(3+7i)=-5.16252\quad+10.11625i\right.\]
+In \Gamma(3+7i)=-5.16252\quad+10.11625i
+### Summation of Rational Series by Means of Polygamma Functions
+An infinite series whose general term is a rational function of the index may always be reduced to a finite series of psi and polygamma functions. The method will be illustrated by writing the explicit formula when the denominator contains a triple root.
+Let the general term of an infinite series have the form
+\nu_{a}=\frac{p(n)}{d_1(n)d_2(n)d_3(n)} where
+
+\[d_1(n)=(n+\alpha_1)(n+\alpha_2)\cdot\cdot\cdot\cdot(n+\alpha_m)\]
+\[d_2(n)=(n+\beta_1)^2(n+\beta_2)^2\cdot\cdot\cdot\cdot(n+\beta_r)^2\]
+\[d_3(n)=(n+\gamma_1)^3(n+\gamma_2)^3\cdot\cdot\cdot\cdot(n+\gamma_r)^3\]
+
+where \(p(n)\) is a polynomial of degree m+2r+3s-2 at most and where the constants a_i_, b_i_, and g_i_ are distinct. Expand \(u_n\) in partial fractions as follows
+\nu_{a}=\sum\limits_{k=1}^m\frac{a_k}{(n+\alpha_m)}+\sum\limits_{k=1}^{r}\frac{b_{ik}}{(n+\beta_k)}+\frac{b_{2k}}{(n+\beta_2)^2}+\frac{c_{1k}}{(n+\gamma_k)^2}+\frac{c_

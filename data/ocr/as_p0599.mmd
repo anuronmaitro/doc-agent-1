@@ -1,0 +1,36 @@
+ELLIPTIC INTEGRALS (p.6.4)
+17.6.4  \frac{K(\alpha)-E(\alpha)}{K(\alpha)}=\frac{1}{2}[e_0^2+2c_1^2+2c_2^2+\ldots+2^Nc_5^2]
+To determine K'(\alpha), E'(\alpha) we start with
+17.6.5   a_0^i=1, b_0^2=\sin\alpha, c_0^2=\cos\alpha
+whence
+17.6.6  \frac{K^{\prime}(\alpha)=\frac{\pi}{2a_{N}^2}}
+17.6.7  \frac{K^{\prime}(\alpha)-E'(\alpha)}{K^{\prime}(\alpha)}=\frac{1}{2}[e_0^2+2c_1^2+2^2c_2^2+\ldots+2^Nc_5^2]
+To calculate F(\varphi\backslash\alpha), E(\varphi\backslash\alpha)\) start from 17.5.2 which corresponds to the descending Landen transformation and determine \varphi_1, \varphi_2, \cdot \cdot \cdot \varphi_NN successively from the relation
+17.6.8  \tan (\varphi_n+1-\varphi_n)=(b_n/a_n)\tan\varphi_n, \varphi_0=\varphi
+Then to the prescribed accuracy
+17.6.9  \fracF(\varphi\backslash\alpha)=\varphi_n/(2^N\alpha_NN)
+17.6.10  \frac{Z(\varphi\backslash\alpha)=E(\varphi\backslash\alpha)-(E/K)F(\varphi\backslash\alpha)}{=e_1\sin\varphi_1+c_2\sin\varphi_1+\ldots+c_n\sin\varphi_NN}
+17.7. Elliptic Integrals of the Third Kind
+17.7.1  \Pi(n;\varphi\backslash\alpha)=\int_0^{\infty}(1-n\sin^2\theta)^-1(1-\sin^2\alpha\sin^2\theta)^-3d\theta
+17.7.2  \Pi(n;\tfrac{1}{2}\pi\backslash\alpha)=\Pi(n\backslash\alpha)
+Case (i) Hyperbolic Case 0<n<\sin^2\alpha
+\epsilon=\arcsin\ (n/\sin^2\alpha)^1, 0\leq\epsilon\leq\tfrac{1}2\pi
+\beta=\tfrac{1}2\pi F(\epsilon\backslash\alpha)/K(\alpha)
+q=q(\alpha)
+v=\tfrac{1}2\pi F(\varphi\backslash\alpha)/K(\alpha), \delta_1=[n(1-n)^{-1}(\sin^2\alpha-n)^{-1}]^1
+17.7.3  \Pi(n;\varphi\backslash\alpha)=\delta_1[-\tfrac{1}{2}\ln\ [\vartheta_{\epsilon}(\nu+\beta)/\vartheta_{\epsilon}(\nu-\beta)]+\pi\vartheta_{\epsilon}^{\prime}(\beta)/\vartheta_{\epsilon}(\beta)]
+17.7.4  \frac{1}{2}\ln\ \frac{\vartheta_{\epsilon}(\nu+\beta)}{\vartheta_{\epsilon}(\nu-\beta)}=2\sum_{n=1}^{\infty}s^{-1}q^{\prime}(1-q^2n)^{-1}\sin2sv\sin2s\beta
+17.7.5  \frac{\vartheta_{\epsilon}^{\prime}(\beta)}{\vartheta_{1}(\beta)}=\cot\ \beta+4\sum_{n=1}^{\infty}q^{2n}(1-2q^2n\cos\ 2\beta+q^{\prime\alpha})^{-1}\sin2\beta
+In the above we can also use Neville's theta functions 16.36.
+17.7.6  \Pi(n\backslash\alpha)=K(\alpha)+\delta_1K(\alpha)Z(\epsilon\backslash\alpha)
+Case (ii) Hyperbolic Case n>1
+The case n>1 can be reduced to the case 0<N<\sin^2\alpha by writing
+17.7.7   N=n^{-1}\sin^2\alpha, p_1=[(n-1)(1-n^{-1}\sin^2\alpha)]^1
+17.7.8  \Pi(n;\varphi\backslash\alpha)=-\Pi(N;\varphi\backslash\alpha)+F(\varphi\backslash\alpha)+\frac{1}{2p_1}\ln\ [(\Delta(\varphi)+p_1\tan\varphi)(\Delta(\varphi)-p_1\tan\varphi)^{-1}]
+where D(\varphi) is the delta amplitude, 17.2.4.
+17.7.9  \Pi(n\backslash\alpha)=K(\alpha)-\Pi(N\backslash\alpha)
+Case (iii) Circular Case sin^2\alpha<n<1
+\epsilon=\arcsin\ [(1-n)/\cos^2\alpha]^1, 0\leq\epsilon\leq\tfrac{1}2\pi
+\beta=\tfrac{1}2\pi F(\epsilon\backslash\vartheta^{0}-\alpha)/K(\alpha)
+q=q(\alpha)
+17.7.10  \nu=\tfrac{1}2\pi F(\varphi\backslash\alpha)/K(\alpha)

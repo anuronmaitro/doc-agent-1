@@ -1,0 +1,44 @@
+ELEMENTARY ANALYSIS / ENDING PRECISION Multiplication and Division on a Desk Calculator
+Sample 7. Multiply M=20243 97459 71664 32102  \text{m}=69732 82428 43662 95023 on a 10\times 10\times 20  \text{sk calculating machine.
+Let M_0=20243 97459, M_1=71664 32102, m_0=732 82428, m_1=43662 95023. Then M_m=m_010^20+(M_0m_1+M_m_0)10^10^10+M_1m_1.
+(1) Multiply M_1m_1=31290 75681 96300 28346 d record the digits 96300 28346 appearing in sections 1 to 10 of the product dial.
+(2) Transfer the digits 31290 75681 from positions 11 to 20 of the product dial to positions 1 to 10 of the product dial.
+(3) Multiply cumulatively M_1m_0+M_0m_1+31290 881=58812 67160 12663 25894 and record the digits 12663 25894 in positions 1 to 10.
+(4) Transfer the digits 58812 67160 from positions 11 to 20 to positions 1 to 10.
+(5) Multiply cumulatively M_0m_0+58812 67160 14116 69523 40138 17612. The results as ob-red are shown below,
+96300 28346
+12663 25894
+116 69523 40138 17612
+116 69523 40138 17612 12663 25894 96300 28346
+If the product M_m is wanted to 20 digits, only i result obtained in step 5 need be recorded. Further, if the allowable error in the 20th place is unit, the operation M_i_m_1 may be omitted. then either of the factors M or m contains less in 20 digits it is convenient to position the numbers as if they both had 20 digits. This multiplication process may be extended to any other accuracy desired.
+Sample 8. Divide N=14116 69523 40138 17612 |d=20243 97459 71664 32102. Method (1)--linear interpolation.
+V/20243 97459.10^10=.69732 82430 90519 39054
+V/20243 97460.10^10=.69732 82427 46057 26941
+Difference x.71664 32102=24685 644028.10^20\ rate this is an 11\times 10 multiplication).
+Quotient=
+0732 82430 90519 39054--246856 44028) 10^20  =.69732 82428 43662 95026
+Here is an error of 3 units in the 20th place due neglect of the contribution from second differences.
+
+
+
+(p) |
+
+Method (2)--If N and d are numbers each not more than 19 digits let N=N_{1}+N_{0}10^{9}, d=d_{1}+d_{0}10^{9} where N_{0} and d_{0} contain 10 digits and N_{1} and d_{1} not more than 9 digits. Then
+[N]d=\frac{N_{0}10^{9}+N_{1}}{d_{0}10^{9}+d_{1}}\infty\frac{1}{d_{0}10^{9}} \left[N-\frac{N_{0}d_{1}}{d_{0}}\right]\]
+
+Here
+
+N=14116 69523 40138  \quad d=20243 97459 71664 3210
+N_{0}=14116 69523, \(d_{0}=20243 97459, \quad d_{1}=71664 3210
+(1) N_{0}d_{1}=10116 63378 42188 8830 (product dial).
+(2) (N_{0}d_{1})/d_{0}=49973 55504 (quotient dial).
+(3) N-(N_{0}d_{1})/d_{0}=14116 69522 90164 62106 (product dial).
+(4) [N-(N_{0}d_{1})/d_{0}]/d_{0}10^{9}=.69732 82428=first 10 digits of quotient in quotient dial. Remainder =r=08839 11654, in positions 1 to 10 of product dial.
+(5) r/(d_{0}10^{9})=.43662 9502\cdot 10^{-10}=next 9 digits of quotient. N/d=.69732 82428 43662 9502. This method may be modified to give the quotient of 20 digit numbers. Method (1) may be extended to quotients of numbers containing more than 20 digits by employing higher order interpolation.
+Sample 9. Sum the series S=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\frac{1}{.}.\) to 5D using the Euler transform.
+The sum of the first 8 terms is .634524 to 6D. If u_n=1/n we get
+n w_n \Delta u_n \Delta^{2}w_n \Delta^{3}u_n \Delta^{4}u_n
+9 . 111111  -11111  10 . 100000  -9091  -505  11 . 090909  -7576  -349  12 . 083333  -6410
+From 3.6.27 we then obtain
+S=.634524+\frac{.111111}{2}-\frac{(-.011111)}{2^{2}}+\frac{.002020}{2^{3}}-\frac{(-.000505)}{2^{4}}+\frac{.000156}{2^{5}}-\frac{.000156}{2^{5}}+.0002778+.000253  +.000032+.000005  =.693148  (S=ln 2=.6931472 to 7D).
+

@@ -1,0 +1,42 @@
+SPHEROIDAL WAVE FUNCTIONS (p.1)
+Estimation of Coefficients
+Step 1. Calculate N_{\tau}^{m}=\frac{1}{2}\sigma^{n}-\lambda_{m}\frac{\beta_{\tau}^{n}}{N_{\tau}^{n}}\quad(r\geq2)\]
+
+\[N_{\tau}^{m}=\gamma_{0}^{n}-\lambda_{m};\,N_{\tau}^{n}=\gamma_{1}^{n}-\lambda_{m}\]
+\gamma_{\tau}^{n}=(m+r)(m+r+1)\qquad+\frac{1}{2}\,c^{2}\left[1-\frac{4m^{2}-1}{(2m+2r-1)(2m+2r+3)}\right]\,(r\geq0)\]
+
+Step 2. Calculate ratios \(\frac{d_{0}}{d_{2r}}\) and \(\frac{d_{1}}{d_{2r+1}}\) from
+
+\[21.7.9\qquad\frac{d_{0}}{d_{2r}}=\left(\frac{d_{0}}{d_{2r}}\right)\left(\frac{d_{2}}{d_{2r}}\right)\ldots\left(\frac{d_{2r-1}}{d_{2r}}\right)\]
+
+\[21.7.10\qquad\frac{d_{1}}{d_{2r+1}}=\left(\frac{d_{1}}{d_{2r}}\right)\left(\frac{d_{2}}{d_{2r}}\right)\ldots\left(\frac{d_{2r-1}}{d_{2r+1}}\right)\]
+
+and the formula for N_m^m in 21.7.7.
+The coefficients d_s^m are determined to within the arbitrary factor d_0 for r even and d_1 for r odd. The choice of these factors depends on the normalization scheme adopted.
+Normalization of Angular Functions
+Meixner-Schifke Scheme
+21.7.11  \int_{-1}^{1}[S_{m}(e,\eta)]^{2}d\eta=\frac{2}{2n+1}\frac{(n+m)!}{(n-m)!}\]
+Stratton-Morse-Chu-Little-Corbato Scheme
+21.7.12  \sum_{r=d_{0},1}\frac{(r+2m)!}{r!}d_{r}=\frac{(n+m)!}{(n-m)!}\]
+(This normalization has the effect that S_m(e,\eta)->P_{\tau}^{n}(\eta) as \eta\to 1.)
+Flammer Scheme
+21.7.13
+\[S_{m}(e,0)=P_{m}^{m}(0)=\frac{(-1)^{\frac{n-m}{2}}(n+m)!}{2^{n}\left(\frac{n-m}{2}\right)!\left(\frac{n+m}{2}\right)!}\]
+(n-m) even
+21.7.14
+\[S_{m}^{m}(e,0)=P_{m}^{m}(0)=\frac{(-1)^{\frac{n-m-1}{2}}(n+m+1)!}{2^{n}\left(\frac{n-m-1}{2}\right)!\left(\frac{n+m+1}{2}\right)!}\]
+(n-m) odd
+The above lead to the following conditions for d_m^m
+T16-454 O-64-48
+21.7.15
+\sum_{r=0}^{m}\frac{(-1)^{r/2}(r+2m)!}{2^{r}\left(\frac{r}{2}\right)!\left(\frac{r+2m}{2}\right)!}\frac{d_{\tau}^{m}}{2^{n-m}\left(\frac{n-m}{2}\right)!\left(\frac{n+m}{2}\right)!}\]
+(n-m) even
+21.7.16
+\sum_{r=1}^{\infty}\frac{(-1)^{\frac{r-1}{2}}(r+2m+1)!}{2^{r}\left(\frac{r-1}{2}\right)!\left(\frac{r+2m+1}{2}\right)!}\frac{d_{\tau}^{m}}{2^{n-m}\left(\frac{n-m}{2}\right)!\left(\frac{n+m}{2}\right)!}\]
+(n-m) odd
+(The normalization scheme 21.7.13 and 21.7.14 is also used in [21.10].)
+Asymptotic Expansions for S_m(e,\eta)
+21.7.17
+S_m(e,\eta)=(1-\eta^{2})U_{m}(e,\eta)\quad(e\to\infty)
+U_m(x)=\sum_{r=-m}^{\infty}h_{r}^{1}D_{1+r}(x)\quad l=n-m
+where the D_t(x

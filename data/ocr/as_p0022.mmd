@@ -1,0 +1,18 @@
+ELEMENTARY ANALYTICAL METHODS (p.22)
+Table 10.   Evaluate the integral \int_{0}^{\infty}\frac{\sin x}{x}dx=\frac{\pi}{2}to 4D using the Euler transform.
+
+\int_{0}^{\infty}\frac{\sin x}{x}dx=\sum\limits_{k=0}^{\infty}\int_{k\pi}^{\alpha+1>\pi}\frac{\sin x}{x}dx=\sum\limits_{k=0}^{\infty}\int_{0}^{\pi}\frac{\sin t}{kx+t}dt=\sum\limits_{k=0}^{\infty}(-1)^{k}\int_{0}^{\pi}\frac{\sin t}{kx+t}dt.\] Evaluating the integrals in the last sum by numerical integration we get
+\begin{tabular}{c|c c c c}   \[k\] & \int_{0}^{\pi}\frac{\sin t}{kx+t}dt \\ \hline  0 & 1.85194 & & & \\  1 & .43379 & & & \\  2 & .25661 & & & \\  3 & .18260 & \Delta & \Delta^2 & \Delta^3 & \Delta^4 \\ \hline  4 & .14180 & & & & \\  5 & .11593 & -2587 & & & \\  6 & .09805 & & 478 & & \\  7 & .08495 & & & & \\  8 & .07495 & & & & \\ \end{tabular}
+The sum to k=3 is 1.49216. Applying the Euler transform to the remainder we obtain
+\begin{tabular}{c|c c c}   \[\frac{1}{2}\] (.14180)-\frac{1}{2^2}\] (-.02587)+\frac{1}{2^3}\] (.00799) & & & \\  & -\frac{1}{2^4}\] (-.00321)+\frac{1}{2^3}\] (.00153) & & & \\  & =.07090+.00647+.00100+.00020 & & & \\  & =.07862 & & & \\ \end{tabular}
+We obtain the value of the integral as 1.57078 as compared with 1.57080.
+
+Example 11.   Sum the series \sum\limits_{k=1}^{\infty}k^{-2}\frac{\pi^2}{6} using the Euler-Maclaurin summation formula.
+
+From 3.6.28 we have for n=\infty, \sum\limits_{k=1}^{\infty}k^{-2}=\sum\limits_{k=1}^{10}\delta^{-2}+\sum \limits_{k=1}^{\infty}(k+10)^{-2}=\sum\limits_{k=1}^{10}k^{-2}+\int_{0}^{\infty}f(k)dk-\frac{1}{2}f_{0}=\frac{1}{12}f_{0}^{\infty}=1.64493\]
+where f(k)=(k+10)^{-2}. Thus,
+\sum\limits_{k=1}^{\infty}k^{-2}=1.54976731+.1 \qquad\qquad\qquad\qquad\qquad-.005+.00016\,6667-.000000\,0333 =1.64493\]
+as compared with \frac{\pi^2}{6}=1.64493\,4067.
+Example 12.   Compute
+\arctan z=\frac{x}{1+3}\frac{x^3}{3+5}\frac{3x^3}{7+7}+.
+

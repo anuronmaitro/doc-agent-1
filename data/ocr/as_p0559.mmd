@@ -1,0 +1,19 @@
+HYPERGEOMETRIC FUNCTIONS (p.559)
+15.3.2   F(a, b; c; z)=\frac{\Gamma(e)}{2\pi i\Gamma(a)\Gamma(b)}\int_{-i\infty}^{i\infty}\frac{\Gamma(a+s)\Gamma(b+s)\Gamma(-s)}{\Gamma(c+s)}\quad(-z)^{i}ds=\]
+Here --x<arg(-z)<= and the path of integration is chosen such that the poles of \Gamma(a+s) and \Gamma(b+s) i.e. the points s=-a-n and s=-b-m(n, m=0, 1, 2, . . .) respectively, are at its left side and the poles of esc(\pi s) or \Gamma(-s) i.e. s=0,1,2, are at its right side. The cases in which --a, --b or --c are non-negative integers or a-b equal to an integer are excluded.
+
+Linear Transformation Formulas
+From 15.3.1 and 15.3.2 a number of transformation formulas for F(a, b; c; z) can be derived.
+15.3.3   F(a, b; c; z)=(1-z)^{s-a-b}F(e-a, e-b; c; z)
+15.3.4  =(1-z)^{-s}F\left(a, e-b; c; \tfrac{z}{2-1}\right)
+15.3.5  =\mp(1-z)^{-s}F\left(b, e-a; c; \tfrac{z}{2-1}\right)
+15.3.6  =\frac{\Gamma(e)\Gamma(e-a-b)}{\Gamma(e-a)\Gamma(e-b)}\, F(a, b; a+b-c+1; 1-z)
++(1-z)^{s-a-b}\,\frac{\Gamma(e)\Gamma(a+b-c)}{\Gamma(a)\Gamma(b)}\, F\left(e-a, e-b; c-a-b+1; 1-z\right)\qquad(|\arg(1-z)|<=\gamma)
+15.3.7  =\frac{\Gamma(e)\Gamma(b-a)}{\Gamma(b)\Gamma(e-a)}\, (-z)^{-a}F\left(a, 1-c+a; 1-b+a; \tfrac{1}{2}\right)\qquad(|\arg(-z)|<=\gamma)
+15.3.8  =(1-z)^{-a}\,\frac{\Gamma(e)\Gamma(b-a)}{\Gamma(b)\Gamma(e-a)}\, F\left(a, c-b; a-b+1; \tfrac{1}{1-z}\right)\qquad(|\arg(1-z)|<=\gamma)
+15.3.9  =\frac{\Gamma(e)\Gamma(e-a-b)}{\Gamma(e-a)\Gamma(e-b)}\, \varepsilon^{-a}\, F\left(a, a-c+1; a+b-c+1; 1-\tfrac{1}{2}\right)\qquad(|\arg(1-z)|<=\gamma)
+15.3.10  +\frac{\Gamma(e)\Gamma(a+b-c)}{\Gamma(a)\Gamma(b)}\, (1-z)^{c-a-b}\, \varepsilon^{-a}\, F\left(e-a, 1-a; c-a-b+1; 1-\tfrac{1}{2}\right)\qquad(|\arg|<=\gamma,|\arg(1-z)|<=\gamma)
+Each term of 15.3.6 has a pole when c=a+b+m, (m=0, 1, 2, . . .); this case is covered by
+15.3.10   F(a, b; a+b; z)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\sum\limits_{n=0}^{\infty}\frac{(a)_{n}(b)_{n}}{(n!)^{2}}[2\psi(n+1)-\psi(a+n)-\psi(b+n)-\ln(1-z)](1-z)^{n}\qquad(|\arg(1-z)|<=\gamma,|1-z|<1)
+Furthermore for m=1, 2, 3, . . . .
+15.3.11   F(a, b; a+b+m; z)=\frac{\Gamma(m)\Gamma(a+b+m)}{\Gamma(a+m)\Gamma(b+m)}\sum\limits_{n=0}^{\infty-1}\frac{(a)_{n}(b)_{n}}{n!(1-m)_{n}}\,(1-z)^{n}\qquad-\frac{\Gamma(a+b+m)}{\Gamma(a)\Gamma(b)}\, (z-1)^{n}\sum\limits_{n=0}^{\infty}\frac{(a+m)_{n}(b+m)_{n}}{n!(n+m)!}\, (1-z)^{n}[\ln(1-z)-\psi(n+m+1)+\psi(a+n+m)+\psi(b+n+m)]\qquad(|\arg

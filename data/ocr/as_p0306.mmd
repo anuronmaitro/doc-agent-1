@@ -1,0 +1,27 @@
+306  ERROR FUNCTION AND FRESHEL INTEGRALS
+f_{2}(u)=c_{0}+c_{1}(u-u_{0})+\frac{c_{2}}{2!}(u-u_{0})^{2}+\frac{c_{3}}{3!}(u-u_{0})^{3}+\ldots,
+g_{2}(u)=-\left[c_{1}+c_{2}(u-u_{0})+\frac{c_{3}}{2!}(u-u_{0})^{2}+\frac{c_{4}}{3!}(u-u_{0})^{3}+\ldots\right],
+where
+c_{0}=f_{2}(u_{0}),c_{1}=-g_{2}(u_{0}),c_{k+2}=-c_{k}+(-1)^{k}\frac{1\cdot3\ldots(2k-1)}{\sqrt{2xu_{0}}(2u_{0})^{k}}
+(k=0,1,2,\ldots.).
+Consulting Table 7.8 we chose a_{0}=1/185638=5.386819, thus having u-u_{0}=5.24-5.386819=-.146819. From Table 7.8
+f_{2}(u_{0})=.168270, g_{2}(u_{0})=.014483.
+Hence, applying the series above,
+f_{3}(5.24)=.170436, g_{2}(5.24)=.015030.
+Using the 4th formula at the bottom of Table 7.8
+S_{2}(5.24)=.5-(.170436)(.503471)
+-(.015030)(-.864012)=.42718.
+Example 10. Compute S_{2}(2) using 7.3.16.
+Generating the values of J_{s+1}(2) as described in chapter 10 we find
+S_{2}(5.24)=.5-(.170436)(.503471)
+-(.015030)(-.864012)=.42718.
+Example 11. Compute S_{2}(2) using 7.3.16.
+Generating the values of J_{s+1}(2) as described in chapter 10 we find
+S_{2}(2)=J_{3n}(2)+J_{7n}(2)+J_{112}(2)+J_{152}(2)+\ldots.
+=.49129+.06852+.00297+.00006=.56284.
+Example 11. Compute\int_{1}^{\infty}\frac{Y_{0}(t)}{t}dt by numerical integration using Tables 9.1 and 7.8.
+[Y_{0}(t) is the Bessel function of the second kind defined in 9.1.16.]
+We decompose the integral into three parts
+\int_{1}^{\infty}Y_{0}(t)\frac{dt}{t}=\int_{1}^{10}Y_{0}(t)\frac{dt}{t}+\int_{10}^{\infty}[Y_{0}(t)-\widehat{Y}_{0}(t)]\frac{dt}{t}+\int_{10}^{\infty}\widehat{Y}_{0}(t)\frac{dt}{t}\]
+where
+\widehat{Y}_{0}(t)=\left(1-\frac{9}{128t^{2}}\right)\frac{\sin\left(t-\frac{\pi}{4}\right)}{\sqrt{3\pi t}}\qquad\qquad\qquad\qquad\qquad\qquad-\left(1-\frac{75}{128t^{2}}\right)\frac{\cos\left(t-\frac{\pi}{4}\right)}{8t\sqrt{3\pi t}}\qquad\

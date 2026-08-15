@@ -1,0 +1,21 @@
+PROBABILITY FUNCTION (p.946)
+26.6. F-(Variance-Ratio) Distribution Function
+26.6.1   P(F|\nu_{1},\nu_{2})=\frac{\nu_{1}^{2}\nu_{2}^{3}}{B\Big{(}\frac{1}{2}\nu_{1}!\frac{1}{2}\nu_{2}\Big{)}}\int_0^\nu t^{(\nu_{1}-2)}(\nu_{2}+\nu_{1}t)^{-1(\nu_{1}+\nu_{2})}dt\]
+26.6.2   Q(F|\nu_{1},\nu_{2})=1-P(F|\nu_{1},\nu_{2})=I_{\infty}\Big{(}\frac{\nu_{2}}{2},\frac{\nu_{1}}{2}\Big{)}\] where x=\frac{\nu_{2}}{\nu_{2}+\nu_{1}}F\] Relation to the Chi-Square Distribution
+If X_1^1 and X_2^2 are independent random variables following chi-square distributions 26.4.1 with n_1 and n_2 degrees of freedom respectively, then the distribution of F=\frac{X_1^1/\nu_1}{X_2^2/\nu_2} is said to follow the variance ratio or F-distribution with n_1 and n_2 degrees of freedom. The corresponding distribution function is P(F|\nu_{1},\nu_{2}).
+Statistical Properties
+26.6.3 mean: m=\frac{\nu_{2}}{\nu_{2}-2} (\nu_{2}>2) variance: e^2=\frac{2\nu_{2}(\nu_{1}+\nu_{2}-2)}{\nu_{1}(\nu_{2}-2)^2(\nu_{2}-4)} (\nu_{2}>4) third central moment:
+m=\frac{\nu_{2}}{\nu_{1}}\frac{\nu_{1}}{\nu_{2}-2} (\nu_{2}-4) (\nu_{2}>6) moments about the origin:
+\mu_{n}=\frac{\nu_{2}}{\nu_{1}}\frac{\Gamma \Big{(}\frac{\nu_{1}+2\nu_{2}}{2}\Big{)}}{\Gamma \Big{(}\frac{\nu_{1}}{2}\Big{)}}\frac{\Gamma \Big{(}\frac{\nu_{1}-2\nu_{2}}{2}\Big{)}}{\Gamma \Big{(}\frac{\nu_{2}}{2}\Big{)}} (\nu_{2}>2n) characteristic function:
+ph(t)=E(e^{\nu t})=M \Big{(}\frac{\nu_{1}}{2},-\frac{\nu_{2}}{2},-\frac{\nu_{2}}{\nu_{1}}it\Big{)} Series Expansions
+x=\frac{\nu_{2}}{\nu_{2}+\nu_{1}F}\]
+26.6.4
+Q(F|\nu_{1},\nu_{2})=x^{\nu_{2}/2}\Big{[}1+\frac{\nu_{2}}{2}(1-x)+\frac{\nu_{2}(\nu_{2}+2)}{2\cdot4}(1-x^{2})+\ldots\]
+26.6.6
+Q(F|\nu_{1},\nu_{2})=x^{\frac{\nu_{1}+\nu_{2}-2}{2}}\Big{[}1+\frac{\nu_{1}+\nu_{2}-2}{2}(\frac{1-x}{x})+\frac{\nu_{1}(\nu_{1}+2)}{2\cdot4}(\frac{1-x}{x})^{2}+\ldots\]
+26.6.6
+Q(F|\nu_{1},\nu_{2})=x^{\frac{\nu_{1}+\nu_{2}-2}{2}}\Big{[}1+\frac{\nu_{1}+\nu_{2}-2}{2}(\frac{1-x}{x})+\frac{\nu_{1}(\nu_{1}+\nu_{2}-2)}{2\cdot4}(\frac{1-x}{x})^{2}+\ldots\]
+26.6.7
+Q(F|\nu_{1},\nu_{2})=1-(1-x)^{\frac{\nu_{1}+\nu_{2}-2}{2}}\Bigg{[}1+\frac{\nu_{1}+\nu_{2}-2}{2}(\frac{x}{1-x})+\ldots+\frac{\nu_{1}(\nu_{1}+\nu_{2}-2)}{2\cdot4}\ldots(\nu_{2}-2)\Big{(}\frac{1-x}{x})^{\frac{\nu_{1}-2}{2}}\Bigg{]} (\nu_{2}\text{ even})
+26.6.8
+Q(F|\nu_{1},\nu_{2})

@@ -1,0 +1,42 @@
+NUNMERICAL ANALYSIS (p.883)
+25.3.3  \frac{R^{\prime}_{n}(x)=\frac{f^{(n+1)}}{(n+1)!}(\xi)\pi_{n}^{\prime}(x)+\frac{\pi_{n}(x)}{(n+1)!}\frac{d}{dx}f^{(n+1)}(\xi)}\]
+
+Equally Spaced Abscissas
+Three Points
+25.3.4
+f'_{p}^{\prime}=f'(x_0+ph)
+=\tfrac{1}{h}\left\{(p-\tfrac2)f_{-1}-2pf_0+(p+\tfrac12)f_1\right\}+R^{\prime}_2
+Four Points
+25.3.5
+f'_{p}^{\prime}=f'(x_0+ph)-\tfrac{1}{h}\left\{-\frac{3p^{2}-6p+2}{6}f_{-1}+\frac{3p^{2}-4p-1}{2}f_{0}-\frac{3p^{2}-2p-2}{2}f_{1}+\frac{3p^{2}-1}{6}f_{2}\right\}+R^{\prime}_3
+Five Points
+25.3.6
+f'_{p}^{\prime}=f'(x_0+ph)-\tfrac{1}{h}\left\{\frac{2p^{2}-3p^{2}-p+1}{12}f_{-2}+\frac{4p^{3}-3p^{2}-8p+4}{6}f_{-1}+\frac{2p^{3}-5p}{2}f_{0}+\frac{4p^{3}+3p^{2}-8p-4}{6}f_{1}+\frac{2p^{3}+3p^{2}-p-1}{12}f_{2}\right\}+R^{\prime}_4
+For numerical values of differentiation coefficients see Table 25.2.
+Markoff's Formulas
+(Newton's Forward Difference Formula Differentiated)
+25.3.7
+f'(a_0+ph)=\tfrac{1}{k}\left[\Delta_0+\tfrac{2p-1}{2}\Delta_0^2\right.
++\tfrac{3p^{2}-6p+2}{6}\Delta_0^3+\dots+\tfrac{d}{dp}\left(\tfrac{p}{n}\right)\Delta_0^7\left]+R^{\prime}_n
+25.3.8
+R'_{n}^{\prime}=h^{\prime}f'(x+1)(\xi)\frac{d}{dp}\left(\tfrac{p}{n+1}+\tfrac{1}{n}+\tfrac{1}{n}+\tfrac{1}{n}+\tfrac{1}{n}+\tfrac{1}{n}\right)\frac{d}{dx}f^{(n+1)}(\xi)
+(a_0<k<a_n)
+25.3.9
+hf'_0=\Delta_0-\tfrac12\Delta_0^2+\tfrac{1}{3}\Delta_0^3-\tfrac12\Delta_0^4+\dots
+716-0540-54-27
+25.3.10
+hf'_0^{(2)}=\Delta_0^2-\Delta_0^2+\tfrac{11}{12}\Delta_0^4-\tfrac56\Delta_0^5+\dots
+25.3.11
+hf'_0^3p=\Delta_0^3-\tfrac32\Delta_0^4+\tfrac74\Delta_0^5-\tfrac158\Delta_0^6+\dots
+25.3.12
+hf'_0^4+\tfrac{4}{0}-2\Delta_0^2+\tfrac{17}{6}\Delta_0^6-\tfrac72\Delta_0^7+\dots
+25.3.13
+hf'_0^5=\Delta_0^5-\tfrac52\Delta_0^6+\tfrac25\Delta_0^7-\tfrac35\Delta_0^5+\dots
+Expertt's Formula
+25.3.14
+hf'_0^7(x_0+ph)=-f_0+f_1-\tfrac3p^{2}-6p+2\delta_0^2+\tfrac3p^2-1\delta_0^3+\tfrac5p^4-15p^2+4\dots
+25.3.15
+hf'_0^3+\tfrac{-5}{120}\tfrac{3}{6}-\tfrac{1}{6}\delta_0^2+\tfrac{1}{20}\delta_0^4+\tfrac130\delta_1^4+\dots
+Differences in Terms of Derivatives
+25.3.16
+\Delta_0\approx hf'_0^i+\tfrac{h^2}{2!}f'_0^i+\tfrac{h^3}{3!}f'_0^j+\tfrac{h^4}{4!}f'_0^j+\tfrac{h^5}{5!}f'_0^j+\tfrac{h^5}{5!

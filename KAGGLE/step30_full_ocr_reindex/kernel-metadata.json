@@ -1,0 +1,16 @@
+{
+  "id": "eliasmainur/mathscholar-step30-full-ocr-reindex",
+  "title": "Mathscholar Step30 Full OCR Reindex",
+  "code_file": "kaggle_step30_full_ocr_reindex.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": ["eliasmainur/mathscholar-step30-ckpt"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
