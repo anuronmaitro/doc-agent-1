@@ -27,9 +27,9 @@
 - [x] Step 19 — annotate TEST batch A (18) — S1
 - [x] Step 20 — annotate TEST batch B (18) — S2
 - [x] Step 21 — annotate VALIDATION (20) — S3
-- [x] Step 22 — annotate TRAIN A (35) — S1
-- [x] Step 23 — annotate TRAIN B (35) — S2; revised
-- [x] Step 24 — annotate TRAIN C (35) — S3
+- [x] Step 22 — annotate TRAIN A (41) — S1
+- [x] Step 23 — annotate TRAIN B (41) — S2; revised
+- [x] Step 24 — annotate TRAIN C (40) — S3
 - [x] Step 25 — NIST extraction (Stage A pairs) — S1
 - [x] Step 26 — synthetic degradation pipeline — S2
 - [x] Step 27 — training/ + LoRA adapt — S1-(modified)
@@ -42,5 +42,5 @@
 - [x] Step 34 — A2 form sections 4 + 5 — S1
 - [x] Step 35 — A2 form sections 2 + 3 — S2
 - [x] Step 36 — A2 form sections 1 + 6 + 7 — S3
-- [ ] Step 37 — transcripts x3 — all
-- [ ] Step 38 — final checks + `a2-submit` tag — S1
+- [x] Step 37 — transcripts x3 — all
+- [x] Step 38 — final checks + `a2-submit` tag — S1

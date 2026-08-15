@@ -43,6 +43,12 @@ data/annot/test/
 data/annot/val/*.png
 data/annot/train/*.png
 
+# data/train/ -- a local scratch copy of the same 122 training page renders, byte-identical
+# to data/annot/train/*.png (verified 2026-08-15, Step 38 pre-submission check) but sitting
+# at a path the rule above does not cover. 97 MB. Step 38's `git add -A` would have swept it
+# into the submission commit; ignored here so that cannot happen. Safe to delete locally.
+data/train/
+
 # data/ocr/ is NOT in the same category as data/pages/ above: it's our own derived text
 # (OCR transcripts + sidecars), not "the corpus" itself, and it is tiny even at full-book
 # coverage (measured: 2.4 MB for 594 pages at Step 16; ~1-2.5 MB projected for all 1046

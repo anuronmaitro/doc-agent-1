@@ -19,7 +19,7 @@ axes:
 
 corpus:
   path: data/raw/                   # where the scanned page-images live
-  pages: 1046                       # total content pages  (floor: >= 300; 1082 PDF pages incl. 32 front-matter, ~1046 content — see data/provenance.md)
+  pages: 1040                       # total content pages, MEASURED by ingest/loader.py (floor: >= 300; 1082 PDF pages incl. 32 front-matter, minus blank versos/plates). data/provenance.md's "~1046" was the pre-Step-8 estimate; 1040 is the count the loader actually yields, and is the denominator used in the form Sec.5 and notebooks/kb_demo.ipynb (987/1040 pages indexed = 94.9%).
   words: 579798                     # words in archive text layer (floor: >= 60000; reference count — see data/provenance.md; graded floor is re-asserted from our own OCR in data/validate.py, Step 6)
   provenance: data/provenance.md    # source + licence + counts
 
