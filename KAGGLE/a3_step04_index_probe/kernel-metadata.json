@@ -1,0 +1,16 @@
+{
+ "id": "anuronmaitro/mathscholar-a3-step04-index-probe",
+ "title": "MathScholar A3 Step04 Index Probe",
+ "code_file": "kaggle_step04.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "machine_shape": "NvidiaTeslaT4",
+ "dataset_sources": [
+  "anuronmaitro/mathscholar-index"
+ ],
+ "competition_sources": [],
+ "kernel_sources": []
+}

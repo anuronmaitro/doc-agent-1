@@ -58,6 +58,11 @@ dependencies = [
   #     of this project's own code -- found running Step 27's smoke train, not
   #     assumed. lightning's own dependency metadata doesn't pin this itself.
   "setuptools<81",
+  # --- A3 Step 2: LLM client. D1 (plan_a3.md §5) picked Groq's free tier -- no per-call
+  # cost, no GPU competition with the OCR/eval jobs, works from anywhere including Kaggle.
+  # `groq` is a real, separate PyPI package (Stainless-generated, same shape as `openai`'s
+  # SDK) -- not something reachable through anything already pinned above.
+  "groq>=0.9,<1.0",
 ]
 
 [project.optional-dependencies]

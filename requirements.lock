@@ -19,6 +19,7 @@ annotated-types==0.8.0
 anyio==4.14.2
     # via
     #   gradio
+    #   groq
     #   httpx
     #   starlette
 attrs==26.1.0
@@ -55,6 +56,8 @@ dill==0.3.8
     # via
     #   datasets
     #   multiprocess
+distro==1.9.0
+    # via groq
 docker-pycreds==0.4.0
     # via wandb
 faiss-cpu==1.8.0
@@ -95,6 +98,8 @@ gradio==4.44.1
     # via doc-agent (pyproject.toml)
 gradio-client==1.3.0
     # via gradio
+groq==0.37.1
+    # via doc-agent (pyproject.toml)
 gymnasium==0.29.1
     # via doc-agent (pyproject.toml)
 h11==0.16.0
@@ -107,6 +112,7 @@ httpx==0.28.1
     # via
     #   gradio
     #   gradio-client
+    #   groq
 huggingface-hub==0.36.2
     # via
     #   accelerate
@@ -243,6 +249,7 @@ pydantic==2.13.4
     #   doc-agent (pyproject.toml)
     #   fastapi
     #   gradio
+    #   groq
     #   pydantic-settings
 pydantic-core==2.46.4
     # via pydantic
@@ -331,6 +338,8 @@ six==1.17.0
     #   python-dateutil
 smmap==5.0.3
     # via gitdb
+sniffio==1.3.1
+    # via groq
 starlette==0.46.2
     # via fastapi
 sympy==1.14.0
@@ -388,6 +397,7 @@ typing-extensions==4.16.0
     #   fastapi
     #   gradio
     #   gradio-client
+    #   groq
     #   gymnasium
     #   huggingface-hub
     #   lightning
