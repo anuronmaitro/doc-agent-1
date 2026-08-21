@@ -11,7 +11,8 @@ ocr:      {model: "facebook/nougat-base", finetune: true, adapter: "lora",
 embed:    {model: "BAAI/bge-m3", dim: 1024}
 index:    {type: "faiss:flat", chunk_tokens: 512, overlap: 0, strategy: "semantic-formula-block"}
 retrieve: {k: 10, k_step: 10, k_max: 40, weak_threshold: 0.35, rerank: true,
-           reranker: "BAAI/bge-reranker-v2-m3"}                # used from A3
+           reranker: "BAAI/bge-reranker-v2-m3",
+           visual_model: "openai/clip-vit-base-patch32"}       # A3, DECISION D2 (plan_a3.md §5)
 agent:    {max_steps: 8, autonomy: "act-then-log", budget_usd: 0.05,
            model: "openai/gpt-oss-120b", provider: "groq"}   # A3, DECISION D1 (plan_a3.md §5)
 rl:       {algo: "ppo", train_policy: false}
