@@ -237,13 +237,19 @@ class TestRetrieve:
         results = r.retrieve("query", k=10)  # FAISS pads the extra 7 rows with -1
         assert len(results) == 3
 
-    def test_empty_index_returns_empty_list(self, index_dir, monkeypatch):
+    def test_empty_index_returns_empty_list(self, index_dir, monkeypatch, tmp_path):
         store.build([], np.zeros((0, 8), dtype=np.float32), CFG)
         monkeypatch.setattr(
             sentence_transformers,
             "SentenceTransformer",
             lambda name: _FakeEncoder(np.zeros(8, dtype=np.float32)),
         )
+        # An empty text index is unconditionally "weak", so without this the visual
+        # fallback would fire for real -- against whatever real image_embed_cache.npz
+        # happens to sit at data/index/ on this machine (real after Step 3's Kaggle run),
+        # making this test's result depend on local dev-machine state instead of being
+        # deterministic. Same isolation pattern as TestVisualFallback below.
+        monkeypatch.setattr(retriever_mod, "IMAGE_CACHE_PATH", tmp_path / "missing.npz")
         cfg = {**CFG, "retrieve": RETRIEVE_CFG}
         r = retriever_mod.Retriever(cfg)
         assert r.retrieve("query") == []

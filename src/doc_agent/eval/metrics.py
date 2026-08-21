@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from collections.abc import Sequence
 from typing import Any
 
 from ..contracts import *  # noqa
@@ -115,8 +116,8 @@ def normalize_latex(text: str) -> str:
 # --- character-level F1 -------------------------------------------------------------------
 
 
-def _lcs_length(a: str, b: str) -> int:
-    """Length of the longest common subsequence of two strings.
+def _lcs_length(a: Sequence[str], b: Sequence[str]) -> int:
+    """Length of the longest common subsequence of two sequences.
 
     Order-sensitive by construction, which is the whole point (see `ocr_f1`). Uses the
     standard two-row dynamic program, O(len(a)*len(b)) time but only O(min) memory.
@@ -125,6 +126,13 @@ def _lcs_length(a: str, b: str) -> int:
     alignment always matches a shared leading/trailing run greedily -- and it is what keeps
     the usual case (a mostly-correct transcription) fast instead of quadratic in the full
     page length.
+
+    Generic over the element type of the sequence, not just characters: `groundedness`
+    (below) calls this with lists of *words* rather than a raw string, precisely because
+    character-level overlap is too easily fooled by short, generic excerpts -- unrelated
+    text sharing common symbols (parentheses, digits, `=`) can rack up a deceptively high
+    character LCS. Matching whole tokens in order is a much sharper test of genuine textual
+    overlap, which is what that use needs.
     """
     if not a or not b:
         return 0
@@ -306,21 +314,165 @@ def exact_formula_match(pred: str, gold: str) -> float:
 # --- A3 metrics: symbols are locked by tests/test_structure.py, bodies land in A3 ----------
 
 
-def recall_at_k(retrieved: list, gold: list, k: int) -> float:
-    raise NotImplementedError  # A3: retrieval quality
+def recall_at_k(retrieved: list[Chunk], gold: list[str], k: int) -> float:
+    """Fraction of `gold` page ids found among the top-k retrieved chunks' pages.
+
+    "Gold" means **page ids**, not chunk ids: `grading_kit/labels.jsonl` and Step 4's own
+    recall@k probe (`reports/a3_retrieval_probe.md`) both key ground truth by page id, and a
+    single page can be covered by more than one chunk -- or, on the Step 3 visual-fallback
+    path, by a synthesised chunk carrying no OCR text at all. Chunk-id matching would
+    silently undercount whenever the right *page* surfaced through a different chunk than
+    the label expects. The eval harness (Step 17) and §3 of the form must mean the same
+    thing by "recall@k" -- this is that shared definition.
+
+    `retrieved` is assumed already ranked best-first (`Retriever.retrieve`/`rerank`'s own
+    order) -- this function only slices the first `k`, it does not re-sort.
+    """
+    if k <= 0 or not gold:
+        return 0.0
+    found_pages: set[str] = set()
+    for chunk in retrieved[:k]:
+        found_pages.update(chunk.page_ids)
+    hits = sum(1 for page_id in gold if page_id in found_pages)
+    return hits / len(gold)
 
 
-def groundedness(answer: Answer) -> float:
-    raise NotImplementedError  # no-hallucination
+# Lazily loads the real built index once per process so `citation_accuracy`/`groundedness`
+# can check a citation's chunk_id against real, existing chunks -- exactly the "graders
+# verify authenticity, cheaply" check (03-Project-Specification.md): a model that invents a
+# chunk_id it never actually retrieved must be caught, not trusted. A test that wants a
+# small, fast, hand-built universe monkeypatches this function directly, same pattern as
+# `retrieval/retriever.py`'s `_ImageIndex._ensure_clip`.
+_CHUNK_LOOKUP_CACHE: dict[str, Chunk] | None = None
+
+
+def _get_chunk_lookup() -> dict[str, Chunk]:
+    global _CHUNK_LOOKUP_CACHE
+    if _CHUNK_LOOKUP_CACHE is None:
+        from .. import config
+        from ..index import store
+
+        loaded = store.load(config.load())
+        _CHUNK_LOOKUP_CACHE = {c.id: c for c in loaded.chunks}
+    return _CHUNK_LOOKUP_CACHE
+
+
+def _cited_excerpt(citation: Citation, chunk_lookup: dict[str, Chunk]) -> str | None:
+    """The text `citation` actually points at, or None if it is unverifiable.
+
+    Two independent ways a citation can be unverifiable, both must return None: `chunk_id`
+    is not in the real index (a fabricated citation -- the model cited something that was
+    never actually retrieved), or `span` falls outside that chunk's real text (points past
+    the end, or `start >= end`) -- a citation "containing" a span that doesn't exist in the
+    chunk is exactly as unsupported as one whose chunk doesn't exist at all.
+    """
+    chunk = chunk_lookup.get(citation.chunk_id)
+    if chunk is None:
+        return None
+    start, end = citation.span
+    if start < 0 or end <= start or end > len(chunk.text):
+        return None
+    return chunk.text[start:end]
+
+
+_TRAILING_PUNCT = re.compile(r"[.,;:!?]+$")
+
+
+def _content_words(text: str) -> list[str]:
+    """Whitespace-split, with trailing sentence punctuation stripped from each token.
+
+    A LaTeX excerpt copied verbatim into a sentence typically picks up trailing prose
+    punctuation it never had on the page (`...\\Gamma(z), valid for all z.`) -- naive
+    whitespace splitting would then treat `\\Gamma(z),` as a different token than the
+    excerpt's own `\\Gamma(z)`, missing a real match. Only *trailing* punctuation is
+    stripped, never leading or interior, since a leading/interior `.` can be mathematically
+    meaningful (a formula number like `6.1.8`, a decimal like `1.45459`).
+    """
+    stripped = (_TRAILING_PUNCT.sub("", w) for w in text.split())
+    return [w for w in stripped if w]
 
 
 def citation_accuracy(answer: Answer) -> float:
-    raise NotImplementedError
+    """Fraction of `answer.citations` that point at a real chunk with a real span inside it.
+
+    Purely **structural** -- chunk exists, span is in-bounds -- not whether the claim the
+    answer makes actually matches that text (that deeper check is `groundedness`, below). An
+    answer with zero citations has nothing to validate, so this is 0.0 for it: an unsupported
+    claim is not "accurately cited", it is uncited.
+    """
+    if not answer.citations:
+        return 0.0
+    chunk_lookup = _get_chunk_lookup()
+    valid = sum(1 for c in answer.citations if _cited_excerpt(c, chunk_lookup) is not None)
+    return valid / len(answer.citations)
+
+
+def groundedness(answer: Answer) -> float:
+    """Fraction of `answer.citations` whose claim is actually reflected in the excerpt it
+    points at. **Our headline metric, target >= 0.90** -- the definition has to survive the
+    obvious attack, and does: a citation can point at a perfectly real chunk with a perfectly
+    valid span (`citation_accuracy` = 1.0 for it) while the answer still states something
+    that excerpt never says. This metric is what catches that, independently of
+    `citation_accuracy`, so a well-formed-but-false citation cannot pass as "grounded".
+
+    Per citation: resolve the real excerpt via `_cited_excerpt` (0.0 if the chunk doesn't
+    exist or the span is out of bounds -- a fabricated citation cannot ground anything).
+    Then LaTeX-normalise both the excerpt and the full answer text (`normalize_latex`, above
+    -- so `\\tfrac12` in the source page and `\\frac{1}{2}` in the answer still count as the
+    same claim, not a mismatch) and score how much of the *excerpt* reappears, in order,
+    inside the answer: `LCS(excerpt, answer) / len(excerpt)`.
+
+    Recall of the excerpt in the answer, **not** `ocr_f1`'s symmetric F1: the answer is
+    expected to be much shorter than its combined cited evidence, so penalising it for not
+    *consisting only of* the excerpt (F1's precision term) would punish good, concise answers
+    rather than catching unsupported ones. A real quote embedded in a short sentence scores
+    close to 1.0 here; a citation attached to an unrelated claim scores close to 0.0.
+
+    **Word-level LCS, not `ocr_f1`'s character-level one.** Tried character-level first and
+    it does not survive the obvious attack: two short, generic strings sharing only common
+    symbols (parentheses, digits, `=`) can rack up a deceptively high *character* LCS purely
+    by chance, even with no real semantic overlap at all -- caught by a test built exactly
+    for this ("The gamma function is always exactly equal to 42." against a real
+    `\\Gamma(z+1)=z\\Gamma(z)` excerpt scored 0.27, not the near-zero a genuinely unsupported
+    claim should get). Matching whole, normalised *words* in order is a much sharper test of
+    real textual overlap.
+
+    `groundedness(answer) = mean(per-citation score)`. 0.0 for an answer with no citations --
+    there is nothing to ground a claim in.
+    """
+    if not answer.citations:
+        return 0.0
+    chunk_lookup = _get_chunk_lookup()
+    per_citation: list[float] = []
+    for citation in answer.citations:
+        excerpt = _cited_excerpt(citation, chunk_lookup)
+        if not excerpt:
+            per_citation.append(0.0)
+            continue
+        excerpt_words = _content_words(normalize_latex(excerpt))
+        answer_words = _content_words(normalize_latex(answer.text))
+        if not excerpt_words or not answer_words:
+            per_citation.append(0.0)
+            continue
+        overlap = _lcs_length(excerpt_words, answer_words)
+        per_citation.append(overlap / len(excerpt_words))
+    return sum(per_citation) / len(per_citation)
 
 
 def ece(confidences: Any, correct: Any) -> float:
-    raise NotImplementedError  # calibration
+    raise NotImplementedError  # calibration -- Step 21
 
 
 def subgroup_gap(scores_by_group: dict) -> float:
-    raise NotImplementedError  # fairness
+    """Max-minus-min score across subgroups -- the fairness/robustness NFR's spread.
+
+    `region_type` (formula / prose+formula / table) is our subgroup axis, the same split
+    A2's Step 29 already reported by. Expects `{group_name: score}`. Fewer than two
+    populated groups means there is no spread to report -- 0.0 rather than raising, so an
+    eval run that (for instance) only has TEST-set coverage for one region_type doesn't
+    crash the harness over it.
+    """
+    if len(scores_by_group) < 2:
+        return 0.0
+    values = list(scores_by_group.values())
+    return max(values) - min(values)

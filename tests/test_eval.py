@@ -4,11 +4,17 @@ import random
 
 import pytest
 
+from doc_agent.contracts import Answer, Chunk, Citation
+from doc_agent.eval import metrics
 from doc_agent.eval.metrics import (
+    citation_accuracy,
     exact_formula_match,
     extract_formulas,
+    groundedness,
     normalize_latex,
     ocr_f1,
+    recall_at_k,
+    subgroup_gap,
 )
 
 
@@ -211,3 +217,198 @@ class TestExactFormulaMatch:
 
     def test_gold_without_formulas_returns_zero(self):
         assert exact_formula_match("anything", "prose only, no numbered formulas") == 0.0
+
+
+def _chunk(id_, page_ids, text="irrelevant prose"):
+    return Chunk(id=id_, doc_id="ch06_gamma", text=text, page_ids=page_ids)
+
+
+class TestRecallAtK:
+    def test_gold_page_found_via_top_k(self):
+        retrieved = [_chunk("c1", ["as_p0255"]), _chunk("c2", ["as_p0999"])]
+        assert recall_at_k(retrieved, gold=["as_p0255"], k=2) == 1.0
+
+    def test_gold_page_outside_k_scores_zero(self):
+        retrieved = [_chunk("c1", ["as_p0999"]), _chunk("c2", ["as_p0255"])]
+        assert recall_at_k(retrieved, gold=["as_p0255"], k=1) == 0.0
+
+    def test_multiple_gold_pages_partial_credit(self):
+        retrieved = [_chunk("c1", ["as_p0255"]), _chunk("c2", ["as_p0999"])]
+        assert recall_at_k(retrieved, gold=["as_p0255", "as_p0256"], k=2) == 0.5
+
+    def test_page_found_via_a_different_chunk_than_expected_still_counts(self):
+        """recall_at_k is page-id recall, not chunk-id recall (see docstring)."""
+        retrieved = [_chunk("visual|as_p0255", ["as_p0255"])]
+        assert recall_at_k(retrieved, gold=["as_p0255"], k=1) == 1.0
+
+    def test_does_not_resort_just_slices_first_k(self):
+        retrieved = [_chunk("c1", ["as_p0999"]), _chunk("c2", ["as_p0255"])]
+        assert recall_at_k(retrieved, gold=["as_p0255"], k=1) == 0.0
+        assert recall_at_k(retrieved, gold=["as_p0255"], k=2) == 1.0
+
+    def test_empty_gold_or_zero_k(self):
+        retrieved = [_chunk("c1", ["as_p0255"])]
+        assert recall_at_k(retrieved, gold=[], k=5) == 0.0
+        assert recall_at_k(retrieved, gold=["as_p0255"], k=0) == 0.0
+
+
+REAL_EXCERPT = r"\Gamma(z+1)=z\Gamma(z)"
+REAL_CHUNK = Chunk(
+    id="ch06_gamma|as_p0255|r00",
+    doc_id="ch06_gamma",
+    text=f"6.1.15  Recurrence relation. {REAL_EXCERPT} for all z.",
+    page_ids=["as_p0255"],
+)
+
+
+@pytest.fixture(autouse=True)
+def _clear_chunk_lookup_cache(monkeypatch):
+    """The real lookup is a lazily-cached module global -- reset it every test so one test's
+    monkeypatch (or a prior real load) can never leak into the next."""
+    monkeypatch.setattr(metrics, "_CHUNK_LOOKUP_CACHE", None)
+
+
+def _patch_chunks(monkeypatch, *chunks):
+    lookup = {c.id: c for c in chunks}
+    monkeypatch.setattr(metrics, "_get_chunk_lookup", lambda: lookup)
+
+
+class TestCitationAccuracy:
+    def test_valid_citation_scores_one(self, monkeypatch):
+        _patch_chunks(monkeypatch, REAL_CHUNK)
+        span = (
+            REAL_CHUNK.text.index(REAL_EXCERPT),
+            REAL_CHUNK.text.index(REAL_EXCERPT) + len(REAL_EXCERPT),
+        )
+        answer = Answer(
+            text="By the recurrence relation, " + REAL_EXCERPT,
+            citations=[Citation(chunk_id=REAL_CHUNK.id, span=span)],
+            grounded=True,
+            confidence=0.9,
+        )
+        assert citation_accuracy(answer) == 1.0
+
+    def test_invented_chunk_id_scores_zero(self, monkeypatch):
+        """A citation pointing at a chunk_id that was never actually retrieved/indexed --
+        the fabricated-citation case the plan calls out explicitly."""
+        _patch_chunks(monkeypatch, REAL_CHUNK)
+        answer = Answer(
+            text="Some claim.",
+            citations=[Citation(chunk_id="ch99_nonexistent|as_p9999|r00", span=(0, 5))],
+            grounded=False,
+            confidence=0.5,
+        )
+        assert citation_accuracy(answer) == 0.0
+
+    def test_span_out_of_bounds_scores_zero(self, monkeypatch):
+        _patch_chunks(monkeypatch, REAL_CHUNK)
+        answer = Answer(
+            text="Some claim.",
+            citations=[Citation(chunk_id=REAL_CHUNK.id, span=(0, len(REAL_CHUNK.text) + 50))],
+            grounded=False,
+            confidence=0.5,
+        )
+        assert citation_accuracy(answer) == 0.0
+
+    def test_mixed_citations_partial_credit(self, monkeypatch):
+        _patch_chunks(monkeypatch, REAL_CHUNK)
+        good_span = (
+            REAL_CHUNK.text.index(REAL_EXCERPT),
+            REAL_CHUNK.text.index(REAL_EXCERPT) + len(REAL_EXCERPT),
+        )
+        answer = Answer(
+            text=REAL_EXCERPT,
+            citations=[
+                Citation(chunk_id=REAL_CHUNK.id, span=good_span),
+                Citation(chunk_id="invented", span=(0, 3)),
+            ],
+            grounded=False,
+            confidence=0.5,
+        )
+        assert citation_accuracy(answer) == 0.5
+
+    def test_no_citations_scores_zero(self):
+        answer = Answer(text="Unsupported claim.", citations=[], grounded=False, confidence=0.1)
+        assert citation_accuracy(answer) == 0.0
+
+
+class TestGroundedness:
+    def test_real_chunk_real_span_supported_claim_scores_high(self, monkeypatch):
+        _patch_chunks(monkeypatch, REAL_CHUNK)
+        span = (
+            REAL_CHUNK.text.index(REAL_EXCERPT),
+            REAL_CHUNK.text.index(REAL_EXCERPT) + len(REAL_EXCERPT),
+        )
+        answer = Answer(
+            text=f"By the recurrence relation, {REAL_EXCERPT}, valid for all z.",
+            citations=[Citation(chunk_id=REAL_CHUNK.id, span=span)],
+            grounded=True,
+            confidence=0.9,
+        )
+        assert groundedness(answer) > 0.9
+
+    def test_cites_real_chunk_but_states_something_it_does_not_say(self, monkeypatch):
+        """The obvious attack the plan calls out: a real chunk, a valid span, and a claim
+        the excerpt never actually makes -- citation_accuracy would pass this, groundedness
+        must not."""
+        _patch_chunks(monkeypatch, REAL_CHUNK)
+        span = (
+            REAL_CHUNK.text.index(REAL_EXCERPT),
+            REAL_CHUNK.text.index(REAL_EXCERPT) + len(REAL_EXCERPT),
+        )
+        answer = Answer(
+            text="The gamma function is always exactly equal to 42.",
+            citations=[Citation(chunk_id=REAL_CHUNK.id, span=span)],
+            grounded=True,  # the model *claims* it's grounded; the metric must not trust that
+            confidence=0.9,
+        )
+        assert citation_accuracy(answer) == 1.0  # structurally, the citation is real
+        assert groundedness(answer) < 0.2  # but the content is not supported
+
+    def test_invented_citation_cannot_ground_anything(self, monkeypatch):
+        _patch_chunks(monkeypatch, REAL_CHUNK)
+        answer = Answer(
+            text=REAL_EXCERPT,
+            citations=[Citation(chunk_id="invented|nowhere|r00", span=(0, 5))],
+            grounded=True,
+            confidence=0.9,
+        )
+        assert groundedness(answer) == 0.0
+
+    def test_notation_variant_still_counts_as_grounded(self, monkeypatch):
+        """LaTeX normalisation applies here too -- \\tfrac vs \\frac must not look unsupported."""
+        chunk = Chunk(
+            id="c1",
+            doc_id="ch06_gamma",
+            text=r"6.1.8  \Gamma(\tfrac12)=\pi^{1/2}",
+            page_ids=["as_p0255"],
+        )
+        _patch_chunks(monkeypatch, chunk)
+        answer = Answer(
+            text=r"We have \Gamma(\frac{1}{2})=\pi^{1/2} by definition.",
+            citations=[Citation(chunk_id="c1", span=(7, len(chunk.text)))],
+            grounded=True,
+            confidence=0.9,
+        )
+        assert groundedness(answer) > 0.9
+
+    def test_no_citations_scores_zero(self):
+        answer = Answer(text="Unsupported claim.", citations=[], grounded=False, confidence=0.1)
+        assert groundedness(answer) == 0.0
+
+
+class TestSubgroupGap:
+    def test_two_groups_returns_the_gap(self):
+        assert subgroup_gap({"formula": 0.7, "prose": 0.9}) == pytest.approx(0.2)
+
+    def test_three_groups_max_minus_min(self):
+        assert subgroup_gap({"formula": 0.5, "prose": 0.9, "table": 0.6}) == pytest.approx(0.4)
+
+    def test_identical_scores_zero_gap(self):
+        assert subgroup_gap({"formula": 0.8, "prose": 0.8}) == 0.0
+
+    def test_single_group_returns_zero(self):
+        assert subgroup_gap({"formula": 0.8}) == 0.0
+
+    def test_empty_returns_zero(self):
+        assert subgroup_gap({}) == 0.0
