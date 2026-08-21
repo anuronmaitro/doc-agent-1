@@ -58,7 +58,7 @@
   `reports/a3_retrieval_probe.md` — S1 (2105037)
 - [x] Step 05 — eval/metrics.py — recall_at_k, groundedness, citation_accuracy, subgroup_gap — S1 (2105037)
 - [x] Step 06 — llm/prompts.py — DECIDE, SYNTHESIZE, JUDGE — S1
-- [ ] Step 07 — agent/tools.py — all nine tools — S1
+- [x] Step 07 — agent/tools.py — all nine tools — S1
 - [ ] Step 08 — agent/memory.py::recall() — S2
 - [ ] Step 09 — agent/agent.py::act() — tool dispatch — S3
 - [ ] Step 10 — 🔴 agent/agent.py::decide() — THE MANDATORY AGENTIC BEHAVIOUR — S1
