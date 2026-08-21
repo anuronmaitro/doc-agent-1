@@ -4,9 +4,11 @@ import json
 
 import numpy as np
 import pytest
+import sentence_transformers
 
 from doc_agent.contracts import Chunk
 from doc_agent.index import store
+from doc_agent.retrieval import retriever as retriever_mod
 
 
 @pytest.fixture
@@ -181,3 +183,100 @@ class TestRebuild:
         )
         store.build(chunks, vectors, CFG)
         assert store.load(CFG).chunks[0].text == chunks[0].text
+
+
+RETRIEVE_CFG = {"k": 4, "k_step": 10, "k_max": 40, "weak_threshold": 0.35}
+
+
+class _FakeEncoder:
+    """Returns a caller-supplied vector regardless of the input text, so a test can pin
+    exactly which corpus chunk a "query" should match -- no real BGE-M3 download in CI."""
+
+    def __init__(self, vector: np.ndarray) -> None:
+        self._vector = vector
+
+    def encode(self, texts, **kwargs):
+        return np.stack([self._vector for _ in texts]).astype(np.float32)
+
+
+class TestRetrieve:
+    def test_k_defaults_from_config(self, index_dir, monkeypatch):
+        chunks, vectors = _corpus(4)
+        store.build(chunks, vectors, CFG)
+        monkeypatch.setattr(
+            sentence_transformers, "SentenceTransformer", lambda name: _FakeEncoder(vectors[0])
+        )
+        cfg = {**CFG, "retrieve": {**RETRIEVE_CFG, "k": 2}}
+        r = retriever_mod.Retriever(cfg)
+        assert len(r.retrieve("anything")) == 2  # not hardcoded, read from cfg["retrieve"]["k"]
+
+    def test_scores_are_set_and_descending(self, index_dir, monkeypatch):
+        chunks, vectors = _corpus(4)
+        store.build(chunks, vectors, CFG)
+        # query vector == chunk 2's own vector -> chunk 2 must win with score ~1.0
+        monkeypatch.setattr(
+            sentence_transformers, "SentenceTransformer", lambda name: _FakeEncoder(vectors[2])
+        )
+        cfg = {**CFG, "retrieve": RETRIEVE_CFG}
+        r = retriever_mod.Retriever(cfg)
+        results = r.retrieve("query", k=4)
+        assert results[0].id == chunks[2].id
+        assert results[0].score == pytest.approx(1.0, abs=1e-4)
+        scores = [c.score for c in results]
+        assert scores == sorted(scores, reverse=True)
+
+    def test_k_larger_than_corpus_drops_padding_not_fake_chunks(self, index_dir, monkeypatch):
+        chunks, vectors = _corpus(3)
+        store.build(chunks, vectors, CFG)
+        monkeypatch.setattr(
+            sentence_transformers, "SentenceTransformer", lambda name: _FakeEncoder(vectors[0])
+        )
+        cfg = {**CFG, "retrieve": RETRIEVE_CFG}
+        r = retriever_mod.Retriever(cfg)
+        results = r.retrieve("query", k=10)  # FAISS pads the extra 7 rows with -1
+        assert len(results) == 3
+
+    def test_empty_index_returns_empty_list(self, index_dir, monkeypatch):
+        store.build([], np.zeros((0, 8), dtype=np.float32), CFG)
+        monkeypatch.setattr(
+            sentence_transformers,
+            "SentenceTransformer",
+            lambda name: _FakeEncoder(np.zeros(8, dtype=np.float32)),
+        )
+        cfg = {**CFG, "retrieve": RETRIEVE_CFG}
+        r = retriever_mod.Retriever(cfg)
+        assert r.retrieve("query") == []
+
+    def test_index_and_encoder_load_once_and_are_reused(self, index_dir, monkeypatch):
+        chunks, vectors = _corpus(4)
+        store.build(chunks, vectors, CFG)
+        calls = {"n": 0}
+
+        def _fake_ctor(name):
+            calls["n"] += 1
+            return _FakeEncoder(vectors[0])
+
+        monkeypatch.setattr(sentence_transformers, "SentenceTransformer", _fake_ctor)
+        cfg = {**CFG, "retrieve": RETRIEVE_CFG}
+        r = retriever_mod.Retriever(cfg)
+        r.retrieve("first")
+        r.retrieve("second")
+        r.retrieve("third")
+        assert calls["n"] == 1  # constructed once, cached and reused across all three calls
+
+    def test_result_score_mutation_does_not_leak_across_calls(self, index_dir, monkeypatch):
+        """The cached loaded.chunks list must never be mutated in place -- otherwise one
+        query's score would bleed into the next query's results for the same chunk, since
+        the Retriever instance (and its loaded index) is reused across the whole re-search
+        loop in decide() (Step 10)."""
+        chunks, vectors = _corpus(4)
+        store.build(chunks, vectors, CFG)
+        monkeypatch.setattr(
+            sentence_transformers, "SentenceTransformer", lambda name: _FakeEncoder(vectors[1])
+        )
+        cfg = {**CFG, "retrieve": RETRIEVE_CFG}
+        r = retriever_mod.Retriever(cfg)
+        first = r.retrieve("q1")
+        next(c for c in first if c.id == chunks[1].id).score = -999.0  # mutate caller's copy
+        second = r.retrieve("q2")
+        assert next(c for c in second if c.id == chunks[1].id).score != -999.0
