@@ -44,3 +44,15 @@
 - [x] Step 36 — A2 form sections 1 + 6 + 7 — S3
 - [x] Step 37 — transcripts x3 — all
 - [x] Step 38 — final checks + `a2-submit` tag — S1
+
+### A3 progress ledger
+> One line per merged step. This is how anyone resumes: last `[x]` = where we are,
+> first `[ ]` = what to do next. Owners and step numbers follow `plan_a3.md`.
+
+- [x] Step 01 — retrieval/retriever.py::retrieve() (dense + cached index + scores) — S1 (2105037)
+- [x] Step 02 — llm/client.py::LLM.complete() — Groq, `openai/gpt-oss-120b` (DECISION D1) — S1 (2105037)
+- [x] Step 03 — retrieval/rerank.py + scoped CLIP visual fallback (DECISION D2); real Kaggle
+  GPU embedding run, `KAGGLE/a3_step03_visual_embed/` — S1 (2105037)
+- [x] Step 04 — Kaggle: publish `data/index/` as `mathscholar-index` dataset + recall@k probe
+  (39 gold TEST pages, dense vs. reranked), `KAGGLE/a3_step04_index_probe/` +
+  `reports/a3_retrieval_probe.md` — S1 (2105037)
