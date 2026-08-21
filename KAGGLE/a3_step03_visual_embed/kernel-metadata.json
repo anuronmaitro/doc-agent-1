@@ -1,0 +1,16 @@
+{
+ "id": "anuronmaitro/mathscholar-a3-step03-visual-embed",
+ "title": "MathScholar A3 Step03 Visual Embed",
+ "code_file": "kaggle_step03.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "machine_shape": "NvidiaTeslaT4",
+ "dataset_sources": [
+  "anuronmaitro/mathscholar-a3-pages"
+ ],
+ "competition_sources": [],
+ "kernel_sources": []
+}
