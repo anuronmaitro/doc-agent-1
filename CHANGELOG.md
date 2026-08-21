@@ -56,3 +56,32 @@
 - [x] Step 04 — Kaggle: publish `data/index/` as `mathscholar-index` dataset + recall@k probe
   (39 gold TEST pages, dense vs. reranked), `KAGGLE/a3_step04_index_probe/` +
   `reports/a3_retrieval_probe.md` — S1 (2105037)
+- [x] Step 05 — eval/metrics.py — recall_at_k, groundedness, citation_accuracy, subgroup_gap — S1 (2105037)
+- [ ] Step 06 — llm/prompts.py — DECIDE, SYNTHESIZE, JUDGE — S3
+- [ ] Step 07 — agent/tools.py — all nine tools — S1
+- [ ] Step 08 — agent/memory.py::recall() — S2
+- [ ] Step 09 — agent/agent.py::act() — tool dispatch — S3
+- [ ] Step 10 — 🔴 agent/agent.py::decide() — THE MANDATORY AGENTIC BEHAVIOUR — S1
+- [ ] Step 11 — synthesize() + llm/postprocess.py — grounding & abstention (DECISION D6:
+  verify-and-correct) — S2
+- [ ] Step 12 — logging_conf.register() + traces/run.jsonl — S3
+- [ ] Step 13 — guardrails.check() + hitl.escalate() — S1
+- [ ] Step 14 — 🔴 grading_kit/tasks.jsonl (DECISION D3) — S2
+- [ ] Step 15 — grading_kit/success_check.py — S3
+- [ ] Step 16 — eval/judge.py (DECISION D5: hybrid LLM-judge + human spot-check) — S1
+- [ ] Step 17 — scripts/run_eval.py + scripts/run.sh — S2
+- [ ] Step 18 — eval/ablation.py — S3
+- [ ] Step 19 — Tests: un-skip everything and close the CI gates — S1
+- [ ] Step 20 — eval/interpret.py — 🔴 PRIMARY NFR: Explainable — S2
+- [ ] Step 21 — eval/calibration.py — second NFR: Calibrated — S3
+- [ ] Step 22 — ☁️ Kaggle: the main eval run — S1
+- [ ] Step 23 — ☁️ Kaggle: baseline + ablations — S2
+- [ ] Step 24 — ☁️ Kaggle: NFR measurement + reproducibility proof — S3
+- [ ] Step 25 — traces/ + reports/eval_report.md — S1
+- [ ] Step 26 — ☁️ Kaggle: RL / RLVR (DECISION D4: attempting it) — S2
+- [ ] Step 27 — configs/design_choices.md — Stages 5-9 — S3
+- [ ] Step 28 — Form §1 + §2 + §7 — S1
+- [ ] Step 29 — Form §3 + §4 — S2
+- [ ] Step 30 — Form §5 + §6 — S3
+- [ ] Step 31 — transcripts x3 — all
+- [ ] Step 32 — 🏁 final checks + `a3-submit` tag — S1
