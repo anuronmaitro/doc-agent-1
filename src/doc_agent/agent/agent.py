@@ -8,6 +8,7 @@ from typing import Any
 
 from .. import hooks
 from ..contracts import *  # noqa
+from . import tools
 from .memory import Memory
 
 
@@ -48,7 +49,19 @@ class Agent:
         raise NotImplementedError("Stage 6: agent policy")
 
     def act(self, action: dict) -> ToolResult:
-        raise NotImplementedError("Stage 6: dispatch tool from tools.REGISTRY")
+        """Look `action["tool"]` up in `tools.REGISTRY` by name and call it with
+        `action["args"]`. An unknown tool name returns `ToolResult(ok=False, ...)`, same
+        "never raise mid-run" contract every tool in the registry already honours (Step 7) --
+        a bad dispatch must not crash the loop any more than a bad tool call would."""
+        name = action["tool"]
+        for tool_cls in tools.REGISTRY:
+            if tool_cls.name == name:
+                # REGISTRY's element type widens to type[Tool] (the abstract base) once
+                # mixed concrete subclasses join in a list literal -- every entry is
+                # concrete in practice (test_tools.py's own test_registry_is_tool_subclasses
+                # asserts issubclass), mypy just can't see that through the join.
+                return tool_cls()(**action.get("args", {}))  # type: ignore[abstract]
+        return ToolResult(ok=False, payload={"reason": f"unknown tool: {name!r}"})
 
     def synthesize(self, state: dict) -> Answer:
         """Grounded, cited answer; abstain if unsupported (no-hallucination)."""
