@@ -65,7 +65,7 @@
 - [x] Step 11 — synthesize() + llm/postprocess.py — grounding & abstention (DECISION D6:
   verify-and-correct) — S2
 - [x] Step 12 — logging_conf.register() + traces/run.jsonl — S3
-- [ ] Step 13 — guardrails.check() + hitl.escalate() — S1
+- [x] Step 13 — guardrails.check() + hitl.escalate() — S1
 - [ ] Step 14 — 🔴 grading_kit/tasks.jsonl (DECISION D3) — S2
 - [ ] Step 15 — grading_kit/success_check.py — S3
 - [ ] Step 16 — eval/judge.py (DECISION D5: hybrid LLM-judge + human spot-check) — S1
