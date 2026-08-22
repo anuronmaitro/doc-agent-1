@@ -7,7 +7,7 @@ import pytest
 from groq import AuthenticationError, RateLimitError
 
 from doc_agent.agent.agent import Agent
-from doc_agent.contracts import ToolResult
+from doc_agent.contracts import Chunk, ToolResult
 from doc_agent.llm import client as client_mod
 
 CFG = {"agent": {"model": "openai/gpt-oss-120b"}}
@@ -15,9 +15,36 @@ CFG = {"agent": {"model": "openai/gpt-oss-120b"}}
 
 def _make_agent() -> Agent:
     # act() never touches self.retriever -- it only dispatches through tools.REGISTRY --
-    # so a bare cfg/None retriever is enough here; decide()/synthesize() get real fixtures
-    # at Steps 10/11 when they're implemented.
+    # so a bare cfg/None retriever is enough here; synthesize() gets a real fixture at
+    # Step 11 when it's implemented.
     return Agent(cfg={"agent": {"max_steps": 8}}, retriever=None)
+
+
+# decide()'s own cfg -- small k/k_step/k_max so a widening test takes 2-3 calls, not 4
+# (real configs/config.yaml uses k=10/k_step=10/k_max=40; the *shape* of the policy is
+# what's under test here, not the real numbers).
+DECIDE_RETRIEVE_CFG = {"k": 1, "k_step": 1, "k_max": 3, "weak_threshold": 0.5}
+
+
+class _StubRetriever:
+    """Controllable stand-in for retrieval.retriever.Retriever -- returns one canned
+    top_score per call, in order, so a test can script an exact weak/strong sequence
+    without a real index or encoder. Mirrors this file's own _FakeCompletions pattern."""
+
+    def __init__(self, top_scores: list) -> None:
+        self._top_scores = list(top_scores)
+        self.calls: list = []
+
+    def retrieve(self, query: str, k: int) -> list:
+        self.calls.append((query, k))
+        score = self._top_scores.pop(0)
+        return [Chunk(id="c0", doc_id="d0", text="chunk text", page_ids=["p0"], score=score)]
+
+
+def _agent_with_stub(top_scores: list):
+    stub = _StubRetriever(top_scores)
+    agent = Agent(cfg={"agent": {"max_steps": 8}, "retrieve": DECIDE_RETRIEVE_CFG}, retriever=stub)
+    return agent, stub
 
 
 _REQ = httpx.Request("POST", "https://api.groq.com/openai/v1/chat/completions")
@@ -161,9 +188,65 @@ class TestAgentAct:
         assert result.ok is True
         assert result.payload["value"] == 0
 
-    def test_decide_and_synthesize_are_still_not_implemented(self):
+    def test_synthesize_is_still_not_implemented(self):
+        # decide() is implemented as of Step 10 -- only synthesize() (Step 11) still raises.
         agent = _make_agent()
         with pytest.raises(NotImplementedError):
-            agent.decide({})
-        with pytest.raises(NotImplementedError):
             agent.synthesize({})
+
+
+class TestAgentDecide:
+    """Step 10: evidence-gated re-search -- the mandatory agentic behaviour.
+
+    The trace, for each case below (walked through in the PR description, per the ORDER):
+    each retrieval attempt decide() makes appends one {"top_score": ..., "k": ...} entry to
+    state["obs"] BEFORE either widening or stopping -- so state["obs"] after decide() returns
+    is the full widen-and-recheck trail, in order, with the branch on the real number visible
+    directly (a strong score right away = one entry and done; weak scores show k climbing
+    entry by entry until either a strong score appears or k_max is hit and state["abstain"]
+    flips true). Step 12 (not this step) is what later turns this into traces/run.jsonl.
+    """
+
+    def test_strong_evidence_is_a_single_pass_no_widening(self):
+        agent, stub = _agent_with_stub([0.9])
+        state = {"query": "q", "obs": []}
+        action = agent.decide(state)
+
+        assert action == {"tool": "stop", "args": {}}
+        assert [k for _, k in stub.calls] == [1]
+        assert state["obs"] == [{"top_score": 0.9, "k": 1}]
+        assert state["abstain"] is False
+
+    def test_weak_then_strong_widens_exactly_once(self):
+        agent, stub = _agent_with_stub([0.2, 0.9])
+        state = {"query": "q", "obs": []}
+        agent.decide(state)
+
+        assert [k for _, k in stub.calls] == [1, 2]  # k + k_step, once
+        assert state["obs"] == [
+            {"top_score": 0.2, "k": 1},
+            {"top_score": 0.9, "k": 2},
+        ]
+        assert state["abstain"] is False
+
+    def test_weak_all_the_way_widens_to_k_max_then_abstains(self):
+        agent, stub = _agent_with_stub([0.1, 0.1, 0.1])
+        state = {"query": "q", "obs": []}
+        action = agent.decide(state)
+
+        assert [k for _, k in stub.calls] == [1, 2, 3]  # climbs to k_max, never further
+        assert state["obs"] == [
+            {"top_score": 0.1, "k": 1},
+            {"top_score": 0.1, "k": 2},
+            {"top_score": 0.1, "k": 3},
+        ]
+        assert state["abstain"] is True
+        assert state["abstain_reason"] == "insufficient evidence"
+        assert action == {"tool": "stop", "args": {}}  # never fabricates, never loops forever
+
+    def test_k_never_exceeds_k_max(self):
+        agent, stub = _agent_with_stub([0.1, 0.1, 0.1])
+        state = {"query": "q", "obs": []}
+        agent.decide(state)
+
+        assert all(k <= DECIDE_RETRIEVE_CFG["k_max"] for _, k in stub.calls)
