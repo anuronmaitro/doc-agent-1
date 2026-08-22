@@ -6,9 +6,19 @@ import httpx
 import pytest
 from groq import AuthenticationError, RateLimitError
 
+from doc_agent.agent.agent import Agent
+from doc_agent.contracts import ToolResult
 from doc_agent.llm import client as client_mod
 
 CFG = {"agent": {"model": "openai/gpt-oss-120b"}}
+
+
+def _make_agent() -> Agent:
+    # act() never touches self.retriever -- it only dispatches through tools.REGISTRY --
+    # so a bare cfg/None retriever is enough here; decide()/synthesize() get real fixtures
+    # at Steps 10/11 when they're implemented.
+    return Agent(cfg={"agent": {"max_steps": 8}}, retriever=None)
+
 
 _REQ = httpx.Request("POST", "https://api.groq.com/openai/v1/chat/completions")
 
@@ -125,3 +135,35 @@ class TestLLMClient:
         llm = _make_llm(monkeypatch, [_fake_response()])
         llm.complete("q", max_retries=1)
         assert "max_retries" not in llm._client.chat.completions.calls[0]
+
+
+class TestAgentAct:
+    """Step 9: act() only -- registry dispatch. decide()/synthesize() land at Steps 10/11."""
+
+    def test_dispatches_to_registered_tool_by_name(self):
+        agent = _make_agent()
+        result = agent.act({"tool": "calculator", "args": {"expr": "2 + 2"}})
+        assert isinstance(result, ToolResult)
+        assert result.ok is True
+        assert result.payload["value"] == 4
+
+    def test_unknown_tool_returns_ok_false_not_raise(self):
+        agent = _make_agent()
+        result = agent.act({"tool": "not_a_real_tool", "args": {}})
+        assert result.ok is False
+        assert "not_a_real_tool" in result.payload["reason"]
+
+    def test_missing_args_key_defaults_to_empty_kwargs(self):
+        # aggregate's "count" op accepts an empty list, so a tool with no required args
+        # exercises the action.get("args", {}) default without needing a real payload.
+        agent = _make_agent()
+        result = agent.act({"tool": "aggregate", "args": {"op": "count", "items": []}})
+        assert result.ok is True
+        assert result.payload["value"] == 0
+
+    def test_decide_and_synthesize_are_still_not_implemented(self):
+        agent = _make_agent()
+        with pytest.raises(NotImplementedError):
+            agent.decide({})
+        with pytest.raises(NotImplementedError):
+            agent.synthesize({})
