@@ -111,10 +111,97 @@ def test_pii_never_leaks_to_answer_or_log():
         hooks.clear()
 
 
-@pytest.mark.skip(reason="implement with tracing")
-def test_trace_covers_every_step():
-    """Every agent step and tool call must appear in the audit trail."""
-    assert True
+def test_trace_covers_every_step(tmp_path, monkeypatch):
+    """Every agent step and tool call must appear in the audit trail -- exercised through a
+    real Agent.run() (with a forced widen, so the trail has more than a trivial one line),
+    plus a standalone ON_TOOL_CALL firing to prove that seam is covered too whenever a real
+    REGISTRY-routed tool call happens."""
+    import json
+    from types import SimpleNamespace
+
+    from doc_agent import hooks, logging_conf
+    from doc_agent.agent.agent import Agent
+    from doc_agent.contracts import Chunk
+    from doc_agent.eval import metrics
+    from doc_agent.llm import client as client_mod
+    from doc_agent.llm import postprocess
+
+    monkeypatch.setattr(logging_conf, "TRACE_PATH", tmp_path / "run.jsonl")
+    hooks.clear()
+    logging_conf.register(hooks)
+    postprocess.register(hooks)
+    try:
+        monkeypatch.setattr(metrics, "groundedness", lambda ans: 0.95)  # a clean grounded pass
+
+        def _fake_response(text: str) -> SimpleNamespace:
+            return SimpleNamespace(
+                choices=[SimpleNamespace(message=SimpleNamespace(content=text))],
+                usage=SimpleNamespace(total_tokens=10),
+            )
+
+        class _FakeCompletions:
+            def __init__(self, texts: list) -> None:
+                self._texts = list(texts)
+                self.calls: list[dict] = []
+
+            def create(self, **kwargs):
+                self.calls.append(kwargs)
+                return _fake_response(self._texts.pop(0))
+
+        class _FakeGroqClient:
+            def __init__(self, texts: list) -> None:
+                self.chat = SimpleNamespace(completions=_FakeCompletions(texts))
+
+        fake = _FakeGroqClient(
+            ["ANSWER: sqrt(pi)\nCITATIONS: c1\nRATIONALE: c1 states this directly.\n"]
+        )
+        monkeypatch.setattr(client_mod, "Groq", lambda api_key: fake)
+        monkeypatch.setattr(client_mod.settings, "llm_api_key", "fake-test-key")
+
+        class _StubRetriever:
+            """Weak at k=10, strong at k=20 -- forces one real widen so the trace has more
+            than one retrieve step to actually cover."""
+
+            def __init__(self) -> None:
+                self._scores = iter([0.2, 0.9])
+
+            def retrieve(self, query: str, k: int) -> list:
+                return [
+                    Chunk(
+                        id="c1",
+                        doc_id="d0",
+                        text="Gamma(1/2)=sqrt(pi).",
+                        page_ids=["p0"],
+                        score=next(self._scores),
+                    )
+                ]
+
+        cfg = {
+            "agent": {"max_steps": 8, "model": "openai/gpt-oss-120b"},
+            "retrieve": {"k": 10, "k_step": 10, "k_max": 40, "weak_threshold": 0.5},
+        }
+        agent = Agent(cfg=cfg, retriever=_StubRetriever())
+
+        ans = agent.run("What is Gamma(1/2)?")
+        assert ans.grounded is True
+
+        lines = [json.loads(line) for line in (tmp_path / "run.jsonl").read_text().splitlines()]
+        tools = [ln["tool"] for ln in lines]
+        assert tools.count("retrieve") == 2  # the real widen: k=10 weak, then k=20 strong
+        assert tools[-1] == "answer"
+        retrieve_steps = [ln for ln in lines if ln["tool"] == "retrieve"]
+        assert [ln["obs"]["k"] for ln in retrieve_steps] == [10, 20]
+        assert all("top_score" in ln["obs"] for ln in retrieve_steps)
+
+        # ON_TOOL_CALL itself is covered too, whenever a real REGISTRY-routed tool call
+        # fires (Step 9) -- decide()'s own mandatory path doesn't route through act(), so
+        # this is exercised standalone rather than waiting for run() to produce one.
+        hooks.run(hooks.ON_TOOL_CALL, {"action": {"tool": "calculator", "args": {"expr": "1+1"}}})
+        all_lines = [json.loads(line) for line in (tmp_path / "run.jsonl").read_text().splitlines()]
+        assert all_lines[-1]["tool"] == "calculator"
+        assert all_lines[-1]["args"] == {"expr": "1+1"}
+    finally:
+        hooks.clear()
 
 
 @pytest.mark.skip(reason="implement with reproducibility")
