@@ -69,6 +69,15 @@ CITATIONS: <comma-separated chunk ids you relied on, or NONE if insufficient evi
 RATIONALE: <one sentence: why this reference over the runner-up, or why the evidence falls short>
 """
 
+# SYNTHESIZE's own output contract, exported so a caller that needs to parse it
+# (postprocess.format_answer, Step 11) derives the field names and the abstention sentinel
+# from here instead of retyping an independent copy that could drift out of sync with the
+# template above -- exactly what tests/test_prompts.py::TestNoStrayPromptStrings guards
+# against for postprocess.py/agent.py/tools.py/client.py.
+SYNTHESIZE_FIELDS = ("ANSWER", "CITATIONS", "RATIONALE")  # order matches "Respond in EXACTLY
+# this format" above
+SYNTHESIZE_ABSTAIN_TEXT = "INSUFFICIENT EVIDENCE"
+
 # --- DECIDE ------------------------------------------------------------------------------
 #
 # Tool selection, deliberately thin. The MANDATORY agentic branch -- widen k and re-retrieve

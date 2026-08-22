@@ -1,5 +1,5 @@
 """Stage 6 - FIXED loop - perceive -> decide -> act -> observe, with cross-cutting seams.
-Implement synthesize() only (decide() and act() are both done). Security, grounding, PII, and
+All three of decide()/act()/synthesize() are now implemented. Security, grounding, PII, and
 tracing run via hooks at the marked seams - do NOT inline them here."""
 
 from __future__ import annotations
@@ -8,13 +8,14 @@ from typing import Any
 
 from .. import hooks
 from ..contracts import *  # noqa
+from ..llm import client, postprocess, prompts
 from ..retrieval import retriever as retriever_mod
 from . import tools
 from .memory import Memory
 
 
 class Agent:
-    """FIXED loop. Implement synthesize() (the grounded answer) only."""
+    """FIXED loop. decide()/act()/synthesize() are all implemented."""
 
     def __init__(self, cfg: dict, retriever: Any) -> None:
         self.cfg = cfg["agent"]
@@ -94,5 +95,78 @@ class Agent:
         return ToolResult(ok=False, payload={"reason": f"unknown tool: {name!r}"})
 
     def synthesize(self, state: dict) -> Answer:
-        """Grounded, cited answer; abstain if unsupported (no-hallucination)."""
-        raise NotImplementedError("Stage 6: synthesize grounded answer")
+        """Grounded, cited answer; abstain if unsupported (no-hallucination).
+
+        decide()'s own abstention (evidence never got strong enough, even at k_max) short-
+        circuits here -- no LLM call for a question decide() already determined has no real
+        evidence. Otherwise: one LLM synthesis attempt, run through the BEFORE_ANSWER
+        grounding gate (postprocess._ground). D6 (verify-and-correct): if `_ground` downgrades
+        a real, cited answer, retry exactly once with its specific complaint fed back; if
+        still unsupported, abstain for real -- discard the retry's own ungrounded text rather
+        than ship it with a warning label, since "abstain" means the claim never reaches a
+        user. An answer format_answer() *itself* already abstained on (the model
+        self-reporting no evidence, or zero citations surviving resolution) skips the retry
+        entirely -- there is nothing to correct in an already-correct "I don't know"."""
+        if state.get("abstain"):
+            return Answer(
+                text=postprocess.INSUFFICIENT_EVIDENCE, citations=[], grounded=False, confidence=0.0
+            )
+
+        llm = client.LLM(self._full_cfg)
+        ans = self._synthesize_attempt(llm, state, feedback=None, retried=False)
+        ctx = hooks.run(hooks.BEFORE_ANSWER, {"state": state, "answer": ans})
+        ans = ctx.get("answer", ans)
+
+        if not ans.grounded and ans.text != postprocess.INSUFFICIENT_EVIDENCE:
+            complaint = ctx.get(
+                "grounding_complaint", "the previous answer was not grounded in the cited evidence"
+            )
+            ans = self._synthesize_attempt(llm, state, feedback=complaint, retried=True)
+            ctx2 = hooks.run(hooks.BEFORE_ANSWER, {"state": state, "answer": ans})
+            ans = ctx2.get("answer", ans)
+            if not ans.grounded and ans.text != postprocess.INSUFFICIENT_EVIDENCE:
+                ans = Answer(
+                    text=postprocess.INSUFFICIENT_EVIDENCE,
+                    citations=[],
+                    grounded=False,
+                    confidence=0.0,
+                )
+        return ans
+
+    def _synthesize_attempt(
+        self, llm: Any, state: dict, feedback: str | None, retried: bool
+    ) -> Answer:
+        """One SYNTHESIZE call + format_answer(). `feedback` (the retry's grounding
+        complaint) rides in the QUERY placeholder, not the EVIDENCE one -- the evidence block
+        is untrusted corpus data the model must never treat as an instruction (prompts.py's
+        own anti-injection contract), so a trusted, system-authored retry instruction belongs
+        in the instruction channel, not mixed into the data channel."""
+        chunks = state["chunks"]
+        evidence = "\n".join(f"[{c.id}] (score={c.score:.3f}) {c.text}" for c in chunks)
+        query = state["query"]
+        if feedback:
+            query = (
+                f"{query}\n\n(This is a retry. Your previous answer was rejected: {feedback}. "
+                f"Answer again using ONLY the evidence below, or say "
+                f"{postprocess.INSUFFICIENT_EVIDENCE} if it truly does not support one.)"
+            )
+        raw = llm.complete(prompts.SYNTHESIZE.format(query=query, evidence=evidence))
+
+        top_score = retriever_mod.top_score(chunks)
+        score_gap = chunks[0].score - chunks[1].score if len(chunks) >= 2 else 0.0
+        # Always False under the current wiring (decide() never routes through act(), so
+        # state["obs"] never holds a calculator ToolResult) -- kept as a real, general check
+        # rather than a hardcoded False so it activates automatically if a future step ever
+        # adds tool-routed calls ahead of synthesize().
+        calculator_verified = any(
+            isinstance(o, ToolResult) and o.ok and "expr" in o.payload and "value" in o.payload
+            for o in state["obs"]
+        )
+        return postprocess.format_answer(
+            raw,
+            chunks,
+            top_score=top_score,
+            score_gap=score_gap,
+            calculator_verified=calculator_verified,
+            retried=retried,
+        )
