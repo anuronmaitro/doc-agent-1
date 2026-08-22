@@ -1,6 +1,6 @@
 """Stage 6 - FIXED loop - perceive -> decide -> act -> observe, with cross-cutting seams.
-Implement decide() and synthesize() only. Security, grounding, PII, and tracing run via hooks at the
-marked seams - do NOT inline them here."""
+Implement synthesize() only (decide() and act() are both done). Security, grounding, PII, and
+tracing run via hooks at the marked seams - do NOT inline them here."""
 
 from __future__ import annotations
 
@@ -8,15 +8,21 @@ from typing import Any
 
 from .. import hooks
 from ..contracts import *  # noqa
+from ..retrieval import retriever as retriever_mod
 from . import tools
 from .memory import Memory
 
 
 class Agent:
-    """FIXED loop. Implement decide() (the policy) and synthesize() only."""
+    """FIXED loop. Implement synthesize() (the grounded answer) only."""
 
     def __init__(self, cfg: dict, retriever: Any) -> None:
         self.cfg = cfg["agent"]
+        # decide()'s evidence-gated re-search needs cfg["retrieve"] (k/k_step/k_max/
+        # weak_threshold), which self.cfg above doesn't carry -- same "keep the whole cfg
+        # around" pattern retrieval/retriever.py's own Retriever.__init__ already uses
+        # (its self._full_cfg) for the identical reason.
+        self._full_cfg = cfg
         self.retriever = retriever
         self.mem = Memory()
 
@@ -46,7 +52,31 @@ class Agent:
           3. else -> synthesize a grounded, cited answer
         Emit obs {"top_score": ..., "k": ...} on each step. A fixed retrieve->answer path is NOT agentic
         and caps the grade. Rule-based (baseline) or RL policy (Stage 7)."""
-        raise NotImplementedError("Stage 6: agent policy")
+        rcfg = self._full_cfg
+        query = state["query"]
+
+        def _emit(chunks: list, k: int) -> None:
+            state["obs"].append({"top_score": retriever_mod.top_score(chunks), "k": k})
+
+        k = rcfg["retrieve"]["k"]
+        chunks = self.retriever.retrieve(query, k=k)
+        while retriever_mod.is_weak(chunks, rcfg):
+            _emit(chunks, k)
+            k2 = retriever_mod.next_k(k, rcfg)
+            if k2 is None:
+                # Hit k_max still weak -> ABSTAIN. state["chunks"] keeps the last (still
+                # weak) attempt so synthesize() can show its work / cite why it abstained,
+                # not because those chunks are meant to ground an answer.
+                state["chunks"] = chunks
+                state["abstain"] = True
+                state["abstain_reason"] = "insufficient evidence"
+                return {"tool": "stop", "args": {}}
+            k = k2
+            chunks = self.retriever.retrieve(query, k=k)
+        _emit(chunks, k)
+        state["chunks"] = chunks
+        state["abstain"] = False
+        return {"tool": "stop", "args": {}}
 
     def act(self, action: dict) -> ToolResult:
         """Look `action["tool"]` up in `tools.REGISTRY` by name and call it with
