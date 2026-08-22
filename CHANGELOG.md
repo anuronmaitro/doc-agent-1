@@ -60,7 +60,7 @@
 - [x] Step 06 — llm/prompts.py — DECIDE, SYNTHESIZE, JUDGE — S1
 - [x] Step 07 — agent/tools.py — all nine tools — S1
 - [x] Step 08 — agent/memory.py::recall() — S2
-- [ ] Step 09 — agent/agent.py::act() — tool dispatch — S3
+- [x] Step 09 — agent/agent.py::act() — tool dispatch — S3
 - [ ] Step 10 — 🔴 agent/agent.py::decide() — THE MANDATORY AGENTIC BEHAVIOUR — S1
 - [ ] Step 11 — synthesize() + llm/postprocess.py — grounding & abstention (DECISION D6:
   verify-and-correct) — S2
