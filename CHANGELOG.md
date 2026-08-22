@@ -62,7 +62,7 @@
 - [x] Step 08 — agent/memory.py::recall() — S2
 - [x] Step 09 — agent/agent.py::act() — tool dispatch — S3
 - [x] Step 10 — 🔴 agent/agent.py::decide() — THE MANDATORY AGENTIC BEHAVIOUR — S1
-- [ ] Step 11 — synthesize() + llm/postprocess.py — grounding & abstention (DECISION D6:
+- [x] Step 11 — synthesize() + llm/postprocess.py — grounding & abstention (DECISION D6:
   verify-and-correct) — S2
 - [ ] Step 12 — logging_conf.register() + traces/run.jsonl — S3
 - [ ] Step 13 — guardrails.check() + hitl.escalate() — S1
