@@ -10,7 +10,7 @@ from .. import hooks
 from ..contracts import *  # noqa
 from ..llm import client, postprocess, prompts
 from ..retrieval import retriever as retriever_mod
-from . import tools
+from . import hitl, tools
 from .memory import Memory
 
 
@@ -106,8 +106,20 @@ class Agent:
         than ship it with a warning label, since "abstain" means the claim never reaches a
         user. An answer format_answer() *itself* already abstained on (the model
         self-reporting no evidence, or zero citations surviving resolution) skips the retry
-        entirely -- there is nothing to correct in an already-correct "I don't know"."""
+        entirely -- there is nothing to correct in an already-correct "I don't know".
+
+        A1's HITL trigger (guardrails.ESCALATION_CONFIDENCE_THRESHOLD, τ=0.50): fires exactly
+        here, on decide()'s own k_max abstention -- confidence is always 0.0 in this branch,
+        always under τ, and `state["abstain"]` being set is precisely "we've re-searched to
+        k_max". The OTHER abstain path below (a retry that's still ungrounded) is a different
+        failure mode -- the evidence was strong enough for decide(), the LLM's answer just
+        wasn't grounded in it -- and isn't what A1's own trigger names, so it isn't escalated
+        here."""
         if state.get("abstain"):
+            hitl.escalate(
+                "confidence below A1's tau=0.50 threshold after re-search to k_max",
+                {"query": state.get("query"), "abstain_reason": state.get("abstain_reason")},
+            )
             return Answer(
                 text=postprocess.INSUFFICIENT_EVIDENCE, citations=[], grounded=False, confidence=0.0
             )

@@ -7,6 +7,7 @@ import pytest
 from groq import AuthenticationError, RateLimitError
 
 from doc_agent import hooks
+from doc_agent.agent import hitl_store
 from doc_agent.agent.agent import Agent
 from doc_agent.contracts import Chunk, ToolResult
 from doc_agent.eval import metrics
@@ -286,11 +287,12 @@ class TestAgentSynthesize:
         monkeypatch.setattr(client_mod.settings, "llm_api_key", "fake-test-key")
         return fake
 
-    def test_decide_abstain_short_circuits_before_any_llm_call(self, monkeypatch):
+    def test_decide_abstain_short_circuits_before_any_llm_call(self, monkeypatch, tmp_path):
         # No usable key at all -- if synthesize() ever tried to build an LLM here despite the
         # abstain flag, LLM.__init__ would raise loudly rather than silently reaching a real
         # API, so this also proves no call is attempted.
         monkeypatch.setattr(client_mod.settings, "llm_api_key", "")
+        monkeypatch.setattr(hitl_store, "QUEUE_PATH", tmp_path / "hitl_queue.json")
         agent, state = self._agent_and_state()
         state["abstain"] = True
         state["abstain_reason"] = "insufficient evidence"
@@ -300,6 +302,11 @@ class TestAgentSynthesize:
         assert ans.grounded is False
         assert ans.citations == []
         assert ans.text == postprocess.INSUFFICIENT_EVIDENCE
+        # A1's HITL trigger (Step 13): confidence (always 0.0 here) under tau=0.50 after
+        # decide() has already re-searched to k_max -- this is exactly that case.
+        pending = hitl_store.pending()
+        assert len(pending) == 1
+        assert "0.50" in pending[0]["reason"] or "tau" in pending[0]["reason"].lower()
 
     def test_first_pass_grounded_answer_is_returned_as_is(self, monkeypatch):
         monkeypatch.setattr(metrics, "groundedness", lambda ans: 0.95)

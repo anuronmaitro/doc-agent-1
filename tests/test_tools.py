@@ -2,7 +2,7 @@ import math
 
 import pytest
 
-from doc_agent.agent import hitl, tools
+from doc_agent.agent import hitl, hitl_store, tools
 from doc_agent.contracts import Chunk, ToolResult
 
 
@@ -307,12 +307,14 @@ class TestCalculator:
 
 
 class TestEscalateToHuman:
-    def test_unimplemented_hitl_becomes_ok_false_not_a_raise(self, monkeypatch):
-        """hitl.escalate is Step 13's job and currently raises -- this tool's own
-        never-raise contract must hold regardless."""
+    def test_real_hitl_escalate_queues_and_returns_ok_true(self, tmp_path, monkeypatch):
+        """hitl.escalate is implemented as of Step 13 -- a real escalation now succeeds and
+        is actually queued, not just caught as ok=False by this tool's never-raise wrapper."""
+        monkeypatch.setattr(hitl_store, "QUEUE_PATH", tmp_path / "hitl_queue.json")
         result = tools.EscalateToHuman()(reason="guardrail tripped", context={})
-        assert result.ok is False
-        assert "reason" in result.payload
+        assert result.ok is True
+        assert result.payload["escalated"] is True
+        assert len(hitl_store.pending()) == 1
 
     def test_passes_through_a_real_hitl_result_once_implemented(self, monkeypatch):
         expected = ToolResult(ok=True, payload={"queued": True, "ticket": "abc123"})
