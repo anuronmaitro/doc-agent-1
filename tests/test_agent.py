@@ -6,17 +6,21 @@ import httpx
 import pytest
 from groq import AuthenticationError, RateLimitError
 
+from doc_agent import hooks
 from doc_agent.agent.agent import Agent
 from doc_agent.contracts import Chunk, ToolResult
+from doc_agent.eval import metrics
 from doc_agent.llm import client as client_mod
+from doc_agent.llm import postprocess
 
 CFG = {"agent": {"model": "openai/gpt-oss-120b"}}
 
 
 def _make_agent() -> Agent:
     # act() never touches self.retriever -- it only dispatches through tools.REGISTRY --
-    # so a bare cfg/None retriever is enough here; synthesize() gets a real fixture at
-    # Step 11 when it's implemented.
+    # so a bare cfg/None retriever is enough here. synthesize() also never touches
+    # self.retriever (it reads state["chunks"], set by decide()), so this is fine for
+    # synthesize()-only tests too, as long as the test builds its own state dict.
     return Agent(cfg={"agent": {"max_steps": 8}}, retriever=None)
 
 
@@ -187,12 +191,9 @@ class TestAgentAct:
         result = agent.act({"tool": "aggregate", "args": {"op": "count", "items": []}})
         assert result.ok is True
         assert result.payload["value"] == 0
-
-    def test_synthesize_is_still_not_implemented(self):
-        # decide() is implemented as of Step 10 -- only synthesize() (Step 11) still raises.
-        agent = _make_agent()
-        with pytest.raises(NotImplementedError):
-            agent.synthesize({})
+        # decide() (Step 10) and synthesize() (Step 11) are both implemented as of this
+        # step -- their own behaviour is covered by TestAgentDecide/TestAgentSynthesize
+        # below, not re-asserted here.
 
 
 class TestAgentDecide:
@@ -250,3 +251,118 @@ class TestAgentDecide:
         agent.decide(state)
 
         assert all(k <= DECIDE_RETRIEVE_CFG["k_max"] for _, k in stub.calls)
+
+
+class TestAgentSynthesize:
+    """Step 11: synthesize() -- grounded answer + D6 verify-and-correct retry.
+
+    hooks.clear()/postprocess.register(hooks) per test, matching test_crosscutting.py's own
+    pattern: `_ground` is a real registered BEFORE_ANSWER handler, not mocked out, so these
+    tests exercise the actual hook wiring. `metrics.groundedness` (the deep, index-backed
+    check `_ground` calls) is monkeypatched so the outcome is deterministic without a real
+    built index -- format_answer()'s own structural parsing/resolution runs for real.
+    """
+
+    def setup_method(self):
+        hooks.clear()
+        postprocess.register(hooks)
+
+    def teardown_method(self):
+        hooks.clear()
+
+    def _agent_and_state(self):
+        agent = Agent(
+            cfg={"agent": {"max_steps": 8, "model": "openai/gpt-oss-120b"}}, retriever=None
+        )
+        chunks = [
+            Chunk(id="c1", doc_id="d0", text="Gamma(1/2)=sqrt(pi).", page_ids=["p0"], score=0.9)
+        ]
+        state = {"query": "What is Gamma(1/2)?", "obs": [], "chunks": chunks, "abstain": False}
+        return agent, state
+
+    def _wire_fake_llm(self, monkeypatch, texts: list) -> _FakeGroqClient:
+        fake = _FakeGroqClient([_fake_response(t) for t in texts])
+        monkeypatch.setattr(client_mod, "Groq", lambda api_key: fake)
+        monkeypatch.setattr(client_mod.settings, "llm_api_key", "fake-test-key")
+        return fake
+
+    def test_decide_abstain_short_circuits_before_any_llm_call(self, monkeypatch):
+        # No usable key at all -- if synthesize() ever tried to build an LLM here despite the
+        # abstain flag, LLM.__init__ would raise loudly rather than silently reaching a real
+        # API, so this also proves no call is attempted.
+        monkeypatch.setattr(client_mod.settings, "llm_api_key", "")
+        agent, state = self._agent_and_state()
+        state["abstain"] = True
+        state["abstain_reason"] = "insufficient evidence"
+
+        ans = agent.synthesize(state)
+
+        assert ans.grounded is False
+        assert ans.citations == []
+        assert ans.text == postprocess.INSUFFICIENT_EVIDENCE
+
+    def test_first_pass_grounded_answer_is_returned_as_is(self, monkeypatch):
+        monkeypatch.setattr(metrics, "groundedness", lambda ans: 0.95)
+        fake = self._wire_fake_llm(
+            monkeypatch,
+            ["ANSWER: Gamma(1/2) = sqrt(pi)\nCITATIONS: c1\nRATIONALE: c1 says so directly.\n"],
+        )
+        agent, state = self._agent_and_state()
+
+        ans = agent.synthesize(state)
+
+        assert ans.grounded is True
+        assert "Gamma(1/2) = sqrt(pi)" in ans.text
+        assert len(fake.chat.completions.calls) == 1  # no retry needed
+
+    def test_verify_and_correct_retry_recovers_a_downgraded_answer(self, monkeypatch):
+        scores = iter([0.1, 0.9])  # first attempt fails the deep check, the retry passes
+        monkeypatch.setattr(metrics, "groundedness", lambda ans: next(scores))
+        fake = self._wire_fake_llm(
+            monkeypatch,
+            [
+                "ANSWER: a first guess\nCITATIONS: c1\nRATIONALE: r1\n",
+                "ANSWER: a corrected answer\nCITATIONS: c1\nRATIONALE: r2\n",
+            ],
+        )
+        agent, state = self._agent_and_state()
+
+        ans = agent.synthesize(state)
+
+        assert ans.grounded is True
+        assert "corrected answer" in ans.text
+        assert len(fake.chat.completions.calls) == 2  # exactly one retry
+        retry_prompt = fake.chat.completions.calls[1]["messages"][0]["content"]
+        assert "retry" in retry_prompt.lower()  # _ground's complaint actually reached the model
+
+    def test_retry_exhausted_and_still_ungrounded_abstains_for_real(self, monkeypatch):
+        monkeypatch.setattr(metrics, "groundedness", lambda ans: 0.1)  # never passes
+        fake = self._wire_fake_llm(
+            monkeypatch,
+            [
+                "ANSWER: a first guess\nCITATIONS: c1\nRATIONALE: r1\n",
+                "ANSWER: still not backed by anything\nCITATIONS: c1\nRATIONALE: r2\n",
+            ],
+        )
+        agent, state = self._agent_and_state()
+
+        ans = agent.synthesize(state)
+
+        assert ans.grounded is False
+        assert ans.citations == []
+        assert ans.text == postprocess.INSUFFICIENT_EVIDENCE  # the ungrounded text never ships
+        assert len(fake.chat.completions.calls) == 2  # capped at ONE retry, not a loop
+
+    def test_self_reported_abstention_on_first_pass_skips_the_retry(self, monkeypatch):
+        monkeypatch.setattr(metrics, "groundedness", lambda ans: 0.0)
+        fake = self._wire_fake_llm(
+            monkeypatch,
+            ["ANSWER: INSUFFICIENT EVIDENCE\nCITATIONS: NONE\nRATIONALE: nothing supports this.\n"],
+        )
+        agent, state = self._agent_and_state()
+
+        ans = agent.synthesize(state)
+
+        assert ans.grounded is False
+        assert ans.text == postprocess.INSUFFICIENT_EVIDENCE
+        assert len(fake.chat.completions.calls) == 1  # already-correct "I don't know" -- no retry
