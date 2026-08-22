@@ -13,6 +13,12 @@ data/index/
 data/eda_summary.json
 data/corpus_version.json
 
+# --- MathScholar (A3) ---
+# HITL review queue (agent/hitl_store.py, Step 13): runtime state written by actually
+# running the agent, not a deterministic build artifact or committed evidence like
+# traces/run.jsonl -- never meant to be checked in.
+data/hitl_queue.json
+
 # data/annot/ is split, not blanket-ignored:
 #   nist/  -- Stage A crops (Step 25). MEASURED at 3.1 MB / 431 pairs (not the
 #             thousands-of-images volume this comment used to warn might happen) --
